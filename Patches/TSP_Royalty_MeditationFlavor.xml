@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/FactionDef[defName="Empire"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
+			<value>
+				<li>
+					<categoryName>BeanManBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>BeanManBackstory</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+				<li>
+					<categoryName>BeetnikhBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>BeetnikhBackstory</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+				<li>
+					<categoryName>CivilizedBeetEmperor</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>CivilizedBeetEmperor</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+				<li>
+					<categoryName>WoodBeetBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>WoodBeetBackstory</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+				<li>
+					<categoryName>WoodBeetJoe</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>WoodBeetJoe</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+				<li>
+					<categoryName>PecanJoeBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>PecanJoeBackstory</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+				<li>
+					<categoryName>GnomeBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>GnomeBackstory</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+				<li>
+					<categoryName>GnobleBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>GnobleBackstory</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+				<li>
+					<categoryName>BeanManBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>BeanManBackstory</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

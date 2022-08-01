@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+  
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>ST_Cabbage</defName>
+    <label>cabbage</label>
+    <description>Cabbage is a vegetable of the species &lt;i>Brassica oleracea&lt;/i>, the wild mustard plant, which is the exact same species of plant as cauliflower, kale, collard greens, and brocolli (among others). Cabbage is what results when a wild mustard plant is bred for the purpose of enhancing its terminal bud, which is called its "head". A cabbage's thick leaves are formed into this head on a short, thick stalk.</description>
+    <graphicData>
+      <texPath>Things/Items/PowerCabbage</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.2</MarketValue>
+      <Flammability>1.3</Flammability>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantFoodRaw</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+  </ThingDef>
+</Defs>

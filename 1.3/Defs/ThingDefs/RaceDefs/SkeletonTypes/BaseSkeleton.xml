@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef ParentName="BasePawn" Name="BaseSkeleton" Abstract="True">
+    <statBases>
+      <PsychicSensitivity>10</PsychicSensitivity>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>0.2</Flammability>
+      <ComfyTemperatureMin>-420</ComfyTemperatureMin>
+      <ComfyTemperatureMax>420</ComfyTemperatureMax>
+	  <LeatherAmount>0</LeatherAmount>
+	  <MeatAmount>100</MeatAmount>
+	  <PainShockThreshold>1</PainShockThreshold>
+	  <BoneAmount MayRequire="sihv.rombones" Inherit="False">0</BoneAmount> <!-- Human skeletons always yield the same bones as their skeleton contains -->
+    </statBases>
+    <race>
+		<giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
+		<needsRest>false</needsRest>
+		<thinkTreeMain>SkeletonPirate</thinkTreeMain>
+		<hasGenders>true</hasGenders>
+		<foodType>None</foodType>
+		<lifeExpectancy>2000</lifeExpectancy>
+		<bloodDef>Filth_CorpseBile</bloodDef>
+		<specificMeatDef>TSP_ST_SkeletalMarrow</specificMeatDef>
+		<meatColor>(45,44,39)</meatColor>
+		<fleshType MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_StrangeFlesh</fleshType>
+		<lifeStageAges>
+			<li>
+				<def>TSP_ST_SkeletonAge_Undead</def>
+				<minAge>0</minAge>
+			</li>
+		</lifeStageAges>
+    </race>
+	<!-- <receivesSignals>true</receivesSignals> -->
+	<comps>
+		<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<hediffname>HedSTUndead</hediffname>
+			<hediffseverity>1</hediffseverity>
+		</li>
+		<li Class="AnimalBehaviours.CompProperties_Draftable">
+			<makeNonFleeingToo>true</makeNonFleeingToo>
+		</li>
+	</comps>
+	<butcherProducts>
+		<BoneItem MayRequire="sihv.rombones">206</BoneItem>
+	</butcherProducts>
+	<tradeTags>
+		<li>AnimalInsectSpace</li> <!-- Skeletons don't breathe -->
+		<!-- <li>Skeleton</li> -->
+	</tradeTags>
+	
+	<modExtensions>
+		<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+			<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+	<PawnKindDef Name="BaseSkeletonKind" Abstract="True">
+		<defaultFactionType>Skeleton_Pirates</defaultFactionType>
+		<aiAvoidCover>false</aiAvoidCover>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<wildGroupSize>2</wildGroupSize>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<maxGenerationAge>400</maxGenerationAge>
+	</PawnKindDef>
+</Defs>

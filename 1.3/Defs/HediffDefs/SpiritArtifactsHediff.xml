@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ <HediffDef>
+    	<defName>HedSpiritEnergy</defName>
+    	<label>Spirit Energy</label>
+		<description>Filled with a spiritual energy.</description>		
+    	<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(127,255,212)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+		  <li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-3.0</severityPerDay>
+			<showDaysToRecover>true</showDaysToRecover>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+			<minSeverity>0</minSeverity>
+			<label>Big Spirit Engery</label>
+			<painFactor>0.5</painFactor>
+		  </li>
+		</stages>
+  </HediffDef>
+  
+   <HediffDef>
+    	<defName>HedSTUndead</defName>
+    	<label>Undead</label>
+		<description>Once dead, this creature has been brought back to life in a cursed form. His body might be all that's raised, or he may still be in there. He roams the planet seeking to accomplish some goal, or simply does so out of primal mindlessness.</description>		
+    	<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(127,255,212)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>true</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<stages>
+		  <li>
+			<label>Undead!</label>
+			<minSeverity>0</minSeverity>
+			<painFactor>0</painFactor>
+		  </li>
+		</stages>
+  </HediffDef>
+  
+</Defs>

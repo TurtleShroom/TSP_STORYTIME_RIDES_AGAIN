@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+  <WorkGiverDef>
+    <defName>GnomeCooking</defName>
+    <label>cook meals at gnome table</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>GnomeTable</li>
+    </fixedBillGiverDefs>
+    <verb>cook</verb>
+    <gerund>cooking at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>WormGrabbing</defName>
+    <label>dig for worms</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Mining</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>WormSpot</li>
+    </fixedBillGiverDefs>
+    <verb>dig</verb>
+    <gerund>digging at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+		<defName>FrogLegRipping</defName>
+		<label>rip off a toad's legs</label>
+		<giverClass>StoryTime.WorkGiver_LegRip</giverClass>
+		<workType>Handling</workType>
+		<verb>ripping off legs</verb>
+		<gerund>ripping off legs of</gerund>
+		<priorityInType>85</priorityInType>
+		<requiredCapacities>
+		  <li>Manipulation</li>
+		</requiredCapacities>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+		<defName>TomatoCutting</defName>
+		<label>cut the tomato cysts off a tomato frog's back</label>
+		<giverClass>StoryTime.WorkGiver_Tomato</giverClass>
+		<workType>Handling</workType>
+		<verb>cutting off tomatoes</verb>
+		<gerund>cutting tomatoes off of</gerund>
+		<priorityInType>85</priorityInType>
+		<requiredCapacities>
+		  <li>Manipulation</li>
+		</requiredCapacities>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>grinding</defName>
+    <label>grind stuff at a grinder</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ManualGrinder</li>
+      <li>ElectricGrinder</li>
+    </fixedBillGiverDefs>
+    <verb>grind</verb>
+    <gerund>grinding at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>TSP_blast_furnace_smelting</defName>
+    <label>forging advanced metals in blast furnace</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <fixedBillGiverDefs>
+		<li>BlastFurnaceHeater</li>
+    </fixedBillGiverDefs>
+    <verb>forge</verb>
+    <gerund>forging at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef> 
+  
+  <WorkGiverDef>
+    <defName>growing</defName>
+    <label>ascending Bulborbs</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>BeanPit</li>
+    </fixedBillGiverDefs>
+    <verb>ascending Bulborbs</verb>
+    <gerund>ascending Bulborbs</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef> 
+</Defs>

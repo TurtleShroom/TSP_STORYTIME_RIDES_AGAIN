@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+ <ThingDef ParentName="PlantBase">
+    <defName>Plant_Gnome</defName>
+    <label>Gnome Root poppy</label>
+    <description>Gnome Root plants are a special type of domesticated poppy (it shares the scientific taxonomic family, 'Papaveraceae', with other poppies, such as opium poppies). Gnomes have cultivated it for millinea. Its diversion from that origin has become so great that its taxonomic classification is independent from any other genus or species of poppy in the galaxy. Gnome Roots, as their name suggests, have edible roots that make up many Gnome dishes. Like all poppies, Gnome Roots are flowering plants. However, that is not for what they are most known. \n \n Gnome Root poppy flowers are a brilliant green color. Their flowers grow only when they are still very immature. When the plant matures, Gnome Root poppy flowers will morph into a distinct, spherical, neon-green seed pod, at which point the poppy can be harvested. The seeds of a Gnome Root poppy's seed pod, as well as its roots, can be ground up into a form of flour. \n Both the husk of the seed pod, its stem, and its roots can then be spun into Gnome Fiber, which is the most common fabric used by Gnomes to clothe themselves in their distinct, bright green wardrobe.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.1</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plants/GnomeRoot</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>4</pathCost>
+    <plant>
+      <growDays>15</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>GnomeRoot</harvestedThingDef>
+      <harvestYield>30</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+	  <sowResearchPrerequisites>
+        <li>ST_GnomeCulture</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>Things/Plants/GnomeRootImmature</immatureGraphicPath>
+      <visualSizeRange>1~1.15</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/terrainDef[@Name="MosaikBase"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs</xpath>
+			<value>
+				<terrainDef ParentName="MosaikBase">
+					<defName>TSP_ST_MosaikFleshTile</defName>
+					<label>rounded flesh tile mosaic</label>
+					<color>(110,30,10)</color>
+					<statBases>
+						<WorkToBuild>2200</WorkToBuild>
+						<Beauty Inherit="False">4</Beauty> <!-- Offsets the negative two beauty of the flesh tile -->
+					</statBases>
+					<costList>
+						<Flesh_Brick>20</Flesh_Brick>
+					</costList>
+				</terrainDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

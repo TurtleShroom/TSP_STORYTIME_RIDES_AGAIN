@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <!-- HYGIENE MOD -->
+
+<!-- Code shamelessly taken from Yamazaki's Bepsi Mod: https://www.steamcommunity.com/sharedfiles/filedetails/?id=1792617578 -->
+
+<Patch>    
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Dubs Bad Hygiene</li>
+		</mods> 
+		<!-- Allows Bebsi to be drinkable if DBH's thirst is enabled -->
+		<match Class="PatchOperationAddModExtension">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="GnomeBeer"]</xpath>
+			<value>
+				<li Class="DubsBadHygiene.WaterExt">
+					<water>0.5</water>
+					<UseForWashing>false</UseForWashing>
+					<SeekForThirst>true</SeekForThirst>
+				</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>

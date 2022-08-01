@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>  
+  <ThingDef ParentName="RockBase">
+    <defName>ST_BlackOre</defName>
+    <label>blackium ore</label>
+    <description>A natural vein of blackium. When found in nature, blackium does not form compounds, alloys, or mixtures with other crystals and rocks, causing it to appear to miners in its pure form.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(30, 30, 30)</color>
+      <colorTwo>(10, 10, 10)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1600</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>ST_Blackium</mineableThing>
+      <mineableYield>45</mineableYield>
+      <mineableScatterCommonality>0.25</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>6~30</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>ST_Toad</defName>
+    <label>Regenerative Toad</label>
+    <description>Regenerative Toads are genetically engineered frogs found in Agri-Worlds and Core Worlds, where they are hosted as livestock. One specific civilization of Gnomes, a subspecies of human, created them to solve a meat shortage on their planet. \n \n A toad is a type of frog with dry, leathery skin, (usually) short legs, and large bumps on their back. They are divided into the "true toads", which all come from the taxnomic family &lt;i>Bufonidae&lt;/i> , and the nine species of "false toads", the latter endemic only to Old Earth's Chile and Thailand. The Regenerative Toad falls under the former, as a true Bufonidae toad. \n \n Unlike every other true toad, Regenerative Toads have extremely long legs which are a delicacy of gnome cooking. Rip them off and they'll grow back. The regenerative properties engineered into these toads are nothing short of miraculous, regrowing these legs in a matter of hours or days. Removing the legs of a Regenerative Toad is completely painless to the frog and does not inhibit its locomotion.</description>
+	<descriptionHyperlinks>
+		<ThingDef>ToadLegs</ThingDef>
+	</descriptionHyperlinks>
+    <statBases>
+      <MoveSpeed>4.0</MoveSpeed>
+      <MarketValue>600</MarketValue>
+      <ComfyTemperatureMin>-9</ComfyTemperatureMin> <!-- Realistic frog temperatures -->
+      <ComfyTemperatureMax>50</ComfyTemperatureMax> <!-- Toads have better heat resistence (e.g. cane toads) -->
+    </statBases>
+	<comps>
+      <li Class="StoryTime.CompProperties_Rippable">
+        <legDef>ToadLegs</legDef>
+        <ripIntervalDays>1</ripIntervalDays>
+        <legAmount>2</legAmount>
+      </li>
+	  <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>ToadEggUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>ToadEggFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>4</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>front-left hand</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>front-right hand</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+		<label>vomerine teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>0.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+	  <wildBiomes>
+			<BorealForest>0.01</BorealForest>
+			<ColdBog>0.1</ColdBog>
+			<TemperateSwamp>0.2</TemperateSwamp>
+			<TropicalSwamp>0.2</TropicalSwamp>
+			<TemperateForest>0.01</TemperateForest>
+			<TropicalRainforest>0.1</TropicalRainforest>
+			
+			<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.04</AB_FeraliskInfestedJungle>
+
+			<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.001</AB_GallatrossGraveyard>
+
+			<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.01</AB_GelatinousSuperorganism>
+
+			<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.04</AB_MycoticJungle>
+
+			<AB_OcularForest MayRequire="sarg.alphabiomes">0.01</AB_OcularForest>
+
+			<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.07</AB_PyroclasticConflagration>
+
+			<AB_RockyCrags MayRequire="sarg.alphabiomes">0.01</AB_RockyCrags>
+
+			<AB_TarPits MayRequire="sarg.alphabiomes">0.04</AB_TarPits>
+
+
+			<!-- ___________________ -->
+
+			<!-- BiomesTeam.Oasis -->
+			<!-- CHROMATIC OASIS -->
+
+			<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.15</BMT_ChromaticOasis>
+
+
+			<!-- ___________________ -->
+
+			<!-- Mlie.AdvancedBiomes -->
+			<!-- ADVANCED BIOMES -->
+
+			<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.01</PoisonForest>
+
+			<Wetland MayRequire="Mlie.AdvancedBiomes">0.25</Wetland>
+
+
+			<!-- ____________________ -->
+
+			<!-- zylle.MoreVanillaBiomes -->
+			<!-- More Vanilla Biomes -->
+
+			<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.03</ZBiome_AlpineMeadow>
+
+			<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.08</ZBiome_CloudForest>
+
+			<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.03</ZBiome_CoastalDunes>
+
+			<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.15</ZBiome_DesertOasis>
+
+			<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_Grasslands>
+
+			<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.25</ZBiome_Marsh>
+
+			<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.03</ZBiome_Sandbar_NoBeach>
+
+
+			<!-- ___________________ -->
+
+			<!-- Mlie.NaturesPrettySweet -->
+			<!-- NATURE IS PRETTY SWEET -->
+
+			<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.01</TKKN_VolcanicFlow>
+
+			<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.08</TKKN_RedwoodForest>
+
+			<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.01</TKKN_Grasslands> <!-- PRAIRIE -->
+
+			<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.15</TKKN_Oasis>
+
+
+			<!-- ___________________ -->
+
+			<!-- Heis.Edo.Themed.Expansion -->
+			<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+			<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.05</HSBambooForest>
+	  </wildBiomes>
+      <body>QuadrupedAnimalWithClawsTailAndJowl</body>
+      <baseBodySize>0.20</baseBodySize>
+      <baseHealthScale>0.3</baseHealthScale>
+      <baseHungerRate>0.3</baseHungerRate>
+      <foodType>OmnivoreRoughAnimal</foodType>
+      <leatherDef>Leather_Frog</leatherDef>
+	  <useMeatFrom>ST_BullFrog</useMeatFrom>
+      <wildness>0.4</wildness>
+      <trainability>Intermediate</trainability>
+      <petness>0.2</petness>
+      <lifeExpectancy>8</lifeExpectancy>
+      <manhunterOnDamageChance>0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+		<lifeStageAges>
+			<li>
+				<def>AnimalBaby</def>
+				<minAge>0</minAge>
+				<soundAngry>Frog_Angry</soundAngry>
+			</li>
+			<li>
+				<def>AnimalJuvenile</def>
+				<minAge>0.095</minAge>
+				<soundAngry>Frog_Angry</soundAngry>
+			</li>
+			<li>
+				<def>AnimalAdult</def>
+				<minAge>0.25</minAge>
+				<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+				<soundDeath>Pawn_Iguana_Death</soundDeath>
+				<soundCall>Pawn_Iguana_Call</soundCall>
+				<soundAngry>Frog_Angry</soundAngry>
+			</li>
+		</lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+	  <li>AnimalFarm</li>
+	  <li>Frog</li>
+    </tradeTags>
+  </ThingDef>
+  
+  
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>ST_Toad</defName>
+    <label>Regenerative Toad</label>
+    <race>ST_Toad</race>
+    <combatPower>30</combatPower>
+    <ecoSystemWeight>0.1</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/Toad</texPath>
+          <drawSize>0.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/Toad</texPath>
+          <drawSize>0.7</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/Toad</texPath>
+          <drawSize>0.9</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+</Defs>

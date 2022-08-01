@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/ingredints/li/filter/thingDefs</xpath>
+			<value>
+				<li>TSP_ST_SkeletalMarrow</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/fixedIngredientFilter/thingDefs</xpath>
+			<value>
+				<li>TSP_ST_SkeletalMarrow</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<!-- If it does, replace an entry with this. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/products</xpath>
+			<value>
+				<products>
+					<ROMB_Gelatin>10</ROMB_Gelatin>
+				</products>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

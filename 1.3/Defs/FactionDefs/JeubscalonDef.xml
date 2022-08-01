@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef>
+    <defName>Jeubscalon</defName>
+    <label>Jeub Hive</label>
+    <description>A Jeub hive. The first known High Jeub to evolve was named Snaff, who came from Rata Jeub, the original home planet of the Jeub species; Snaff is a title which is now borne by every High Jeub ruler. All High Jeubs in the galaxy are his descendents and as the only semi-sane group of Jeubs, they command the non-sapient Jeubs as eusocial servants.</description>
+    <pawnsPlural>jeubs</pawnsPlural>
+    <settlementGenerationWeight>0.8</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+	<maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canStageAttacks>true</canStageAttacks>
+	<rescueesCanJoin>true</rescueesCanJoin>
+    <factionIconPath>World/Jeubscalon/JeubSettlementLogo</factionIconPath>
+	<basicMemberKind>PlayerJeub</basicMemberKind>
+    <colorSpectrum>
+      <li>(0.5, 0.0, 0.5)</li>
+    </colorSpectrum>
+    <requiredMemes>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">HighLife</li>
+    </requiredMemes>
+	<disallowedMemes>
+		<!-- If you have the Mod -->
+		<li MayRequire="llunak.MorePrecepts">Pacifism</li>
+		<li MayRequire="Qux.factionhippie">PeaceLove</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Vegan</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Republic</li>
+		<li MayRequire="Zezz.Altrumeme">Altruism</li>
+		<li MayRequire="Sarg.AlphaMemes">AM_NonViolence</li>
+		<li MayRequire="Ludeon.RimwWorld.Ideology">SZ_Structure_CultureQiYuan</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Corporate</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_Xenophilia</li>
+	</disallowedMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+		
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Abhorrent</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Horrible</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Disapproved</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+	</disallowedPrecepts>
+	<leaderTitle>Snaff</leaderTitle>
+    <fixedName>Jeubscalon Hive</fixedName>
+    <settlementNameMaker>JeubSettlementName</settlementNameMaker>
+    <techLevel>Medieval</techLevel>
+    <backstoryCategories>
+      <li>JeubBackstory</li>
+    </backstoryCategories>
+    <geneticVariance>0.1</geneticVariance>
+    <caravanTraderKinds>
+      <li>Caravan_Neolithic_BulkGoods</li>
+      <li>Caravan_Neolithic_WarMerchant</li>
+      <li>Caravan_Neolithic_Slaver</li>
+	  <li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Drugs</li>
+	  <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Odd</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Neolithic_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,250)</li>
+        <li>(70,400)</li>
+        <li>(400,700)</li>
+        <li>(900,800)</li>
+        <li>(100000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li>
+        <!--Constant 1 at all points levels-->
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <PlayerJeub>50</PlayerJeub>
+		  <High_King>15</High_King>
+          <!-- <Jeub>100</Jeub> -->
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <PlayerJeub>50</PlayerJeub>
+          <Jeub>150</Jeub>
+		  <High_King>25</High_King>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <JeubTrader>1</JeubTrader>
+        </traders>
+        <carriers>
+			<Jeub>9999</Jeub>
+			<Muffalo>1</Muffalo>
+			<Dromedary>1</Dromedary>
+			<Elephant>50</Elephant>
+        </carriers>
+        <guards>
+          <PlayerJeub>15</PlayerJeub>
+          <Jeub>200</Jeub>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <PlayerJeub>100</PlayerJeub>
+          <Jeub>400</Jeub>
+		  <High_King>50</High_King>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+	
+	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+    <fixedLeaderKinds>
+      <li>High_King</li>
+    </fixedLeaderKinds>
+	
+  <!--  <modExtensions>
+      <li Class="JecsTools.FactionSettings">
+        <entrySoundDef>Snaffs_Workshop</entrySoundDef>
+      </li>
+    </modExtensions> -->
+  </FactionDef>
+
+
+
+
+</Defs>

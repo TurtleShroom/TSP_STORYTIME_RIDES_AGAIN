@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/CultureDef[defName="VFEM_Feudal"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/FactionDef[defName="TreeGnomeEmpire"]/allowedCultures</xpath>
+			<value>
+				<allowedCultures>
+					<li>VFEM_Feudal</li>
+				</allowedCultures>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/CultureDef[defName="VFEM_Feudal"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/FactionDef[defName="Beetnikh"]/allowedCultures</xpath>
+			<value>
+				<allowedCultures>
+					<li>VFEM_Feudal</li>
+				</allowedCultures>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

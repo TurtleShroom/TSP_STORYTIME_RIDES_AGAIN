@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_UncookedSoupFine_Veg"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="VCE_CookSoupFine_Veg"]/recipeUsers</xpath>
+			<value>
+				<li>GnomeTable</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_UncookedSoupFine_Veg"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="VCE_CookSoupFine_Carn"]/recipeUsers</xpath>
+			<value>
+				<li>GnomeTable</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_UncookedSoupFine_Veg"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="VCE_CookSoupFine_Carn"]/recipeUsers</xpath>
+			<value>
+				<li>GnomeTable</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_UncookedSoupFine_Veg"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="VCE_CookSoupLavish_Veg"]/recipeUsers</xpath>
+			<value>
+				<li>GnomeTable</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_UncookedSoupFine_Veg"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="VCE_CookSoupGourmet_Veg"]/recipeUsers</xpath>
+			<value>
+				<li>GnomeTable</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_UncookedSoupFine_Veg"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="VCE_CookSoupGourmet_Carn"]/recipeUsers</xpath>
+			<value>
+				<li>GnomeTable</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

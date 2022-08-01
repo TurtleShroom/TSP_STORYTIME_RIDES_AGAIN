@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <DamageDef>
+    <defName>RangedPeeler</defName>
+    <label>peeler</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been peeled to death.</deathMessage>
+    <hediff>Peeled</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Blunt</armorCategory>
+	<defaultArmorPenetration>0.5</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>false</makesAnimalsFlee>
+    <cutExtraTargetsCurve>
+      <points>
+        <li>0, 0</li>
+        <li>0.6, 1</li>
+        <li>0.9, 2</li>
+        <li>1, 3</li>
+      </points>
+    </cutExtraTargetsCurve>
+	<cutCleaveBonus>1</cutCleaveBonus>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Peeler</defName>
+    <label>peeler</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been peeled to death.</deathMessage>
+    <hediff>Peeled</hediff>
+    <hediffSkin>Peeled</hediffSkin>
+    <hediffSolid>Peeled</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+	<defaultArmorPenetration>0.4</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+    <cutExtraTargetsCurve>
+      <points>
+        <li>0, 0</li>
+        <li>0.6, 1</li>
+        <li>0.9, 2</li>
+        <li>1, 3</li>
+      </points>
+    </cutExtraTargetsCurve>
+    <cutCleaveBonus>1.4</cutCleaveBonus>
+  </DamageDef>
+  
+  <HediffDef ParentName="InjuryBase">
+    <defName>Peeled</defName>
+    <label>peeled</label>
+    <labelNoun>the skin that has been peeled</labelNoun>
+    <description>A wound from being peeled.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>grafted</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.3</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>flayed by peeler</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.04</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.15</averagePainPerSeverityPermanent>
+      <bleedRate>0.005</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>peeled away</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Launched_Peeler</defName>
+    <label>peeler</label>
+    <graphicData>
+      <texPath>Things/Items/PeeledWeapons/Peeler</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedPeeler</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>25</speed>
+	  <!-- <flyOverhead>true</flyOverhead> -->
+    </projectile>
+	<!-- <defaultArmorPenetration>0.9</defaultArmorPenetration> -->
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGun">
+    <defName>PeelerLauncher</defName>
+    <label>peeler launcher</label>
+	<techLevel>Spacer</techLevel>
+    <description>HHHHHHHHHHHHHHHH</description>
+    <graphicData>
+      <texPath>Things/Items/PeeledWeapons/RazorLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<weaponTags>
+		<li>PeeledWeapon</li>
+		<li>Potato Cannon</li>
+		<li>Folian</li>
+		<!-- <li>SpacerGun</li> -->
+    </weaponTags>
+    <soundInteract>Interact_SMG</soundInteract>
+	<generateCommonality>1.5</generateCommonality>
+    <statBases>
+		<MarketValue>800</MarketValue>
+		<Mass>0.2</Mass>
+		<AccuracyTouch>0.5</AccuracyTouch>
+		<AccuracyShort>0.9</AccuracyShort>
+		<AccuracyMedium>0.9</AccuracyMedium>
+		<AccuracyLong>0.4</AccuracyLong>
+		<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+	<!-- <defaultArmorPenetration>0.5</defaultArmorPenetration> -->
+    <tradeability>Sellable</tradeability>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Launched_Peeler</defaultProjectile>
+        <warmupTime>3.2</warmupTime>
+        <range>28</range>
+        <burstShotCount>80</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shot_NeedleGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>16</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li>Poke</li>
+		  <li>Peeler</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Peeler</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+	<equippedStatOffsets>
+		<TerrorSource>0.1</TerrorSource>
+	</equippedStatOffsets>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeapon">
+    <defName>MeleePeeler</defName>
+    <label>peeler</label>
+    <techLevel>Industrial</techLevel>
+    <description>HHHHHHHHHHHHHHHH</description>
+    <graphicData>
+      <texPath>Things/Items/PeeledWeapons/Peeler</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.7</drawSize>
+    </graphicData>
+	<generateCommonality>1.5</generateCommonality>
+    <uiIconScale>1.6</uiIconScale>
+	<tradeability>Sellable</tradeability>
+	<stuffCategories Inherit="False">
+      <li>Metallic</li>
+	  
+	  <!-- Mod support -->
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+    </stuffCategories>
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <weaponTags Inherit="False">
+      <li>PeeledWeapon</li>
+	  <li>Folian</li>
+	  <li>HooliganWeapon</li>
+    </weaponTags>
+	<statBases>
+      <Mass>0.05</Mass>
+	  <MarketValue>300</MarketValue>
+	  <TerrorSource>0.1</TerrorSource>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>false</burnableByRecipe>
+    <tools>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Peeler</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>0.4</cooldownTime>
+      </li>
+    </tools>
+	<equippedStatOffsets>
+	</equippedStatOffsets>
+  </ThingDef>
+</Defs>

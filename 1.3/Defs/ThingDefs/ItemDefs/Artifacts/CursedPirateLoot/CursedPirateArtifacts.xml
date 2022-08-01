@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+  
+  <ThingDef ParentName="BasePsychicWeaponMelee">
+    <defName>CursedCutlass</defName>
+    <label>Haunted Cutlass</label>
+    <description>The hilt of this blade is covered in melted gold coins, and a strange ethereal glow emanates from it.</description>
+    <graphicData>
+      <texPath>Things/Items/PirateWeapons/CursedCutlass</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+	<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>1</Mass>
+	  <MarketValue>3000</MarketValue>
+    </statBases>
+
+    <equippedAngleOffset>0</equippedAngleOffset>
+	<tools>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+		  <li>Stab</li>
+		  <li>Demolish</li>
+		  <li>Poke</li>
+        </capacities>
+        <power>19</power>
+        <cooldownTime>1</cooldownTime>
+		<armorPenetration>0.6</armorPenetration>
+		<chanceFactor>0.9</chanceFactor>
+      </li>
+	  <li>
+		<label>enchantment</label>
+		<capacities>
+			<li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
+			<li>TSP_ST_Stun</li>
+			<li>Demolish</li>
+			<li>TSP_ST_Thump</li>
+		</capacities>
+		<power>25</power>
+		<chanceFactor>1</chanceFactor>
+		<armorPenetration>1</armorPenetration>
+	  </li>
+    </tools>
+	<tradeTags>
+		<li>PsychicWeapon</li>
+	</tradeTags>
+	<thingCategories>
+		<li>Artifacts</li>
+    </thingCategories>
+	<weaponTags>
+		<li>HarrowedMeleeChampion</li>
+		<li>ST_CursedWeapons</li>
+		<li>SkeletonCaptain</li>
+	</weaponTags>
+	<comps>
+		<li Class="CompProperties_Art">
+			<nameMaker>NamerArtWeaponMelee</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+			<minQualityForArtistic>Normal</minQualityForArtistic>
+		</li>
+	</comps>
+	<equippedStatOffsets>
+		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
+		<PsychicEntropyRecoveryRate>0.02</PsychicEntropyRecoveryRate>
+	</equippedStatOffsets>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeapon">
+    <defName>CursedGun</defName>
+    <label>haunted assault rifle</label>
+    <description>An assault rifle that's been covered in Haunted Gold. It emits a strange, ethereal glow. While it is a fantastic ranged weapon, its most important purpose is to enhance the wielder's psychic sensitivity and neural heat dissipation, allowing more use of psychic powers alongside it. The Haunted Gold coating of this rifle causes it to be more accurate in the hands of any user, regardless of his Shooting Skills.</description>
+    <graphicData>
+      <texPath>Things/Items/PirateWeapons/CursedGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+	<techLevel>Industrial</techLevel>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.8</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_CursedRifle</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>30</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li>ToxicBite</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+		<chanceFactor>0.1</chanceFactor>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Poke</li>
+		  <li>ToxicBite</li>
+		  <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+		<chanceFactor>0.1</chanceFactor>
+      </li>
+	  <li>
+		<label>enchantment</label>
+		<capacities>
+			<li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
+			<li>TSP_ST_Stun</li>
+			<li>Demolish</li>
+			<li>TSP_ST_Thump</li>
+		</capacities>
+		<power>30</power>
+		<chanceFactor>1</chanceFactor>
+		<armorPenetration>1</armorPenetration>
+	  </li>
+    </tools>
+	<weaponTags>
+		<li>CallOfCthulhu_InfantryGun</li>
+		<li>CallOfCthulhu_FrenziedCultist</li>
+		<li>ST_CursedWeapons</li>
+		<li>SkeletonCaptain</li>
+	</weaponTags>
+	<tradeTags>
+		<li>PsychicWeapon</li>
+	</tradeTags>
+	<thingCategories>
+		<li>Artifacts</li>
+    </thingCategories>
+	<comps>
+        <li><compClass>CompQuality</compClass></li>
+		<li Class="CompProperties_Art">
+			<nameMaker>NamerArtWeaponMelee</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+			<minQualityForArtistic>Poor</minQualityForArtistic>
+		</li>
+	</comps>
+	<equippedStatOffsets>
+		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
+		<PsychicEntropyRecoveryRate>0.02</PsychicEntropyRecoveryRate>
+	</equippedStatOffsets>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_CursedRifle</defName>
+    <label>haunted assault rifle bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ToxicBite</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelBase">
+    <defName>PirateCrown</defName>
+    <label>pirate crown</label>
+    <description>A crown of Haunted Gold.</description>
+    <smeltable>true</smeltable>
+    <thingCategories>
+      <li>HeadgearNoble</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PirateClothing/PirateCrown/PirateCrown</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>0.9</Mass>
+      <EquipDelay>0.8</EquipDelay>
+	  <MarketValue>3000</MarketValue>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.25</SocialImpact>
+	  <PsychicSensitivityOffset>0.25</PsychicSensitivityOffset>
+      <PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PirateClothing/PirateCrown/PirateCrown</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+		<li>RoyalTier1</li>
+		<li>RoyalTier2</li>
+		<li>RoyalTier3</li>
+		<li>RoyalTier4</li>
+		<li>RoyalTier5</li>
+		<li>King</li>
+		<li>Psychic</li>
+      </tags>	 
+    </apparel>
+	<comps>
+		<li Class="CompProperties_Art">
+			<nameMaker>NamerArtWeaponMelee</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+			<minQualityForArtistic>Normal</minQualityForArtistic>
+		</li>
+	</comps>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Frug"]/race</xpath>
+			<value>
+				<leatherDef>Leather_Frog</leatherDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Frug"]/race</xpath>
+			<value>
+				<useMeatFrom>ST_BullFrog</useMeatFrom>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Frug"]/race/lifeStageAges</xpath>
+			<value>
+				<lifeStageAges>
+					<li>
+						<def>AnimalBabyTiny</def>
+						<minAge>0</minAge>
+						<soundWounded>Pawn_Chick_Call</soundWounded>
+						<soundDeath>Pawn_Chick_Call</soundDeath>
+						<soundCall>Pawn_Chick_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalJuvenile</def>
+						<minAge>0.09</minAge>
+						<soundWounded>Pawn_Chick_Call</soundWounded>
+						<soundDeath>Pawn_Chick_Call</soundDeath>
+						<soundCall>Pawn_Chick_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalAdult</def>
+						<minAge>0.25</minAge>
+						<soundWounded>Pawn_Chick_Call</soundWounded>
+						<soundDeath>Pawn_Chick_Call</soundDeath>
+						<soundCall>Pawn_Chick_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Frug"]/tradeTags</xpath>
+			<value>
+				<li>Frog</li>
+				<li>AnimalCommon</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

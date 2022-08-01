@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseSkeleton">
+    <defName>ST_SkeletonCaptain</defName>
+    <label>Skeleton Captain</label>
+    <description>This skeleton was once a local charter's captain in a Pirate Faction who willingly exchanged their souls in exchange for the ability to plunder for all of time. As in life, he still possesses extraordinary power, intellect, and combat prowess.</description>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+      <MarketValue>600</MarketValue>
+	  <Flammability>0</Flammability>
+	  <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+	  <MeatAmount Inherit="False">150</MeatAmount>
+    </statBases>
+    <tools>
+      <li>
+        <label>left hand</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hand</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+		<label>jawbone</label>
+        <capacities>
+          <li>Bite</li>
+		  <li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+    </tools>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>1</accuracyTouch>
+				<accuracyShort>1</accuracyShort>
+				<accuracyMedium>0.8</accuracyMedium>
+				<accuracyLong>0.7</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>SkeletonBlast</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<burstShotCount>3</burstShotCount>
+				<minRange>3</minRange>
+				<range>25</range>				
+				<soundCast>Shot_NeedleGun</soundCast>
+				<muzzleFlashScale>13</muzzleFlashScale>
+				<label>ethereal skeleton blast</label>
+				<requireLineOfSight>false</requireLineOfSight>
+				<commonality>1</commonality>
+			</li>
+		</verbs>
+    <race>
+	  <intelligence>ToolUser</intelligence>
+      <body>TSP_ST_SkeletalMan</body>
+	  <deathActionWorkerClass>DeathActionWorker_BigExplosion</deathActionWorkerClass>
+      <baseBodySize>2</baseBodySize>
+      <baseHungerRate>0</baseHungerRate>
+      <baseHealthScale>3</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+	
+	<butcherProducts Inherit="False">
+		<BoneItem MayRequire="sihv.rombones">206</BoneItem>
+		<ST_PirateHat>1</ST_PirateHat>
+		<ST_KrakenRum>15</ST_KrakenRum>
+	</butcherProducts>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseSkeletonKind">
+    <defName>ST_SkeletonCaptain</defName>
+    <label>Skeleton Captain</label>
+    <race>ST_SkeletonCaptain</race>
+    <combatPower>200</combatPower>
+	<destroyGearOnDrop>true</destroyGearOnDrop>
+    <lifeStages>
+      <li>
+        <label>Skeleton Captain</label>
+        <labelPlural>Skeleton Captains</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/Skeletons/SkeletonCaptain/SkeletonCaptain</texPath>
+          <drawSize>2.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Humanlike/Apparel/PirateClothing/Tricorn/Tricorn</texPath>
+          <drawSize>3.05</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+	<weaponMoney>3000~12000</weaponMoney>
+	<weaponTags>
+		<li>SkeletonCaptain</li>
+		<li>IndustrialRangedHeavy</li>
+		<li>IndustrialHeavy</li>
+    </weaponTags>
+    <inventoryOptions>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>CursedCoin</thingDef>
+          <countRange>25~60</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  
+	<ThingDef ParentName="BaseBullet">
+		<defName>SkeletonBlast</defName>
+		<label>ethereal blast</label>
+		<graphicData>
+			<texPath>Projectiles/TSP_ST_LoadedFemur</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Thump</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<stoppingPower>5</stoppingPower>
+			<speed>75</speed>
+		</projectile>
+  </ThingDef>
+  
+</Defs>

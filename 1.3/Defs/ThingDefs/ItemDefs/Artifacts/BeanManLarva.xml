@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>BeanManLarva</defName>
+		<label>Bean man larva</label>
+		<thingClass>ThingWithComps</thingClass>
+		<description>A Bulborb Larva that has successfully had a Sapient Bean Matrix incorporated into it. With help, it will grow. \n \n (Right-click a Bean Man Larva to activate it and produce a sapient Bean Man.)</description>
+		<descriptionHyperlinks>
+			<ThingDef>SapientBeanMatrix</ThingDef>
+			<RecipeDef>MakeBeanManLarva</RecipeDef>
+			<ThingDef>BeanPit</ThingDef>
+			<ThingDef>Alien_BeanMan</ThingDef>
+			<ThingDef>ST_Bean</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Items/BeanManLarva</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>TSP_Bulborb_DeathDwarf</soundInteract>
+		<soundDrop>TSP_BulborbShake</soundDrop>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>5</Mass>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>
+		<techLevel>Ultra</techLevel>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>ASCEND!!</useLabel>
+				<useDuration>100</useDuration>
+			</li>
+			<li Class="StoryTime.CompProperties_SpawnPawn">
+				<compClass>StoryTime.CompUseEffect_SpawnPerson</compClass>
+				<pawnKind>PlayerBeanMan</pawnKind>
+
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>CompUseEffect_DestroySelf</compClass>
+			</li>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardSpecial</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>SapientBeanMatrix</defName>
+    <label>sapient bean matrix</label>
+    <description>A highly advanced piece of Glitter World technology capable of enlightening any Bulborb that consumes it. To grant sapience to a Bulborb, the Bulborb Larva must be in a Bean Pit. Strangely, though, it is hard-wired to only work when surrounded with a large amount of beans.</description>
+	<descriptionHyperlinks>
+		<RecipeDef>MakeSapientBeanMatrix</RecipeDef>
+		<RecipeDef>MakeBeanManLarva</RecipeDef>
+		<ThingDef>BeanPit</ThingDef>
+		<ThingDef>Alien_BeanMan</ThingDef>
+	</descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Items/SapientBeanMatrix</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>TSP_BulborbShake</soundInteract>
+    <soundDrop>TSP_BulborbShake</soundDrop>
+    <stackLimit>1</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>10</Mass>
+      <Flammability>1</Flammability>
+    </statBases>
+    <thingCategories>
+		<li>Artifacts</li>
+    </thingCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <tradeability>Sellable</tradeability>
+    <techLevel>Ultra</techLevel>
+    <tradeTags>
+		<li>Artifact</li>
+    </tradeTags>
+  </ThingDef>
+
+ <RecipeDef>
+    <defName>MakeSapientBeanMatrix</defName>
+    <label>Make Sapient Bean Matrix</label>
+    <description>Assemble a Sapient Bean Matrix to be placed inside a larval Bulborb.</description>
+	<descriptionHyperlinks>
+		<ThingDef>SapientBeanMatrix</ThingDef>
+		<RecipeDef>MakeBeanManLarva</RecipeDef>
+		<ThingDef>BeanPit</ThingDef>
+		<ThingDef>Alien_BeanMan</ThingDef>
+	</descriptionHyperlinks>
+	<jobString>Assemble a Sapient Bean Matrix.</jobString>
+    <workAmount>4000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workSkill>Crafting</workSkill>
+	<researchPrerequisite>beanManCrafting</researchPrerequisite>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+	<recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+					<thingDefs>
+						<li>ComponentSpacer</li>
+					</thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+	  <li>
+        <filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+	  <li>
+        <filter>
+					<thingDefs>
+						<li>ST_Bean</li>
+					</thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>ComponentSpacer</li>
+						<li>Gold</li>
+						<li>Plasteel</li>
+						<li>ST_Bean</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+	<products>
+		<SapientBeanMatrix>1</SapientBeanMatrix>
+	</products>
+  </RecipeDef>
+  
+ <RecipeDef>
+    <defName>MakeBeanManLarva</defName>
+    <label>Grow Bean Man Larva</label>
+    <description>Throw a Sapient Bean Matrix and a bunch of beans into the pit. Done right, a Bulborb Larva should be feeding near the Empress Bulblax that birthed it. If the Sapient Bean Matrix and the beans are eaten fast enough by a Bulborb, a fully ascended Bean Man Larva will be generated with human intelligence.</description>    
+	<jobString>ASCENDING BULBORBS</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workSkill>Crafting</workSkill>
+	<researchPrerequisite>beanManCrafting</researchPrerequisite>
+	<recipeUsers>
+      <li>BeanPit</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+					<thingDefs>
+						<li>SapientBeanMatrix</li>
+					</thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+					<thingDefs>
+						<li>ST_Bean</li>
+					</thingDefs>
+        </filter>
+        <count>250</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>SapientBeanMatrix</li>
+						<li>ST_Bean</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+	<products>
+		<BeanManLarva>1</BeanManLarva>
+	</products>
+  </RecipeDef>
+</Defs>

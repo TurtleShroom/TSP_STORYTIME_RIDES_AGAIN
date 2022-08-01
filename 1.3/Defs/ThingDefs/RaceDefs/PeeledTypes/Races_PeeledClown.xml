@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="BasePawn" Name="BasePeeled" Abstract="True">
+    <statBases>
+      <PsychicSensitivity>0.2</PsychicSensitivity>
+      <ToxicSensitivity>2</ToxicSensitivity>
+      <Flammability>2</Flammability>
+      <ComfyTemperatureMin>-110</ComfyTemperatureMin>
+      <ComfyTemperatureMax>110</ComfyTemperatureMax>
+	  <LeatherAmount>60</LeatherAmount>
+	  <TerrorSource>1</TerrorSource>
+    </statBases>
+    <race>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <foodType>None</foodType>
+      <lifeExpectancy>15</lifeExpectancy>
+	  <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+    </race>
+  </ThingDef>
+  
+  <PawnKindDef Name="BasePeeledKind" Abstract="True">
+    <defaultFactionType>Peeled_Ones</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <destroyGearOnDrop>false</destroyGearOnDrop>
+	<maxGenerationAge>15</maxGenerationAge>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BasePeeled">
+    <defName>PeeledClown</defName>
+    <label>Peeled Clown</label>
+    <description>HHHHHHHHHHHHHHHHHHHH</description>
+    <statBases>
+      <MoveSpeed>6.0</MoveSpeed>
+      <MarketValue>150</MarketValue>
+      <ComfyTemperatureMin>-60</ComfyTemperatureMin>
+    </statBases>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Peeler</li>
+        </capacities>
+        <power>0.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Peeler</li>
+        </capacities>
+        <power>0.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Peeler</li>
+        </capacities>
+        <power>2.2</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <race>
+	  <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <body>Human</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHungerRate>0</baseHungerRate>
+      <baseHealthScale>1</baseHealthScale>
+      <lifeExpectancy>60</lifeExpectancy>
+	  <useMeatFrom>PeeledBeast</useMeatFrom>
+	  <leatherDef>RawPotatoes</leatherDef>
+	  <bloodDef>Filth_CorpseBile</bloodDef>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0</minAge>
+          <soundWounded>PeeledScreech</soundWounded>
+          <soundDeath>PeeledScreech</soundDeath>
+          <soundCall>PeeledScreech</soundCall>
+          <soundAngry>PeeledScreech</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BasePeeledKind">
+    <defName>PeeledClown</defName>
+    <label>Peeled Clown</label>
+    <race>PeeledClown</race>
+    <combatPower>30</combatPower>
+	<ecoSystemWeight>0</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>Peeled Clown</label>
+        <labelPlural>Peeled Clowns</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/PeeledClown/PeeledClown/PeeledClown</texPath>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Other/PeeledClown/PeeledClown/DemonPotatoes</texPath>
+          <drawSize>2.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+	<weaponMoney>1000~3000</weaponMoney>
+	<weaponTags>
+      <li>PeeledWeapon</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+</Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ManeuverDef>
+    <defName>Peeler</defName>
+    <requiredCapacity>Peeler</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>Peeler</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+  
+  <ManeuverDef>
+    <defName>PoisonDart</defName>
+    <requiredCapacity>PoisonDart</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>PoisonDart</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+	<combatLogRulesHit>Maneuver_Bite_MeleeHit</combatLogRulesHit>
+	<combatLogRulesDeflect>Maneuver_Bite_MeleeDeflect</combatLogRulesDeflect>
+	<combatLogRulesMiss>Maneuver_Bite_MeleeMiss</combatLogRulesMiss>
+	<combatLogRulesDodge>Maneuver_Bite_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+</Defs>

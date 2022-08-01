@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>Green_Milk</defName>
+    <label>Green Milk</label>
+    <description>Strange green pus from extracted from the sac on an Engorged Gecko's tail. It is actually very delicious, sought after, and highly nutritious. In particular, it adds a distinct and unforgettable flavor when made into cheese.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Green_Milk</texPath>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>3.2</MarketValue>
+      <Mass>0.045</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.06</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.008</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>20</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>AnimalProduct, Fluid</foodType>
+    </ingestible>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EngorgedGeckoEggUnfertilized</defName>
+    <label>Engorged Gecko egg (unfert.)</label>
+    <description>An unfertilized Engorged Gecko egg. It can be eaten raw, but it's much, much better cooked.</description>
+    <graphicData>
+      <color>(190,200,170)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+  </ThingDef>
+  
+    <ThingDef ParentName="EggFertBase">
+    <defName>EngorgedGeckoEggFertilized</defName>
+    <label>gecko egg (fert.)</label>
+    <description>A fertilized Engorged Gecko egg. If all goes well, it should hatch into an Engorged Gecko. It can be eaten raw, but it's much better cooked.</description>
+    <graphicData>
+      <color>(190,200,170)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>4</hatcherDaystoHatch>
+        <hatcherPawn>Engorged_Gecko</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

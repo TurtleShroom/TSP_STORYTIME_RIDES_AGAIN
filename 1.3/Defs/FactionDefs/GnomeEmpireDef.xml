@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef>
+    <defName>TreeGnomeEmpire</defName>
+    <label>Gnome Empire</label>
+    <description>Many Gnomes dwell in these lands, some of them children.</description>
+    <pawnsPlural>gnomes</pawnsPlural>
+    <settlementGenerationWeight>0.9</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxCountAtGameStart>2</maxCountAtGameStart>
+	<maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canStageAttacks>true</canStageAttacks>
+	<rescueesCanJoin>true</rescueesCanJoin>
+    <factionIconPath>World/TreeGnomeEmpire/GnomeLogo</factionIconPath>
+	<basicMemberKind>PlayerGnome</basicMemberKind>
+    <colorSpectrum>
+      <li>(0.0, 0.5, 0.0)</li>
+    </colorSpectrum>
+    <disallowedMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		
+		<!-- If you have the Mod -->
+		<li MayRequire="FalloutRedScare.FalloutRedScare">FRS_Structure_Socialist</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Corporate</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Serketist</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Republic</li>
+    </disallowedMemes>
+    <requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">NaturePrimacy</li>
+		
+		<!-- If you have the Mod -->
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Aristocratic</li>
+    </requiredMemes>
+	<allowedCultures>
+		<li>Astropolitan</li>
+		<li>Corunan</li>
+	</allowedCultures>
+	<fixedName>Tree Gnome Empire</fixedName>
+    <settlementNameMaker>GnomeSettlementName</settlementNameMaker>
+    <techLevel>Medieval</techLevel>
+    <backstoryCategories>
+      <li>GnomeBackstory</li>
+	  <li>Farmer</li>
+    </backstoryCategories>
+    <backstoryFilters>
+      <li>
+        <categories>
+			<li>GnomeBackstory</li>
+			<li>Farmer</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+	<hidden Inherit="False">false</hidden>
+    <geneticVariance>0.2</geneticVariance>
+    <raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+    <caravanTraderKinds>
+      <li>Caravan_Neolithic_BulkGoods</li>
+      <li>Caravan_Neolithic_WarMerchant</li>
+	  <li>Caravan_Neolithic_Slaver</li>
+	  <li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_Caravan_Medieval_WineMerchant</li>
+	  <li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Farming</li>
+	  <li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Textiles</li>
+	  <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Farming</li>
+	  <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Medical</li>
+	  <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Odd</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Neolithic_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li>
+        <!-- Constant 1 at all points levels -->
+      </points>
+    </raidCommonalityFromPointsCurve>
+	<humanlikeFaction Inherit="False">true</humanlikeFaction>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+			<TSP_ST_GnomePeasant>150</TSP_ST_GnomePeasant>
+          <GnomeWarrior>75</GnomeWarrior>
+		  <GnomeArcher>75</GnomeArcher>
+		  <TSP_ST_RoyaltyGnoble>1</TSP_ST_RoyaltyGnoble>
+          <!-- <ST_Toad>10</ST_Toad> -->
+		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">1</ForgPawnKindDef>
+		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">1</DuoPawnKindDef>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <GnomeArcher>400</GnomeArcher>
+          <GnomeWarrior>225</GnomeWarrior>
+          <ST_Toad>10</ST_Toad>
+		  <GnomeKing>1</GnomeKing>
+		  <TSP_ST_GnomeCabbageinator>20</TSP_ST_GnomeCabbageinator>
+		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">3</ForgPawnKindDef>
+		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">2</DuoPawnKindDef>
+		  <TSP_ST_GnomePeasant>20</TSP_ST_GnomePeasant>
+		  <TSP_ST_RoyaltyGnoble>30</TSP_ST_RoyaltyGnoble>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <GnomeTrader>1</GnomeTrader>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+		  <Alpaca>1</Alpaca>
+		  <Dromedary>1</Dromedary>
+		  <Elephant>100</Elephant>
+        </carriers>
+        <guards>
+          <GnomeArcher>200</GnomeArcher>
+		  <GnomeWarrior>120</GnomeWarrior>
+          <ST_Toad>25</ST_Toad>
+		  <TSP_ST_GnomeCabbageinator>10</TSP_ST_GnomeCabbageinator>
+		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
+		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
+		  <TSP_ST_GnomePeasant>10</TSP_ST_GnomePeasant>
+		  <TSP_ST_RoyaltyGnoble>3</TSP_ST_RoyaltyGnoble>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <GnomeArcher>200</GnomeArcher>
+		  <GnomeWarrior>200</GnomeWarrior>
+          <ST_Toad>90</ST_Toad>
+		  <GnomeKing>2</GnomeKing>
+		  <TSP_ST_GnomeCabbageinator>25</TSP_ST_GnomeCabbageinator>
+		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">1</ForgPawnKindDef>
+		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
+		  <TSP_ST_GnomePeasant>350</TSP_ST_GnomePeasant>
+		  <TSP_ST_RoyaltyGnoble>50</TSP_ST_RoyaltyGnoble>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+	<apparelStuffFilter>
+		<thingDefs>
+			<li>Gnome_Cloth</li>
+			<li>Jade</li>
+			<li>Steel</li>
+			<li>Marble</li>
+		</thingDefs>
+		<disallowedThingDefs>
+			<li>Plasteel</li>
+		</disallowedThingDefs>
+	</apparelStuffFilter>
+    <fixedLeaderKinds>
+		<li>GnomeKing</li>
+    </fixedLeaderKinds>
+  <!--  <modExtensions>
+      <li Class="JecsTools.FactionSettings">
+        <entrySoundDef>Gnome_Theme</entrySoundDef>
+      </li>
+    </modExtensions> -->
+  </FactionDef> 
+
+
+
+
+</Defs>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/FactionDef[defName="FRX_UnknownFaction"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName = "Skeleton_Pirates"]</xpath>
+					<value>
+						<li Class="FRX.FactionDefExtension">
+							<canRaidThroughGates>true</canRaidThroughGates>
+							<canRaidAfterPinging>true</canRaidAfterPinging>
+							<disableRaidTimeAfterPinging>0.5</disableRaidTimeAfterPinging>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName = "Peeled_Ones"]</xpath>
+					<value>
+						<li Class="FRX.FactionDefExtension">
+							<canRaidThroughGates>true</canRaidThroughGates>
+							<canRaidAfterPinging>true</canRaidAfterPinging>
+							<disableRaidTimeAfterPinging>0.5</disableRaidTimeAfterPinging>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName = "BeanManFaction"]</xpath>
+					<value>
+						<li Class="FRX.FactionDefExtension">
+							<canRaidThroughGates>true</canRaidThroughGates>
+							<canRaidAfterPinging>true</canRaidAfterPinging>
+							<disableRaidTimeAfterPinging>2</disableRaidTimeAfterPinging>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName = "NicePirates"]</xpath>
+					<value>
+						<li Class="FRX.FactionDefExtension">
+							<canRaidThroughGates>true</canRaidThroughGates>
+							<canRaidAfterPinging>true</canRaidAfterPinging>
+							<disableRaidTimeAfterPinging>1</disableRaidTimeAfterPinging>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName = "MeanPirates"]</xpath>
+					<value>
+						<li Class="FRX.FactionDefExtension">
+							<canRaidThroughGates>true</canRaidThroughGates>
+							<canRaidAfterPinging>true</canRaidAfterPinging>
+							<disableRaidTimeAfterPinging>1</disableRaidTimeAfterPinging>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName = "Beetnikh"]</xpath>
+					<value>
+						<li Class="FRX.FactionDefExtension">
+							<canRaidThroughGates>true</canRaidThroughGates>
+							<canRaidAfterPinging>true</canRaidAfterPinging>
+							<disableRaidTimeAfterPinging>2</disableRaidTimeAfterPinging>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName = "WoodBeetTribe"]</xpath>
+					<value>
+						<li Class="FRX.FactionDefExtension">
+							<canRaidThroughGates>true</canRaidThroughGates>
+							<canRaidAfterPinging>true</canRaidAfterPinging>
+							<disableRaidTimeAfterPinging>1</disableRaidTimeAfterPinging>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName = "Jeubscalon"]</xpath>
+					<value>
+						<li Class="FRX.FactionDefExtension">
+							<canRaidThroughGates>true</canRaidThroughGates>
+							<canRaidAfterPinging>true</canRaidAfterPinging>
+							<disableRaidTimeAfterPinging>1</disableRaidTimeAfterPinging>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/FactionDef[defName = "TreeGnomeEmpire"]</xpath>
+					<value>
+						<li Class="FRX.FactionDefExtension">
+							<canRaidThroughGates>true</canRaidThroughGates>
+							<canRaidAfterPinging>true</canRaidAfterPinging>
+							<disableRaidTimeAfterPinging>2</disableRaidTimeAfterPinging>
+						</li>
+					</value>
+				</li>
+			</operations>	
+		</match>
+	</Operation>
+
+</Patch>

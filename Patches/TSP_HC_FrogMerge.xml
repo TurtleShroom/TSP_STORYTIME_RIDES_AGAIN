@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]/race/leatherDef</xpath>
+			<value>
+				<leatherDef>Leather_Frog</leatherDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]/race/useMeatFrom</xpath>
+			<value>
+				<useMeatFrom>ST_BullFrog</useMeatFrom>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]/race/lifeStageAges</xpath>
+			<value>
+				<lifeStageAges>
+					<li>
+						<def>AnimalBaby</def>
+						<minAge>0</minAge>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalJuvenile</def>
+						<minAge>0.09</minAge>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalAdult</def>
+						<minAge>0.25</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]/tradeTags</xpath>
+			<value>
+				<li>Frog</li>
+				<li>AnimalCommon</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
