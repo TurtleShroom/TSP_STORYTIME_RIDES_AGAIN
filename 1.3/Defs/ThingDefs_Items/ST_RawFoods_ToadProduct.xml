@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>ToadLegs</defName>
+    <label>toad legs</label>
+    <description>Unlike the legs of normal frogs, these meaty toad legs are cut from a Regenerative Toad. They are a renewable resource that is regenerated in mere hours to days. They are excellent for cooking and taste like normal frog's legs, making them a Gnome delicacy. Removing the legs of a Regenerative Toad is completely painless to the frong and does not inhibit its locomotion.</description>
+	<descriptionHyperlinks>
+		<ThingDef>ST_Toad</ThingDef>
+	</descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/ToadLegs</texPath>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.045</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.09</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.06</FoodPoisonChanceFixedHuman>
+    </statBases>
+	<stackLimit>100</stackLimit>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>20</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+		<preferability>RawTasty</preferability>
+		<foodType>AnimalProduct, Meat, CarnivoreAnimal, CarnivoreAnimalStrict</foodType>
+		<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+		<optimalityOffsetFeedingAnimals>-5</optimalityOffsetFeedingAnimals>
+    </ingestible>
+    <thingCategories>
+		<li>MeatRaw</li>
+		<li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Cartographer_Boots</defName>
+    <label>Boots of the Cartographer</label>
+    <description>These boots harness the power of the Cartographer himself...</description>
+	<generateCommonality>0.03</generateCommonality>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Items/Cartographer_Shoes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Leather_Cartographer>40</Leather_Cartographer>
+    </costList>
+    <apparel>
+	  <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Worker</li>
+		<li>Soldier</li>
+      </defaultOutfitTags>
+      <tags>
+        <li>ExoticMisc</li>
+		<li>Spacer</li>
+		<li>SpacerMilitary</li>
+		<!-- <li>IndustrialAdvanced</li> -->
+		<li>IndustrialMilitaryAdvanced</li>
+		<li>zori</li>
+		<li>WeebElite</li>
+		<li>AnimeProtagonist</li>
+		<li>Pirate</li>
+		<li>SixthHouseSwag</li>
+		<li>EVA</li>
+      </tags>
+    </apparel>
+    <statBases>
+      <MaxHitPoints>2000</MaxHitPoints>
+      <Mass>0.25</Mass>
+      <WorkToMake>12000</WorkToMake>
+      <EquipDelay>0.8</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>2</MoveSpeed>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ApparelUtility</li>
+	  <li>Artifacts</li>
+    </thingCategories>
+	<comps>
+		<li Class="CompProperties_Art">
+			<nameMaker>NamerArtWeaponMelee</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+			<minQualityForArtistic>Normal</minQualityForArtistic>
+		</li>
+	</comps>
+		<inspectorTabs>
+		  <li>ITab_Art</li>
+		</inspectorTabs>
+  </ThingDef>
+
+</Defs>
