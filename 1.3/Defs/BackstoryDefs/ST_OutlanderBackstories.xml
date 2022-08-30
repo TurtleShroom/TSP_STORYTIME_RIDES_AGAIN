@@ -4,8 +4,8 @@
 		<defName>Backstory_SlowBowler</defName>
 		<slot>Adulthood</slot>
 		<title>bowling champion</title>
-		<titleShort>slow bowler</titleShort>
-		<baseDesc>[PAWN_nameDef] was known far and wide for being the best slow bowler in [PAWN_possessive] homeland. [PAWN_pronoun] was considered the peak of athleticism by [PAWN_possessive] peers.</baseDesc>
+		<titleShort>bowler</titleShort>
+		<baseDesc>[PAWN_nameDef] was known far and wide for being the best bowler in [PAWN_possessive] homeland. [PAWN_pronoun] was considered the peak of athleticism by [PAWN_possessive] peers.</baseDesc>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<requiredWorkTags>
@@ -69,4 +69,41 @@
 			<li>PirateBackstory</li>
 		</SpawnCategories>
 	</StoriesRetold.SRBackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="STOutlanderBackstories">
+		<defName>ST_SmartChild</defName>
+		<slot>Childhood</slot>
+		<title>smart kid</title>
+		<titleShort>gifted</titleShort>
+		<baseDescription>[PAWN_nameDef] was considered one of the smartest kids in [PAWN_possessive] village. This constant lavishing of praise had strange effects on [PAWN_possessive] psyche.</baseDescription>
+		<skillGains>
+			  <li>
+				<defName>Intellectual</defName>
+				<amount>4</amount>
+			  </li>	
+			  <li>
+				<defName>Social</defName>
+				<amount>-4</amount>
+			  </li>	
+		</skillGains>
+		<forcedTraits>
+			<li>
+			  <defName>Neurotic</defName>
+			  <degree>1</degree>
+			</li>
+		</forcedTraits>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef ParentName="STOutlanderBackstories">
+		<defName>ST_FrogFarmer</defName>
+		<slot>Adulthood</slot>
+		<title>frog rancher</title>
+		<baseDescription>The marvels of genetic engineering across the galaxy has created specialized frogs capable of most any task or livestock niche. Naturally, this led to entire ranches dedicated to amphibian husbandry. [PAWN_nameDef] was such a rancher, owning and operating a ranch specializing in frogs. [PAWN_pronoun] raised many different species of frog, including some of the more exotic ones.</baseDescription>
+		<skillGains>
+			  <li>
+				<defName>Animals</defName>
+				<amount>6</amount>
+			  </li>
+		</skillGains>
+	</AlienRace.BackstoryDef>
 </Defs>

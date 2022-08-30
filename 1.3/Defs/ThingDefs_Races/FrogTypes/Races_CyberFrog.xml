@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>CyberFrogHostile</defName>
+    <label>Mechanoid Frog</label>
+    <description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particualar Cyber Frogs have since betrayed their own kind and joined the Mechanoids in their conquest. Randy have mercy on us all.</description>
+    <statBases>
+      <MoveSpeed>9</MoveSpeed>
+      <MarketValue Inherit="False">0</MarketValue>
+	  <!--
+      <ComfyTemperatureMin>-600</ComfyTemperatureMin>
+      <ComfyTemperatureMax>600</ComfyTemperatureMax>
+	  -->
+	  <MeatAmount Inherit="False">10</MeatAmount>
+	  <LeatherAmount Inherit="False">4</LeatherAmount>
+      <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
+      <PsychicSensitivity Inherit="False">2</PsychicSensitivity>
+    </statBases>
+	<comps>
+		<!--
+		<li Class="CompProperties_EggLayer">
+			<eggUnfertilizedDef>CyberToadEggUnfertilized</eggUnfertilizedDef>
+			<eggFertilizedDef>CyberToadEggFertilized</eggFertilizedDef>
+			<eggFertilizationCountMax>1</eggFertilizationCountMax>
+			<eggLayIntervalDays>20</eggLayIntervalDays>
+			<eggCountRange>1</eggCountRange>
+		</li>
+		-->
+		<!--
+		<li Class="AnimalBehaviours.CompProperties_Draftable">
+			<makeNonFleeingToo>true</makeNonFleeingToo>
+		</li>
+		-->
+		<li Class="CompProperties_CanBeDormant" />
+		<li Class="CompProperties_WakeUpDormant">
+			<wakeUpOnDamage>true</wakeUpOnDamage>
+			<anyColonistCloseCheckRadius>30</anyColonistCloseCheckRadius>
+			<wakeUpSound>MechanoidsWakeUp</wakeUpSound>
+		</li>
+    </comps>
+    <tools>
+      <li>
+        <label>frog power claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>frog power claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <intelligence Inherit="False">ToolUser</intelligence>
+      <thinkTreeMain Inherit="False">Mechanoid</thinkTreeMain>
+	  <!--
+	  <wildBiomes>
+			<BorealForest>0.005</BorealForest>
+			<IceSheet>0.005</IceSheet>
+			<Tundra>0.005</Tundra>
+			<ColdBog>0.05</ColdBog>
+			<SeaIce>0.005</SeaIce>
+			<TemperateSwamp>0.05</TemperateSwamp>
+			<TropicalSwamp>0.05</TropicalSwamp>
+			<TemperateForest>0.01</TemperateForest>
+			<TropicalRainforest>0.01</TropicalRainforest>
+			<AridShrubland>0.0005</AridShrubland>
+			<Desert>0.0005</Desert>
+			<ExtremeDesert>0.0005</ExtremeDesert>
+	  </wildBiomes>
+	  -->
+      <body Inherit="False">QuadrupedAnimalWithClawsTailAndJowl</body>
+      <baseBodySize>0.35</baseBodySize>
+      <baseHealthScale>4</baseHealthScale>
+	  <!--
+      <baseHungerRate>0.15</baseHungerRate>
+      <foodType Inherit="False">OmnivoreRoughAnimal, Kibble</foodType>
+	  -->
+	  <useMeatFrom>ST_BullFrog</useMeatFrom>
+      <leatherDef>Steel</leatherDef>
+	  <!--
+      <wildness>0</wildness>
+      <trainability>Advanced</trainability>
+      <petness>1</petness>
+	  -->
+      <lifeExpectancy>999</lifeExpectancy>
+	  <hasGenders>false</hasGenders>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.05</minAge>
+        </li>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0.1</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+		  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+          <soundAngry>Frog_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <!-- <li>AnimalExotic</li> -->
+	  <li>AnimalInsectSpace</li>
+    </tradeTags>
+  </ThingDef>
+  
+ 
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>CyberFrogHostile</defName>
+    <label>Cyber Frog</label>
+    <race>CyberFrogHostile</race>
+    <combatPower Inherit="False">40</combatPower>
+    <ecoSystemWeight Inherit="False">0</ecoSystemWeight>
+	<minGenerationAge Inherit="False">80</minGenerationAge>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <drawSize>0.6</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <drawSize>0.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <drawSize>1</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.35, 0.3)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>MechanoidGunMedium</li>
+    </weaponTags>
+  </PawnKindDef>
+
+
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>CyberFrogDocile</defName>
+    <label>Cyber Frog</label>
+    <description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particular Cyber Frogs resisted the Mechanoids and are therefore less intelligent because of the absence of the up-link to the Mechanoid Hive Network.</description>
+    <statBases>
+      <MoveSpeed>9</MoveSpeed>
+      <MarketValue Inherit="False">400</MarketValue>
+	  <MeatAmount Inherit="False">10</MeatAmount>
+	  <LeatherAmount Inherit="False">4</LeatherAmount>
+      <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
+      <PsychicSensitivity>0</PsychicSensitivity>
+    </statBases>
+	<comps>
+		<li Class="CompProperties_EggLayer">
+			<eggUnfertilizedDef>CyberToadEggUnfertilized</eggUnfertilizedDef>
+			<eggFertilizedDef>CyberToadEggFertilized</eggFertilizedDef>
+			<eggFertilizationCountMax>1</eggFertilizationCountMax>
+			<eggLayIntervalDays>40</eggLayIntervalDays>
+			<eggCountRange>1</eggCountRange>
+			<eggLayFemaleOnly>false</eggLayFemaleOnly>
+		</li>
+		<li Class="AnimalBehaviours.CompProperties_Draftable">
+			<makeNonFleeingToo>true</makeNonFleeingToo>
+		</li>
+		<!--
+		<li Class="CompProperties_CanBeDormant" />
+		<li Class="CompProperties_WakeUpDormant">
+			<wakeUpOnDamage>true</wakeUpOnDamage>
+			<anyColonistCloseCheckRadius>30</anyColonistCloseCheckRadius>
+			<wakeUpSound>MechanoidsWakeUp</wakeUpSound>
+		</li>
+		-->
+    </comps>
+    <tools>
+      <li>
+        <label>frog power claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>frog power claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain Inherit="False">Animal</thinkTreeMain>
+      <thinkTreeConstant Inherit="False">AnimalConstant</thinkTreeConstant>
+	  <wildBiomes>
+			<BorealForest>0.005</BorealForest>
+			<IceSheet>0.005</IceSheet>
+			<Tundra>0.005</Tundra>
+			<ColdBog>0.05</ColdBog>
+			<SeaIce>0.005</SeaIce>
+			<TemperateSwamp>0.05</TemperateSwamp>
+			<TropicalSwamp>0.05</TropicalSwamp>
+			<TemperateForest>0.01</TemperateForest>
+			<TropicalRainforest>0.01</TropicalRainforest>
+			<AridShrubland>0.0005</AridShrubland>
+			<Desert>0.0005</Desert>
+			<ExtremeDesert>0.0005</ExtremeDesert>
+	  </wildBiomes>
+      <body>QuadrupedAnimalWithClawsTailAndJowl</body>
+      <baseBodySize>0.35</baseBodySize>
+      <baseHealthScale>3</baseHealthScale>
+      <baseHungerRate>0.15</baseHungerRate>
+      <foodType Inherit="False">OmnivoreRoughAnimal, Kibble</foodType>
+	  <useMeatFrom>ST_BullFrog</useMeatFrom>
+      <leatherDef>Steel</leatherDef>
+      <wildness>0</wildness>
+      <trainability>Advanced</trainability>
+      <petness>1</petness>
+      <lifeExpectancy>999</lifeExpectancy>
+	  <hasGenders>false</hasGenders>
+	  <manhunterOnDamageChance>1</manhunterOnDamageChance>
+	  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.05</minAge>
+        </li>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0.1</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+		  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+          <soundAngry>Frog_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalExotic</li>
+	  <li>AnimalInsectSpace</li>
+    </tradeTags>
+  </ThingDef>
+  
+  
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>CyberFrogDocile</defName>
+    <label>Cyber Frog</label>
+    <race>CyberFrogDocile</race>
+    <combatPower>40</combatPower>
+    <ecoSystemWeight>0.1</ecoSystemWeight>
+	<minGenerationAge>80</minGenerationAge>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <drawSize>0.6</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <drawSize>0.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <drawSize>1</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.35, 0.3)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

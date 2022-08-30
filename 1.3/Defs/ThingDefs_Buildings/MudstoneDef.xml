@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+  <ThingDef ParentName="UglyRockBase" Name="ST_MudstoneBase">
+    <defName>ST_MudStone</defName>
+    <label>mud stone</label>
+    <description>A brittle, brown stone made from dried and compressed mud.</description>
+    <graphicData>
+      <color>(130, 84, 62)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing>ST_ChunkMudstone</mineableThing>
+      <mineableDropChance>0.6</mineableDropChance>
+      <smoothedThing>ST_SmoothedMudstone</smoothedThing>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="ST_MudstoneBase">
+    <defName>ST_SmoothedMudstone</defName>
+    <label>smoothed mud stone</label>
+    <description>A brittle brown stone made from dried and compressed mud.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
+    </graphicData>
+    <statBases>
+      <Beauty Inherit="False">0</Beauty>
+      <MarketValue>25</MarketValue>
+    </statBases>
+    <building>
+      <isNaturalRock>false</isNaturalRock>
+      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <smoothedThing />
+    </building>
+    <saveCompressible>false</saveCompressible>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
+  
+  <ThingDef ParentName="ChunkRockBase">
+    <defName>ST_ChunkMudstone</defName>
+    <label>mud stone chunk</label>
+    <graphicData>
+      <color>(130, 84, 62)</color>
+    </graphicData>
+    <statBases>
+      <Mass>15</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <butcherProducts>
+      <ST_MudstoneBricks>20</ST_MudstoneBricks>
+    </butcherProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>ST_MudstoneBricks</defName>
+    <label>mud stone blocks</label>
+    <description>Bricks of mudstone.</description>
+    <graphicData>
+      <color>(130, 84, 62)</color>
+    </graphicData>
+    <statBases>
+      <Mass>0.5</Mass>
+    </statBases>
+    <stuffProps>
+      <color>(130, 84, 62)</color>
+      <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>muddy</stuffAdjective>
+      <statFactors>
+        <Beauty>0.4</Beauty>
+        <MaxHitPoints>0.8</MaxHitPoints>
+        <WorkToBuild>0.8</WorkToBuild>
+        <WorkToMake>0.8</WorkToMake>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+  </ThingDef>
+
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>ST_Make_MudstoneBricks</defName>
+    <label>make mud stone bricks</label>
+    <description>Cuts mudstone chunks into usable blocks.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ST_ChunkMudstone</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ST_ChunkMudstone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ST_MudstoneBricks>25</ST_MudstoneBricks>
+    </products>
+  </RecipeDef>  
+
+  <TerrainDef ParentName="TileStoneBase">
+    <defName>ST_TileMudstone</defName>
+    <label>mud tile</label>
+    <color>(130, 84, 62)</color>
+    <costList>
+      <ST_MudstoneBricks>4</ST_MudstoneBricks>
+    </costList>
+  </TerrainDef>   
+</Defs>

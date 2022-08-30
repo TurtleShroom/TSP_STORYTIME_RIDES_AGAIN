@@ -98,7 +98,7 @@
       <Mass>0.2</Mass>
       <StuffPower_Armor_Sharp>1.06</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
-      <StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+      <StuffPower_Armor_Heat>0.55</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
@@ -141,12 +141,12 @@
       <MarketValue>7.5</MarketValue>
       <Mass>0.4</Mass>
       <StuffPower_Armor_Sharp>1.1</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.9</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>3</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>28</StuffPower_Insulation_Heat>
       <SharpDamageMultiplier>1</SharpDamageMultiplier>
-      <BluntDamageMultiplier>1.2</BluntDamageMultiplier>
+      <BluntDamageMultiplier>1.09</BluntDamageMultiplier>
 	  <Flammability>0</Flammability>
     </statBases>
     <useHitPoints>false</useHitPoints>
@@ -178,7 +178,7 @@
   
   <ThingDef ParentName="ResourceBase">
     <defName>ST_Runite</defName>
-    <label>Runite</label>
+    <label>runite</label>
     <description>Runite is a stunningly beautiful mixture of a gold and iron alloy poured in with ground up stones. It can only be smelted in extreme heat. Runite is so named for its granite-like, swirling pattern of different hues of blue. These patterns look like ancient runes from long-lost languages.</description>
     <graphicData>
       <texPath>Things/Items/Resources/Ores/Runite</texPath>
@@ -267,5 +267,50 @@
     <comps>
 		<li Class="CompProperties_Ingredients" />
     </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>Weezer</defName>
+    <label>Weezerite</label>
+    <description>weezer</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Ores/Weezer</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+      <Mass>0.2</Mass>
+      <StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>15</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+	  <li>Leathers</li>
+    </thingCategories>
+    <deepCommonality>1</deepCommonality>
+    <deepCountPerPortion>10</deepCountPerPortion>
+    <deepLumpSizeRange>10~20</deepLumpSizeRange>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+        <li>Leathery</li>
+      </categories>
+      <commonality>0.1</commonality>
+      <color>(0, 182, 213)</color>
+      <statFactors>
+        <MaxHitPoints>2.25</MaxHitPoints>
+        <Beauty>2</Beauty>
+        <Flammability>0.5</Flammability>
+        <WorkToMake>0.7</WorkToMake>
+        <WorkToBuild>0.7</WorkToBuild>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
   </ThingDef>
 </Defs>

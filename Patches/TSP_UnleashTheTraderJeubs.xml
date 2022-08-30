@@ -1,11 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
+	<!-- UNLEASH THE TRADER JEUBS!! -->
 	<Operation Class="PatchOperationAdd">
 		<success>Always</success>
 		<xpath>Defs/BiomeDef/allowedPackAnimals</xpath>
 		<value>
 			<li>Jeub</li>
+		</value>
+	</Operation>
+	
+	<!-- Frog time -->
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/BiomeDef/allowedPackAnimals</xpath>
+		<value>
+			<li>LeviathanFrog</li>
+		</value>
+	</Operation>
+	
+	<!-- I love the smell of rocks in the morning -->
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/BiomeDef/wildAnimals</xpath>
+		<value>
+			<EvilRock>0.015</EvilRock>
 		</value>
 	</Operation>
 </Patch>
