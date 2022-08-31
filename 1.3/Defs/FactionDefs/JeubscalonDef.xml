@@ -4,7 +4,7 @@
     <defName>Jeubscalon</defName>
     <label>Jeub Hive</label>
     <description>A Jeub hive. The first known High Jeub to evolve was named Snaff, who came from Rata Jeub, the original home planet of the Jeub species; Snaff is a title which is now borne by every High Jeub ruler. All High Jeubs in the galaxy are his descendents and as the only semi-sane group of Jeubs, they command the non-sapient Jeubs as eusocial servants.</description>
-    <pawnsPlural>jeubs</pawnsPlural>
+    <pawnsPlural>Jeubs</pawnsPlural>
     <settlementGenerationWeight>0.8</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <maxCountAtGameStart>1</maxCountAtGameStart>
@@ -17,10 +17,15 @@
     <colorSpectrum>
       <li>(0.5, 0.0, 0.5)</li>
     </colorSpectrum>
+	<allowedCultures>
+		<li>ST_JeubCulture</li>
+	</allowedCultures>
     <requiredMemes>
-	  <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">HighLife</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HighLife</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">ST_eubOrigin</li>
     </requiredMemes>
 	<disallowedMemes>
 		<!-- If you have the Mod -->
@@ -36,14 +41,7 @@
 		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_Xenophilia</li>
 	</disallowedMemes>
 	<disallowedPrecepts>
-		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
-		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
-		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
-		
-		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Abhorrent</li>
-		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Horrible</li>
-		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Disapproved</li>
-		
+		<!-- Issues like slavery also covered by the Jeub Cult Structure -->
 		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>

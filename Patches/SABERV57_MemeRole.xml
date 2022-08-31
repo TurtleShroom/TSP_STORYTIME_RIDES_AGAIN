@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Code lifted from the Nationalist Militarism Mod by SaberV57 -->
+<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2660276877 -->
+
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="IdeoRole_MiningSpecialist"]/requiredMemes</xpath>
+		<success>Always</success>
+		<value>
+			<li>STJeubOrigin</li> <!-- Isengriff says Botox mines exist -->
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="IdeoRole_MeleeSpecialist"]/requiredMemes</xpath>
+		<success>Always</success>
+		<value>
+			<li>STJeubOrigin</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="IdeoRole_AnimalsSpecialist"]/requiredMemes</xpath>
+		<success>Always</success>
+		<value>
+			<li>STJeubOrigin</li> <!-- Obvious -->
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="SZ_IdeoRole_RuShi"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="SZ_IdeoRole_RuShi"]/requiredMemes</xpath>
+			<value>
+				<li>STJeubOrigin</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

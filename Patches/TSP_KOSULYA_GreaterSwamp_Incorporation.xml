@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Frog spawning tables -->
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Temperate"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Temperate"]/wildAnimals</xpath>
+			<value>
+				<BloodFrog>0.1</BloodFrog>
+				<BudgettFrog>1</BudgettFrog>
+				<ST_BullFrog>1</ST_BullFrog>
+				<CyberFrogDocile>0.02</CyberFrogDocile>
+				<FireBelliedToad>0.9</FireBelliedToad>
+				<JudasFrog>0.03</JudasFrog>
+				<LeviathanFrog>0.05</LeviathanFrog>
+				<SpringPeeper>2</SpringPeeper>
+				<PoisonDartFrog>1.8</PoisonDartFrog>
+				<ST_Toad>1</ST_Toad>
+				<TomatoFrog>1</TomatoFrog>
+				<ST_TreeFrog>1</ST_TreeFrog>
+				<ST_WoodFrog>0.5</ST_WoodFrog>
+				<HC_Bullfrog MayRequire="hc.animal.2">2.5</HC_Bullfrog>
+				<Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Cold"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Cold"]/wildAnimals</xpath>
+			<value>
+				<BloodFrog>0.1</BloodFrog>
+				<BudgettFrog>1</BudgettFrog>
+				<ST_BullFrog>1</ST_BullFrog>
+				<CyberFrogDocile>0.02</CyberFrogDocile>
+				<FireBelliedToad>0.9</FireBelliedToad>
+				<JudasFrog>0.03</JudasFrog>
+				<LeviathanFrog>0.05</LeviathanFrog>
+				<SpringPeeper>2</SpringPeeper>
+				<PoisonDartFrog>1.8</PoisonDartFrog>
+				<ST_Toad>1</ST_Toad>
+				<TomatoFrog>1</TomatoFrog>
+				<ST_TreeFrog>1</ST_TreeFrog>
+				<ST_WoodFrog>0.5</ST_WoodFrog>
+				<HC_Bullfrog MayRequire="hc.animal.2">2.5</HC_Bullfrog>
+				<Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Tropical"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Tropical"]/wildAnimals</xpath>
+			<value>
+				<BloodFrog>0.1</BloodFrog>
+				<BudgettFrog>1</BudgettFrog>
+				<ST_BullFrog>1</ST_BullFrog>
+				<CyberFrogDocile>0.02</CyberFrogDocile>
+				<FireBelliedToad>0.9</FireBelliedToad>
+				<JudasFrog>0.03</JudasFrog>
+				<LeviathanFrog>0.05</LeviathanFrog>
+				<SpringPeeper>2</SpringPeeper>
+				<PoisonDartFrog>1.8</PoisonDartFrog>
+				<ST_Toad>1</ST_Toad>
+				<TomatoFrog>1</TomatoFrog>
+				<ST_TreeFrog>1</ST_TreeFrog>
+				<ST_WoodFrog>0.5</ST_WoodFrog>
+				<HC_Bullfrog MayRequire="hc.animal.2">2.5</HC_Bullfrog>
+				<Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- ___________________________________________________________________________________________ -->
+	
+	<!-- Adds Leviathan Frogs as acceptable pack animals -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Temperate"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Temperate"]/allowedPackAnimals</xpath>
+			<value>
+				<li>LeviathanFrog</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Cold"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Cold"]/allowedPackAnimals</xpath>
+			<value>
+				<li>LeviathanFrog</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Tropical"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/BiomeDef[defName="COMIGO_GreaterSwamp_Tropical"]/allowedPackAnimals</xpath>
+			<value>
+				<li>LeviathanFrog</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

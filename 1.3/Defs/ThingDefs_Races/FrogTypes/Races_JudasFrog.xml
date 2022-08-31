@@ -9,7 +9,7 @@
     <deathMessage>{0} has been sucked to death.</deathMessage>
     <hediff>ST_Slurped</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-    <impactSoundType>Lick</impactSoundType>
+    <impactSoundType>ST_JudasFrogStrike</impactSoundType>
     <armorCategory>Sharp</armorCategory>
     <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
     <isRanged>true</isRanged>
@@ -20,7 +20,7 @@
     <defName>ST_Slurped</defName>
     <label>fly shot</label>
     <labelNoun>a fly has hurt you</labelNoun>
-    <description>A wound from being slurped by a fly.</description>
+    <description>A wound from being bitten by a fly.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>ointment applied</labelTendedWell>
@@ -51,7 +51,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <damageDef>ST_Slurped</damageDef>
+      <damageDef>ST_FlyShot</damageDef>
       <damageAmountBase>1</damageAmountBase>
       <speed>15</speed>
     </projectile>
@@ -188,9 +188,9 @@
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
     <ingredient>
-      <mergeCompatibilityTags>
-        <li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li>
-      </mergeCompatibilityTags>
+		<mergeCompatibilityTags>
+			<li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li>
+		</mergeCompatibilityTags>
     </ingredient>
     <tradeTags>
 		<li>Frog</li>

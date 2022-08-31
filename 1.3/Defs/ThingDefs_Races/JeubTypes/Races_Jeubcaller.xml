@@ -20,6 +20,9 @@
 			<requiresTamed>false</requiresTamed>
 			<incidentToCause>Jeub_Swarm</incidentToCause>
 		</li>
+		<li Class="AnimalBehaviours.CompProperties_Draftable">
+			<makeNonFleeingToo>true</makeNonFleeingToo>
+		</li>
 	</comps>
     <tools>
       <li>
@@ -137,14 +140,12 @@
     <tradeTags>
       <li>AnimalExotic</li>
     </tradeTags>
-	<comps>
-		<li Class="AnimalBehaviours.CompProperties_Draftable">
-			<makeNonFleeingToo>true</makeNonFleeingToo>
-		</li>
-	</comps>
 	<modExtensions>
 		<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 			<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+		</li>
+		<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+			<bodyClock>Crepuscular</bodyClock MayRequire="Mlie.XNDNocturnalAnimals">
 		</li>
 	</modExtensions>
   </ThingDef>
