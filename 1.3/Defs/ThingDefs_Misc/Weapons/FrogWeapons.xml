@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>
 
+<Defs>
   <ThingDef Name="BaseWeaponFrogMan" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Neolithic</techLevel>
     <comps>
@@ -19,7 +19,7 @@
 
   <DamageDef>
     <defName>ST_BlowDartPoison</defName>
-    <label>frog dart</label>
+    <label>poison dart frog dart</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <additionalHediffs>
       <li>
@@ -37,13 +37,13 @@
   
   <ThingDef ParentName="BaseBullet">
     <defName>ST_BlowGunDart</defName>
-    <label>frog dart</label>
+    <label>poison dart frog dart</label>
     <graphicData>
       <texPath>Things/Projectile/Arrow_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <damageDef>BlowDartPoison</damageDef>
+      <damageDef>ST_BlowDartPoison</damageDef>
       <damageAmountBase>3</damageAmountBase>
       <speed>50</speed>
     </projectile>
@@ -66,11 +66,21 @@
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Bow_Small</soundInteract>
-		<costList>
-		  <WoodLog>15</WoodLog>
-		</costList>
+		<costStuffCount>30</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+
+			<!-- Mod support -->
+			<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+			<li MayRequire="Dubwise.Rimefeller">Composite</li>
+			<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+			<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+			<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+		</stuffCategories>
 		<statBases>
-		  <WorkToMake>1200</WorkToMake>
+		  <WorkToMake>4000</WorkToMake>
 		  <Mass>0.8</Mass>
 		  <AccuracyTouch>0.95</AccuracyTouch>
 		  <AccuracyShort>0.7</AccuracyShort>
@@ -121,17 +131,24 @@
 		  <li>FrogmanMelee</li>
 		  <li>SpearMen</li>
 		</weaponTags>
-		<costStuffCount>50</costStuffCount>
 		<!-- <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags> -->
 		<statBases>
-		  <WorkToMake>12000</WorkToMake>
+		  <WorkToMake>7000</WorkToMake>
 		  <Mass>1.2</Mass>
 		</statBases>
 		<equippedAngleOffset>-65</equippedAngleOffset>
+		<costStuffCount>50</costStuffCount>
 		<stuffCategories>
-		  <li>Metallic</li>
-		  <li>Woody</li>
-		  <li>Stony</li>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+
+			<!-- Mod support -->
+			<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+			<li MayRequire="Dubwise.Rimefeller">Composite</li>
+			<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+			<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+			<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
 		</stuffCategories>
 		<tools>
 		  <li>
@@ -155,7 +172,7 @@
 			<capacities>
 			  <li>ST_PoisonSpear</li>
 			</capacities>
-			<power>10</power>
+			<power>6</power>
 			<cooldownTime>1.5</cooldownTime>
 		  </li>
 		</tools>

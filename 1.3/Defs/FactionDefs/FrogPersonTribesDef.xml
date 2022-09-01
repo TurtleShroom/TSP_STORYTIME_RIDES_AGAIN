@@ -14,21 +14,24 @@
     <colorSpectrum>
       <li>(0.1, 0.3, 0.1)</li>
     </colorSpectrum>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">AnimalPersonhood</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">STFrogPersonOrigin</li>
+    </requiredMemes>
     <disallowedMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
 	  <li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Serketist</li>
+	  <li MayRequire="VanillaExpanded.VMemesE">VME_InsectoidSupremacy</li>
     </disallowedMemes>
-    <requiredMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">AnimalPersonhood</li>
-	  <li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>
-    </requiredMemes>
+	<disallowedPrecepts>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_InsectMeatEating_Sacrilegious</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Insectoids_Exalted</li>
+	</disallowedPrecepts>
     <allowedCultures>
 		<li>ST_FrogmanCulture</li>
 	</allowedCultures>
-    <structureMemeWeights>
-      <STFrogPersonOrigin MayRequire="Ludeon.RimWorld.Ideology">0.5</STFrogPersonOrigin>
-    </structureMemeWeights>
     <fixedName>Tribes of the Frogmen</fixedName>
     <settlementNameMaker>FrogPersonSettlementName</settlementNameMaker>
     <techLevel>Neolithic</techLevel>
@@ -82,17 +85,19 @@
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-          <FrogPersonHunter>100</FrogPersonHunter>
-		  <FrogPersonWarrior>200</FrogPersonWarrior>
-		  <!-- INCORRECT! ALLOWING ANIMALS TO JOIN THE PEACEFUL GROUP WILL CAUSE THE GAME TO SPAM ERRORS, OR EVEN CRASH! -->
-		  <!--
-          <PoisonDartFrog>5</PoisonDartFrog>
-          <SpringPeeper>5</SpringPeeper>		  
-          <BudgettFrog>5</BudgettFrog>
-          <TreeFrog>5</TreeFrog>
-          <TomatoFrog>5</TomatoFrog>	
-          <CyberFrog>5</CyberFrog>
-		  -->
+			<FrogPersonHunter>100</FrogPersonHunter>
+			<FrogPersonWarrior>100</FrogPersonWarrior>
+			<ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
+			<DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
+			<!-- INCORRECT! ALLOWING ANIMALS TO JOIN THE PEACEFUL GROUP WILL CAUSE THE GAME TO SPAM ERRORS, OR EVEN CRASH! -->
+			<!--
+			<PoisonDartFrog>5</PoisonDartFrog>
+			<SpringPeeper>5</SpringPeeper>		  
+			<BudgettFrog>5</BudgettFrog>
+			<ST_TreeFrog>5</ST_TreeFrog>
+			<TomatoFrog>5</TomatoFrog>	
+			<CyberFrogDocile>5</CyberFrogDocile>
+			-->
         </options>
       </li>
       <li>
@@ -108,6 +113,8 @@
           <CyberFrogDocile>5</CyberFrogDocile>
 		  <LeviathanFrog>20</LeviathanFrog>
 		  <FrogPersonChief>1</FrogPersonChief>
+		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
+		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
         </options>
       </li>
       <li>
@@ -128,6 +135,8 @@
           <ST_TreeFrog>5</ST_TreeFrog>
           <TomatoFrog>5</TomatoFrog>
           <CyberFrogDocile>5</CyberFrogDocile>
+		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
+		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
         </guards>
       </li>
       <li>
@@ -138,10 +147,12 @@
           <PoisonDartFrog>5</PoisonDartFrog>
           <SpringPeeper>5</SpringPeeper>		  
           <BudgettFrog>5</BudgettFrog>
-          <TreeFrog>5</TreeFrog>
+          <ST_TreeFrog>5</ST_TreeFrog>
           <TomatoFrog>5</TomatoFrog>		
           <CyberFrogDocile>5</CyberFrogDocile>
 		  <FrogPersonChief>1</FrogPersonChief>
+		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">1</ForgPawnKindDef>
+		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">1</DuoPawnKindDef>
         </options>
       </li>
     </pawnGroupMakers>

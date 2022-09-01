@@ -181,9 +181,9 @@
 		<HuntingStealth>1.25</HuntingStealth> <!-- Bulborbs are nocturnal -->
 		<TameAnimalChance>1.2</TameAnimalChance> <!-- Bulborbs are eusocial -->
 		<ImmunityGainSpeed>1.1</ImmunityGainSpeed> <!-- Glitter World Tech from the Sapient Bean Matrix inside them -->
-		<MeleeDodgeChance>19</MeleeDodgeChance> <!-- Representing the Bulborb shaking off -->
+		<MeleeDodgeChance>19</MeleeDodgeChance> <!-- Representing their size and the Bulborb shaking off -->
 		<PawnTrapSpringChance>1.5</PawnTrapSpringChance> <!-- Bulborbs are clumsy -->
-		<GeneralLaborSpeed>0.9</GeneralLaborSpeed> <!-- No arms -->
+		<!-- <GeneralLaborSpeed>0.9</GeneralLaborSpeed> --> <!-- No arms --> <!-- Moved to Racial Hediff -->
 	</statBases>
     <!--■■■■■■■■■■■■■■■■■■TOOLS■■■■■■■■■■■■■■■■■■■■■■■
         ■■■ TEETH ■■■-->
@@ -194,7 +194,7 @@
           <li>Bite</li>
         </capacities>
         <power>23</power> <!-- Identical to a bear, Bulborbs can canonically crush Pikmin in one bite or swallow them whole; it is their only strength. -->
-        <cooldownTime>1.8</cooldownTime>
+        <cooldownTime>2.5</cooldownTime>
         <linkedBodyPartsGroup>GARBAGEDAY_BODYGROUP_BulborbMaw</linkedBodyPartsGroup>
 		<surpriseAttack>
           <extraMeleeDamages>
@@ -229,7 +229,7 @@
           <li>Poke</li>
 		  <li>KickMaterialInEyes</li>
         </capacities>
-        <power>4</power>
+        <power>1</power>
         <cooldownTime>1</cooldownTime>
         <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
         <surpriseAttack>
@@ -249,7 +249,7 @@
           <li>Poke</li>
 		  <li>KickMaterialInEyes</li>
         </capacities>
-        <power>4</power>
+        <power>1</power>
         <cooldownTime>1</cooldownTime>
         <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
         <surpriseAttack>
@@ -269,7 +269,7 @@
       <intelligence>Humanlike</intelligence>
 	  <nameGenerator>BeanMaleName</nameGenerator>
 	  <nameGeneratorFemale>BeanFemaleName</nameGeneratorFemale>
-      <leatherDef>Leather_Dog</leatherDef>
+      <useLeatherFrom>YorkshireTerrier</useLeatherFrom>
       <makesFootprints>true</makesFootprints>
       <lifeExpectancy>100</lifeExpectancy>
       <nameCategory>HumanStandard</nameCategory>
@@ -280,7 +280,7 @@
 	  <!-- <herdAnimal>true</herdAnimal> -->
 	  <predator Inherit="False">false</predator> <!-- Bulborbs are VERY MUCH predators, but SAPIENT Bulborbs do not randomly go and eat animals when there is food around. This fixes a weird occurence where a Bulborb at the start of a game will try and eat a nearby animal and get clapped. -->
       <!-- <foodType>OmnivoreRoughAnimal, CarnivoreRoughAnimal, VegetarianRoughAnimal, OmnivoreAnimal, CarnivoreAnimal, OvivoreAnimal, Meals, Processed, Kibble</foodType> --> <!-- VegetarianRoughAnimal makes them eat grass. Grass doesn't dissappear after so it's super unbalanced-->
-	  <foodType>OmnivoreHuman, OmnivoreAnimal, CarnivoreAnimal, CarnivoreAnimalStrict, VegetarianRoughAnimal, Processed, Meal, Fluid, Plant, Fungus, Kibble</foodType>
+	  <foodType>OmnivoreHuman, OmnivoreAnimal, CarnivoreAnimal, CarnivoreAnimalStrict, VegetarianRoughAnimal, Processed, Meal, Fluid, Meat, Plant, Fungus, Kibble</foodType>
 	  <!-- Actually, grass DOES disappear when eaten, I tested it -->
       <gestationPeriodDays>65</gestationPeriodDays>
       <litterSizeCurve>
@@ -407,6 +407,11 @@
         <li>GARBAGEDAY_ST_Enchant_Kidney_Master</li>
         <li>GARBAGEDAY_ST_Enchant_Kidney_Slave</li> -->
     </recipes>
+	<comps>
+		<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+			<hediffname>HedBeanMan</hediffname>
+		</li>
+	</comps>
 	<modExtensions>
 		<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
 			<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>

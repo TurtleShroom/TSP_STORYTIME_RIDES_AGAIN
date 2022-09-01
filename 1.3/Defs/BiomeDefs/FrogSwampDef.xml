@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <BiomeDef>
     <defName>froggySwamp</defName>
     <label>great frog swamp</label>
-    <description>Millinea of genetic engineering has created frogs capable of serving the niches of most livestock roles, as well as extending their life and abilities. Other frogs, by accident or design, are vicious and threatening. some parts of the galactic Rim, the overpopulation of these frogs has caused some parts of swamp lands to be completely overrun by nothing but frogs and other amphibians.</description>
+    <description>Millinea of genetic engineering has created frogs capable of serving the niches of most livestock roles, as well as extending their life and abilities. Other frogs, by accident or design, are vicious and threatening. In some parts of the galactic Rim, the overpopulation of these frogs has caused some parts of swamp lands to be completely overrun by nothing but frogs and other amphibians.</description>
     <workerClass>BiomesKit.UniversalBiomeWorker</workerClass>
 	<modExtensions>
 		<li Class="BiomesKit.BiomesKitControls">
@@ -20,7 +20,7 @@
 			<perlinCulling>0.25</perlinCulling>
 		</li>
 		<li Class="RockSettings.DefModExtension_BiomeSettings">
-			<rockCount>1~2</rockCount>
+			<rockCount>1</rockCount>
 			<allowedRockDefs>
 				<li>ST_MudStone</li>
 				<li MayRequire="sarg.alphabiomes">AB_Mudstone</li>
@@ -30,7 +30,7 @@
  
     <animalDensity>4</animalDensity>
     <plantDensity>3</plantDensity>
-    <settlementSelectionWeight>0.9</settlementSelectionWeight>
+    <settlementSelectionWeight>0.8</settlementSelectionWeight>
     <movementDifficulty>3</movementDifficulty>
     <forageability>2</forageability>
     <foragedFood>ToadLegs</foragedFood>
@@ -91,11 +91,11 @@
       <li>
         <terrain>Soil</terrain>
         <min>-999</min>
-        <max>0.72</max>
+        <max>0.6</max>
       </li>
       <li>
         <terrain>SoilRich</terrain>
-        <min>0.72</min>
+        <min>0.6</min>
         <max>999</max>
       </li>
     </terrainsByFertility>
@@ -161,26 +161,26 @@
       <Plant_TreeMaple>1.2</Plant_TreeMaple>
       <Plant_Chokevine>1</Plant_Chokevine>
       <Plant_Alocasia>0.8</Plant_Alocasia>
-      <Plant_Bush>0.15</Plant_Bush>
+      <Plant_Bush>0.18</Plant_Bush>
       <Plant_Clivia>0.07</Plant_Clivia>
       <Plant_Berry>0.08</Plant_Berry>
       <Plant_Rafflesia>0.005</Plant_Rafflesia>
     </wildPlants>
     <wildAnimals>
-      <BloodFrog>0.1</BloodFrog>
+      <BloodFrog>0.2</BloodFrog>
       <BudgettFrog>1</BudgettFrog>
       <ST_BullFrog>1</ST_BullFrog>
-      <CyberFrogDocile>0.02</CyberFrogDocile>
-      <FireBelliedToad>0.9</FireBelliedToad>
-      <JudasFrog>0.03</JudasFrog>
-      <LeviathanFrog>0.05</LeviathanFrog>
-      <SpringPeeper>2</SpringPeeper>
-      <PoisonDartFrog>1.8</PoisonDartFrog>
+      <CyberFrogDocile>0.2</CyberFrogDocile>
+      <FireBelliedToad>0.3</FireBelliedToad>
+      <JudasFrog>0.2</JudasFrog>
+      <LeviathanFrog>0.08</LeviathanFrog>
+      <SpringPeeper>1.2</SpringPeeper>
+      <PoisonDartFrog>1</PoisonDartFrog>
       <ST_Toad>1</ST_Toad>
       <TomatoFrog>1</TomatoFrog>
       <ST_TreeFrog>1</ST_TreeFrog>
       <ST_WoodFrog>0.5</ST_WoodFrog>
-	  <HC_Bullfrog MayRequire="hc.animal.2">2.5</HC_Bullfrog>
+	  <HC_Bullfrog MayRequire="hc.animal.2">1.25</HC_Bullfrog>
 	  <Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
     </wildAnimals>
     <allowedPackAnimals>

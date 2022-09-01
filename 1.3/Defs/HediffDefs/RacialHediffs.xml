@@ -10,31 +10,40 @@
     <isBad>false</isBad>
     <stages>
       <li>
+		<becomeVisible>false</becomeVisible>
         <painFactor>0.85</painFactor>
 		<painOffset>-0.1</painOffset>
 		<statOffsets>
 			<CarryingCapacity>20</CarryingCapacity>
 			<MeleeHitChance>5</MeleeHitChance>
-		</statOffsets>		
+		</statOffsets>
+		<makeImmuneTo>
+			<!-- <li>DrugOverdose</li> -->
+			<li>Malaria</li>
+			<li>SleepingSickness</li>
+			<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_Corprus</li>
+			<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_CorprusPermanent</li>
+		</makeImmuneTo>
       </li>
     </stages>
   </HediffDef>
   
  <HediffDef>
     <defName>HedJeub</defName>
-    <label>Racial Trait: Vile Little Creature</label>
-	<description>Jeubs are known for being vile little creatures.</description>		
+    <label>Racial Trait: Vile Fairy</label>
+	<description>Jeubs are known for being vile little fairies.</description>		
     <initialSeverity>1</initialSeverity>
   	<defaultLabelColor>(0.47,0.87,0.47)</defaultLabelColor>      	
 	<hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <stages>
       <li>
+		<becomeVisible>false</becomeVisible>
 		<statOffsets>
-			  <MoveSpeed>0.1</MoveSpeed>
-			  <SocialImpact>-0.30</SocialImpact>
-		      <MeleeDodgeChance>15</MeleeDodgeChance>
-			  <ResearchSpeed>-0.5</ResearchSpeed> 			  
+			  <MoveSpeed>1</MoveSpeed>
+			  <SocialImpact>-0.2</SocialImpact>
+		      <MeleeDodgeChance>5</MeleeDodgeChance>
+			  <ResearchSpeed>-0.2</ResearchSpeed> 			  
 		</statOffsets>		
       </li>
     </stages>
@@ -50,10 +59,11 @@
     <isBad>false</isBad>
     <stages>
       <li>
+		<becomeVisible>false</becomeVisible>
 		<statOffsets>
-			  <CookSpeed>10</CookSpeed>
+			  <CookSpeed>5</CookSpeed>
 			  <FoodPoisonChance>-0.80</FoodPoisonChance>
-			  <EatingSpeed>-0.25</EatingSpeed>
+			  <EatingSpeed>0.25</EatingSpeed>
 		</statOffsets>		
       </li>
     </stages>
@@ -62,13 +72,14 @@
  <HediffDef>
     <defName>HedBeanMan</defName>
     <label>Racial Trait: Bean Affinity</label>
-	<description>Bean Mrn are known for affinity with beans and other plants, but their strange body shape makes it difficult to do anything else.</description>		
+	<description>Bean Men are known for affinity with beans and other plants, but their strange body shape makes it difficult to do anything else.</description>		
     <initialSeverity>1</initialSeverity>
   	<defaultLabelColor>(0.47,0.87,0.47)</defaultLabelColor>      	
 	<hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <stages>
       <li>
+		<becomeVisible>false</becomeVisible>
 		<statOffsets>
 			  <PlantHarvestYield>0.20</PlantHarvestYield>
 			  <PlantWorkSpeed>0.35</PlantWorkSpeed>
@@ -88,12 +99,21 @@
     <isBad>false</isBad>
     <stages>
       <li>
+		<becomeVisible>false</becomeVisible>
 		<statOffsets>
 			  <ImmunityGainSpeed>0.15</ImmunityGainSpeed>
 			  <ToxicSensitivity>-0.35</ToxicSensitivity>
 			  <ComfyTemperatureMax>15</ComfyTemperatureMax>
 			  <ComfyTemperatureMin>15</ComfyTemperatureMin>
-		</statOffsets>		
+		</statOffsets>
+		<makeImmuneTo>
+			<!-- <li>DrugOverdose</li> -->
+			<li>Malaria</li>
+			<li>SleepingSickness</li>
+			<li>Plague</li>
+			<li>Flu</li>
+			<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_Corprus</li>
+		</makeImmuneTo>
       </li>
     </stages>
   </HediffDef>    

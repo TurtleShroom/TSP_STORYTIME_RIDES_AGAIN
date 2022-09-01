@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<Defs>
   <DamageDef>
     <defName>ST_FlyShot</defName>
     <label>fly shot</label>
@@ -20,7 +20,7 @@
     <defName>ST_Slurped</defName>
     <label>fly shot</label>
     <labelNoun>a fly has hurt you</labelNoun>
-    <description>A wound from being bitten by a fly.</description>
+    <description>A wound from being struck by a fly.</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>ointment applied</labelTendedWell>
@@ -61,7 +61,7 @@
   <ThingDef ParentName="BaseInsect">
     <defName>JudasFrog</defName>
     <label>Judas' frog</label>
-    <description>Concurrent evolution is the concept that creatures unrelated to and isolated from each other will evolve highly similar, optimal body types without interfacing each other. The most famous example is that crabs appear to be the optimal form of natural selection. In the case of the Judas' frog, however, frogs were the end result. \n \n Not actually a frog, the Judas' frog is the genetically-engineered descendent of an insect accidentally created thousands years ago. This creature, as it spread out over the galaxy, evolved and survive in this environment by concurrently evolving the body type of a frog. \n When it came time to fight back vicious Mechanoids, a host of insects were created from stock both on Old Earth and of alien origin. The Judas' frog was one such experiment. Once an accidental development in an artificial ecosystem of Insectoids designed to fight Mechanoid invasions, its attack takes advantage of a symbiosis of itself and small fruit flies that use its moist chitin to breed.</description>
+    <description>Concurrent evolution is the concept that creatures unrelated to and isolated from each other will evolve highly similar, optimal body types without interfacing each other. The most famous example is that crabs appear to be the optimal form of natural selection. In the case of the Judas' frog, however, frogs were the end result. \n \n Not actually a frog, the Judas' frog is the genetically-engineered descendent of an insect accidentally created thousands years ago. \n This creature, as it spread out over the galaxy, evolved and survive in this environment by concurrently evolving the body type of a frog. \n When it came time to fight back vicious Mechanoids, a host of insects were created from stock both on Old Earth and of alien origin. The Judas' frog was one such experiment. Once an accidental development in an artificial ecosystem of Insectoids designed to fight Mechanoid invasions, its attack takes advantage of a symbiosis of itself and small fruit flies that use its moist chitin to breed. \n \n The Judas' frog is so named because of its frog-like appearance, humorously leading to a running joke that it was once a frog that "sided with the insects" that frogs love to eat and, therefore, "betrayed" all amphibians. This harkens back to Judas Iscariot, an Old Earth ex-religious leader who would end up forsaking his God and betraying Jesus Christ for a bribe.</description>
     <statBases>
       <MoveSpeed>4.5</MoveSpeed>
       <MarketValue>200</MarketValue>
@@ -85,8 +85,9 @@
         <label>left pincer</label>
         <capacities>
           <li>Scratch</li>
+		  <li>Poke</li>
         </capacities>
-        <power>6</power>
+        <power>5</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
       </li>
@@ -94,6 +95,7 @@
         <label>right pincer </label>
         <capacities>
           <li>Scratch</li>
+		  <li>Poke</li>
         </capacities>
         <power>5</power>
         <cooldownTime>2</cooldownTime>
@@ -104,9 +106,9 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>5</power>
+        <power>6</power>
         <cooldownTime>2.6</cooldownTime>
-        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         <!-- <chanceFactor>1</chanceFactor> -->
       </li>
       <li>
@@ -129,7 +131,7 @@
 				<accuracyMedium>0.8</accuracyMedium>
 				<accuracyLong>0.7</accuracyLong>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Fly</defaultProjectile>
+				<defaultProjectile>ST_FlyShotMissile</defaultProjectile>
 				<warmupTime>4</warmupTime>
 				<range>15</range>				
 				<soundCast>Fly_Spit</soundCast>
@@ -156,10 +158,10 @@
 	  </wildBiomes>
       <body>QuadrupedAnimalWithClawsTailAndJowl</body>
       <baseBodySize>0.2</baseBodySize>
-      <baseHealthScale>0.45</baseHealthScale>
-      <baseHungerRate>0.15</baseHungerRate>
+      <baseHealthScale>0.5</baseHealthScale>
+      <baseHungerRate>0.2</baseHungerRate>
       <foodType>OmnivoreRoughAnimal, OmnivoreAnimal, AnimalProduct, Kibble</foodType>
-      <leatherDef>Leather_Frog</leatherDef>
+      <useLeatherFrom>ST_BullFrog</useLeatherFrom>
       <wildness>0.5</wildness>
       <nuzzleMtbHours>16</nuzzleMtbHours>
       <trainability>Advanced</trainability>
@@ -169,10 +171,18 @@
         <li>
           <def>EusocialInsectLarva</def>
           <minAge>0</minAge>
+		  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+          <soundDeath>Pawn_Megascarab_Death</soundDeath>
+          <soundCall>Pawn_Megascarab_Call</soundCall>
+          <soundAngry>Frog_Angry</soundAngry>
         </li>
         <li>
           <def>EusocialInsectJuvenile</def>
           <minAge>0.09</minAge>
+		  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+          <soundDeath>Pawn_Megascarab_Death</soundDeath>
+          <soundCall>Pawn_Megascarab_Call</soundCall>
+          <soundAngry>Frog_Angry</soundAngry>
         </li>
         <li>
           <def>EusocialInsectAdult</def>
@@ -204,7 +214,7 @@
     <label>Judas' frog</label>
     <race>JudasFrog</race>
     <combatPower>30</combatPower>
-    <ecoSystemWeight>0.1</ecoSystemWeight>
+    <ecoSystemWeight>0</ecoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>

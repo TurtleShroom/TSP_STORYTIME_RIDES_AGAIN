@@ -5,7 +5,18 @@
 	<xpath>/Defs/ThingDef[defName="Leather_Chitin"]</xpath>
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Alien_BeanMan"]/race/leatherDef</xpath>
+			<xpath>/Defs/ThingDef[defName="Alien_BeanMan"]/race/useLeatherFrom</xpath>
+			<value>
+				<leatherDef>Leather_Chitin</leatherDef>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<xpath>/Defs/ThingDef[defName="Leather_Chitin"]</xpath>
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="JudasFrog"]/race/useLeatherFrom</xpath>
 			<value>
 				<leatherDef>Leather_Chitin</leatherDef>
 			</value>

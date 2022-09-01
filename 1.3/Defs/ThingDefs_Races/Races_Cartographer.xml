@@ -6,9 +6,10 @@
     <label>cartographer</label>
     <description>It's so fast, I can't get a read on it!</description>
     <statBases>
-      <MoveSpeed Inherit="False">25</MoveSpeed>
+      <MoveSpeed Inherit="False">40</MoveSpeed>
       <MarketValue>1000</MarketValue>
       <ComfyTemperatureMin>-160</ComfyTemperatureMin>
+	  <LeatherAmount>100</LeatherAmount>
     </statBases>
     <tools>
       <li>
@@ -56,7 +57,7 @@
       <baseBodySize>0.2</baseBodySize>
       <baseHungerRate>0.5</baseHungerRate>
       <baseHealthScale>1.5</baseHealthScale>
-      <foodType>OmnivoreAnimal, OvivoreAnimal, VegetarianRoughAnimal</foodType>
+      <foodType>OmnivoreAnimal, OvivoreAnimal, VegetarianRoughAnimal, Kibble</foodType>
       <leatherDef>Leather_Cartographer</leatherDef>
       <gestationPeriodDays>100</gestationPeriodDays>
       <nameOnTameChance>1</nameOnTameChance>
@@ -106,19 +107,25 @@
 		<li Class="AnimalBehaviours.CompProperties_Draftable">
 			<makeNonFleeingToo>true</makeNonFleeingToo>
 		</li>
-		<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
-			<bodyClock>Crepuscular</bodyClock MayRequire="Mlie.XNDNocturnalAnimals">
-		</li>
 	</comps>
+	<modExtensions>
+		<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+			<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+		</li>
+		<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+			<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Crepuscular</bodyClock>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>Cartographer</defName>
-    <label>cartographer</label>
+    <label>Cartographer</label>
     <race>Cartographer</race>
-    <combatPower>70</combatPower>
+    <combatPower>15</combatPower>
     <ecoSystemWeight>0</ecoSystemWeight>
-	<maxGenerationAge>60</maxGenerationAge>
+	<minGenerationAge>7</minGenerationAge>
+	<maxGenerationAge>45</maxGenerationAge>
     <lifeStages>
       <li>
         <label>cartographer</label>

@@ -41,4 +41,118 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
+			<value>
+				<li>STFrogPersonOrigin</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]</xpath>
+			<value>
+				<associatedMemes>
+					<li>STFrogPersonOrigin</li>
+				</associatedMemes>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/MemeDef[defName="Individualist"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/MemeDef[defName="Individualist"]/exclusionTags</xpath>
+			<value>
+				<li>JeubsHateIndividualism</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/MemeDef[defName="Guilty"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/MemeDef[defName="Guilty"]/exclusionTags</xpath>
+			<value>
+				<li>JeubsNeverForgive</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/MemeDef[defName="Charia"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/MemeDef[defName="Charia"]/exclusionTags</xpath>
+			<value>
+				<li>JeubsHateKebabs</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/MemeDef[defName="Charia"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/MemeDef[defName="Structure_OriginIslamic"]/exclusionTags</xpath>
+			<value>
+				<li>JeubsHateKebabs</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/exclusionTags</xpath>
+			<value>
+				<li>FrogsHateInsectAdoration</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/MemeDef[defName="VME_Structure_Serketist"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/MemeDef[defName="VME_Structure_Serketist"]/exclusionTags</xpath>
+			<value>
+				<li>FrogsHateInsectWorship</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

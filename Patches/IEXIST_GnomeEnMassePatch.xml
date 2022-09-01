@@ -200,6 +200,33 @@
 			</value>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="VFE_RawSugar"]</xpath>
+		<!-- If it does, insert this in the same nested statement as the destination. -->
+		<match Class="PatchOperationInsert">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef//li[text()="VFE_RawSugar"]</xpath>
+			<value>
+				<li>ST_GnomeSugar</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="VFE_Flour"]</xpath>
+		<!-- If it does, insert this in the same nested statement as the destination. -->
+		<match Class="PatchOperationInsert">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef//li[text()="VFE_Flour"]</xpath>
+			<value>
+				<li>GnomeFlour</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li>
+			</value>
+		</match>
+	</Operation>
 </Patch>
 
 <!--Add or Insert depending on whether the node at the end is a parent or sibling-->

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<StoriesRetold.SRBackstoryDef>
+	<AlienRace.BackstoryDef>
 		<defName>Backstory_SlowBowler</defName>
 		<slot>Adulthood</slot>
 		<title>bowling champion</title>
@@ -12,53 +12,58 @@
 			<li>Social</li>
 			<li>Violent</li>
 		</requiredWorkTags>
-		<SkillGains>
+		<skillGains>
 			<li>
-				<key>Social</key>
-				<value>6</value>
+				<defName>Social</defName>
+				<amount>3</amount>
 			</li>
 			<li>
-				<key>Shooting</key>
-				<value>4</value>
+				<defName>Shooting</defName>
+				<amount>2</amount>
 			</li>
-		</SkillGains>
+		</skillGains>
 		<forcedTraits>
-			<ShootingAccuracy>1</ShootingAccuracy>
+			<li>
+				<defName>ShootingAccuracy</defName>
+				<degree>1</degree>
+			</li>
 		</forcedTraits>
-		<SpawnCategories>
+		<spawnCategories>
 			<li>Offworld</li>
 			<li>Outlander</li>
-		</SpawnCategories>
-	</StoriesRetold.SRBackstoryDef>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
 	
-	<StoriesRetold.SRBackstoryDef>
+	<AlienRace.BackstoryDef>
 		<defName>Backstory_CriminalScum</defName>
 		<slot>Childhood</slot>
 		<title>petty criminal</title>
 		<titleShort>petty criminal</titleShort>
-		<baseDesc>Growing up, [PAWN_nameDef] spent [PAWN_possessive] time constantly committing heinous crimes such as going sixty-seven miles per hour (107.83 KMPH) in a forty-five mile per hour (72.42 KMPH) zone. Despite being a psychopath, he never actually saw the need to commit any serious crimes. Petty ones were just too fun!</baseDesc>
+		<baseDescription>Growing up, [PAWN_nameDef] spent [PAWN_possessive] time constantly committing heinous crimes such as going sixty-seven miles per hour (107.83 KMPH) in a forty-five mile per hour (72.42 KMPH) zone. Despite being a psychopath, he never actually saw the need to commit any serious crimes. Petty ones were just too fun!</baseDescription>
 		<bodyTypeGlobal>Fat</bodyTypeGlobal>
-		<WorkDisables>
+		<workDisables>
 			<li>Intellectual</li>
-		</WorkDisables>
+		</workDisables>
 		<requiredWorkTags>
 			<li>Social</li>
 			<li>Violent</li>
 		</requiredWorkTags>
-		<SkillGains>
+		<skillGains>
 			<li>
-				<key>Social</key>
-				<value>-1</value>
+				<defName>Social</defName>
+				<amount>-1</amount>
 			</li>
 			<li>
-				<key>Melee</key>
-				<value>5</value>
+				<defName>Melee</defName>
+				<amount>5</amount>
 			</li>
-		</SkillGains>
+		</skillGains>
 		<forcedTraits>
-			<Psychopath/>
+			<li>
+				<defName>Psychopath</defName>
+			</li>
 		</forcedTraits>
-		<SpawnCategories>
+		<spawnCategories>
 			<li>Offworld</li>
 			<li>Outlander</li>
 			<li>Pirate</li>
@@ -67,15 +72,18 @@
 			<li>TTancon_Military</li>
 			<li>Outsider</li>
 			<li>PirateBackstory</li>
-		</SpawnCategories>
-	</StoriesRetold.SRBackstoryDef>
+		</spawnCategories>
+	</AlienRace.BackstoryDef>
 	
-	<AlienRace.BackstoryDef ParentName="STOutlanderBackstories">
+	<AlienRace.BackstoryDef>
 		<defName>ST_SmartChild</defName>
 		<slot>Childhood</slot>
 		<title>smart kid</title>
 		<titleShort>gifted</titleShort>
 		<baseDescription>[PAWN_nameDef] was considered one of the smartest kids in [PAWN_possessive] village. This constant lavishing of praise had strange effects on [PAWN_possessive] psyche.</baseDescription>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+		</requiredWorkTags>
 		<skillGains>
 			  <li>
 				<defName>Intellectual</defName>
@@ -92,9 +100,14 @@
 			  <degree>1</degree>
 			</li>
 		</forcedTraits>
+		<spawnCategories>
+			<li>Outlander</li>
+			<li>Offworld</li>
+			<li>Tribal</li>
+		</spawnCategories>
 	</AlienRace.BackstoryDef>
 	
-	<AlienRace.BackstoryDef ParentName="STOutlanderBackstories">
+	<AlienRace.BackstoryDef>
 		<defName>ST_FrogFarmer</defName>
 		<slot>Adulthood</slot>
 		<title>frog rancher</title>
@@ -105,5 +118,19 @@
 				<amount>6</amount>
 			  </li>
 		</skillGains>
+		<spawnCategories>
+			<li>Medieval</li>
+			<li>MedievalLoaw</li>
+			<li>Outlander</li>
+			<li>Offworld</li>
+			<li>Tribal</li>
+			<li>Farmer</li>
+			<li>TribalFarmer</li>
+			<!-- <li>FrogPersonBackstory</li> --> <!-- Has its own -->
+			<li>GnomeBackstory</li>
+			<li>JeubBackstory</li>
+			<li>BeetnikhBackstory</li>
+			<li>WoodBeetBackstory</li>
+		</spawnCategories>
 	</AlienRace.BackstoryDef>
 </Defs>

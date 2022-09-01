@@ -37,6 +37,7 @@
 		<li>WoodBeetBackstory</li>
 		<li>WoodBeetJoe</li>
 		<li>PecanJoeBackstory</li>
+		<li>Madman</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -97,7 +98,8 @@
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>DrugAddledWoodBeet</defName>
     <title>Drug Addled</title>
-    <baseDescription>[PAWN_nameDef] has spent most of [PAWN_possessive] adult life doing various drugs. [PAWN_pronoun]'s not very smart, but [PAWN_pronoun] had a certain charm.</baseDescription>
+	<titleShort>competent druggie</titleShort>
+    <baseDescription>[PAWN_nameDef] has spent most of [PAWN_possessive] adult life doing various drugs. [PAWN_pronoun] is not very smart, but [PAWN_pronoun] had a certain charm.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -122,13 +124,15 @@
 	  <li>Pirate</li>
 	  <li>Offworld</li>
 	  <li>Outlander</li>
+	  <li>JeubBackstory</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>CannibalBeet</defName>
     <title>Sapient Beet Eater</title>
-    <baseDescription>[PAWN_nameDef] loves the taste of his fellow Beets. [PAWN_pronoun] has eaten a large number of them over the years, and is adept at catching and cooking them. This "pallate" has extended to any other sapient life.</baseDescription>
+	<titleShort>cannibal abductor</titleShort>
+    <baseDescription>[PAWN_nameDef] loves the taste of beets, and not just the vegetable  kind! [PAWN_pronoun] has eaten a large number of them over the years, and is adept at catching and cooking them. This "pallate" has extended to any other sapient life.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -141,13 +145,16 @@
 	  </li>
 	  <li>
 		<defName>Cooking</defName>
-        <amount>5</amount>
+        <amount>7</amount>
       </li>
     </skillGains>
 	<forcedTraits>
       <li>
         <defName>Cannibal</defName>
       </li>
+	  <li>
+		<defName>Psychopath</defName>
+	  </li>
     </forcedTraits>
   </AlienRace.BackstoryDef>
   
@@ -171,6 +178,7 @@
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>RaiderWoodBeet</defName>
     <title>Valenwood Raider</title>
+	<titleShort>Raider</titleShort>
     <baseDescription>[PAWN_nameDef] has participated in numerous raids on Valenroff holdings. Dozens have died by [PAWN_possessive] hand.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
@@ -188,12 +196,21 @@
         <defName>Bloodlust</defName>
       </li>
     </forcedTraits>
+	<spawnCategories Inherit="False">
+		<li>BeetnikhBackstory</li>
+		<li>WoodBeetBackstory</li>
+		<li>JeubBackstory</li>
+		<li>Raider</li>
+		<li>Pirate</li>
+		<li>Tribal</li>
+		<li>TribalHunter</li>
+	</spawnCategories>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>LazyBeet</defName>
     <title>Lazy Druggie</title>
-    <baseDescription>[PAWN_nameDef]'s use of drugs has made them quite lazy.</baseDescription>
+    <baseDescription>[PAWN_nameDef]'s use of drugs has made [PAWN_objective] quite lazy.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -213,6 +230,18 @@
 	  <li>Intellectual</li>
 	  <li>ManualSkilled</li>
     </workDisables>
+	<spawnCategories>
+		<li>WoodBeetBackstory</li>
+		<li>Offworld</li>
+		<li>Outlander</li>
+		<li>Raider</li>
+		<li>Pirate</li>
+		<li>PirateBackstory</li>
+		<li>Outsider</li>
+		<li>Madman</li>
+		<li>Sadist</li>
+		<li>Tribal</li>
+	</spawnCategories>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
@@ -280,8 +309,6 @@
     </skillGains>
   </AlienRace.BackstoryDef>
   
-  
-  
   <AlienRace.BackstoryDef Name="PecanJoeBackstories" Abstract="True">
     <bodyTypeMale>Male</bodyTypeMale>
 	<bodyTypeFemale>Female</bodyTypeFemale>
@@ -290,11 +317,10 @@
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
-  
   <AlienRace.BackstoryDef ParentName="PecanJoeBackstories">
     <defName>PecanJoeWoodBeet</defName>
     <title>Pecan Joe</title>
-    <baseDescription>[PAWN_nameDef] is a reincarnation of Pecan Joe, the leader of the wood beets and in many ways their god. </baseDescription>
+    <baseDescription>[PAWN_nameDef] is a reincarnation of Pecan Joe, the leader of the wood beets and in many ways their god.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>

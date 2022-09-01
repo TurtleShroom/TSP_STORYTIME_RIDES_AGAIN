@@ -11,7 +11,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>DriedFrogPills</defName>
     <label>dried frog pills</label>
-    <description>Dried frog pills are useful for keeping you sane, but you shouldn't become TOO reliant on them...</description>
+    <description>Dried frog pills are useful for increasing sanity, but one shouldn't become TOO reliant on them. Once an addiction begins, it is extremely difficult and exhausting to break it, far more than even most hard drugs.</description>
     <graphicData>
       <texPath>Things/Items/Resources/DriedFrogPills</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -24,11 +24,11 @@
       <DeteriorationRate>6</DeteriorationRate>
       <Flammability>1.3</Flammability>
     </statBases>
-    <techLevel>Neolithic</techLevel>
+    <techLevel>Medieval</techLevel>
     <ingestible>
       <foodType>Processed</foodType>
       <baseIngestTicks>200</baseIngestTicks>
-      <drugCategory>Hard</drugCategory>
+      <drugCategory>Medical</drugCategory>
       <ingestSound>Ingest_Snort</ingestSound>
       <ingestHoldOffsetStanding>
         <northDefault>
@@ -47,7 +47,7 @@
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>DriedFrogPillsTolerance</hediffDef>
-          <severity>0.030</severity>
+          <severity>0.07</severity>
           <divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>
@@ -66,13 +66,13 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>DriedFrogPills</chemical>
-        <addictiveness>0.1</addictiveness>
-        <minToleranceToAddict>0.2</minToleranceToAddict>
-        <existingAddictionSeverityOffset>0.09</existingAddictionSeverityOffset>
-        <needLevelOffset>0.9</needLevelOffset>
+        <addictiveness>0.9</addictiveness>
+        <minToleranceToAddict>0.4</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.02</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
         <listOrder>20</listOrder>
-        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
-        <largeOverdoseChance>0.01</largeOverdoseChance>
+        <overdoseSeverityOffset>0.08~0.1</overdoseSeverityOffset>
+        <largeOverdoseChance>0</largeOverdoseChance>
       </li>
     </comps>
   </ThingDef>
@@ -122,10 +122,10 @@
   <HediffDef ParentName="DrugToleranceBase">
     <defName>DriedFrogPillsTolerance</defName>
     <label>dried frog pill tolerance</label>
-    <description>The pills are starting to have less of an effect... I need more.</description>
+    <description>The pills are starting to have less of an effect... more will be needed...</description>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.015</severityPerDay>
+        <severityPerDay>-0.005</severityPerDay>
       </li>
       <li Class="HediffCompProperties_DrugEffectFactor">
         <chemical>DriedFrogPills</chemical>
@@ -137,7 +137,7 @@
     <defName>Chemical_DriedFrogPills</defName>
     <needClass>Need_Chemical</needClass>
     <label>dried frog pills</label>
-    <description>Because of a dried frog pill addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <description>Due to a dried frog pill addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
     <listPriority>50</listPriority>
   </NeedDef>
   
@@ -150,7 +150,7 @@
     <causesNeed>Chemical_DriedFrogPills</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.029</severityPerDay>
+        <severityPerDay>-0.009</severityPerDay>
         <showDaysToRecover>true</showDaysToRecover>
       </li>
     </comps>
@@ -162,13 +162,13 @@
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.30</offset>
+            <setMax>0.75</setMax>
           </li>
         </capMods>
         <mentalStateGivers>
           <li>
             <mentalState>Binging_DrugExtreme</mentalState>
-            <mtbDays>40</mtbDays>
+            <mtbDays>8</mtbDays>
           </li>
           <li>
             <mentalState>Wander_Psychotic</mentalState>
@@ -186,12 +186,9 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <visible>false</visible>
-      </li>
-      <li>
         <label>dried frog pill withdrawal</label>
-        <description>Fig.</description>
-        <baseMoodEffect>-30</baseMoodEffect>
+        <description>My sanity is gone. I can't be in my right mind without it.</description>
+        <baseMoodEffect>-70</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef> 
