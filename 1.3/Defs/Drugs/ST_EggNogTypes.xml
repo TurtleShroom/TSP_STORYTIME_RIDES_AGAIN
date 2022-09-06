@@ -45,7 +45,7 @@
   <ThingDef ParentName="EggBase">
     <defName>RawNog</defName>
     <label>fermented egg nog batter</label>
-    <description>Crushed eggs that have been allowed to ferment in a wooden barrel. It's basically just crushed eggs, but what could it become?</description>
+    <description>Crushed eggs that have been allowed to ferment in a wooden barrel. It's basically still crushed eggs, but what could it become?</description>
     <graphicData>
       <texPath>Things/Items/EggNogFlavors/RawEggNog</texPath>
 	  <graphicClass>Graphic_Single</graphicClass>
@@ -191,11 +191,14 @@
     <hediff>EggNogAddiction</hediff>
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
-      <li>
-        <label>egg nog withdrawal</label>
-        <description>Why is it only available around Christmas...</description>
-        <baseMoodEffect>-50</baseMoodEffect>
-      </li>
+		<li>
+			<visible>false</visible>
+		</li>
+		<li>
+			<label>egg nog withdrawal</label>
+			<description>Why is it only available around Christmas...</description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		</li>
     </stages>
   </ThoughtDef>
   
@@ -473,12 +476,10 @@
 	  <li>Grenades</li>
     </thingCategories>
     <alwaysHaulable>true</alwaysHaulable>
-	
     <comps>
 		<!-- <li Class="CompProperties_Forbiddable" /> -->
 		<li Class="CompProperties_Ingredients" />
     </comps>
-
 	<ingestible>
 		<foodType>Processed, Fluid, Liquor</foodType>
 		<preferability>NeverForNutrition</preferability>
@@ -499,7 +500,6 @@
 			</li>
 		</outcomeDoers>
 	</ingestible>
-	
     <pathCost>14</pathCost>
     <resourceReadoutPriority>Last</resourceReadoutPriority>
     <drawGUIOverlay>true</drawGUIOverlay>
