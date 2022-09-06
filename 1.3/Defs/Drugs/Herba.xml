@@ -1,10 +1,65 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
+  <RecipeDef>
+    <defName>TSP_ST_HerbaRoll</defName>
+    <label>roll herba cigarillos</label>
+    <description>Hang herba leaves to dry and roll them into cigarillos.</description>
+    <jobString>Drying and rolling herba</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+			<categories>
+				<li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
+			</categories>
+			<thingDefs>
+				<li>HerbaLeaves</li>
+			</thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+		<categories>
+			<li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
+		</categories>
+      <thingDefs>
+		<li>HerbaLeaves</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<defaultIngredientFilter>
+		<categories>
+			<li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
+		</categories>
+		<thingDefs>
+			<li>HerbaLeaves</li>
+		</thingDefs>
+	</defaultIngredientFilter>
+	<recipeUsers>
+        <li>CraftingSpot</li>
+        <li>DrugLab</li>
+	</recipeUsers>
+    <products>
+      <HerbaJoint>7</HerbaJoint>
+    </products>
+	<!--
+	<comps>
+		<li Class="CompProperties_Ingredients" />
+	</comps>
+	-->
+  </RecipeDef>
 
   <ThingDef ParentName="MakeableDrugBase">
     <defName>HerbaJoint</defName>
     <label>herba cigarillo</label>
-    <description>Herba leaves prepared in small rolls for smoking. The drug improves mood, but also increases appetite, reduces focus and slows movement.</description>
+    <description>Herba leaves prepared in small rolls for smoking. The drug improves mood, relaxes the user, and has a similar resting effect to the nicotine in tobacco.</description>
     <descriptionHyperlinks>
       <HediffDef>HerbaHigh</HediffDef>
       <HediffDef>HerbaTolerance</HediffDef>
@@ -55,8 +110,8 @@
       <ingestHoldUsesTable>false</ingestHoldUsesTable>
       <ingestCommandString>Smoke {0}</ingestCommandString>
       <ingestReportString>Smoking {0}.</ingestReportString>
-      <ingestReportStringEat>Consuming {0}.</ingestReportStringEat>
-      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <ingestReportStringEat>Smoking {0}.</ingestReportStringEat>
+      <useEatingSpeedStat>true</useEatingSpeedStat>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>HerbaHigh</hediffDef>
@@ -65,7 +120,7 @@
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
           <need>Rest</need>
-          <offset>-0.09</offset>
+          <offset>0.15</offset>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>HerbaTolerance</hediffDef>
@@ -74,24 +129,18 @@
         </li>
       </outcomeDoers>
     </ingestible>
-    <recipeMaker>
-      <recipeUsers>
-        <li>CraftingSpot</li>
-        <li>DrugLab</li>
-      </recipeUsers>
-      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
-      <workSkill>Cooking</workSkill>
-    </recipeMaker>
+	<!--
     <costList>
       <Herba>4</Herba>
     </costList>
+	-->
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>HerbaDrug</chemical>
-        <addictiveness>0.015</addictiveness>
-        <minToleranceToAddict>0.15</minToleranceToAddict>
-        <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
-        <needLevelOffset>0.9</needLevelOffset>
+        <addictiveness>0.045</addictiveness>
+        <minToleranceToAddict>0.01</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.25</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
         <listOrder>20</listOrder>
       </li>
     </comps>
@@ -100,9 +149,9 @@
 
   <HediffDef>
     <defName>HerbaHigh</defName>
-    <label>stoned on herba</label>
+    <label>buzzed on herba</label>
     <labelNoun>a herba high</labelNoun>
-    <description>Herba's active chemical in the bloodstream. Generates a soft feeling of fuzzy well-being.</description>
+    <description>Herba's active chemical in the bloodstream. Generates a relaxing, calming feeling akin to resting on a comfortable chair.</description>
     <hediffClass>Hediff_High</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -116,12 +165,11 @@
     </comps>
       <stages>
         <li>
-          <hungerRateFactorOffset>0.25</hungerRateFactorOffset>
           <painOffset>-0.25</painOffset>
           <capMods>
             <li>
               <capacity>Consciousness</capacity>
-              <offset>-0.3</offset>
+              <offset>-0.05</offset>
             </li>
             <li>
               <capacity>Moving</capacity>
@@ -140,13 +188,11 @@
     <stages>
       <li>
         <label>high on herba</label>
-        <description>That's some good herba... dude.</description>
+        <description>It's like I've been standing up my whole life, and now.... I feel as if I have just sat down....</description>
         <baseMoodEffect>14</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
-
-
 
   <ChemicalDef>
     <defName>HerbaDrug</defName>
@@ -160,7 +206,7 @@
     <defName>Chemical_Herba</defName>
     <needClass>Need_Chemical</needClass>
     <label>herba</label>
-    <description>Because of a herba dependence, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <description>Due to a herba dependence, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
     <listPriority>25</listPriority>
   </NeedDef>
   
@@ -229,11 +275,11 @@
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.20</offset>
+            <offset>-0.05</offset>
           </li>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.15</offset>
+            <offset>-0.25</offset>
           </li>
         </capMods>
         <mentalStateGivers>
@@ -258,8 +304,8 @@
     <stages>
       <li>
         <label>herba withdrawal</label>
-        <description>I need me some herbs.....</description>
-        <baseMoodEffect>-20</baseMoodEffect>
+        <description>I can't stop thinking about smoking herba cigarillos. I need a long drag.....</description>
+        <baseMoodEffect>-30</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

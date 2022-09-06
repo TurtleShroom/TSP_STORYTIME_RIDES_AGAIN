@@ -98,7 +98,7 @@
       <Mass>0.2</Mass>
       <StuffPower_Armor_Sharp>1.06</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
-      <StuffPower_Armor_Heat>0.55</StuffPower_Armor_Heat>
+      <StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
@@ -132,7 +132,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>ST_Adamantium</defName>
     <label>Mordorite</label>
-    <description>Mordorite is a solution created by mixing the cursed Black Bricks of Mordor with an alloy of iron and silver. Mordorite is the only metal known to mankind that insulates its wearer from heat as if it were cloth and it is resistent to all fire attacks. How stone bricks can be mixed with an iron and silver alloy to produce a stunningly powerful metal is unknown to science.</description>
+    <description>Mordorite is a solution created by mixing the cursed Black Bricks of Mordor with an alloy of iron and silver. Mordorite is the only metal known to mankind that insulates its wearer from heat as if it were a flame retardant suit, and it is resistent to all fire attacks. How stone bricks can be mixed with an iron and silver alloy to produce a stunningly powerful metal is unknown to science.</description>
     <graphicData>
       <texPath>Things/Items/Resources/Ores/Adamantium</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -144,8 +144,8 @@
       <StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>3</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
-      <StuffPower_Insulation_Heat>28</StuffPower_Insulation_Heat>
-      <SharpDamageMultiplier>1</SharpDamageMultiplier>
+      <StuffPower_Insulation_Heat>48</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.09</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.09</BluntDamageMultiplier>
 	  <Flammability>0</Flammability>
     </statBases>
@@ -271,8 +271,8 @@
   
   <ThingDef ParentName="ResourceBase">
     <defName>Weezer</defName>
-    <label>Weezerite</label>
-    <description>weezer</description>
+    <label>Weezer albums</label>
+    <description>Weezer</description>
     <graphicData>
       <texPath>Things/Items/Resources/Ores/Weezer</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -291,24 +291,28 @@
     <useHitPoints>false</useHitPoints>
     <thingCategories>
       <li>ResourcesRaw</li>
-	  <li>Leathers</li>
+	  <li>Textiles</li>
     </thingCategories>
     <deepCommonality>1</deepCommonality>
     <deepCountPerPortion>10</deepCountPerPortion>
-    <deepLumpSizeRange>10~20</deepLumpSizeRange>
+    <deepLumpSizeRange>7~9</deepLumpSizeRange>
     <stuffProps>
       <categories>
         <li>Metallic</li>
         <li>Leathery</li>
+		<li>Fabric</li>
+		<li>Stony</li>
+		<li>Woody</li>
       </categories>
+	  <stuffAdjective>Weezer</stuffAdjective>
       <commonality>0.1</commonality>
       <color>(0, 182, 213)</color>
       <statFactors>
         <MaxHitPoints>2.25</MaxHitPoints>
         <Beauty>2</Beauty>
         <Flammability>0.5</Flammability>
-        <WorkToMake>0.7</WorkToMake>
-        <WorkToBuild>0.7</WorkToBuild>
+        <WorkToMake>0.4</WorkToMake>
+        <WorkToBuild>0.9</WorkToBuild>
       </statFactors>
     </stuffProps>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>

@@ -1,6 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>  
+  <RecipeDef>
+    <defName>Make_BillyClub</defName>
+    <label>make billy club sandwich</label>
+    <description>Make a billy club sandwich.</description>
+    <jobString>Cooking.</jobString>
+    <workAmount>300</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+	<allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>10</count>
+      </li>
+	  <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+			<li MayRequire="VanillaExpanded.VCookE">VCE_Cheese</li>
+          </categories>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+		<li>PlantFoodRaw</li>
+		<li MayRequire="VanillaExpanded.VCookE">VCE_Cheese</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+		<li>PlantFoodRaw</li>
+      </categories>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ElectricStove</li>
+		    <li>FueledStove</li>
+			<li>GnomeTable</li>
+	</recipeUsers>
+	<researchPrerequisite>advancedCooking</researchPrerequisite>
+	<products>
+		<BillyClub>1</BillyClub>
+	</products>
+  </RecipeDef>
   
   <ThingDef ParentName="MealBase">
     <defName>BillyClub</defName>
