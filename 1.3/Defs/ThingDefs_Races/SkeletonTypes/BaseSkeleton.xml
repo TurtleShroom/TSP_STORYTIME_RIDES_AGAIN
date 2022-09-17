@@ -11,7 +11,9 @@
 	  <LeatherAmount>0</LeatherAmount>
 	  <MeatAmount>100</MeatAmount>
 	  <PainShockThreshold>1</PainShockThreshold>
-	  <BoneAmount MayRequire="sihv.rombones" Inherit="False">0</BoneAmount> <!-- Human skeletons always yield the same bones as their skeleton contains -->
+	  <BoneAmount MayRequire="sihv.rombones" Inherit="False">206</BoneAmount> <!-- Human skeletons always yield the same bones as their skeleton contains -->
+	  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
+	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_SanctusSensitivity>
     </statBases>
     <race>
 		<giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
@@ -41,9 +43,11 @@
 			<makeNonFleeingToo>true</makeNonFleeingToo>
 		</li>
 	</comps>
+	<!--
 	<butcherProducts>
 		<BoneItem MayRequire="sihv.rombones">206</BoneItem>
 	</butcherProducts>
+	-->
 	<tradeTags>
 		<li>AnimalInsectSpace</li> <!-- Skeletons don't breathe -->
 		<!-- <li>Skeleton</li> -->

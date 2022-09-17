@@ -21,6 +21,7 @@
 			<!-- <li>DrugOverdose</li> -->
 			<li>Malaria</li>
 			<li>SleepingSickness</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
 			<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_Corprus</li>
 			<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_CorprusPermanent</li>
 		</makeImmuneTo>
@@ -61,7 +62,7 @@
       <li>
 		<becomeVisible>false</becomeVisible>
 		<statOffsets>
-			  <CookSpeed>5</CookSpeed>
+			  <CookSpeed>3</CookSpeed>
 			  <FoodPoisonChance>-0.80</FoodPoisonChance>
 			  <EatingSpeed>0.25</EatingSpeed>
 		</statOffsets>		
@@ -81,9 +82,9 @@
       <li>
 		<becomeVisible>false</becomeVisible>
 		<statOffsets>
-			  <PlantHarvestYield>0.20</PlantHarvestYield>
-			  <PlantWorkSpeed>0.35</PlantWorkSpeed>
-			  <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+			<PlantHarvestYield>0.20</PlantHarvestYield>
+			<PlantWorkSpeed>0.35</PlantWorkSpeed>
+			<WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
 		</statOffsets>		
       </li>
     </stages>
@@ -92,7 +93,7 @@
  <HediffDef>
     <defName>HedFrogMan</defName>
     <label>Racial Trait: Swampy Resiliance</label>
-	<description>Frog people are known for their resistance to disease gained from living in the swamp.</description>		
+	<description>Frogmen are known for their resistance to disease gained from living in the swamp.</description>
     <initialSeverity>1</initialSeverity>
   	<defaultLabelColor>(0.47,0.87,0.47)</defaultLabelColor>      	
 	<hediffClass>HediffWithComps</hediffClass>
@@ -101,10 +102,10 @@
       <li>
 		<becomeVisible>false</becomeVisible>
 		<statOffsets>
-			  <ImmunityGainSpeed>0.15</ImmunityGainSpeed>
-			  <ToxicSensitivity>-0.35</ToxicSensitivity>
-			  <ComfyTemperatureMax>15</ComfyTemperatureMax>
-			  <ComfyTemperatureMin>15</ComfyTemperatureMin>
+			<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+			<ToxicSensitivity>-0.35</ToxicSensitivity>
+			<ComfyTemperatureMax>15</ComfyTemperatureMax>
+			<ComfyTemperatureMin>15</ComfyTemperatureMin>
 		</statOffsets>
 		<makeImmuneTo>
 			<!-- <li>DrugOverdose</li> -->
@@ -112,9 +113,39 @@
 			<li>SleepingSickness</li>
 			<li>Plague</li>
 			<li>Flu</li>
+			<li>FroggyFate</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
 			<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_Corprus</li>
 		</makeImmuneTo>
       </li>
     </stages>
+	<comps>
+		<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+			<verbs>
+				<li>
+					<verbClass>Verb_Shoot</verbClass>
+					<accuracyTouch>0.99</accuracyTouch>
+					<accuracyShort>0.9</accuracyShort>
+					<accuracyMedium>0.82</accuracyMedium>
+					<accuracyLong>0.7</accuracyLong>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>ST_Lick</defaultProjectile>
+					<warmupTime>1.7</warmupTime>
+					<range>6</range>				
+					<soundCast>Lick</soundCast>
+					<muzzleFlashScale>0</muzzleFlashScale>
+					<label>lick</label>
+					<commonality>1.2</commonality>
+				</li>
+			</verbs>
+			<verbProps>
+				<li>
+					<label>lick</label>
+					<draw>false</draw>
+					<canBeToggled>true</canBeToggled>
+				</li>
+			</verbProps>
+		</li>
+	</comps>
   </HediffDef>    
 </Defs>

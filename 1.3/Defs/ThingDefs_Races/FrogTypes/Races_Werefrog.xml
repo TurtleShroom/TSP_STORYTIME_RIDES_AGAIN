@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>
 
+<Defs>
 	<DamageDef ParentName="Bite">
 		<defName>WerefrogBite</defName>
 		<label>Werefrog bite</label>
 		<additionalHediffs>
 			<li>
 				<hediff>FroggyFate</hediff>
-				<severityPerDamageDealt>0.0001</severityPerDamageDealt>
+				<severityPerDamageDealt>0.001</severityPerDamageDealt>
 			</li>
 		</additionalHediffs>
 	</DamageDef>
@@ -15,13 +15,17 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>Werefrog</defName>
 		<label>Werefrog</label>
-		<description>Half man, half frog, all evil. Watch out for its bite.</description>		
+		<description>Half man, half frog, all evil. Whatever soul this creature once had has gone to the afterlife, because this abomination is ravenous, mindless, and pitiless. Watch out for its bite.</description>		
 		<statBases>
 			<MoveSpeed>7</MoveSpeed>
 			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
 			<MarketValue>450</MarketValue>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_GhoulismSusceptibility>
+			<HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.4</HSAU_SanctusSensitivity> <!-- Same as the Mod's werewolves -->
+			<HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_SoulRendSensitivity> <!-- Werefrogs have no souls, the soul of their former form is long gone -->
+			<SwimSpeed MayRequire="biomesteam.biomesislands">21</SwimSpeed>
 		</statBases>
 		<tools>
 			<li>
@@ -50,7 +54,7 @@
 				<power>24</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-				<chanceFactor>0.5</chanceFactor>
+				<chanceFactor>0.7</chanceFactor>
 			</li>
 			<li>
 				<label>head</label>
@@ -86,11 +90,11 @@
 			<wildness>1</wildness>
 			<lifeStageAges>
 				<li>
-					<def>AnimalAdult</def>
+					<def>FrogPersonAdultStage</def>
 					<minAge>0</minAge>
 					  <soundWounded>Pawn_Iguana_Wounded</soundWounded>
-					  <soundDeath>Pawn_Iguana_Death</soundDeath>
-					  <soundCall>Pawn_Iguana_Call</soundCall>
+					  <soundDeath>Frog_Angry</soundDeath>
+					  <soundCall>Frog_Angry</soundCall>
 					  <soundAngry>Frog_Angry</soundAngry>
 				</li>
 			</lifeStageAges>

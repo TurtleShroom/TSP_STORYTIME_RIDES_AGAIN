@@ -10,7 +10,12 @@
       <MarketValue>350</MarketValue>
       <ComfyTemperatureMin>-255</ComfyTemperatureMin>
 	  <ComfyTemperatureMax>255</ComfyTemperatureMax>
-	  <TerrorSource>1</TerrorSource>
+	  <TerrorSource>2</TerrorSource>
+	  <MeatAmount>120</MeatAmount>
+	  <LeatherAmount>120</LeatherAmount>
+	  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
+	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.3</HSAU_SanctusSensitivity>
+	  <HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_SoulRendSensitivity> <!-- Peeled Ones have no souls -->
     </statBases>
     <tools>
       <li>
@@ -36,7 +41,7 @@
         <capacities>
           <li>Peeler</li>
         </capacities>
-        <power>12</power>
+        <power>22</power>
         <cooldownTime>2.6</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>

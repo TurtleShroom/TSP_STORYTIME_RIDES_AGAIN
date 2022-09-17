@@ -24,7 +24,7 @@
         <filter>
           <categories>
             <li>PlantFoodRaw</li>
-			<li MayRequire="VanillaExpanded.VCookE">VCE_Cheese</li>
+			<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
           </categories>
         </filter>
         <count>10</count>
@@ -34,7 +34,7 @@
       <categories>
         <li>MeatRaw</li>
 		<li>PlantFoodRaw</li>
-		<li MayRequire="VanillaExpanded.VCookE">VCE_Cheese</li>
+		<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
       </categories>
     </fixedIngredientFilter>
     <defaultIngredientFilter>
@@ -150,21 +150,29 @@
     </comps>
       <stages>
         <li>
-			<vomitMtbDays>0.33</vomitMtbDays>
+			<vomitMtbDays>0.3</vomitMtbDays>
 			<painFactor>0</painFactor>
 			<!-- <painOffset>-0.05</painOffset> -->
 			<forgetMemoryThoughtMtbDays>0.45</forgetMemoryThoughtMtbDays>
 			<!-- <pctConditionalThoughtsNullified>0.05</pctConditionalThoughtsNullified> -->
 			<socialFightChanceFactor>0</socialFightChanceFactor>
 			<makeImmuneTo>
+				<li>Flu</li>
 				<li>Plague</li>
 				<li>Animal_Plague</li>
+				<li>ST_KungFlu</li>
 				<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_BlackPlague</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
 				<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_Corprus</li>
 				<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_CorprusPermanent</li>
 			</makeImmuneTo>
 			<statOffsets>
+				<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">-0.99</HSAU_GhoulismSusceptibility>
 				<ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+				<InjuryHealingFactor>0.05</InjuryHealingFactor>
 			</statOffsets>
 			<allowedMentalBreakIntensities>
 				<li>None</li>
@@ -255,8 +263,8 @@
     <causesNeed>Chemical_Billy</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.04</severityPerDay>
-        <showDaysToRecover>true</showDaysToRecover>
+        <severityPerDay>-0.09</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
     <stages>
@@ -274,13 +282,13 @@
           </li>
 			<li>
 				<capacity>Metabolism</capacity>
-				<setMax>0.25</setMax>
+				<setMax>0.2</setMax>
 			</li>
         </capMods>
         <mentalStateGivers>
           <li>
             <mentalState>Binging_Food</mentalState>
-            <mtbDays>2</mtbDays>
+            <mtbDays>1</mtbDays>
           </li>
         </mentalStateGivers>
       </li>

@@ -6,18 +6,19 @@
 		<label>living rock</label>
 		<description>That's no natural rock formation. The pioneers used to ride these babies for miles.</description>
 		<statBases>
-		  <MoveSpeed>1</MoveSpeed>
-		  <MarketValue>150</MarketValue>
-		  <ComfyTemperatureMin>-460</ComfyTemperatureMin>
-		  <ComfyTemperatureMax>650</ComfyTemperatureMax>
-		  <LeatherAmount>2</LeatherAmount>
-		  <MeatAmount>200</MeatAmount>
-		  <PsychicSensitivity>0</PsychicSensitivity>
-		  <ToxicSensitivity>0</ToxicSensitivity>
-		  <Flammability>0</Flammability>
-		  <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
-		  <ArmorRating_Sharp>0.72</ArmorRating_Sharp>
-		  <CaravanRidingSpeedFactor>2</CaravanRidingSpeedFactor>
+			<MoveSpeed>1</MoveSpeed>
+			<MarketValue>150</MarketValue>
+			<ComfyTemperatureMin>-460</ComfyTemperatureMin>
+			<ComfyTemperatureMax>650</ComfyTemperatureMax>
+			<LeatherAmount>2</LeatherAmount>
+			<MeatAmount>200</MeatAmount>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<Flammability>0</Flammability>
+			<ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+			<CaravanRidingSpeedFactor>2</CaravanRidingSpeedFactor>
+			<HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">2</HSAU_SoulRendSensitivity> <!-- Not a "soul", per se, but the magic energy keeping the rock alive is powerful indeed. -->
 		</statBases>
 		<tools>
 		  <li>
@@ -49,7 +50,7 @@
 		  <trainability>None</trainability>
 		  <wildness>0.1</wildness>
 		  <nuzzleMtbHours>900</nuzzleMtbHours>
-		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
+		  <manhunterOnDamageChance>0</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
 		  <foodType>None</foodType>
 		  <lifeExpectancy>5000</lifeExpectancy>
@@ -72,6 +73,7 @@
 		</race>
 		<tradeTags>
 			<li>AnimalCommon</li>
+			<li>Rock</li>
 			<li>AnimalInsectSpace</li> <!-- Can "breathe" in space -->
 		</tradeTags>
 			<thingCategories>
@@ -100,7 +102,7 @@
     <defName>EvilRock</defName>
     <label>living rock</label>
     <race>EvilRock</race>
-    <combatPower>120</combatPower>
+    <combatPower>12</combatPower>
     <ecoSystemWeight>0</ecoSystemWeight>
     <lifeStages>
       <li>

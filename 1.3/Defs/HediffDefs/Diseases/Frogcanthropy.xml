@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>  
 
+<Defs>
 <!--Frog Parts-->
 
 	<!--Frog Arm-->
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>FrogArm</defName>
-    <label>froglike arm</label>
+    <label>frog-like arm</label>
     <labelNoun>a froglike arm</labelNoun>
     <description>The arm has warped into one similar to a frog- very powerful.</description>
     <descriptionHyperlinks><ThingDef>FrogArm</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>FrogArm</spawnThingOnRemoved>
+	<isBad>false</isBad>
+    <tendable>false</tendable>
+	<everCurableByItem>false</everCurableByItem>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<initialSeverity>1</initialSeverity>
+	<maxSeverity>1</maxSeverity>
+	<stages>
+		<li>
+			<becomeVisible>true</becomeVisible>
+			<statOffsets>
+				<SwimSpeed MayRequire="biomesteam.biomesislands">2</SwimSpeed>
+			</statOffsets>
+		</li>
+	</stages>
     <comps>
       <li Class="HediffCompProperties_VerbGiver">
         <tools>
@@ -26,6 +40,7 @@
           </li>
         </tools>
       </li>
+	  
     </comps>
     <addedPartProps>
       <solid>true</solid>
@@ -36,8 +51,8 @@
   
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogArm</defName>
-    <label>froglike arm</label>
-    <description>A human arm that has been warped into a froggy one.</description>
+    <label>frog-like arm</label>
+    <description>A human arm that has been warped into one akin to a frog's forearm.</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -59,7 +74,7 @@
   <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
     <defName>InstallFrogArm</defName>
     <label>install froglike arm</label>
-    <description>Install a froglike arm.</description>
+    <description>Install a frog-like arm.</description>
     <descriptionHyperlinks>
       <ThingDef>FrogArm</ThingDef>
       <HediffDef>FrogArm</HediffDef>
@@ -93,9 +108,24 @@
     <defName>FrogLeg</defName>
     <label>froglike leg</label>
     <labelNoun>a froglike leg</labelNoun>
-    <description>The leg has warped into one similar to a frog- very good for jumping around quickly.</description>
+    <description>The leg has warped into one similar to a frog- very good for jumping or swimming around quickly.</description>
     <descriptionHyperlinks><ThingDef>FrogLeg</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>FrogLeg</spawnThingOnRemoved>
+	<isBad>false</isBad>
+    <tendable>false</tendable>
+	<everCurableByItem>false</everCurableByItem>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<initialSeverity>1</initialSeverity>
+	<maxSeverity>1</maxSeverity>
+	<stages>
+		<li>
+			<becomeVisible>true</becomeVisible>
+			<statOffsets>
+				<SwimSpeed MayRequire="biomesteam.biomesislands">1.5</SwimSpeed> <!-- One leg each, total 3 -->
+				<MoveSpeed>0.2</MoveSpeed> <!-- One leg each, total 0.4 -->
+			</statOffsets>
+		</li>
+	</stages>
     <addedPartProps>
       <solid>true</solid>
       <partEfficiency>1.5</partEfficiency>
@@ -105,8 +135,8 @@
   
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogLeg</defName>
-    <label>froglike leg</label>
-    <description>A human leg that has been warped into a froggy one.</description>
+    <label>frog-like leg</label>
+    <description>A human leg that has been warped into a frog's leg and webbed feet.</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -159,33 +189,53 @@
   
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>FrogTongue</defName>
-    <label>froglike tongue</label>
+    <label>frog's tongue</label>
     <labelNoun>a froglike tongue</labelNoun>
-    <description>The tongue has stretched out like that of a frog, increasing its licking ability..</description>
+    <description>The tongue has stretched out like that of a frog, giving it a biological ranged attack! A frog's tongue is attatched to the front of its mouth instead of the back. Most sapient creatures have a mouth too small to fit a frog tongue without significant difficulty, making speaking extremely difficult.</description>
     <descriptionHyperlinks><ThingDef>FrogTongue</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>FrogTongue</spawnThingOnRemoved>
+	<isBad>false</isBad>
+    <tendable>false</tendable>
+	<everCurableByItem>false</everCurableByItem>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<initialSeverity>1</initialSeverity>
+	<maxSeverity>1</maxSeverity>
     <addedPartProps>
       <solid>true</solid>
       <partEfficiency>1</partEfficiency>
       <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
+	<stages>
+		<li>
+			<becomeVisible>true</becomeVisible>
+			<capMods>
+				<li>
+					<capacity>Talking</capacity>
+					<offset>-0.3</offset>
+				</li>
+			</capMods>
+			<statOffsets>
+				<EatingSpeed>0.1</EatingSpeed>
+			</statOffsets>
+		</li>
+	</stages>
 	<comps>
 	  <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
 					<verbs>
 						<li>
-						<verbClass>Verb_Shoot</verbClass>
-						<accuracyTouch>0.99</accuracyTouch>
-						<accuracyShort>0.9</accuracyShort>
-						<accuracyMedium>0.82</accuracyMedium>
-						<accuracyLong>0.7</accuracyLong>
-						<hasStandardCommand>true</hasStandardCommand>
-						<defaultProjectile>ST_Lick</defaultProjectile>
-						<warmupTime>1.7</warmupTime>
-						<range>6</range>				
-						<soundCast>Lick</soundCast>
-						<muzzleFlashScale>0</muzzleFlashScale>
-						<label>lick</label>
-						<commonality>1</commonality>
+							<verbClass>Verb_Shoot</verbClass>
+							<accuracyTouch>0.99</accuracyTouch>
+							<accuracyShort>0.9</accuracyShort>
+							<accuracyMedium>0.82</accuracyMedium>
+							<accuracyLong>0.7</accuracyLong>
+							<hasStandardCommand>true</hasStandardCommand>
+							<defaultProjectile>ST_Lick</defaultProjectile>
+							<warmupTime>1.7</warmupTime>
+							<range>6</range>				
+							<soundCast>Lick</soundCast>
+							<muzzleFlashScale>0</muzzleFlashScale>
+							<label>lick</label>
+							<commonality>1.2</commonality>
 						</li>
 					</verbs>
 					<verbProps>
@@ -202,7 +252,7 @@
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogTongue</defName>
     <label>froglike tongue</label>
-    <description>A human tongue that has been warped into a froggy one.</description>
+    <description>A human tongue that has been warped into a frog's tongue.</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -223,8 +273,8 @@
   
    <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
     <defName>InstallFrogTongue</defName>
-    <label>install froglike tongue</label>
-    <description>Install a froglike tongue.</description>
+    <label>install frog tongue</label>
+    <description>Install a frog tongue.</description>
     <descriptionHyperlinks>
       <ThingDef>FrogTongue</ThingDef>
       <HediffDef>FrogTongue</HediffDef>
@@ -252,19 +302,36 @@
   </RecipeDef> 
   
 	<!--Frog Eye--> 
-  <HediffDef ParentName="AddedBodyPartBase">
-    <defName>FrogEye</defName>
-    <label>froglike eye</label>
-    <labelNoun>a froglike eye</labelNoun>
-    <description>This Pawn's eye has warped into the eye of a frog.</description>
-    <descriptionHyperlinks><ThingDef>FrogEye</ThingDef></descriptionHyperlinks>
-    <spawnThingOnRemoved>FrogEye</spawnThingOnRemoved>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>0.6</partEfficiency>
-      <betterThanNatural>false</betterThanNatural>
-    </addedPartProps>
-  </HediffDef>
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>FrogEye</defName>
+		<label>froglike eye</label>
+		<labelNoun>a froglike eye</labelNoun>
+		<description>This Pawn's eye has warped into the eye of a frog. Frogs actually have three eyelids, with two being transparent, and the third, called the nictating membrane, increases the frog's vision underwater. Frogs have a field of view of nearly three hundred sixty degrees, allowing them to see what is in front and behind them simultaneously. When eating, a frog retracts its eyeballs into its head in order to push the prey its tonge catches into hits mouth, after which it shuts its mouth and uses its teeth to keep the victim from escaping. Unfortunately, frog eyes are also near-sighted, but their depth perception is greatly increased, making them catch prey with their tongue more accurately. \n \n Due to the fact that frog eyes are drastically different in purpose and function against the eyes of most sapient races, those possessing them are given a mixed bag of blessings and curses. Werefrog eyes increase depth perception, allow its host to spot melee attacks from any direction, and increase eating speed. However, outside the evolutionary circumstances a frog would benefit, the eye is an overall reduction in the quality of its host's vision.</description>
+		<descriptionHyperlinks><ThingDef>FrogEye</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>FrogEye</spawnThingOnRemoved>
+		<isBad>false</isBad>
+		<tendable>false</tendable>
+		<everCurableByItem>false</everCurableByItem>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<addedPartProps>
+			<solid>false</solid>
+			<partEfficiency>0.6</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+				<stafOffsets>
+					<AimingDelayFactor>-0.025</AimingDelayFactor> <!-- One per each eye, total 0.05 -->
+					<ShootingAccuracyPawn>0.125</ShootingAccuracyPawn> <!-- One per each eye, total 0.25 -->
+					<MeleeDodgeChance>0.2</MeleeDodgeChance> <!-- One per each eye, total 0.4 -->
+					<MeleeHitChance>-0.15</MeleeHitChance> <!-- One per each eye, total 0.3 -->
+				</stafOffsets>
+			</li>
+		</stages>
+	</HediffDef>
   
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogEye</defName>
@@ -324,20 +391,37 @@
     <defName>FrogStomach</defName>
     <label>froglike stomach</label>
     <labelNoun>a froglike stomach</labelNoun>
-    <description>The stomach has warped into one similar to a frog- creates an unfulfillable compulsion to eat insect meat.</description>
+    <description>The stomach has warped into one similar to a frog, although it is deformed. While this frog stomach can and will process any nutriets a frog or man can consume, it creates an unfulfillable compulsion to eat insect meat.</description>
     <descriptionHyperlinks><ThingDef>FrogStomach</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>FrogStomach</spawnThingOnRemoved>
+	<isBad>true</isBad>
+    <tendable>false</tendable>
+	<everCurableByItem>false</everCurableByItem>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<initialSeverity>1</initialSeverity>
+	<maxSeverity>1</maxSeverity>
     <addedPartProps>
       <solid>true</solid>
       <partEfficiency>0.9</partEfficiency>
       <betterThanNatural>false</betterThanNatural>
     </addedPartProps>
+	<stages>
+		<li>
+			<becomeVisible>true</becomeVisible>
+			<mentalStateGivers>
+				<li>
+					<mentalState>Binging_Food</mentalState>
+					<mtbDays>17</mtbDays> <!-- Slightly more than once per Quadrum, they try but fail to satisfy the insect craving -->
+				</li>
+			</mentalStateGivers>
+		</li>
+	</stages>
   </HediffDef>
   
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogStomach</defName>
     <label>froglike stomach</label>
-    <description>A human stomach that has been warped into a froggy one.</description>
+    <description>A deformed stomach baring elements of werefrogs.</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -349,7 +433,7 @@
       <color>(140,190,110)</color>
     </graphicData>
     <tradeTags>
-      <li>Bionic</li>
+      <li>Poor</li>
     </tradeTags>
     <statBases>
       <Mass>0.3</Mass>
@@ -386,18 +470,18 @@
     <addsHediff>FrogStomach</addsHediff>
   </RecipeDef>
 
-    <ThoughtDef>
-    <defName>FrogStomach</defName>
-    <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>FrogStomach</hediff>
-    <stages>
-      <li>
-        <label>craving insect meat</label>
-        <description>My frog stomach tells me to eat insects, but no matter how many times I eat them, I still crave them. This is the worst.</description>
-        <baseMoodEffect>-10</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
+	<ThoughtDef>
+		<defName>FrogStomach</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>FrogStomach</hediff>
+		<stages>
+			<li>
+				<label>craving insect meat</label>
+				<description>My frog stomach tells me to eat insect meat, but no matter how many times I eat them, I still crave them. This is the worst.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
 	
 	<!--Frog Lung-->	
   
@@ -405,14 +489,25 @@
     <defName>FrogLung</defName>
     <label>froglike lung</label>
     <labelNoun>a froglike lung</labelNoun>
-    <description>The lung has warped into one similar to a frog- very good for breathing in water, inefficient on land.</description>
+    <description>Frogs breathe through their skin, supplementing their lungs and mouth! Even without the skin respiration, a frog's powerful lungs allow it to stay underwater far longer without coming up for breath.</description>
     <descriptionHyperlinks><ThingDef>FrogLung</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>FrogLung</spawnThingOnRemoved>
+	<isBad>false</isBad>
+    <tendable>false</tendable>
+	<everCurableByItem>false</everCurableByItem>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<initialSeverity>1</initialSeverity>
+	<maxSeverity>1</maxSeverity>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>0.6</partEfficiency>
-      <betterThanNatural>false</betterThanNatural>
+      <partEfficiency>1</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
+	<stages>
+		<li>
+			<becomeVisible>true</becomeVisible>
+		</li>
+	</stages>
   </HediffDef>
   
   <ThingDef ParentName="BodyPartBase">
@@ -531,7 +626,7 @@
 	  <li Class="HediffGiver_RandomDrugEffect">
 		<hediff>FrogTongue</hediff>
 		<minSeverity>0.3</minSeverity>
-		<baseMtbDays>2</baseMtbDays>
+		<baseMtbDays>0.4</baseMtbDays>
 		<partsToAffect>
 		  <li>Jaw</li>
 		</partsToAffect>
@@ -561,6 +656,10 @@
 		</partsToAffect>
 	  </li>
 	</hediffGivers>
+	<disablesNeeds>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Anonymity</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Corruption</li>
+	</disablesNeeds>
     <stages>
       <li>
         <label>minor</label>
@@ -578,6 +677,13 @@
             <offset>-0.1</offset>
           </li>
         </capMods>
+		<makeImmuneTo>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
+		</makeImmuneTo>
       </li>
       <li>
         <minSeverity>0.3</minSeverity>
@@ -597,9 +703,16 @@
             <offset>0.05</offset>
           </li>
         </capMods>
+		<makeImmuneTo>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
+		</makeImmuneTo>
       </li>
       <li>
-        <minSeverity>0.666</minSeverity>
+        <minSeverity>0.66</minSeverity>
         <label>major</label>
         <vomitMtbDays>0.5</vomitMtbDays>
         <capMods>
@@ -616,12 +729,19 @@
             <offset>0.15</offset>
           </li>
         </capMods>
+		<makeImmuneTo>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
+		</makeImmuneTo>
       </li>
       <li>
         <minSeverity>0.8</minSeverity>
         <label>extreme</label>
         <lifeThreatening>true</lifeThreatening>
-        <vomitMtbDays>0.25</vomitMtbDays>
+        <vomitMtbDays>0.1</vomitMtbDays>
         <painOffset>0.5</painOffset>
         <capMods>
           <li>
@@ -637,6 +757,14 @@
             <offset>0.5</offset>
           </li>
         </capMods>
+		<makeImmuneTo>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
+			<li></li>
+		</makeImmuneTo>
       </li>
     </stages>
   </HediffDef>

@@ -3,7 +3,7 @@
 <Defs>
   <ThingDef ParentName="BasePawn" Name="BasePeeled" Abstract="True">
     <statBases>
-      <PsychicSensitivity>0.2</PsychicSensitivity>
+      <PsychicSensitivity>2</PsychicSensitivity>
       <ToxicSensitivity>2</ToxicSensitivity>
       <Flammability>2</Flammability>
       <ComfyTemperatureMin>-110</ComfyTemperatureMin>
@@ -37,6 +37,12 @@
       <MoveSpeed>6.0</MoveSpeed>
       <MarketValue>150</MarketValue>
       <ComfyTemperatureMin>-60</ComfyTemperatureMin>
+	  <TerrorSource>2</TerrorSource>
+	  <MeatAmount>100</MeatAmount>
+	  <LeatherAmount>100</LeatherAmount>
+	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">1</HSAU_SanctusSensitivity>
+	  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.1</HSAU_GhoulismSusceptibility>
+	  <HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_SoulRendSensitivity> <!-- Peeled Ones have no souls -->
     </statBases>
     <tools>
       <li>
