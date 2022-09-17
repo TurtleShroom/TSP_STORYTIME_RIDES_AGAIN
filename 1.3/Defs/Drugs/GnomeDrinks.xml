@@ -126,7 +126,7 @@
 						<li>ST_CookingApple</li>
 						<li>ST_Lemon</li>
 						<li>ST_Orange</li>
-						<li MayRequire="VanillaExpanded.VCookE">VCE_RawSugar</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
 						<li MayRequire="sarg.alphabiomes">AB_RawSugarFamewort</li>
 						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
 						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
@@ -163,6 +163,7 @@
 			<filter>
 						<thingDefs>
 							<li>Chocolate</li>
+							<li MayRequire="aratocat.wonderland">Chocofuel</li>
 						</thingDefs>
 			</filter>
 			<count>8</count>
@@ -171,6 +172,7 @@
 			<filter>
 						<thingDefs>
 							<li>GnomeBeer</li>
+							<li>ST_GnomeSugar</li>
 						</thingDefs>
 			</filter>
 			<count>3</count>
@@ -180,12 +182,15 @@
 						<thingDefs>
 							<li>Chocolate</li>
 							<li>GnomeBeer</li>
+							<li>ST_GnomeSugar</li>
+							<li MayRequire="aratocat.wonderland">Chocofuel</li>
 						</thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 						<thingDefs>
 							<li>Chocolate</li>
 							<li>GnomeBeer</li>
+							<li MayRequire="aratocat.wonderland">Chocofuel</li>
 						</thingDefs>
 		</defaultIngredientFilter>
 		<recipeUsers>
@@ -287,14 +292,14 @@
       <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>AlcoholHigh</hediffDef>
-          <severity>0.15</severity>
-          <toleranceChemical>Alcohol</toleranceChemical>
+			<hediffDef>AlcoholHigh</hediffDef>
+			<severity>0.15</severity>
+			<toleranceChemical>Alcohol</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>AlcoholTolerance</hediffDef>
-          <severity>0.05</severity>
-          <divideByBodySize>false</divideByBodySize>
+			<hediffDef>AlcoholTolerance</hediffDef>
+			<severity>0.05</severity>
+			<divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
         </li>
       </outcomeDoers>
     </ingestible>
@@ -307,6 +312,8 @@
 				<existingAddictionSeverityOffset>0.4</existingAddictionSeverityOffset>
 				<needLevelOffset>0.9</needLevelOffset>
 				<listOrder>10</listOrder>
+				<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
+				<largeOverdoseChance>0</largeOverdoseChance>
 		</li>
 		<!-- <li Class="CompProperties_Ingredients" /> -->
     </comps>
@@ -340,8 +347,8 @@
     </statBases>
     <ingestible>
       <foodType>Fluid, Processed, Liquor</foodType>
-      <joyKind>Chemical</joyKind>
-      <joy>0.3</joy>
+      <joyKind>Gluttonous</joyKind>
+      <joy>0.4</joy>
       <nurseable>true</nurseable>
       <drugCategory>Social</drugCategory>
       <ingestSound>Ingest_Beer</ingestSound>
@@ -363,7 +370,7 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>AlcoholTolerance</hediffDef>
           <severity>0.036</severity>
-          <divideByBodySize>true</divideByBodySize>
+          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
         </li>
       </outcomeDoers>
     </ingestible>
@@ -371,11 +378,13 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Alcohol</chemical>
-        <addictiveness>0.010</addictiveness>
-        <minToleranceToAddict>0.25</minToleranceToAddict>
+        <addictiveness>0.01</addictiveness>
+        <minToleranceToAddict>0.2</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.50</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>10</listOrder>
+		<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
+		<largeOverdoseChance>0</largeOverdoseChance>
       </li>
     </comps>
   </ThingDef>
@@ -431,7 +440,7 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>AlcoholTolerance</hediffDef>
           <severity>0.036</severity>
-          <divideByBodySize>true</divideByBodySize>
+          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
         </li>
       </outcomeDoers>
     </ingestible>
@@ -439,11 +448,13 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Alcohol</chemical>
-        <addictiveness>0.02</addictiveness>
+        <addictiveness>0.1</addictiveness>
         <minToleranceToAddict>0.25</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.50</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>10</listOrder>
+		<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
+		<largeOverdoseChance>0</largeOverdoseChance>
       </li>
 	  <li Class="CompProperties_Ingredients" />
     </comps>
@@ -500,7 +511,7 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>AlcoholTolerance</hediffDef>
           <severity>0.08</severity>
-          <divideByBodySize>true</divideByBodySize>
+          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
         </li>
       </outcomeDoers>
     </ingestible>
@@ -513,6 +524,8 @@
         <existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
         <listOrder>10</listOrder>
+		<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
+		<largeOverdoseChance>0</largeOverdoseChance>
       </li>
 	  <li Class="CompProperties_Ingredients" />
     </comps>

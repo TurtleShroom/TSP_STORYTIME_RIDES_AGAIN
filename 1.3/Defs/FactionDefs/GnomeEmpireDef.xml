@@ -55,8 +55,8 @@
       </li>
     </backstoryFilters>
 	<hidden Inherit="False">false</hidden>
-    <geneticVariance>0.2</geneticVariance>
-    <raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+    <geneticVariance>0.1</geneticVariance>
+    <raidLootMaker>TSP_ST_GnomeLootMarker</raidLootMaker>
     <caravanTraderKinds>
       <li>Caravan_Neolithic_BulkGoods</li>
       <li>Caravan_Neolithic_WarMerchant</li>
@@ -168,6 +168,7 @@
 	<apparelStuffFilter>
 		<thingDefs>
 			<li>Gnome_Cloth</li>
+			<li>Weezer</li>
 			<li>Jade</li>
 			<li>Steel</li>
 			<li>Marble</li>
@@ -186,7 +187,50 @@
     </modExtensions> -->
   </FactionDef> 
 
-
+	<ThingSetMakerDef>
+		<defName>TSP_ST_GnomeLootMarker</defName>
+		<root Class="ThingSetMaker_MarketValue">
+			<fixedParams>
+				<filter>
+					<categories>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+						<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+					</categories>
+					<thingDefs>
+						<li>ST_Worm</li>
+						<li>GnomeRoot</li>
+						<li>Gnome_Cloth</li>
+						<li>GnomeFlour</li>
+						<li>GnomeFlourMeal</li>
+						<li>ST_GnomeSugar</li>
+						<li>ToadLegs</li>
+						<li>ST_Cabbage</li>
+						<li>ST_ProcessedCheese</li>
+						<li>Green_Milk</li>
+						<li>TomatoCyst</li>
+						<li>StrangeFruit</li>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li>ST_CookingApple</li>
+						<li>ST_Bean</li>
+						<li>Weezer</li>
+						<li>FruitBatta</li>
+						<li>VegetableBatta</li>
+						<li>WormBatta</li>
+						<li>ToadBatta</li>
+						<li>TangledToadLegs</li>
+						<li>WormHole</li>
+						<li>VeggieBall</li>
+						<li>ST_CheesePizza</li>
+						<li>ST_MeatPizza</li>
+						<li>ST_VegetablePizza</li>
+						<li>ST_WormPizza</li>
+						<li></li>
+					</thingDefs>
+				</filter>
+			</fixedParams>
+		</root>
+	</ThingSetMakerDef>
 
 
 </Defs>

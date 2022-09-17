@@ -1,42 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
-  <PawnKindDef Abstract="True" Name="BasePlayerGnomePawnKind">
-	<race>Alien_Gnome</race>
-	<backstoryCategories>
-		<li>GnomeBackstory</li>
-	</backstoryCategories>
-	<baseRecruitDifficulty>0.75</baseRecruitDifficulty>
-	<isFighter>false</isFighter>
-	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-	<forceNormalGearQuality>true</forceNormalGearQuality>
-	<apparelColor>(69,193,69)</apparelColor>
-    <invNutrition>4</invNutrition>
-    <invFoodDef>TangledToadLegs</invFoodDef>
-    <specificApparelRequirements>
-      <li>
-        <colorGenerator Class="ColorGenerator_Options">
-          <options>
-            <li>
-				<only>(69,193,69)</only> <!-- Neon green -->
-            </li>
-          </options>
-        </colorGenerator>
-      </li>
-	  <!--
-      <li>
-        <bodyPartGroup>UpperHead</bodyPartGroup>
-        <stuff>Gnome_Cloth</stuff>
-      </li>
-      <li>
-        <bodyPartGroup>Torso</bodyPartGroup>
-        <stuff>Gnome_Cloth</stuff>
-      </li>
-      <li>
-        <bodyPartGroup>Legs</bodyPartGroup>
-        <stuff>Gnome_Cloth</stuff>
-      </li>
-	  -->
-	</specificApparelRequirements>
+	<PawnKindDef Abstract="True" Name="BasePlayerGnomePawnKind">
+		<race>Alien_Gnome</race>
+		<backstoryCategories>
+			<li>GnomeBackstory</li>
+		</backstoryCategories>
+		<baseRecruitDifficulty>0.75</baseRecruitDifficulty>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelColor>(69,193,69)</apparelColor>
+		<invNutrition>4</invNutrition>
+		<invFoodDef>TangledToadLegs</invFoodDef>
+		<specificApparelRequirements>
+		<!-- Relocated to ensure Weezer Albums stay blue -->
+		<!--
+		<li>
+			<colorGenerator Class="ColorGenerator_Options">
+				<options>
+					<li>
+						<only>(69,193,69)</only>  Neon green 
+					</li>
+				</options>
+			</colorGenerator>
+		</li>
+		-->
+		<li>
+			<bodyPartGroup>Torso</bodyPartGroup>
+			<stuff>Gnome_Cloth</stuff>
+		</li>
+		<li>
+			<bodyPartGroup>Legs</bodyPartGroup>
+			<stuff>Gnome_Cloth</stuff>
+		</li>
+		</specificApparelRequirements>
 		<apparelTags>
 			<li>ST_GnomeClothing</li>
 			<li>Medieval</li>
@@ -44,11 +42,10 @@
 			<li>MedievalApparelBasic</li>
 			<li>MedievalApparel</li>
 		</apparelTags>
-		
 		<requiredWorkTags>
 			<li>Cooking</li>
 		</requiredWorkTags>
-  </PawnKindDef>
+	</PawnKindDef>
   
   <PawnKindDef ParentName="BasePlayerGnomePawnKind">
     <defName>PlayerGnome</defName>
@@ -89,8 +86,8 @@
 		<li>SimpleGun</li>
 		<li>Revolver</li>
     </weaponTags>
-    <initialWillRange>1~4</initialWillRange>
-    <initialResistanceRange>5~20</initialResistanceRange>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>6~20</initialResistanceRange>
   </PawnKindDef>
   
   <PawnKindDef ParentName="BasePlayerGnomePawnKind">
@@ -105,6 +102,17 @@
 	<apparelTags>
         <li>ST_GnomeClothing</li>
     </apparelTags>
+	<specificApparelRequirements>
+		<li>
+			<colorGenerator Class="ColorGenerator_Options">
+				<options>
+					<li>
+						<only>(69,193,69)</only> <!-- Neon green -->
+					</li>
+				</options>
+			</colorGenerator>
+		</li>
+	</specificApparelRequirements>
 	<weaponMoney>
          <min>100</min>
          <max>500</max>
@@ -129,7 +137,7 @@
 		<li>NeolithicRangedHeavy</li>
     </weaponTags>
     <initialWillRange>1~4</initialWillRange>
-    <initialResistanceRange>5~20</initialResistanceRange>
+    <initialResistanceRange>3~16</initialResistanceRange>
   </PawnKindDef>
   
   <PawnKindDef ParentName="BasePlayerGnomePawnKind">
@@ -148,6 +156,17 @@
          <min>250</min>
          <max>3600</max>
     </weaponMoney>
+	<specificApparelRequirements>
+		<li>
+			<colorGenerator Class="ColorGenerator_Options">
+				<options>
+					<li>
+						<only>(69,193,69)</only> <!-- Neon green -->
+					</li>
+				</options>
+			</colorGenerator>
+		</li>
+	</specificApparelRequirements>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <techHediffsMoney>
       <min>50</min>
@@ -166,52 +185,73 @@
 		<li>Lance</li>
     </weaponTags>
     <initialWillRange>1~4</initialWillRange>
-    <initialResistanceRange>5~20</initialResistanceRange>
+    <initialResistanceRange>3~16</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerGnomePawnKind">
-    <defName>GnomeTrader</defName>
-    <label>Gnome tradesman</label>
-    <trader>true</trader>
-	<combatPower>80</combatPower>
-    <defaultFactionType>TreeGnomeEmpire</defaultFactionType>
-    <chemicalAddictionChance>0.01</chemicalAddictionChance>
-    <apparelMoney>
-      <min>550</min>
-      <max>5000</max>
-    </apparelMoney>
-	<apparelTags>
-        <li>ST_GnomeClothing</li>
-		<li>Cape</li>
-    </apparelTags>
-    <weaponMoney>
-         <min>50</min>
-         <max>3600</max>
-    </weaponMoney>
-    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-    <techHediffsMoney>
-      <min>50</min>
-      <max>50</max>
-    </techHediffsMoney>
-    <techHediffsTags>
-      <li>Poor</li>
-    </techHediffsTags>
-    <techHediffsChance>0.02</techHediffsChance>
-	<weaponTags>
-		<li>MedievalMeleeDecent</li>
-        <li>GnomeRanged</li>
-		<li>BowMen</li>
-		<li>SpearMen</li>
-		<li>Spear</li>
-    </weaponTags>
-    <initialWillRange>1~4</initialWillRange>
-    <initialResistanceRange>5~20</initialResistanceRange>
-  </PawnKindDef>
+	<PawnKindDef ParentName="BasePlayerGnomePawnKind">
+		<defName>GnomeTrader</defName>
+		<label>Gnome tradesman</label>
+		<trader>true</trader>
+		<combatPower>80</combatPower>
+		<defaultFactionType>TreeGnomeEmpire</defaultFactionType>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<apparelMoney>
+		  <min>550</min>
+		  <max>5000</max>
+		</apparelMoney>
+		<apparelTags>
+			<li>ST_GnomeClothing</li>
+			<li>Cape</li>
+		</apparelTags>
+		<specificApparelRequirements Inherit="False">
+		  <li>
+			<bodyPartGroup Inherit="False">UpperHead</bodyPartGroup>
+			<stuff Inherit="False">Weezer</stuff>
+		  </li>
+		  <!--
+		  <li>
+			<bodyPartGroup>Torso</bodyPartGroup>
+			<requiredTag>Robe</requiredTag>
+			<stuff>Gnome_Cloth</stuff>
+		  </li>
+		  -->
+		  <li Inherit="False">
+			<bodyPartGroup Inherit="False">Torso</bodyPartGroup>
+			<stuff Inherit="False">Weezer</stuff>
+		  </li>
+		  <li>
+			<bodyPartGroup>Legs</bodyPartGroup>
+			<stuff>Gnome_Cloth</stuff>
+		  </li>
+		</specificApparelRequirements>
+		<weaponMoney>
+			 <min>50</min>
+			 <max>3600</max>
+		</weaponMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsMoney>
+		  <min>50</min>
+		  <max>50</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+		  <li>Poor</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<weaponTags>
+			<li>MedievalMeleeDecent</li>
+			<li>GnomeRanged</li>
+			<li>BowMen</li>
+			<li>SpearMen</li>
+			<li>Spear</li>
+		</weaponTags>
+		<initialWillRange>1~4</initialWillRange>
+		<initialResistanceRange>5~20</initialResistanceRange>
+	</PawnKindDef>
   
   <PawnKindDef ParentName="BasePlayerGnomePawnKind">
     <defName>TSP_ST_GnomeCabbageinator</defName>
     <label>cabbage grenadier</label>
-    <combatPower>90</combatPower>
+    <combatPower>200</combatPower>
     <chemicalAddictionChance>0.1</chemicalAddictionChance>
     <apparelMoney>
       <min>100</min>
@@ -240,7 +280,7 @@
 		<li>CabbageWarrior</li>
     </weaponTags>
     <initialWillRange>1~8</initialWillRange>
-    <initialResistanceRange>5~40</initialResistanceRange>
+    <initialResistanceRange>7~40</initialResistanceRange>
     <backstoryCategories Inherit="False">
       <li>Cabbage</li>
     </backstoryCategories>
@@ -251,16 +291,15 @@
     <defName>GnomeKing</defName>
     <label>Gnoble King</label>
 	<labelFemale>Gnoble Queen</labelFemale>
-	<combatPower>300</combatPower>
+	<combatPower>80</combatPower>
     <defaultFactionType>TreeGnomeEmpire</defaultFactionType>
     <factionLeader>true</factionLeader>
     <chemicalAddictionChance>0.01</chemicalAddictionChance>
-	<apparelColor>(69,193,69)</apparelColor>
+	<!-- <apparelColor>(69,193,69)</apparelColor> --> <!-- Weezer albums are blue -->
 	<specificApparelRequirements Inherit="False">
       <li>
-        <bodyPartGroup>UpperHead</bodyPartGroup>
-        <requiredTag>RoyalTier4</requiredTag>
-        <stuff>Jade</stuff>
+        <bodyPartGroup Inherit="False">UpperHead</bodyPartGroup>
+        <stuff Inherit="False">Weezer</stuff>
       </li>
 	  <!--
       <li>
@@ -269,9 +308,9 @@
 		<stuff>Gnome_Cloth</stuff>
       </li>
 	  -->
-      <li>
-        <bodyPartGroup>Torso</bodyPartGroup>
-        <stuff>Gnome_Cloth</stuff>
+      <li Inherit="False">
+        <bodyPartGroup Inherit="False">Torso</bodyPartGroup>
+        <stuff Inherit="False">Weezer</stuff>
       </li>
       <li>
         <bodyPartGroup>Legs</bodyPartGroup>
@@ -329,47 +368,66 @@
     </backstoryCategories>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerGnomePawnKind">
-    <defName>TSP_ST_GnomePeasant</defName>
-    <label>Gnome</label>
-    <combatPower>10</combatPower>
-    <defaultFactionType>TreeGnomeEmpire</defaultFactionType>
-    <chemicalAddictionChance>0.06</chemicalAddictionChance>
-    <apparelMoney>
-      <min>100</min>
-      <max>500</max>
-    </apparelMoney>
-	<apparelRequired>
-		<li>GnomeHat</li>
-		<!-- <li>GnomeGoggles</li> -->
-		<li>GnomeShirt</li>
-		<li>GnomePants</li>
-	</apparelRequired>
-	<weaponMoney>
-         <min>200</min>
-         <max>2500</max>
-    </weaponMoney>
-    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-    <techHediffsMoney>
-      <min>50</min>
-      <max>150</max>
-    </techHediffsMoney>
-    <techHediffsTags>
-      <li>Poor</li>
-	  <li>Simple</li>
-    </techHediffsTags>
-    <techHediffsChance>0.02</techHediffsChance>
-	<apparelTags Inherit="False"></apparelTags> <!-- Gnome peasants wear nothing else -->
-	<weaponTags>
-		<li>GnomeSimpleMelee</li>
-		<li>GnomeMelee</li>
-		<li>GnomeRanged</li>
-		<li>Toolagri</li>
-    </weaponTags>
-    <initialWillRange>0.25~1</initialWillRange>
-    <initialResistanceRange>1~3</initialResistanceRange>
-	<backstoryCategories Inherit="False">
-		<li>GnomeBackstory</li>
-	</backstoryCategories>
-  </PawnKindDef>
+	<PawnKindDef ParentName="BasePlayerGnomePawnKind">
+		<defName>TSP_ST_GnomePeasant</defName>
+		<label>Gnome</label>
+		<combatPower>10</combatPower>
+		<defaultFactionType>TreeGnomeEmpire</defaultFactionType>
+		<chemicalAddictionChance>0.06</chemicalAddictionChance>
+		<apparelMoney Inherit="False"> <!-- They wear nothing else but the apparel below -->
+		  <min Inherit="False">1</min>
+		  <max Inherit="False">2</max>
+		</apparelMoney>
+		<specificApparelRequirements>
+		  <li>
+			<colorGenerator Class="ColorGenerator_Options">
+			  <options>
+				<li>
+					<only>(69,193,69)</only> <!-- Neon green -->
+				</li>
+			  </options>
+			</colorGenerator>
+		  </li>
+		  <li>
+			<bodyPartGroup>Torso</bodyPartGroup>
+			<stuff>Gnome_Cloth</stuff>
+		  </li>
+		  <li>
+			<bodyPartGroup>Legs</bodyPartGroup>
+			<stuff>Gnome_Cloth</stuff>
+		  </li>
+		</specificApparelRequirements>
+		<apparelRequired Inherit="False">
+			<li>GnomeHat</li>
+			<!-- <li>GnomeGoggles</li> -->
+			<li>GnomeShirt</li>
+			<li>GnomePants</li>
+		</apparelRequired>
+		<weaponMoney>
+			 <min>200</min>
+			 <max>400</max>
+		</weaponMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsMoney>
+		  <min>50</min>
+		  <max>150</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+		  <li>Poor</li>
+		  <li>Simple</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<apparelTags Inherit="False"></apparelTags> <!-- Gnome peasants wear nothing else -->
+		<weaponTags>
+			<li>GnomeSimpleMelee</li>
+			<li>GnomeMelee</li>
+			<li>GnomeRanged</li>
+			<li>Toolagri</li>
+		</weaponTags>
+		<initialWillRange>0.25~1</initialWillRange>
+		<initialResistanceRange>1~3</initialResistanceRange>
+		<backstoryCategories Inherit="False">
+			<li>GnomeBackstory</li>
+		</backstoryCategories>
+	  </PawnKindDef>
 </Defs>

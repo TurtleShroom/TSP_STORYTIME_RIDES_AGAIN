@@ -23,7 +23,7 @@
 		  <generalSettings>
 			<maleGenderProbability>0.5</maleGenderProbability>
 			<immuneToAge>false</immuneToAge>
-			<canLayDown>true</canLayDown>
+			<canLayDown>false</canLayDown> <!-- Frogs can "assume the position" like cats, but they do not lay down. Frogs crouch. -->
 			<maxDamageForSocialfight>3</maxDamageForSocialfight>
 			<alienPartGenerator>
 			  <aliencrowntypes>
@@ -102,7 +102,7 @@
 			  </li>
 			  <li>
 				<relation>Child</relation>
-				<label>Polliwog</label>
+				<label>Tadpole</label>
 				<femaleLabel>Polliwog</femaleLabel>
 			  </li>
 			  <li>
@@ -127,6 +127,25 @@
 			  </li>
 			</renamer>
 		  </relationSettings>
+			<thoughtSettings>
+				<!-- Frog diets consist largely of insects. -->
+				<cannotReceiveThoughts>
+					<!-- Frogs that are part of a bug worshipping cult will not be horrified by eating insect meat as badly as a normal worshipper. By that, they will experience no mood bonus or malus. They know it is immoral, and they will try not to do it, but they are not mentally capable of the capacity to think it is traumatizing. If they are not in a bug worshipping cult, they will ALWAYS enjoy eating insects. -->
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeat_Sacrilegious</li>
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeatAsIngredient_Sacrilegious</li>
+				</cannotReceiveThoughts>
+				<replacerList>
+					<!-- Frogmen LOVE insect meat! They will always seek it out and enjoy it! -->
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatDirect</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeat_Loved</replacer>
+					</li>
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient_Loved</replacer>
+					</li>
+				</replacerList>
+			</thoughtSettings>
 		</alienRace>
 		<statBases>
 		  <MarketValue>500</MarketValue>
@@ -137,6 +156,8 @@
 		  <PsychicSensitivity>0.5</PsychicSensitivity>
 		  <ResearchSpeed>0.8</ResearchSpeed>
 		  <Mass>40</Mass>
+          <SwimSpeed MayRequire="biomesteam.biomesislands">7</SwimSpeed>
+		  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.05</HSAU_GhoulismSusceptibility>
 		</statBases>
 		<!--
 		<statOffsets>
@@ -261,6 +282,7 @@
 			</points>
 		  </ageGenerationCurve>
 		  <hediffGiverSets>
+			<!-- <li>TSP_ST_Frogman_Flavor_Processing</li> -->
 			<li>OrganicStandard</li>
 			<li>Human</li>
 		  </hediffGiverSets>

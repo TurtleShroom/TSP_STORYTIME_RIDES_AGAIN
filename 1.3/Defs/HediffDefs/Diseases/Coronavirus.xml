@@ -4,7 +4,7 @@
 	<HediffDef ParentName="InfectionBase">
 		<defName>ST_KungFlu</defName>
 		<label>coronavirus</label>
-		<description>The Severe Acute Respitory-Related Coronavirus II, also simply called "COVID-19", "COVID", "The Coronavirus", "'Vid", "The Koof", "Wuhan Pneumonia", and "Kung Flu", is an unstable, recurring, and endemic virus spread onto almost every planet that mankind has ever set on. Symptomp include extreme exhaustion, difficulty breathing, pneumonia, and death. In healthy populations, the death rate would shrink from three percent to five thousands of one percent, while the death rate among the eldery with preexisting breathing risks, at its peak, rose to one in three. \n \n Starting in the lungs, the disease causes a living being's immune sytstem to panic and call massive amounts of reenforcements to begin to bombard both healthy and infected lung tissue. This is called a cytokinetic storm. \n For COVID to kill its host, this storm must be made to continue until the protective lining of the lung is breached. Bacteria normally isolated from the lungs will flow in, causing pneumonia and spreading into the bloodstream, totally compromising the host and causing massive organ failure. \n \n The modern COVID virus is descended from the weaker Omnicron Varient (which should have been called the Xi Varient if you go by the Greek Alphabet), which is more contagious and less deadly than influenza.</description>
+		<description>The Severe Acute Respitory-Related Coronavirus II, also simply called "COVID-19", "COVID", "The Coronavirus", "'Vid", "The Koof", "Wuhan Pneumonia", and "Kung Flu", is an unstable, recurring, and endemic virus spread onto almost every planet that mankind has ever set on. Symptoms include extreme exhaustion, difficulty breathing, pneumonia, and death. At the original onset of the virus pandemic, healthy populations, the death rate would shrink from its start of three percent to five thousands of one percent, while the death rate among the eldery with preexisting breathing risks, at its peak, rose to one in three. \n \n Starting in the lungs, the disease causes a living being's immune sytstem to panic and call massive amounts of reenforcements to begin to bombard both healthy and infected lung tissue. This is called a cytokinetic storm. \n For COVID to kill its host, this storm must be made to continue until the protective lining of the lung is breached. Bacteria normally isolated from the lungs will flow in, causing pneumonia and spreading into the bloodstream, totally compromising the host and causing massive organ failure. \n \n The modern COVID virus is descended from the weaker Omnicron Varient (which should have been called the Xi Varient in the Greek Alphabet), which is vastly more contagious and less deadly than influenza.</description>
 		<descriptionHyperlinks>
 			<HediffDef>TSP_ST_KungFlu_History</HediffDef>
 		</descriptionHyperlinks>
@@ -26,19 +26,19 @@
 		<stages>
 		<li>
 			<label>initial infection</label>
-			<restFallFactorOffset>0.33</restFallFactorOffset>
+			<restFallFactorOffset>0.5</restFallFactorOffset>
 			<painOffset>0.03</painOffset>
 			<capMods>
-			<li>
-				<capacity>Breathing</capacity>
-				<setMax>0.8</setMax>
-			</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<setMax>0.8</setMax>
+				</li>
 			</capMods>
 		</li>
 		<li>
-			<minSeverity>0.666</minSeverity>
+			<minSeverity>0.66</minSeverity>
 			<label>major</label>
-			<restFallFactorOffset>0.4</restFallFactorOffset>
+			<restFallFactorOffset>0.6</restFallFactorOffset>
 			<painOffset>0.05</painOffset>
 			<capMods>
 				<li>
