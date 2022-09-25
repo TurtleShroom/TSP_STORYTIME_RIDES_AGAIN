@@ -40,6 +40,7 @@
     <ingestible>
       <preferability>DesperateOnly</preferability>
 	  <tableDesired>false</tableDesired>
+	  <ingestEffect>EatMeat</ingestEffect>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>BotoxHigh</hediffDef>
@@ -86,7 +87,7 @@
       <joy>0.60</joy>
       <baseIngestTicks>450</baseIngestTicks>
       <drugCategory>Hard</drugCategory>
-      <ingestSound>Ingest_Snort</ingestSound>
+      <ingestSound>Ingest_Inject</ingestSound>
       <ingestHoldOffsetStanding>
         <northDefault>
           <offset>(0.21,0,0.05)</offset>
@@ -152,7 +153,7 @@
           <capMods>
             <li>
               <capacity>Moving</capacity>
-              <setMax>0.7</setMax>
+              <setMax>0.5</setMax>
             </li>
 			<li>
 				<capacity>Metabolism</capacity>
@@ -509,6 +510,7 @@
 		<ingestible>
 			<foodType>Processed</foodType>
 			<drugCategory>Medical</drugCategory>
+			<ingestSound>Ingest_Inject</ingestSound>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 				  <hediffDef>BotoxHigh</hediffDef>

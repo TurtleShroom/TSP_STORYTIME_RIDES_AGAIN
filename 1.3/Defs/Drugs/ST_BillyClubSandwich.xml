@@ -1,139 +1,140 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>  
-  <RecipeDef>
-    <defName>Make_BillyClub</defName>
-    <label>make billy club sandwich</label>
-    <description>Make a billy club sandwich.</description>
-    <jobString>Cooking.</jobString>
-    <workAmount>300</workAmount>
-    <workSpeedStat>CookSpeed</workSpeedStat>
-    <effectWorking>Cook</effectWorking>
-    <soundWorking>Recipe_CookMeal</soundWorking>
-	<allowMixingIngredients>true</allowMixingIngredients>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>MeatRaw</li>
-          </categories>
-        </filter>
-        <count>10</count>
-      </li>
-	  <li>
-        <filter>
-          <categories>
-            <li>PlantFoodRaw</li>
+	<RecipeDef>
+		<defName>Make_BillyClub</defName>
+		<label>make billy club sandwich</label>
+		<description>Make a billy club sandwich.</description>
+		<jobString>Cooking.</jobString>
+		<workAmount>300</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+		  <li>
+			<filter>
+			  <categories>
+				<li>MeatRaw</li>
+			  </categories>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+			  <categories>
+				<li>PlantFoodRaw</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			  </categories>
+			</filter>
+			<count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <categories>
+			<li>MeatRaw</li>
+			<li>PlantFoodRaw</li>
 			<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
-          </categories>
-        </filter>
-        <count>10</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <categories>
-        <li>MeatRaw</li>
-		<li>PlantFoodRaw</li>
-		<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
-      </categories>
-    </fixedIngredientFilter>
-    <defaultIngredientFilter>
-      <categories>
-        <li>MeatRaw</li>
-		<li>PlantFoodRaw</li>
-      </categories>
-    </defaultIngredientFilter>
-	<recipeUsers>
-    		<li>ElectricStove</li>
-		    <li>FueledStove</li>
-			<li>GnomeTable</li>
-	</recipeUsers>
-	<researchPrerequisite>advancedCooking</researchPrerequisite>
-	<products>
-		<BillyClub>1</BillyClub>
-	</products>
-  </RecipeDef>
+		  </categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+		  <categories>
+			<li>MeatRaw</li>
+			<li>PlantFoodRaw</li>
+		  </categories>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+				<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisite>advancedCooking</researchPrerequisite>
+		<products>
+			<BillyClub>1</BillyClub>
+		</products>
+	</RecipeDef>
   
-  <ThingDef ParentName="MealBase">
-    <defName>BillyClub</defName>
-    <label>Billy Club sandwich</label>
-    <description>''It's a sandwich, but you sense that something is off about it...'' \n \n Across the galaxy, truncheons have many terms. Night stick, rod, punisher, pacifier, cattle prod, cop stop, stopping power, melee weapon, club, and glitter delay are just some of them. However, one of the oldest terms, originating from certain regions on Old Earth, is ''billy club''. That is where this sandwich gets its name, and for the exact same reason a truncheon was called that. \n \n For reasons unknown to science, consuming this sandwich can, and will, immediately incapacitate whosoever dares to eat it. However, its consumption is not worthless. The poison in a Billy Club Sandwich is not lethal and though highly addictive and dangerous to one's stomach in the long term, it nonetheless bestows tremendous healing properties on any man that eats it. \n \n Eating a Billy Club Sandwich has been known to save lives at the cost of incapacitation for a day or so. The immunity gains from it are worth passing out over.</description>
-	<descriptionHyperlinks>
-		<!-- <RecipeDef>TSP_ST_BoDetox</RecipeDef> -->
-		<HediffDef>PoisonSting</HediffDef>
-	</descriptionHyperlinks>
-    <graphicData>
-      <texPath>Things/Items/Resources/BillyClub</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-    </graphicData>
-    <rotatable>false</rotatable>
-    <statBases>
-      <WorkToMake>400</WorkToMake>
-      <MarketValue>15</MarketValue>
-      <Mass>0.01</Mass>
-      <Nutrition>3</Nutrition>
-      <DeteriorationRate>0.01</DeteriorationRate>
-      <Flammability>0.1</Flammability>
-    </statBases>
-    <techLevel>Medieval</techLevel> <!-- The RL sandwich was invented by the Earl of Sandwich -->
-	<deepCommonality>0.2</deepCommonality>
-    <deepCountPerPortion>15</deepCountPerPortion>
-    <deepLumpSizeRange>1~4</deepLumpSizeRange>
-    <ingestible>
-      <foodType>Meal, Processed, Liquor</foodType>
-      <preferability>NeverForNutrition</preferability>
-      <joyKind>Chemical</joyKind>
-      <joy>1</joy>
-      <baseIngestTicks>1600</baseIngestTicks>
-      <drugCategory>Hard</drugCategory>
-      <ingestSound>Meal_Eat</ingestSound>
-      <ingestHoldOffsetStanding>
-        <northDefault>
-          <offset>(0.21,0,0.05)</offset>
-        </northDefault>
-      </ingestHoldOffsetStanding>
-      <ingestHoldUsesTable>true</ingestHoldUsesTable>
-      <ingestCommandString>Eat {0}</ingestCommandString>
-      <ingestReportString>Eating sandwich.</ingestReportString>
-      <useEatingSpeedStat>true</useEatingSpeedStat>
-      <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>PoisonSting</hediffDef>
-          <severity>1</severity>
-          <toleranceChemical>PoisonSting</toleranceChemical>
-        </li>
-        <li Class="IngestionOutcomeDoer_OffsetNeed">
-          <need>Rest</need>
-          <offset>-2</offset>
-        </li>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>PoisonTolerance</hediffDef>
-          <severity>0.065</severity>
-          <divideByBodySize>false</divideByBodySize>
-        </li>
-      </outcomeDoers>
-	  	<optimalityOffsetHumanlikes>-999</optimalityOffsetHumanlikes>
-		<optimalityOffsetFeedingAnimals>-999</optimalityOffsetFeedingAnimals>
-    </ingestible>
-    <comps>
-      <li Class="CompProperties_Drug">
-        <chemical>PoisonSting</chemical>
-        <addictiveness>0.4</addictiveness>
-        <minToleranceToAddict>0.07</minToleranceToAddict>
-        <existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
-        <needLevelOffset>1</needLevelOffset>
-        <listOrder>20</listOrder>
-        <overdoseSeverityOffset>0.0~0.03</overdoseSeverityOffset>
-        <largeOverdoseChance>0.05</largeOverdoseChance>
-      </li>
-    </comps>
-  </ThingDef>
+	<ThingDef ParentName="MealBase">
+		<defName>BillyClub</defName>
+		<label>Billy Club sandwich</label>
+		<description>''It's a sandwich, but you sense that something is off about it...'' \n \n Across the galaxy, truncheons have many terms. Night stick, rod, punisher, pacifier, cattle prod, cop stop, stopping power, melee weapon, club, and glitter delay are just some of them. However, one of the oldest terms, originating from certain regions on Old Earth, is ''billy club''. That is where this sandwich gets its name, and for the exact same reason a truncheon was called that. \n \n For reasons unknown to science, consuming this sandwich can, and will, immediately incapacitate whosoever dares to eat it. However, its consumption is not worthless. The poison in a Billy Club Sandwich is not lethal and though highly addictive and dangerous to one's stomach in the long term, it nonetheless bestows tremendous healing properties on any man that eats it. \n \n Eating a Billy Club Sandwich has been known to save lives at the cost of incapacitation for a day or so. The immunity gains from it are worth passing out over.</description>
+		<descriptionHyperlinks>
+			<!-- <RecipeDef>TSP_ST_BoDetox</RecipeDef> -->
+			<HediffDef>PoisonSting</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Items/Resources/BillyClub</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+		  <WorkToMake>400</WorkToMake>
+		  <MarketValue>15</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Nutrition>3</Nutrition>
+		  <DeteriorationRate>0.01</DeteriorationRate>
+		  <Flammability>0.1</Flammability>
+		</statBases>
+		<techLevel>Medieval</techLevel> <!-- The RL sandwich was invented by the Earl of Sandwich -->
+		<deepCommonality>0.2</deepCommonality>
+		<deepCountPerPortion>15</deepCountPerPortion>
+		<deepLumpSizeRange>1~4</deepLumpSizeRange>
+		<ingestible>
+			<foodType>Meal, Processed, Liquor</foodType>
+			<preferability>NeverForNutrition</preferability>
+			<joyKind>Chemical</joyKind>
+			<joy>1</joy>
+			<baseIngestTicks>1600</baseIngestTicks>
+			<drugCategory>Hard</drugCategory>
+			<ingestSound>Meal_Eat</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.21,0,0.05)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestHoldUsesTable>true</ingestHoldUsesTable>
+			<ingestCommandString>Eat {0}</ingestCommandString>
+			<ingestReportString>Eating sandwich.</ingestReportString>
+			<useEatingSpeedStat>true</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>PoisonSting</hediffDef>
+					<severity>1</severity>
+					<toleranceChemical>PoisonSting</toleranceChemical>
+					<divideByBodySize>false</divideByBodySize>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>-2</offset>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>PoisonTolerance</hediffDef>
+					<severity>0.065</severity>
+					<divideByBodySize>false</divideByBodySize>
+				</li>
+			</outcomeDoers>
+			<optimalityOffsetHumanlikes>-999</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-999</optimalityOffsetFeedingAnimals>
+		</ingestible>
+		<comps>
+		  <li Class="CompProperties_Drug">
+			<chemical>PoisonSting</chemical>
+			<addictiveness>0.66</addictiveness>
+			<minToleranceToAddict>0.07</minToleranceToAddict>
+			<existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
+			<needLevelOffset>1</needLevelOffset>
+			<listOrder>20</listOrder>
+			<overdoseSeverityOffset>0.0~0.03</overdoseSeverityOffset>
+			<largeOverdoseChance>0.005</largeOverdoseChance>
+		  </li>
+		</comps>
+	</ThingDef>
 
   <HediffDef>
     <defName>PoisonSting</defName>
     <label>poison sting</label>
     <labelNoun>poison sting</labelNoun>
-    <description>That sandwich... I think it gave me food poisoning...</description>
+    <description>"That sandwich... I think it gave me food poisoning..."</description>
 	<descriptionHyperlinks>
 		<ThingDef>BillyClub</ThingDef>
 	</descriptionHyperlinks>
@@ -172,7 +173,7 @@
 			<statOffsets>
 				<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">-0.99</HSAU_GhoulismSusceptibility>
 				<ImmunityGainSpeed>0.5</ImmunityGainSpeed>
-				<InjuryHealingFactor>0.05</InjuryHealingFactor>
+				<InjuryHealingFactor>0.1</InjuryHealingFactor>
 			</statOffsets>
 			<allowedMentalBreakIntensities>
 				<li>None</li>
@@ -234,7 +235,7 @@
 	<scenarioCanAdd>false</scenarioCanAdd>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.03</severityPerDay>
+        <severityPerDay>-0.08</severityPerDay>
       </li>
       <li Class="HediffCompProperties_DrugEffectFactor">
         <chemical>PoisonSting</chemical>

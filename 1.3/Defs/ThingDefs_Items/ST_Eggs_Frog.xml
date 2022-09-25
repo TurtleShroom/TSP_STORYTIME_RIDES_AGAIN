@@ -35,8 +35,8 @@
 
 	<ThingDef ParentName="EggUnfertBase">
 		<defName>BullfrogEggUnfertilized</defName>
-		<label>bullfrog egg (unfert.)</label>
-		<description>An unfertilized bullfrog egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<label>embittered bullfrog egg (unfert.)</label>
+		<description>An unfertilized embittered bullfrog egg. It can be eaten raw, but it's much, much better cooked.</description>
 		<graphicData>
 			<color>(254,216,177)</color>
 		</graphicData>
@@ -47,8 +47,8 @@
 
 	<ThingDef ParentName="EggFertBase">
 		<defName>BullfrogEggFertilized</defName>
-		<label>bullfrog egg (fert.)</label>
-		<description>A fertilized bullfrog egg. If all goes well, it should hatch into a bullfrog tadpole. It can be eaten raw, but it's much better cooked.</description>
+		<label>embittered bullfrog egg (fert.)</label>
+		<description>A fertilized embittered bullfrog egg. If all goes well, it should hatch into an embittered bullfrog tadpole. It can be eaten raw, but it's much better cooked.</description>
 		<graphicData>
 			<color>(254,216,177)</color>
 		</graphicData>
@@ -66,7 +66,7 @@
 	<ThingDef ParentName="EggUnfertBase">
 		<defName>TomatoFrogEggUnfertilized</defName>
 		<label>tomato frog egg (unfert.)</label>
-		<description>An unfertilized tomato frog egg. It can be eaten raw, but it's much, much better cooked. Tastes like ketchup.</description>
+		<description>An unfertilized tomato frog egg. It can be eaten raw, but it's much, much better cooked. It tastes like ketchup.</description>
 		<graphicData>
 			<color>(255,16,17)</color>
 		</graphicData>
@@ -137,7 +137,7 @@
   
 	<ThingDef ParentName="EggFertBase">
 		<defName>TreeFrogEggFertilized</defName>
-		<label>tree frog egg (fert.)</label>
+		<label>bullet tree frog egg (fert.)</label>
 		<description>A fertilized bullet tree frog egg. If all goes well, it should hatch into a bullet tree frog tadpole. It can be eaten raw, but it's much better cooked.</description>
 		<graphicData>
 			<color>(254,216,177)</color>
@@ -156,7 +156,7 @@
 	<ThingDef ParentName="EggUnfertBase">
 		<defName>PoisonDartEggUnFertilized</defName>
 		<label>poison dart frog egg (unfert.)</label>
-		<description>An unfertilized poison dart frog egg. It can be eaten raw, but it's much, much better cooked. Unlike the frogs themselves, consumption bares no risk of food poisoning, let alone death.</description>
+		<description>An unfertilized poison dart frog egg. It can be eaten raw, but it's much, much better cooked. Unlike the frogs themselves, consumption bares no elevated risk of food poisoning, let alone death.</description>
 		<graphicData>
 			<color>(254,216,177)</color>
 		</graphicData>
@@ -221,7 +221,7 @@
 			<color>(102,102,105)</color>
 		</graphicData>
 		<statBases>
-			<MarketValue>12</MarketValue>
+			<MarketValue>3</MarketValue>
 		</statBases>
 	</ThingDef>
 
@@ -266,12 +266,17 @@
 		</graphicData>
 		<statBases>
 			<MarketValue>34</MarketValue>
-			<Nutrition Inherit="False">1</Nutrition>
+			<Nutrition Inherit="False">0.5</Nutrition>
 		</statBases>
 		<comps>
 			<li Class="CompProperties_Hatcher">
 				<hatcherDaystoHatch>3</hatcherDaystoHatch>
 				<hatcherPawn>ST_WoodFrog</hatcherPawn>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable" Inherit="False">
+				<minSafeTemperature Inherit="False">-5</minSafeTemperature>
+				<maxSafeTemperature Inherit="False">100</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
 			</li>
 		</comps>
 		<ingestible>
@@ -310,18 +315,23 @@
 			<hatcherDaystoHatch>10</hatcherDaystoHatch>
 			<hatcherPawn>LeviathanFrog</hatcherPawn>
 		</li>
+		<li Class="CompProperties_TemperatureRuinable">
+			<minSafeTemperature>0</minSafeTemperature>
+			<maxSafeTemperature>70</maxSafeTemperature>
+			<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+		</li>
 	</comps>
 	</ThingDef> 
 
 	<ThingDef ParentName="EggUnfertBase">
 		<defName>JudasFrogEggUnfertilized</defName>
 		<label>Judas' frog egg (unfert.)</label>
-		<description>An unfertilized judas frog egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<description>An unfertilized Judas' frog egg. It can be eaten raw, but it's much, much better cooked.</description>
 		<graphicData>
 		<color>(254,216,177)</color>
 		</graphicData>
 		<statBases>
-		<MarketValue>7.0</MarketValue>
+			<MarketValue>7.0</MarketValue>
 		</statBases>
 	</ThingDef>
 
@@ -369,6 +379,12 @@
 			<li Class="CompProperties_Hatcher">
 				<hatcherDaystoHatch>3</hatcherDaystoHatch>
 				<hatcherPawn>FireBelliedToad</hatcherPawn>
+			</li>
+			<!-- The egg naturally keeps itself warm -->
+			<li Class="CompProperties_TemperatureRuinable" Inherit="False">
+				<minSafeTemperature Inherit="False">-200</minSafeTemperature>
+				<maxSafeTemperature Inherit="False">200</maxSafeTemperature>
+				<progressPerDegreePerTick>0</progressPerDegreePerTick>
 			</li>
 		</comps>
 	</ThingDef>

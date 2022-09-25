@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist/ -->
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_Animals">
+					<tradeTagsSell>
+						<li>LivingRock</li>
+					</tradeTagsSell>
+					<tradeTagsBuy>
+						<li>LivingRock</li>
+					</tradeTagsBuy>
+					<kindCountRange>1~2</kindCountRange>
+					<countRange>1~2</countRange>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist/ -->
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Mining"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Mining"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_Animals">
+					<tradeTagsSell>
+						<li>LivingRock</li>
+					</tradeTagsSell>
+					<tradeTagsBuy>
+						<li>LivingRock</li>
+					</tradeTagsBuy>
+					<kindCountRange>1~2</kindCountRange>
+					<countRange>0~1</countRange>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist/ -->
+		<xpath>/Defs/TraderKindDef[defName="RessourceTrader"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="RessourceTrader"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_Animals">
+					<tradeTagsSell>
+						<li>LivingRock</li>
+					</tradeTagsSell>
+					<tradeTagsBuy>
+						<li>LivingRock</li>
+					</tradeTagsBuy>
+					<kindCountRange>1~2</kindCountRange>
+					<countRange>0~1</countRange>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

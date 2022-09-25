@@ -137,7 +137,8 @@
     </thingCategories>
     <ingestible>
       <foodType>AnimalProduct, Processed, Fluid, Liquor</foodType>
-	  <preferability>MealFine</preferability>
+	  <!-- <preferability>MealFine</preferability> -->
+	  <preferability>NeverForNutrition</preferability>
       <joyKind>Gluttonous</joyKind>
       <joy>0.6</joy>
       <baseIngestTicks>100</baseIngestTicks>
@@ -162,7 +163,6 @@
           <severity>0.4</severity>
           <toleranceChemical>EggNogChemical</toleranceChemical>
 		  <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
-		  <divideByBodySize>true</divideByBodySize>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>EggNogTolerance</hediffDef>
@@ -240,6 +240,7 @@
 	  <foodType>AnimalProduct, Processed, Fluid</foodType>
 	  <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
 	  <canAutoSelectAsFoodForCaravan>true</canAutoSelectAsFoodForCaravan>
+	  <drugCategory Inherit="False"></drugCategory> <!-- Not a drug -->
 		<tasteThought Inherit="False"></tasteThought>
 		<specialThoughtDirect Inherit="False"></specialThoughtDirect>
 		<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient>
@@ -569,7 +570,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <damageDef>Burn</damageDef>
+      <damageDef>Flame</damageDef>
       <damageAmountBase>10</damageAmountBase>
       <speed>40</speed>
     </projectile>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
+	<!-- Why was this rock defined as evil? What did it ever do to you? It's completely friendly! -->
 	<ThingDef ParentName="BasePawn">
 		<defName>EvilRock</defName>
 		<label>living rock</label>
@@ -10,7 +11,7 @@
 			<MarketValue>150</MarketValue>
 			<ComfyTemperatureMin>-460</ComfyTemperatureMin>
 			<ComfyTemperatureMax>650</ComfyTemperatureMax>
-			<LeatherAmount>2</LeatherAmount>
+			<LeatherAmount>0.1</LeatherAmount> <!-- For some reason, this thing drops eleven of its leather. This divides that by ten. -->
 			<MeatAmount>200</MeatAmount>
 			<PsychicSensitivity>0</PsychicSensitivity>
 			<ToxicSensitivity>0</ToxicSensitivity>
@@ -48,13 +49,15 @@
 		  <gestationPeriodDays>100</gestationPeriodDays>
 		  <nameOnTameChance>1</nameOnTameChance>
 		  <trainability>None</trainability>
-		  <wildness>0.1</wildness>
-		  <nuzzleMtbHours>900</nuzzleMtbHours>
+		  <wildness>0.05</wildness>
+		  <nuzzleMtbHours>3</nuzzleMtbHours>
 		  <manhunterOnDamageChance>0</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
 		  <foodType>None</foodType>
 		  <lifeExpectancy>5000</lifeExpectancy>
 		  <roamMtbDays>0.2</roamMtbDays>
+		  <predator>false</predator> <!-- Doesn't need sustinance -->
+		  <canBePredatorPrey>false</canBePredatorPrey> <!-- Inedible -->
 		  <lifeStageAges>
 			<li>
 			  <def>AnimalAdult</def>
@@ -65,15 +68,15 @@
 			  <soundAngry>RockAngry</soundAngry> 
 			</li>
 		  </lifeStageAges>
-		  <soundMeleeHitPawn>ChunkRock_Drop</soundMeleeHitPawn>
-		  <soundMeleeHitBuilding>ChunkRock_Drop</soundMeleeHitBuilding>
-		  <soundMeleeMiss>ChunkRock_Drop</soundMeleeMiss>      
+		  <soundMeleeHitPawn Inherit="False">ChunkRock_Drop</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding Inherit="False">ChunkRock_Drop</soundMeleeHitBuilding>
+		  <soundMeleeMiss Inherit="False">ChunkRock_Drop</soundMeleeMiss>      
 		  <nameGenerator>NamerAnimalGenericMale</nameGenerator>
 		  <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
 		</race>
 		<tradeTags>
 			<li>AnimalCommon</li>
-			<li>Rock</li>
+			<li>LivingRock</li>
 			<li>AnimalInsectSpace</li> <!-- Can "breathe" in space -->
 		</tradeTags>
 			<thingCategories>
@@ -92,7 +95,7 @@
 			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
 			</li>
-			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals" Inherit="False">
 				<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Crepuscular</bodyClock>
 			</li>
 		</modExtensions>

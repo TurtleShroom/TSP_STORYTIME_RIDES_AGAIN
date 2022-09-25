@@ -80,10 +80,11 @@
       <baseBodySize>1</baseBodySize>
       <baseHungerRate>0</baseHungerRate>
       <baseHealthScale>1</baseHealthScale>
-      <lifeExpectancy>60</lifeExpectancy>
+      <lifeExpectancy>9</lifeExpectancy>
 	  <useMeatFrom>PeeledBeast</useMeatFrom>
 	  <leatherDef>RawPotatoes</leatherDef>
 	  <bloodDef>Filth_CorpseBile</bloodDef>
+	  <fleshType MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeFlesh</fleshType>
       <lifeStageAges>
         <li>
           <def>AnimalAdult</def>
@@ -98,6 +99,9 @@
       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
+	<tradeTags>
+		<li>AnimalInsectSpace</li> <!-- This tag allows the creature to breathe in the vacuum of space -->
+	</tradeTags>
   </ThingDef>
   
   <PawnKindDef ParentName="BasePeeledKind">
@@ -106,6 +110,7 @@
     <race>PeeledClown</race>
     <combatPower>30</combatPower>
 	<ecoSystemWeight>0</ecoSystemWeight>
+	<maxGenerationAge>7</maxGenerationAge>
     <lifeStages>
       <li>
         <label>Peeled Clown</label>

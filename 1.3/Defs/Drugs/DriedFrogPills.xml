@@ -8,7 +8,7 @@
     <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
   </ChemicalDef>
   
-  <ThingDef ParentName="MakeableDrugBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>DriedFrogPills</defName>
     <label>dried frog pills</label>
     <description>Dried frog pills are useful for increasing sanity, but one shouldn't become TOO reliant on them. Once an addiction begins, it is extremely difficult and exhausting to break it, far more than even most hard drugs.</description>
@@ -24,12 +24,15 @@
       <DeteriorationRate>6</DeteriorationRate>
       <Flammability>1.3</Flammability>
     </statBases>
+	<thingCategories Inherit="False">
+		<li Inherit="False">Drugs</li>
+	</thingCategories>
     <techLevel>Medieval</techLevel>
     <ingestible>
       <foodType>Processed</foodType>
       <baseIngestTicks>200</baseIngestTicks>
       <drugCategory>Medical</drugCategory>
-      <ingestSound>Ingest_Snort</ingestSound>
+      <ingestSound>Ingest_Pill</ingestSound>
       <ingestHoldOffsetStanding>
         <northDefault>
           <offset>(0.21,0,0.05)</offset>
@@ -42,13 +45,13 @@
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>DriedFrogPillsHigh</hediffDef>
-          <severity>0.5</severity>
+          <severity>1</severity>
           <toleranceChemical>DriedFrogPills</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>DriedFrogPillsTolerance</hediffDef>
           <severity>0.07</severity>
-          <divideByBodySize>true</divideByBodySize>
+          <divideByBodySize>false</divideByBodySize>
         </li>
       </outcomeDoers>
     </ingestible>
@@ -65,6 +68,7 @@
       <Leather_Frog>8</Leather_Frog>
     </costList>
 	-->
+	<recipeMaker Inherit="False"></recipeMaker>
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>DriedFrogPills</chemical>
@@ -73,7 +77,7 @@
         <existingAddictionSeverityOffset>0.02</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
         <listOrder>20</listOrder>
-        <overdoseSeverityOffset>0.08~0.1</overdoseSeverityOffset>
+        <overdoseSeverityOffset>0.01~0.08</overdoseSeverityOffset>
         <largeOverdoseChance>0</largeOverdoseChance>
       </li>
     </comps>
@@ -91,7 +95,7 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-2.0</severityPerDay>
+        <severityPerDay>-0.99</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
@@ -115,7 +119,7 @@
     <stages>
       <li>
         <label>dried frog clarity</label>
-        <description>Everything makes sense under the influence of these pills.</description>
+        <description>Everything makes more sense when I am under the influence of these pills.</description>
         <baseMoodEffect>35</baseMoodEffect>
       </li>
     </stages>
@@ -127,7 +131,7 @@
     <description>The pills are starting to have less of an effect... more will be needed...</description>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.005</severityPerDay>
+        <severityPerDay>-0.004</severityPerDay>
       </li>
       <li Class="HediffCompProperties_DrugEffectFactor">
         <chemical>DriedFrogPills</chemical>
@@ -152,7 +156,7 @@
     <causesNeed>Chemical_DriedFrogPills</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.009</severityPerDay>
+        <severityPerDay>-0.008</severityPerDay>
         <showDaysToRecover>true</showDaysToRecover>
       </li>
     </comps>
@@ -196,11 +200,5 @@
 			<baseMoodEffect>-70</baseMoodEffect>
 		</li>
     </stages>
-  </ThoughtDef> 
- 
- 
- 
- 
- 
- 
+  </ThoughtDef>
 </Defs>
