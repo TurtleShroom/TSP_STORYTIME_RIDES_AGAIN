@@ -58,21 +58,20 @@
     <geneticVariance>0.1</geneticVariance>
     <raidLootMaker>TSP_ST_GnomeLootMarker</raidLootMaker>
     <caravanTraderKinds>
-      <li>Caravan_Neolithic_BulkGoods</li>
-      <li>Caravan_Neolithic_WarMerchant</li>
-	  <li>Caravan_Neolithic_Slaver</li>
-	  <li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_Caravan_Medieval_WineMerchant</li>
-	  <li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Farming</li>
-	  <li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Textiles</li>
-	  <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Farming</li>
-	  <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Medical</li>
-	  <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Odd</li>
+		<li>TSP_ST_GnomeTrader</li>
+		<li>TSP_ST_GnomeTrader_Banquet</li>
+		<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_Caravan_Medieval_WineMerchant</li>
+		<li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Farming</li>
+		<li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Textiles</li>
+		<li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Farming</li>
+		<li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Medical</li>
+		<li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Odd</li>
     </caravanTraderKinds>
     <visitorTraderKinds>
       <li>Visitor_Neolithic_Standard</li>
     </visitorTraderKinds>
     <baseTraderKinds>
-      <li>Base_Neolithic_Standard</li>
+      <li>TSP_ST_GnomeTrader</li>
     </baseTraderKinds>
     <allowedArrivalTemperatureRange>
       <min>-40</min>
@@ -107,13 +106,13 @@
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-		<TSP_ST_GnomePeasant>150</TSP_ST_GnomePeasant>
-		<GnomeWarrior>75</GnomeWarrior>
-		<GnomeArcher>75</GnomeArcher>
-		<TSP_ST_RoyaltyGnoble>1</TSP_ST_RoyaltyGnoble>
-		<!-- <ST_Toad>10</ST_Toad> -->
-		<ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">0.01</ForgPawnKindDef>
-		<DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">0.01</DuoPawnKindDef>
+			<TSP_ST_GnomePeasant>200</TSP_ST_GnomePeasant>
+			<GnomeWarrior>75</GnomeWarrior>
+			<GnomeArcher>75</GnomeArcher>
+			<TSP_ST_RoyaltyGnoble>5</TSP_ST_RoyaltyGnoble>
+			<!-- <ST_Toad>10</ST_Toad> -->
+			<ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">1</ForgPawnKindDef>
+			<DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">1</DuoPawnKindDef>
         </options>
       </li>
       <li>
@@ -138,11 +137,11 @@
 		  <Alpaca>1</Alpaca>
 		  <Dromedary>1</Dromedary>
 		  <Elephant>100</Elephant>
-		  <LeviathanFrog>50</LeviathanFrog>
+		  <LeviathanFrog>999</LeviathanFrog>
         </carriers>
         <guards>
           <GnomeArcher>200</GnomeArcher>
-		  <GnomeWarrior>120</GnomeWarrior>
+		  <GnomeWarrior>200</GnomeWarrior>
           <ST_Toad>25</ST_Toad>
 		  <TSP_ST_GnomeCabbageinator>10</TSP_ST_GnomeCabbageinator>
 		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
@@ -161,6 +160,8 @@
 		  <TSP_ST_GnomeCabbageinator>25</TSP_ST_GnomeCabbageinator>
 		  <TSP_ST_GnomePeasant>350</TSP_ST_GnomePeasant>
 		  <TSP_ST_RoyaltyGnoble>50</TSP_ST_RoyaltyGnoble>
+		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
+		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
         </options>
       </li>
     </pawnGroupMakers>
@@ -180,11 +181,13 @@
     <fixedLeaderKinds>
 		<li>GnomeKing</li>
     </fixedLeaderKinds>
-  <!--  <modExtensions>
-      <li Class="JecsTools.FactionSettings">
-        <entrySoundDef>Gnome_Theme</entrySoundDef>
-      </li>
-    </modExtensions> -->
+	<!--
+	<modExtensions>
+		<li Class="JecsTools.FactionSettings">
+			<entrySoundDef>Gnome_Theme</entrySoundDef>
+		</li>
+	</modExtensions>
+	-->
   </FactionDef> 
 
 	<ThingSetMakerDef>
@@ -195,6 +198,7 @@
 					<categories>
 						<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 						<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+						<li>PlantFoodRaw</li>
 					</categories>
 					<thingDefs>
 						<li>ST_Worm</li>
@@ -220,12 +224,11 @@
 						<li>ToadBatta</li>
 						<li>TangledToadLegs</li>
 						<li>WormHole</li>
-						<li>VeggieBall</li>
+						<li>VegBall</li>
 						<li>ST_CheesePizza</li>
 						<li>ST_MeatPizza</li>
 						<li>ST_VegetablePizza</li>
 						<li>ST_WormPizza</li>
-						<li></li>
 					</thingDefs>
 				</filter>
 			</fixedParams>

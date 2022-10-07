@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<Defs>
   <DamageDef Name="BloodExplosion">
     <defName>BloodExplosion</defName>
-    <label>amphibious detonation</label>
+    <label>engorged amphibious detonation</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-	<externalViolenceForMechanoids>false</externalViolenceForMechanoids>
+	<externalViolenceForMechanoids>true</externalViolenceForMechanoids>
     <isExplosive>true</isExplosive>
-	<makesBlood>false</makesBlood>
-    <deathMessage>{0} has died in an explosion.</deathMessage>
+	<makesBlood>true</makesBlood>
+    <deathMessage>{0} has died to a popped engorged Frogglobin. How embarassing!</deathMessage>
     <hediff>Shredded</hediff>
-    <hediffSolid>Crack</hediffSolid>
+    <hediffSolid>Bruise</hediffSolid>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Slice</impactSoundType>
     <armorCategory>Sharp</armorCategory>
@@ -28,8 +28,8 @@
     <explosionCellFleck>BloodSplash</explosionCellFleck>
 	<makesAnimalsFlee>true</makesAnimalsFlee>
 	<canInterruptJobs>true</canInterruptJobs>
-    <explosionColorCenter>(0.54, 0.01, 0.01)</explosionColorCenter>
-    <explosionColorEdge>(0.84, 0.02, 0.02)</explosionColorEdge>
+    <explosionColorCenter>(255, 0, 0)</explosionColorCenter>
+    <explosionColorEdge>(230, 2, 2)</explosionColorEdge>
     <combatLogRules>Damage_Bomb</combatLogRules>
     <soundExplosion>FrogPop</soundExplosion>
   </DamageDef>
@@ -47,15 +47,13 @@
 	  <LeatherAmount>5</LeatherAmount>
     </statBases>
 	<comps>
-		<!--
 		<li Class="CompProperties_EggLayer">
-			<eggUnfertilizedDef>TreeFrogEggUnfertilized</eggUnfertilizedDef>
-			<eggFertilizedDef>TreeFrogEggUnfertilized</eggFertilizedDef>
+			<eggUnfertilizedDef MayRequire="baskerville.hellsingarmsultimate">HSAU_BloodPouch</eggUnfertilizedDef>
+			<eggFertilizedDef>TSP_ST_BloodFrogEgg_Fertilized</eggFertilizedDef>
 			<eggFertilizationCountMax>1</eggFertilizationCountMax>
-			<eggLayIntervalDays>5</eggLayIntervalDays>
-		<eggCountRange>1</eggCountRange>
+			<eggLayIntervalDays>25</eggLayIntervalDays>
+			<eggCountRange>2</eggCountRange>
 		</li>
-		-->
 		<li Class="StoryTime.CompProperties_Tomato" MayRequire="baskerville.hellsingarmsultimate">
 			<tomatoDef MayRequire="baskerville.hellsingarmsultimate">HSAU_BloodPouch</tomatoDef>
 			<tomatoIntervalDays MayRequire="baskerville.hellsingarmsultimate">6</tomatoIntervalDays>
@@ -113,8 +111,8 @@
         <li>
           <def>AnimalBaby</def>
           <minAge>0</minAge>
-          <soundWounded>Pawn_Iguana_Wounded</soundWounded>
-          <soundDeath>Pawn_Iguana_Death</soundDeath>
+          <soundWounded>FrogPop</soundWounded>
+          <soundDeath>FrogPop</soundDeath>
           <soundCall>Pawn_Iguana_Call</soundCall>
           <soundAngry>Frog_Angry</soundAngry>
         </li>
@@ -122,7 +120,7 @@
           <def>AnimalJuvenile</def>
           <minAge>0.8</minAge>
           <soundWounded>FrogPop</soundWounded>
-          <soundDeath>Pawn_Iguana_Death</soundDeath>
+          <soundDeath>FrogPop</soundDeath>
           <soundCall>Pawn_Iguana_Call</soundCall>
           <soundAngry>Frog_Angry</soundAngry>
         </li>
@@ -130,17 +128,17 @@
           <def>AnimalAdult</def>
           <minAge>1</minAge>
           <soundWounded>FrogPop</soundWounded>
-          <soundDeath>Recipe_Surgery</soundDeath>
+          <soundDeath>FrogPop</soundDeath>
           <soundCall>Pawn_Iguana_Call</soundCall>
           <soundAngry>Frog_Angry</soundAngry>
         </li>
       </lifeStageAges>
-      <soundMeleeHitPawn>Recipe_Surgery</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Recipe_Surgery</soundMeleeHitBuilding>
-      <soundMeleeMiss>Recipe_Surgery</soundMeleeMiss>
+      <soundMeleeHitPawn>FrogPop</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>FrogPop</soundMeleeHitBuilding>
+      <soundMeleeMiss>FrogPop</soundMeleeMiss>
     </race>
 	<butcherProducts>
-		<HSAU_BloodPouch MayRequire="baskerville.hellsingarmsultimate">5</HSAU_BloodPouch>
+		<HSAU_BloodPouch MayRequire="baskerville.hellsingarmsultimate">10</HSAU_BloodPouch>
 	</butcherProducts>
     <tradeTags>
 		<li>Frog</li>

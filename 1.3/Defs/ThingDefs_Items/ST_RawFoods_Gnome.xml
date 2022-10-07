@@ -34,6 +34,9 @@
 				<li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li> <!-- Not actually insects, but they give the same reaction if you suggest eating them. -->
 			</mergeCompatibilityTags>
 		</ingredient>
+		<tradeTags>
+			<li>WormRaw</li>
+		</tradeTags>
 	  </ThingDef>
 	  
 	  <ThingDef ParentName="RoughPlantBase">
@@ -61,8 +64,12 @@
 		  <li>PlantMatter</li>
 		</thingCategories>
 		<ingestible>
-		  <foodType>VegetableOrFruit, VegetarianRoughAnimal, Kibble</foodType>
+			<preferability>DesperateOnlyForHumanlikes</preferability>
+			<foodType>VegetableOrFruit, VegetarianRoughAnimal, Kibble</foodType>
 		</ingestible>
+		<tradeTags>
+			<li>GnomeFlour</li>
+		</tradeTags>
 	  </ThingDef>
 
 	  <ThingDef ParentName="RoughPlantBase">
@@ -89,7 +96,7 @@
 			<rotDestroys>true</rotDestroys>
 		  </li>
 		</comps>
-		<thingCategories>
+		<thingCategories Inherit="False">
 		  <li>PlantMatter</li>
 		</thingCategories>
 		<socialPropernessMatters>true</socialPropernessMatters>
@@ -97,6 +104,9 @@
 		  <preferability>DesperateOnlyForHumanlikes</preferability>
 		  <foodType>VegetableOrFruit, Kibble</foodType>
 		</ingestible>
+		<tradeTags>
+			<li>GnomeFlour</li>
+		</tradeTags>
 	  </ThingDef>
 	  
 	  <ThingDef ParentName="RoughPlantBase">
@@ -157,8 +167,12 @@
 		  <li>PlantFoodRaw</li>
 		</thingCategories>
 		<ingestible>
-			<preferability>RawBad</preferability>
+			<preferability>DesperateOnlyForHumanlikes</preferability>
 			<foodType>VegetableOrFruit, Processed</foodType>
 		</ingestible>
+		<tradeTags>
+			<li>GnomeFlour</li>
+			<li>GnomeSugar</li>
+		</tradeTags>
 	  </ThingDef>
 </Defs>

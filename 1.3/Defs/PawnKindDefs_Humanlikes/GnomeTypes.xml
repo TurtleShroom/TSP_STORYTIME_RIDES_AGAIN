@@ -4,6 +4,7 @@
 	<PawnKindDef Abstract="True" Name="BasePlayerGnomePawnKind">
 		<race>Alien_Gnome</race>
 		<backstoryCategories>
+			<li>Farmer</li>
 			<li>GnomeBackstory</li>
 		</backstoryCategories>
 		<baseRecruitDifficulty>0.75</baseRecruitDifficulty>
@@ -41,6 +42,7 @@
 			<li>MedievalBasic</li>
 			<li>MedievalApparelBasic</li>
 			<li>MedievalApparel</li>
+			<li>Classical</li>
 		</apparelTags>
 		<requiredWorkTags>
 			<li>Cooking</li>
@@ -50,12 +52,16 @@
   <PawnKindDef ParentName="BasePlayerGnomePawnKind">
     <defName>PlayerGnome</defName>
     <label>Gnome</label>
+	<backstoryCategories>
+		<li>Farmer</li>
+		<li>GnomeBackstory</li>
+	</backstoryCategories>
     <combatPower>50</combatPower>
     <!-- <defaultFactionType>PlayerColony</defaultFactionType> -->
     <chemicalAddictionChance>0.09</chemicalAddictionChance>
     <apparelMoney>
       <min>400</min>
-      <max>3000</max>
+      <max>600</max>
     </apparelMoney>
 	<apparelTags>
         <li>ST_GnomeClothing</li>
@@ -63,6 +69,7 @@
 		<li>MedievalBasic</li>
 		<li>MedievalDecent</li>
 		<li>MedievalApparelBasic</li>
+		<li>Classical</li>
     </apparelTags>
 	<weaponMoney>
          <min>250</min>
@@ -95,9 +102,10 @@
     <label>Gnome archer</label>
     <combatPower>50</combatPower>
     <chemicalAddictionChance>0.01</chemicalAddictionChance>
+	<isFighter>true</isFighter>
     <apparelMoney>
-      <min>100</min>
-      <max>750</max>
+      <min>250</min>
+      <max>420</max>
     </apparelMoney>
 	<apparelTags>
         <li>ST_GnomeClothing</li>
@@ -143,11 +151,12 @@
   <PawnKindDef ParentName="BasePlayerGnomePawnKind">
     <defName>GnomeWarrior</defName>
     <label>Gnome warrior</label>
+	<isFighter>true</isFighter>
     <combatPower>60</combatPower>
     <chemicalAddictionChance>0.01</chemicalAddictionChance>
     <apparelMoney>
-      <min>40</min>
-      <max>750</max>
+      <min>250</min>
+      <max>450</max>
     </apparelMoney>
 	<apparelTags>
         <li>ST_GnomeClothing</li>
@@ -192,6 +201,7 @@
 		<defName>GnomeTrader</defName>
 		<label>Gnome tradesman</label>
 		<trader>true</trader>
+		<isFighter>false</isFighter>
 		<combatPower>80</combatPower>
 		<defaultFactionType>TreeGnomeEmpire</defaultFactionType>
 		<chemicalAddictionChance>0.01</chemicalAddictionChance>
@@ -251,16 +261,18 @@
   <PawnKindDef ParentName="BasePlayerGnomePawnKind">
     <defName>TSP_ST_GnomeCabbageinator</defName>
     <label>cabbage grenadier</label>
-    <combatPower>200</combatPower>
+	<isFighter>true</isFighter>
+    <combatPower>250</combatPower>
     <chemicalAddictionChance>0.1</chemicalAddictionChance>
     <apparelMoney>
-      <min>100</min>
+      <min>220</min>
       <max>1750</max>
     </apparelMoney>
 	<apparelTags>
         <li>ST_GnomeClothing</li>
 		<li>MedievalArmorBasic</li>
 		<li>MedievalArmorDecent</li>
+		<li>MedievalArmorAdvanced</li>
 		<li>MedievalAdvanced</li>
     </apparelTags>
 	<weaponMoney>
@@ -373,10 +385,13 @@
 		<label>Gnome</label>
 		<combatPower>10</combatPower>
 		<defaultFactionType>TreeGnomeEmpire</defaultFactionType>
+		<backstoryCategories Inherit="False">
+			<li Inherit="False">GnomeBackstory</li>
+		</backstoryCategories>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
 		<apparelMoney Inherit="False"> <!-- They wear nothing else but the apparel below -->
-		  <min Inherit="False">1</min>
-		  <max Inherit="False">2</max>
+			<min Inherit="False">100</min>
+			<max Inherit="False">200</max>
 		</apparelMoney>
 		<specificApparelRequirements>
 		  <li>
@@ -398,14 +413,14 @@
 		  </li>
 		</specificApparelRequirements>
 		<apparelRequired Inherit="False">
-			<li>GnomeHat</li>
-			<!-- <li>GnomeGoggles</li> -->
-			<li>GnomeShirt</li>
-			<li>GnomePants</li>
+			<li Inherit="False">GnomeHat</li>
+			<li Inherit="False">GnomeGoggles</li>
+			<li Inherit="False">GnomeShirt</li>
+			<li Inherit="False">GnomePants</li>
 		</apparelRequired>
 		<weaponMoney>
-			 <min>200</min>
-			 <max>400</max>
+			<min>200</min>
+			<max>400</max>
 		</weaponMoney>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
 		<techHediffsMoney>
@@ -417,7 +432,9 @@
 		  <li>Simple</li>
 		</techHediffsTags>
 		<techHediffsChance>0.02</techHediffsChance>
-		<apparelTags Inherit="False"></apparelTags> <!-- Gnome peasants wear nothing else -->
+		<apparelTags Inherit="False"> <!-- Gnome peasants wear nothing else -->
+			<li>GnomePeasant</li>
+		</apparelTags>
 		<weaponTags>
 			<li>GnomeSimpleMelee</li>
 			<li>GnomeMelee</li>

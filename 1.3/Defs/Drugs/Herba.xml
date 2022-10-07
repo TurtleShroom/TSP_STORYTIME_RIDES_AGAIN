@@ -9,7 +9,7 @@
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
     <workSkill>Cooking</workSkill>
     <effectWorking>Cook</effectWorking>
-    <soundWorking>Recipe_Brewing</soundWorking>
+    <soundWorking>Ingest_Smoke</soundWorking>
     <allowMixingIngredients>true</allowMixingIngredients>
     <workAmount>1000</workAmount>
     <targetCountAdjustment>1</targetCountAdjustment>
@@ -59,84 +59,88 @@
       <HediffDef>Carcinoma</HediffDef>
       <HediffDef>Asthma</HediffDef>
     </descriptionHyperlinks>
-    <graphicData>
-      <texPath>Things/Item/Resources/Herba/TSP_HerbaCigarillo</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-      <!-- <color>(200, 200, 150)</color> -->
+    <graphicData Inherit="False">
+      <texPath Inherit="False">Things/Items/Resources/TSP_HerbaCigarillo</texPath>
+      <graphicClass Inherit="False">Graphic_StackCount</graphicClass>
     </graphicData>
     <rotatable>false</rotatable>
+	<stackLimit Inherit="False">15</stackLimit>
     <statBases>
       <WorkToMake>450</WorkToMake>
       <MarketValue>9.5</MarketValue>
       <Mass>0.05</Mass>
       <DeteriorationRate>6</DeteriorationRate>
       <Flammability>1.3</Flammability>
+	  <Nutrition>0.56</Nutrition>
     </statBases>
     <techLevel>Neolithic</techLevel>
 	<thingCategories Inherit="False">
 		<li Inherit="False">Drugs</li>
 	</thingCategories>
-    <ingestible>
-      <foodType>Plant, Processed, Liquor</foodType>
-      <joyKind>Chemical</joyKind>
-      <joy>0.70</joy>
-      <baseIngestTicks>720</baseIngestTicks>
-      <nurseable>true</nurseable>
-      <drugCategory>Social</drugCategory>
-      <ingestSound>Ingest_Smoke</ingestSound>
-      <ingestEffect>Smoke_Flake</ingestEffect>
-      <ingestEffectEat>EatVegetarian</ingestEffectEat>
-      <ingestHoldOffsetStanding>
-        <northDefault>
-          <offset>(0.27,0,0.08)</offset>
-          <behind>true</behind>
-        </northDefault>
-        <east>
-          <offset>(0.45,0,0.08)</offset>
-        </east>
-        <south>
-          <offset>(0.27,0,0.08)</offset>
-        </south>
-        <west>
-          <offset>(-0.50,0,0.08)</offset>
-          <flip>true</flip>
-        </west>
-      </ingestHoldOffsetStanding>
-      <ingestHoldUsesTable>false</ingestHoldUsesTable>
-      <ingestCommandString>Smoke {0}</ingestCommandString>
-      <ingestReportString>Smoking {0}.</ingestReportString>
-      <ingestReportStringEat>Smoking {0}.</ingestReportStringEat>
-      <useEatingSpeedStat>true</useEatingSpeedStat>
-      <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HerbaHigh</hediffDef>
-          <severity>0.5</severity>
-          <toleranceChemical>HerbaDrug</toleranceChemical>
-        </li>
-        <li Class="IngestionOutcomeDoer_OffsetNeed">
-          <need>Rest</need>
-          <offset>0.15</offset>
-        </li>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HerbaTolerance</hediffDef>
-          <severity>0.03</severity>
-          <divideByBodySize>true</divideByBodySize>
-        </li>
-      </outcomeDoers>
-    </ingestible>
-	<recipeMaker Inherit="False"></recipeMaker>
+	<ingestible>
+		<preferability>DesperateOnly</preferability>
+		<foodType>Plant, Processed, Liquor</foodType>
+		<joyKind>Chemical</joyKind>
+		<joy>0.70</joy>
+		<baseIngestTicks>720</baseIngestTicks>
+		<nurseable>true</nurseable>
+		<drugCategory>Social</drugCategory>
+		<ingestSound>Ingest_Smoke</ingestSound>
+		<ingestEffect>Smoke_Flake</ingestEffect>
+		<ingestEffectEat>EatVegetarian</ingestEffectEat>
+		<ingestHoldOffsetStanding>
+			<northDefault>
+				<offset>(0.27,0,0.08)</offset>
+				<behind>true</behind>
+			</northDefault>
+			<east>
+				<offset>(0.45,0,0.08)</offset>
+			</east>
+			<south>
+				<offset>(0.27,0,0.08)</offset>
+			</south>
+			<west>
+				<offset>(-0.50,0,0.08)</offset>
+				<flip>true</flip>
+			</west>
+		</ingestHoldOffsetStanding>
+		<ingestHoldUsesTable>false</ingestHoldUsesTable>
+		<ingestCommandString>Smoke {0}</ingestCommandString>
+		<ingestReportString>Smoking {0}.</ingestReportString>
+		<ingestReportStringEat>Smoking {0}.</ingestReportStringEat>
+		<useEatingSpeedStat>true</useEatingSpeedStat>
+		<outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>HerbaHigh</hediffDef>
+				<severity>0.5</severity>
+				<toleranceChemical>HerbaDrug</toleranceChemical>
+				<divideByBodySize>true</divideByBodySize>
+			</li>
+			<li Class="IngestionOutcomeDoer_OffsetNeed">
+				<need>Rest</need>
+				<offset>0.15</offset>
+			</li>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>HerbaTolerance</hediffDef>
+				<severity>0.03</severity>
+				<divideByBodySize>true</divideByBodySize>
+			</li>
+		</outcomeDoers>
+	</ingestible>
 	<!--
-    <costList>
-      <Herba>4</Herba>
-    </costList>
+	<recipeMaker Inherit="False">
+		<costList>
+			<Herba>4</Herba>
+		</costList>
+	</recipeMaker>
 	-->
     <comps>
 		<li Class="CompProperties_Drug">
 			<chemical>HerbaDrug</chemical>
 			<addictiveness>0.045</addictiveness>
-			<minToleranceToAddict>0.01</minToleranceToAddict>
+			<minToleranceToAddict>0.031</minToleranceToAddict>
 			<existingAddictionSeverityOffset>0.25</existingAddictionSeverityOffset>
-			<needLevelOffset>0.8</needLevelOffset>
+			<needLevelOffset>1</needLevelOffset>
 			<listOrder>20</listOrder>
 		</li>
 		<li Class="CompProperties_Ingredients"></li>
@@ -148,7 +152,7 @@
     <defName>HerbaHigh</defName>
     <label>buzzed on herba</label>
     <labelNoun>a herba high</labelNoun>
-    <description>Herba's active chemical in the bloodstream. Generates a relaxing, calming feeling akin to resting on a comfortable chair.</description>
+    <description>Herba's active chemical in the bloodstream. This generates a relaxing, calming feeling akin to resting on a comfortable chair.</description>
     <hediffClass>Hediff_High</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>

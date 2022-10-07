@@ -267,6 +267,12 @@
     <equippedAngleOffset>-150</equippedAngleOffset>
     <rotatable>false</rotatable>
     <stackLimit>25</stackLimit>
+	<thingCategories>
+		<li>TSP_ST_GnomeBooze</li>
+	</thingCategories>
+	<tradeTags>
+		<li>ST_GnomeBooze</li>
+	</tradeTags>
     <statBases>
       <DeteriorationRate>0.5</DeteriorationRate>
       <MarketValue>12</MarketValue>
@@ -295,10 +301,6 @@
 			<hediffDef>AlcoholHigh</hediffDef>
 			<severity>0.15</severity>
 			<toleranceChemical>Alcohol</toleranceChemical>
-        </li>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-			<hediffDef>AlcoholTolerance</hediffDef>
-			<severity>0.05</severity>
 			<divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
         </li>
       </outcomeDoers>
@@ -308,12 +310,12 @@
 		<li Class="CompProperties_Drug">
 			<chemical>Alcohol</chemical>
 			<addictiveness>0.01</addictiveness>
-				<minToleranceToAddict>0.33</minToleranceToAddict>
-				<existingAddictionSeverityOffset>0.4</existingAddictionSeverityOffset>
-				<needLevelOffset>0.9</needLevelOffset>
-				<listOrder>10</listOrder>
-				<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
-				<largeOverdoseChance>0</largeOverdoseChance>
+			<minToleranceToAddict>0.33</minToleranceToAddict>
+			<existingAddictionSeverityOffset>0.4</existingAddictionSeverityOffset>
+			<needLevelOffset>0.9</needLevelOffset>
+			<listOrder>10</listOrder>
+			<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
+			<largeOverdoseChance>0</largeOverdoseChance>
 		</li>
 		<!-- <li Class="CompProperties_Ingredients" /> -->
     </comps>
@@ -348,7 +350,7 @@
     <ingestible>
       <foodType>Fluid, Processed, Liquor</foodType>
       <joyKind>Gluttonous</joyKind>
-      <joy>0.4</joy>
+      <joy>0.6</joy>
       <nurseable>true</nurseable>
       <drugCategory>Social</drugCategory>
       <ingestSound>Ingest_Beer</ingestSound>
@@ -366,11 +368,11 @@
           <hediffDef>AlcoholHigh</hediffDef>
           <severity>0.35</severity>
           <toleranceChemical>Alcohol</toleranceChemical>
+          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>AlcoholTolerance</hediffDef>
-          <severity>0.036</severity>
-          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
+          <severity>0.016</severity>
         </li>
       </outcomeDoers>
     </ingestible>
@@ -378,15 +380,22 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Alcohol</chemical>
-        <addictiveness>0.01</addictiveness>
+        <addictiveness>0.005</addictiveness>
         <minToleranceToAddict>0.2</minToleranceToAddict>
-        <existingAddictionSeverityOffset>0.50</existingAddictionSeverityOffset>
-        <needLevelOffset>0.9</needLevelOffset>
+        <existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
+        <needLevelOffset>0.3</needLevelOffset>
         <listOrder>10</listOrder>
 		<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
 		<largeOverdoseChance>0</largeOverdoseChance>
       </li>
+	  <li Class="CompProperties_Ingredients" />
     </comps>
+	<thingCategories>
+		<li>TSP_ST_GnomeBooze</li>
+	</thingCategories>
+	<tradeTags>
+		<li>ST_GnomeBooze</li>
+	</tradeTags>
   </ThingDef>
   
     <ThingDef ParentName="DrugBase">
@@ -436,11 +445,11 @@
           <hediffDef>AlcoholHigh</hediffDef>
           <severity>0.35</severity>
           <toleranceChemical>Alcohol</toleranceChemical>
+          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>AlcoholTolerance</hediffDef>
           <severity>0.036</severity>
-          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
         </li>
       </outcomeDoers>
     </ingestible>
@@ -458,6 +467,12 @@
       </li>
 	  <li Class="CompProperties_Ingredients" />
     </comps>
+	<thingCategories>
+		<li>TSP_ST_GnomeBooze</li>
+	</thingCategories>
+	<tradeTags>
+		<li>ST_GnomeBooze</li>
+	</tradeTags>
   </ThingDef>
   
   <ThingDef ParentName="DrugBase">
@@ -507,11 +522,11 @@
           <hediffDef>AlcoholHigh</hediffDef>
           <severity>0.1</severity>
           <toleranceChemical>Alcohol</toleranceChemical>
+          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>AlcoholTolerance</hediffDef>
           <severity>0.08</severity>
-          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
         </li>
       </outcomeDoers>
     </ingestible>
@@ -519,7 +534,7 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Alcohol</chemical>
-        <addictiveness>0.33</addictiveness>
+        <addictiveness>0.45</addictiveness>
         <minToleranceToAddict>0.15</minToleranceToAddict>
         <existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
@@ -529,5 +544,11 @@
       </li>
 	  <li Class="CompProperties_Ingredients" />
     </comps>
+	<thingCategories>
+		<li>TSP_ST_GnomeBooze</li>
+	</thingCategories>
+	<tradeTags>
+		<li>ST_GnomeBooze</li>
+	</tradeTags>
   </ThingDef>
 </Defs>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Chocolope"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName = "Chocolope" or defName = "blueberry" or defName = "GS_Slime"]/tradeTags</xpath>
+			<value>
+				<li>ST_Gnome_Selling_Animal</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="CCPChocolateBun"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="CCPChocolateBun"]/tradeTags</xpath>
+			<value>
+				<li>ST_Gnome_Selling_Animal</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="TRAHS_Elephant_Strawberry_Race"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName = "TRAHS_Elephant_Strawberry_Race" or defName = "TRAHS_Muffalo_Strawberry_Race"]/tradeTags</xpath>
+			<value>
+				<li>ST_Gnome_Selling_Animal</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Jorry_Jonka"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName = "Jorry_Jonka" or defName = "Joompa_Loompa"]/tradeTags</xpath>
+			<value>
+				<li>ST_Gnome_Selling_AnimalRare</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+	<!-- Are any of the following Mods installed? -->
+		<mods>
+			<li>The Wonderland of Mr Cringe</li>
+			<li>"Chocolate" BunBuns</li>
+			<li>[TP]Strawberry Animals</li>
+		</mods> 
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="TSP_ST_GnomeTrader"]</xpath>
+			<value>
+				<li Class="StockGenerator_Animals">
+					<maxWildness>0.90</maxWildness>
+					<tradeTagsSell>
+						<li>ST_Gnome_Selling_Animal</li>
+					</tradeTagsSell>
+					<kindCountRange>
+						<min>1</min>
+						<max>2</max>
+					</kindCountRange>
+					<countRange>
+						<min>1</min>
+						<max>2</max>
+					</countRange>
+					<createMatingPair>
+						<li>ST_Gnome_Selling_Animal</li>
+					</createMatingPair>
+				</li>
+				<li Class="StockGenerator_Animals">
+					<maxWildness>0.90</maxWildness>
+					<tradeTagsSell>
+						<li>ST_Gnome_Selling_AnimalRare</li>
+					</tradeTagsSell>
+					<kindCountRange>
+						<min>-4</min>
+						<max>2</max>
+					</kindCountRange>
+					<countRange>
+						<min>-4</min>
+						<max>3</max>
+					</countRange>
+				</li>
+			</value>
+		</match>
+		<!-- If none of the queried Mods are installed, the original code stands. -->
+	</Operation>
+</Patch>

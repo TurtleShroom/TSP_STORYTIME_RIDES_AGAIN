@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
   <FactionDef>
     <defName>NicePirates</defName>
@@ -31,17 +32,27 @@
 		<li MayRequire="Qux.factionhippie">PeaceLove</li>
 		<li MayRequire="Zezz.Altrumeme">Altruism</li>
 		<li MayRequire="sarg.alphamemes">AM_NonViolence</li>
+		<li MayRequire="vanillaexpanded.vmemese">VME_Egalitarian</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_Xenophobia</li>
     </disallowedMemes>
     <requiredMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
-	  <li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+	<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+	<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+	<li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
     </requiredMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+	</disallowedPrecepts>
     <allowedCultures>
 		<li>Pirate</li>
 	</allowedCultures>
+	<!--
     <structureMemeWeights>
 		<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
     </structureMemeWeights>
+	-->
     <factionNameMaker>NamerFactionStorytimePirate</factionNameMaker>
     <settlementNameMaker>PirateSettlementName</settlementNameMaker>
     <techLevel>Medieval</techLevel>
@@ -60,7 +71,7 @@
     </baseTraderKinds>
     <allowedArrivalTemperatureRange>
       <min>-30</min>
-      <max>45</max>
+      <max>55</max>
     </allowedArrivalTemperatureRange>
     <maxPawnCostPerTotalPointsCurve>
       <points>
@@ -95,19 +106,23 @@
 		  <PirateGrenadier>15</PirateGrenadier>
 		  <PirateCaptain>15</PirateCaptain>
 		  <PirateJuggernaut>5</PirateJuggernaut>
-			<!--
+		  <Pirate>1</Pirate>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+		  <!-- ANIMALS CANNOT BE PEACEFUL VISITORS!! -->
+		  <!--
           <Monkey>5</Monkey>
 		  <ST_Parrot>5</ST_Parrot>
-		  <Pirate>2</Pirate>
-			-->
+		  -->
         </options>
       </li>
 		<li>
 			<kindDef>Peaceful</kindDef>
 			<options>
 				<PirateSwabbie>10</PirateSwabbie>
-				<PirateJuggernaut>5</PirateJuggernaut>
+				<PirateJuggernaut>8</PirateJuggernaut>
 				<Pirate>2</Pirate>
+				<PirateCaptain>1</PirateCaptain>
+				<VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
 			</options>
 		</li>
       <li>
@@ -121,6 +136,7 @@
           <Monkey>5</Monkey>
 		  <ST_Parrot>5</ST_Parrot>
 		  <Pirate>4</Pirate>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
         </options>
       </li>
       <li>
@@ -143,6 +159,7 @@
 		  <ST_Parrot>8</ST_Parrot>
 		  <PirateCaptain>1</PirateCaptain>
 		  <Grenadier_Smoke>1</Grenadier_Smoke>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
         </guards>
       </li>
       <li>
@@ -155,9 +172,8 @@
 		  <PirateJuggernaut>5</PirateJuggernaut>
           <Monkey>10</Monkey>
 		  <ST_Parrot>10</ST_Parrot>
-		  <TSP_PirateTradesman>5</TSP_PirateTradesman>
+		  <TSP_PirateTradesman>2</TSP_PirateTradesman>
 		  <Pirate>30</Pirate>
-		  <Grenadier_Smoke>1</Grenadier_Smoke>
         </options>
       </li>
     </pawnGroupMakers>
@@ -202,7 +218,6 @@
 		<li>PirateBackstory</li>
     </backstoryCategories>
     <disallowedMemes>
-		<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
 
@@ -212,21 +227,29 @@
 		<li MayRequire="Zezz.Altrumeme">Altruism</li>
 		<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
 		<li MayRequire="VanillaExpanded.VMemesE">VME_Aristocratic</li>
-		<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
 		<li MayRequire="sarg.alphamemes">AM_NonViolence</li>
+		<li MayRequire="vanillaexpanded.vmemese">VME_Egalitarian</li>
     </disallowedMemes>
     <requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
 		<li MayRequire="VanillaExpanded.VMemesE">VME_BloodCourt</li>
     </requiredMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+	</disallowedPrecepts>
     <allowedCultures>
 		<li>Pirate</li>
 	</allowedCultures>
+	<!--
     <structureMemeWeights>
       <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
     </structureMemeWeights>
+	-->
     <factionNameMaker>NamerFactionStorytimePirate</factionNameMaker>
     <settlementNameMaker>PirateSettlementName</settlementNameMaker>
     <techLevel>Medieval</techLevel>
@@ -281,8 +304,12 @@
 		  <PirateGrenadier>15</PirateGrenadier>
 		  <PirateCaptain>15</PirateCaptain>
 		  <PirateJuggernaut>15</PirateJuggernaut>
+		  <!-- ANIMALS CANNOT BE PEACEFUL VISITORS!! -->
+		  <!--
           <Monkey>5</Monkey>
 		  <ST_Parrot>5</ST_Parrot>
+		  -->
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
         </options>
       </li>
       <li>

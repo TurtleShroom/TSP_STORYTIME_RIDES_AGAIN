@@ -83,6 +83,7 @@
     <race>
       <intelligence Inherit="False">ToolUser</intelligence>
       <thinkTreeMain Inherit="False">Mechanoid</thinkTreeMain>
+	  <fleshType Inherit="False">Mechanoid</fleshType>
 	  <!--
 	  <wildBiomes>
 			<BorealForest>0.005</BorealForest>
@@ -187,14 +188,15 @@
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
-    <weaponMoney>9999~9999</weaponMoney>
+    <weaponMoney>3000~9999</weaponMoney>
     <weaponTags>
-      <li>MechanoidGunMedium</li>
+		<li>SpacerGun</li>
+		<li>MechanoidGunMedium</li>
     </weaponTags>
   </PawnKindDef>
 
 
-  <ThingDef ParentName="BaseMechanoid">
+  <ThingDef ParentName="BasePawn">
     <defName>CyberFrogDocile</defName>
     <label>Cyber Frog</label>
     <description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particular Cyber Frogs resisted the Mechanoids and are therefore less intelligent because of the absence of the up-link to the Mechanoid Hive Network.</description>
@@ -209,9 +211,9 @@
     </statBases>
 	<comps>
 		<li Class="CompProperties_EggLayer">
-			<eggUnfertilizedDef>CyberToadEggUnfertilized</eggUnfertilizedDef>
+			<eggUnfertilizedDef>Steel</eggUnfertilizedDef>
 			<eggFertilizedDef>CyberToadEggFertilized</eggFertilizedDef>
-			<eggFertilizationCountMax>1</eggFertilizationCountMax>
+			<eggFertilizationCountMax>3</eggFertilizationCountMax>
 			<eggLayIntervalDays>40</eggLayIntervalDays>
 			<eggCountRange>1</eggCountRange>
 			<eggLayFemaleOnly>false</eggLayFemaleOnly>

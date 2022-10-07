@@ -21,7 +21,7 @@
 		<li>
 			<becomeVisible>true</becomeVisible>
 			<statOffsets>
-				<SwimSpeed MayRequire="biomesteam.biomesislands">2</SwimSpeed>
+				<SwimSpeed MayRequire="biomesteam.biomesislands">1</SwimSpeed> <!-- One for each arm -->
 			</statOffsets>
 		</li>
 	</stages>
@@ -64,7 +64,7 @@
       <color>(140,190,110)</color>
     </graphicData>
     <tradeTags>
-      <li>Bionic</li>
+      <li>Frog</li>
     </tradeTags>
     <statBases>
       <Mass>0.3</Mass>
@@ -122,7 +122,7 @@
 			<becomeVisible>true</becomeVisible>
 			<statOffsets>
 				<SwimSpeed MayRequire="biomesteam.biomesislands">1.5</SwimSpeed> <!-- One leg each, total 3 -->
-				<MoveSpeed>0.2</MoveSpeed> <!-- One leg each, total 0.4 -->
+				<MoveSpeed>0.5</MoveSpeed> <!-- One leg each, total 1 -->
 			</statOffsets>
 		</li>
 	</stages>
@@ -148,7 +148,7 @@
       <color>(140,190,110)</color>
     </graphicData>
     <tradeTags>
-      <li>Bionic</li>
+      <li>Frog</li>
     </tradeTags>
     <statBases>
       <Mass>0.3</Mass>
@@ -264,7 +264,7 @@
       <color>(140,190,110)</color>
     </graphicData>
     <tradeTags>
-      <li>Bionic</li>
+      <li>Frog</li>
     </tradeTags>
     <statBases>
       <Mass>0.3</Mass>
@@ -348,7 +348,7 @@
       <color>(140,190,110)</color>
     </graphicData>
     <tradeTags>
-      <li>Bionic</li>
+      <li>Frog</li>
     </tradeTags>
     <statBases>
       <Mass>0.3</Mass>
@@ -389,21 +389,22 @@
 
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>FrogStomach</defName>
-    <label>froglike stomach</label>
-    <labelNoun>a froglike stomach</labelNoun>
+    <label>deformed frog stomach</label>
+    <labelNoun>a frog like stomach</labelNoun>
     <description>The stomach has warped into one similar to a frog, although it is deformed. While this frog stomach can and will process any nutriets a frog or man can consume, it creates an unfulfillable compulsion to eat insect meat.</description>
     <descriptionHyperlinks><ThingDef>FrogStomach</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>FrogStomach</spawnThingOnRemoved>
 	<isBad>true</isBad>
+	<makesSickThought>false</makesSickThought>
     <tendable>false</tendable>
 	<everCurableByItem>false</everCurableByItem>
 	<scenarioCanAdd>false</scenarioCanAdd>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
     <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>0.9</partEfficiency>
-      <betterThanNatural>false</betterThanNatural>
+		<solid>true</solid>
+		<partEfficiency>0.9</partEfficiency>
+		<betterThanNatural>false</betterThanNatural>
     </addedPartProps>
 	<stages>
 		<li>
@@ -433,7 +434,7 @@
       <color>(140,190,110)</color>
     </graphicData>
     <tradeTags>
-      <li>Poor</li>
+      <li>Frog</li>
     </tradeTags>
     <statBases>
       <Mass>0.3</Mass>
@@ -477,7 +478,7 @@
 		<stages>
 			<li>
 				<label>craving insect meat</label>
-				<description>My frog stomach tells me to eat insect meat, but no matter how many times I eat them, I still crave them. This is the worst.</description>
+				<description>My frog stomach is not functioning like it would in a real frog. It tells me to eat insect meat; no matter how many times I eat it, I still crave more. This is the worst.</description>
 				<baseMoodEffect>-2</baseMoodEffect>
 			</li>
 		</stages>
@@ -525,7 +526,7 @@
       <color>(140,190,110)</color>
     </graphicData>
     <tradeTags>
-      <li>Bionic</li>
+      <li>Frog</li>
     </tradeTags>
     <statBases>
       <Mass>0.3</Mass>
@@ -579,7 +580,7 @@
   <HediffDef ParentName="FrogPlagueBase">
     <defName>FroggyFate</defName>
     <label>froganthropy</label>
-    <description>Werefrog DNA has been introduced to this person by some means. Better watch out...</description>
+    <description>Werefrog DNA has been introduced to this poor Pawn by some means. Better watch out...</description>
     <makesSickThought>true</makesSickThought>
     <lethalSeverity>1</lethalSeverity>
     <tendable>true</tendable>
@@ -599,7 +600,7 @@
 			<severityToTurn>0.99</severityToTurn>
 			<numberOfSpawn>
 				<li>1</li>
-				<li>1</li>
+				<li>5</li>
 			</numberOfSpawn>
 			<isHostile>true</isHostile> 
 			<keepGender>true</keepGender>
@@ -618,7 +619,7 @@
 	  <li Class="HediffGiver_RandomDrugEffect">
 		<hediff>FrogLeg</hediff>
 		<minSeverity>0.5</minSeverity>
-		<baseMtbDays>1.1</baseMtbDays>
+		<baseMtbDays>1</baseMtbDays>
 		<partsToAffect>
 		  <li>Leg</li>
 		</partsToAffect>
@@ -626,7 +627,7 @@
 	  <li Class="HediffGiver_RandomDrugEffect">
 		<hediff>FrogTongue</hediff>
 		<minSeverity>0.3</minSeverity>
-		<baseMtbDays>0.4</baseMtbDays>
+		<baseMtbDays>0.5</baseMtbDays>
 		<partsToAffect>
 		  <li>Jaw</li>
 		</partsToAffect>
@@ -642,7 +643,7 @@
 	  <li Class="HediffGiver_RandomDrugEffect">
 		<hediff>FrogLung</hediff>
 		<minSeverity>0.6</minSeverity>
-		<baseMtbDays>1.2</baseMtbDays>
+		<baseMtbDays>1</baseMtbDays>
 		<partsToAffect>
 		  <li>Lung</li>
 		</partsToAffect>
@@ -666,15 +667,15 @@
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.05</offset>
+            <offset>-0.1</offset>
           </li>
           <li>
             <capacity>Manipulation</capacity>
-            <offset>-0.05</offset>
+            <offset>0.05</offset>
           </li>
           <li>
             <capacity>Breathing</capacity>
-            <offset>-0.1</offset>
+            <offset>0.1</offset>
           </li>
         </capMods>
 		<makeImmuneTo>
@@ -692,33 +693,7 @@
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.1</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>0.05</offset>
-          </li>
-          <li>
-            <capacity>Breathing</capacity>
-            <offset>0.05</offset>
-          </li>
-        </capMods>
-		<makeImmuneTo>
-			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
-			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
-			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
-			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
-			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
-		</makeImmuneTo>
-      </li>
-      <li>
-        <minSeverity>0.66</minSeverity>
-        <label>major</label>
-        <vomitMtbDays>0.5</vomitMtbDays>
-        <capMods>
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.1</offset>
+            <setMax>0.6</setMax>
           </li>
           <li>
             <capacity>Manipulation</capacity>
@@ -738,19 +713,45 @@
 		</makeImmuneTo>
       </li>
       <li>
+        <minSeverity>0.66</minSeverity>
+        <label>major</label>
+        <vomitMtbDays>0.5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.3</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+		<makeImmuneTo>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
+		</makeImmuneTo>
+      </li>
+      <li>
         <minSeverity>0.8</minSeverity>
         <label>extreme</label>
         <lifeThreatening>true</lifeThreatening>
-        <vomitMtbDays>0.1</vomitMtbDays>
+        <vomitMtbDays>0.05</vomitMtbDays>
         <painOffset>0.5</painOffset>
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.15</offset>
+            <setMax>0.1</setMax>
           </li>
           <li>
             <capacity>Manipulation</capacity>
-            <offset>0.2</offset>
+            <offset>0.3</offset>
           </li>
           <li>
             <capacity>Breathing</capacity>
@@ -763,10 +764,8 @@
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
-			<li></li>
 		</makeImmuneTo>
       </li>
     </stages>
   </HediffDef>
-  
-</Defs>  
+</Defs>

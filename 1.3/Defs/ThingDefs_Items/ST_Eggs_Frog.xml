@@ -10,8 +10,21 @@
 		<statBases>
 			<MarketValue Inherit="False">0.8</MarketValue>
 			<Nutrition Inherit="False">0.04</Nutrition>
+			<Mass Inherit="False">0.009</Mass>
 		</statBases>
 		<stackLimit>100</stackLimit>
+		<!--
+		<comps Inherit="False">
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>15</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+				<disableIfHatcher>true</disableIfHatcher>
+			</li>
+		</comps>
+		-->
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggFertBase">
@@ -43,6 +56,9 @@
 		<statBases>
 			<MarketValue>5.0</MarketValue>
 		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggFertBase">
@@ -73,6 +89,9 @@
 		<statBases>
 			<MarketValue>7.0</MarketValue>
 		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggFertBase">
@@ -103,6 +122,9 @@
 			<statBases>
 			<MarketValue>7.0</MarketValue>
 		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggFertBase">
@@ -133,6 +155,9 @@
 		<statBases>
 			<MarketValue>7.0</MarketValue>
 		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
   
 	<ThingDef ParentName="EggFertBase">
@@ -163,6 +188,9 @@
 		<statBases>
 			<MarketValue>7.0</MarketValue>
 		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
   
 	<ThingDef ParentName="EggFertBase">
@@ -193,6 +221,9 @@
 		<statBases>
 			<MarketValue>7.0</MarketValue>
 		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
   
 	<ThingDef ParentName="EggFertBase">
@@ -213,6 +244,7 @@
 		</comps>
 	</ThingDef>
 	
+	<!--
 	<ThingDef ParentName="EggUnfertBase">
 		<defName>CyberToadEggUnfertilized</defName>
 		<label>Cyber Frog egg (unfert.)</label>
@@ -224,6 +256,7 @@
 			<MarketValue>3</MarketValue>
 		</statBases>
 	</ThingDef>
+	-->
 
 	<ThingDef ParentName="EggFertBase">
 		<defName>CyberToadEggFertilized</defName>
@@ -280,7 +313,7 @@
 			</li>
 		</comps>
 		<ingestible>
-			<foodType Inherit="False">Seed, Plant, VegetarianAnimal, VegetarianRoughAnimal, DendrovoreAnimal, Tree</foodType>
+			<foodType Inherit="False">Seed, Plant, VegetarianAnimal, VegetarianRoughAnimal, DendrovoreAnimal, Tree, Kibble</foodType>
 		</ingestible>
 	</ThingDef>
 
@@ -296,6 +329,9 @@
 			<MarketValue>10.0</MarketValue>
 			<Nutrition Inherit="False">0.8</Nutrition>
 		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggFertBase">
@@ -312,12 +348,12 @@
 	</statBases>
 	<comps>
 		<li Class="CompProperties_Hatcher">
-			<hatcherDaystoHatch>10</hatcherDaystoHatch>
+			<hatcherDaystoHatch>17</hatcherDaystoHatch>
 			<hatcherPawn>LeviathanFrog</hatcherPawn>
 		</li>
 		<li Class="CompProperties_TemperatureRuinable">
-			<minSafeTemperature>0</minSafeTemperature>
-			<maxSafeTemperature>70</maxSafeTemperature>
+			<minSafeTemperature>6</minSafeTemperature>
+			<maxSafeTemperature>90</maxSafeTemperature>
 			<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
 		</li>
 	</comps>
@@ -347,8 +383,8 @@
 		</statBases>
 		<comps>
 			<li Class="CompProperties_Hatcher">
-			<hatcherDaystoHatch>3</hatcherDaystoHatch>
-			<hatcherPawn>JudasFrog</hatcherPawn>
+				<hatcherDaystoHatch>3</hatcherDaystoHatch>
+				<hatcherPawn>JudasFrog</hatcherPawn>
 			</li>
 		</comps>
 	</ThingDef>
@@ -363,6 +399,9 @@
 		<statBases>
 			<MarketValue>7.0</MarketValue>
 		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggFertBase">
@@ -385,6 +424,36 @@
 				<minSafeTemperature Inherit="False">-200</minSafeTemperature>
 				<maxSafeTemperature Inherit="False">200</maxSafeTemperature>
 				<progressPerDegreePerTick>0</progressPerDegreePerTick>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>TSP_ST_BloodFrogEgg_Fertilized</defName>
+		<label>blood frog egg (fert.)</label>
+		<description>A fertilized engorged Frogglobin egg. If all goes well, it should hatch into an engorged Frogglobin tadpole. It is completely inedible.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(255,16,17)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>17</MarketValue>
+			<Nutrition Inherit="False">0</Nutrition>
+			<Mass>0.15</Mass>
+		</statBases>
+		<thingCategories Inherit="False">
+			<li>EggsFertilized</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>5</minSafeTemperature>
+				<maxSafeTemperature>90</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>9</hatcherDaystoHatch>
+				<hatcherPawn>BloodFrog</hatcherPawn>
 			</li>
 		</comps>
 	</ThingDef>

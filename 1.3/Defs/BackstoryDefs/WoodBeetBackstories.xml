@@ -10,7 +10,7 @@
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>CommunalChildWoodBeet</defName>
-    <title>Village Child</title>
+    <title>communaly abused</title>
     <baseDescription>[PAWN_nameDef] never knew [PAWN_possessive] parents. [PAWN_pronoun]  was 'raised' by the tribe communally. This involved a lot of drugs and other questionable parenting decisions.</baseDescription>
     <slot>Childhood</slot>
     <skillGains>
@@ -38,12 +38,27 @@
 		<li>WoodBeetJoe</li>
 		<li>PecanJoeBackstory</li>
 		<li>Madman</li>
+		<li>Sadist</li>
+		<li>MedievalCriminal</li>
+		<li>Raider</li>
+		<li>Pirate</li>
+		<li>HSAU_BS_MLN_ChildhoodGerman</li>
     </spawnCategories>
+	<relationSettings>
+		<relationChanceModifierLover>0</relationChanceModifierLover>
+		<relationChanceModifierExLover>0</relationChanceModifierExLover>
+		<relationChanceModifierFiance>0</relationChanceModifierFiance>
+		<relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+		<relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierChild>0</relationChanceModifierChild>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+	</relationSettings>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>LonelyChildWoodBeet</defName>
-    <title>Lone Child</title>
+    <title>Lone Beet</title>
     <baseDescription>[PAWN_nameDef] was abandoned by [PAWN_possessive] parents in the middle of nowhere. Contrary to what one might expect, this actually meant [PAWN_pronoun] had a better childhood than most Wood Beets. </baseDescription>
     <slot>Childhood</slot>
     <skillGains>
@@ -72,11 +87,22 @@
         <amount>3</amount>
       </li>
     </skillGains>
+	 <disallowedTraits>
+		<li>
+            <defName>Psychopath</defName>
+        </li>
+		<li>
+            <defName>Cannibal</defName>
+        </li>
+    </disallowedTraits>
+	<spawnCategories>
+		<li>Uncommon</li>
+	</spawnCategories>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>ParentedChildWoodBeet</defName>
-    <title>Parented Child</title>
+    <title>Loved Beet</title>
     <baseDescription>[PAWN_nameDef] was one of the rare Wood Beets whose parents actually cared enough to raise their children. Because of this, [PAWN_pronoun] had a stable, functional family life.</baseDescription>
     <slot>Childhood</slot>
     <skillGains>
@@ -93,18 +119,29 @@
         <amount>4</amount>
       </li>
     </skillGains>
+	 <disallowedTraits>
+        <li>
+            <defName>Bloodlust</defName>
+        </li>
+		<li>
+            <defName>Psychopath</defName>
+        </li>
+		<li>
+            <defName>Cannibal</defName>
+        </li>
+    </disallowedTraits>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>DrugAddledWoodBeet</defName>
-    <title>Drug Addled</title>
-	<titleShort>competent druggie</titleShort>
+    <title>socially competent druggie</title>
+	<titleShort>Drug Addled</titleShort>
     <baseDescription>[PAWN_nameDef] has spent most of [PAWN_possessive] adult life doing various drugs. [PAWN_pronoun] is not very smart, but [PAWN_pronoun] had a certain charm.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
         <defName>Social</defName>
-        <amount>4</amount>
+        <amount>5</amount>
 	  </li>
     </skillGains>
 	<forcedTraits>
@@ -125,14 +162,17 @@
 	  <li>Offworld</li>
 	  <li>Outlander</li>
 	  <li>JeubBackstory</li>
+	  <li>ESCP_DunmerTelvanniBackstory</li>
+	  <li>ESCP_DunmerBackstory</li>
+	  <li>ESCP_DunmerSlaveBackstory</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>CannibalBeet</defName>
     <title>Sapient Beet Eater</title>
-	<titleShort>cannibal abductor</titleShort>
-    <baseDescription>[PAWN_nameDef] loves the taste of beets, and not just the vegetable  kind! [PAWN_pronoun] has eaten a large number of them over the years, and is adept at catching and cooking them. This "pallate" has extended to any other sapient life.</baseDescription>
+	<titleShort>devourer</titleShort>
+    <baseDescription>[PAWN_nameDef] loves the taste of beets, and not just the vegetable  kind! [PAWN_pronoun] has eaten a large number of sapient beets over the years, and is adept at catching and cooking them. This "pallate" has extended to any other sapient life.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -156,6 +196,15 @@
 		<defName>Psychopath</defName>
 	  </li>
     </forcedTraits>
+	<spawnCategories Inherit="False">
+		<li>WoodBeetBackstory</li>
+		<li>Raider</li>
+		<li>TribalHunter</li>
+		<li>Sadist</li>
+		<li>Madman</li>
+		<li>Mate</li>
+		<li>HSAU_BS_MLN_AdultArtVampSoldier</li>
+	</spawnCategories>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
@@ -179,7 +228,7 @@
     <defName>RaiderWoodBeet</defName>
     <title>Valenwood Raider</title>
 	<titleShort>Raider</titleShort>
-    <baseDescription>[PAWN_nameDef] has participated in numerous raids on Valenroff holdings. Dozens have died by [PAWN_possessive] hand.</baseDescription>
+    <baseDescription>[PAWN_nameDef] has participated in numerous raids on the evil Valenroff holdings. Dozens have died by [PAWN_possessive] hand.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -204,6 +253,8 @@
 		<li>Pirate</li>
 		<li>Tribal</li>
 		<li>TribalHunter</li>
+		<li>MedievalKnight</li>
+		<li>Offworld</li>
 	</spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -231,7 +282,6 @@
 	  <li>ManualSkilled</li>
     </workDisables>
 	<spawnCategories>
-		<li>WoodBeetBackstory</li>
 		<li>Offworld</li>
 		<li>Outlander</li>
 		<li>Raider</li>
@@ -263,12 +313,22 @@
         <amount>2</amount>
       </li>
     </skillGains>
+	<spawnCategories>
+		<li>WoodBeetBackstory</li>
+		<li>Miner</li>
+		<li>Outlander</li>
+		<li>TribalMiner</li>
+		<li>Pirate</li>
+		<li>PirateBackstory</li>
+		<li>Outsider</li>
+		<li>Tribal</li>
+	</spawnCategories>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>MeatballWoodBeet</defName>
-    <title>Near-Miss</title>
-    <baseDescription>As a youth,[PAWN_nameDef] claims to have encountered a Slub in [PAWN_possessive] wanderings. [PAWN_pronoun] was nearly captured, but managed to fight it off. [PAWN_pronoun] has been scarred by this event and, to this day, no one is sure what a Slub actually is.</baseDescription>
+    <title>Slub victim</title>
+    <baseDescription>As a young adult,[PAWN_nameDef] claims to have encountered a "Slub" in [PAWN_possessive] wanderings. [PAWN_pronoun] was nearly captured, but managed to fight it off. [PAWN_pronoun] has been scarred by this event and, to this day, no one is sure what a "Slub" actually is, or if it exists at all.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -287,15 +347,29 @@
       </li>
     </forcedTraits>
 	<workDisables>
-      <li>Social</li>
 	  <li>Animals</li>
     </workDisables>
+	<spawnCategories>
+		<li>Medieval</li>
+		<li>Classical</li>
+		<li>Offworld</li>
+		<li>Outlander</li>
+		<li>Pirate</li>
+		<li>Raider</li>
+		<li>Madman</li>
+		<li>Hunter</li>
+		<li>TribalHunter</li>
+		<li>Tribal</li>
+		<li>ESCP_DunmerBackstory</li>
+		<li>HSAU_BS_MLN_ChildhoodGerman</li>
+		<li>HSAU_BS_MLN_ChildhoodEarth</li>
+	</spawnCategories>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef ParentName="BeetBackstories">
     <defName>WoodBeetGatherer</defName>
-    <title>Valenwood Forager</title>
-    <baseDescription>[PAWN_nameDef] was tasked with gathering food for [PAWN_possessive] tribe. [PAWN_pronoun] turned out to be quite good at this.</baseDescription>
+    <title>forager</title>
+    <baseDescription>[PAWN_nameDef] was tasked with gathering food for [PAWN_possessive] community. [PAWN_pronoun] turned out to be quite good at this.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -307,12 +381,25 @@
 		<amount>2</amount>
 	  </li>
     </skillGains>
+	<spawnCategories>
+      <li>Farmer</li>
+	  <li>TribalFarmer</li>
+	  <li>Hunter</li>
+	  <li>TribalHunter</li>
+	  <li>Tribal</li>
+	  <li>BeetnikhBackstory</li>
+	  <li>GnomeBackstory</li>
+	  <li>JeubBackstory</li>
+	  <li>Medieval</li>
+	  <li>MedievalLow</li>
+	  <li>ESCP_DunmerBackstory</li>
+    </spawnCategories>
   </AlienRace.BackstoryDef>
   
   <AlienRace.BackstoryDef Name="PecanJoeBackstories" Abstract="True">
     <bodyTypeMale>Male</bodyTypeMale>
 	<bodyTypeFemale>Female</bodyTypeFemale>
-	<spawnCategories>
+	<spawnCategories Inherit="False">
       <li>PecanJoeBackstory</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>

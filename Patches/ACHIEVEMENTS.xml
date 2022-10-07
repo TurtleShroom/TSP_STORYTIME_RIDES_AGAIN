@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<!-- Is this Mod present? -->
+		<mods>
+			<li>Vanilla Achievements Expanded</li>
+		</mods> 
+		<!-- If it is, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<AchievementsExpanded.AchievementTabDef>
+					<defName>Storytime</defName>
+					<label>Storytime</label>
+				</AchievementsExpanded.AchievementTabDef>
+
+				<AchievementsExpanded.Reward_EnemyRaid>
+					<defName>JeubReward</defName>
+					<label>Summon A Swarm of Jeubs</label>
+					<tab>Storytime</tab>
+					<cost>10</cost>
+					<incident>Jeub_Swarm</incident>
+				</AchievementsExpanded.Reward_EnemyRaid>
+
+				<AchievementsExpanded.Reward_EnemyRaid>
+					<defName>CartographerReward</defName>
+					<label>Summon the Cartographer</label>
+					<tab>Storytime</tab>
+					<cost>50</cost>
+					<incident>Cartographer_Wanders</incident>
+				</AchievementsExpanded.Reward_EnemyRaid>
+
+				<AchievementsExpanded.Reward_EnemyRaid>
+					<defName>GibbonReward</defName>
+					<label>Summon the Gibbonous Moon</label>
+					<tab>Storytime</tab>
+					<cost>50</cost>
+					<incident>GibbonousMoon</incident>
+				</AchievementsExpanded.Reward_EnemyRaid>
+			
+				<AchievementsExpanded.AchievementDef>
+					<defName>strangeFruitAchievement</defName>
+					<label>Natural Caffine</label>
+					<description>Harvest a strange fruit.</description>
+					<tab>Storytime</tab>
+					<tracker Class="AchievementsExpanded.ItemTracker">
+						<def>StrangeFruit</def>
+						<count>1</count>
+					</tracker>
+					<texPath>Achievements/fruitAchievement</texPath>
+					<points>5</points>
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>jeubkillingAchievement</defName>
+					<label>Jeub Killer</label>
+					<description>Witness or cause the death of a non-sapient Jeub.</description>
+					<tab>Storytime</tab>
+					<tracker Class="AchievementsExpanded.KillTracker">
+						<kindDef>Jeub</kindDef>
+						<count>1</count>
+					</tracker>
+					<texPath>Achievements/jeubKillerAchievement</texPath>
+					<points>5</points>
+				</AchievementsExpanded.AchievementDef>	
+
+				<AchievementsExpanded.AchievementDef>
+					<defName>jeubkillingAchievement2</defName>
+					<label>Jeub Exterminator</label>
+					<description>Witness or cause the deaths of one hundred non-sapient Jeubs.</description>
+					<tab>Storytime</tab>
+					<tracker Class="AchievementsExpanded.KillTracker">
+						<kindDef>Jeub</kindDef>
+						<count>100</count>
+					</tracker>
+					<texPath>Achievements/jeubExterminatorAchievement</texPath>
+					<points>50</points>
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>froglordAchievement</defName>
+					<label>Frog Lord</label>
+					<description>Have one of every type of frog.</description>
+					<tab>Storytime</tab>
+					<tracker Class="AchievementsExpanded.KindDefTracker">
+						<kindDefs>
+							<li>
+								<key>SpringPeeper</key>
+								<value>1</value>
+							</li>
+							<li>
+								<key>ST_TreeFrog</key>
+								<value>1</value>
+							</li>
+							<li>
+								<key>TomatoFrog</key>
+								<value>1</value>
+							</li>
+							<li>
+								<key>PoisonDartFrog</key>
+								<value>1</value>
+							</li>
+							<li>
+								<key>ST_BullFrog</key>
+								<value>1</value>
+							</li>
+							<li>
+								<key>BudgettFrog</key>
+								<value>1</value>
+							</li>
+						</kindDefs>
+					</tracker>
+					<texPath>Achievements/frogAchievement</texPath>
+					<points>30</points>
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>coinAchievement</defName>
+					<label>Cursed Gold</label>
+					<description>Acquire one hundred Cursed Coins.</description>
+					<tab>Storytime</tab>
+					<tracker Class="AchievementsExpanded.ItemTracker">
+						<def>CursedCoin</def>
+						<count>100</count>
+					</tracker>
+					<texPath>Achievements/coinAchievement</texPath>
+					<points>30</points>
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>beefyFiveLayerAchievement</defName>
+					<label>Hold the Sour Cream</label>
+					<description>Cook a Meaty Five Layer Burrito.</description>
+					<tab>Storytime</tab>		
+					<tracker Class="AchievementsExpanded.ItemCraftTracker">
+						<def>TacoBellBurrito</def>
+						<count>1</count>
+					</tracker>
+					<texPath>Achievements/burritoAchievement</texPath>
+					<points>10</points>
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>eggNogAchievement</defName>
+					<label>DA NA NA NA NOG MAN!</label>
+					<description>Make twenty bottles of Egg Nog.</description>
+					<tab>Storytime</tab>		
+					<tracker Class="AchievementsExpanded.ItemCraftTracker">
+						<def>ST_EggNog</def>
+						<count>20</count>
+					</tracker>
+					<texPath>Achievements/eggNogAchievement</texPath>
+					<points>15</points> 
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>profaneNogAchievement</defName>
+					<label>No... no... please...</label>
+					<description>Create a bottle of Profane Egg Nog.</description>
+					<tab>Storytime</tab>				
+					<tracker Class="AchievementsExpanded.ItemCraftTracker">
+						<def>ST_ProfaneNog</def>
+						<count>1</count>
+					</tracker>
+					<texPath>Achievements/profaneNogAchievement</texPath>
+					<points>5</points>
+				</AchievementsExpanded.AchievementDef>	
+
+				<AchievementsExpanded.AchievementDef MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">
+					<defName MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">ST_runePlateAchievement</defName>
+					<label MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">Rune Plates!</label>
+					<description MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">Craft some heavy plate armor from runite.</description>
+					<tab MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">Storytime</tab>
+					<tracker Class="AchievementsExpanded.ItemCraftTracker" MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">
+						<def MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_Apparel_PlateArmorHeavy</def>
+						<madeFrom>ST_Runite</madeFrom>
+						<count>1</count>
+					</tracker>
+					<texPath MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">Achievements/runePlateAchievement</texPath>
+					<points MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">25</points>
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>gibbonMoonAchievement</defName>
+					<label>Glitter Apes</label>
+					<description>Witness a Gibbonous Moon.</description>
+					<tab>Storytime</tab>		
+					<tracker Class="AchievementsExpanded.IncidentTracker">
+						<def>GibbonousMoon</def>
+						<count>1</count>
+					</tracker>
+					
+					<texPath>Achievements/gibbonousMoonAchievement</texPath>
+					<points>10</points>
+				</AchievementsExpanded.AchievementDef>
+
+				<AchievementsExpanded.AchievementDef>
+					<defName>beanManAchievement</defName>
+					<label>THE BULBORB HAS ASCENDED</label>
+					<description>Create a Bean Man Larva.</description>
+					<tab>Storytime</tab>		
+					<tracker Class="AchievementsExpanded.ItemCraftTracker">
+						<def>BeanManLarva</def>
+						<count>1</count>
+					</tracker>
+					<texPath>Achievements/beanManAchievement</texPath>
+					<points>20</points> 
+				</AchievementsExpanded.AchievementDef>
+			</value>
+		</match>
+	</Operation>
+</Patch>
