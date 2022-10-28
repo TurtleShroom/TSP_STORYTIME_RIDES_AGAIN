@@ -175,6 +175,7 @@
 		<li>MedievalTownsfolk</li>
 		<li>MedievalMerchant</li>
 		<li>Outlander</li>
+		<li>Miner</li>
 		<li>Tribal</li>
 		<li>TribalMiner</li>
 		<li>Classical</li>
@@ -328,6 +329,7 @@
 		<li>MedievalCriminal</li>
 		<li>MedievalMisc</li>
 		<li>WoodBeetBackstory</li>
+		<li>JeubBackstory</li>
 	</spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -440,13 +442,13 @@
         <li>Violent</li>
     </workDisables>
 	<femaleCommonality>50</femaleCommonality>
-	<maleCommonality>0</maleCommonality>
+	<maleCommonality>1</maleCommonality>
   </AlienRace.BackstoryDef>
 
   <AlienRace.BackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_MagicAztec</defName>
     <title>Sunset Invader</title>
-    <baseDescription>[PAWN_nameDef] is a Magic Aztec. [PAWN_pronoun] participated in the failed campaigns of conquest against Old Earth's Europe thousands of years ago. He was eventually sealed into a highly advanced, Aztec obsidian chamber. Somehow, [PAWN_pronoun] has ended up stranded on this Rim World.</baseDescription>
+    <baseDescription>[PAWN_nameDef] thinks that [PAWN_pronoun] is a Magic Aztec. According to [PAWN_objective], [PAWN_nameDef] participated in the failed campaigns of conquest against Old Earth's Europe thousands of years ago. No records of such an invasion exist. [PAWN_nameDef] claims that [PAWN_pronoun] was eventually sealed into a highly advanced, Aztec obsidian chamber for crypto-sleep. Somehow, [PAWN_pronoun] has ended up stranded on this Rim World. \n While [PAWN_possessive] supposed origins are almost certainly not real, [PAWN_possessive] training certainly is. Few will be able to withstand [PAWN_objective] in battle.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -458,7 +460,7 @@
         <amount>-2</amount>
       </li>
     </skillGains>
-	<forcedTraits MayRequire="Torann.ARimworldOfMagic">
+	<forcedTraits>
 		<li>
 			<defName>Psychopath</defName>
 		</li>
