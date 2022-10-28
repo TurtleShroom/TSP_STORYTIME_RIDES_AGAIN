@@ -3,7 +3,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>BlastFurnaceHeater</defName>
     <label>blast furnace heater</label>
-    <description>Consumes both electricity and chemfuel to generate extreme amounts of heat.</description>    
+    <description>Consumes both electricity and fuel to generate extreme amounts of heat.</description>    
     <thingClass>Building_WorkTable</thingClass>
     <category>Building</category>
     <graphicData>
@@ -29,11 +29,13 @@
     <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>
     <fillPercent>0.99</fillPercent>
+	<!--
     <thingCategories>
-      <li>BuildingsTemperature</li>
+		<li>BuildingsTemperature</li>
     </thingCategories>
+	-->
     <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
+      <MaxHitPoints>1500</MaxHitPoints>
       <WorkToBuild>5000</WorkToBuild>
       <Mass>40</Mass>
       <Flammability>0</Flammability>
@@ -120,6 +122,8 @@
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
 					<li>ToolCabinet</li>
+					<li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkableToolBox</li>
+					<li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkChuJu</li>
 				</linkableFacilities>
 			</li>
 		  <li>
