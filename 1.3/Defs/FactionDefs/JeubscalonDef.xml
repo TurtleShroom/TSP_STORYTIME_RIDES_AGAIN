@@ -53,7 +53,7 @@
     <backstoryCategories>
       <li>JeubBackstory</li>
     </backstoryCategories>
-    <geneticVariance>0.1</geneticVariance>
+    <geneticVariance>0</geneticVariance>
     <caravanTraderKinds>
       <li>Caravan_Neolithic_BulkGoods</li>
       <li>Caravan_Neolithic_WarMerchant</li>
@@ -68,25 +68,25 @@
       <li>Base_Neolithic_Standard</li>
     </baseTraderKinds>
     <allowedArrivalTemperatureRange>
-      <min>-40</min>
-      <max>45</max>
+      <min>-15</min>
+      <max>74</max>
     </allowedArrivalTemperatureRange>
     <maxPawnCostPerTotalPointsCurve>
       <points>
-        <li>(0,250)</li>
-        <li>(70,400)</li>
-        <li>(400,700)</li>
-        <li>(900,800)</li>
-        <li>(100000,10000)</li>
+        <li>(0,300)</li>
+        <li>(70,900)</li>
+        <li>(400,1000)</li>
+        <li>(900,1500)</li>
+        <li>(100000,11000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
 	<raidLootValueFromPointsCurve>
       <points>
-        <li>(35,     15)</li>
-        <li>(100,   120)</li>
-        <li>(1000,  500)</li>
-        <li>(2000,  800)</li>
-        <li>(4000, 1000)</li>
+        <li>(35,     35)</li>
+        <li>(100,   200)</li>
+        <li>(1000,  600)</li>
+        <li>(2000,  1000)</li>
+        <li>(4000, 1500)</li>
       </points>
     </raidLootValueFromPointsCurve>
     <raidCommonalityFromPointsCurve>
@@ -99,17 +99,16 @@
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-          <PlayerJeub>50</PlayerJeub>
-		  <High_King>15</High_King>
-          <!-- <Jeub>100</Jeub> -->
+          <PlayerJeub>100</PlayerJeub>
+		  <Snaff_HighKing>15</Snaff_HighKing>
         </options>
       </li>
       <li>
         <kindDef>Combat</kindDef>
         <options>
-          <PlayerJeub>50</PlayerJeub>
-          <Jeub>150</Jeub>
-		  <High_King>25</High_King>
+          <PlayerJeub>150</PlayerJeub>
+          <Jeub>400</Jeub>
+		  <Snaff_HighKing>25</Snaff_HighKing>
         </options>
       </li>
       <li>
@@ -125,15 +124,16 @@
         </carriers>
         <guards>
           <PlayerJeub>15</PlayerJeub>
-          <Jeub>200</Jeub>
+          <Jeub>300</Jeub>
+		  <Snaff_HighKing>1</Snaff_HighKing>
         </guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
         <options>
           <PlayerJeub>100</PlayerJeub>
-          <Jeub>400</Jeub>
-		  <High_King>50</High_King>
+          <Jeub>500</Jeub>
+		  <Snaff_HighKing>20</Snaff_HighKing>
         </options>
       </li>
     </pawnGroupMakers>
@@ -141,14 +141,15 @@
 	
 	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
     <fixedLeaderKinds>
-      <li>High_King</li>
+      <li>Snaff_HighKing</li>
     </fixedLeaderKinds>
 	
-  <!--  <modExtensions>
-      <li Class="JecsTools.FactionSettings">
-        <entrySoundDef>Snaffs_Workshop</entrySoundDef>
-      </li>
-    </modExtensions> -->
+	<!--
+	<modExtensions>
+		<li Class="JecsTools.FactionSettings">
+			<entrySoundDef>Snaffs_Workshop</entrySoundDef>
+		</li>
+	</modExtensions> -->
   </FactionDef>
 
 
