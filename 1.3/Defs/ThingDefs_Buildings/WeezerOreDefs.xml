@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Defs>
 
-  <ThingDef ParentName="RockBase">
-    <defName>WeezerOre</defName>
-    <label>Weezer albums</label>
-    <description>A cluster of musical albums encoded by laser on an eons-old, physical optical disc standard, each comprised principally of poly-carbonate plastics. The age of these albums is estimated to be three thousand years old, and they are socketed into plastic cases, each baring pictures of Old Earth humans in late twentieth-century clothing. This plastic can be mined, though it is delicate, and the albums can be melted down and used in the place of plastics, flammable woods, and nylon. \n \n Written on the intact cases and optical discs is "WEEZER", indicating the subject of the musical album.</description>
-    <graphicData>
-      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <color>(0, 182, 213)</color>
-      <colorTwo>(0, 89, 133)</colorTwo>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>600</MaxHitPoints>
-    </statBases>
-    <building>
-      <isResourceRock>true</isResourceRock>
-      <mineableThing>Weezer</mineableThing>
-      <mineableYield>60</mineableYield>
-      <mineableScatterCommonality>0.045</mineableScatterCommonality> <!-- Weezer albums are mostly in landf- uhh, I mean buried for safe keeping, where they are quite common. Use a Deep Resource Scanner to uncover them. -->
-      <mineableScatterLumpSizeRange>10~16</mineableScatterLumpSizeRange>
-    </building>
-  </ThingDef>
-  
+<Defs>
+	<ThingDef ParentName="RockBase">
+		<defName>WeezerOre</defName>
+		<label>Weezer albums</label>
+		<description>A cluster of musical albums encoded by laser on an eons-old, physical optical disc standard, each comprised principally of poly-carbonate plastics. The age of these albums is estimated to be three thousand years old, and they are socketed into plastic cases, each baring pictures of Old Earth humans in late twentieth-century clothing. This plastic can be mined, though it is delicate, and the albums can be melted down for use in the place of plastics, flammable woods, and nylon. \n \n Written on the intact cases and optical discs is "WEEZER", indicating the subject of the musical album.</description>
+		<graphicData>
+		  <texPath>Things/Building/Linked/Embrasure/Embrasure_Atlas_Neo</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <!-- <shaderType>CutoutComplex</shaderType> -->
+		  <color>(0, 182, 213)</color>
+		  <!-- <colorTwo>(0, 89, 133)</colorTwo> -->
+		</graphicData>
+		<statBases>
+		  <MaxHitPoints>300</MaxHitPoints>
+		</statBases>
+		<building>
+		  <isResourceRock>true</isResourceRock>
+		  <mineableThing>Weezer</mineableThing>
+		  <mineableYield>60</mineableYield>
+		  <mineableScatterCommonality>0.045</mineableScatterCommonality> <!-- Weezer albums are mostly in landf- uhh, I mean buried for safe keeping, where they are quite common. Use a Deep Resource Scanner to uncover them. -->
+		  <mineableScatterLumpSizeRange>10~16</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
 </Defs>
