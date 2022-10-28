@@ -3,7 +3,7 @@
   <ThingDef ParentName="BaseWeapon">
     <defName>FatManAngreal</defName>
     <label>Fat Man statuette</label>
-    <description>A statuette of a fat human. It makes its user feel more powerful. \n \n A Fat Man statuette has magically infused persona that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the weapon's persona will refuse to be wielded by anyone else.</description>
+    <description>A statuette of a fat human. It makes its user feel more powerful. \n \n A Fat Man statuette has a magically infused Persona that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the weapon's persona will refuse to be wielded by anyone else.</description>
     <graphicData>
       <texPath>Things/Items/FatMan</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -60,10 +60,20 @@
 		<capacities>
 			<li>TSP_ST_Thump</li>
 		</capacities>
-		<power>9</power>
+		<power>13</power>
 		<cooldownTime>0.2</cooldownTime>
-		<armorPenetration>0</armorPenetration>
-		<chanceFactor>0.1</chanceFactor>
+		<armorPenetration>0.1</armorPenetration>
+		<chanceFactor>0.5</chanceFactor>
+	  </li>
+	  <li>
+		<label>bust</label>
+		<capacities>
+			<li>Demolish</li>
+		</capacities>
+		<power>13</power>
+		<cooldownTime>0.2</cooldownTime>
+		<armorPenetration>0.2</armorPenetration>
+		<chanceFactor>0.5</chanceFactor>
 	  </li>
     </tools>
     <thingCategories>
@@ -131,7 +141,7 @@
       <li>
         <label>not a sword</label>
         <capacities>
-			<!-- <li>Blunt</li> -->
+			<li>Blunt</li>
 			<li>TSP_ST_Thump</li>
         </capacities>
         <power>5</power>
