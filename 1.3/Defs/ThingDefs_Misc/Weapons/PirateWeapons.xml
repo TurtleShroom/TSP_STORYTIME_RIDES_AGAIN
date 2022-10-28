@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
 
+<Defs>
   <ThingDef Name="PirateRangedWeapon" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Medieval</techLevel>
     <thingCategories>
@@ -42,7 +42,7 @@
   <ThingDef ParentName="PirateRangedWeapon">
     <defName>PiratePistol</defName>
     <label>flintlock pistol</label>
-    <description>An old pistol of a design commonly used by high ranking pirates. Short range and difficult to reload, but packs a punch in the hand of a talented marksman.</description>
+    <description>An old pistol of a design commonly used by high ranking pirates. It has a short range and is difficult to reload, but packs a punch in the hand of a talented marksman.</description>
     <graphicData>
       <texPath>Things/Items/PirateWeapons/PiratePistol</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -131,7 +131,7 @@
   <ThingDef ParentName="PirateRangedWeapon">
     <defName>PirateBlunderbuss</defName>
     <label>blunderbuss</label>
-    <description>An early form of shotgun, shoots metal pellets wildly. Extremely innacurate and slow to reload, but deadly.</description>
+    <description>An early form of shotgun that shoots metal pellets wildly. Extremely innacurate and slow to reload, but deadly.</description>
     <graphicData>
       <texPath>Things/Items/PirateWeapons/Blunderbuss</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -498,6 +498,7 @@
 		<li>PrussianInfantryMelee</li>
 		<li>FrenchInfantryMelee</li>
 		<li>BritishInfantryMelee</li>
+		<li>Pirate</li>
     </weaponTags>
     <statBases>
       <WorkToMake>12000</WorkToMake>
@@ -581,14 +582,14 @@
 			<li>Blunt</li>
         </capacities>
         <power>9</power>
-        <cooldownTime>2</cooldownTime>
+        <cooldownTime>1</cooldownTime>
       </li>
       <li>
         <label>edge</label>
         <capacities>
 			<li>Demolish</li>
         </capacities>
-        <power>10</power>
+        <power>8</power> <!-- Slightly more powerful than the Vanilla rendition's Breaching Axe -->
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
@@ -650,6 +651,8 @@
         <capacities>
           <li>Stab</li>
 		  <li>Poke</li>
+		  <li>Cut</li>
+		  <li>Demolish</li>
 		  <li>TSP_ST_Thump</li>
         </capacities>
         <power>40</power>

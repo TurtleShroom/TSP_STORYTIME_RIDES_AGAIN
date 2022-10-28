@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
-  
+<Defs>
   <ThingDef ParentName="UglyRockBase" Name="ST_MudstoneBase">
     <defName>ST_MudStone</defName>
     <label>mud stone</label>
@@ -10,18 +9,20 @@
       <color>(130, 84, 62)</color>
     </graphicData>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
+		<MaxHitPoints>90</MaxHitPoints>
+		<Cleanliness>-1</Cleanliness>
     </statBases>
     <building>
       <mineableThing>ST_ChunkMudstone</mineableThing>
       <mineableDropChance>0.6</mineableDropChance>
       <smoothedThing>ST_SmoothedMudstone</smoothedThing>
+	  <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
     </building>
   </ThingDef>
   
   <ThingDef ParentName="ST_MudstoneBase">
     <defName>ST_SmoothedMudstone</defName>
-    <label>smoothed mud stone</label>
+    <label>smoothed mud</label>
     <description>A brittle brown stone made from dried and compressed mud.</description>
     <graphicData>
       <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
@@ -31,9 +32,9 @@
       <MarketValue>25</MarketValue>
     </statBases>
     <building>
-      <isNaturalRock>false</isNaturalRock>
+      <isNaturalRock>true</isNaturalRock>
       <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
-      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <artificialForMeditationPurposes Inherit="False">false</artificialForMeditationPurposes>
       <smoothedThing />
     </building>
     <saveCompressible>false</saveCompressible>
@@ -48,6 +49,7 @@
     </graphicData>
     <statBases>
       <Mass>15</Mass>
+	  <Cleanliness>-1</Cleanliness>
     </statBases>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <butcherProducts>
@@ -72,7 +74,7 @@
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <stuffAdjective>muddy</stuffAdjective>
       <statFactors>
-        <Beauty>0.4</Beauty>
+        <Beauty>0.3</Beauty>
         <MaxHitPoints>0.8</MaxHitPoints>
         <WorkToBuild>0.8</WorkToBuild>
         <WorkToMake>0.8</WorkToMake>
