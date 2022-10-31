@@ -14,6 +14,7 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 	<xpath>/Defs/ThingDef[defName="CCPChocolateBun"]</xpath>
@@ -66,7 +67,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName="TSP_ST_GnomeTrader"]</xpath>
+			<xpath>/Defs/TraderKindDef[defName="TSP_ST_GnomeTrader"]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_Animals">
 					<maxWildness>0.90</maxWildness>

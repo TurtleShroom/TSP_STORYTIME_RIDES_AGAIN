@@ -52,10 +52,12 @@
   <PawnKindDef ParentName="BasePlayerGnomePawnKind">
     <defName>PlayerGnome</defName>
     <label>Gnome</label>
+	<!--
 	<backstoryCategories>
 		<li>Farmer</li>
 		<li>GnomeBackstory</li>
 	</backstoryCategories>
+	-->
     <combatPower>50</combatPower>
     <!-- <defaultFactionType>PlayerColony</defaultFactionType> -->
     <chemicalAddictionChance>0.09</chemicalAddictionChance>
@@ -348,7 +350,7 @@
 	  <li>Gnoble</li>
 	  <li>ST_GnomeClothing</li>
     </apparelTags>
-	<apparelRequired>
+	<apparelRequired Inherit="False">
 		<li>Apparel_Crown</li>
 	</apparelRequired>
     <apparelMoney>
@@ -373,6 +375,7 @@
         <li>GnomeMelee</li>
 		<li>MedievalHeavy</li>
 		<li>MedievalRangeDecent</li>
+		<li>MedievalRangeAdvanced</li>
 		<li>SimpleGun</li>
     </weaponTags>
     <initialWillRange>0.5~6</initialWillRange>
@@ -445,8 +448,5 @@
 		</weaponTags>
 		<initialWillRange>0.25~1</initialWillRange>
 		<initialResistanceRange>1~3</initialResistanceRange>
-		<backstoryCategories Inherit="False">
-			<li>GnomeBackstory</li>
-		</backstoryCategories>
 	  </PawnKindDef>
 </Defs>
