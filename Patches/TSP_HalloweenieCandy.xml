@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="O21_Halloween_CandyCorn"]</xpath>
+		<!-- If it does, add this. -->
+		<success>Always</success>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef>
+					<defName>TSP_Halloweenie_Make_CandyCorn_ST</defName>
+					<label>bake Candy Corn using Gnome Sugar</label>
+					<description>Bake Candy Corn using the Cauldron.</description>
+					<jobString>baking Candy Corn</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<workAmount>500</workAmount>
+					<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>RawCorn</li>
+									<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+									<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li>O21_Halloween_CandyCorn</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>35</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_GnomeSugar</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li>O21_Halloween_CandyCorn</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>15</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>RawCorn</li>
+							<li>ST_GnomeSugar</li>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+							<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+						</thingDefs>
+						<disallowedThingDefs>
+							<li>O21_Halloween_CandyCorn</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<O21_Halloween_CandyCorn>50</O21_Halloween_CandyCorn>
+					</products>
+					<recipeUsers>
+						<li>GnomeTable</li>
+						<li MayRequire="aratocat.wonderland">WonkaTable</li>
+						<li MayRequire="morishep.tarojun.onioftherim">Oni_GroundOven</li>
+					</recipeUsers>
+					<workSkill>Cooking</workSkill>
+					<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_Halloweenie_Make_KitKats_ST</defName>
+					<label>bake Kit Kat Bars with Gnome Sugar</label>
+					<description>Bake Kit Kats using Gnome Sugar. Even after three millinea, it is obviously still the best candy.</description>
+					<jobString>baking Kit Kat Bars</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<workAmount>700</workAmount>
+					<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Chocolate</li>
+									<li MayRequire="aratocat.wonderland">Chocofuel</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li MayRequire="neronix17.halloween">O21_Halloween_KitKat</li>
+									<li>ST_GnomeSugar</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>25</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_GnomeSugar</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li MayRequire="neronix17.halloween">O21_Halloween_KitKat</li>
+									<li>Chocolate</li>
+									<li MayRequire="aratocat.wonderland">Chocofuel</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>5</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>Chocolate</li>
+							<li>ST_GnomeSugar</li>
+							<li MayRequire="aratocat.wonderland">Chocofuel</li>
+						</thingDefs>
+						<disallowedThingDefs>
+							<li MayRequire="neronix17.halloween">O21_Halloween_KitKat</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<O21_Halloween_KitKat>30</O21_Halloween_KitKat>
+					</products>
+					<recipeUsers>
+						<li>GnomeTable</li>
+						<li MayRequire="aratocat.wonderland">WonkaTable</li>
+						<li MayRequire="morishep.tarojun.onioftherim">Oni_GroundOven</li>
+					</recipeUsers>
+					<skillRequirements>
+						<Cooking>1</Cooking>
+					</skillRequirements>
+					<workSkill>Cooking</workSkill>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_Halloweenie_Make_MM_ST</defName>
+					<label>grind M-and-M's from Gnome Sugar</label>
+					<description>Shred sugar and harden them into delicious M-and-M candies. \n \n Note: XML does not accept the ampersand.</description>
+					<jobString>grinding MM's</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<workAmount>400</workAmount>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_GnomeSugar</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li MayRequire="neronix17.halloween">O21_Halloween_MandM</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>45</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_GnomeSugar</li>
+						</thingDefs>
+						<disallowedThingDefs>
+							<li MayRequire="neronix17.halloween">O21_Halloween_MandM</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<O21_Halloween_MandM>40</O21_Halloween_MandM>
+					</products>
+					<recipeUsers>
+						<li>GnomeTable</li>
+						<li MayRequire="aratocat.wonderland">WonkaTable</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					</recipeUsers>
+					<!-- <workSkill>Cooking</workSkill> -->
+				</RecipeDef>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Pumpkinbasket"]</xpath>
+		<!-- If it does, add this. -->
+		<success>Always</success>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef>
+					<defName>TSP_Halloweenie_Make_PumpkinBasket_ST</defName>
+					<label>grind Pumpkin Baskets using Gnome Sugar</label>
+					<description>Magically grind candy mixed with pumpkins or weaving materials into a confectionary that tastes entirely different from any ingredient put into it.</description>
+					<jobString>consolidating Pumpkin Baskets</jobString>
+					<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<workAmount>400</workAmount>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_GnomeSugar</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li MayRequire="zal.witchinghour">Pumpkinbasket</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>30</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>Hay</li>
+									<li>Gnome_Cloth</li>
+									<li MayRequire="halloweenparade.velcroboy333">PumpkinHull</li>
+									<li MayRequire="garbagedayisheretostay.pumpkins.gdihtsp">RawPumpkin</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li MayRequire="zal.witchinghour">Pumpkinbasket</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>30</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>Hay</li>
+							<li>ST_GnomeSugar</li>
+							<li>Gnome_Cloth</li>
+							<li MayRequire="halloweenparade.velcroboy333">PumpkinHull</li>
+							<li MayRequire="garbagedayisheretostay.pumpkins.gdihtsp">RawPumpkin</li>
+							<li MayRequire="halloweenparade.velcroboy333">PumpkinCookie</li>
+						</thingDefs>
+						<disallowedThingDefs>
+							<li MayRequire="zal.witchinghour">Pumpkinbasket</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<Pumpkinbasket>70</Pumpkinbasket>
+					</products>
+					<recipeUsers>
+						<li>GnomeTable</li>
+						<li MayRequire="aratocat.wonderland">WonkaTable</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					</recipeUsers>
+					<workSkill>Cooking</workSkill>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_Halloweenie_Make_Smarties_ST</defName>
+					<label>sweeten chalk into Smarties using Gnome Sugar</label>
+					<description>Smarties are just sugar-coated chalk, right?</description>
+					<jobString>sweetening chalk</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<workAmount>400</workAmount>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_GnomeSugar</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li MayRequire="zal.witchinghour">Smirties</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>25</count>
+						</li>
+						<li>
+							<filter>
+								<categories>
+									<li>StoneChunks</li>
+								</categories>
+							</filter>
+							<count></count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<categories>
+							<li>StoneChunks</li>
+						</categories>
+						<thingDefs>
+							<li>ST_GnomeSugar</li>
+						</thingDefs>
+						<disallowedThingDefs>
+							<li MayRequire="zal.witchinghour">Smirties</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<Smirties>50</Smirties>
+					</products>
+					<recipeUsers>
+						<li>GnomeTable</li>
+						<li MayRequire="aratocat.wonderland">WonkaTable</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					</recipeUsers>
+				</RecipeDef>
+	
+				<RecipeDef>
+					<defName>TSP_Halloweenie_SyntheticChocolate_ST</defName>
+					<label>grind synthetic candy rolls</label>
+					<description>That's not chocolate and it's not a Tootsie Roll. It tastes good, but.... what is it? What is it, really?</description>
+					<jobString>rolling shady candies</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<workAmount>400</workAmount>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_Worm</li>
+									<li>ST_GnomeSugar</li>
+									<li>GnomeFlour</li>
+									<li>Gnome_Cloth</li>
+									<li MayRequire="thecatlover366.oompaloompas">Meat_Alien_Loompa</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>50</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_Worm</li>
+							<li>ST_GnomeSugar</li>
+							<li>GnomeFlour</li>
+							<li>Gnome_Cloth</li>
+						</thingDefs>
+						<disallowedThingDefs>
+							<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_Worm</li>
+							<li>ST_GnomeSugar</li>
+						</thingDefs>
+						<disallowedThingDefs>
+							<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+						</disallowedThingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<Suspiciouschocolate>50</Suspiciouschocolate>
+					</products>
+					<recipeUsers>
+						<li>GnomeTable</li>
+						<li MayRequire="aratocat.wonderland">WonkaTable</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					</recipeUsers>
+					<workSkill>Cooking</workSkill>
+				</RecipeDef>
+			</value>
+		</match>
+	</Operation>
+</Patch>
