@@ -130,7 +130,7 @@
 	
 	<!-- This allows insane animals to be cured, too. -->
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist/ -->
+	<!-- Does this exist? -->
 		<xpath>/Defs/HediffDef[defName="CatatonicBreakdown"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
@@ -138,6 +138,25 @@
 			<xpath>/Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
 			<value>
 				<li>TSP_KASENRA_CureCatatonia</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Allows Catatonia to be cured by Dried Frog Pills -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist/ -->
+		<xpath>/Defs/HediffDef[defName="CatatonicBreakdown"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/HediffDef[defName="CatatonicBreakdown"]/recipes</xpath>
+			<value>
+				<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+				<everCurableByItem>true</everCurableByItem>
+				<makesSickThought>true</makesSickThought>
+				<isBad>true</isBad>
+				<scenarioCanAdd>true</scenarioCanAdd>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

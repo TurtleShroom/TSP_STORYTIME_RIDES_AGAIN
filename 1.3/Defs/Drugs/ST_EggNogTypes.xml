@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
   <ThingDef ParentName="EggBase">
     <defName>NogStarter</defName>
@@ -36,7 +37,7 @@
     <ingestible>
       <preferability>DesperateOnlyForHumanlikes</preferability>
       <tasteThought>AteRawFood</tasteThought>
-      <foodType>AnimalProduct, Fluid</foodType>
+      <foodType>AnimalProduct, OvivoreAnimal, Fluid</foodType>
 	  <tableDesired>false</tableDesired>
 	  <maxNumToIngestAtOnce>5</maxNumToIngestAtOnce> <!-- Apparently, you can only take one hit on a drug at a time -->
 	  <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
@@ -72,8 +73,8 @@
 	</tradeTags>
 	-->
     <ingestible>
-      <preferability>RawBad</preferability>
-      <foodType>AnimalProduct, Fluid</foodType>
+      <preferability>DesperateOnly</preferability>
+      <foodType>AnimalProduct, OvivoreAnimal, Fluid</foodType>
 	  <tableDesired>false</tableDesired>
 	  <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce> <!-- Apparently, you can only take one hit on a drug at a time -->
 	  <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
@@ -135,7 +136,7 @@
       <li>TSP_ST_EggNog</li>
     </thingCategories>
     <ingestible>
-      <foodType>AnimalProduct, Processed, Fluid, Liquor</foodType>
+      <foodType Inherit="False">AnimalProduct, OvivoreAnimal, Processed, Fluid, Liquor</foodType>
 	  <!-- <preferability>MealFine</preferability> -->
 	  <preferability>NeverForNutrition</preferability>
       <joyKind>Gluttonous</joyKind>
@@ -179,12 +180,13 @@
         <addictiveness>0.5</addictiveness>
         <minToleranceToAddict>0.2</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.5</existingAddictionSeverityOffset>
-        <needLevelOffset>0.5</needLevelOffset>
+        <needLevelOffset>1</needLevelOffset>
         <listOrder>20</listOrder>
         <overdoseSeverityOffset>0</overdoseSeverityOffset>
         <largeOverdoseChance>0</largeOverdoseChance>
       </li>
 	  <li Class="CompProperties_Ingredients" />
+	  <li Class="CompProperties_Forbiddable"></li>
     </comps>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
     <orderedTakeGroup>Drug</orderedTakeGroup>
@@ -260,6 +262,7 @@
         <needLevelOffset>1</needLevelOffset>
         <listOrder>10</listOrder>
       </li>
+	  <li Class="CompProperties_Forbiddable"></li>
     </comps>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
   </ThingDef>
@@ -358,6 +361,7 @@
         <needLevelOffset>1</needLevelOffset>
         <listOrder>10</listOrder>
       </li>
+	  <li Class="CompProperties_Forbiddable"></li>
     </comps>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
     <orderedTakeGroup>Drug</orderedTakeGroup>
@@ -456,6 +460,7 @@
         <needLevelOffset>1</needLevelOffset>
         <listOrder>10</listOrder>
       </li>
+	  <li Class="CompProperties_Forbiddable"></li>
     </comps>
 	<storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
     <orderedTakeGroup>Drug</orderedTakeGroup>
@@ -485,7 +490,7 @@
     </thingCategories>
     <alwaysHaulable>true</alwaysHaulable>
     <comps>
-		<!-- <li Class="CompProperties_Forbiddable" /> -->
+		<li Class="CompProperties_Forbiddable" />
 		<li Class="CompProperties_Ingredients" />
     </comps>
 	<ingestible>

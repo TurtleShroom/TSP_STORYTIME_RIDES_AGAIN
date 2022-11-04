@@ -23,7 +23,7 @@
 		  <generalSettings>
 			<maleGenderProbability>0.5</maleGenderProbability>
 			<immuneToAge>false</immuneToAge>
-			<canLayDown>false</canLayDown> <!-- Frogs can "assume the position" like cats, but they do not lay down. Frogs crouch. -->
+			<canLayDown>false</canLayDown> <!-- Frogs can "assume the position" like cats, but they do not lay down to sleep. Frogs crouch. -->
 			<maxDamageForSocialfight>3</maxDamageForSocialfight>
 			<alienPartGenerator>
 			  <aliencrowntypes>
@@ -225,6 +225,23 @@
 			<chanceFactor>0.2</chanceFactor>
 		  </li>
 		</tools>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>1</accuracyTouch>
+				<accuracyShort>0.9</accuracyShort>
+				<accuracyMedium>0.6</accuracyMedium>
+				<accuracyLong>0.6</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ST_Lick</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<range>6</range>				
+				<soundCast>Lick</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<label>lick shot</label>
+				<commonality>2</commonality>
+			</li>
+		</verbs>
 		<race>
 		  <thinkTreeMain>Humanlike</thinkTreeMain>
 		  <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
