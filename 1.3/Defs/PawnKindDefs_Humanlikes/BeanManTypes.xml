@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <PawnKindDef Abstract="True" Name="BasePlayerBeanManPawnKind">
-    <race>Alien_BeanMan</race>
-    <baseRecruitDifficulty>0.2</baseRecruitDifficulty>
-    <isFighter>true</isFighter>
-    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-    <forceNormalGearQuality>true</forceNormalGearQuality>
-	<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-    <invNutrition>2</invNutrition>
-	<invFoodDef>ST_Bean</invFoodDef>
-  </PawnKindDef>
+	<PawnKindDef Abstract="True" Name="BasePlayerBeanManPawnKind">
+		<race>Alien_BeanMan</race>
+		<baseRecruitDifficulty>0.2</baseRecruitDifficulty>
+		<isFighter>true</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<invNutrition>2</invNutrition>
+		<invFoodDef>ST_Bean</invFoodDef>
+	</PawnKindDef>
   
   <PawnKindDef ParentName="BasePlayerBeanManPawnKind">
     <defName>PlayerBeanMan</defName>
@@ -24,8 +24,10 @@
 	  </li>
 	</backstoryFiltersOverride>
     <weaponTags>
-      <li>Gun</li>
-	  <li>WoodcuttingHatchet</li>
+		<li>SimpleGun</li>
+		<li>Gun</li>
+		<li>BeanManMelee</li>
+		<li>WoodcuttingHatchet</li>
     </weaponTags>
 	<maxGenerationAge>10</maxGenerationAge>
     <initialWillRange>1~4</initialWillRange>
@@ -50,6 +52,7 @@
     <weaponTags>
       <li>Gun</li>
 	  <li>WoodcuttingHatchet</li>
+	  <li>BeanManMelee</li>
     </weaponTags>
     <weaponMoney>250~500</weaponMoney>
     <techHediffsChance>0.04</techHediffsChance>
@@ -80,6 +83,7 @@
     <weaponTags>
       <li>Gun</li>
 	  <li>WoodcuttingHatchet</li>
+	  <li>BeanManRanged</li>
     </weaponTags>
     <weaponMoney>250~500</weaponMoney>
     <techHediffsChance>0.04</techHediffsChance>
@@ -112,6 +116,8 @@
 	  <li>IndustrialRangedAdvanced</li>
 	  <li>IndustrialRangedDecent</li>
 	  <li>IndustrialRangedBasic</li>
+	  <li>BeanManMeleeAdvanced</li>
+	  <li>BeanManRangedAdvanced</li>
     </weaponTags>
     <weaponMoney>1250~5000</weaponMoney>
     <techHediffsChance>0.1</techHediffsChance>
