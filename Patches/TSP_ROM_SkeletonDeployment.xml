@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/ingredints/li/filter/thingDefs</xpath>
+			<value>
+				<li>TSP_ST_SkeletalMarrow</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/fixedIngredientFilter/thingDefs</xpath>
+			<value>
+				<li>TSP_ST_SkeletalMarrow</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/defaultIngredientFilter/thingDefs</xpath>
+			<value>
+				<li>TSP_ST_SkeletalMarrow</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<!-- If it does, replace an entry with this. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/products</xpath>
+			<value>
+				<products>
+					<ROMB_Gelatin>10</ROMB_Gelatin>
+				</products>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race/useMeatFrom</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race/useMeatFrom</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<!-- If it does, add this as an Abstract Parent Name to call a Base elsewhere. -->
+		<match Class="PatchOperationAttributeSet">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+
+			<attribute>ParentName</attribute>
+			<value>TSP_ST_RetardSkeleton_Base</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race/body</xpath>
+			<value>
+				<body>TSP_ST_SkeletalMan</body>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race/lifeStageAges</xpath>
+			<value>
+				<lifeStageAges Inherit="False">
+					<li>
+						<def>TSP_ST_SkeletonAge_Undead</def>
+						<minAge>0</minAge>
+					</li>
+				</lifeStageAges>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="SpookySkeleton"]/tradeTags</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/tradeTags</xpath>
+				</li>
+				<!-- Now we add it back. -->
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+					<value>
+						<tradeTags>
+							<li>AnimalUncommon</li>
+							<li>AnimalExotic</li>
+							<li>Skeleton</li>
+							<li>DocileSkeleton</li>
+						</tradeTags>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+			<value>
+				<tradeTags>
+					<li>AnimalUncommon</li>
+					<li>AnimalExotic</li>
+					<li>Skeleton</li>
+					<li>DocileSkeleton</li>
+				</tradeTags>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]/lifeStages</xpath>
+			<value>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/Animal/spookyskeleton</texPath>
+								<drawSize>1.5</drawSize>
+								<shadowData>
+									<volume>(0.3, 0.3, 0.3)</volume>
+									<offset>(0,0,-0.2)</offset>
+								</shadowData>
+						</bodyGraphicData>
+						<dessicatedBodyGraphicData>
+							<texPath>Things/Pawn/Other/Skeletons/NormalSkeleton/NormalSkeleton</texPath>
+							<drawSize>1.5</drawSize>
+						</dessicatedBodyGraphicData>
+					</li>
+				</lifeStages>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]/ecoSystemWeight</xpath>
+			<value>
+				<ecoSystemWeight>0</ecoSystemWeight>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]/wildGroupSize</xpath>
+			<value>
+				<wildGroupSize>
+					<min>1</min>
+					<max>2</max>
+				</wildGroupSize>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]/race/leatherDef</xpath>
+			<value>
+				<leatherDef>BoneItem</leatherDef>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]/race/leatherDef</xpath>
+			<value>
+				<leatherDef>TSP_ST_SkeletalMarrow</leatherDef>
+			</value>
+		</nomatch>
+	</Operation>
+</Patch>
