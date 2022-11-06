@@ -17,14 +17,20 @@
 		<li Class="StoryTime.CompProperties_Wood">
 			<woodDef>WoodLog</woodDef>
 			<woodHarvestIntervalDays>4</woodHarvestIntervalDays>
-			<woodAmount>3</woodAmount>
+			<woodAmount>10</woodAmount>
 		</li>
 		<li Class="CompProperties_EggLayer">
 			<eggUnfertilizedDef>WoodLog</eggUnfertilizedDef>
+			<eggLayIntervalDays>3</eggLayIntervalDays>
+			<eggCountRange>1~25</eggCountRange>
+			<eggLayFemaleOnly>false</eggLayFemaleOnly>
+		</li>
+		<li Class="CompProperties_EggLayer">
+			<!-- <eggUnfertilizedDef>WoodLog</eggUnfertilizedDef> -->
 			<eggFertilizedDef>WoodFrogEggFertilized</eggFertilizedDef>
-			<eggFertilizationCountMax>1</eggFertilizationCountMax>
+			<eggFertilizationCountMax>2</eggFertilizationCountMax>
 			<eggLayIntervalDays>40</eggLayIntervalDays>
-			<eggCountRange>1</eggCountRange>
+			<eggCountRange>1~2</eggCountRange>
 			<eggLayFemaleOnly>false</eggLayFemaleOnly>
 		</li>
 		<li Class="AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef">
@@ -38,18 +44,22 @@
     </comps>
     <tools>
       <li>
-        <label>left claw</label>
+        <label>left branch</label>
         <capacities>
-          <li>Scratch</li>
+			<li>Poke</li>
+			<li>Scratch</li>
+			<li>Stab</li>
         </capacities>
         <power>7</power>
         <cooldownTime>2.3</cooldownTime>
         <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
       </li>
       <li>
-        <label>right claw</label>
+        <label>right branch</label>
         <capacities>
-          <li>Scratch</li>
+			<li>Poke</li>
+			<li>Scratch</li>
+			<li>Stab</li>
         </capacities>
         <power>7</power>
         <cooldownTime>2.3</cooldownTime>
@@ -58,8 +68,10 @@
       <li>
         <capacities>
           <li>Bite</li>
+		  <li>Poke</li>
+		  <li>Cut</li>
         </capacities>
-        <power>5</power>
+        <power>8</power>
         <cooldownTime>2.6</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
@@ -68,6 +80,7 @@
         <label>head</label>
         <capacities>
           <li>Blunt</li>
+		  <li>Scratch</li>
         </capacities>
         <power>3</power>
         <cooldownTime>2</cooldownTime>
@@ -90,6 +103,185 @@
 			<AridShrubland>0.01</AridShrubland>
 			<Desert>0.01</Desert>
 			<ExtremeDesert>0.01</ExtremeDesert>
+			
+			
+			
+
+
+
+
+
+			<!-- ___________________ -->			
+				<!-- Mod Biomes -->
+			<!-- ___________________ -->
+
+			<!-- sarg.alphabiomes -->
+			<!-- ALPHA BIOMES -->
+
+			<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.05</AB_FeraliskInfestedJungle>
+
+			<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.001</AB_GallatrossGraveyard>
+
+			<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.001</AB_GelatinousSuperorganism>
+
+			<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">0</AB_MechanoidIntrusion>
+
+			<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.02</AB_MycoticJungle>
+
+			<AB_OcularForest MayRequire="sarg.alphabiomes">0.001</AB_OcularForest>
+
+			<AB_PropaneLakes MayRequire="sarg.alphabiomes">0</AB_PropaneLakes>
+
+			<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0</AB_PyroclasticConflagration>
+
+			<AB_RockyCrags MayRequire="sarg.alphabiomes">0</AB_RockyCrags>
+
+			<AB_TarPits MayRequire="sarg.alphabiomes">0</AB_TarPits>
+			
+			<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.45</AB_MiasmicMangrove>
+		
+			<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.75</AB_IdyllicMeadows>
+			
+			
+
+
+			<!-- ___________________ -->
+
+			<!-- BiomesTeam.Oasis -->
+			<!-- CHROMATIC OASIS -->
+
+			<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.001</BMT_ChromaticOasis>
+
+
+			<!-- ___________________ -->
+
+			<!-- Mlie.AdvancedBiomes -->
+			<!-- ADVANCED BIOMES -->
+
+			<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.01</PoisonForest>
+
+			<Savanna MayRequire="Mlie.AdvancedBiomes">0</Savanna>
+			
+			<Volcano MayRequire="Mlie.AdvancedBiomes">0</Volcano>
+			
+			<Wasteland MayRequire="Mlie.AdvancedBiomes">0.001</Wasteland>
+			
+			<Wetland MayRequire="Mlie.AdvancedBiomes">0.2</Wetland>
+
+
+			<!-- ___________________ -->
+
+			<!-- zylle.MoreVanillaBiomes -->
+			<!-- More Vanilla Biomes -->
+
+			<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_AlpineMeadow>
+
+			<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_CloudForest>
+
+			<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0</ZBiome_CoastalDunes>
+
+			<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_DesertOasis>
+
+			<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0</ZBiome_Grasslands>
+
+			<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">0</ZBiome_Iceberg_NoBeach>
+
+			<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.15</ZBiome_Marsh>
+
+			<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0</ZBiome_Sandbar_NoBeach>
+
+
+			<!-- ___________________ -->
+
+			<!-- Mlie.NaturesPrettySweet -->
+			<!-- NATURE IS PRETTY SWEET -->
+
+			<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_VolcanicFlow>
+
+			<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.5</TKKN_RedwoodForest>
+
+			<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0</TKKN_Grasslands> <!-- PRAIRIE -->
+
+			<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0</TKKN_Savanna>
+
+			<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">0</TKKN_Desert> <!-- SALT FIELDS -->
+
+			<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_Oasis>			
+			
+			
+			<!-- ___________________ -->
+
+			<!-- Heis.Edo.Themed.Expansion -->
+			<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+			<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.1</HSBambooForest>
+
+
+			<!-- _________________ -->
+			
+			<!-- BiomesTeam.BiomesIslands -->
+			<!-- BIOMES ISLANDS -->
+			
+			<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.03</BiomesIslands_Atoll>
+			
+			<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.08</BiomesIslands_BorealIsland>
+			
+			<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_DesertIsland>
+			
+			<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_DesertArchipelago>
+			
+			<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.1</BiomesIslands_TemperateIsland>
+			
+			<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.15</BiomesIslands_TemperateArchipelago>
+			
+			<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.2</BiomesIslands_TropicalIsland>
+			
+			<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.2</BiomesIslands_TropicalArchipelago>
+			
+			<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_TundraIsland>
+			
+			
+			
+			<!-- ___________________ -->
+			
+			<!-- reel.FrozenForest -->
+			<!-- WINTER TAIGA -->
+			
+			<WinterTaiga MayRequire="reel.FrozenForest">0.2</WinterTaiga>
+			
+			
+			
+			<!-- __________________ -->
+			
+			<!-- SirMashedPotato.MorrowRim -->
+			<!-- "MORROWIND" MOD -->
+			
+			<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0</MorrowRim_Ashlands>
+			
+			<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0</MorrowRim_BlightedAshlands>
+			
+			<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.01</MorrowRim_AshSwamp>
+			
+			<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0</MorrowRim_VolcanicAshlands>
+			
+			
+			
+			<!-- ___________________ -->
+			
+			<!-- pphhyy.gulden -->
+			<!-- FOREST OF GOLD -->
+			
+			<TemperateGuldenForest MayRequire="pphhyy.gulden">0.1</TemperateGuldenForest>
+			
+			<LotRE_MallornForest MayRequire="lordoftherims.elves">0.1</LotRE_MallornForest>
+			
+			
+			<!-- ___________________ -->
+			
+			<!-- deemainiac.securecontainrimworld -->
+			<!-- SCP FOUNDATION -->
+			
+			<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0</SCR_SCP610Biome>
 	  </wildBiomes>
       <body>QuadrupedAnimalWithClawsTailAndJowl</body>
       <baseBodySize>0.4</baseBodySize>
@@ -97,7 +289,7 @@
       <baseHungerRate>0.25</baseHungerRate>
       <foodType>OmnivoreRoughAnimal</foodType>
 	  <specificMeatDef>WoodLog</specificMeatDef>
-      <leatherDef>Leather_Frog</leatherDef>
+      <leatherDef>WoodLog</leatherDef>
       <wildness>0.8</wildness>
       <trainability>Intermediate</trainability>
       <petness>0.1</petness>
@@ -129,6 +321,11 @@
 		<li>AnimalFrog</li>
 		<li>AnimalExotic</li>
     </tradeTags>
+	<modExtensions>
+		<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+			<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   
