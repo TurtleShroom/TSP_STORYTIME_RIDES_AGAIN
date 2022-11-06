@@ -25,7 +25,7 @@
     <label>dig for worms (x5)</label>
     <description>Dig for five worms.</description>
     <jobString>Digging for a few worms.</jobString>
-    <workAmount>450</workAmount>
+    <workAmount>100</workAmount>
     <workSpeedStat>AnimalGatherSpeed</workSpeedStat>
     <effectWorking>CutStone</effectWorking>
     <soundWorking>Interact_GraveDig</soundWorking>
@@ -44,7 +44,7 @@
     <label>dig for worms (x10)</label>
     <description>Dig for ten worms.</description>
     <jobString>Digging for a few worms.</jobString>
-    <workAmount>650</workAmount>
+    <workAmount>500</workAmount>
     <workSpeedStat>AnimalGatherSpeed</workSpeedStat>
     <effectWorking>CutStone</effectWorking>
     <soundWorking>Interact_GraveDig</soundWorking>
@@ -63,7 +63,7 @@
     <label>dig for worms (x25)</label>
     <description>Dig for twenty-five worms.</description>
     <jobString>Digging for worms.</jobString>
-    <workAmount>1250</workAmount>
+    <workAmount>1000</workAmount>
     <workSpeedStat>AnimalGatherSpeed</workSpeedStat>
     <effectWorking>CutStone</effectWorking>
     <soundWorking>Interact_GraveDig</soundWorking>
@@ -82,7 +82,26 @@
 		<label>dig for worms (x50)</label>
 		<description>Dig for fifty worms!</description>
 		<jobString>Digging for many worms.</jobString>
-		<workAmount>1750</workAmount>
+		<workAmount>1650</workAmount>
+		<workSpeedStat>AnimalGatherSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Interact_GraveDig</soundWorking>
+		<recipeUsers>
+				<li>WormSpot</li>
+		</recipeUsers>
+		<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+		<products>
+			<ST_Worm>50</ST_Worm>
+		</products>
+		<workSkill>Animals</workSkill>
+	</RecipeDef>
+	
+    <RecipeDef>
+		<defName>TSP_ST_Dig_Worm_C</defName>
+		<label>dig for worms (x100)</label>
+		<description>Dig for one hundred worms!</description>
+		<jobString>Digging for many worms.</jobString>
+		<workAmount>2225</workAmount>
 		<workSpeedStat>AnimalGatherSpeed</workSpeedStat>
 		<effectWorking>CutStone</effectWorking>
 		<soundWorking>Interact_GraveDig</soundWorking>
@@ -618,7 +637,7 @@
         <filter>
 			<thingDefs>
 				<li>Chocolate</li>
-				<!-- <li MayRequire="aratocat.wonderland">Chocofuel</li> -->
+				<li MayRequire="aratocat.wonderland">Chocofuel</li>
 				<li MayRequire="aratocat.wonderland">NEOChocolateEX</li>
 			</thingDefs>
         </filter>
@@ -628,8 +647,6 @@
         <filter>
 			<thingDefs>
 				<li>ST_GnomeSugar</li>
-				<li MayRequire="aratocat.wonderland">Chocofuel</li>
-				<li MayRequire="aratocat.wonderland">NEOChocolateEX</li>
 			</thingDefs>
         </filter>
         <count>0.5</count>

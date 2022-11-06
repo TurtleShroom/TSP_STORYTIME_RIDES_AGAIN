@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-  
   <ThingDef ParentName="AnimalThingBase" ADogSaidBody="LegsTail">
     <defName>DaneDachshund</defName>
     <label>dachshund</label>
-    <description>bean dog</description>
+    <description>Adored by Bean Man Bulborbs as their "Bean Dog", the dachsund (colliqually called the wiener dog) is an Old Earth breed of hound that was bred to hunt badgers and burrowing animals. Dachsunds are short-legged, long-bodied, and their shame is actually how hot dogs got their name. "Dachsund" literally means "badger hound" in German. In hives of cybernetically enhanced Bulborbs, "Bean Dogs" assist the Bean Men in hunting plants and animals, as well as defending their nest.</description>
     <statBases>
       <MoveSpeed>5</MoveSpeed>
       <ComfyTemperatureMin>0</ComfyTemperatureMin>
@@ -42,7 +42,7 @@
       <body>QuadrupedAnimalWithPawsAndTail</body>
       <petness>1</petness>
       <herdAnimal>true</herdAnimal>
-      <baseBodySize>.25</baseBodySize>
+      <baseBodySize>0.2</baseBodySize>
       <baseHungerRate>0.7</baseHungerRate>
       <baseHealthScale>1.2</baseHealthScale>
       <foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
@@ -62,24 +62,24 @@
         </points>
       </litterSizeCurve>
       <lifeExpectancy>14</lifeExpectancy>
-      <lifeStageAges>
-        <li>
-          <def>AnimalBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>AnimalJuvenile</def>
-          <minAge>0.25</minAge>
-        </li>
-        <li>
-          <def>AnimalAdult</def>
-          <minAge>0.5</minAge>
-          <soundWounded>Pawn_Dog_Injured</soundWounded>
-          <soundDeath>Pawn_Dog_Death</soundDeath>
-          <soundCall>Pawn_Dog_Call</soundCall>
-          <soundAngry>Pawn_Dog_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
+		<lifeStageAges>
+			<li>
+				<def>ST_DogPuppy</def>
+				<minAge>0</minAge>
+			</li>
+			<li>
+				<def>ST_DogPuppy2</def>
+				<minAge>0.25</minAge>
+			</li>
+			<li>
+				<def>ST_DogAdult</def>
+				<minAge>0.5</minAge>
+				<soundWounded>Pawn_Dog_Injured</soundWounded>
+				<soundDeath>Pawn_Dog_Death</soundDeath>
+				<soundCall>Pawn_Dog_Call</soundCall>
+				<soundAngry>Pawn_Dog_Angry</soundAngry>
+			</li>
+		</lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
@@ -95,11 +95,11 @@
     <label>dachshund</label>
 	<labelPlural>dachshunds</labelPlural>
     <race>DaneDachshund</race>
-    <combatPower>65</combatPower>
+    <combatPower>25</combatPower>
     <lifeStages>
       <li>
-	    <label>Dachshund Puppy</label>
-        <labelPlural>Dachshund Puppies</labelPlural>
+	    <label>dachshund puppy</label>
+        <labelPlural>dachshund puppies</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Dane/Dane</texPath>
           <drawSize>.75</drawSize>

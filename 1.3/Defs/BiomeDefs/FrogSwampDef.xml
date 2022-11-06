@@ -12,6 +12,7 @@
 				<li>ColdBog</li>
 				<li>TemperateSwamp</li>
 				<li>TropicalSwamp</li>
+				<li MayRequire="sarg.alphabiomes">AB_MiasmicMangrove</li>
 				<li MayRequire="zylle.morevanillabiomes">ZBiome_Marsh</li>
 				<li MayRequire="zylle.morevanillabiomes">ZBiome_CoastalDunes</li>
 				<li MayRequire="mlie.advancedbiomes">Wetland</li>
@@ -32,13 +33,13 @@
 		</li>
 	</modExtensions>
  
-    <animalDensity>4</animalDensity>
-    <plantDensity>3</plantDensity>
+    <animalDensity>7</animalDensity>
+    <plantDensity>5</plantDensity>
     <settlementSelectionWeight>0.8</settlementSelectionWeight>
-    <movementDifficulty>3</movementDifficulty>
+    <movementDifficulty>4</movementDifficulty>
     <forageability>2</forageability>
     <foragedFood>ToadLegs</foragedFood>
-    <wildPlantRegrowDays>12</wildPlantRegrowDays>
+    <wildPlantRegrowDays>7</wildPlantRegrowDays>
     <texture>World/Biomes/FroggySwamp</texture>
     <soundsAmbient>
       <li>Ambient_NightInsects_Jungle</li>
@@ -48,11 +49,11 @@
     <diseases>
       <li>
         <diseaseInc>Disease_Malaria</diseaseInc>
-        <commonality>160</commonality>
+        <commonality>180</commonality>
       </li>
       <li>
         <diseaseInc>Disease_SleepingSickness</diseaseInc>
-        <commonality>140</commonality>
+        <commonality>180</commonality>
       </li>
       <li>
         <diseaseInc>Disease_Flu</diseaseInc>
@@ -151,11 +152,12 @@
       </li>
     </terrainPatchMakers>
     <baseWeatherCommonalities>
-      <Clear>5</Clear>
+      <Clear>2</Clear>
       <Fog>40</Fog>
       <Rain>25</Rain>
-      <RainyThunderstorm>25</RainyThunderstorm>
-      <FoggyRain>25</FoggyRain>
+      <RainyThunderstorm>15</RainyThunderstorm>
+      <FoggyRain>15</FoggyRain>
+	  <RG_Monsoon MayRequire="regrowth.botr.core">10</RG_Monsoon>
     </baseWeatherCommonalities>
     <wildPlants>
       <Plant_TallGrass>4.8</Plant_TallGrass>
@@ -169,12 +171,13 @@
       <Plant_Clivia>0.07</Plant_Clivia>
       <Plant_Berry>0.08</Plant_Berry>
       <Plant_Rafflesia>0.005</Plant_Rafflesia>
+	  <AB_MangroveTree MayRequire="sarg.alphabiomes">0.8</AB_MangroveTree>
     </wildPlants>
     <wildAnimals>
       <BloodFrog>0.2</BloodFrog>
       <BudgettFrog>1</BudgettFrog>
       <ST_BullFrog>1</ST_BullFrog>
-      <CyberFrogDocile>0.2</CyberFrogDocile>
+      <CyberFrogDocile>0.1</CyberFrogDocile>
       <FireBelliedToad>0.3</FireBelliedToad>
       <JudasFrog>0.2</JudasFrog>
       <LeviathanFrog>0.08</LeviathanFrog>

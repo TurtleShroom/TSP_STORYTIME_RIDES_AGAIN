@@ -25,6 +25,7 @@
 			<immuneToAge>false</immuneToAge>
 			<canLayDown>false</canLayDown> <!-- Frogs can "assume the position" like cats, but they do not lay down to sleep. Frogs crouch. -->
 			<maxDamageForSocialfight>3</maxDamageForSocialfight>
+			<humanRecipeImport>true</humanRecipeImport>
 			<alienPartGenerator>
 			  <aliencrowntypes>
 				<li>Average_Normal</li>
@@ -66,6 +67,7 @@
 					</options>
 				  </first>
 				</li>
+				<!--
 				<li>
 				  <name>hair</name>
 				  <first Class="ColorGenerator_Options">
@@ -83,6 +85,7 @@
 					</options>
 				  </first>
 				</li>
+				-->
 			  </colorChannels>
 			  <useGenderedHeads>true</useGenderedHeads>
 			</alienPartGenerator>
@@ -156,8 +159,8 @@
 		  <PsychicSensitivity>0.5</PsychicSensitivity>
 		  <ResearchSpeed>0.8</ResearchSpeed>
 		  <Mass>40</Mass>
-          <SwimSpeed MayRequire="biomesteam.biomesislands">7</SwimSpeed>
-		  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.05</HSAU_GhoulismSusceptibility>
+          <SwimSpeed MayRequire="biomesteam.biomesislands">10</SwimSpeed>
+		  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.05</HSAU_GhoulismSusceptibility> <!-- Related to Werefrogs? -->
 		</statBases>
 		<!--
 		<statOffsets>
@@ -255,14 +258,14 @@
 		  <body>FrogPersonBody</body>
 		  <baseBodySize>0.9</baseBodySize>
 		  <baseHealthScale>0.9</baseHealthScale>
-		  <foodType>OmnivoreRoughAnimal, Kibble</foodType>
+		  <foodType>OmnivoreRoughAnimal, Meal, Processed, Liquor, Kibble</foodType>
 		  <gestationPeriodDays>10</gestationPeriodDays>
 		  <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>
 			  <li>(1, 1)</li>
-			  <li>(1.01, 0.02)</li>
-			  <li>(3.5, 0)</li>
+			  <li>(2, 0.02)</li>
+			  <li>(4, 0.001)</li>
 			</points>
 		  </litterSizeCurve>
 		  <lifeStageAges>

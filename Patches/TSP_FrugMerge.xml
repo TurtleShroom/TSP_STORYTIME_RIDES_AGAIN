@@ -82,4 +82,86 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Frug"]/comps</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Frug"]/comps</xpath>
+			<value>
+				<li Class="CompProperties_EggLayer">
+					<eggUnfertilizedDef>TSP_FrugEggUnfertilized</eggUnfertilizedDef>
+					<eggFertilizedDef>TSP_FrugEggFertilized</eggFertilizedDef>
+					<eggFertilizationCountMax>1</eggFertilizationCountMax>
+					<eggLayIntervalDays>5</eggLayIntervalDays>
+					<eggCountRange>1</eggCountRange>
+				</li>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+			<value>
+				<comps>
+					<li Class="CompProperties_EggLayer">
+						<eggUnfertilizedDef>TSP_FrugEggUnfertilized</eggUnfertilizedDef>
+						<eggFertilizedDef>TSP_FrugEggFertilized</eggFertilizedDef>
+						<eggFertilizationCountMax>1</eggFertilizationCountMax>
+						<eggLayIntervalDays>5</eggLayIntervalDays>
+						<eggCountRange>1</eggCountRange>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<ThingDef ParentName="EggUnfertBase">
+					<defName>TSP_FrugEggUnfertilized</defName>
+					<label>Frug egg (unfert.)</label>
+					<description>An unfertilized Frug egg. It can be eaten raw, but it's much, much better cooked.</description>
+					<graphicData>
+						<color>(254,216,177)</color>
+					</graphicData>
+					<statBases>
+						<MarketValue>4</MarketValue>
+						<Nutrition Inherit="False">0.09</Nutrition>
+					</statBases>
+					<tradeTags>
+						<li>UnfertilizedFrogEgg</li>
+					</tradeTags>
+				</ThingDef>
+				
+				<ThingDef ParentName="EggFertBase">
+					<defName>TSP_FrugEggFertilized</defName>
+					<label>Frug egg (fert.)</label>
+					<description>A fertilized Frug egg. If all goes well, it should hatch into a Frug tadpole. It can be eaten raw, but it's much better cooked.</description>
+					<graphicData>
+						<color>(254,216,177)</color>
+					</graphicData>
+					<statBases>
+						<MarketValue>7.0</MarketValue>
+					</statBases>
+					<comps>
+						<li Class="CompProperties_Hatcher">
+							<hatcherDaystoHatch>6</hatcherDaystoHatch>
+							<hatcherPawn>ST_Toad</hatcherPawn>
+						</li>
+					</comps>
+				</ThingDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

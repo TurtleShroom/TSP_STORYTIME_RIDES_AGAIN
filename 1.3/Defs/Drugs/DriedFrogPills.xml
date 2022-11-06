@@ -33,7 +33,7 @@
 	<ingestible>
 		<preferability>NeverForNutrition</preferability>
 		<foodType>Processed</foodType>
-		<baseIngestTicks>200</baseIngestTicks>
+		<baseIngestTicks>100</baseIngestTicks>
 		<drugCategory>Medical</drugCategory>
 		<ingestSound>Ingest_Pill</ingestSound>
 		<ingestHoldOffsetStanding>
@@ -41,6 +41,7 @@
 				<offset>(0.21,0,0.05)</offset>
 			</northDefault>
 		</ingestHoldOffsetStanding>
+		<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
 		<ingestHoldUsesTable>false</ingestHoldUsesTable>
 		<ingestCommandString>Ingest {0}</ingestCommandString>
 		<ingestReportString>Ingesting {0}.</ingestReportString>
@@ -77,10 +78,10 @@
         <chemical>DriedFrogPills</chemical>
         <addictiveness>0.9</addictiveness>
         <minToleranceToAddict>0.4</minToleranceToAddict>
-        <existingAddictionSeverityOffset>0.01</existingAddictionSeverityOffset>
+        <existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
         <needLevelOffset>1.1</needLevelOffset>
         <listOrder>20</listOrder>
-        <overdoseSeverityOffset>0.01~0.08</overdoseSeverityOffset>
+        <overdoseSeverityOffset>0.001~0.01</overdoseSeverityOffset>
         <largeOverdoseChance>0</largeOverdoseChance>
       </li>
     </comps>

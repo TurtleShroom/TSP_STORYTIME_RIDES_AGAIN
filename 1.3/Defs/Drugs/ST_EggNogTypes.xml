@@ -35,12 +35,14 @@
 	-->
 	<stackLimit>15</stackLimit>
     <ingestible>
-      <preferability>DesperateOnlyForHumanlikes</preferability>
-      <tasteThought>AteRawFood</tasteThought>
-      <foodType>AnimalProduct, OvivoreAnimal, Fluid</foodType>
-	  <tableDesired>false</tableDesired>
-	  <maxNumToIngestAtOnce>5</maxNumToIngestAtOnce> <!-- Apparently, you can only take one hit on a drug at a time -->
-	  <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+		<preferability>DesperateOnlyForHumanlikes</preferability>
+		<optimalityOffsetHumanlikes>-25</optimalityOffsetHumanlikes>
+		<optimalityOffsetFeedingAnimals>-25</optimalityOffsetFeedingAnimals>
+		<tasteThought>AteRawFood</tasteThought>
+		<foodType>AnimalProduct, OvivoreAnimal, Fluid</foodType>
+		<tableDesired>false</tableDesired>
+		<maxNumToIngestAtOnce>5</maxNumToIngestAtOnce> <!-- Apparently, you can only take one hit on a drug at a time -->
+		<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
     </ingestible>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
   </ThingDef>
@@ -73,11 +75,13 @@
 	</tradeTags>
 	-->
     <ingestible>
-      <preferability>DesperateOnly</preferability>
-      <foodType>AnimalProduct, OvivoreAnimal, Fluid</foodType>
-	  <tableDesired>false</tableDesired>
-	  <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce> <!-- Apparently, you can only take one hit on a drug at a time -->
-	  <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+		<preferability>DesperateOnly</preferability>
+		<optimalityOffsetHumanlikes>-25</optimalityOffsetHumanlikes>
+		<optimalityOffsetFeedingAnimals>-25</optimalityOffsetFeedingAnimals>
+		<foodType>AnimalProduct, OvivoreAnimal, Fluid</foodType>
+		<tableDesired>false</tableDesired>
+		<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce> <!-- Apparently, you can only take one hit on a drug at a time -->
+		<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
 		<!--
 		<outcomeDoers>
 			<li Class="IngestionOutcomeDoer_GiveHediff">
@@ -88,7 +92,7 @@
 			</li>
 		</outcomeDoers>
 		-->
-    </ingestible>
+		</ingestible>
 	<storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
     <comps Inherit="False">
 		<!--
@@ -139,8 +143,8 @@
       <foodType Inherit="False">AnimalProduct, OvivoreAnimal, Processed, Fluid, Liquor</foodType>
 	  <!-- <preferability>MealFine</preferability> -->
 	  <preferability>NeverForNutrition</preferability>
-      <joyKind>Gluttonous</joyKind>
-      <joy>0.6</joy>
+      <joyKind>TSP_ST_EggNogJoy</joyKind>
+      <joy>0.3</joy>
       <baseIngestTicks>100</baseIngestTicks>
       <drugCategory>Social</drugCategory>
       <ingestSound>Ingest_Beer</ingestSound>
@@ -235,7 +239,7 @@
       <preferability>MealFine</preferability>
       <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>Ingest_Beer</ingestSound>
-	  <joyKind>Gluttonous</joyKind>
+	  <joyKind>TSP_ST_EggNogJoy</joyKind>
       <joy>0.4</joy>
       <nurseable>true</nurseable>
 	  <foodType>AnimalProduct, Processed, Fluid</foodType>
@@ -300,7 +304,7 @@
     <ingestible>
       <foodType>Processed, Fluid, Liquor</foodType>
 	  <preferability>NeverForNutrition</preferability>
-      <joyKind>Chemical</joyKind>
+      <joyKind>TSP_ST_EggNogJoy</joyKind>
       <joy>0.45</joy>
       <nurseable>true</nurseable>
       <drugCategory>Social</drugCategory>
@@ -398,7 +402,7 @@
     <thingCategories>
       <li>TSP_ST_EggNog</li>
     </thingCategories>
-    <ingestible>
+    <ingestible Inherit="False">
       <foodType>Fluid, Processed, Liquor</foodType>
 	  <preferability>NeverForNutrition</preferability>
       <nurseable>false</nurseable>
@@ -414,8 +418,8 @@
       <chairSearchRadius>25</chairSearchRadius>
       <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
 	  <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-	  <optimalityOffsetHumanlikes>-60</optimalityOffsetHumanlikes>
-	  <optimalityOffsetFeedingAnimals>-60</optimalityOffsetFeedingAnimals>
+	  <optimalityOffsetHumanlikes>-999</optimalityOffsetHumanlikes>
+	  <optimalityOffsetFeedingAnimals>-999</optimalityOffsetFeedingAnimals>
 		<tasteThought Inherit="False"></tasteThought>
 		<specialThoughtDirect Inherit="False"></specialThoughtDirect>
 		<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient>
