@@ -87,23 +87,35 @@
     <pawnGroupMakers>
       <li>
         <kindDef>Combat</kindDef>
+		<commonality>100</commonality>
         <options>
           <BeetWarrior>250</BeetWarrior>
 		  <BeetArcher>100</BeetArcher>
 		  <Warg>80</Warg>
 		  <BeetLeader>100</BeetLeader>
-		  <TSP_BeetMaster>50</TSP_BeetMaster>
+		  <TSP_BeetMaster>10</TSP_BeetMaster>
 		  <TSP_ST_CivilizedBeetCabbageinator>20</TSP_ST_CivilizedBeetCabbageinator>
+		  <Jonah_Dog>15</Jonah_Dog>
 		  <O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">1</O21_Kakamora_BlankSmall>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+		<commonality>10</commonality>
+        <options>
+		  <TSP_BeetMaster>50</TSP_BeetMaster>
+		  <TSP_ST_CivilizedBeetCabbageinator>25</TSP_ST_CivilizedBeetCabbageinator>
+		  <O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">10</O21_Kakamora_BlankSmall>
+		  <Jonah_Dog>10</Jonah_Dog>
         </options>
       </li>
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-			<BeetWarrior>50</BeetWarrior>
-			<BeetArcher>50</BeetArcher>
-			<!-- <Warg>10</Warg> -->
-			<BeetLeader>25</BeetLeader>
+			<BeetWarrior>75</BeetWarrior>
+			<BeetArcher>75</BeetArcher>
+			<BeetLeader>50</BeetLeader>
+			<TSP_BeetRex>1</TSP_BeetRex>
         </options>
       </li>
       <li>
@@ -112,18 +124,23 @@
           <BeetTrader>1</BeetTrader>
         </traders>
         <carriers>
-          <Muffalo>1</Muffalo>
+          <Muffalo>10</Muffalo>
 		  <Alpaca>1</Alpaca>
 		  <Dromedary>1</Dromedary>
-		  <Elephant>100</Elephant>
+		  <Donkey>10</Donkey>
+		  <Horse>10</Horse>
+		  <Elephant>200</Elephant>
+		  <Scarecrow MayRequire="halloweenparade.velcroboy333">50</Scarecrow>
+		  <Reaper MayRequire="halloweenparade.velcroboy333">1</Reaper>
         </carriers>
         <guards>
-			<BeetWarrior>50</BeetWarrior>
+			<BeetWarrior>35</BeetWarrior>
 			<BeetArcher>50</BeetArcher>
 			<BeetLeader>45</BeetLeader>
 			<TSP_ST_CivilizedBeetCabbageinator>10</TSP_ST_CivilizedBeetCabbageinator>
 			<Warg>50</Warg>
 			<O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">1</O21_Kakamora_BlankSmall>
+			<Jonah_Dog>5</Jonah_Dog>
         </guards>
       </li>
       <li>
@@ -134,7 +151,9 @@
 			<Warg>8</Warg>
 			<BeetLeader>400</BeetLeader>
 			<TSP_ST_CivilizedBeetCabbageinator>15</TSP_ST_CivilizedBeetCabbageinator>
-			<TSP_BeetRex>50</TSP_BeetRex>
+			<TSP_BeetRex>10</TSP_BeetRex>
+			<Jonah_Dog>1</Jonah_Dog>
+			<Scarecrow MayRequire="halloweenparade.velcroboy333">1</Scarecrow>
         </options>
       </li>
     </pawnGroupMakers>
@@ -228,7 +247,6 @@
 	  <li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Drugs</li>
 	  <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Medical</li>
 	  <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Odd</li>
-	  <li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Farming</li>
     </caravanTraderKinds>
     <visitorTraderKinds>
       <li>Visitor_Neolithic_Standard</li>
@@ -242,8 +260,8 @@
     </allowedArrivalTemperatureRange>
     <maxPawnCostPerTotalPointsCurve>
       <points>
-        <li>(0,200)</li>
-        <li>(70, 300)</li>
+        <li>(0,300)</li>
+        <li>(70, 350)</li>
         <li>(700, 400)</li>
         <li>(1300, 500)</li>
         <li>(100000, 10000)</li>
@@ -251,7 +269,7 @@
     </maxPawnCostPerTotalPointsCurve>
 	<raidLootValueFromPointsCurve>
       <points>
-        <li>(35,     15)</li>
+        <li>(35,     30)</li>
         <li>(100,   120)</li>
         <li>(1000,  500)</li>
         <li>(2000,  800)</li>
@@ -267,6 +285,7 @@
     <pawnGroupMakers>
       <li>
         <kindDef>Combat</kindDef>
+		<commonality>100</commonality>
         <options>
           <WoodBeetWarrior>250</WoodBeetWarrior>
 		  <WoodBeetArcher>150</WoodBeetArcher>
@@ -281,9 +300,29 @@
         <options>
 			<WoodBeetWarrior>100</WoodBeetWarrior>
 			<WoodBeetArcher>100</WoodBeetArcher>
-			<!-- <Warg>25</Warg> -->
 			<WoodBeetLeader>100</WoodBeetLeader>
 			<TSP_ST_WoodBeetCabbageinator>1</TSP_ST_WoodBeetCabbageinator>
+        </options>
+      </li>
+     <li>
+        <kindDef>Combat</kindDef>
+		<commonality>80</commonality>
+        <options>
+			<Warg>100</Warg>
+			<WoodBeetArcher>40</WoodBeetArcher>
+			<TSP_ST_WoodBeetCabbageinator>5</TSP_ST_WoodBeetCabbageinator>
+			<O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">10</O21_Kakamora_BlankSmall>
+			<Jonah_Dog>0.01</Jonah_Dog>
+        </options>
+      </li>
+      <li MayRequire="neronix17.kakamora">
+        <kindDef MayRequire="neronix17.kakamora">Combat</kindDef>
+		<commonality MayRequire="neronix17.kakamora">10</commonality>
+        <options MayRequire="neronix17.kakamora">
+		  <TSP_BeetMaster MayRequire="neronix17.kakamora">50</TSP_BeetMaster>
+		  <TSP_ST_WoodBeetCabbageinator MayRequire="neronix17.kakamora">30</TSP_ST_WoodBeetCabbageinator>
+		  <O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">75</O21_Kakamora_BlankSmall>
+		  <Jonah_Dog MayRequire="neronix17.kakamora">0.5</Jonah_Dog>
         </options>
       </li>
       <li>
@@ -296,26 +335,31 @@
 		  <Alpaca>1</Alpaca>
 		  <Dromedary>1</Dromedary>
 		  <Elephant>100</Elephant>
+		  <Reaper MayRequire="halloweenparade.velcroboy333">50</Reaper>
         </carriers>
         <guards>
 			<WoodBeetWarrior>20</WoodBeetWarrior>
-			<WoodBeetArcher>15</WoodBeetArcher>
-			<Warg>15</Warg>
-			<WoodBeetLeader>20</WoodBeetLeader>
+			<WoodBeetArcher>20</WoodBeetArcher>
+			<Warg>20</Warg>
+			<Jonah_Dog>10</Jonah_Dog>
+			<WoodBeetLeader>10</WoodBeetLeader>
 			<TSP_ST_WoodBeetCabbageinator>25</TSP_ST_WoodBeetCabbageinator>
 			<O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">1</O21_Kakamora_BlankSmall>
+			<Bat MayRequire="zal.witchinghour">3</Bat>
         </guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
         <options>
 			<WoodBeetWarrior>25</WoodBeetWarrior>
-			<WoodBeetArcher>25</WoodBeetArcher>
-			<Warg>5</Warg>
+			<WoodBeetArcher>40</WoodBeetArcher>
+			<Warg>15</Warg>
+			<Jonah_Dog>2</Jonah_Dog>
 			<WoodBeetLeader>25</WoodBeetLeader>
 			<TSP_BeetMaster>10</TSP_BeetMaster>
-			<TSP_ST_WoodBeetCabbageinator>3</TSP_ST_WoodBeetCabbageinator>
-			<O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">1</O21_Kakamora_BlankSmall>
+			<TSP_ST_WoodBeetCabbageinator>30</TSP_ST_WoodBeetCabbageinator>
+			<O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">20</O21_Kakamora_BlankSmall>
+			<Reaper MayRequire="halloweenparade.velcroboy333">5</Reaper>
         </options>
       </li>
     </pawnGroupMakers>

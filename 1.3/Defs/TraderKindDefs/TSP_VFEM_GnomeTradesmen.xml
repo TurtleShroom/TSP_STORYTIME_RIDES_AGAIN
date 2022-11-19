@@ -80,14 +80,14 @@
 				<thingDef MayRequire="halloweenparade.velcroboy333">PumpkinHull</thingDef>
 				<countRange MayRequire="halloweenparade.velcroboy333">
 					<min MayRequire="halloweenparade.velcroboy333">150</min>
-					<max MayRequire="halloweenparade.velcroboy333">300</max>
+					<max MayRequire="halloweenparade.velcroboy333">500</max>
 				</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef" MayRequire="halloweenparade.velcroboy333">
 				<thingDef MayRequire="halloweenparade.velcroboy333">AutumnMushroom</thingDef>
 				<countRange MayRequire="halloweenparade.velcroboy333">
 					<min MayRequire="halloweenparade.velcroboy333">75</min>
-					<max MayRequire="halloweenparade.velcroboy333">200</max>
+					<max MayRequire="halloweenparade.velcroboy333">300</max>
 				</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef" MayRequire="halloweenparade.velcroboy333">
@@ -107,7 +107,7 @@
 			<li Class="StockGenerator_SingleDef" MayRequire="aratocat.wonderland">
 				<thingDef MayRequire="aratocat.wonderland">NEOChocolateEX</thingDef>
 				<countRange MayRequire="aratocat.wonderland">
-					<min MayRequire="aratocat.wonderland">-2</min>
+					<min MayRequire="aratocat.wonderland">1</min>
 					<max MayRequire="aratocat.wonderland">3</max>
 				</countRange>
 			</li>
@@ -127,6 +127,7 @@
 					<li>AnimalPet</li>
 					<li>ST_Gnome_Selling_Animal</li>
 					<li>ST_Gnome_Selling_AnimalRare</li>
+					<li MayRequire="tsp.baskerville.hellsingexpansion">GentleGhoul</li>
 				</tradeTagsBuy>
 				<kindCountRange>
 					<min>2</min>
@@ -142,6 +143,7 @@
 				<maxWildness>0.70</maxWildness>
 				<tradeTagsSell>
 					<li>AnimalFarm</li>
+					<li MayRequire="tsp.baskerville.hellsingexpansion">GentleGhoul</li>
 				</tradeTagsSell>
 				<tradeTagsBuy>
 					<li>AnimalExotic</li>
@@ -242,19 +244,19 @@
 			<li Class="StockGenerator_Tag">
 				<tradeTag>GnomeBatta</tradeTag>
 				<thingDefCountRange>1~3</thingDefCountRange>
-				<countRange>1~10</countRange>
+				<countRange>10~20</countRange>
 			</li>
 			
 			<li Class="StockGenerator_Tag">
 				<tradeTag>GnomeMeat</tradeTag>
 				<thingDefCountRange>1~3</thingDefCountRange>
-				<countRange>1~10</countRange>
+				<countRange>10~20</countRange>
 			</li>
 			
 			<li Class="StockGenerator_Tag">
 				<tradeTag>GnomeVegetarian</tradeTag>
 				<thingDefCountRange>1~3</thingDefCountRange>
-				<countRange>1~10</countRange>
+				<countRange>10~20</countRange>
 			</li>
 			
 			<li Class="StockGenerator_Tag">
@@ -278,7 +280,7 @@
 			<li Class="StockGenerator_Tag">
 				<tradeTag>UnfertilizedFrogEgg</tradeTag>
 				<thingDefCountRange>1~4</thingDefCountRange>
-				<countRange>15~40</countRange>
+				<countRange>10~40</countRange>
 			</li>
 			
 			<li Class="StockGenerator_Tag" MayRequire="sirmashedpotato.morrowrim.alcoholremade">
@@ -290,13 +292,24 @@
 			<li Class="StockGenerator_Category">
 				<categoryDef>TSP_ST_EggNog</categoryDef>
 				<thingDefCountRange>1~3</thingDefCountRange>
-				<countRange>20~25</countRange>
+				<countRange>10~25</countRange>
 			</li>
 			
 			<li Class="StockGenerator_Category">
 				<categoryDef>FoodMeals</categoryDef>
-				<thingDefCountRange>8~30</thingDefCountRange>
-				<countRange>3~25</countRange>
+				<thingDefCountRange>8~35</thingDefCountRange>
+				<countRange>5~25</countRange>
+			</li>
+
+			<li Class="StockGenerator_Animals" MayRequire="tsp.halloweenie.integration">
+				<tradeTagsSell MayRequire="tsp.halloweenie.integration">
+					<li Inherit="False" MayRequire="tsp.halloweenie.integration">AnimalHalloweenie</li>
+				</tradeTagsSell>
+				<tradeTagsBuy MayRequire="tsp.halloweenie.integration" Inherit="False">
+					<li MayRequire="tsp.halloweenie.integration" Inherit="False">AnimalHalloweenie</li>
+				</tradeTagsBuy>
+				<kindCountRange MayRequire="tsp.halloweenie.integration">1~3</kindCountRange>
+				<countRange MayRequire="tsp.halloweenie.integration">1</countRange>
 			</li>
 			
 			<li Class="StockGenerator_BuyTradeTag">

@@ -3,27 +3,27 @@
 <Defs>
 	<FactionDef ParentName="FactionBase">
 		<defName>STBosses</defName>
-		<label>bosses</label>
+		<label>Bosses</label>
 		<description>Over whom are these Pawns the boss? Randy only knows...</description>
 		<pawnSingular>boss</pawnSingular>
 		<pawnsPlural>bosses</pawnsPlural>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
-		<fixedName>bosses</fixedName>
+		<fixedName>Bosses</fixedName>
 		<raidCommonalityFromPointsCurve>
 			<points>
-				<li>(0, 0)</li>
+				<li>(0, 0)</li> <!-- Will never raid... -->
 			</points>
 		</raidCommonalityFromPointsCurve>
 		<humanlikeFaction>false</humanlikeFaction>
 		<hidden>true</hidden>
-		<autoFlee>false</autoFlee>
-		<canUseAvoidGrid>false</canUseAvoidGrid>
-		<techLevel>Animal</techLevel>
+		<autoFlee>true</autoFlee>
+		<canUseAvoidGrid>true</canUseAvoidGrid>
+		<techLevel>Industrial</techLevel>
 		<permanentEnemy>true</permanentEnemy>
-		<factionIconPath>World/WorldObjects/DefaultSettlement</factionIconPath>
+		<factionIconPath>World/Bosses/TSP_ST_BossLogo</factionIconPath>
 		<allowedArrivalTemperatureRange>
-			<min>0</min>
-			<max>45</max>
+			<min>-999</min>
+			<max>-999</max>
 		</allowedArrivalTemperatureRange>
 	</FactionDef>
 </Defs>

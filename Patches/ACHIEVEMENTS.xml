@@ -36,14 +36,14 @@
 					<defName>GibbonReward</defName>
 					<label>Summon the Gibbonous Moon</label>
 					<tab>Storytime</tab>
-					<cost>50</cost>
+					<cost>30</cost>
 					<incident>GibbonousMoon</incident>
 				</AchievementsExpanded.Reward_EnemyRaid>
 			
 				<AchievementsExpanded.AchievementDef>
 					<defName>strangeFruitAchievement</defName>
 					<label>Natural Caffine</label>
-					<description>Harvest a strange fruit.</description>
+					<description>Harvest a Strange Fruit.</description>
 					<tab>Storytime</tab>
 					<tracker Class="AchievementsExpanded.ItemTracker">
 						<def>StrangeFruit</def>
@@ -82,7 +82,7 @@
 				<AchievementsExpanded.AchievementDef>
 					<defName>froglordAchievement</defName>
 					<label>Frog Lord</label>
-					<description>Have one of every type of frog.</description>
+					<description>Have one of each Bullet Tree, Spring Peeeper, Tomato, Poison Dart, Budgett's, and Embittered frogs.</description>
 					<tab>Storytime</tab>
 					<tracker Class="AchievementsExpanded.KindDefTracker">
 						<kindDefs>
@@ -117,7 +117,7 @@
 				</AchievementsExpanded.AchievementDef>
 				
 				<AchievementsExpanded.AchievementDef>
-					<defName>coinAchievement</defName>
+					<defName>ST_coinAchievement</defName>
 					<label>Cursed Gold</label>
 					<description>Acquire one hundred Cursed Coins.</description>
 					<tab>Storytime</tab>
@@ -157,7 +157,7 @@
 				
 				<AchievementsExpanded.AchievementDef>
 					<defName>profaneNogAchievement</defName>
-					<label>No... no... please...</label>
+					<label>No... No... Please...</label>
 					<description>Create a bottle of Profane Egg Nog.</description>
 					<tab>Storytime</tab>				
 					<tracker Class="AchievementsExpanded.ItemCraftTracker">
@@ -175,8 +175,8 @@
 					<tab MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">Storytime</tab>
 					<tracker Class="AchievementsExpanded.ItemCraftTracker" MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">
 						<def MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_Apparel_PlateArmorHeavy</def>
-						<madeFrom>ST_Runite</madeFrom>
-						<count>1</count>
+						<madeFrom MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">ST_Runite</madeFrom>
+						<count MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">1</count>
 					</tracker>
 					<texPath MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">Achievements/runePlateAchievement</texPath>
 					<points MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">25</points>
@@ -206,7 +206,7 @@
 						<count>1</count>
 					</tracker>
 					<texPath>Achievements/beanManAchievement</texPath>
-					<points>20</points> 
+					<points>40</points> 
 				</AchievementsExpanded.AchievementDef>
 			</value>
 		</match>

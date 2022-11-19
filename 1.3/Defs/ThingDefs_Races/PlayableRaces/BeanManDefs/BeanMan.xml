@@ -87,7 +87,7 @@
       <relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierChild>0</relationChanceModifierChild>
-        <relationChanceModifierSibling>0.9</relationChanceModifierSibling>
+        <relationChanceModifierSibling>4</relationChanceModifierSibling>
 		<relationChanceModifierLover>0</relationChanceModifierLover>
 		<relationChanceModifierFiance>0</relationChanceModifierFiance>
 		<relationChanceModifierSpouse>0</relationChanceModifierSpouse>
@@ -197,6 +197,8 @@
         <power>23</power> <!-- Identical to a bear, Bulborbs can canonically crush Pikmin in one bite or swallow them whole; it is their only strength. -->
         <cooldownTime>2.5</cooldownTime>
         <linkedBodyPartsGroup>GARBAGEDAY_BODYGROUP_BulborbMaw</linkedBodyPartsGroup>
+        <!-- <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable> -->
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 		<surpriseAttack>
           <extraMeleeDamages>
             <li>
@@ -217,10 +219,9 @@
           <li>Blunt</li>
         </capacities>
         <power>5</power>
-        <cooldownTime>2</cooldownTime>
+        <cooldownTime>1</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.25</chanceFactor>
+        <chanceFactor>0.02</chanceFactor>
       </li>
       <!--■■■ LEG CLAWS ■■■-->
       <li>
@@ -231,7 +232,7 @@
 		  <li>KickMaterialInEyes</li>
         </capacities>
         <power>1</power>
-        <cooldownTime>1</cooldownTime>
+        <cooldownTime>0.2</cooldownTime>
         <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
         <surpriseAttack>
           <extraMeleeDamages>
@@ -251,7 +252,7 @@
 		  <li>KickMaterialInEyes</li>
         </capacities>
         <power>1</power>
-        <cooldownTime>1</cooldownTime>
+        <cooldownTime>0.2</cooldownTime>
         <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
         <surpriseAttack>
           <extraMeleeDamages>

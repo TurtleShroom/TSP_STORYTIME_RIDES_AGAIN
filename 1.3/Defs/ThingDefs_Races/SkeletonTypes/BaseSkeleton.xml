@@ -2,6 +2,11 @@
 <Defs>
   
   <ThingDef ParentName="BasePawn" Name="BaseSkeleton" Abstract="True">
+	<thingClass>Pawn</thingClass>
+	<category>Pawn</category>
+	<selectable>true</selectable>
+	<tickerType>Normal</tickerType>
+	<altitudeLayer>Pawn</altitudeLayer>
     <statBases>
       <PsychicSensitivity>10</PsychicSensitivity>
       <ToxicSensitivity>0</ToxicSensitivity>
@@ -62,6 +67,80 @@
 		</li>
 	</modExtensions>
   </ThingDef>
+  
+	<ThingDef ParentName="AnimalThingBase" Name="TSP_ST_RetardSkeleton_Base" Abstract="True">
+		<thingClass>Pawn</thingClass>
+		<category>Pawn</category>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Pawn</altitudeLayer>
+		<statBases>
+			<PsychicSensitivity>10</PsychicSensitivity>
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<Flammability>0.2</Flammability>
+			<ComfyTemperatureMin>-420</ComfyTemperatureMin>
+			<ComfyTemperatureMax>420</ComfyTemperatureMax>
+			<LeatherAmount>0</LeatherAmount>
+			<MeatAmount>100</MeatAmount>
+			<PainShockThreshold>1</PainShockThreshold>
+			<BoneAmount MayRequire="sihv.rombones" Inherit="False">206</BoneAmount> <!-- Human skeletons always yield the same bones as their skeleton contains -->
+			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
+			<HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_SanctusSensitivity>
+		</statBases>
+		<race>
+			<thinkTreeMain Inherit="False">Animal</thinkTreeMain>
+			<thinkTreeConstant Inherit="False">AnimalConstant</thinkTreeConstant>
+			<intelligence Inherit="False">Animal</intelligence>
+			<trainability Inherit="False">Advanced</trainability>
+			<giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
+			<needsRest>false</needsRest>
+			<hasGenders>true</hasGenders>
+			<lifeExpectancy>2000</lifeExpectancy>
+			<bloodDef>Filth_CorpseBile</bloodDef>
+			<specificMeatDef>TSP_ST_SkeletalMarrow</specificMeatDef>
+			<meatColor>(45,44,39)</meatColor>
+			<fleshType MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_StrangeFlesh</fleshType>
+			<baseHungerRate>0</baseHungerRate>
+			<foodType Inherit="False">None, OmnivoreHuman, Kibble</foodType> <!-- You have to be able to feed an animal to tame it, apparently. -->
+			<body Inherit="False">TSP_ST_SkeletalMan</body>
+			<lifeStageAges Inherit="False">
+				<li>
+					<def>TSP_ST_SkeletonAge_Undead</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+		</race>
+		<!-- <receivesSignals>true</receivesSignals> -->
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<hediffname>HedSTUndead</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+		</comps>
+		<!--
+		<butcherProducts>
+		<BoneItem MayRequire="sihv.rombones">206</BoneItem>
+		</butcherProducts>
+		-->
+		<tradeTags>
+			<li>AnimalInsectSpace</li> <!-- Skeletons don't breathe -->
+			<li>DocileSkeleton</li>
+			<li>Skeleton</li>
+			<li>AnimalExotic</li>
+		</tradeTags>
+
+		<modExtensions>
+			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+			</li>
+			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+				<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
+			</li>
+		</modExtensions>
+	</ThingDef>
   
 	<PawnKindDef Name="BaseSkeletonKind" Abstract="True">
 		<defaultFactionType>Skeleton_Pirates</defaultFactionType>

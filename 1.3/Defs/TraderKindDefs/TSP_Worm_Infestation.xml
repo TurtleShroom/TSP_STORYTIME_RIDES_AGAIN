@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<TraderKindDef>
+		<defName>TSP_HouseOfTheWorm_InSpace</defName>
+		<label>worm-infested space junk</label>
+		<commonality>0.5</commonality>
+		<orbital>true</orbital>
+		<stockGenerators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>20000~40000</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ST_Worm</thingDef>
+				<countRange>
+					<min>50000</min>
+					<max>100000</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Meat_Megaspider</thingDef>
+				<countRange>
+					<min>500</min>
+					<max>1000</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Meat_JudasFrog</thingDef>
+				<countRange>
+					<min>500</min>
+					<max>1000</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_ReinforcedBarrels">
+				<countRange>1~4</countRange>
+			</li>
+
+			<li Class="StockGenerator_Animals">
+				<tradeTagsSell>
+					<li>JudasFrog</li>
+				</tradeTagsSell>
+				<tradeTagsBuy>
+					<li>JudasFrog</li>
+				</tradeTagsBuy>
+				<kindCountRange>1</kindCountRange>
+				<countRange>3~8</countRange>
+				<createMatingPair>
+					<li>JudasFrog</li>
+				</createMatingPair>
+			</li>
+		</stockGenerators>
+	</TraderKindDef>
+</Defs>

@@ -27,6 +27,20 @@
     <aiAvoidCover>true</aiAvoidCover>
     <destroyGearOnDrop>false</destroyGearOnDrop>
 	<maxGenerationAge>15</maxGenerationAge>
+    <lifeStages>
+      <li>
+        <label>Peeled Clown</label>
+        <labelPlural>Peeled Clowns</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/PeeledClown/PeeledClown/PeeledClown</texPath>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Items/DemonPotatoes</texPath>
+          <drawSize>2.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
   </PawnKindDef>
 
   <ThingDef ParentName="BasePeeled">
@@ -111,7 +125,7 @@
     <combatPower>30</combatPower>
 	<ecoSystemWeight>0</ecoSystemWeight>
 	<maxGenerationAge>7</maxGenerationAge>
-    <lifeStages>
+    <lifeStages Inherit="False">
       <li>
         <label>Peeled Clown</label>
         <labelPlural>Peeled Clowns</labelPlural>
@@ -120,7 +134,7 @@
           <drawSize>1.8</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Other/PeeledClown/PeeledClown/DemonPotatoes</texPath>
+          <texPath>Things/Items/DemonPotatoes</texPath>
           <drawSize>2.25</drawSize>
         </dessicatedBodyGraphicData>
       </li>

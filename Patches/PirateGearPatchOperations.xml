@@ -55,6 +55,7 @@
 		<xpath>/Defs/ThingDef[defName="RCA_breeches"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_breeches"]/apparel/tags</xpath>
 			<value>
 				<li>PoorPirateClothing</li>
@@ -87,6 +88,7 @@
 		<xpath>/Defs/ThingDef[defName="RCA_fancybreeches"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_fancybreeches"]/apparel/tags</xpath>
 			<value>
 				<li>Royal</li>
@@ -122,6 +124,7 @@
 		<xpath>/Defs/ThingDef[defName="RCA_redcoat_rg"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_redcoat_rg"]/apparel/tags</xpath>
 			<value>
 				<li>Royal</li>
@@ -146,6 +149,7 @@
 		<xpath>/Defs/ThingDef[defName="RCA_cockedhatblack"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_cockedhatblack"]/apparel/tags</xpath>
 			<value>
 				<li>PoorPirateClothing</li>
@@ -159,6 +163,7 @@
 		<xpath>/Defs/ThingDef[defName="RCA_cockedhatwhite"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_cockedhatwhite"]/apparel/tags</xpath>
 			<value>
 				<li>MedievalApparelNoble</li>
@@ -176,6 +181,7 @@
 		<xpath>/Defs/ThingDef[defName="RCA_fancyshirtvest"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_fancyshirtvest"]/apparel/tags</xpath>
 			<value>
 				<li>RichPirateClothing</li>
@@ -194,6 +200,7 @@
 		<xpath>/Defs/ThingDef[defName="RCA_fancystuffedhat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_fancystuffedhat"]/apparel/tags</xpath>
 			<value>
 				<li>Officer</li>
@@ -214,6 +221,7 @@
 		<xpath>/Defs/ThingDef[defName="RWP_Apparel_Jeans"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RWP_Apparel_Jeans"]/apparel/tags</xpath>
 			<value>
 				<li>Outlander</li>
@@ -239,6 +247,7 @@
 		<xpath>/Defs/ThingDef[defName="RWP_Apparel_LeatherPants"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RWP_Apparel_LeatherPants"]/apparel/tags</xpath>
 			<value>
 				<li>PoorPirateClothing</li>
@@ -260,6 +269,7 @@
 		<xpath>/Defs/ThingDef[defName="Apparel_MilitaryWinterCoat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Apparel_MilitaryWinterCoat"]/apparel/tags</xpath>
 			<value>
 				<li>IndustrialAdvanced</li>
@@ -284,6 +294,7 @@
 		<xpath>/Defs/ThingDef[defName="RCA_stuffedhat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_stuffedhat"]/apparel/tags</xpath>
 			<value>
 				<li>PoorPirateClothing</li>
@@ -303,6 +314,7 @@
 		<xpath>/Defs/ThingDef[defName="RCA_fancystuffedhat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_fancystuffedhat"]/apparel/tags</xpath>
 			<value>
 				<li>Officer</li>
@@ -319,9 +331,25 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Apparel_Corset"]</xpath>
+		<xpath>/Defs/ThingDef[defName="Apparel_Corset"]/apparel/tags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Apparel_Corset"]/apparel/tags</xpath>
+			<value>
+				<li>Royal</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier4</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier1</li>
+				<li>Dame</li>
+				<li>RichPirateClothing</li>
+			</value>
+		</match>
+		<!-- If it does, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Apparel_Corset"]/apparel</xpath>
 			<value>
 				<tags>
@@ -335,7 +363,7 @@
 					<li>RichPirateClothing</li>
 				</tags>
 			</value>
-		</match>
+		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
@@ -344,6 +372,7 @@
 		<xpath>/Defs/ThingDef[defName="RCA_fancycoat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_fancycoat"]/apparel/tags</xpath>
 			<value>
 				<li>RichPirateClothing</li>
@@ -360,6 +389,7 @@
 		<xpath>/Defs/ThingDef[defName="ROM_ApparelRaincoat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="ROM_ApparelRaincoat"]/apparel/tags</xpath>
 			<value>
 				<li>PoorPirateClothing</li>
@@ -375,6 +405,7 @@
 		<xpath>/Defs/ThingDef[defName="ROM_Apparel_ROM_SlickerHat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="ROM_Apparel_ROM_SlickerHat"]/apparel/tags</xpath>
 			<value>
 				<li>PoorPirateClothing</li>
@@ -390,6 +421,7 @@
 		<xpath>/Defs/ThingDef[defName="RWP_M1822Musket"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RWP_M1822Musket"]/weaponTags</xpath>
 			<value>
 				<li>PoorPirate</li>
@@ -403,6 +435,7 @@
 		<xpath>/Defs/ThingDef[defName="RWP_M1822MusketBayoneted"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RWP_M1822MusketBayoneted"]/weaponTags</xpath>
 			<value>
 				<li>PoorPirate</li>
@@ -416,6 +449,7 @@
 		<xpath>/Defs/ThingDef[defName="MeleeWeapon_BreachAxe"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="MeleeWeapon_BreachAxe"]/weaponTags</xpath>
 			<value>
 				<li>PoorPirate</li>
@@ -433,6 +467,7 @@
 		<xpath>/Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]/weaponTags</xpath>
 			<value>
 				<li>CallOfCthulhu_InfantryGun</li>
@@ -455,6 +490,7 @@
 		<xpath>/Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]</xpath>
 			<value>
 				<TradeTags>
@@ -470,6 +506,7 @@
 		<xpath>/Defs/ThingDef[defName="ROM_PoleHook"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="ROM_PoleHook"]/weaponTags</xpath>
 			<value>
 				<li>CallOfCthulhu_Melee</li>
@@ -491,6 +528,7 @@
 		<xpath>/Defs/ThingDef[defName="MeleeWeapon_ChampionSword"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="MeleeWeapon_ChampionSword"]/weaponTags</xpath>
 			<value>
 				<li>HarrowedMeleeChampion</li>
@@ -510,6 +548,7 @@
 		<xpath>/Defs/ThingDef[defName="ROM_Gun_Flaregun"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="ROM_Gun_Flaregun"]/weaponTags</xpath>
 			<value>
 				<li>SimpleGun</li>
@@ -529,6 +568,7 @@
 		<xpath>/Defs/ThingDef[defName="TSF_Tanegashima_Short"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="TSF_Tanegashima_Short"]/weaponTags</xpath>
 			<value>
 				<li>Gun</li>
@@ -549,6 +589,7 @@
 		<xpath>/Defs/ThingDef[defName="Weapon_GrenadeMolotov"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/weaponTags</xpath>
 			<value>
 				<li>GrenadePirate</li>
@@ -563,6 +604,7 @@
 		<xpath>/Defs/ThingDef[defName="TSF_Tanegashima_Matchlock"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="TSF_Tanegashima_Matchlock"]/weaponTags</xpath>
 			<value>
 				<li>NormalPirate</li>
@@ -583,6 +625,7 @@
 		<xpath>/Defs/ThingDef[defName="HSTanegashimaPistol"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="HSTanegashimaPistol"]/weaponTags</xpath>
 			<value>
 				<li>Gun</li>

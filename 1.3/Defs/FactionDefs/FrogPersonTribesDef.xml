@@ -21,7 +21,6 @@
     </requiredMemes>
     <disallowedMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
 	  <li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Serketist</li>
 	  <li MayRequire="VanillaExpanded.VMemesE">VME_InsectoidSupremacy</li>
     </disallowedMemes>
@@ -118,23 +117,45 @@
         </options>
       </li>
       <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <PoisonDartFrog>200</PoisonDartFrog>	
+		  <BudgettFrog>150</BudgettFrog>
+		  <ST_TreeFrog>150</ST_TreeFrog>
+          <CyberFrogDocile>20</CyberFrogDocile>
+		  <LeviathanFrog>100</LeviathanFrog>
+		  <FrogPersonChief>1</FrogPersonChief>
+        </options>
+      </li>
+      <li MayRequire="emilskin.forgrace.forgs">
+        <kindDef MayRequire="emilskin.forgrace.forgs">Combat</kindDef>
+        <options MayRequire="emilskin.forgrace.forgs">
+          <FrogPersonHunter MayRequire="emilskin.forgrace.forgs">1</FrogPersonHunter>
+		  <FrogPersonWarrior MayRequire="emilskin.forgrace.forgs">1</FrogPersonWarrior>
+          <PoisonDartFrog MayRequire="emilskin.forgrace.forgs">75</PoisonDartFrog>
+		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">100</ForgPawnKindDef>
+		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">100</DuoPawnKindDef>
+        </options>
+      </li>
+      <li>
         <kindDef>Trader</kindDef>
         <traders>
           <FrogPersonTrader>1</FrogPersonTrader>
         </traders>
         <carriers>
           <LeviathanFrog>999</LeviathanFrog>
-		  <Muffalo>0.01</Muffalo>
+		  <Muffalo>0.001</Muffalo>
         </carriers>
         <guards>
           <FrogPersonHunter>100</FrogPersonHunter>
-		  <FrogPersonWarrior>200</FrogPersonWarrior>
+		  <FrogPersonWarrior>50</FrogPersonWarrior>
           <PoisonDartFrog>5</PoisonDartFrog>
           <SpringPeeper>5</SpringPeeper>		   
           <BudgettFrog>5</BudgettFrog>
           <ST_TreeFrog>5</ST_TreeFrog>
           <TomatoFrog>5</TomatoFrog>
           <CyberFrogDocile>5</CyberFrogDocile>
+		  <LeviathanFrog>65</LeviathanFrog>
 		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
 		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
         </guards>
@@ -142,15 +163,15 @@
       <li>
         <kindDef>Settlement</kindDef>
         <options>
-          <FrogPersonHunter>100</FrogPersonHunter>
-		  <FrogPersonWarrior>200</FrogPersonWarrior>
+          <FrogPersonHunter>90</FrogPersonHunter>
+		  <FrogPersonWarrior>90</FrogPersonWarrior>
           <PoisonDartFrog>5</PoisonDartFrog>
           <SpringPeeper>5</SpringPeeper>		  
           <BudgettFrog>5</BudgettFrog>
           <ST_TreeFrog>5</ST_TreeFrog>
           <TomatoFrog>5</TomatoFrog>		
           <CyberFrogDocile>5</CyberFrogDocile>
-		  <FrogPersonChief>1</FrogPersonChief>
+		  <FrogPersonChief>5</FrogPersonChief>
 		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">1</ForgPawnKindDef>
 		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">1</DuoPawnKindDef>
         </options>

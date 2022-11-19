@@ -4,7 +4,7 @@
   <FactionDef>
     <defName>Skeleton_Pirates</defName>
     <label>Skeletal Crew</label>
-    <description>Once pirates, these living skeletons are the remains of a greedy pirate crew that willingly exchanged their soul for eternal life. Today, they wander the Rim in search of treasure. Being men, they are capable of complex attacks such taking cover, fleeing, and more, and they carry powerful, deadly weapons.</description>
+    <description>Once pirates, these living skeletons are the remains of a greedy pirate crew that willingly exchanged their soul for eternal life. Today, they wander the Rim in search of treasure. Being men, they are capable of complex attacks such taking as cover, fleeing, and more, and they carry powerful, deadly weapons. However, being skeletons without much strength from the absence of muscles, they cannot perform sieges.</description>
     <pawnsPlural>Skeletons</pawnsPlural>
     <fixedName>Skeletal Crew</fixedName>
     <canUseAvoidGrid>true</canUseAvoidGrid>
@@ -12,41 +12,115 @@
 	<maxCountAtGameStart>3</maxCountAtGameStart>
 	<factionIconPath>Things/Pawn/Humanlike/Apparel/PirateClothing/Tricorn/Tricorn</factionIconPath>
 	<basicMemberKind>ST_Skeleton</basicMemberKind>
-	<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+	<hostileToFactionlessHumanlikes>false</hostileToFactionlessHumanlikes>
     <pawnGroupMakers>
       <li>
         <kindDef>Combat</kindDef>
+		<commonality>100</commonality>
         <options>
 			<ST_Skeleton>50</ST_Skeleton>
-          <TSP_ST_RetardSkeleton>10</TSP_ST_RetardSkeleton>
-		  <ST_GoldSkeleton>15</ST_GoldSkeleton>
-		  <ST_PlantSkeleton>15</ST_PlantSkeleton>
-		  <ST_AshSkeleton>15</ST_AshSkeleton>
-		  <ST_GunSkeleton>2</ST_GunSkeleton>
-		  <ST_GunpowderSkeleton>10</ST_GunpowderSkeleton>
-		  <ST_SkeletonCaptain>3</ST_SkeletonCaptain>
+			<TSP_ST_RetardSkeleton>10</TSP_ST_RetardSkeleton>
+			<ST_GoldSkeleton>15</ST_GoldSkeleton>
+			<ST_PlantSkeleton>15</ST_PlantSkeleton>
+			<ST_AshSkeleton>15</ST_AshSkeleton>
+			<ST_GunSkeleton>2</ST_GunSkeleton>
+			<ST_GunpowderSkeleton>10</ST_GunpowderSkeleton>
+			<SpookySkeleton MayRequire="zal.witchinghour">5</SpookySkeleton>
+			<ST_SkeletonCaptain>3</ST_SkeletonCaptain>
         </options>
       </li>
 	  <li>
         <kindDef>Combat</kindDef>
+		<commonality>80</commonality>
         <options>
-			<ST_Skeleton>50</ST_Skeleton>
-          <TSP_ST_RetardSkeleton>5</TSP_ST_RetardSkeleton>
-		  <ST_GoldSkeleton>20</ST_GoldSkeleton>
-		  <ST_PlantSkeleton>20</ST_PlantSkeleton>
-		  <ST_AshSkeleton>5</ST_AshSkeleton>
-		  <ST_GunSkeleton>5</ST_GunSkeleton>
-		  <ST_SkeletonCaptain>15</ST_SkeletonCaptain>
+			<ST_Skeleton>5</ST_Skeleton>
+			<ST_GoldSkeleton>20</ST_GoldSkeleton>
+			<ST_PlantSkeleton>20</ST_PlantSkeleton>
+			<ST_AshSkeleton>20</ST_AshSkeleton>
+			<ST_GunSkeleton>20</ST_GunSkeleton>
+			<ST_GunpowderSkeleton>10</ST_GunpowderSkeleton>
+			<ST_SkeletonCaptain>15</ST_SkeletonCaptain>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>
+		<commonality>50</commonality>
+        <options>
+			<ST_Skeleton>5</ST_Skeleton>
+			<ST_GoldSkeleton>1</ST_GoldSkeleton>
+			<ST_PlantSkeleton>1</ST_PlantSkeleton>
+			<ST_AshSkeleton>1</ST_AshSkeleton>
+			<ST_GunSkeleton>35</ST_GunSkeleton>
+			<ST_GunpowderSkeleton>10</ST_GunpowderSkeleton>
+			<ST_SkeletonCaptain>3</ST_SkeletonCaptain>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>
+		<commonality>10</commonality>
+        <options>
+			<ST_Skeleton>5</ST_Skeleton>
+			<ST_GoldSkeleton>1</ST_GoldSkeleton>
+			<ST_PlantSkeleton>1</ST_PlantSkeleton>
+			<ST_AshSkeleton>25</ST_AshSkeleton>
+			<ST_GunpowderSkeleton>10</ST_GunpowderSkeleton>
+			<ST_GunSkeleton>1</ST_GunSkeleton>
+			<ST_SkeletonCaptain>3</ST_SkeletonCaptain>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>
+		<commonality>10</commonality>
+        <options>
+			<ST_Skeleton>5</ST_Skeleton>
+			<ST_GoldSkeleton>1</ST_GoldSkeleton>
+			<ST_PlantSkeleton>25</ST_PlantSkeleton>
+			<ST_AshSkeleton>1</ST_AshSkeleton>
+			<ST_GunSkeleton>1</ST_GunSkeleton>
+			<ST_SkeletonCaptain>3</ST_SkeletonCaptain>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>
+		<commonality>5</commonality>
+        <options>
+			<ST_Skeleton>5</ST_Skeleton>
+			<ST_GoldSkeleton>25</ST_GoldSkeleton>
+			<ST_PlantSkeleton>1</ST_PlantSkeleton>
+			<ST_AshSkeleton>1</ST_AshSkeleton>
+			<ST_GunSkeleton>1</ST_GunSkeleton>
+			<ST_SkeletonCaptain>3</ST_SkeletonCaptain>
+        </options>
+      </li>
+	  <li>
+        <kindDef>Combat</kindDef>
+		<commonality>5</commonality>
+        <options>
+			<ST_Skeleton>5</ST_Skeleton>
+			<ST_GoldSkeleton>25</ST_GoldSkeleton>
+			<ST_PlantSkeleton>1</ST_PlantSkeleton>
+			<ST_AshSkeleton>1</ST_AshSkeleton>
+			<ST_GunSkeleton>1</ST_GunSkeleton>
+			<ST_SkeletonCaptain>3</ST_SkeletonCaptain>
+        </options>
+      </li>
+	  <li MayRequire="zal.witchinghour">
+        <kindDef MayRequire="zal.witchinghour">Combat</kindDef>
+		<commonality MayRequire="zal.witchinghour">15</commonality>
+        <options MayRequire="zal.witchinghour">
+			<SpookySkeleton MayRequire="zal.witchinghour">50</SpookySkeleton>
+			<ST_GunpowderSkeleton MayRequire="zal.witchinghour">10</ST_GunpowderSkeleton>
+			<ST_SkeletonCaptain MayRequire="zal.witchinghour">3</ST_SkeletonCaptain>
         </options>
       </li>
     </pawnGroupMakers>
     <permanentEnemy>true</permanentEnemy>
     <maxPawnCostPerTotalPointsCurve>
       <points>
-        <li>(0,100)</li>
-        <li>(70,150)</li>
-        <li>(400,200)</li>
-        <li>(900,300)</li>
+        <li>(0,125)</li>
+        <li>(70,175)</li>
+        <li>(400,250)</li>
+        <li>(900,325)</li>
         <li>(100000,10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
@@ -55,8 +129,8 @@
         <li>(35,     15)</li>
         <li>(100,   120)</li>
         <li>(1000,  500)</li>
-        <li>(2000,  800)</li>
-        <li>(4000, 1000)</li>
+        <li>(2000,  1000)</li>
+        <li>(5000, 2000)</li>
       </points>
     </raidLootValueFromPointsCurve>
     <raidCommonalityFromPointsCurve>
@@ -74,10 +148,12 @@
       <min>-255</min>
       <max>255</max>
     </allowedArrivalTemperatureRange>
- <!--   <modExtensions>
+	<!--
+	<modExtensions>
       <li Class="JecsTools.FactionSettings">
         <entrySoundDef>SkeletonPirate_Theme</entrySoundDef>
       </li>
-    </modExtensions> -->
+    </modExtensions>
+	-->
   </FactionDef>
 </Defs>
