@@ -1,133 +1,132 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-  
-<ThingDef ParentName="MealBase">
-    <defName>FruitBatta</defName>
-    <label>Fruit Batta dish</label>
-    <description>"Batta" refers to any traditional Gnome dish served in a wrapping of bread (usually derived from Gnome Flour, but several other grains will do). It actually smells quite good. This particular Batta dish consists of fruit and berries.</description>
-    <graphicData>
-      <texPath>Things/Items/GnomeFood/FruitBatta</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.5</drawSize>
-    </graphicData>
-    <statBases>
-      <DeteriorationRate>0.25</DeteriorationRate>
-      <MarketValue>24</MarketValue>
-      <Mass>0.3</Mass>
-      <WorkToMake>450</WorkToMake>
-      <Nutrition>1.2</Nutrition>
-    </statBases>
-    <ingestible>
-      <preferability>MealFine</preferability>
-      <ingestEffect>EatVegetarian</ingestEffect>
-      <ingestSound>Meal_Eat</ingestSound>
-	  <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HedBatta</hediffDef>
-          <severity>1</severity>
-        </li>
-      </outcomeDoers>
-    </ingestible>
-	<comps>
-		<li Class="CompProperties_Rottable">
-			<daysToRotStart>4</daysToRotStart>
-			<rotDestroys>true</rotDestroys>
-		</li>
-		<li Class="CompProperties_Ingredients">
-			<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
-		</li>
-    </comps>
-	<tradeTags>
-		<li>GnomeBatta</li>
-		<!-- <li>GnomeVegetarian</li> -->
-	</tradeTags>
-  </ThingDef>
+	<ThingDef ParentName="MealBase">
+		<defName>FruitBatta</defName>
+		<label>Fruit Batta dish</label>
+		<description>"Batta" refers to any traditional Gnome dish served in a wrapping of bread (usually derived from Gnome Flour, but several other grains will do). It actually smells quite good. This particular Batta dish consists of fruit and berries.</description>
+		<graphicData>
+		  <texPath>Things/Items/GnomeFood/FruitBatta</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1.5</drawSize>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.25</DeteriorationRate>
+		  <MarketValue>24</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>450</WorkToMake>
+		  <Nutrition>1.2</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>MealFine</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>HedBatta</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>GnomeBatta</li>
+			<!-- <li>GnomeVegetarian</li> -->
+		</tradeTags>
+	</ThingDef>
 
-<ThingDef ParentName="MealBase">
-    <defName>VegetableBatta</defName>
-    <label>Vegetable Batta dish</label>
-    <description>"Batta" refers to any traditional Gnome dish served in a wrapping of bread (usually derived from Gnome Flour, but several other grains will do). It looks healthy. This particular Batta dish consists of vegetables and other plant matter.</description>
-    <graphicData>
-      <texPath>Things/Items/GnomeFood/VegetableBatta</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.5</drawSize>
-    </graphicData>
-    <statBases>
-      <DeteriorationRate>0.25</DeteriorationRate>
-      <MarketValue>19</MarketValue>
-      <Mass>0.3</Mass>
-      <WorkToMake>450</WorkToMake>
-      <Nutrition>1.2</Nutrition>
-    </statBases>
-    <ingestible>
-      <preferability>MealFine</preferability>
-      <ingestEffect>EatVegetarian</ingestEffect>
-      <ingestSound>Meal_Eat</ingestSound>
-	  <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HedBatta</hediffDef>
-          <severity>1</severity>
-        </li>
-      </outcomeDoers>
-    </ingestible>
-	<comps>
-		<li Class="CompProperties_Rottable">
-			<daysToRotStart>4</daysToRotStart>
-			<rotDestroys>true</rotDestroys>
-		</li>
-		<li Class="CompProperties_Ingredients">
-			<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
-		</li>
-    </comps>
-	<tradeTags>
-		<li>GnomeBatta</li>
-		<!-- <li>GnomeVegetarian</li> -->
-	</tradeTags>
-  </ThingDef>
+	<ThingDef ParentName="MealBase">
+		<defName>VegetableBatta</defName>
+		<label>Vegetable Batta dish</label>
+		<description>"Batta" refers to any traditional Gnome dish served in a wrapping of bread (usually derived from Gnome Flour, but several other grains will do). It looks healthy. This particular Batta dish consists of vegetables and other plant matter.</description>
+		<graphicData>
+		  <texPath>Things/Items/GnomeFood/VegetableBatta</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1.5</drawSize>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.25</DeteriorationRate>
+		  <MarketValue>19</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>450</WorkToMake>
+		  <Nutrition>1.2</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>MealFine</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>HedBatta</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>GnomeBatta</li>
+			<!-- <li>GnomeVegetarian</li> -->
+		</tradeTags>
+	</ThingDef>
   
-<ThingDef ParentName="MealBase">
-    <defName>WormBatta</defName>
-    <label>Worm Batta dish</label>
-    <description>"Batta" refers to any traditional Gnome dish served in a wrapping of bread (usually derived from Gnome Flour, but several other grains will do). It actually smells quite good. This particular Batta dish consists of the meat of worms and, despite sounding unappetizing, is actually quite delicious, not to mention healthy.</description>
-    <graphicData>
-      <texPath>Things/Items/GnomeFood/WormBatta</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.5</drawSize>
-    </graphicData>
-    <statBases>
-      <DeteriorationRate>0.25</DeteriorationRate>
-      <MarketValue>24</MarketValue>
-      <Mass>0.3</Mass>
-      <WorkToMake>450</WorkToMake>
-      <Nutrition>1.3</Nutrition>
-    </statBases>
-    <ingestible>
-      <preferability>MealFine</preferability>
-      <ingestEffect>EatMeat</ingestEffect>
-      <ingestSound>Meal_Eat</ingestSound>
-	  <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HedBatta</hediffDef>
-          <severity>1</severity>
-        </li>
-      </outcomeDoers>
-    </ingestible>
-	<comps>
-		<li Class="CompProperties_Rottable">
-			<daysToRotStart>4</daysToRotStart>
-			<rotDestroys>true</rotDestroys>
-		</li>
-		<li Class="CompProperties_Ingredients">
-			<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
-		</li>
-    </comps>
-	<tradeTags>
-		<li>GnomeBatta</li>
-		<!-- <li>GnomeMeat</li> -->
-		<li>Worm</li>
-	</tradeTags>
-  </ThingDef>
+	<ThingDef ParentName="MealBase">
+		<defName>WormBatta</defName>
+		<label>Worm Batta dish</label>
+		<description>"Batta" refers to any traditional Gnome dish served in a wrapping of bread (usually derived from Gnome Flour, but several other grains will do). It actually smells quite good. This particular Batta dish consists of the meat of worms and, despite sounding unappetizing, is actually quite delicious, not to mention healthy.</description>
+		<graphicData>
+		  <texPath>Things/Items/GnomeFood/WormBatta</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1.5</drawSize>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.25</DeteriorationRate>
+		  <MarketValue>24</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>450</WorkToMake>
+		  <Nutrition>1.3</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>MealFine</preferability>
+		  <ingestEffect>EatMeat</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>HedBatta</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>GnomeBatta</li>
+			<!-- <li>GnomeMeat</li> -->
+			<li>Worm</li>
+		</tradeTags>
+	</ThingDef>
   
 <ThingDef ParentName="MealBase">
     <defName>ToadBatta</defName>
@@ -171,170 +170,170 @@
 	</tradeTags>
   </ThingDef>
   
-  <ThingDef ParentName="MealBase">
-    <defName>ChocolateBomb</defName>
-    <label>Chocolate Bomb</label>
-    <description>Of all Gnome delicacies and all the rich cuisine that subspecies of man carries in its heritage, few can so stop the show as a Chocolate Bomb. Full of creamy, chocolate goodness, this magnificent candy is a taste sensation and a delight to all that eat it. It is delicious, shockingly nutritious, and guaranteed to bring delight to anyone that consumes it.</description>
-    <graphicData>
-      <texPath>Things/Items/GnomeFood/ChocolateBomb</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.15</drawSize>
-    </graphicData>
-    <statBases>
-      <DeteriorationRate>0.25</DeteriorationRate>
-      <MarketValue>24</MarketValue>
-      <Mass>0.3</Mass>
-      <WorkToMake>450</WorkToMake>
-      <Nutrition>0.8</Nutrition>
-    </statBases>
-    <ingestible>
-      <preferability>MealLavish</preferability>
-      <ingestEffect>EatVegetarian</ingestEffect>
-      <ingestSound>Ingest_Drink</ingestSound>
-      <joy>0.65</joy>
-      <joyKind>Gluttonous</joyKind>
-	  <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HedBowl</hediffDef>
-          <severity>1</severity>
-        </li>
-      </outcomeDoers>
-    </ingestible>
-	<comps>
-		<li Class="CompProperties_Ingredients">
+	<ThingDef ParentName="MealBase">
+		<defName>ChocolateBomb</defName>
+		<label>Chocolate Bomb</label>
+		<description>Of all Gnome delicacies and all the rich cuisine that subspecies of man carries in its heritage, few can so stop the show as a Chocolate Bomb. Full of creamy, chocolate goodness, this magnificent candy is a taste sensation and a delight to all that eat it. It is delicious, shockingly nutritious, and guaranteed to bring delight to anyone that consumes it.</description>
+		<graphicData>
+		  <texPath>Things/Items/GnomeFood/ChocolateBomb</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1.15</drawSize>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.25</DeteriorationRate>
+		  <MarketValue>24</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>450</WorkToMake>
+		  <Nutrition>0.8</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>MealLavish</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Ingest_Drink</ingestSound>
+		  <joy>0.65</joy>
+		  <joyKind>Gluttonous</joyKind>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>HedBowl</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<!-- <li>GnomeBatta</li> -->
+			<li>GnomeDessert</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="MealBase">
+		<defName>TangledToadLegs</defName>
+		<label>Tangled Toad Legs</label>
+		<description>Tangled Toad Legs are the quintessential Gnome dish. Take the detachable limbs of the Regenerative Toad, tie them up in a knot, wrap them in breading, and bake it in the meat's juices. It actually smells quite good, so get ready for a treat!</description>
+		<graphicData>
+		  <texPath>Things/Items/GnomeFood/TangledToadLegs</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1.2</drawSize>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.25</DeteriorationRate>
+		  <MarketValue>24</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>450</WorkToMake>
+		  <Nutrition>1.2</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>MealFine</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>HedBowl</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>7</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>GnomeBatta</li>
+			<!-- <li>GnomeMeat</li> -->
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="MealBase">
+		<defName>WormHole</defName>
+		<label>Worm Hole</label>
+		<description>Similar to the iconic Batta dishes in Gnome cuisine, Worm Holes are made by breading worms and baking them with other vegetables. The breaded worms and vegetables are then placed in a deep bread bowl, baked separately for maximum flavor. Despite its unappealing origins, it actually smells quite good and tastes great.</description>
+		<graphicData>
+		  <texPath>Things/Items/GnomeFood/WormHole</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1.15</drawSize>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.25</DeteriorationRate>
+		  <MarketValue>16</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>450</WorkToMake>
+		  <Nutrition>1.2</Nutrition>
+		</statBases>
+		<stackLimit>50</stackLimit>
+		<ingestible>
+		  <preferability>MealFine</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>HedBowl</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>7</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>GnomeBatta</li>
+			<li>Worm</li>
+			<li>GnomeMeat</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="MealBase">
+		<defName>VegBall</defName>
+		<label>Veggie Ball</label>
+		<description>Veggie Balls are the plant-based answer to Meat Nuggets. Comprised of plant matter and vegetables ground and rolled in husks of their source material, it is portable, slow to rot, and perfect for a Gnome on the go.</description>
+		<graphicData>
+		  <texPath>Things/Items/GnomeFood/VegBall</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1.15</drawSize>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.25</DeteriorationRate>
+		  <MarketValue>24</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>450</WorkToMake>
+		  <Nutrition>1.2</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>MealFine</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>HedBowl</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+		  <li Class="CompProperties_Rottable">
+			<daysToRotStart>35</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		  </li>
+		  <li Class="CompProperties_Ingredients">
 			<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
-		</li>
-	</comps>
-	<tradeTags>
-		<!-- <li>GnomeBatta</li> -->
-		<li>GnomeDessert</li>
-	</tradeTags>
-  </ThingDef>
-  
-  <ThingDef ParentName="MealBase">
-    <defName>TangledToadLegs</defName>
-    <label>Tangled Toad Legs</label>
-    <description>Tangled Toad Legs are the quintessential Gnome dish. Take the detachable limbs of the Regenerative Toad, tie them up in a knot, wrap them in breading, and bake it in the meat's juices. It actually smells quite good, and get ready for a treat!</description>
-    <graphicData>
-      <texPath>Things/Items/GnomeFood/TangledToadLegs</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.2</drawSize>
-    </graphicData>
-    <statBases>
-      <DeteriorationRate>0.25</DeteriorationRate>
-      <MarketValue>24</MarketValue>
-      <Mass>0.3</Mass>
-      <WorkToMake>450</WorkToMake>
-      <Nutrition>1.2</Nutrition>
-    </statBases>
-    <ingestible>
-      <preferability>MealFine</preferability>
-      <ingestEffect>EatVegetarian</ingestEffect>
-      <ingestSound>Meal_Eat</ingestSound>
-	  <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HedBowl</hediffDef>
-          <severity>1</severity>
-        </li>
-      </outcomeDoers>
-    </ingestible>
-	<comps>
-		<li Class="CompProperties_Rottable">
-			<daysToRotStart>7</daysToRotStart>
-			<rotDestroys>true</rotDestroys>
-		</li>
-		<li Class="CompProperties_Ingredients">
-			<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
-		</li>
-    </comps>
-	<tradeTags>
-		<li>GnomeBatta</li>
-		<!-- <li>GnomeMeat</li> -->
-	</tradeTags>
-  </ThingDef>
-  
-  <ThingDef ParentName="MealBase">
-    <defName>WormHole</defName>
-    <label>Worm Hole</label>
-    <description>Similar to the iconic Batta dishes in Gnome cuisine, Worm Holes are made by breading worms and baking them with other vegetables. The breaded worms and vegetables are then placed in a deep bread bowl, baked separately for maximum flavor. Despite its unappealing origins, it actually smells quite good and tastes great.</description>
-    <graphicData>
-      <texPath>Things/Items/GnomeFood/WormHole</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.15</drawSize>
-    </graphicData>
-    <statBases>
-      <DeteriorationRate>0.25</DeteriorationRate>
-      <MarketValue>16</MarketValue>
-      <Mass>0.3</Mass>
-      <WorkToMake>450</WorkToMake>
-      <Nutrition>1.2</Nutrition>
-    </statBases>
-	<stackLimit>50</stackLimit>
-    <ingestible>
-      <preferability>MealFine</preferability>
-      <ingestEffect>EatVegetarian</ingestEffect>
-      <ingestSound>Meal_Eat</ingestSound>
-	  <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HedBowl</hediffDef>
-          <severity>1</severity>
-        </li>
-      </outcomeDoers>
-    </ingestible>
-	<comps>
-		<li Class="CompProperties_Rottable">
-			<daysToRotStart>7</daysToRotStart>
-			<rotDestroys>true</rotDestroys>
-		</li>
-		<li Class="CompProperties_Ingredients">
-			<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
-		</li>
-    </comps>
-	<tradeTags>
-		<li>GnomeBatta</li>
-		<li>Worm</li>
-		<li>GnomeMeat</li>
-	</tradeTags>
-  </ThingDef>
-  
-  <ThingDef ParentName="MealBase">
-    <defName>VegBall</defName>
-    <label>Veggie Ball</label>
-    <description>Veggie Balls are the plant-based answer to Meat Nuggets. Comprised of plant matter and vegetables ground and rolled in husks of their source material, it is portable, slow to rot, and perfect for a Gnome on the go.</description>
-    <graphicData>
-      <texPath>Things/Items/GnomeFood/VegBall</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.15</drawSize>
-    </graphicData>
-    <statBases>
-      <DeteriorationRate>0.25</DeteriorationRate>
-      <MarketValue>24</MarketValue>
-      <Mass>0.3</Mass>
-      <WorkToMake>450</WorkToMake>
-      <Nutrition>1.2</Nutrition>
-    </statBases>
-    <ingestible>
-      <preferability>MealFine</preferability>
-      <ingestEffect>EatVegetarian</ingestEffect>
-      <ingestSound>Meal_Eat</ingestSound>
-	  <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HedBowl</hediffDef>
-          <severity>1</severity>
-        </li>
-      </outcomeDoers>
-    </ingestible>
-	<comps>
-      <li Class="CompProperties_Rottable">
-        <daysToRotStart>35</daysToRotStart>
-        <rotDestroys>true</rotDestroys>
-      </li>
-      <li Class="CompProperties_Ingredients">
-        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
-      </li>
-    </comps>
-	<tradeTags>
-		<li>GnomeVegetarian</li>
-	</tradeTags>
-  </ThingDef>
+		  </li>
+		</comps>
+		<tradeTags>
+			<li>GnomeVegetarian</li>
+		</tradeTags>
+	</ThingDef>
 </Defs>
