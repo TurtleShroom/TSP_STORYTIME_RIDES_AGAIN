@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AlienRace.BackstoryDef Name="BeanBackstories" Abstract="True">
+  <AlienRace.AlienBackstoryDef Name="BeanBackstories" Abstract="True">
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
 	<spawnCategories>
       <li>BeanManBackstory</li>
     </spawnCategories>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeanBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeanBackstories">
     <defName>BeanMan</defName>
     <title>Ascended Bulborb</title>
-    <baseDescription>[PAWN_nameDef] was a Bulborb that was granted sapience in a Bean Pit, like all of [PAWN_possessive] kind.</baseDescription>
+    <baseDesc>[PAWN_nameDef] was a Bulborb that was granted sapience in a Bean Pit, like all of [PAWN_possessive] kind.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -24,22 +24,22 @@
         <value>2</value>
       </li>
     </skillGains>
-	<forcedTraits>
+	<forcedTraitsChance>
       <li>
         <defName>BeanMan</defName>
       </li>
-    </forcedTraits>
-	<disallowedTraits>
+    </forcedTraitsChance>
+	<disallowedTraitsChance>
 		<li>
 			<defName>BodyPurist</defName>
 		</li>
-	</disallowedTraits>
-  </AlienRace.BackstoryDef>
+	</disallowedTraitsChance>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeanBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeanBackstories">
     <defName>BeanManAdult</defName>
     <title>Bean Man</title>
-    <baseDescription>[PAWN_nameDef] is a Bean Man. Formerly an ordinary Bulborb, [PAWN_nameDef] was granted sapience at birth by the miraculous implantation of bean-based Glitter World technology.</baseDescription>
+    <baseDesc>[PAWN_nameDef] is a Bean Man. Formerly an ordinary Bulborb, [PAWN_nameDef] was granted sapience at birth by the miraculous implantation of bean-based Glitter World technology.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -51,15 +51,15 @@
         <value>4</value>
 	  </li>
     </skillGains>
-	<forcedTraits>
+	<forcedTraitsChance>
       <li>
         <defName>BeanMan</defName>
       </li>
-    </forcedTraits>
-	<disallowedTraits>
+    </forcedTraitsChance>
+	<disallowedTraitsChance>
 		<li>
 			<defName>BodyPurist</defName>
 		</li>
-	</disallowedTraits>
-  </AlienRace.BackstoryDef>
+	</disallowedTraitsChance>
+  </AlienRace.AlienBackstoryDef>
 </Defs>

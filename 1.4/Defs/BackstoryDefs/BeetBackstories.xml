@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AlienRace.BackstoryDef Name="BeetnikhBackstories" Abstract="True">
+  <AlienRace.AlienBackstoryDef Name="BeetnikhBackstories" Abstract="True">
     <bodyTypeMale>Hulk</bodyTypeMale>
     <bodyTypeFemale>Fat</bodyTypeFemale>
 	<spawnCategories>
       <li>BeetnikhBackstory</li>
     </spawnCategories>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeetnikhBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetHerderChild</defName>
     <title>Young Herdsman</title>
-    <baseDescription>[PAWN_nameDef] helped herd the sheep that lived on his family's homestead. It was a lonely upbringing.</baseDescription>
+    <baseDesc>[PAWN_nameDef] helped herd the sheep that lived on his family's homestead. It was a lonely upbringing.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -33,12 +33,12 @@
 	  <li>Outsider</li>
 	  <li>Outlander</li>
     </spawnCategories>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeetnikhBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetFisherChild</defName>
     <title>Young Fisherman</title>
-    <baseDescription>[PAWN_nameDef] lived in town and helped catch fish. Everybody liked [PAWN_pronoun] when  landed a big one.</baseDescription>
+    <baseDesc>[PAWN_nameDef] lived in town and helped catch fish. Everybody liked [PAWN_pronoun] when  landed a big one.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -54,11 +54,11 @@
         <value>3</value>
       </li>
     </skillGains>
-	<forcedTraits MayRequire="VanillaExpanded.VCEF">
+	<forcedTraitsChance MayRequire="VanillaExpanded.VCEF">
       <li MayRequire="VanillaExpanded.VCEF">
         <defName MayRequire="VanillaExpanded.VCEF">VCEF_Fisherman</defName>
       </li>
-    </forcedTraits>
+    </forcedTraitsChance>
 	<spawnCategories>
 		<li>BeetnikhBackstory</li>
 		<li>Farmer</li>
@@ -67,13 +67,13 @@
 		<li>Outlander</li>
 		<li>Tribal</li>
     </spawnCategories>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeetnikhBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetSchoolChild</defName>
     <title>Schoolboy</title>
 	<titleFemale>Schoolgirl</titleFemale>
-    <baseDescription>[PAWN_nameDef]'s family was well off enough that [PAWN_pronoun] was able to attend school instead of helping out around the house.</baseDescription>
+    <baseDesc>[PAWN_nameDef]'s family was well off enough that [PAWN_pronoun] was able to attend school instead of helping out around the house.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -89,12 +89,12 @@
       <li>BeetnikhBackstory</li>
 	  <li>CivilizedBeetEmperor</li>
     </spawnCategories>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeetnikhBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetCulturalExchange</defName>
     <title>Exchange Student</title>
-    <baseDescription>[PAWN_nameDef] joined a program of cultural exchange with their savage wood beet cousins. This ended poorly.</baseDescription>
+    <baseDesc>[PAWN_nameDef] joined a program of cultural exchange with their savage wood beet cousins. This ended poorly.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -106,21 +106,21 @@
         <value>4</value>
 	  </li>
     </skillGains>
-	<forcedTraits>
+	<forcedTraitsChance>
       <li>
         <defName>DrugDesire</defName>
         <degree>2</degree>
       </li>
-    </forcedTraits>
+    </forcedTraitsChance>
 	<workDisables>
       <li>Intellectual</li>
     </workDisables>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeetnikhBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetFarmer</defName>
     <title>Beet Farmer</title>
-    <baseDescription>[PAWN_nameDef] quietly farmed beets. Not the sapient kind, though.</baseDescription>
+    <baseDesc>[PAWN_nameDef] quietly farmed beets. Not the sapient kind, though.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -141,12 +141,12 @@
 		<li>Tribal</li>
 		<li>Outlander</li>
 	</spawnCategories>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeetnikhBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetShaman</defName>
     <title>Beet Shaman</title>
-    <baseDescription>[PAWN_nameDef] was a member of the elite group who communed with the spirits of nature.</baseDescription>
+    <baseDesc>[PAWN_nameDef] was a member of the elite group who communed with the spirits of nature.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -158,12 +158,12 @@
         <value>6</value>
 	  </li>
     </skillGains>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeetnikhBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetGuard</defName>
     <title>Town Guard</title>
-    <baseDescription>[PAWN_nameDef] worked as a guard in town, protecting the citizenry from pirates and drunkards.</baseDescription>
+    <baseDesc>[PAWN_nameDef] worked as a guard in town, protecting the citizenry from pirates and drunkards.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -175,12 +175,12 @@
         <value>3</value>
       </li>
     </skillGains>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeetnikhBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetAlcoholic</defName>
     <title>Alcoholic</title>
-    <baseDescription>[PAWN_nameDef] can't stop drinking alcohol. This has made them violent and dangerous to society.</baseDescription>
+    <baseDesc>[PAWN_nameDef] can't stop drinking alcohol. This has made them violent and dangerous to society.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -192,7 +192,7 @@
         <value>15</value>
 	  </li>
     </skillGains>
-	<forcedTraits>
+	<forcedTraitsChance>
       <li>
         <defName>DrugDesire</defName>
         <degree>2</degree>
@@ -203,7 +203,7 @@
 	  <li>
 		<defName>Brawler</defName>
 	  </li>
-    </forcedTraits>
+    </forcedTraitsChance>
 	<requiredWorkTags>
 		<li>Violent</li>
 	</requiredWorkTags>
@@ -212,16 +212,16 @@
 	  <li>Intellectual</li>
 	  <li>ManualSkilled</li>
     </workDisables>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef>
+  <AlienRace.AlienBackstoryDef>
 	<!-- Only applies to a civilized Beetnikh nobleman -->
 	<bodyTypeMale Inherit="False">Fat</bodyTypeMale>
 	<bodyTypeFemale Inherit="False">Fat</bodyTypeFemale>
     <defName>BeetEmperor</defName>
     <title>Beet Emperor</title>
 	<titleFemale>Beet Empress</titleFemale>
-    <baseDescription>Thanks to [PAWN_possessive] spectacular military prowess, [PAWN_nameDef] somehow managed to become the ruler of a great Beetnikh Empire. Considering how stupid [PAWN_pronoun] is at governing, [PAWN_pronoun] cannot do it alone. [PAWN_pronoun] is surrounded by a host of advisors that do most of the peacetime work.</baseDescription>
+    <baseDesc>Thanks to [PAWN_possessive] spectacular military prowess, [PAWN_nameDef] somehow managed to become the ruler of a great Beetnikh Empire. Considering how stupid [PAWN_pronoun] is at governing, [PAWN_pronoun] cannot do it alone. [PAWN_pronoun] is surrounded by a host of advisors that do most of the peacetime work.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains Inherit="False">
       <li>
@@ -253,12 +253,12 @@
 	<spawnCategories Inherit="False">
       <li>CivilizedBeetEmperor</li>
     </spawnCategories>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeetnikhBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetHerder</defName>
     <title>Beet Shepherd</title>
-    <baseDescription>[PAWN_nameDef] herded sheep around his ancestral homestead. It was boring.</baseDescription>
+    <baseDesc>[PAWN_nameDef] herded sheep around his ancestral homestead. It was boring.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -274,12 +274,12 @@
         <value>1</value>
       </li>
     </skillGains>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.BackstoryDef ParentName="BeetnikhBackstories">
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetTownsperson</defName>
     <title>Beet Townsman</title>
-    <baseDescription>[PAWN_nameDef] lived with other Beets in a small village, doing various odd tasks for pay.</baseDescription>
+    <baseDesc>[PAWN_nameDef] lived with other Beets in a small village, doing various odd tasks for pay.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -295,6 +295,6 @@
         <value>2</value>
       </li>
     </skillGains>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
 
 </Defs>

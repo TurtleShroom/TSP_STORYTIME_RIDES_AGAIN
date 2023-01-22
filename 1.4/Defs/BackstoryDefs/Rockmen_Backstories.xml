@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <Defs>
-	<AlienRace.BackstoryDef Name="STOutlanderBackstories" Abstract="True">
+	<AlienRace.AlienBackstoryDef Name="STOutlanderBackstories" Abstract="True">
 	    <spawnCategories>
 			<li>Offworld</li>
 			<li>Outlander</li>
 	    </spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef ParentName="STOutlanderBackstories">
+	<AlienRace.AlienBackstoryDef ParentName="STOutlanderBackstories">
 		<defName>ST_RockChild</defName>
 		<slot>Childhood</slot>
 		<title>aspiring geologist</title>
 		<titleShort>rock lover</titleShort>
-		<baseDescription>For as long as [PAWN_pronoun] can remember, [PAWN_nameDef] was fascinated by rocks. [PAWN_pronoun] would collect rocks wherever [PAWN_pronoun] went and even travelled to other Biomes as a teenager. His favorite rocks, however, were the sapient ones.</baseDescription>
+		<baseDesc>For as long as [PAWN_pronoun] can remember, [PAWN_nameDef] was fascinated by rocks. [PAWN_pronoun] would collect rocks wherever [PAWN_pronoun] went and even travelled to other Biomes as a teenager. His favorite rocks, however, were the sapient ones.</baseDesc>
 		<skillGains>
 			  <li>
 				<key>Mining</key>
 				<value>4</value>
 			  </li>	
 		</skillGains>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.BackstoryDef ParentName="STOutlanderBackstories">
+	<AlienRace.AlienBackstoryDef ParentName="STOutlanderBackstories">
 		<defName>ST_RockTeacher</defName>
 		<slot>Adulthood</slot>
 		<title>master geologist</title>
-		<baseDescription>[PAWN_nameDef] was passsionate about geology; [PAWN_pronoun] spent years learning the way of the rock. Once [PAWN_pronoun] had achieved full mastery, [PAWN_pronoun] decided to share [PAWN_possessive] wisdom by becoming a circuit teacher, travelling across the Rim to teach geology. [PAWN_possessive] mining training was among the best on the planet.</baseDescription>
+		<baseDesc>[PAWN_nameDef] was passsionate about geology; [PAWN_pronoun] spent years learning the way of the rock. Once [PAWN_pronoun] had achieved full mastery, [PAWN_pronoun] decided to share [PAWN_possessive] wisdom by becoming a circuit teacher, travelling across the Rim to teach geology. [PAWN_possessive] mining training was among the best on the planet.</baseDesc>
 		<skillGains>
 			  <li>
 				<key>Mining</key>
@@ -37,7 +37,7 @@
 				<value>6</value>
 			  </li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 			  <defName>Undergrounder</defName>
 			  <chance>0.4</chance>
@@ -45,6 +45,6 @@
 			<li>
 			  <defName>ST_RockExpert</defName>
 			</li>
-		</forcedTraits>
-	</AlienRace.BackstoryDef>
+		</forcedTraitsChance>
+	</AlienRace.AlienBackstoryDef>
 </Defs>
