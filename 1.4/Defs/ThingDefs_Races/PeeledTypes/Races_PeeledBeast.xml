@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BasePeeled">
+    <defName>PeeledBeast</defName>
+    <label>Peeled Beast</label>
+    <description>HHHHHHHHHHHHHHHHHHHH</description>
+    <statBases>
+      <MoveSpeed>6.0</MoveSpeed>
+      <MarketValue>350</MarketValue>
+      <ComfyTemperatureMin>-255</ComfyTemperatureMin>
+	  <ComfyTemperatureMax>255</ComfyTemperatureMax>
+	  <TerrorSource>2</TerrorSource>
+	  <MeatAmount>120</MeatAmount>
+	  <LeatherAmount>120</LeatherAmount>
+	  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
+	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_SanctusSensitivity>
+	  <HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_SoulRendSensitivity> <!-- Peeled Ones have no souls -->
+    </statBases>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Peeler</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Peeler</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+		<label>fangs</label>
+        <capacities>
+          <li>Peeler</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <race>
+	  <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <body>QuadrupedAnimalWithClawsTailAndJowl</body>
+      <baseBodySize>2</baseBodySize>
+      <baseHungerRate>0</baseHungerRate>
+      <baseHealthScale>1</baseHealthScale>
+      <lifeExpectancy>15</lifeExpectancy>
+	  <leatherDef>RawPotatoes</leatherDef>
+	  <fleshType MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeFlesh</fleshType>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0</minAge>
+          <soundWounded>PeeledScreech</soundWounded>
+          <soundDeath>PeeledScreech</soundDeath>
+          <soundCall>PeeledScreech</soundCall>
+          <soundAngry>PeeledScreech</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+	<tradeTags>
+		<li>AnimalInsectSpace</li> <!-- This tag allows the creature to breathe in the vacuum of space -->
+	</tradeTags>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BasePeeledKind">
+    <defName>PeeledBeast</defName>
+    <label>Peeled Beast</label>
+    <race>PeeledBeast</race>
+	<ecoSystemWeight>0</ecoSystemWeight>
+    <combatPower>135</combatPower>
+	<maxGenerationAge>13</maxGenerationAge>
+    <lifeStages Inherit="False">
+      <li>
+        <label>Peeled Beast</label>
+        <labelPlural>Peeled Beasts</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/PeeledClown/PeeledBeast/PeeledBeast</texPath>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/GuineaPig/Dessicated_GuineaPig</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+</Defs>

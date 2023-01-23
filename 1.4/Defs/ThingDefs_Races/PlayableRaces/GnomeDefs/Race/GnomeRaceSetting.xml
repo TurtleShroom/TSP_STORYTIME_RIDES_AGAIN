@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+		<defName>Alien_Gnome</defName>
+		<label>gnome</label>
+		<description>Gnomes are like a mini-man, because that is what they are! Gnomes, despite their name, are not actually a type of fairy. Rather, the Gnomes known in this galaxy are genetically engineered Xeno-Humans that are faster, need less food to survive, and are more inherently attuned to nature. They have an unique culture and a stunning affinity for and natural talent in cooking.</description>
+		<alienRace>
+			<generalSettings>
+				<maleGenderProbability>0.55</maleGenderProbability>
+				<immuneToAge>false</immuneToAge>
+				<canLayDown>true</canLayDown>
+				<forcedRaceTraitEntries>
+					<li>
+						<defName>Gourmand</defName>
+						<chance>100</chance>
+					</li>
+					<!-- If you have the Mod -->
+					<li MayRequire="morishep.tarojun.onioftherim">
+						<defName>Natures_blessing</defName>
+						<chance>50</chance>
+					</li>
+				</forcedRaceTraitEntries>
+				<maxDamageForSocialfight>1</maxDamageForSocialfight>
+				<humanRecipeImport>true</humanRecipeImport>
+				<notXenophobistTowards>
+					<li>Human</li>
+					<li MayRequire="thecatlover366.oompaloompas">Alien_Loompa</li>
+				</notXenophobistTowards>
+				<alienPartGenerator>
+					<aliencrowntypes>
+						<li>Average_Normal</li>
+					</aliencrowntypes>
+					<alienbodytypes>
+						<li>Thin</li>
+						<li>Male</li>
+						<li>Female</li>
+					</alienbodytypes>
+					<customDrawSize>(0.5, 0.5)</customDrawSize>
+					<customHeadDrawSize>(0.53, 0.53)</customHeadDrawSize>
+					<customPortraitDrawSize>(0.80, 0.8)</customPortraitDrawSize>
+					<customPortraitHeadDrawSize>(0.85, 0.85)</customPortraitHeadDrawSize>
+					<headOffset>(0.0, -0.16)</headOffset>
+					<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>5</weight>
+										<min>RGBA(236, 188, 180)</min>
+										<max>RGBA(230, 182, 172)</max>
+									</li>
+									<li>
+										<weight>5</weight>
+										<min>RGBA(234,192,134)</min>
+										<max>RGBA(229,92,84)</max>
+									</li>
+									<li>
+										<weight>10</weight>
+										<min>RGBA(255,224,189)</min>
+										<max>RGBA(250,219,184)</max>
+									</li>
+								</options>
+							</first>
+						</li>
+						<li>
+							<name>hair</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>RGBA(44, 34, 43)</min>
+										<max>RGBA(39, 29, 38)</max>
+									</li>
+									<li>
+										<weight>5</weight>
+										<min>RGBA(95, 72, 56)</min>
+										<max>RGBA(75,62,46)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>RGBA(184,151,128)</min>
+										<max>RGBA(174,141,118)</max>
+									</li>
+								</options>
+							</first>
+						</li>
+					</colorChannels>
+					<useGenderedHeads>true</useGenderedHeads>
+				</alienPartGenerator>
+			</generalSettings>
+			<graphicPaths>
+				<li>
+					<body>Things/Pawn/Humanlike/Gnome/Body/</body>
+					<head>Things/Pawn/Humanlike/Gnome/Head/</head>
+				</li>
+			</graphicPaths>
+			<relationSettings>
+				<relationChanceModifierSibling>3</relationChanceModifierSibling>
+				<renamer>
+					<li>
+						<relation>Parent</relation>
+						<label>Father</label>
+						<femaleLabel>Mother</femaleLabel>
+					</li>
+					<li>
+						<relation>Child</relation>
+						<label>Gnomelet</label>
+						<femaleLabel>Gnomelet</femaleLabel>
+					</li>
+					<li>
+						<relation>Spouse</relation>
+						<label>Husband</label>
+						<femaleLabel>Wife</femaleLabel>
+					</li>
+					<li>
+						<relation>ExSpouse</relation>
+						<label>ExHusband</label>
+						<femaleLabel>ExWife</femaleLabel>
+					</li>
+					<li>
+						<relation>Sibling</relation>
+						<label>Brother</label>
+						<femaleLabel>Sister</femaleLabel>
+					</li>
+					<li>
+						<relation>Fiance</relation>
+						<label>Betrothed</label>
+						<femaleLabel>Betrothed</femaleLabel>
+					</li>
+				</renamer>
+			</relationSettings>
+			<thoughtSettings>
+				<cannotReceiveThoughts>
+					<li MayRequire="morishep.tarojun.onioftherim">AteOniStew</li>
+					<li MayRequire="morishep.tarojun.onioftherim">AteDemonBreathBerriesAsIngredient</li>
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeat_Sacrilegious</li>
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeatAsIngredient_Sacrilegious</li>
+				</cannotReceiveThoughts>
+				<replacerList>
+					<!-- Same benefits as Onis, because Gnomes can appreciate a lot broader cuisine than others -->
+					<li MayRequire="morishep.tarojun.onioftherim">
+						<original MayRequire="morishep.tarojun.onioftherim">AteOniStew</original>
+						<replacer MayRequire="morishep.tarojun.onioftherim">AteOniStewGood</replacer> 
+					</li>
+					<li MayRequire="morishep.tarojun.onioftherim">
+						<original MayRequire="morishep.tarojun.onioftherim">AteDemonBreathBerriesAsIngredient</original>
+						<replacer MayRequire="morishep.tarojun.onioftherim">AteDemonBreathBerriesAsIngredientGood</replacer> 
+					</li>
+					
+					
+					<!-- Gnomes eat worms. Gnomes LOVE worms. Worms may not be insects, but they invoke similar feelings. Ergo, Gnomes also like eating creepy-crawly bugs. -->
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatDirect</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeat_Loved</replacer>
+					</li>
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient_Loved</replacer>
+					</li>
+				</replacerList>
+			</thoughtSettings>
+		</alienRace>
+		<statBases>
+			<MarketValue>500</MarketValue>
+			<MoveSpeed>7</MoveSpeed>
+			<Flammability>1.1</Flammability>
+			<ComfyTemperatureMin>1</ComfyTemperatureMin>
+			<ComfyTemperatureMax>30</ComfyTemperatureMax>
+			<LeatherAmount>40</LeatherAmount>
+			<PsychicSensitivity>0.8</PsychicSensitivity>
+			<ResearchSpeed>0.8</ResearchSpeed>
+			<Mass>20</Mass>
+			<RoyalFavorValue>2</RoyalFavorValue>
+			<PlantWorkSpeed>1.25</PlantWorkSpeed>
+			<ButcheryFleshSpeed>1.1</ButcheryFleshSpeed>
+			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">1.1</HSAU_GhoulismSusceptibility> <!-- Sadly, when they are turned into Hellsing Ghouls, they become normal size. -->
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>0.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>0.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<nameGenerator>GnomeMaleName</nameGenerator>
+			<nameGeneratorFemale>GnomeFemaleName</nameGeneratorFemale>
+			<useLeatherFrom>Human</useLeatherFrom>
+			<useMeatFrom>Human</useMeatFrom>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>120</lifeExpectancy>
+			<nameCategory>HumanStandard</nameCategory>
+			<body>GnomeBody</body>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHealthScale>0.75</baseHealthScale>
+			<baseHungerRate>0.7</baseHungerRate>
+			<foodType>OmnivoreHuman</foodType>
+			<gestationPeriodDays>30</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0.02)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+				<li>
+					<def>GnomeBabyStage</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>GnomeChildStage</def>
+					<minAge>2</minAge>
+				</li>
+				<li>
+					<def>GnomeTeenStage</def>
+					<minAge>12</minAge>
+				</li>
+				<li>
+					<def>GnomeAdultStage</def>
+					<minAge>20</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<ageGenerationCurve>
+				<points>
+					<li>(3,0)</li>
+					<li>(8,50)</li>
+					<li>(30,50)</li>
+					<li>(80,30)</li>
+					<li>(130,0)</li>
+				</points>
+			</ageGenerationCurve>
+			<hediffGiverSets>
+				<li>OrganicStandard</li>
+				<li>Human</li>
+			</hediffGiverSets>
+		</race>
+		<recipes>
+			<!-- ▲ replaced by <humanRecipeImport>true</humanRecipeImport> in general settings!garbage day ▲
+      <li>InstallArchotechEye</li>
+      <li>InstallArchotechLeg</li>
+      <li>InstallPowerClaw</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicStomach</li>
+      <li>InstallBionicEar</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
+      <li>InstallPegLeg</li>
+      <li>InstallWoodenFoot</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>	
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>-->
+		</recipes>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+				<hediffname>HedGnome</hediffname>
+			</li>
+		</comps>
+	</AlienRace.ThingDef_AlienRace>
+	<AlienRace.RaceSettings>
+		<defName>GnomeRaceSettings</defName>
+		<pawnKindSettings>
+			<startingColonists>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>PlayerGnome</li>
+							</kindDefs>
+							<chance>7.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerTribe</li>
+						<li>PlayerColony</li>
+					</factionDefs>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Royalty">
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>TSP_ST_RoyaltyGnoble</li>
+							</kindDefs>
+							<chance>3.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>Empire</li>
+					</factionDefs>
+				</li>
+				<li MayRequire="Emilskin.forgRace.Forgs">
+					<pawnKindEntries MayRequire="Emilskin.forgRace.Forgs">
+						<li MayRequire="Emilskin.forgRace.Forgs">
+							<kindDefs>
+								<li>forgpawnkinddef</li>
+							</kindDefs>
+							<chance>1</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>TreeGnomeEmpire</li>
+					</factionDefs>
+				</li>
+			</startingColonists>
+			<alienslavekinds>
+				<li>
+					<kindDefs>
+						<li>PlayerGnome</li>
+					</kindDefs>
+					<chance>5</chance>
+				</li>
+			</alienslavekinds>
+			<alienrefugeekinds>
+				<li>
+					<kindDefs>
+						<li>PlayerGnome</li>
+					</kindDefs>
+					<chance>6</chance>
+				</li>
+			</alienrefugeekinds>
+			<alienwandererkinds>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>PlayerGnome</li>
+							</kindDefs>
+							<chance>8</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerColony</li>
+						<li>PlayerTribe</li>
+					</factionDefs>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Royalty">
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>TSP_ST_RoyaltyGnoble</li>
+							</kindDefs>
+							<chance>1.5</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>Empire</li>
+					</factionDefs>
+				</li>
+			</alienwandererkinds>
+		</pawnKindSettings>
+	</AlienRace.RaceSettings>
+</Defs>

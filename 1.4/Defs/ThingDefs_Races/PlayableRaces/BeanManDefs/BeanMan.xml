@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+    <defName>Alien_BeanMan</defName>
+    <label>Bean Man</label> <!--▲Labels are rarely capitalized, game does it where appropriate automatically. You can delete this note after reading Turtle ~Garbage▲-->
+    <description>This cybernetic Spotty (or Red) Bulborb has been granted sapience by the bean-powered miracles of Glitter World Technology. How strange. A Spotty Bulborb is made sapient upon its birth from an Empress Bulblax, the "queen" of a Bulborb hive, which is properly called a "kingdom" or "empire". This is done by implanting a Sapient Bean Matrix into a Bulborb larva's thorax. \n \n A Bulborb is a small, adorable, warm-blooded, mammalian creature with a highly eusocial, hive-like structure. They always come in groups. They are one of the several types of "grub-dogs" and are by far the weakest. Their huge heads comprise one-third to one-half of their total size. They are warm-blooded, nocturnal, and have "skin" made of flexible chitin. Their bone structure is small, likewise encased in chitin. \n \n Bulborbs have low hit points and are easily killed with range shots. However, their vicious bite exceeds the powers of almost all other creatures on the Rim, with even a mere Spotty Bulborb having a bite equal to that of a bear. Some of the more powerful Bulborbs, especially Bulbears, can nearly double a Spotty Bulborb's power. Their enourmous maw, making up at least a quarter of their head, is capable of crushing bone and ripping off whole limbs in a single shot. Even creatures significantly larger than them can be downed by their bite in just a few hits. \n DO NOT ENGAGE ANY TYPE OF GRUB-DOG IN HEAD-ON MELEE.</description>
+	<descriptionHyperlinks>
+		<RecipeDef>MakeSapientBeanMatrix</RecipeDef>
+		<ThingDef>SapientBeanMatrix</ThingDef>
+		<ThingDef>BeanManLarva</ThingDef>
+		<RecipeDef>MakeBeanManLarva</RecipeDef>
+		<ThingDef>BeanPit</ThingDef>
+		<ThingDef>ST_Bean</ThingDef>
+	</descriptionHyperlinks>
+    <alienRace>
+	  <raceRestriction>
+		<blackGeneTags>
+		  <li>BodyType</li>
+		  <li>HairColor</li>
+		  <li>SkinColorOverride</li>
+		</blackGeneTags>
+		<traitList>
+			<li>BeanMan</li>
+		</traitList>
+        <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+	  </raceRestriction>
+		<styleSettings>
+			<li>
+				<key>HairDef</key>
+				<value>
+					<hasStyle>false</hasStyle>
+				</value>
+			</li>
+			<li>
+				<key>BeardDef</key>
+				<value>
+					<hasStyle>false</hasStyle>
+				</value>
+			</li>
+		</styleSettings>
+      <generalSettings>
+        <maleGenderProbability>1</maleGenderProbability>		
+        <immuneToXenophobia>true</immuneToXenophobia>
+        <immuneToAge>false</immuneToAge>
+        <canLayDown>true</canLayDown>
+        <forcedRaceTraitEntries>
+          <li>
+            <defName>BeanMan</defName>
+            <chance>100</chance>
+          </li>
+        </forcedRaceTraitEntries>
+		<humanRecipeImport>true</humanRecipeImport>
+        <maxDamageForSocialfight>3</maxDamageForSocialfight>
+		<minAgeForAdulthood>0</minAgeForAdulthood>
+        <alienPartGenerator>
+          <headTypes Inherit="False">
+            <li>BeanMan_Narrow_Normal</li>
+          </headTypes>
+          <bodyTypes Inherit="False">
+            <li>Red</li>
+			<li>Orange</li>
+			<li>Blue</li>
+			<li>Green</li>
+            <li>Coffee</li>
+			<li>Shiny</li>
+			<li>Silver</li>
+			<li>Black</li>
+			<li>Purple</li>
+			<li>Whiptongue</li>
+			<li>Stinky</li>
+			<li>Chili</li>
+			<li>Cave</li>
+			<li>Bott</li>
+          </bodyTypes>
+		  <customDrawSize>(0.9, 0.9)</customDrawSize>
+          <customHeadDrawSize>(0.75, 0.75)</customHeadDrawSize>
+          <customPortraitDrawSize>(0.7, 0.605)</customPortraitDrawSize>
+          <customPortraitHeadDrawSize>(0.8, 0.8)</customPortraitHeadDrawSize>
+          <headOffset>(0.0, -0.077)</headOffset>
+          <colorChannels>
+            <li>
+              <name>skin</name>
+              <first Class="ColorGenerator_Options">
+                <options>
+                  <li>
+                    <weight>5</weight>
+                    <min>RGBA(255,255,255)</min>
+                    <max>RGBA(255,255,255)</max>
+                  </li>
+                </options>
+              </first>
+            </li>
+          </colorChannels>
+        </alienPartGenerator>
+      </generalSettings>
+      <graphicPaths>
+          <body>Things/Pawn/Humanlike/BeanMan/Body/</body>
+          <head>Things/Pawn/Humanlike/BeanMan/Head/</head>
+      </graphicPaths>
+      <relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierChild>0</relationChanceModifierChild>
+        <relationChanceModifierSibling>4</relationChanceModifierSibling>
+		<relationChanceModifierLover>0</relationChanceModifierLover>
+		<relationChanceModifierFiance>0</relationChanceModifierFiance>
+		<relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+        <renamer>
+          <li>
+            <relation>Parent</relation>
+            <label>Mentor</label>
+            <femaleLabel>Mentor</femaleLabel>
+          </li>
+          <li>
+            <relation>Child</relation>
+            <label>Beanlet</label>
+            <femaleLabel>Beanlet</femaleLabel>
+          </li>
+          <li>
+            <relation>Spouse</relation>
+            <label>Husband</label>
+            <femaleLabel>Wife</femaleLabel>
+          </li>
+          <li>
+            <relation>ExSpouse</relation>
+            <label>ExHusband</label>
+            <femaleLabel>ExWife</femaleLabel>
+          </li>
+          <li>
+            <relation>Sibling</relation>
+            <label>Brother</label>
+            <femaleLabel>Sister</femaleLabel>
+          </li>
+          <li>
+            <relation>Fiance</relation>
+            <label>Betrothed</label>
+            <femaleLabel>Betrothed</femaleLabel>
+          </li>
+        </renamer>
+      </relationSettings>
+      <thoughtSettings>
+        <cannotReceiveThoughts>
+			<li>Naked</li>
+			<li>ApparelDamaged</li>
+			<li>AnyBodyPartCovered_Disapproved_Male</li>
+			<li>AnyBodyPartCovered_Disapproved_Female</li>
+			<li>AnyBodyPartCovered_Disapproved_Memory</li>
+			<li>AnyBodyPartCovered_Disapproved_Social_Male</li>
+			<li>AnyBodyPartCovered_Disapproved_Social_Female</li>
+			<li>AnyBodyPartButGroinCovered_Disapproved_Male</li>
+			<li>AnyBodyPartButGroinCovered_Disapproved_Female</li>
+			<li>AnyBodyPartButGroinCovered_Disapproved_Memory</li>
+			<li>AnyBodyPartButGroinCovered_Disapproved_Social_Male</li>
+			<li>AnyBodyPartButGroinCovered_Disapproved_Social_Female</li>
+			<li>GroinUncovered_Disapproved_Male</li>
+			<li>GroinUncovered_Disapproved_Female</li>
+			<li>GroinUncovered_Disapproved_Social_Male</li>
+			<li>GroinUncovered_Disapproved_Social_Female</li>
+			<li>GroinOrChestUncovered_Disapproved_Male</li>
+			<li>GroinOrChestUncovered_Disapproved_Female</li>
+			<li>GroinOrChestUncovered_Disapproved_Social_Male</li>
+			<li>GroinOrChestUncovered_Disapproved_Social_Female</li>
+			<li>GroinChestOrHairUncovered_Disapproved_Male</li>
+			<li>GroinChestOrHairUncovered_Disapproved_Female</li>
+			<li>GroinChestOrHairUncovered_Disapproved_Social_Male</li>
+			<li>GroinChestOrHairUncovered_Disapproved_Social_Female</li>
+			<li>GroinChestHairOrFaceUncovered_Disapproved_Male</li>
+			<li>GroinChestHairOrFaceUncovered_Disapproved_Female</li>
+			<li>GroinChestHairOrFaceUncovered_Disapproved_Social_Male</li>
+			<li>GroinChestHairOrFaceUncovered_Disapproved_Social_Female</li>
+
+			<li>AteKibble</li> <!-- Bulborbs are not picky eaters -->
+			<li>EnvironmentDark</li> <!-- Bulborbs are noctunral -->
+			<li>WitnessedDeathNonAlly</li> <!-- Bulborbs are eusocial, loyal to their "kingdom" -->
+			<li>AteCorpse</li> <!-- Bulborbs can and will eat ANYTHING -->
+			
+			<li MayRequire="morishep.tarojun.onioftherim">AteOniStew</li>
+			<li MayRequire="morishep.tarojun.onioftherim">AteDemonBreathBerriesAsIngredient</li>
+        </cannotReceiveThoughts>
+      </thoughtSettings>
+    </alienRace>
+	<statBases>
+		<MarketValue>500</MarketValue>
+		<MoveSpeed>3</MoveSpeed> <!-- Bulborbs are slow -->
+		<Flammability>1</Flammability>
+		<ComfyTemperatureMin>-50</ComfyTemperatureMin> <!-- Sapient Bulborbs cannot wear clothes so this is for the sake of game play -->
+		<ComfyTemperatureMax>50</ComfyTemperatureMax>
+		<MeatAmount>130</MeatAmount> <!-- "Pikmin II" says that Bulborbs are delicious and prized for their abundant meat -->
+		<LeatherAmount>50</LeatherAmount>
+		<PsychicSensitivity>0.5</PsychicSensitivity>
+		<Fertility>0</Fertility>
+		<Mass>16</Mass>
+		<FoodPoisonChance>0</FoodPoisonChance> <!-- Bulborbs can and will eat ANYTHING, their animal stomachs resist even corpse poisoning -->
+		<RoyalFavorValue>1</RoyalFavorValue>
+		<ResearchSpeed>1.1</ResearchSpeed> <!-- From the computer inside them -->
+		<HuntingStealth>1.25</HuntingStealth> <!-- Bulborbs are nocturnal -->
+		<TameAnimalChance>1.2</TameAnimalChance> <!-- Bulborbs are eusocial -->
+		<ImmunityGainSpeed>1.1</ImmunityGainSpeed> <!-- Glitter World Tech from the Sapient Bean Matrix inside them -->
+		<MeleeDodgeChance>22</MeleeDodgeChance> <!-- Representing their size and the Bulborb shaking off -->
+		<PawnTrapSpringChance>1.5</PawnTrapSpringChance> <!-- Bulborbs are clumsy -->
+		<!-- <GeneralLaborSpeed>0.9</GeneralLaborSpeed> --> <!-- No arms --> <!-- Moved to Racial Hediff -->
+		<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">-1</HSAU_GhoulismSusceptibility>
+	</statBases>
+    <!--■■■■■■■■■■■■■■■■■■TOOLS■■■■■■■■■■■■■■■■■■■■■■■
+        ■■■ TEETH ■■■-->
+    <tools>
+      <li>
+        <label>maw</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>23</power> <!-- Identical to a bear, Bulborbs can canonically crush Pikmin in one bite or swallow them whole; it is their only strength. -->
+        <cooldownTime>2.5</cooldownTime>
+        <linkedBodyPartsGroup>GARBAGEDAY_BODYGROUP_BulborbMaw</linkedBodyPartsGroup>
+        <!-- <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable> -->
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		<surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>13</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <!-- <chanceFactor>1</chanceFactor> -->
+		<soundMeleeHit>TSP_Bulborb_BiteHit</soundMeleeHit>
+		<soundMeleeMiss>TSP_Bulborb_BiteMiss</soundMeleeMiss>
+		<chanceFactor>2</chanceFactor>
+      </li>
+      <!--■■■ HEAD ■■■-->
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <chanceFactor>0.02</chanceFactor>
+      </li>
+      <!--■■■ LEG CLAWS ■■■-->
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Poke</li>
+		  <li>KickMaterialInEyes</li>
+        </capacities>
+        <power>1</power>
+        <cooldownTime>0.2</cooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>25</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <chanceFactor>0.25</chanceFactor>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Poke</li>
+		  <li>KickMaterialInEyes</li>
+        </capacities>
+        <power>1</power>
+        <cooldownTime>0.2</cooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>25</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <chanceFactor>0.25</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+	  <nameGenerator>BeanMaleName</nameGenerator>
+	  <nameGeneratorFemale>BeanFemaleName</nameGeneratorFemale>
+      <leatherDef>Leather_BeanMan</leatherDef>
+      <!-- <bloodDef>Filth_BeanBlood</bloodDef> -->
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>120</lifeExpectancy>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>TSP_MatrixBulborbLike</body>
+      <baseBodySize>0.4</baseBodySize>
+      <baseHealthScale>1.3</baseHealthScale>
+	  <baseHungerRate>1.1</baseHungerRate>
+	  <!-- <herdAnimal>true</herdAnimal> -->
+	  <predator Inherit="False">false</predator> <!-- Bulborbs are VERY MUCH predators, but SAPIENT Bulborbs do not randomly go and eat animals when there is food around. This fixes a weird occurence where a Bulborb at the start of a game will try and eat a nearby animal and get clapped. -->
+      <!-- <foodType>OmnivoreRoughAnimal, CarnivoreRoughAnimal, VegetarianRoughAnimal, OmnivoreAnimal, CarnivoreAnimal, OvivoreAnimal, Meals, Processed, Kibble</foodType> --> <!-- VegetarianRoughAnimal makes them eat grass. Grass doesn't dissappear after so it's super unbalanced-->
+	  <foodType>OmnivoreHuman, OmnivoreAnimal, CarnivoreAnimal, CarnivoreAnimalStrict, VegetarianRoughAnimal, Processed, Meal, Fluid, Meat, Plant, Fungus, Kibble</foodType>
+	  <!-- Actually, grass DOES disappear when eaten, I tested it -->
+      <gestationPeriodDays>65</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>BeanManBabyStage</def>
+          <minAge>0</minAge>
+		  <soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
+          <soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
+          <soundAngry>TSP_BulborbSqueal</soundAngry>
+        </li>
+        <li>
+          <def>BeanManChildStage</def>
+          <minAge>0.1</minAge>
+		  <soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
+          <soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
+          <soundAngry>TSP_BulborbSqueal</soundAngry>
+        </li>
+        <li>
+          <def>BeanManTeenStage</def>
+          <minAge>1</minAge>
+		  <soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
+          <soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
+          <soundAngry>TSP_BulborbSqueal</soundAngry>
+        </li>
+        <li>
+          <def>BeanManAdultStage</def>
+          <minAge>1.2</minAge>
+		  <soundWounded>TSP_BulborbSqueal</soundWounded>
+          <soundDeath>TSP_BulborbCall</soundDeath> <!-- Canonically, Bulborbs make their call as a last gasp when dying -->
+          <soundCall>TSP_BulborbCall</soundCall>
+          <soundAngry>TSP_BulborbSnort</soundAngry>
+        </li>
+		<li>
+          <def>BeanManMatureAdultStage</def>
+          <minAge>25</minAge>
+		  <soundWounded>TSP_BulborbSqueal</soundWounded>
+          <soundDeath>TSP_BulborbCall</soundDeath> <!-- Canonically, Bulborbs make their call as a last gasp when dying -->
+          <soundCall>TSP_BulborbCall</soundCall>
+          <soundAngry>TSP_BulborbSnort</soundAngry>
+        </li>
+		<li>
+			<def>TSP_ST_BeanManElderStage</def>
+			<minAge>50</minAge>
+			<soundWounded>TSP_BulborbSqueal</soundWounded>
+			<soundDeath>TSP_BulborbCall</soundDeath> <!-- Canonically, Bulborbs make their call as a last gasp when dying -->
+			<soundCall>TSP_BulborbCall</soundCall>
+			<soundAngry>TSP_BulborbSnort</soundAngry>
+		</li>
+		<li>
+			<def>TSP_ST_BeanManSuperElderStage</def>
+			<minAge>75</minAge>
+			<soundWounded>TSP_BulborbSqueal</soundWounded>
+			<soundDeath>TSP_BulborbCall</soundDeath> <!-- Canonically, Bulborbs make their call as a last gasp when dying -->
+			<soundCall>TSP_BulborbCall</soundCall>
+			<soundAngry>TSP_BulborbSnort</soundAngry>
+		</li>
+		<li>
+			<def>TSP_ST_BeanManMiyamoto</def>
+			<minAge>101</minAge>
+			<soundWounded>TSP_BulborbSqueal</soundWounded>
+			<soundDeath>TSP_BulborbCall</soundDeath> <!-- Canonically, Bulborbs make their call as a last gasp when dying -->
+			<soundCall>TSP_BulborbCall</soundCall>
+			<soundAngry>TSP_BulborbSnort</soundAngry>
+		</li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>TSP_BulborbSnort</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>TSP_Bulborb_SnortDwarf</soundMeleeHitBuilding>
+      <soundMeleeMiss>TSP_BulborbShake</soundMeleeMiss>
+      <specialShadowData>
+        <volume>(0.3, 0.3, 0.3)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li>(0,0)</li>
+          <li>(8,50)</li>
+          <li>(30,50)</li>
+          <li>(80,30)</li>
+		  <li>(130,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>TSP_ST_BeanBulborb_OrganFix</li>
+      </hediffGiverSets>
+    </race>
+   <!--■■■■■■■■■■■■■■■■■■ RECIPES ■■■■■■■■■■■■■■■■■■■■■■■-->
+    <recipes>   
+      <!-- ▲ replaced by <humanRecipeImport>true</humanRecipeImport> in general settings!garbage day ▲
+      <li>InstallArchotechEye</li>
+      <li>InstallArchotechLeg</li>
+      <li>InstallPowerClaw</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicStomach</li>
+      <li>InstallBionicEar</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
+      <li>InstallPegLeg</li>
+      <li>InstallWoodenFoot</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>	
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>-->
+      <li>CureScaria</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
+      
+      <!-- ▲ Handled in recipe def by recipe users - garbage day ▲
+        <li>GARBAGEDAY_ST_Enchant_Kidney_Master</li>
+        <li>GARBAGEDAY_ST_Enchant_Kidney_Slave</li> -->
+    </recipes>
+	<comps>
+		<li Class="AnimalBehaviours.CompProperties_FixedGender">
+			<gender>Male</gender>
+		</li>
+		<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+			<hediffname>HedBeanMan</hediffname>
+		</li>
+	</comps>
+	<modExtensions>
+		<li Class="AnimalBehaviours.AnimalStatExtension">
+			<showImageInInfoCard>true</showImageInInfoCard>
+			<ImageToShowInInfoCard>Achievements/beanManAchievement</ImageToShowInInfoCard>						
+		</li>
+		<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+			<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
+		</li>
+	</modExtensions>
+  </AlienRace.ThingDef_AlienRace>
+</Defs>
