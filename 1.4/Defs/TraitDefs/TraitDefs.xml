@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Rich -->
+	<TraitDef>
+		<defName>ST_Rich</defName>
+		<commonality>0.7</commonality>
+		<forcedPassions>
+			<li>Social</li>
+		</forcedPassions>
+		<requiredWorkTags>
+			<li>Social</li>
+		</requiredWorkTags>
+		<degreeDatas>
+			<li>
+				<label>rich</label>
+				<description>''I'm rich you know.'' \n \n That's what [PAWN_nameDef] says to anyone [PAWN_pronoun] meets. Regardless of [PAWN_possessive] actual wealth or status, [PAWN_nameDef] has an unusual charisma and ability to either fake being a socialite, or [PAWN_pronoun] is really good at actually being one.</description>
+				<skillGains>
+					<li>
+						<key>Social</key>
+						<value>4</value>
+					</li>
+				</skillGains>
+				<statOffsets>
+					<TradePriceImprovement>0.30</TradePriceImprovement>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	
+<!-- Stupid -->
+	<TraitDef>
+		<defName>ST_Stupid</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>stupid</label>
+				<description>Wuh?</description>
+				<skillGains>
+					<li>
+						<key>Intellectual</key>
+						<value>-4</value>
+					</li>
+				</skillGains>
+				<statOffsets>
+					<GlobalLearningFactor>-0.25</GlobalLearningFactor>
+					<ResearchSpeed>-0.5</ResearchSpeed>
+					<WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>TooSmart</li>
+			<li>FastLearner</li>
+		</conflictingTraits>
+	</TraitDef>	
+	
+	<ThoughtDef>
+		<defName>StupidThought</defName>
+		<workerClass>ThoughtWorker_AlwaysActive</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<requiredTraits>
+			<li>ST_Stupid</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>stupid</label>
+				<description>I am too stupid to be sad.</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+<!-- ? -->	
+	
+	
+	
+	
+
+</Defs>

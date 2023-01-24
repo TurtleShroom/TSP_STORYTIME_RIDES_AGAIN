@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+
+<!-- Rarity Hexcodes -->
+
+<!-- Common = Light Blue = #9EF2FF -->
+
+<!-- Uncommon = Green = #3DC616 -->
+
+<!-- Rare = Orange = #FF9600 -->
+
+<!-- Very Rare = Magenta = #FA64D2 -->
+	
+<!-- Buglover -->
+
+  <TraitDef>
+    <defName>Buglover</defName>
+    <commonality>0.33</commonality>
+    <degreeDatas>
+      <li>
+        <label>Bug Meat Enthusiast</label>
+        <description>{PAWN_nameDef} loves the taste of bug meat, a fact which normal people find vile.</description>
+        <disallowedThoughtsFromIngestion>
+          <li>
+            <meatSource>Insect</meatSource>
+            <thoughts>
+              <li>AteRawFood</li>
+              <li>AteInsectMeatDirect</li>
+              <li>AteInsectMeatAsIngredient</li>
+            </thoughts>
+          </li>
+        </disallowedThoughtsFromIngestion>
+        <extraThoughtsFromIngestion>
+          <li>
+            <meatSource>Insect</meatSource>
+            <thoughtsDirect>
+              <li>AteInsectMeatDirectBuglover</li>
+            </thoughtsDirect>
+            <thoughtsAsIngredient>
+              <li>AteInsectMeatAsIngredientBuglover</li>
+            </thoughtsAsIngredient>
+          </li>
+        </extraThoughtsFromIngestion>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+
+
+
+
+
+
+
+
+	
+</Defs>

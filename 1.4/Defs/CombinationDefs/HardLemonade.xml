@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ProcessorFramework.ProcessDef>
+		<defName>MikesHardLemonade</defName>
+		<thingDef>MikesLemonade</thingDef>
+		<ingredientFilter>
+		<thingDefs>
+			<li>ST_Lemon</li>
+		</thingDefs>
+		</ingredientFilter>
+		<processDays>3</processDays> <!-- in days, a day is 60,000 ticks -->
+		<capacityFactor>1</capacityFactor>
+		<efficiency>0.5</efficiency>
+		<usesTemperature>true</usesTemperature>
+		<temperatureSafe>-20.0~64.0</temperatureSafe>
+		<temperatureIdeal>7.0~32.0</temperatureIdeal>
+		<ruinedPerDegreePerHour>0.001</ruinedPerDegreePerHour>
+		<speedBelowSafe>0.1</speedBelowSafe>
+		<speedAboveSafe>1.0</speedAboveSafe>
+		<sunFactor>1.0~1.0</sunFactor>
+		<rainFactor>1.0~1.0</rainFactor>
+		<snowFactor>1.0~1.0</snowFactor>
+		<windFactor>1.0~1.0</windFactor>
+		<unpoweredFactor>0.0</unpoweredFactor>
+		<unfueledFactor>0.0</unfueledFactor>
+		<powerUseFactor>1.0</powerUseFactor>
+		<fuelUseFactor>1.0</fuelUseFactor>
+		<filledGraphicSuffix></filledGraphicSuffix>
+		<usesQuality>false</usesQuality>
+		<qualityDays>(1, 2, 3, 4, 5, 6, 7)</qualityDays>
+		<color>(250, 250, 51)</color> <!-- 0-255 or 0.0-1.0 -->
+		<customLabel>hard lemonade</customLabel>
+		<destroyChance>0.0</destroyChance>
+		<bonusOutputs>
+			<Rat>(0.1, 1)</Rat>
+		</bonusOutputs>
+	</ProcessorFramework.ProcessDef>
+</Defs>

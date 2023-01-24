@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+
+ <ThingDef ParentName="RoughPlantBase">
+    <defName>HerbaLeaves</defName>
+    <label>herba</label>
+    <description>Raw cut leaves of the herba plant. Can be rolled into cigarillos at a crafting spot.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Herba</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.6</MarketValue>
+      <Flammability>2</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>90</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+	  <li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+    </ingestible>
+  </ThingDef>
+  
+</Defs>

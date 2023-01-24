@@ -27,13 +27,15 @@
 					<li MayRequire="thecatlover366.oompaloompas">Alien_Loompa</li>
 				</notXenophobistTowards>
 				<alienPartGenerator>
-					<aliencrowntypes>
-						<li>Average_Normal</li>
-					</aliencrowntypes>
+					<headTypes Inherit="False">
+						<li>Gnome_Average_Normal</li>
+					</headTypes>
 					<alienbodytypes>
 						<li>Thin</li>
 						<li>Male</li>
 						<li>Female</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
 					</alienbodytypes>
 					<customDrawSize>(0.5, 0.5)</customDrawSize>
 					<customHeadDrawSize>(0.53, 0.53)</customHeadDrawSize>
@@ -90,10 +92,8 @@
 				</alienPartGenerator>
 			</generalSettings>
 			<graphicPaths>
-				<li>
-					<body>Things/Pawn/Humanlike/Gnome/Body/</body>
-					<head>Things/Pawn/Humanlike/Gnome/Head/</head>
-				</li>
+				<body>Things/Pawn/Humanlike/Gnome/Body/</body>
+				<head>Things/Pawn/Humanlike/Gnome/Head/</head>
 			</graphicPaths>
 			<relationSettings>
 				<relationChanceModifierSibling>3</relationChanceModifierSibling>
@@ -262,22 +262,49 @@
 			</litterSizeCurve>
 			<lifeStageAges>
 				<li>
-					<def>GnomeBabyStage</def>
+					<def>HumanlikeBaby</def>
 					<minAge>0</minAge>
 				</li>
 				<li>
-					<def>GnomeChildStage</def>
-					<minAge>2</minAge>
+					<def>HumanlikeChild</def>
+					<minAge>3</minAge>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+					<def>HumanlikePreTeenager</def>
+					<minAge>6</minAge>
 				</li>
 				<li>
-					<def>GnomeTeenStage</def>
-					<minAge>12</minAge>
+					<def>HumanlikeTeenager</def>
+					<minAge>10</minAge>
 				</li>
 				<li>
-					<def>GnomeAdultStage</def>
+					<def>HumanlikeAdult</def>
 					<minAge>20</minAge>
 				</li>
 			</lifeStageAges>
+			<lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+				<Firefighter>7</Firefighter>
+				<Patient>0</Patient>
+				<Doctor>10</Doctor>
+				<PatientBedRest>0</PatientBedRest>
+				<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+				<BasicWorker>3</BasicWorker>
+				<Warden>10</Warden>
+				<Handling>7</Handling>
+				<Cooking>2</Cooking>
+				<Hunting>10</Hunting>
+				<Construction>10</Construction>
+				<Growing>1</Growing>
+				<Mining>8</Mining>
+				<PlantCutting>4</PlantCutting>
+				<Smithing>13</Smithing>
+				<Tailoring>7</Tailoring>
+				<Art>10</Art>
+				<Crafting>7</Crafting>
+				<Hauling>3</Hauling>
+				<Cleaning>3</Cleaning>
+				<Research>13</Research>
+			</lifeStageWorkSettings>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
@@ -287,10 +314,22 @@
 			</specialShadowData>
 			<ageGenerationCurve>
 				<points>
-					<li>(3,0)</li>
-					<li>(8,50)</li>
-					<li>(30,50)</li>
-					<li>(80,30)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+					<li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>  
+					<li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>      
+					<li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li><!-- End exclude -->
+					<li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
+					<li>(14,0)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
+					<li>(25,100)</li>
+					<li>(50,100)</li>
+					<li>(70,30)</li>
+					<li>(90,18)</li>
+					<li>(110,10)</li>
+					<li>(120,3)</li>
 					<li>(130,0)</li>
 				</points>
 			</ageGenerationCurve>
@@ -300,38 +339,57 @@
 			</hediffGiverSets>
 		</race>
 		<recipes>
-			<!-- ▲ replaced by <humanRecipeImport>true</humanRecipeImport> in general settings!garbage day ▲
-      <li>InstallArchotechEye</li>
-      <li>InstallArchotechLeg</li>
-      <li>InstallPowerClaw</li>
-      <li>InstallBionicEye</li>
-      <li>InstallBionicLeg</li>
-      <li>InstallBionicHeart</li>
-      <li>InstallBionicStomach</li>
-      <li>InstallBionicEar</li>
-      <li>InstallSimpleProstheticArm</li>
-      <li>InstallSimpleProstheticLeg</li>
-      <li>InstallSimpleProstheticHeart</li>
-      <li>InstallCochlearImplant</li>
-      <li>InstallPegLeg</li>
-      <li>InstallWoodenFoot</li>
-      <li>InstallDenture</li>
-      <li>InstallJoywire</li>
-      <li>InstallPainstopper</li>
-      <li>InstallNaturalHeart</li>
-      <li>InstallNaturalLung</li>
-      <li>InstallNaturalLiver</li>
-      <li>ExciseCarcinoma</li>
-      <li>AdministerMechSerumHealer</li>	
-      <li>RemoveBodyPart</li>
-      <li>Euthanize</li>
-      <li>Anesthetize</li>-->
+			<!-- ▲ replaced by <humanRecipeImport>true</humanRecipeImport> in general settings!garbage day ▲ -->
+			<li>InstallArchotechEye</li>
+			<li>InstallArchotechLeg</li>
+			<li>InstallPowerClaw</li>
+			<li>InstallBionicEye</li>
+			<li>InstallBionicLeg</li>
+			<li>InstallBionicHeart</li>
+			<li>InstallBionicStomach</li>
+			<li>InstallBionicEar</li>
+			<li>InstallSimpleProstheticArm</li>
+			<li>InstallSimpleProstheticLeg</li>
+			<li>InstallSimpleProstheticHeart</li>
+			<li>InstallCochlearImplant</li>
+			<li>InstallPegLeg</li>
+			<li>InstallWoodenFoot</li>
+			<li>InstallDenture</li>
+			<li>InstallJoywire</li>
+			<li>InstallPainstopper</li>
+			<li>InstallNaturalHeart</li>
+			<li>InstallNaturalLung</li>
+			<li>InstallNaturalLiver</li>
+			<li>ExciseCarcinoma</li>
+			<li>AdministerMechSerumHealer</li>	
+			<li>RemoveBodyPart</li>
+			<li>Euthanize</li>
+			<li>Anesthetize</li>
+			<li>CureScaria</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">TubalLigation</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">ExtractOvum</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
 		</recipes>
 		<comps>
 			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
 				<hediffname>HedGnome</hediffname>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<showImageInInfoCard>true</showImageInInfoCard>
+				<ImageToShowInInfoCard>UI/Lore/GnomeLore</ImageToShowInInfoCard>
+			</li>
+		</modExtensions>
 	</AlienRace.ThingDef_AlienRace>
 	<AlienRace.RaceSettings>
 		<defName>GnomeRaceSettings</defName>
@@ -367,14 +425,14 @@
 				<li MayRequire="Emilskin.forgRace.Forgs">
 					<pawnKindEntries MayRequire="Emilskin.forgRace.Forgs">
 						<li MayRequire="Emilskin.forgRace.Forgs">
-							<kindDefs>
-								<li>forgpawnkinddef</li>
+							<kindDefs MayRequire="Emilskin.forgRace.Forgs">
+								<li MayRequire="Emilskin.forgRace.Forgs">forgpawnkinddef</li>
 							</kindDefs>
-							<chance>1</chance>
+							<chance MayRequire="Emilskin.forgRace.Forgs">1</chance>
 						</li>
 					</pawnKindEntries>
-					<factionDefs>
-						<li>TreeGnomeEmpire</li>
+					<factionDefs MayRequire="Emilskin.forgRace.Forgs">
+						<li MayRequire="Emilskin.forgRace.Forgs">TreeGnomeEmpire</li>
 					</factionDefs>
 				</li>
 			</startingColonists>

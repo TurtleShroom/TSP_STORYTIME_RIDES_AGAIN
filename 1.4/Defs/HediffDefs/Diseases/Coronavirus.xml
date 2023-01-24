@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs> 
+	<HediffDef ParentName="InfectionBase">
+		<defName>ST_KungFlu</defName>
+		<label>coronavirus</label>
+		<description>The Severe Acute Respitory-Related Coronavirus II, also simply called "COVID-19", "COVID", "The Coronavirus", "'Vid", "The Koof", "Wuhan Pneumonia", and "Kung Flu", is an unstable, recurring, and endemic virus spread onto almost every planet that mankind has ever set on. Symptoms include extreme exhaustion, difficulty breathing, pneumonia, and death. At the original onset of the virus pandemic, healthy populations, the death rate would shrink from its start of three percent to five thousands of one percent, while the death rate among the eldery with preexisting breathing risks, at its peak, rose to one in three. \n \n Starting in the lungs, the disease causes a living being's immune sytstem to panic and call massive amounts of reenforcements to begin to bombard both healthy and infected lung tissue. This is called a cytokinetic storm. \n For COVID to kill its host, this storm must be made to continue until the protective lining of the lung is breached. Bacteria normally isolated from the lungs will flow in, causing pneumonia and spreading into the bloodstream, totally compromising the host and causing massive organ failure. \n \n The modern COVID virus is descended from the weaker Omnicron Varient (which should have been called the Xi Varient in the Greek Alphabet), which is vastly more contagious and less deadly than influenza.</description>
+		<descriptionHyperlinks>
+			<HediffDef>TSP_ST_KungFlu_History</HediffDef>
+		</descriptionHyperlinks>
+		<makesSickThought>true</makesSickThought>
+		<lethalSeverity>1</lethalSeverity>
+		<tendable>true</tendable>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>24</baseTendDurationHours>
+				<severityPerDayTended>-0.0783</severityPerDayTended>
+			</li>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.26</severityPerDayNotImmune>
+				<immunityPerDaySick>0.25</immunityPerDaySick>
+				<severityPerDayImmune>-0.7</severityPerDayImmune>
+				<immunityPerDayNotSick>-0.06</immunityPerDayNotSick>
+			</li>
+		</comps>
+		<stages>
+		<li>
+			<label>initial infection</label>
+			<restFallFactorOffset>0.5</restFallFactorOffset>
+			<painOffset>0.03</painOffset>
+			<capMods>
+				<li>
+					<capacity>Breathing</capacity>
+					<setMax>0.8</setMax>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<minSeverity>0.66</minSeverity>
+			<label>major</label>
+			<restFallFactorOffset>0.6</restFallFactorOffset>
+			<painOffset>0.05</painOffset>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.9</setMax>
+				</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<setMax>0.6</setMax>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<setMax>0.95</setMax>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<minSeverity>0.833</minSeverity>
+			<label>extreme</label>
+			<lifeThreatening>true</lifeThreatening>
+			<restFallFactorOffset>0.75</restFallFactorOffset>
+			<painOffset>0.5</painOffset>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.2</setMax>
+				</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<setMax>0.1</setMax>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<setMax>0.2</setMax>
+				</li>
+			</capMods>
+			</li>
+			<li>
+				<minSeverity>0.87</minSeverity>
+				<label>terminal</label>
+				<lifeThreatening>true</lifeThreatening>
+				<restFallFactorOffset>1</restFallFactorOffset>
+				<painOffset>0.5</painOffset> <!-- Unconscious already -->
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<setMax>0.05</setMax>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<HediffDef>
+		<defName>TSP_ST_KungFlu_History</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Coronavirus history and origins</label>
+		<description>Discovered over three thousand five hundred years ago in an Old Earth copper mine, it was collected and brought to a laboratory in what was then called the People's Republic of China. There, the Chinese Communist Party- China's ruling authority -operated unethical experiments on the disease and, through a series of unfortunate events, accidentally released the disease into the wild through a laboratory accident in October. Humiliated and fearing economic retribution due to its storage and release of the disease through closed borders and sanctions, the CCP and its puppet director of the World Health Organization, which was an ineffective, authoritarian bureaucracy that understood nothing, fabricated lies to protect the CCP's reputation. From lying about transmissibility to its origin, the entirety of Old Earth's governing bodies accepted the propaganda as Gospel and actively suppressed any possible accusation that it could be released by a laboratory accident. \n \n What happened next was an upset so spectacular that humans still speak of it to this day. With no Glitter World technology or Mechanites, nothing was off the table to fight it. In a desparate attempt to stave off rapid expansion of the disease and the increasing deaths and hospitalization rates, which pushed hospitals over capacity, it was decided to shut down almost all commerce and trap the human population in their homes for "two weeks". \n "Fifteen Days to Stop the Spread" would lead to nearly three years of punitive measures, none of which accomplished any means of arresting the disease. At the time, no one knew that these lockdowns would totally fail, but even after it was proven, governments suppressed opposition to it for months at a time. These lockdowns caused famines in poorer countries, exasperated suicide rates, and permanently stunted the intellectual and social development of children by prohibiting attendance in the primitive twenty-first century schooling systems. In fact, due to the halt of supply chains, the famines actually killed more humans than the disease itself. \n \n As the disease continued ravaging and killing the population, many country's governments began to extend the lockdowns and other measures at random, issuing arbitrary decrees such as banning some seeds but not others, or forbidding people from travelling to their second homes while the politicians did exactly that. These quickly became measures of controlling the population, divorced from medical reality. Particularly notable, in multiple democratic countries, was the arbitrary alteration of election laws without consent of their legislative assemblies, which led to chaotic elections whose outcomes were never proven beyond a reasonable doubt and remain a bitter debate among modern historians. \n \n All attempts at a vaccine that prevented re-infection failed spectacularly, and the drug was mandated for many humans while it was still experimental and without proper testing. \n While the final COVID vaccine was successful in stopping almost all hospitalizations and deaths, the bad-faith actors that mandated wihile it was experimental it suppressed all challenges and references to increased side effects and injuries, even in the face of opposing research doubting its efficacy. \n \n Even though the vaccine was incapable of totally stopping re-infection, it still saved millions of lives from hospitalization and death.</description>
+		<descriptionHyperlinks>
+			<HediffDef>ST_KungFlu</HediffDef>
+		</descriptionHyperlinks>
+		<makesSickThought>false</makesSickThought>
+		<tendable>true</tendable>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.255</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Now you know</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>China lied and it was a lab accident</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>Never trust the government</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.75</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.75</minSeverity>
+				<label>Fauci lied to Congress, actively covered up China's mistake, and for his perjury, he should be imprisoned if convicted in a fair trial by an impartial jury of his peers</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>1</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.99</minSeverity>
+				<label>Keep your rifle by your side</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>2</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

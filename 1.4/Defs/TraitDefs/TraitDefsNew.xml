@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+	<TraitDef>
+		<defName>ST_SemiFeral</defName>
+		<commonality>0.01</commonality>
+		<degreeDatas>
+			<li>
+				<label>Semi-Feral</label>
+				<description>Bunga.</description>
+				<skillGains>
+					<li>
+						<key>Intellectual</key>
+						<value>-3</value>
+					</li>
+					<li>
+						<key>Social</key>
+						<value>-5</value>
+					</li>
+				</skillGains>
+				<statOffsets>
+					<ResearchSpeed>-0.5</ResearchSpeed>
+					<TradePriceImprovement>-0.50</TradePriceImprovement>
+					<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+				</statOffsets>
+				<randomMentalState>Berserk</randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+				  <points>
+					<li>(0, 60)</li>
+				  </points>
+				</randomMentalStateMtbDaysMoodCurve>
+				<marketValueFactorOffset>-0.15</marketValueFactorOffset>
+				<allowedMeditationFocusTypes>
+					<li>Natural</li>
+					<li>Morbid</li>
+				</allowedMeditationFocusTypes>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>FastLearner</li>
+			<li>ST_Rich</li>
+		</conflictingTraits>
+	</TraitDef>	
+	<ThoughtDef>
+		<defName>FeralThought</defName>
+		<workerClass>ThoughtWorker_AlwaysActive</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<requiredTraits>
+			<li>ST_SemiFeral</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>feral</label>
+				<description>Unga bunga</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>	
+	
+<!-- Rock Expert -->		
+
+	<TraitDef>
+		<defName>ST_RockExpert</defName>
+		<commonality>0.3</commonality>
+		<forcedPassions>
+			<li>Mining</li>
+		</forcedPassions>
+		<degreeDatas>
+			<li>
+				<label>Rock Expert</label>
+				<description>Independent of whether or not he was actually formally schooled in the topic, this Pawn is the very model of a modern major geologist. He has information mineral, mineral, and mineral! In short, in matters mineral, mineral, and mineral, he is the very model of a modern major geologist!</description>
+				<skillGains>
+					<li>
+						<key>Mining</key>
+						<value>4</value>
+					</li>
+				</skillGains>
+				<statOffsets>
+					<MiningYield>0.3</MiningYield>
+				</statOffsets>	
+			</li>
+		</degreeDatas>
+	</TraitDef>						
+
+<!-- Rincewind -->
+	<TraitDef>
+		<defName>ST_Rincewind</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>runner</label>
+				<description>"Dead is only for once, but running away is for ever." 
+		-Noted Runner</description>
+				<statOffsets>
+					<MoveSpeed>1</MoveSpeed>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+		  <li>SpeedOffset</li>
+		</conflictingTraits>
+	</TraitDef>					
+</Defs>

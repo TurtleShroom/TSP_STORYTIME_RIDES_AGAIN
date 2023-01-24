@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>  
+	<WorkGiverDef>
+		<defName>ST_GnomeCooking</defName>
+		<label>cook meals at gnome table</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Cooking</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>GnomeTable</li>
+		</fixedBillGiverDefs>
+		<verb>cook</verb>
+		<gerund>cooking at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>ST_WormGrabbing</defName>
+		<label>dig for worms</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Mining</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>WormSpot</li>
+		</fixedBillGiverDefs>
+		<verb>dig</verb>
+		<gerund>digging at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>ST_FrogLegRipping</defName>
+		<label>rip off a toad's legs</label>
+		<giverClass>StoryTime.WorkGiver_LegRip</giverClass>
+		<workType>Handling</workType>
+		<verb>ripping off legs</verb>
+		<gerund>ripping off legs of</gerund>
+		<priorityInType>85</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>ST_TomatoCutting</defName>
+		<label>cut the tomato cysts off of a tomato frog's back</label>
+		<giverClass>StoryTime.WorkGiver_Tomato</giverClass>
+		<workType>Handling</workType>
+		<verb>cutting off tomatoes</verb>
+		<gerund>cutting tomatoes off of</gerund>
+		<priorityInType>85</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>ST_Grinding</defName>
+		<label>grind stuff at a grinder</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>BasicWorker</workType> <!-- Anyone can turn a handle -->
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+		</fixedBillGiverDefs>
+		<verb>grind</verb>
+		<gerund>grinding at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>TSP_BlastFurnace_Smelting</defName>
+		<label>forging advanced metals in blast furnace</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Smithing</workType>
+		<priorityInType>80</priorityInType>
+		<fixedBillGiverDefs>
+			<li>BlastFurnaceHeater</li>
+		</fixedBillGiverDefs>
+		<verb>forge</verb>
+		<gerund>forging at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>ST_BulborbGrowing</defName>
+		<label>ascending Bulborbs</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Handling</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>BeanPit</li>
+		</fixedBillGiverDefs>
+		<verb>ascending Bulborbs</verb>
+		<gerund>ascending Bulborbs</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+  
+	<!--
+	<WorkGiverDef>
+		<defName>ST_Potions</defName>
+		<label>mix potions</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>AlchemyTable</li>
+		</fixedBillGiverDefs>
+		<verb>mix</verb>
+		<gerund>mixing</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	-->
+</Defs>

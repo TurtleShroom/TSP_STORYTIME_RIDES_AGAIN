@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>HediffEggNog</defName>
+    <label>Sublime Egg Nog</label>
+    <labelNoun>ingested egg nog</labelNoun>
+    <description>Active egg nog in the bloodstream. Produces an intense happiness.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(0,128,128)</defaultLabelColor>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.5</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <hungerRateFactorOffset>-0.1</hungerRateFactorOffset>
+          <painOffset>-0.1</painOffset>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>EggNogBliss</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>HediffEggNog</hediff>
+    <stages>
+      <li>
+        <label>Drank egg nog</label>
+        <description>I drank some sweet, sweet egg nog.</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ChemicalDef>
+    <defName>EggNogChemical</defName>
+    <label>Egg Nog</label>
+    <addictionHediff>EggNogAddiction</addictionHediff>
+    <toleranceHediff>EggNogTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+	<!--
+    <onGeneratedAddictedEvents>
+      <li>
+        <hediff>ChemicalDamageModerate</hediff>
+        <chance>0.01</chance>
+        <partsToAffect>
+		  <li>Stomach</li>
+		  <li>Liver</li>
+        </partsToAffect>
+      </li>
+    </onGeneratedAddictedEvents>
+	-->
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>ST_EggNog_DependencyNeed</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>egg nog</label>
+    <description>Due to an egg nog addiction, this person needs to regularly consume the drink to avoid withdrawal symptoms. He needs to consume MORE.</description>
+    <listPriority>50</listPriority>
+  </NeedDef>
+  
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>EggNogTolerance</defName>
+    <label>egg nog tolerance</label>
+    <description>A built-up tolerance to egg nog. Consume MORE.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>EggNogChemical</chemical>
+      </li>
+    </comps>
+	<!--
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <minSeverity>0.95</minSeverity>
+        <baseMtbDays>180</baseMtbDays>
+        <partsToAffect>
+		  <li>Stomach</li>
+		  <li>Liver</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+	-->
+  </HediffDef>
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>EggNogAddiction</defName>
+    <label>egg nog addiction</label>
+    <description>A deep love of egg nog. Not being able to drink it will make this Pawn mad, but it'll wear off after a few days.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>ST_EggNog_DependencyNeed</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.15</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+	  <!--
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>EggNogChemical</chemical>
+      </li>
+	  -->
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>egg nog withdrawal</label>
+        <socialFightChanceFactor>2</socialFightChanceFactor>
+
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_Food</mentalState>
+            <mtbDays>2</mtbDays>
+          </li>
+          <li>
+            <mentalState>BedroomTantrum</mentalState>
+            <mtbDays>4</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>14</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+   <ThoughtDef>
+    <defName>FrogNogThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>HedFrogNog</hediff>
+    <stages>
+      <li>
+        <label>Drank Frog-Nog</label>
+        <description>Frogs are good... egg nog is good... but Frog-Nog? I'm not sure, but I am certainly more perked up now...</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  
+   <HediffDef>
+    	<defName>HedFrogNog</defName>
+    	<label>Drank Frog-Nog</label>
+		<description>[PAWN_nameDef] has drank a bottle of Frog-Nog! Frog-Nog provides a quick, minor boost to the Consciousness of anyone that consumes it.</description>		
+    	<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(0,128,128)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+		<comps>
+		  <li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-0.8</severityPerDay>
+			<showHoursToRecover>true</showHoursToRecover>
+		  </li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>30000</min>
+					<max>60000</max>
+				</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			  <minSeverity>0</minSeverity>
+			  <label>Empowered by Frog-Nog</label>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>0.15</offset>
+				  </li>
+				</capMods>
+			</li>
+      </stages>
+  </HediffDef>
+  
+   <ThoughtDef>
+    <defName>ProfaneNogThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>HedProfaneNog</hediff>
+    <stages>
+      <li>
+        <label>Drank Profane Egg Nog</label>
+        <description>WHAT HAVE I DONE?! THE SCREAMING! No... no... NO... MAKE IT STOP!!</description>
+        <baseMoodEffect>-200</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  
+   <HediffDef>
+    	<defName>HedProfaneNog</defName>
+    	<label>Drank Profane Egg Nog</label>
+		<description>[PAWN_NameDef] has drank a bottle of Profane Egg Nog! Its miraculous benefits come come at a steep price. Profane Nog causes extreme audio hallucinations and can drive a Pawn straight into a Mental Break with but one sip.</description>		
+    	<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(0,128,128)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>true</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.05</severityPerDay>
+		<showHoursToRecover>true</showHoursToRecover>
+      </li>
+	  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+				<min>60000</min>
+				<max>60000</max>
+			</disappearsAfterTicks>
+		</li>
+    </comps>
+    <stages>
+        <li>
+          <minSeverity>0</minSeverity>
+          <label>AAAAAGGHHH!</label>
+            <capMods>
+              <li>
+                <capacity>Consciousness</capacity>
+                <offset>2</offset>
+              </li>
+              <li>
+                <capacity>Moving</capacity>
+                <offset>1</offset>
+              </li>
+            </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+	<HediffDef>
+		<defName>HedFireNog</defName>
+		<label>Drank Fire Egg Nog</label>
+		<description>[PAWN_defName] has drank Fire Egg Nog! Even now, [PAWN_pronoun] feels the fire of nog flow through [PAWN_objective]: [PAWN_pronoun] will be able to literally spit fireballs as a ranged weapon, which poses no harm to [PAWN_possessive] digestive tract but plenty of harm to his target.</description>		
+		<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(255,36,0)</defaultLabelColor>      	
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+				<verbs>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>1</accuracyTouch>
+						<accuracyShort>0.8</accuracyShort>
+						<accuracyMedium>0.8</accuracyMedium>
+						<accuracyLong>0.66</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>NogFire</defaultProjectile>
+						<warmupTime>2</warmupTime>				
+						<burstShotCount>5</burstShotCount>
+						<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+						<minRange>1</minRange>
+						<range>20</range>
+						<label>Fire of Nog</label>	
+						<muzzleFlashScale>15</muzzleFlashScale>				
+						<commonality>1</commonality>
+					</li>
+				</verbs>
+				<verbProps>
+					<li>
+						<label>Fire of Nog</label>
+						<draw>false</draw>
+						<canBeToggled>true</canBeToggled>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+	</HediffDef>
+</Defs>

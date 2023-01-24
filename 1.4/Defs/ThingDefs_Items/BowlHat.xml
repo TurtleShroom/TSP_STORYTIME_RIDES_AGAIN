@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="ApparelBase">
+    <defName>BowlHat</defName>
+    <label>bowl hat</label>
+    <description>"Wearing bowls like this is generally considered to be cute." \n \n A culinary dish or basin worn as a hat.</description>
+    <recipeMaker>
+		  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		  <workSkill>Crafting</workSkill>
+		  <effectWorking>Tailor</effectWorking>
+		  <soundWorking>Recipe_Tailor</soundWorking>
+		  <researchPrerequisite>ComplexClothing</researchPrerequisite>
+		  <recipeUsers>
+			<li>ElectricTailoringBench</li>
+			<li>HandTailoringBench</li>
+		  </recipeUsers>
+		  <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/BowlHat/BowlHat_ground</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>1500</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>4</Mass>
+      <Flammability>1</Flammability>
+      <EquipDelay>0.8</EquipDelay>
+    </statBases>
+    <generateCommonality>0.15</generateCommonality>
+    <equippedStatOffsets>
+      <SocialImpact>0.15</SocialImpact>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Headgear</li>
+    </thingCategories>
+    <costStuffCount>20</costStuffCount>
+    <stuffCategories>
+      <li>Woody</li>
+	  <li>Stony</li>
+	  <li>Metallic</li>
+	  
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+	  <li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+    </stuffCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>IndustrialBasic</li>
+        <li>Neolithic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+	  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/BowlHat/BowlHat</wornGraphicPath>
+    </apparel>
+	<tradeTags>
+		<li>StorytimeHats</li>
+	</tradeTags>
+  </ThingDef>
+</Defs>

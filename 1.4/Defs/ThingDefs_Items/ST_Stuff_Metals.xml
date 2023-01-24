@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>  
+  <ThingDef ParentName="ResourceBase">
+    <defName>ST_Blackium</defName>
+    <label>blackium</label>
+    <description>''It's black.'' \n \n Blackium is an alien metal not found on the Old Earth. As humans travelled across the stars, blackium was only ultimately found on the outskirts of galactic civilization, in the Rim. Very few deposits exist in Core Worlds, making blackium a coveted metal for its stunning color and usage in the creation of Black Steel.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Ores/Blackium</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>0.5</Mass>
+      <StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.30</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.8</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.8</BluntDamageMultiplier>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <thingCategories>
+      <li>ST_AlloyMetals</li>
+    </thingCategories>
+    <deepCommonality>0.75</deepCommonality>
+    <deepCountPerPortion>35</deepCountPerPortion>
+    <deepLumpSizeRange>5~40</deepLumpSizeRange>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.1</commonality>
+      <color>(30, 30, 30)</color>
+      <statFactors>
+        <MaxHitPoints>0.4</MaxHitPoints>
+        <Flammability>0</Flammability>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>ST_BlackSteel</defName>
+    <label>black steel</label>
+    <description>Black Steel is a metal derived from an alloy of iron and blackium. Its beautiful, pitch-black color gives it a sinister aura and a very valuable status as a metal on Core Worlds. As blackium has only been located in abundance on the Rim, Black Steel takes on an even greater value. Like normal steel, Black Steel makes for stellar building materials, powerful armor, and fearsome weapons.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Ores/BlackSteel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+      <Mass>0.4</Mass>
+      <StuffPower_Armor_Sharp>1.04</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.01</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.50</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>2</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>1</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1</BluntDamageMultiplier>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <thingCategories>
+      <li>ST_AlloyMetals</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.05</commonality>
+      <color>(50, 50, 50)</color>
+      <statFactors>
+        <MaxHitPoints>1.4</MaxHitPoints>
+        <Flammability>0</Flammability>
+      </statFactors>
+	  <statOffsets>
+		<Beauty>1</Beauty>
+	  </statOffsets>
+    </stuffProps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <comps>
+		<li Class="CompProperties_Ingredients" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ST_Mithril</defName>
+    <label>Mithrilite</label>
+    <description>Mithrilite is an advanced alloy of iron and silver. Requiring extreme heat to smelt, it boasts excellent resistance to stab attacks and is extremely difficult to puncture.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Ores/Mithril</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+      <Mass>0.2</Mass>
+      <StuffPower_Armor_Sharp>1.06</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.05</BluntDamageMultiplier>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <thingCategories>
+      <li>ST_AlloyMetals</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.03</commonality>
+      <color>(100, 125, 145)</color>
+      <statFactors>
+        <MaxHitPoints>2</MaxHitPoints>
+        <Beauty>3</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>2</WorkToMake>
+        <WorkToBuild>2</WorkToBuild>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <comps>
+		<li Class="CompProperties_Ingredients" />
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>ST_Adamantium</defName>
+    <label>Mordorite</label>
+    <description>Mordorite is a solution created by mixing the cursed Black Bricks of Mordor with an alloy of iron and silver. Mordorite is the only metal known to mankind that insulates its wearer from heat as if it were a flame retardant suit, and it is resistent to all fire attacks. How stone bricks can be mixed with an iron and silver alloy to produce a stunningly powerful metal is unknown to science.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Ores/Adamantium</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.5</MarketValue>
+      <Mass>0.4</Mass>
+      <StuffPower_Armor_Sharp>1.1</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>3</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>48</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.09</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.09</BluntDamageMultiplier>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <thingCategories>
+      <li>ST_AlloyMetals</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <color>(37, 66, 28)</color>
+      <statFactors>
+        <MaxHitPoints>2.4</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>2</WorkToMake>
+        <WorkToBuild>2</WorkToBuild>
+      </statFactors>
+	  <statOffsets>
+		<Beauty>1</Beauty>
+	  </statOffsets>
+    </stuffProps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <comps>
+		<li Class="CompProperties_Ingredients" />
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>ST_Runite</defName>
+    <label>runite</label>
+    <description>Runite is a stunningly beautiful mixture of a gold and iron alloy poured in with ground up stones. It can only be smelted in extreme heat. Runite is so named for its granite-like, swirling pattern of different hues of blue. These patterns look like ancient runes from long-lost languages.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Ores/Runite</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>11</MarketValue>
+      <Mass>0.4</Mass>
+      <StuffPower_Armor_Sharp>1.14</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.75</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.55</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <thingCategories>
+      <li>ST_AlloyMetals</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <color>(25, 100, 125)</color>
+      <statFactors>
+        <MaxHitPoints>2.8</MaxHitPoints>
+        <Beauty>2.5</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>2.2</WorkToMake>
+        <WorkToBuild>2.2</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+	  <statOffsets>
+		<Beauty>2</Beauty>
+	  </statOffsets>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <comps>
+		<li Class="CompProperties_Ingredients" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ST_Dragonite</defName>
+    <label>Hhhite</label>
+    <description>It's an ingot of Hhhite. This ''metal'' is supernaturally derived entirely from the pure, concentrated hatred of the Peeled Ones. For reasons unknown to science, Hhhite causes incredible damage as a blunt object, but is simply incable of being sharpened to an effective point, making stabbing with it a fool's endeavor.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Ores/Dragonite</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>0.4</Mass>
+      <StuffPower_Armor_Sharp>0.85</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.33</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.5</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>3</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>2</BluntDamageMultiplier>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <thingCategories>
+      <li>ST_AlloyMetals</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.01</commonality>
+      <color>(115,1,0)</color>
+      <statFactors>
+        <MaxHitPoints>3</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>2.1</WorkToMake>
+        <WorkToBuild>2.1</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <comps>
+		<li Class="CompProperties_Ingredients" />
+    </comps>
+  </ThingDef>
+</Defs>
