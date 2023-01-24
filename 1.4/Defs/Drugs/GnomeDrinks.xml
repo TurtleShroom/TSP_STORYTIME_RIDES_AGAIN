@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GnomeWort</defName>
+    <label>gnome wort</label>
+    <description>Material derived from gnome poppy products, can be fermented into beer.</description>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/GnomeWort</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <rotatable>false</rotatable>
+    <stackLimit>75</stackLimit>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <statBases>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <MarketValue>0.85</MarketValue>
+      <Mass>0.8</Mass>
+      <Flammability>0.2</Flammability>
+      <MaxHitPoints>60</MaxHitPoints>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+		<li Class="CompProperties_Ingredients" />
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>5</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+    </comps>
+  </ThingDef>
+  
+  <RecipeDef>
+    <defName>Make_GnomeWort</defName>
+    <label>make gnome wort</label>
+    <description>Make gnome wort from the byproducts of the Gnome Root poppy or from Gnome Sugar.</description>
+    <jobString>Making gnome wort.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GnomeFlour</li>
+			<li>Gnome_Cloth</li>
+			<li>ST_GnomeSugar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GnomeFlour</li>
+		<li>Gnome_Cloth</li>
+		<li>ST_GnomeSugar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<defaultIngredientFilter>
+		<thingDefs>
+			<li>GnomeFlour</li>
+		</thingDefs>
+	</defaultIngredientFilter>
+	<recipeUsers>
+    	<li>Brewery</li>
+		<li>GnomeTable</li>
+	</recipeUsers>
+    <products>
+      <GnomeWort>10</GnomeWort>
+    </products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>Make_BlurberrySpecial</defName>
+    <label>make a blurblurry special</label>
+    <description>Mixing a blurblurry special.</description>
+    <jobString>Mixing.</jobString>
+    <workAmount>400</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<categories>
+				<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+			</categories>
+			<thingDefs>
+				<li>RawBerries</li>
+				<li>RawAgave</li>
+				<li>ST_CookingApple</li>
+				<li>ST_Lemon</li>
+				<li>ST_Orange</li>
+				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+				<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+				<li MayRequire="halloweenparade.velcroboy333">AutumnFruit</li>
+			</thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+	  <li>
+        <filter>
+					<thingDefs>
+						<li>GnomeBeer</li>
+					</thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<categories>
+						<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+					</categories>
+					<thingDefs>
+						<li>RawBerries</li>
+						<li>RawAgave</li>
+						<li>GnomeBeer</li>
+						<li>ST_CookingApple</li>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+						<li MayRequire="sarg.alphabiomes">AB_RawSugarFamewort</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+						<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+						<li MayRequire="halloweenparade.velcroboy333">AutumnFruit</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>RawBerries</li>
+						<li MayRequire="halloweenparade.velcroboy333">AutumnFruit</li>
+						<li>GnomeBeer</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>GnomeTable</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCocktails</researchPrerequisite>
+	<products>
+		<BlurberrySpecial>4</BlurberrySpecial>
+	</products>
+  </RecipeDef>
+  
+    <RecipeDef>
+		<defName>Make_ChocSaturday</defName>
+		<label>make Choc Saturday</label>
+		<description>Mix the ingredients for a Choc Saturday.</description>
+		<jobString>Mixing.</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>Chocolate</li>
+							<li MayRequire="aratocat.wonderland">Chocofuel</li>
+						</thingDefs>
+			</filter>
+			<count>8</count>
+		  </li>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>GnomeBeer</li>
+							<li>ST_GnomeSugar</li>
+						</thingDefs>
+			</filter>
+			<count>3</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<thingDefs>
+							<li>Chocolate</li>
+							<li>GnomeBeer</li>
+							<li>ST_GnomeSugar</li>
+							<li MayRequire="aratocat.wonderland">Chocofuel</li>
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<thingDefs>
+							<li>Chocolate</li>
+							<li>GnomeBeer</li>
+							<li MayRequire="aratocat.wonderland">Chocofuel</li>
+						</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisite>gnomeCocktails</researchPrerequisite>
+		<products>
+			<ChocSaturday>4</ChocSaturday>
+		</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>Make_ShortGreenGuy</defName>
+    <label>make a Short Green Guy cocktail</label>
+    <description>Mixing a Short Green Guy cocktail.</description>
+    <jobString>Mixing.</jobString>
+    <workAmount>400</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+					<thingDefs>
+						<li>ToadLegs</li>
+					</thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+	  <li>
+        <filter>
+					<thingDefs>
+						<li>GnomeBeer</li>
+					</thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>ToadLegs</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>GnomeBeer</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>GnomeTable</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCocktails</researchPrerequisite>
+	<products>
+		<ShortGreenGuy>4</ShortGreenGuy>
+	</products>
+  </RecipeDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>GnomeBeer</defName>
+    <label>gnome beer</label>
+    <description>Green beer traditionally made by gnomes, derived from either the fermented products of the Gnome Root poppy or Gnome sugar. It isn't very good on its own...</description>
+    <descriptionHyperlinks>
+      <HediffDef>AlcoholHigh</HediffDef>
+      <HediffDef>AlcoholTolerance</HediffDef>
+      <HediffDef>Hangover</HediffDef>
+      <HediffDef>AlcoholAddiction</HediffDef>
+      <HediffDef>Cirrhosis</HediffDef>
+      <HediffDef>ChemicalDamageModerate</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/GnomeBeer</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+	<thingCategories>
+		<li>TSP_ST_GnomeBooze</li>
+	</thingCategories>
+	<tradeTags>
+		<li>ST_GnomeBooze</li>
+	</tradeTags>
+    <statBases>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <MarketValue>12</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.09</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.09</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <chairSearchRadius>40</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+			<hediffDef>AlcoholHigh</hediffDef>
+			<severity>0.15</severity>
+			<toleranceChemical>Alcohol</toleranceChemical>
+			<divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <techLevel>Neolithic</techLevel>
+    <comps>
+		<li Class="CompProperties_Drug">
+			<chemical>Alcohol</chemical>
+			<addictiveness>0.01</addictiveness>
+			<minToleranceToAddict>0.33</minToleranceToAddict>
+			<existingAddictionSeverityOffset>0.4</existingAddictionSeverityOffset>
+			<needLevelOffset>0.9</needLevelOffset>
+			<listOrder>10</listOrder>
+			<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
+			<largeOverdoseChance>0</largeOverdoseChance>
+		</li>
+		<!-- <li Class="CompProperties_Ingredients" /> -->
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>ChocSaturday</defName>
+    <label>Choc Saturday</label>
+    <description>A warm, creamy, alcoholic beverage. Smooth like Saturday morning.</description>
+    <descriptionHyperlinks>
+      <HediffDef>AlcoholHigh</HediffDef>
+      <HediffDef>AlcoholTolerance</HediffDef>
+      <HediffDef>Hangover</HediffDef>
+      <HediffDef>AlcoholAddiction</HediffDef>
+      <HediffDef>Cirrhosis</HediffDef>
+      <HediffDef>ChemicalDamageModerate</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/ChocSaturday</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <MarketValue>12</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.30</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Gluttonous</joyKind>
+      <joy>0.6</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholHigh</hediffDef>
+          <severity>0.35</severity>
+          <toleranceChemical>Alcohol</toleranceChemical>
+          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholTolerance</hediffDef>
+          <severity>0.016</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <techLevel>Industrial</techLevel> <!-- Cocktails were invented in the middle of the nineteenth century -->
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Alcohol</chemical>
+        <addictiveness>0.005</addictiveness>
+        <minToleranceToAddict>0.2</minToleranceToAddict>
+        <existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
+        <needLevelOffset>0.3</needLevelOffset>
+        <listOrder>10</listOrder>
+		<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
+		<largeOverdoseChance>0</largeOverdoseChance>
+      </li>
+	  <li Class="CompProperties_Ingredients" />
+    </comps>
+	<thingCategories>
+		<li>TSP_ST_GnomeBooze</li>
+	</thingCategories>
+	<tradeTags>
+		<li>ST_GnomeBooze</li>
+	</tradeTags>
+  </ThingDef>
+  
+    <ThingDef ParentName="DrugBase">
+    <defName>ShortGreenGuy</defName>
+    <label>Short Green Guy cocktail</label>
+    <description>A Short Green Guy cocktail... looks good.</description>
+    <descriptionHyperlinks>
+      <HediffDef>AlcoholHigh</HediffDef>
+      <HediffDef>AlcoholTolerance</HediffDef>
+      <HediffDef>Hangover</HediffDef>
+      <HediffDef>AlcoholAddiction</HediffDef>
+      <HediffDef>Cirrhosis</HediffDef>
+      <HediffDef>ChemicalDamageModerate</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/ShortGreenGuy</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <MarketValue>12</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.30</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.45</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholHigh</hediffDef>
+          <severity>0.35</severity>
+          <toleranceChemical>Alcohol</toleranceChemical>
+          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholTolerance</hediffDef>
+          <severity>0.036</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <techLevel>Industrial</techLevel> <!-- Cocktails were invented in the middle of the nineteenth century -->
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Alcohol</chemical>
+        <addictiveness>0.1</addictiveness>
+        <minToleranceToAddict>0.25</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.50</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>10</listOrder>
+		<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
+		<largeOverdoseChance>0</largeOverdoseChance>
+      </li>
+	  <li Class="CompProperties_Ingredients" />
+    </comps>
+	<thingCategories>
+		<li>TSP_ST_GnomeBooze</li>
+	</thingCategories>
+	<tradeTags>
+		<li>ST_GnomeBooze</li>
+	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>BlurberrySpecial</defName>
+    <label>Blurblurry Special</label>
+    <description>Looks good... smells strong.</description>
+    <descriptionHyperlinks>
+      <HediffDef>AlcoholHigh</HediffDef>
+      <HediffDef>AlcoholTolerance</HediffDef>
+      <HediffDef>Hangover</HediffDef>
+      <HediffDef>AlcoholAddiction</HediffDef>
+      <HediffDef>Cirrhosis</HediffDef>
+      <HediffDef>ChemicalDamageModerate</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/BlurberrySpecial</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <MarketValue>12</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.30</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.45</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholHigh</hediffDef>
+          <severity>0.1</severity>
+          <toleranceChemical>Alcohol</toleranceChemical>
+          <divideByBodySize>false</divideByBodySize> <!-- Gnomes are small to the point that drugs can kill them, so it needs to be a constant -->
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholTolerance</hediffDef>
+          <severity>0.08</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <techLevel>Industrial</techLevel> <!-- Cocktails were invented in the middle of the nineteenth century -->
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Alcohol</chemical>
+        <addictiveness>0.45</addictiveness>
+        <minToleranceToAddict>0.15</minToleranceToAddict>
+        <existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>10</listOrder>
+		<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
+		<largeOverdoseChance>0</largeOverdoseChance>
+      </li>
+	  <li Class="CompProperties_Ingredients" />
+    </comps>
+	<thingCategories>
+		<li>TSP_ST_GnomeBooze</li>
+	</thingCategories>
+	<tradeTags>
+		<li>ST_GnomeBooze</li>
+	</tradeTags>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <DamageDef>
+    <defName>ST_Lick</defName>
+    <label>tongue shot</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been licked to death by a frog. How embarassing!</deathMessage>
+    <hediff>ST_Licked</hediff>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <armorCategory>Blunt</armorCategory>
+    <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+	<impactSoundType>ST_JudasFrogStrike</impactSoundType>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>false</makesAnimalsFlee>
+  </DamageDef>
+  
+  <HediffDef ParentName="InjuryBase">
+    <defName>ST_Licked</defName>
+    <label>licked</label>
+    <labelNoun>frog tongue shot</labelNoun>
+    <description>A wound from being shot by the bullet tree frog's tongue. How embarassing!</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>cleansed</labelTendedWell>
+        <labelTendedWellInner>de-frogged</labelTendedWellInner>
+        <labelSolidTendedWell>de-frogged</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.9</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>frog tongue scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.02</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.05</averagePainPerSeverityPermanent>
+      <bleedRate>0</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>licked off</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>ST_Lick</defName>
+    <label>lick shot</label>
+    <graphicData>
+      <texPath>Projectiles/Lick</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ST_Lick</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <speed>200</speed>
+    </projectile>
+  </ThingDef>
+  
+  <DamageDef>
+    <defName>ParalyzingLick</defName>
+    <label>paralyzing neurotoxin</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <additionalHediffs>
+      <li>
+        <hediff>NeurotoxinBuildup</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+		<inverseStatScaling>true</inverseStatScaling>
+      </li>
+    </additionalHediffs>
+    <deathMessage>{0} has been licked to death.</deathMessage>
+    <hediff>ST_Licked</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Lick</impactSoundType>
+    <armorCategory>Lick</armorCategory>
+  </DamageDef>  
+</Defs>

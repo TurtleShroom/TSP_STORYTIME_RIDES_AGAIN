@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- From: https://www.steamcommunity.com/sharedfiles/filedetails/?id=2775734259 -->
+
+<!-- The original author of this code deliberately uploaded a broken Mod. -->
+<!-- Guess what that means? -->
+
+<!-- HIPPITY HOPPITY THAT MOD IS NOW MY PROPERTY! -->
+<!-- (Since people apparently can't recognize a meme or a joke, I should note that the original Modest Parrot Mod and its textures are not mine. This Def is a complete rewrite of the original Mod and contains little to no semblance of the original, broken entry. -->
+<!-- The Patch for the original Modest Parrot, which adds in the source material, can be seen in this Mod's Patch's folder. -->
+
+<Defs>
+ <ThingDef ParentName="AnimalThingBase">
+    <defName>ST_ModestParrot</defName>
+    <label>modest parrot</label>
+    <description>An absolutely massive parrot that is about the length of a sheep from head to tail, with an equally large wingspan. The name was a joke, because this parrot's size and splendor is anything but modest! Modest parrots are considered to be genetically altered versions of normal parrots, which they produce when they lay eggs. Two modest parrots cannot produce a new modest parrot, indicating that they were engineered as livestock to create pet parrots for sale. However, it is possible for a regular parrot to resemble a modest parrot in appearance.</description>
+    <statBases>
+      <MoveSpeed>5</MoveSpeed>
+      <MarketValue>350</MarketValue>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <FilthRate>0.5</FilthRate>
+	  <MeatAmount>120</MeatAmount>
+	  <LeatherAmount>100</LeatherAmount>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>ST_ParrotEggUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>ST_ParrotEggFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>5</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
+    <race>
+		<body>Bird</body>
+		<useMeatFrom>Cassowary</useMeatFrom>
+		<leatherDef>Leather_Bird</leatherDef>
+		<baseHungerRate>0.14</baseHungerRate>
+		<baseBodySize>0.7</baseBodySize>
+		<baseHealthScale>1.05</baseHealthScale>
+		<foodType>VegetarianRoughAnimal</foodType>
+		<trainability>Advanced</trainability>
+		<wildness>0</wildness>
+		<roamMtbDays>7</roamMtbDays>
+		<mateMtbHours>8</mateMtbHours>
+		<lifeExpectancy>6</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBabyTiny</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Chick_Call</soundWounded>
+          <soundDeath>Pawn_Chick_Call</soundDeath>
+          <soundCall>Pawn_Chick_Call</soundCall>
+          <soundAngry>Pawn_Chick_Call</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.12</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.2</minAge>
+          <soundWounded>Pawn_Chicken_Wounded</soundWounded>
+          <soundDeath>Pawn_Chicken_Death</soundDeath>
+          <soundCall>Pawn_Chicken_Call</soundCall>
+          <soundAngry>Pawn_Chicken_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+	  <li>AnimalFarm</li>
+	  <li>AnimalPet</li>
+      <li>PiratePetRare</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>talons</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>beak</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>1</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.02</chanceFactor>
+      </li>
+    </tools>
+  </ThingDef>
+ 
+ <PawnKindDef ParentName="AnimalKindBase">
+    <defName>ST_ModestParrot</defName>
+    <label>modest parrot</label>
+    <labelMale>modest parrot</labelMale>
+    <labelFemale>modest parrot</labelFemale>
+    <race>ST_ModestParrot</race>
+    <combatPower>12</combatPower>
+    <ecoSystemWeight>0.15</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <!-- <label>parrot</label> -->
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Parrot/ModestParrot_BackUp/ModestParrot_BackUp</texPath>
+          <drawSize>1</drawSize>
+          <color>(255,255,255)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <!-- <labelMale>parrot</labelMale> -->
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Parrot/ModestParrot_BackUp/ModestParrot_BackUp</texPath>
+          <drawSize>1.5</drawSize>
+          <color>(255,255,255)</color>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/Parrot/ModestParrot_BackUp/ModestParrot_BackUp</texPath>
+          <drawSize>1.5</drawSize>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>1.5</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Parrot/ModestParrot_BackUp/ModestParrot_BackUp</texPath>
+          <drawSize>1.5</drawSize>
+          <color>(255,255,255)</color>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.05)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/Parrot/ModestParrot_BackUp/ModestParrot_BackUp</texPath>
+          <drawSize>1.6</drawSize>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>1.5</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  </Defs>

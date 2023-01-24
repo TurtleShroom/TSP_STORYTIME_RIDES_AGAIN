@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>  
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>BotoxFruit</defName>
+    <label>Botox Fruit</label>
+    <description>The miracles of Glitter World technology have successfully created a plant whose fruit naturally attracts a culture of &lt;i>Clostridium botulinum&lt;/i> bacteria. This plant is cultivated extensively by Jeubs. By the time the fruit is ripe, the bacteria within have successfully produced large amounts of concentrated Botox through their spores. What is called Botox is actually the toxic spores of the Botox bacterium; this substance is officially called "BOtulinum TOXins". \n The fruit itself looks and feels like a lump of flesh, but inside it is Botox and Botox bacteria cultures. These can be ground up and injected at-will as an exotic Jeubish drug, or refined into actual medicine.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/BotoxFruit</texPath>
+	  <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+	<descriptionHyperlinks>
+		<ThingDef>BotoxPowder</ThingDef>
+	</descriptionHyperlinks>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Flammability>1.3</Flammability>
+	  <Nutrition>2</Nutrition>
+	  <DeteriorationRate>12</DeteriorationRate>
+	  <FoodPoisonChance>1</FoodPoisonChance>
+	  <FoodPoisonChanceFixedHuman>1</FoodPoisonChanceFixedHuman>
+    </statBases>
+	<stackLimit>100</stackLimit>
+	<tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Botox</chemical>
+        <addictiveness>0.5</addictiveness>
+        <minToleranceToAddict>0.2</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.3</existingAddictionSeverityOffset>
+        <needLevelOffset>0.8</needLevelOffset>
+        <listOrder>20</listOrder>
+        <overdoseSeverityOffset>0.01~0.6</overdoseSeverityOffset>
+        <largeOverdoseChance>0.2</largeOverdoseChance>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+	  <tableDesired>false</tableDesired>
+	  <ingestEffect>EatMeat</ingestEffect>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>BotoxHigh</hediffDef>
+          <severity>1</severity>
+          <toleranceChemical>Botox</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>BotoxTolerance</hediffDef>
+          <severity>0.15</severity>
+          <divideByBodySize>false</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<tradeTags>
+		<li>Botox</li>
+	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>BotoxPowder</defName>
+    <label>Recreational Botox</label>
+    <description>A culture of &lt;i>Clostridium botulinum&lt;/i> and the spores creating its characteristic toxin, ground up and ready for injection as a recreational drug. What is called Botox is actually the name of the toxic spores of the Botox bacterium; this substance is officially called "BOtulinum TOXins". Botox works by interfering with neural transmission from the nervous system to a given muscle by blocking the release of acetylcholine from the synapse (ends) of nerve cells to the muscles. This prevents the muscles from moving. \n \n With the right ingredients, this recreational Botox can be processed into the actual reason Botox is sold: it possesses immense value as a medicinal treatment for a myriad of musculo-skeletal diseases and symptoms... as well as making its user look prettier.</description>
+	<descriptionHyperlinks>
+		<RecipeDef>TSP_ST_ActualBotox</RecipeDef>
+		<!-- <RecipeDef>TSP_ST_BoDetox</RecipeDef> -->
+		<ThingDef>TSP_ST_BotoxMedicine</ThingDef>
+		<!-- <ThingDef>TSP_ST_BotoxSafeMedicine</ThingDef> -->
+	</descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Items/Resources/BotoxPowder</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>400</WorkToMake>
+      <MarketValue>12</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>25</DeteriorationRate>
+      <Flammability>1.3</Flammability>
+    </statBases>
+	<stackLimit>200</stackLimit>
+    <techLevel>Industrial</techLevel>
+	<tickerType>Rare</tickerType>
+    <ingestible>
+      <foodType>Plant, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.60</joy>
+      <baseIngestTicks>450</baseIngestTicks>
+      <drugCategory>Hard</drugCategory>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.21,0,0.05)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+	  <tableDesired>false</tableDesired>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>BotoxHigh</hediffDef>
+          <severity>0.5</severity>
+          <toleranceChemical>Botox</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>BotoxTolerance</hediffDef>
+          <severity>0.07</severity>
+          <divideByBodySize>false</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>16</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+		<li Class="CompProperties_Drug">
+			<chemical>Botox</chemical>
+			<addictiveness>0.15</addictiveness>
+			<minToleranceToAddict>0.2</minToleranceToAddict>
+			<existingAddictionSeverityOffset>0.09</existingAddictionSeverityOffset>
+			<needLevelOffset>0.9</needLevelOffset>
+			<listOrder>20</listOrder>
+			<overdoseSeverityOffset>0.03~0.09</overdoseSeverityOffset>
+			<largeOverdoseChance>0.04</largeOverdoseChance>
+		</li>
+    </comps>
+	<tradeTags>
+		<li>Botox</li>
+	</tradeTags>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>BotoxHigh</defName>
+    <label>Botulinum toxin effects</label>
+    <labelNoun>a botulinum toxin reaction</labelNoun>
+    <description>Recreational botulinum toxin (Botox) has been injected into the body of this Pawn. He will experience muscle parylisis, slowing his moving abilities and metabolism, but also a significant reduction in the ability to feel pain.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.75</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <label>Botilinium toxin in system</label>
+          <hungerRateFactorOffset>-0.5</hungerRateFactorOffset>
+          <painOffset>-0.9</painOffset>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <setMax>0.5</setMax>
+            </li>
+			<li>
+				<capacity>Metabolism</capacity>
+				<offset>-0.25</offset>
+			</li>
+			<li>
+				<capacity>BloodPumping</capacity>
+				<setMax>0.8</setMax>
+			</li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>TSP_ST_BotoxPositiveHighPositive</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>BotoxTolerance</hediff>
+    <stages>
+      <li>
+        <label>Recreational botulinum toxin injection</label>
+        <description>Wow! How is it possible that muscle paralysis feels this good?</description>
+        <baseMoodEffect>25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ChemicalDef>
+    <defName>Botox</defName>
+    <label>Botox</label>
+    <addictionHediff>BotoxAddiction</addictionHediff>
+    <toleranceHediff>BotoxTolerance</toleranceHediff>
+    <!-- <onGeneratedAddictedToleranceChance>0.5</onGeneratedAddictedToleranceChance> -->
+    <onGeneratedAddictedEvents>
+      <li>
+        <hediff>ChemicalDamageSevere</hediff>
+        <chance>0.15</chance>
+        <partsToAffect>
+		  <li>Eye</li>
+		  <li>Nose</li>
+		  <li>Jaw</li>
+        </partsToAffect>
+      </li>
+    </onGeneratedAddictedEvents>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Botox</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Botox</label>
+    <description>Due to an addiction to recreational botulinum toxin, this person needs to regularly inject recreational Botox to avoid withdrawal symptoms.</description>
+    <listPriority>50</listPriority>
+  </NeedDef>
+  
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>BotoxTolerance</defName>
+    <label>Botox tolerance</label>
+    <description>A built-up tolerance to recreational botulinum toxins. The more severe this tolerance is, the more Botox it takes to get the same effect. Beware: while Botox ordinarily causes no side effects beyond the side effects known for thousands of years, it remains a lethal poison in high doses. \n DO NOT LET THE TOLERANCE GET TOO HIGH! IT TAKES A WEEK TO VANISH ENTIRELY!</description>
+	<scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.14285714</severityPerDay> <!-- Approximately one week to cure it -->
+		<showDaysToRecover>true</showDaysToRecover>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Botox</chemical>
+      </li>
+    </comps>
+	<stages Inherit="False">
+		<li>
+			<label>safe</label>
+			<vomitMtbDays>21</vomitMtbDays>
+			<capMods>
+				<li>
+					<capacity>Talking</capacity>
+					<offset>-0.1</offset>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<minSeverity>0.45</minSeverity>
+			<label>notable</label>
+			<vomitMtbDays>14</vomitMtbDays>
+			<capMods>
+				<li>
+					<capacity>Talking</capacity>
+					<offset>-0.15</offset>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>-0.05</offset>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<minSeverity>0.65</minSeverity>
+			<label>dangerous</label>
+			<deathMtbDays>40</deathMtbDays>
+			<vomitMtbDays>2.5</vomitMtbDays>
+			<capMods>
+				<li>
+					<capacity>Talking</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>-0.1</offset>
+				</li>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>-0.05</offset>
+				</li>
+			</capMods>
+			<!--
+			<mentalStateGivers>
+				<li>
+					<mentalState>Catatonic</mentalState>
+					<mtbDays>30</mtbDays>
+				</li>
+			</mentalStateGivers>
+			-->
+		</li>
+		<li>
+			<minSeverity>0.7</minSeverity>
+			<label>lethal</label>
+			<!-- <lifeThreatening>true</lifeThreatening> --> <!-- Shows MEDICAL EMERGENCY alert -->
+			<deathMtbDays>10</deathMtbDays>
+			<vomitMtbDays>1</vomitMtbDays>
+			<capMods>
+				<li>
+					<capacity>Talking</capacity>
+					<setMax>0.3</setMax>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>-0.3</offset>
+				</li>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>-0.2</offset>
+				</li>
+			</capMods>
+			<!--
+			<mentalStateGivers>
+				<li>
+					<mentalState>Catatonic</mentalState>
+					<mtbDays>9</mtbDays>
+				</li>
+			</mentalStateGivers>
+			-->
+		</li>
+		<li>
+			<minSeverity>0.8</minSeverity>
+			<label>terminal</label>
+			<lifeThreatening>true</lifeThreatening> <!-- Shows MEDICAL EMERGENCY alert -->
+			<deathMtbDays>3</deathMtbDays>
+			<vomitMtbDays>0.</vomitMtbDays>
+			<capMods>
+				<li>
+					<capacity>Talking</capacity>
+					<setMax>0.25</setMax>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>-0.4</offset>
+				</li>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>-0.4</offset>
+				</li>
+			</capMods>
+			<!--
+			<mentalStateGivers>
+				<li>
+					<mentalState>Catatonic</mentalState>
+					<mtbDays>1</mtbDays>
+				</li>
+			</mentalStateGivers>
+			-->
+		</li>
+		<li>
+			<minSeverity>1</minSeverity>
+			<label>u jeub</label>
+			<lifeThreatening>true</lifeThreatening> <!-- Shows MEDICAL EMERGENCY alert -->
+			<deathMtbDays>0.00001</deathMtbDays> <!-- Immediately kills the Pawn -->
+			<vomitMtbDays>0.0001</vomitMtbDays>
+			<capMods>
+				<li>
+					<capacity>Talking</capacity>
+					<offset>-999</offset>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>-999</offset>
+				</li>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>-999</offset>
+				</li>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0</setMax>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageSevere</hediff>
+        <minSeverity>0.45</minSeverity>
+        <baseMtbDays>60</baseMtbDays>
+        <partsToAffect>
+		  <li>Eye</li>
+		  <li>Nose</li>
+		  <li>Jaw</li>
+        </partsToAffect>
+      </li>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageSevere</hediff>
+        <minSeverity>0.65</minSeverity>
+        <baseMtbDays>50</baseMtbDays>
+        <partsToAffect>
+		  <li>Eye</li>
+		  <li>Nose</li>
+		  <li>Jaw</li>
+        </partsToAffect>
+      </li>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageSevere</hediff>
+        <minSeverity>0.80</minSeverity>
+        <baseMtbDays>2</baseMtbDays>
+        <partsToAffect>
+		  <li>Eye</li>
+		  <li>Nose</li>
+		  <li>Jaw</li>
+        </partsToAffect>
+      </li>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageSevere</hediff>
+        <minSeverity>0.90</minSeverity>
+        <baseMtbDays>0.001</baseMtbDays>
+        <partsToAffect>
+		  <li>Eye</li>
+		  <li>Nose</li>
+		  <li>Jaw</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>TSP_ST_BotoxPositiveTolerance</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>BotoxTolerance</hediff>
+    <stages>
+      <li>
+        <label>Botulinum toxin tolerance</label>
+        <description>I am beautiful.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>BotoxAddiction</defName>
+    <label>Botox addiction</label>
+    <description>A chemical dependency for botulinum toxin, the medicinal ingredient in Botox. Long-term injections of recreational Botox have caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug. \n Without regular injections of Botox, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_Botox</causesNeed>
+	<scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.1</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>botulinum toxin withdrawal</label>
+        <restFallFactorOffset>0.2</restFallFactorOffset>
+        <socialFightChanceFactor>16</socialFightChanceFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.03</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugMajor</mentalState>
+            <mtbDays>20</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>BotoxWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>BotoxAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+		<li>
+			<visible>false</visible>
+		</li>
+		<li>
+			<label>botulinum toxin withdrawal</label>
+			<description>ME WANT BOTOX</description>
+			<baseMoodEffect>-50</baseMoodEffect>
+		</li>
+    </stages>
+  </ThoughtDef>
+  
+	<ThingDef ParentName="DrugBase">
+		<thingClass>ThingWithComps</thingClass>
+		<defName>TSP_ST_BotoxMedicine</defName>
+		<label>Medicinal Botox</label>
+		<description>Botulinum toxins (Botox) that has been refined from its exotic recreational form into the actual reason that it was used by sapients to begin with. This Botox is a potent medicine, as all "boring" Botox is. Jeubs languish at seeing such a magnificent high being used to cure spasms and wrinkles. \n Although it is extremely effective as medicine, its muscle paralysis properties and creepy effect on one's face are side effects that will affect anyone injected with it. Unlike recreational botulinum toxins, Medicinal Botox is not addictive. Medicinal Botox must be kept frozen until use. \n \n Medicinal Botox is not capable of being used for ordinary illnesses due to it being a muscular toxin, but it can be used for beautification and specialized treatment of certain conditions.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>TSP_ST_ActualBotox</RecipeDef>
+			<!-- <RecipeDef>TSP_ST_BoDetox</RecipeDef> -->
+			<!-- <ThingDef>TSP_ST_BotoxSafeMedicine</ThingDef> -->
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Items/Resources/BotoxPowder</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<Mass>0.20</Mass>
+			<Flammability>0.7</Flammability>
+			<!--
+				<MedicalPotency>0.9</MedicalPotency>
+				<MedicalQualityMax>1</MedicalQualityMax>
+			-->
+			<DeteriorationRate>5</DeteriorationRate>
+		</statBases>
+		<stackLimit>100</stackLimit>
+		<tickerType>Rare</tickerType>
+		<allowedArchonexusCount>1000</allowedArchonexusCount>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<drugCategory>Medical</drugCategory>
+			<ingestSound>Ingest_Inject</ingestSound>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				  <hediffDef>BotoxHigh</hediffDef>
+				  <severity>0.02</severity>
+				  <toleranceChemical>Botox</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				  <hediffDef>BotoxTolerance</hediffDef>
+				  <severity>0.04</severity>
+				  <divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>8</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<!-- You can't get addicted to medicinal Botox -->
+			<li Class="CompProperties_Drug">
+				<chemical>Botox</chemical>
+				<addictiveness>0</addictiveness>
+				<minToleranceToAddict>1</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.25</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>20</listOrder>
+				<overdoseSeverityOffset>0.01</overdoseSeverityOffset>
+				<largeOverdoseChance>0.01</largeOverdoseChance>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>Botox</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>

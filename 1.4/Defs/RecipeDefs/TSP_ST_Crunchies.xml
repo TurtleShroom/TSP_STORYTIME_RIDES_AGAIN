@@ -1,0 +1,837 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <RecipeDef>
+    <defName>Make_WormCrunchies</defName>
+    <label>make worm crunchies</label>
+    <description>Bake a mix of worms and baked goods with the intent of grinding them into a tasty snack.</description>
+	<descriptionHyperlinks>
+		<RecipeDef>TSP_ST_ProcessWormCrunchies_One</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessWormCrunchies_Five</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessWormCrunchies_Fifteen</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessWormCrunchies_Twenty</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessWormCrunchies_Thirty</RecipeDef>
+		<ThingDef>WormCrunchies</ThingDef>
+	</descriptionHyperlinks>
+    <jobString>Baking a sheet of Worm Crunchies</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+					<thingDefs>
+						<li>ST_Worm</li>
+					</thingDefs>
+        </filter>
+        <count>35</count>
+      </li>
+	  <li>
+        <filter>
+					<categories>
+						<li MayRequire="Mlie.TakisRandomStuff">Cereal</li>
+					</categories>
+					<thingDefs>
+						<li>ST_GnomeSugar</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+						<li MayRequire="sarg.alphabiomes">AB_RawSugarFamewort</li>
+						<li MayRequire="Mlie.TakisRandomStuff">RawBarley</li>
+						<li MayRequire="Mlie.TakisRandomStuff">RawOats</li>
+						<li MayRequire="aratocat.wonderland">Chocofuel</li>
+					</thingDefs>
+					<disallowedThingDefs>
+						<li>GnomeFlour</li>
+						<li>GnomeFlourMeal</li>
+					</disallowedThingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<categories>
+						<li MayRequire="Mlie.TakisRandomStuff">Cereal</li>
+					</categories>
+					<thingDefs>
+						<li>ST_Worm</li>
+						<li>ST_GnomeSugar</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+						<li MayRequire="sarg.alphabiomes">AB_RawSugarFamewort</li>
+						<li MayRequire="Mlie.TakisRandomStuff">RawBarley</li>
+						<li MayRequire="Mlie.TakisRandomStuff">RawOats</li>
+						<li MayRequire="aratocat.wonderland">Chocofuel</li>
+					</thingDefs>
+					<disallowedThingDefs>
+						<li>GnomeFlour</li>
+						<li>GnomeFlourMeal</li>
+					</disallowedThingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>ST_Worm</li>
+						<li>ST_GnomeSugar</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>GnomeTable</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<TSP_ST_WormCrunchiesRaw>5</TSP_ST_WormCrunchiesRaw>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>Make_ChocchipCrunchies</defName>
+    <label>make chocolate chip crunchies</label>
+    <description>Bake a mix of chocolate and baked goods with the intent of grinding them into a tasty snack.</description>
+	<descriptionHyperlinks>
+		<RecipeDef>TSP_ST_ProcessChocchipCrunchies_One</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessChocchipCrunchies_Five</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessChocchipCrunchies_Fifteen</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessChocchipCrunchies_Twenty</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessChocchipCrunchies_Thirty</RecipeDef>
+		<ThingDef>ChocchipCrunchies</ThingDef>
+	</descriptionHyperlinks>
+    <jobString>baking a sheet of Chocchip Crunchies</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>Chocolate</li>
+				<!-- <li MayRequire="aratocat.wonderland">Chocofuel</li> -->
+			</thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  <li>
+        <filter>
+					<thingDefs>
+						<li>ST_GnomeSugar</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+						<li MayRequire="sarg.alphabiomes">AB_RawSugarFamewort</li>
+						<li MayRequire="aratocat.wonderland">Chocofuel</li>
+					</thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>Chocolate</li>
+						<li>ST_GnomeSugar</li>
+						<li MayRequire="aratocat.wonderland">Chocofuel</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>Chocolate</li>
+						<li>ST_GnomeSugar</li>
+						<li MayRequire="aratocat.wonderland">Chocofuel</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>GnomeTable</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<TSP_ST_ChocchipCrunchiesRaw>5</TSP_ST_ChocchipCrunchiesRaw>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>Make_ToadCrunchies</defName>
+    <label>make Toad Crunchies</label>
+    <description>Bake a mix of Regenerative Toad legs and baked goods with the intent of grinding them into a tasty snack.</description>
+	<descriptionHyperlinks>
+		<RecipeDef>TSP_ST_ProcessToadCrunchies_One</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessToadCrunchies_Five</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessToadCrunchies_Fifteen</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessToadCrunchies_Twenty</RecipeDef>
+		<RecipeDef>TSP_ST_ProcessToadCrunchies_Thirty</RecipeDef>
+		<ThingDef>ToadCrunchies</ThingDef>
+	</descriptionHyperlinks>
+    <jobString>Baking a sheet of Toad Crunchies</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+					<thingDefs>
+						<li>ToadLegs</li>
+					</thingDefs>
+        </filter>
+        <count>6</count>
+      </li>
+	  <li>
+        <filter>
+					<categories>
+						<li MayRequire="Mlie.TakisRandomStuff">Cereal</li>
+					</categories>
+					<thingDefs>
+						<li>ST_GnomeSugar</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+						<li MayRequire="sarg.alphabiomes">AB_RawSugarFamewort</li>
+						<li MayRequire="Mlie.TakisRandomStuff">RawBarley</li>
+						<li MayRequire="Mlie.TakisRandomStuff">RawOats</li>
+						<li MayRequire="Mlie.TakisRandomStuff">RawBarley</li>
+						<li MayRequire="Mlie.TakisRandomStuff">RawOats</li>
+						<li MayRequire="aratocat.wonderland">Chocofuel</li>
+					</thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<categories>
+						<li MayRequire="Mlie.TakisRandomStuff">Cereal</li>
+					</categories>
+					<thingDefs>
+						<li>ToadLegs</li>
+						<li>ST_GnomeSugar</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+						<li MayRequire="sarg.alphabiomes">AB_RawSugarFamewort</li>
+						<li MayRequire="Mlie.TakisRandomStuff">RawBarley</li>
+						<li MayRequire="Mlie.TakisRandomStuff">RawOats</li>
+						<li MayRequire="aratocat.wonderland">Chocofuel</li>
+					</thingDefs>
+					<disallowedThingDefs>
+						<li>GnomeFlourMeal</li>
+					</disallowedThingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>ToadLegs</li>
+						<li>ST_GnomeSugar</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>GnomeTable</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<TSP_ST_ToadCrunchiesRaw>5</TSP_ST_ToadCrunchiesRaw>
+	</products>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>TSP_ST_ProcessToadCrunchies_One</defName>
+    <label>grind one sheet of Toad Crunchies</label>
+    <description>Grind the mix of Regenerative Toad legs and baked goods into delicious Toad Crunchies.</description>
+    <jobString>Making Toad Leg Crunchies</jobString>
+    <workAmount>300</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_ToadCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ToadCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ToadCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<ToadCrunchies>3</ToadCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessToadCrunchies_Five</defName>
+    <label>grind five sheets of Toad Crunchies</label>
+    <description>Grind the mix of Regenerative Toad legs and baked goods into delicious Toad Crunchies.</description>
+    <jobString>Making Toad Leg Crunchies</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_ToadCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ToadCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ToadCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<ToadCrunchies>15</ToadCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessToadCrunchies_Fifteen</defName>
+    <label>grind fifteen sheets of Toad Crunchies</label>
+    <description>Grind the mix of Regenerative Toad legs and baked goods into delicious Toad Crunchies.</description>
+    <jobString>Making Toad Leg Crunchies</jobString>
+    <workAmount>1000</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_ToadCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ToadCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ToadCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<ToadCrunchies>30</ToadCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessToadCrunchies_Twenty</defName>
+    <label>grind twenty sheets of Toad Crunchies</label>
+    <description>Grind the mix of Regenerative Toad legs and baked goods into delicious Toad Crunchies.</description>
+    <jobString>Making Toad Leg Crunchies</jobString>
+    <workAmount>1300</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_ToadCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ToadCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ToadCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<ToadCrunchies>40</ToadCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessToadCrunchies_Thirty</defName>
+    <label>grind thirty sheets of Toad Crunchies</label>
+    <description>Grind the mix of Regenerative Toad legs and baked goods into delicious Toad Crunchies.</description>
+    <jobString>Making Toad Leg Crunchies</jobString>
+    <workAmount>3000</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_ToadCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ToadCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ToadCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<ToadCrunchies>60</ToadCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessWormCrunchies_One</defName>
+    <label>grind one sheet of Worm Crunchies</label>
+    <description>Grind the mix of worms and baked goods into delicious Worm Crunchies.</description>
+    <jobString>Making Worm Crunchies</jobString>
+    <workAmount>300</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_WormCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_WormCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_WormCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<WormCrunchies>3</WormCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessWormCrunchies_Five</defName>
+    <label>grind five sheets of Worm Crunchies</label>
+    <description>Grind the mix of worms and baked goods into delicious Worm Crunchies.</description>
+    <jobString>Making Worm Crunchies</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_WormCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_WormCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_WormCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<WormCrunchies>15</WormCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessWormCrunchies_Fifteen</defName>
+    <label>grind fifteen sheets of Worm Crunchies</label>
+    <description>Grind the mix of worms and baked goods into delicious Worm Crunchies.</description>
+    <jobString>Making Worm Crunchies</jobString>
+    <workAmount>1000</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_WormCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_WormCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_WormCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<WormCrunchies>30</WormCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessWormCrunchies_Twenty</defName>
+    <label>grind twenty sheets of Worm Crunchies</label>
+    <description>Grind the mix of worms and baked goods into delicious Worm Crunchies.</description>
+    <jobString>Making Worm Crunchies</jobString>
+    <workAmount>1300</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_WormCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_WormCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_WormCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<WormCrunchies>40</WormCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessWormCrunchies_Thirty</defName>
+    <label>grind thirty sheets of Worm Crunchies</label>
+    <description>Grind the mix of worms and baked goods into delicious Worm Crunchies.</description>
+    <jobString>Making Worm Leg Crunchies</jobString>
+    <workAmount>3000</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_WormCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_WormCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_WormCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<WormCrunchies>75</WormCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessChocchipCrunchies_One</defName>
+    <label>grind one sheet of Chocchip Crunchies</label>
+    <description>Grind the mix of chocolate and baked goods into delicious Chocchip Crunchies.</description>
+    <jobString>Making Chocchip Crunchies</jobString>
+    <workAmount>300</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_ChocchipCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ChocchipCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ChocchipCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<ChocchipCrunchies>3</ChocchipCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessChocchipCrunchies_Five</defName>
+    <label>grind five sheets of Chocchip Crunchies</label>
+    <description>Grind the mix of chocolate and baked goods into delicious Chocchip Crunchies.</description>
+    <jobString>Making Chocchip Crunchies</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_ChocchipCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ChocchipCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ChocchipCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<ChocchipCrunchies>15</ChocchipCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessChocchipCrunchies_Fifteen</defName>
+    <label>grind fifteen sheets of Chocchip Crunchies</label>
+    <description>Grind the mix of worms and baked goods into delicious Chocchip Crunchies.</description>
+    <jobString>Making Chocchip Crunchies</jobString>
+    <workAmount>1000</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_ChocchipCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ChocchipCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ChocchipCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<ChocchipCrunchies>35</ChocchipCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessChocchipCrunchies_Twenty</defName>
+    <label>grind twenty sheets of Chocchip Crunchies</label>
+    <description>Grind the mix of chocolate and baked goods into delicious Chocchip Crunchies.</description>
+    <jobString>Making Chocchip Crunchies</jobString>
+    <workAmount>1300</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_ChocchipCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ChocchipCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ChocchipCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<ChocchipCrunchies>45</ChocchipCrunchies>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>TSP_ST_ProcessChocchipCrunchies_Thirty</defName>
+    <label>grind thirty sheets of Chocchip Crunchies</label>
+    <description>Grind the mix of baked goods into delicious Chocchip Crunchies.</description>
+    <jobString>Making Chocchip Leg Crunchies</jobString>
+    <workAmount>3000</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>TSP_ST_ChocchipCrunchiesRaw</li>
+			</thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ChocchipCrunchiesRaw</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+					<thingDefs>
+						<li>TSP_ST_ChocchipCrunchiesRaw</li>
+					</thingDefs>
+    </defaultIngredientFilter>
+	<recipeUsers>
+    		<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+	</recipeUsers>
+	<researchPrerequisite>gnomeCooking</researchPrerequisite>
+	<products>
+		<ChocchipCrunchies>65</ChocchipCrunchies>
+	</products>
+  </RecipeDef>
+</Defs>

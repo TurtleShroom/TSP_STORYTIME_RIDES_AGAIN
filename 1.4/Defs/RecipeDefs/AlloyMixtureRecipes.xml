@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <RecipeDef>
+    <defName>MakeBlackMix</defName>
+    <label>Make Black Mixture</label>
+    <description>Grind Blackium and iron into a fine mixture.</description>    
+	<jobString>Grind Blackium and iron into a fine mixture.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Interact_Drill</soundWorking>
+	<researchPrerequisite>alloyCrafting</researchPrerequisite>
+	<allowMixingIngredients>true</allowMixingIngredients>
+	<recipeUsers>
+      <li>ManualGrinder</li>
+      <li>ElectricGrinder</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+					<thingDefs>
+						<li>ST_Blackium</li>
+					</thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+	  <li>
+        <filter>
+					<thingDefs>
+						<li>Steel</li>
+						<li MayRequire="Mlie.AncientRimCore">AR_Iron</li>
+					</thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>ST_Blackium</li>
+						<li>Steel</li>
+						<li MayRequire="Mlie.AncientRimCore">AR_Iron</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+	<products>
+		<ST_BlackMixture>30</ST_BlackMixture>
+	</products>
+  </RecipeDef>
+
+ <RecipeDef>
+    <defName>MakeMithrilMix</defName>
+    <label>Make Mithrilite Mixture</label>
+    <description>Grind silver and iron into a fine mixture.</description>    
+	<jobString>Grind silver and iron into a fine mixture.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Interact_Drill</soundWorking>
+	<researchPrerequisite>alloyCrafting</researchPrerequisite>
+	<allowMixingIngredients>true</allowMixingIngredients>
+	<recipeUsers>
+      <li>ManualGrinder</li>
+      <li>ElectricGrinder</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+				<thingDefs>
+					<li>Steel</li>
+					<li MayRequire="Mlie.AncientRimCore">AR_Iron</li>
+				</thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+	  <li>
+        <filter>
+				<thingDefs>
+					<li>Silver</li>
+				</thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+				<thingDefs>
+					<li>Steel</li>
+					<li MayRequire="Mlie.AncientRimCore">AR_Iron</li>
+					<li>Silver</li>
+				</thingDefs>
+    </fixedIngredientFilter>
+	<products>
+		<ST_MithrilMixture>30</ST_MithrilMixture>
+	</products>
+  </RecipeDef>
+
+ <RecipeDef>
+    <defName>MakeAdamantMix</defName>
+    <label>Make Mordor Mixture</label>
+    <description>Grind Mordor Bricks, jade, and either iron or tin into a fine mixture.</description>    
+	<jobString>Grinding ingredients into Mordor Mixtures.</jobString>
+    <workAmount>900</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Interact_Drill</soundWorking>
+	<researchPrerequisite>alloyCrafting</researchPrerequisite>
+	<allowMixingIngredients>true</allowMixingIngredients>
+	<recipeUsers>
+      <li>ManualGrinder</li>
+      <li>ElectricGrinder</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+					<thingDefs>
+						<li>Mordor_Brick</li>
+					</thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+	  <li>
+        <filter>
+					<thingDefs>
+						<li>Steel</li>
+						<li MayRequire="TSP.Isengriff.BronzeCopperTin_Split">ST_Tin</li>
+						<li MayRequire="Mlie.AncientRimCore">AR_Iron</li>
+					</thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+	  <li>
+        <filter>
+					<thingDefs>
+						<li>Jade</li>
+					</thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+					<thingDefs>
+						<li>Mordor_Brick</li>
+						<li MayRequire="TSP.Isengriff.BronzeCopperTin_Split">ST_Tin</li>
+						<li MayRequire="Mlie.AncientRimCore">AR_Iron</li>
+						<li>Steel</li>
+						<li>Jade</li>
+					</thingDefs>
+    </fixedIngredientFilter>
+	<products>
+		<ST_AdamantiumMixture>40</ST_AdamantiumMixture>
+	</products>
+  </RecipeDef>
+
+ <RecipeDef>
+    <defName>MakeRuniteMix</defName>
+    <label>Make Runite Mixture</label>
+    <description>Grind stones, gold, iron, and Mordor Bricks into a fine mixture.</description>    
+	<jobString>Grind arcaellum and steel into a fine mixture.</jobString>
+    <workAmount>900</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Interact_Drill</soundWorking>
+	<researchPrerequisite>alloyCrafting</researchPrerequisite>
+	<allowMixingIngredients>true</allowMixingIngredients>
+	<recipeUsers>
+      <li>ManualGrinder</li>
+      <li>ElectricGrinder</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li MayRequire="Torann.ARimworldOfMagic">TM_Arcalleum</li>
+				<li>Mordor_Brick</li>
+			</thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+	  <li>
+        <filter>
+			<thingDefs>
+				<li>Steel</li>
+				<li MayRequire="Mlie.AncientRimCore">AR_Iron</li>
+			</thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  <li>
+		<filter>
+			<thingDefs>
+				<li>Gold</li>
+			</thingDefs>
+		</filter>
+		<count>5</count>
+	  </li>
+	  <li>
+			<filter>
+				<categories>
+					<li>StoneBlocks</li>
+				</categories>
+			</filter>
+			<count>25</count>
+	  </li>
+    </ingredients>
+    <fixedIngredientFilter>
+		<categories>
+			<li>StoneBlocks</li>
+		</categories>
+		<thingDefs>
+			<li MayRequire="Torann.ARimworldOfMagic">TM_Arcalleum</li>
+			<li>Mordor_Brick</li>
+			<li>Gold</li>
+			<li>Steel</li>
+			<li MayRequire="Mlie.AncientRimCore">AR_Iron</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+	<products>
+		<ST_RuniteMixture>60</ST_RuniteMixture>
+	</products>
+  </RecipeDef>
+  
+ <RecipeDef>
+    <defName>MakeDragoniteMix</defName>
+    <label>Make Peeled Mixture</label>
+    <description>Grind Peeled Ones into a fine mixture.</description>    
+	<jobString>Punishing the Peeled Ones</jobString>
+    <workAmount>200</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Interact_Drill</soundWorking>
+	<researchPrerequisite>alloyCrafting</researchPrerequisite>
+	<recipeUsers>
+      <li>ManualGrinder</li>
+      <li>ElectricGrinder</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li MayRequire="Torann.ARimworldOfMagic">TM_Demonscale</li>
+				<li>Meat_PeeledBeast</li>
+				<!--
+				<li>Corpse_PeeledClown</li>
+				<li>Corpse_PeeledBeast</li>
+				-->
+			</thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+		<thingDefs>
+			<li MayRequire="Torann.ARimworldOfMagic">TM_Demonscale</li>
+			<li>Meat_PeeledBeast</li>
+			<!--
+			<li>Corpse_PeeledClown</li>
+			<li>Corpse_PeeledBeast</li>
+			-->
+		</thingDefs>
+    </fixedIngredientFilter>
+	<products>
+		<ST_DragoniteMixture>80</ST_DragoniteMixture>
+	</products>
+  </RecipeDef>
+</Defs>

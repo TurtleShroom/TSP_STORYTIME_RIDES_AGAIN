@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseWeapon">
+    <defName>FatManAngreal</defName>
+    <label>Fat Man statuette</label>
+    <description>A statuette of a fat human. It makes its user feel more powerful. \n \n A Fat Man statuette has a magically infused Persona that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the weapon's persona will refuse to be wielded by anyone else.</description>
+    <graphicData>
+      <texPath>Things/Items/FatMan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <Mass>20</Mass>
+	  <MarketValue>3000</MarketValue>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <equippedStatOffsets>
+      <PsychicSensitivityOffset>0.50</PsychicSensitivityOffset>
+      <PsychicEntropyRecoveryRate>0.083</PsychicEntropyRecoveryRate>
+    </equippedStatOffsets>
+	<weaponTags>
+		<li>Bladelink</li>
+	</weaponTags>
+    <weaponClasses>
+      <li>Melee</li>
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+	<comps>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+		<li Class="CompProperties_BladelinkWeapon">
+			<biocodeOnEquip>true</biocodeOnEquip>
+		</li>
+		<li Class="CompProperties_GeneratedName">
+			<nameMaker>NamerWeaponBladelink</nameMaker>
+		</li>
+		<li Class="TorannMagic.Enchantment.CompProperties_EnchantedItem" MayRequire="Torann.ARimworldOfMagic">
+		  <hasEnchantment MayRequire="Torann.ARimworldOfMagic">true</hasEnchantment>
+		  <arcaneDmg MayRequire="Torann.ARimworldOfMagic">0.5</arcaneDmg>
+		  <arcaneDmgTier MayRequire="Torann.ARimworldOfMagic">Crafted</arcaneDmgTier>	
+		</li>
+		<li>
+		  <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+		</li>
+	</comps>
+	<tools>
+      <li>
+        <label>bust</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>27</power>
+        <cooldownTime>1.9</cooldownTime>
+		<armorPenetration>0</armorPenetration>
+      </li>
+	  <li>
+		<label>bust</label>
+		<capacities>
+			<li>TSP_ST_Thump</li>
+		</capacities>
+		<power>13</power>
+		<cooldownTime>0.2</cooldownTime>
+		<armorPenetration>0.1</armorPenetration>
+		<chanceFactor>0.5</chanceFactor>
+	  </li>
+	  <li>
+		<label>bust</label>
+		<capacities>
+			<li>Demolish</li>
+		</capacities>
+		<power>13</power>
+		<cooldownTime>0.2</cooldownTime>
+		<armorPenetration>0.2</armorPenetration>
+		<chanceFactor>0.5</chanceFactor>
+	  </li>
+    </tools>
+    <thingCategories>
+		<li>WeaponsMeleeBladelink</li>
+    </thingCategories>
+    <thingSetMakerTags>
+		<li>WeaponBladelink</li>
+    </thingSetMakerTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeapon">
+    <defName>Callandor</defName>
+    <label>Callandor Rod</label>
+    <description>It is said that this persona weapon is not a sword, but it certainly looks like one. It is in fact capable of firing projectiles, despite its appearance, and is useless as a melee weapon. \n \n A Callandor Rod has a magically infused persona that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the rod's persona will refuse to be wielded by anyone else.</description>
+    <graphicData>
+      <texPath>Things/Items/callandor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <Mass>1</Mass>
+	  <MarketValue>10000</MarketValue>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.6</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedAngleOffset>-270</equippedAngleOffset>
+    <equippedStatOffsets>
+      <PsychicSensitivityOffset>0.8</PsychicSensitivityOffset>
+      <PsychicEntropyRecoveryRate>0.095</PsychicEntropyRecoveryRate>
+    </equippedStatOffsets>
+	<weaponTags>
+		<li>Bladelink</li>
+	</weaponTags>
+	<comps>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+		<li Class="CompProperties_BladelinkWeapon">
+			<biocodeOnEquip>true</biocodeOnEquip>
+		</li>
+		<li Class="CompProperties_GeneratedName">
+			<nameMaker>NamerWeaponBladelink</nameMaker>
+		</li>
+		<li Class="TorannMagic.Enchantment.CompProperties_EnchantedItem" MayRequire="Torann.ARimworldOfMagic" Inherit="False">
+		  <hasEnchantment MayRequire="Torann.ARimworldOfMagic" Inherit="False">true</hasEnchantment>
+		  <arcaneDmg MayRequire="Torann.ARimworldOfMagic" Inherit="False">1.00</arcaneDmg>
+		  <arcaneDmgTier MayRequire="Torann.ARimworldOfMagic" Inherit="False">Crafted</arcaneDmgTier>	
+		</li>
+	</comps>
+    <thingCategories>
+      <li>WeaponsMeleeBladelink</li>
+    </thingCategories>
+    <thingSetMakerTags>
+      <li>WeaponBladelink</li>
+    </thingSetMakerTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+	  <li>ShortShots</li>
+    </weaponClasses>
+	<tools>
+      <li>
+        <label>not a sword</label>
+        <capacities>
+			<li>Blunt</li>
+			<li>TSP_ST_Thump</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>0.9</cooldownTime>
+		<armorPenetration>0</armorPenetration>
+      </li>
+    </tools>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThumpCannon</defaultProjectile>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <forcedMissRadius>0.4</forcedMissRadius>
+        <warmupTime>0.3</warmupTime>
+        <range>15.9</range>
+        <targetParams>
+			<canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>Explosion_Thump</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+        <noiseRadius>17</noiseRadius>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</Defs>

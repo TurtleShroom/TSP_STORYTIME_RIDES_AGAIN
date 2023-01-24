@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Name="ApparelGnomeBase" ParentName="ApparelBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+	  <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+		<li>CraftingSpot</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+	  <!--
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+      </defaultIngredientFilter>
+	  -->
+    </recipeMaker>
+  </ThingDef>
+ 
+    <ThingDef ParentName="ApparelGnomeBase">
+    <defName>GnomeHat</defName>
+    <label>gnome hat</label>
+    <description>Stylish, by gnome child standards.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/GnomeHat/GnomeHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <statBases>
+		<MarketValue>4</MarketValue>
+		<WorkToMake>1500</WorkToMake>
+		<MaxHitPoints>200</MaxHitPoints>
+		<Mass>4</Mass>
+		<Flammability>0.6</Flammability>
+		<Insulation_Cold>19</Insulation_Cold>
+		<Insulation_Heat>13</Insulation_Heat>
+		<EquipDelay>5</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>Headgear</li>
+    </thingCategories>
+    <costList>
+      <Gnome_Cloth>20</Gnome_Cloth>
+    </costList>
+    <apparel>
+		<canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth> <!-- STOP SPAWNING THIS ON EVERYONE!! -->
+		<countsAsClothingForNudity>true</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags Inherit="False">
+        <li>ST_GnomeClothing</li>
+		<li>GnomePeasant</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+		<li>Slave</li>
+      </defaultOutfitTags>
+	  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/GnomeHat/GnomeHat</wornGraphicPath>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <only>(69,193,69)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelGnomeBase">
+    <defName>GnomeGoggles</defName>
+    <label>gnome goggles</label>
+    <description>Stylish, by a gnome child's standards.</description>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/GnomeGoggles/GnomeGoggles</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <statBases>
+		<MarketValue>4</MarketValue>
+		<WorkToMake>1500</WorkToMake>
+		<MaxHitPoints>200</MaxHitPoints>
+		<Mass>0.001</Mass>
+		<Flammability>0</Flammability>
+		<Insulation_Cold>0</Insulation_Cold>
+		<Insulation_Heat>0</Insulation_Heat>
+		<EquipDelay>5</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>Headgear</li>
+    </thingCategories>
+    <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
+    <costStuffCount>15</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      
+      <!-- Support for Mod Stuff -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+    </stuffCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Eyes</li>
+      </bodyPartGroups>
+      <layers>
+        <li>EyeCover</li>
+      </layers>
+      <tags Inherit="False">
+        <li>ST_GnomeClothing</li>
+		<li>GnomePeasant</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+		<li>Soldier</li>
+		<li>Slave</li>
+      </defaultOutfitTags>
+	  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/GnomeGoggles/GnomeGoggles</wornGraphicPath>
+	  <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+		<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+		<countsAsClothingForNudity>false</countsAsClothingForNudity>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <only>(69,193,69)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelGnomeBase">
+    <defName>GnomeShirt</defName>
+    <label>gnome shirt</label>
+    <description>The ultimate in gnome design, now in green.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <statBases>
+		<MarketValue>50</MarketValue>
+		<WorkToMake>500</WorkToMake>
+		<MaxHitPoints>200</MaxHitPoints>
+		<Mass>0.5</Mass>
+		<Flammability>0.6</Flammability>
+		<Insulation_Cold>19</Insulation_Cold>
+		<Insulation_Heat>1</Insulation_Heat>
+		<EquipDelay>5</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <costList>
+      <Gnome_Cloth>50</Gnome_Cloth>
+    </costList>
+    <apparel>
+      <bodyPartGroups>        
+	    <li>Torso</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags Inherit="False">
+        <li>ST_GnomeClothing</li>
+		<li>GnomePeasant</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+		<li>Soldier</li>
+		<li>Slave</li>
+      </defaultOutfitTags>
+	  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</wornGraphicPath>
+		<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <only>(69,193,69)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelGnomeBase">
+    <defName>GnomePants</defName>
+    <label>gnome pants</label>
+    <description>Pants that were made by gnomes with a thing for green.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Pants/Pants</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <statBases>
+		<MarketValue>50</MarketValue>
+		<WorkToMake>500</WorkToMake>
+		<MaxHitPoints>200</MaxHitPoints>
+		<Mass>0.5</Mass>
+		<Flammability>0.6</Flammability>
+		<Insulation_Cold>19</Insulation_Cold>
+		<Insulation_Heat>4</Insulation_Heat>
+		<EquipDelay>5</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <costList>
+      <Gnome_Cloth>40</Gnome_Cloth>
+    </costList>
+    <apparel>
+      <bodyPartGroups>        
+	    <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags Inherit="False">
+        <li>ST_GnomeClothing</li>
+		<li>GnomePeasant</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+		<li>Soldier</li>
+		<li>Slave</li>
+      </defaultOutfitTags>
+		<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <only>(69,193,69)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+</Defs>

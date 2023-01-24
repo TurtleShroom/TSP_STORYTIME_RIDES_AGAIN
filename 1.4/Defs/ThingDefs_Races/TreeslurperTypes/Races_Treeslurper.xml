@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Treeslurper</defName>
+    <label>treeslurper</label>
+    <description>Treeslurpers are descendents of bio-engineered elephants, bred to consume living trees and plants for the purpose of clearing land for construction. They are approximately the size of a bear. As their name suggests, their favorite food is trees of any kind. Once they escaped containment, they became an invasive species. If you encounter wild Treeslurpers, be sure to kill them or tame them before they destroy the arboreal ecoystem.</description>
+
+    <statBases>
+      <MoveSpeed>1.6</MoveSpeed>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <MarketValue>300</MarketValue>
+	  <MeatAmount>100</MeatAmount>
+    </statBases>
+
+    <tools>
+      <li>
+		<label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>left foot</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right foot</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+	  <wildBiomes>
+			<BorealForest>0.02</BorealForest>
+			<ColdBog>0.001</ColdBog>
+			<TemperateSwamp>0.001</TemperateSwamp>
+			<TropicalSwamp>0.001</TropicalSwamp>
+			<TemperateForest>0.03</TemperateForest>
+			<TropicalRainforest>0.06</TropicalRainforest>
+			
+			<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.06</AB_FeraliskInfestedJungle>
+
+			<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.02</AB_MycoticJungle>
+
+			<AB_OcularForest MayRequire="sarg.alphabiomes">0.05</AB_OcularForest>
+
+			<AB_TarPits MayRequire="sarg.alphabiomes">0.01</AB_TarPits>
+			
+			<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.09</AB_MiasmicMangrove>
+		
+			<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.05</AB_IdyllicMeadows>
+
+			<!-- ___________________ -->
+
+			<!-- Mlie.AdvancedBiomes -->
+			<!-- ADVANCED BIOMES -->
+
+			<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.06</PoisonForest>
+
+			<Wetland MayRequire="Mlie.AdvancedBiomes">0.05</Wetland>
+
+
+			<!-- ____________________ -->
+
+			<!-- zylle.MoreVanillaBiomes -->
+			<!-- More Vanilla Biomes -->
+
+			<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_AlpineMeadow>
+
+			<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_CloudForest>
+
+			<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_Marsh>
+
+
+			<!-- ___________________ -->
+
+			<!-- Mlie.NaturesPrettySweet -->
+			<!-- NATURE IS PRETTY SWEET -->
+
+			<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.2</TKKN_RedwoodForest>
+
+
+			<!-- ___________________ -->
+
+			<!-- Heis.Edo.Themed.Expansion -->
+			<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+			<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.1</HSBambooForest>
+			
+			
+			<!-- _________________ -->
+			
+			<!-- BiomesTeam.BiomesIslands -->
+			<!-- BIOMES ISLANDS -->
+			
+			<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_Atoll>
+			
+			<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_BorealIsland>
+			
+			<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_DesertIsland>
+			
+			<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_DesertArchipelago>
+			
+			<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TemperateIsland>
+			
+			<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TemperateArchipelago>
+			
+			<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TropicalIsland>
+			
+			<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.005</BiomesIslands_TropicalArchipelago>
+			
+			<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_TundraIsland>
+			
+			
+			
+			<!-- ___________________ -->
+			
+			<!-- reel.FrozenForest -->
+			<!-- WINTER TAIGA -->
+			
+			<WinterTaiga MayRequire="reel.FrozenForest">0.06</WinterTaiga>
+			
+			
+			
+			<!-- __________________ -->
+			
+			<!-- SirMashedPotato.MorrowRim -->
+			<!-- "MORROWIND" MOD -->
+			
+			<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0</MorrowRim_Ashlands>
+			
+			<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0</MorrowRim_BlightedAshlands>
+			
+			<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.001</MorrowRim_AshSwamp>
+			
+			<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0</MorrowRim_VolcanicAshlands>
+			
+			
+			
+			<!-- ___________________ -->
+			
+			<!-- pphhyy.gulden -->
+			<!-- FOREST OF GOLD -->
+			
+			<TemperateGuldenForest MayRequire="pphhyy.gulden">0.08</TemperateGuldenForest>
+			
+			<LotRE_MallornForest MayRequire="lordoftherims.elves">0.08</LotRE_MallornForest>
+			
+			
+			<!-- ___________________ -->
+			
+			<!-- deemainiac.securecontainrimworld -->
+			<!-- SCP FOUNDATION -->
+			
+			<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0</SCR_SCP610Biome>
+	  </wildBiomes>
+      <body>TSP_ST_Treeslurper_Body</body>
+      <herdAnimal>true</herdAnimal>
+      <baseBodySize>1.2</baseBodySize>
+      <baseHungerRate>0.5</baseHungerRate>
+      <baseHealthScale>2</baseHealthScale>
+      <foodType>DendrovoreAnimal, Tree, Plant, Kibble</foodType>
+	  <useMeatFrom>Elephant</useMeatFrom>
+      <leatherDef>Leather_Elephant</leatherDef>
+      <wildness>0.5</wildness>
+      <trainability>Intermediate</trainability>
+      <gestationPeriodDays>30</gestationPeriodDays>
+      <lifeExpectancy>20</lifeExpectancy>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.45</minAge>
+          <soundWounded>Pawn_Elephant_Injured</soundWounded>
+          <soundDeath>Pawn_Elephant_Dead</soundDeath>
+          <soundCall>Pawn_Elephant_Call</soundCall>
+          <soundAngry>Pawn_Elephant_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalExotic</li>
+    </tradeTags>
+	<receivesSignals>true</receivesSignals>
+    <comps>
+      <li Class="CompProperties_CanBeDormant" />
+      <li Class="CompProperties_WakeUpDormant">
+        <wakeUpOnDamage>true</wakeUpOnDamage>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Treeslurper</defName>
+    <label>treeslurper</label>
+    <race>Treeslurper</race>
+    <combatPower>90</combatPower>
+    <ecoSystemWeight>2.2</ecoSystemWeight>
+    <alternateGraphicChance>0.80</alternateGraphicChance>
+    <alternateGraphics>
+      <li><color>(52,52,52)</color></li>
+      <li><color>(124, 115, 81)</color></li>
+      <li><color>(92, 64, 51)</color></li> 
+      <li><color>(150, 121, 105)</color></li>
+    </alternateGraphics>
+    <lifeStages>
+      <li>
+        <label>calf</label>
+        <labelPlural>calves</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Treeslurper/Treeslurper</texPath>
+          <drawSize>1.6</drawSize>
+          <color>(210,180,140)</color>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Elephant/Dessicated_Elephant</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Treeslurper/Treeslurper</texPath>
+          <drawSize>2.5</drawSize>
+          <color>(210,180,140)</color>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Elephant/Dessicated_Elephant</texPath>
+          <drawSize>2.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Treeslurper/Treeslurper</texPath>
+          <drawSize>3.3</drawSize>
+          <color>(210,180,140)</color>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Elephant/Dessicated_Elephant</texPath>
+          <drawSize>3.15</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+ 
+</Defs>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>ST_ProcessedCheese</defName>
+    <label>Old Earth processed cheese</label>
+    <description>''Ah, American cheese. The highest form of cheese, you know.'' \n \n After the Industrial Revolution brought about mass manufacturing, it was only a matter of time before the difficult, slow process of creating cheese would be automated. \n Enter processed cheese, better known as American Cheese after the ancient Old Earthen nation where it was invented, over three thousand years ago. Despite consisting of natural products, in contrast to ''true'' cheese, processed cheese is actually only one-half to two-thirds actual cheese. The rest of its ingredients consist of unfermented dairy products and proteins that coagulate alongside the cheese. It tasted enough like cheese to overtake proper cheesemaking. As with all cheese, it takes processed cheese far longer to rot than raw dairy products.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Cheese/ST_Cheese</texPath>
+	  <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+	<socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>3.2</MarketValue>
+      <Mass>0.0045</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.06</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>60</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+		<preferability>RawTasty</preferability>
+		<foodType>AnimalProduct</foodType>
+		<tableDesired>false</tableDesired>
+		<maxNumToIngestAtOnce>7</maxNumToIngestAtOnce>
+		<ingestEffect>EatMeat</ingestEffect>
+		<ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <thingCategories>
+	  <li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+	<tradeTags>
+		<li>Cheese</li>
+		<li>GnomeVegetarian</li>
+	</tradeTags>
+  </ThingDef>
+</Defs>
