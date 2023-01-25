@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-
 <Defs>
-
 <!-- Rarity Hexcodes -->
 
 <!-- Common = Light Blue = #9EF2FF -->
@@ -21,14 +19,36 @@
     <degreeDatas>
       <li>
         <label>Bug Meat Enthusiast</label>
-        <description>{PAWN_nameDef} loves the taste of bug meat, a fact which normal people find vile.</description>
+        <description>{PAWN_nameDef} loves the taste of insect meat, especially when raw, and will actively seek it out whenever possible.</description>
         <disallowedThoughtsFromIngestion>
           <li>
             <meatSource>Insect</meatSource>
             <thoughts>
-              <li>AteRawFood</li>
-              <li>AteInsectMeatDirect</li>
-              <li>AteInsectMeatAsIngredient</li>
+				<li>AteRawFood</li>
+				<li>AteInsectMeatDirect</li>
+				<li>AteInsectMeatAsIngredient</li>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeat_Sacrilegious</li>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeatAsIngredient_Sacrilegious</li>
+            </thoughts>
+          </li>
+          <li>
+            <meatSource>ST_Worm</meatSource>
+            <thoughts>
+				<li>AteRawFood</li>
+				<li>AteInsectMeatDirect</li>
+				<li>AteInsectMeatAsIngredient</li>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeat_Sacrilegious</li>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeatAsIngredient_Sacrilegious</li>
+            </thoughts>
+          </li>
+          <li>
+            <meatSource>Meat_JudasFrog</meatSource>
+            <thoughts>
+				<li>AteRawFood</li>
+				<li>AteInsectMeatDirect</li>
+				<li>AteInsectMeatAsIngredient</li>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeat_Sacrilegious</li>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeatAsIngredient_Sacrilegious</li>
             </thoughts>
           </li>
         </disallowedThoughtsFromIngestion>
@@ -46,14 +66,4 @@
       </li>
     </degreeDatas>
   </TraitDef>
-
-
-
-
-
-
-
-
-
-	
 </Defs>

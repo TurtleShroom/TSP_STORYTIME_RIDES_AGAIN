@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="MealBase">
+		<defName>ST_LemonBar</defName>
+		<label>lemon bar</label>
+		<description>A powerful artifact</description>
+		<graphicData>
+		  <texPath>Things/Items/Resources/LemonBar</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.9</DeteriorationRate>
+		  <MarketValue>13</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>700</WorkToMake>
+		  <Nutrition>0.9</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>MealSimple</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>HedLemonBar</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+		  <li Class="CompProperties_Rottable">
+			<daysToRotStart>5</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		  </li>
+		</comps>
+	</ThingDef>
+</Defs>

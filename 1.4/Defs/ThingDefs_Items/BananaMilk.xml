@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>Banana_Milk</defName>
+    <label>banana milk</label>
+    <description>Don't ask how it's possible.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/MilkTypes/BananaMilk</texPath>
+	  <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>4</MarketValue>
+      <Mass>0.045</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Nutrition>1</Nutrition>
+    </statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+			</li>
+		</comps>
+    <ingestible>
+      <preferability>MealFine</preferability>
+      <foodType>Fluid, VegetableOrFruit, VegetarianAnimal, VegetarianRoughAnimal, Seed, Plant, Kibble</foodType>
+	  <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HedSpecialMilk</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <thingCategories>
+		<li>Meals</li>
+		<li>PlantMatter</li>
+		<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+    </thingCategories>
+    <allowedArchonexusCount>800</allowedArchonexusCount>
+  </ThingDef>
+  
+</Defs>
