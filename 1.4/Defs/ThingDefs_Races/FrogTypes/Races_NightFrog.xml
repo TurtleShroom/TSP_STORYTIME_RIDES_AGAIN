@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-  
-  <ThingDef ParentName="BaseBullet">
-    <defName>ParalyzingLick</defName>
-    <label>lick</label>
-    <graphicData>
-      <texPath>Projectiles/NeurotoxinLick</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>ParalyzingLick</damageDef>
-      <damageAmountBase>10</damageAmountBase>
-      <speed>10</speed>
-    </projectile>
-  </ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>ParalyzingLick</defName>
+		<label>lick</label>
+		<graphicData>
+			<texPath>Projectiles/NeurotoxinLick</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>ParalyzingLick</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<speed>10</speed>
+		</projectile>
+	</ThingDef>
 
  
   <ThingDef ParentName="AnimalThingBase">
     <defName>NightFrog</defName>
     <label>Night Frog</label>
-    <description>These black frogs haunt the night, hunting their prey by licking them with their venomous tongues. Their tongues secrete a lethal venom that paralyzes their prey and leaves them helpless. Alone among all known species of frog, these creatures are the only frogs to be purely carnivorous, and have been known to hunt men.</description>
+    <description>These black frogs haunt the night, hunting their prey by licking them with their venomous tongues. Their tongues secrete a lethal venom that paralyzes their prey and leaves them helpless. Alone among all known species of frog, these creatures are the only frogs to be obligate carnovores, and have been known to hunt men.</description>
     <statBases>
       <MoveSpeed>6.0</MoveSpeed>
       <MarketValue>300</MarketValue>
@@ -32,13 +32,13 @@
       <ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
     </statBases>
 	<comps>
-	  <li Class="CompProperties_EggLayer">
-        <eggUnfertilizedDef>NightFrogEggUnfertilized</eggUnfertilizedDef>
-        <eggFertilizedDef>NightFrogEggFertilized</eggFertilizedDef>
-        <eggFertilizationCountMax>1</eggFertilizationCountMax>
-        <eggLayIntervalDays>15</eggLayIntervalDays>
-        <eggCountRange>1</eggCountRange>
-      </li>
+		<li Class="CompProperties_EggLayer">
+			<eggUnfertilizedDef>NightFrogEggUnfertilized</eggUnfertilizedDef>
+			<eggFertilizedDef>NightFrogEggFertilized</eggFertilizedDef>
+			<eggFertilizationCountMax>1</eggFertilizationCountMax>
+			<eggLayIntervalDays>15</eggLayIntervalDays>
+			<eggCountRange>1</eggCountRange>
+		</li>
 		<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
 			<resourceDef>ST_NightFrog_Venom</resourceDef>
 			<gatheringIntervalDays>4</gatheringIntervalDays>
@@ -120,18 +120,18 @@
       <baseBodySize>1.25</baseBodySize>
 	  <predator>true</predator>
 	  <canBePredatorPrey>false</canBePredatorPrey> <!-- In RL, only one creature- a type of snake -can actually eat a poison dart frog. Given the extreme venom in a Night Frog, the same will apply here. NO ONE is going to fight this sucker in melee. -->
-      <maxPreyBodySize>5</maxPreyBodySize>
+      <maxPreyBodySize>6</maxPreyBodySize>
       <baseHealthScale>1.5</baseHealthScale>
 	  <manhunterOnDamageChance>0.85</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.15</manhunterOnTameFailChance>
       <baseHungerRate>1</baseHungerRate>
-      <foodType>CarnivoreAnimal, CarnivoreAnimalStrict, Corpse,</foodType>
+      <foodType>CarnivoreAnimal, CarnivoreAnimalStrict, Corpse, Kibble</foodType>
       <leatherDef>Leather_NightFrog</leatherDef>
-      <wildness>0.65</wildness>
+      <wildness>0.8</wildness>
       <trainability>Advanced</trainability>
       <useMeatFrom>ST_BullFrog</useMeatFrom>
-      <petness>0.4</petness>
-      <lifeExpectancy>16</lifeExpectancy>
+      <petness>0.1</petness>
+      <lifeExpectancy>34</lifeExpectancy>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -182,12 +182,11 @@
 	</modExtensions>
   </ThingDef>
   
-  
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>NightFrog</defName>
     <label>Night Frog</label>
     <race>NightFrog</race>
-    <combatPower>85</combatPower>
+    <combatPower>120</combatPower>
     <ecoSystemWeight>0</ecoSystemWeight>
     <lifeStages>
       <li>
