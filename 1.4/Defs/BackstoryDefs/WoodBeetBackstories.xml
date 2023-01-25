@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
   <AlienRace.AlienBackstoryDef Name="BeetBackstories" Abstract="True">
-    <bodyTypeMale>Male</bodyTypeMale>
+	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+    <bodyTypeMale>Hulk</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
 	<spawnCategories>
       <li>WoodBeetBackstory</li>
@@ -98,11 +100,20 @@
 	<spawnCategories>
 		<li>Uncommon</li>
 	</spawnCategories>
+	<relationSettings>
+		<relationChanceModifierLover>0</relationChanceModifierLover>
+		<relationChanceModifierFiance>0</relationChanceModifierFiance>
+		<relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierChild>0</relationChanceModifierChild>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="BeetBackstories">
     <defName>ParentedChildWoodBeet</defName>
     <title>Loved Beet</title>
+	<titleShort>good kid</titleShort>
     <baseDesc>[PAWN_nameDef] was one of the rare Wood Beets whose parents actually cared enough to raise their children. Because of this, [PAWN_pronoun] had a stable, functional family life.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -397,6 +408,7 @@
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef Name="PecanJoeBackstories" Abstract="True">
+	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
     <bodyTypeMale>Male</bodyTypeMale>
 	<bodyTypeFemale>Female</bodyTypeFemale>
 	<spawnCategories Inherit="False">
@@ -406,8 +418,9 @@
   
   <AlienRace.AlienBackstoryDef ParentName="PecanJoeBackstories">
     <defName>PecanJoeWoodBeet</defName>
+	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
     <title>Pecan Joe</title>
-    <baseDesc>[PAWN_nameDef] is a reincarnation of Pecan Joe, the leader of the wood beets and in many ways their god.</baseDesc>
+    <baseDesc>[PAWN_nameDef] is believed to be a reincarnation of a previous Pecan Joe, the leader of the Wood Beets and in many ways their god.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>

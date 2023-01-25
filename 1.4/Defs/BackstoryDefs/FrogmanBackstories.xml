@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AlienRace.AlienBackstoryDef Name="FrogBackstories" Abstract="True">
+	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
 	<spawnCategories>
@@ -10,7 +11,7 @@
   
   <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
     <defName>Frog_Flycatcher</defName>
-    <title>Flycatcher</title>
+    <title>bug catcher</title>
     <baseDesc>[PAWN_nameDef] caught insects along with many others from [PAWN_possessive] tribe, an important task in the community. </baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -136,6 +137,8 @@
 		<li>Scientist</li>
 		<li>Tribal</li>
 		<li>InsectsRelated</li>
+		<li>ESCP_DunmerBackstory</li>
+		<li>ESCP_DunmerTelvanniBackstory</li>
 	</spawnCategories>
 	<requiredWorkTags>
 		<li>Intellectual</li>
@@ -174,7 +177,7 @@
   <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
     <defName>Frog_FrogPoacher</defName>
     <title>Frog Poacher</title> 
-    <baseDesc>[PAWN_nameDef] abandoned [PAWN_possessive] tribe and survived by killing and eating the frogs of the swamp, a horrible crime in Frogman society.</baseDesc>
+    <baseDesc>[PAWN_nameDef] abandoned [PAWN_possessive] tribe and survived by killing and eating the non-sapient frogs of the swamp, a horrible crime in Frogman society.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>

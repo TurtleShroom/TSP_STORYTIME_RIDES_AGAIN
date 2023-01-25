@@ -164,4 +164,24 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="Frug"]</xpath>
+		<value>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_FrogNormal</li>
+					<li>ST_FrogUncommon</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_FrogNormalDesc</li>
+					<li>ST_FrogUncommonDesc</li>
+				</statDescriptions>
+			</li>
+		</value>
+	</Operation>
 </Patch>

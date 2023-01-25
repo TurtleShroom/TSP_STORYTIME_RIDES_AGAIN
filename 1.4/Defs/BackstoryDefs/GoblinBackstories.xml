@@ -1,15 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AlienRace.AlienBackstoryDef Name="GoblinBackstories" Abstract="True">
-	<spawnCategories>
-      <li>GoblinBackstory</li>
-    </spawnCategories>
-  </AlienRace.AlienBackstoryDef>
+	<AlienRace.AlienBackstoryDef Name="GoblinBackstories" Abstract="True">
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<spawnCategories>
+			<li>GoblinBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
   
-  <AlienRace.AlienBackstoryDef Name="GoblinBackstoriesAdult" Abstract="True" ParentName="GoblinBackstories"> 
-	<bodyTypeMale>Male</bodyTypeMale>
-	<bodyTypeFemale>Thin</bodyTypeFemale>
-  </AlienRace.AlienBackstoryDef>
+	<!--
+	<AlienRace.AlienBackstoryDef Name="GoblinBackstoriesAdult" Abstract="True" ParentName="GoblinBackstories"> 
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+	</AlienRace.AlienBackstoryDef>
+	-->
 
 <!-- Childhood -->
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
@@ -109,6 +112,12 @@
         <value>3</value>
 	  </li>
     </skillGains>
+	<forcedTraitsChance>
+      <li>
+        <defName>Greedy</defName>
+		<chance>50</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
@@ -150,9 +159,9 @@
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>ChildGoblin_CookpotKeeper</defName>
-    <title>cookpot keeper</title>
-    <titleShort>cookpot keeper</titleShort>
-    <baseDesc>In [PAWN_nameDef]'s tribe, all food was collectively gathered in a central cookpot where it was rendered into stew and shared amongst the group. As a child, [PAWN_nameDef] was assigned the task of stirring the pot and keeping the flame beneath it going.</baseDesc>
+    <title>cauldron keeper</title>
+    <titleShort>keeper</titleShort>
+    <baseDesc>In [PAWN_nameDef]'s family, all food was collectively gathered in a central cauldron where it was rendered into stew and shared amongst the group. As a child, [PAWN_nameDef] was assigned the task of stirring the pot and keeping the flame beneath it going.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -164,9 +173,9 @@
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>ChildGoblin_CookpotCannibal</defName>
-    <title>cookpot keeper</title>
+    <title>cannibal cauldron keeper</title>
     <titleShort>cannibal</titleShort>
-    <baseDesc>In [PAWN_nameDef]'s tribe, all food was collectively gathered in a central cookpot where it was rendered into stew and shared amongst the group. As a child, [PAWN_nameDef] was assigned the task of stirring the pot and keeping the flame beneath it going. When times were tough, even the flesh of dead enemies would be dumped into the pot. [PAWN_nameDef] found [PAWN_pronoun] quite liked the taste.</baseDesc>
+    <baseDesc>In [PAWN_nameDef]'s family, all food was collectively gathered in a central cauldron where it was rendered into stew and shared amongst the group. As a child, [PAWN_nameDef] was assigned the task of stirring the pot and keeping the flame beneath it going. He would secretly add the flesh of dead raiders into the pot. [PAWN_nameDef] found that [PAWN_pronoun] quite liked the taste, and no one ever caught him doing it.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -199,7 +208,7 @@
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>ChildGoblin_Collector</defName>
     <title>collector</title>
-    <titleShort>collector</titleShort>
+    <titleShort>hoarder</titleShort>
     <baseDesc>[PAWN_nameDef] was constantly making collections of random items [PAWN_pronoun] found near [PAWN_possessive] village. While it was mostly junk, some of these things quite useful and [PAWN_pronoun] learned a lot by messing with them.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -240,7 +249,7 @@
 
 
 <!-- Adulthood -->
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Cave</defName>
     <title>cave goblin</title>
     <titleShort>cave goblin</titleShort>
@@ -259,7 +268,7 @@
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Warrior</defName>
     <title>goblin warrior</title>
     <titleShort>goblin warrior</titleShort>
@@ -278,10 +287,10 @@
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>  
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Tinkerer</defName>
-    <title>tinkerer</title>
-    <titleShort>tinkerer</titleShort>
+    <title>scrap engineer</title>
+    <titleShort>scrapper</titleShort>
     <baseDesc>[PAWN_nameDef] had a fascination for new putting together new devices with whatever materials [PAWN_pronoun] had at hand. While [PAWN_possessive] inventions and constructions were crude, they got the job done.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -300,11 +309,11 @@
     </skillGains>
   </AlienRace.AlienBackstoryDef>  
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Forager</defName>
     <title>forager</title>
     <titleShort>forager</titleShort>
-    <baseDesc>[PAWN_nameDef] was tasked with foraging amongst the bushes gathering food and herbs for [PAWN_possessive] tribe.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was tasked with foraging through flora gathering food and herbs for [PAWN_possessive] tribe.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -312,13 +321,13 @@
         <value>6</value>
 	  </li>
       <li>
-        <key>Alchemy</key>
+        <key>Cooking</key>
         <value>2</value>
 	  </li>
     </skillGains>
-  </AlienRace.AlienBackstoryDef>    
+  </AlienRace.AlienBackstoryDef>
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Poisoner</defName>
     <title>poisoner</title>
     <titleShort>poisoner</titleShort>
@@ -326,13 +335,17 @@
     <slot>Adulthood</slot>
     <skillGains>
       <li>
-        <key>Alchemy</key>
+        <key>Cooking</key>
         <value>6</value>
+	  </li>
+	  <li>
+		<key>Melee</key>
+		<value>1</value>
 	  </li>
     </skillGains>
   </AlienRace.AlienBackstoryDef>     
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Hunter</defName>
     <title>hunter</title>
     <titleShort>hunter</titleShort>
@@ -350,11 +363,11 @@
     </skillGains>
   </AlienRace.AlienBackstoryDef>   
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_DarkSlave</defName>
     <title>slave of the dark lord</title>
     <titleShort>slave</titleShort>
-    <baseDesc>As has been the fate of many goblins over the millenia, [PAWN_nameDef] was for many years a conscript in the armies of some dark lord or another. [PAWN_pronoun] was forced to fight on the front lines as cannon fodder. It was a miracle [PAWN_pronoun] survived.</baseDesc>
+    <baseDesc>As has been the fate of many goblins over the millenia, [PAWN_nameDef] was for many years a conscript in the armies of some dark lord or another. [PAWN_pronoun] was forced to fight on the front lines as cannon fodder. It was a miracle that [PAWN_pronoun] survived.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -370,7 +383,7 @@
     </workDisables>
   </AlienRace.AlienBackstoryDef>  
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_DarkOverseer</defName>
     <title>overseer</title>
     <titleShort>overseer</titleShort>
@@ -396,7 +409,7 @@
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>    
 
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Banker</defName>
     <title>banker</title>
     <titleShort>banker</titleShort>
@@ -420,7 +433,7 @@
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>  
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Weaver</defName>
     <title>weaver</title>
     <titleShort>weaver</titleShort>
@@ -434,22 +447,22 @@
     </skillGains>
   </AlienRace.AlienBackstoryDef>    
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Clown</defName>
     <title>goblin clown</title>
     <titleShort>clown</titleShort>
-    <baseDesc>[PAWN_nameDef] became a clown serving the court of a human king. [PAWN_pronoun] was treated horribly- constantly humiliated and belittled by the courtiers. Eventually [PAWN_pronoun] escaped, but was left with lifelong trauma.</baseDesc>
+    <baseDesc>[PAWN_nameDef] became a clown serving the court of a nobleman. [PAWN_pronoun] was treated horribly- constantly humiliated and belittled by the courtiers. Eventually [PAWN_pronoun] escaped, but was left with lifelong trauma.</baseDesc>
     <slot>Adulthood</slot>
     <workDisables>
         <li>Social</li>
     </workDisables>
   </AlienRace.AlienBackstoryDef>      
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Thief</defName>
     <title>thief</title>
     <titleShort>thief</titleShort>
-    <baseDesc>[PAWN_nameDef] made a living as a thief in a human city. [PAWN_pronoun] was quite crafty, but eventually the heat became too great and [PAWN_pronoun] had to skip town.</baseDesc>
+    <baseDesc>[PAWN_nameDef] made a living as a thief in a city. [PAWN_pronoun] was quite crafty, but eventually the heat became too great and [PAWN_pronoun] had to skip town.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -468,7 +481,7 @@
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>      
   
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Warlord</defName>
     <title>warlord</title>
     <titleShort>warlord</titleShort>
@@ -491,7 +504,7 @@
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>    
 
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_GobbieRights</defName>
     <title>goblin rights activist</title>
     <titleShort>activist</titleShort>
@@ -514,7 +527,7 @@
     </workDisables>
   </AlienRace.AlienBackstoryDef>    
 
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Fanatic</defName>
     <title>fanatical devotee</title>
     <titleShort>fanatic</titleShort>
@@ -542,11 +555,11 @@
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>  
 
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_NightHaunter</defName>
     <title>night haunter</title>
     <titleShort>night haunter</titleShort>
-    <baseDesc>[PAWN_nameDef] lived alone out in the wilds. [PAWN_pronoun] survived by sneaking into the homes of the unsuspecting during the middle of the night, killing them, and eating the bodies. [PAWN_possessive] crimes were infamous and [PAWN_pronoun] quickly gained the nickname 'the Night Haunter'</baseDesc>
+    <baseDesc>[PAWN_nameDef] lived alone out in the wilds. [PAWN_pronoun] survived by sneaking into the homes of the unsuspecting during the middle of the night, killing them, and eating the bodies. [PAWN_possessive] crimes were infamous and [PAWN_pronoun] quickly gained the nickname 'the Night Haunter'.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -567,7 +580,7 @@
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>  
 
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Deserter</defName>
     <title>deserter</title>
     <titleShort>deserter</titleShort>
@@ -584,7 +597,7 @@
     </workDisables>
   </AlienRace.AlienBackstoryDef>  
 
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_GreatGoblin</defName>
     <title>great goblin</title>
     <titleShort>great goblin</titleShort>
@@ -615,7 +628,7 @@
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>  
 
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_TribalHealer</defName>
     <title>tribal healer</title>
     <titleShort>healer</titleShort>
@@ -623,8 +636,8 @@
     <slot>Adulthood</slot>
     <skillGains>
       <li>
-        <key>Alchemy</key>
-        <value>6</value>
+        <key>Cooking</key>
+        <value>2</value>
 	  </li>
       <li>
         <key>Medicine</key>
@@ -637,7 +650,7 @@
     </skillGains>
   </AlienRace.AlienBackstoryDef>  
 
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_CityGoblin</defName>
     <title>city goblin</title>
     <titleShort>city goblin</titleShort>
@@ -659,28 +672,7 @@
     </skillGains>
   </AlienRace.AlienBackstoryDef>
 
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
-    <defName>Goblin_FlameShaman</defName>
-    <title>shaman of flame</title>
-    <titleShort>shaman</titleShort>
-    <baseDesc>[PAWN_nameDef] was a powerful shaman within [PAWN_possessive] tribe. [PAWN_possessive] powers were associated with the element of fire, an extremely auspicious thing in [PAWN_possessive] culture.</baseDesc>
-    <slot>Adulthood</slot>
-    <maleCommonality>33</maleCommonality>
-    <femaleCommonality>33</femaleCommonality>
-    <skillGains>
-      <li>
-        <key>Social</key>
-        <value>2</value>
-	  </li>
-    </skillGains>
-	<forcedTraitsChance>
-	  <li>
-		<defName>InnerFire</defName>
-      </li>
-    </forcedTraitsChance>
-  </AlienRace.AlienBackstoryDef> 
-
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Weaponsmith</defName>
     <title>weaponsmith</title>
     <titleShort>weaponsmith</titleShort>
@@ -694,7 +686,7 @@
     </skillGains>
   </AlienRace.AlienBackstoryDef> 
 
-  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstoriesAdult">
+  <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_TrophyKeeper</defName>
     <title>trophy-keeper</title>
     <titleShort>trophy-keeper</titleShort>

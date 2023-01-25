@@ -122,4 +122,44 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="Forg_Forg"]</xpath>
+		<value>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_FrogSapient</li>
+					<li>ST_FrogRare</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_FrogSapientDesc</li>
+					<li>ST_FrogRareDesc</li>
+				</statDescriptions>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="Forg_Duo"]</xpath>
+		<value>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_FrogSapient</li>
+					<li>ST_FrogRare</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_FrogSapientDesc</li>
+					<li>ST_FrogRareDesc</li>
+				</statDescriptions>
+			</li>
+		</value>
+	</Operation>
 </Patch>

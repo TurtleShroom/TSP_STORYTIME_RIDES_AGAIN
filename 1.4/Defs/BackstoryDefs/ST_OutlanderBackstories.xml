@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<AlienRace.AlienBackstoryDef>
+	<AlienRace.AlienBackstoryDef Name="STOutlanderBackstories" Abstract="True">
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+	    <spawnCategories>
+			<li>Offworld</li>
+			<li>Outlander</li>
+	    </spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef ParentName="STOutlanderBackstories">
 		<defName>Backstory_SlowBowler</defName>
 		<slot>Adulthood</slot>
 		<title>bowling champion</title>
@@ -34,7 +42,7 @@
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.AlienBackstoryDef>
+	<AlienRace.AlienBackstoryDef ParentName="STOutlanderBackstories">
 		<defName>Backstory_CriminalScum</defName>
 		<slot>Childhood</slot>
 		<title>petty criminal</title>
@@ -75,7 +83,7 @@
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.AlienBackstoryDef>
+	<AlienRace.AlienBackstoryDef ParentName="STOutlanderBackstories">
 		<defName>ST_SmartChild</defName>
 		<slot>Childhood</slot>
 		<title>smart kid</title>
@@ -110,7 +118,7 @@
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 	
-	<AlienRace.AlienBackstoryDef>
+	<AlienRace.AlienBackstoryDef ParentName="STOutlanderBackstories">
 		<defName>ST_FrogFarmer</defName>
 		<slot>Adulthood</slot>
 		<title>frog rancher</title>

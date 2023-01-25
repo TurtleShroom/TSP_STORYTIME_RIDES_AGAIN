@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AlienRace.AlienBackstoryDef Name="JeubBackstories" Abstract="True">
+	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
     <bodyTypeMale>Thin</bodyTypeMale>
     <bodyTypeFemale>Thin</bodyTypeFemale>
 	<spawnCategories>
@@ -10,7 +11,7 @@
   
   <AlienRace.AlienBackstoryDef ParentName="JeubBackstories">
     <defName>Livestock_Jeub</defName>
-    <title>Livestock</title>
+    <title>livestock</title>
     <baseDesc>[PAWN_nameDef]'s parents intended to eat [PAWN_objective] after [PAWN_possessive] birth. Somehow [PAWN_pronoun] was able to slither away before being eaten and grew up alone in the wilds.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -39,12 +40,16 @@
 	<workDisables>
 		<li>Social</li>
 	</workDisables>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="JeubBackstories">
     <defName>Royal_Illegitimate_Jeub</defName>
     <title>Illegitimate Royal</title>
-    <baseDesc>[PAWN_nameDef] was one of the many Jeub illegitimate bastards born to the Snaff of Jeubscalon. [PAWN_pronoun] learned how to survive there, using only [PAWN_possessive] wits.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was one of the many Jeub illegitimate bastards born to the Snaff of his hive. [PAWN_pronoun] learned how to survive there, using only [PAWN_possessive] wits.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -64,12 +69,16 @@
 		<li>Social</li>
 		<li>Violent</li>
 	</requiredWorkTags>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent> 
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="JeubBackstories">
     <defName>Youth_Brigade_Jeub</defName>
     <title>Child Soldier</title>
-    <baseDesc>[PAWN_nameDef] was part of Jeubscalon's crack Child Soldier Division. [PAWN_pronoun] fought in many battles, starting from the age of only two years.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was part of his hive's crack Child Soldier Division. [PAWN_pronoun] fought in many conflicts, charging with the non-sapient Jeubs into battle.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -88,8 +97,8 @@
   
   <AlienRace.AlienBackstoryDef ParentName="JeubBackstories">
     <defName>Raised_Humans_Jeub</defName>
-    <title>Raised By Humans</title>
-    <baseDesc>[PAWN_nameDef] was found abandoned on the border of Jeubscalon by a family of human farmers. For some reason, they took [PAWN_possessive] in and raised [Pawn_possessive] as one of their own.</baseDesc>
+    <title>Raised by Men</title>
+    <baseDesc>[PAWN_nameDef] was found abandoned on the border of his hive's land by a family of human farmers. For some reason, they took [PAWN_possessive] in and raised [Pawn_objective] as one of their own.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -122,6 +131,10 @@
 			<defName>Abrasive</defName>
 		</li>
 	</disallowedTraitsChance>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="JeubBackstories">
@@ -151,6 +164,11 @@
 		<li>Social</li>
 		<li>Violent</li>
 	</requiredWorkTags>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierChild>0</relationChanceModifierChild>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="JeubBackstories">
@@ -191,7 +209,7 @@
   
   <AlienRace.AlienBackstoryDef ParentName="JeubBackstories">
     <defName>Soldier_Jeub</defName>
-    <title>Cannon Fodder</title>
+    <title>cannon fodder</title>
     <baseDesc>[PAWN_nameDef] served in the army of Jeubscalon. Somehow, [PAWN_pronoun] survived while his herd of non-sapient Jeubs were slaughtered.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -326,12 +344,17 @@
 	<requiredWorkTags>
 		<li>Violent</li>
 	</requiredWorkTags>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierChild>0</relationChanceModifierChild>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="JeubBackstories">
     <defName>Pacifist_Jeub</defName>
     <title>Jeub Pacifist</title>
-    <baseDesc>[PAWN_nameDef] saw the horror and violence of his Jeub hive and desired to change it. Unfortunately, [PAWN_pronoun] quickly realized that most the High Jeubs of his hive were inherently violent;  [PAWN_possessive] ambition was pointless.</baseDesc>
+    <baseDesc>[PAWN_nameDef] saw the horror and violence of his Jeub hive and desired to change it. Unfortunately, [PAWN_pronoun] quickly realized that most of the High Jeubs of his hive were inherently violent;  [PAWN_possessive] ambition was pointless.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -344,13 +367,15 @@
       </li>
     </skillGains>
 	<forcedTraitsChanceChance>
-      <li>
-        <defName>NaturalMood</defName>
-		<degree>-2</degree>
-	  </li>
-	  <li>
-		<defName>Kind</defName>
-      </li>
+		<!--
+		<li>
+			<defName>NaturalMood</defName>
+			<degree>-2</degree>
+		</li>
+		-->
+		<li>
+			<defName>Kind</defName>
+		</li>
     </forcedTraitsChanceChance>
 	<workDisables>
       <li>Violent</li>

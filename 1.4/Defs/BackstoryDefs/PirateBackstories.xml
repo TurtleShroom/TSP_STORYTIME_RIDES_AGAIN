@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AlienRace.AlienBackstoryDef Name="PirateBackstories" Abstract="True">
+	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
 	<spawnCategories>
@@ -166,7 +167,7 @@
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
     <defName>ST_PirateCook</defName>
     <title>Pirate Cook</title>
-    <baseDesc>[PAWN_nameDef] was the only chef onboard [PAWN_possessive] pirate spaceship. Most of [PAWN_possessive] time was spent cooking for the crew. [PAWN_pronoun] transferred these skills on land when [PAWN_pronoun] joined some Golden Age pirates.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was the only chef on board [PAWN_possessive] pirate spaceship. Most of [PAWN_possessive] time was spent cooking for the crew. [PAWN_pronoun] transferred these skills on land when [PAWN_pronoun] joined some Golden Age pirates.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -251,7 +252,7 @@
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
     <defName>ST_Marooned</defName>
     <title>Marooned</title>
-    <baseDesc>[PAWN_nameDef] was captain of a pirate spaceship until being overthrown in a mutiny by [PAWN_possessive] first mate. The mutineers proceeded to abandon [PAWN_objective] on some far-flung Rim World, where [PAWN_pronoun] survived for months until a Golden Age pirate chapter rescued [PAWN_objective]. By the time the remaining loyal crewmen took back the ship, [PAWN_nameDef] was presumed dead.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was captain of a pirate spaceship until being overthrown in a mutiny by [PAWN_possessive] first mate. The mutineers proceeded to abandon [PAWN_objective] on some far-flung Rim World, where [PAWN_pronoun] survived for months until a Golden Age pirate chapter rescued [PAWN_objective]. By the time the remaining loyal crewmen took back the spaceship, [PAWN_nameDef] was presumed dead.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -319,6 +320,10 @@
       <li>
 		<key>Medicine</key>
         <value>4</value>
+	  </li>
+	  <li>
+		<key>Plants</key>
+		<value>2</value>
 	  </li>
 	  <li>
 		<key>Cooking</key>
@@ -396,6 +401,7 @@
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
     <defName>ST_NavyTraitor</defName>
     <title>Navy Traitor</title>
+	<titleShort>deserter</titleShort>
     <baseDesc>[PAWN_nameDef] served in a spacefaring navy for a few years before deciding the life wasn't for [PAWN_objective]. [PAWN_pronoun] jumped ship at port and joined up with a space pirate crew. After that, [PAWN_pronoun] headed off at a terrestrial smuggler's port and joined up with a Golden Age crew.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -422,6 +428,7 @@
 	  <li>Pirate</li>
 	  <li>Offworld</li>
 	  <li>Uncommon</li>
+	  <li>ESCP_DunmerBackstory</li>
     </spawnCategories>
     <skillGains>
       <li>
@@ -498,7 +505,7 @@
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
     <defName>ST_Cannoneer</defName>
     <title>Cannoneer</title>
-    <baseDesc>[PAWN_nameDef] was in charge of manning the rail gun cannons on [PAWN_possessive] pirate spaceship. [PAWN_pronoun] was known as quite the marksman. Those skills transferred effortlessly onto the Rim when [PAWN_pronoun] joined a Golden Age pirate chapter after a falling out with [PAWN_possessive] space pirate captain.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was in charge of manning the rail gun cannons on a pirate spaceship. [PAWN_pronoun] was known as quite the marksman. Those skills transferred effortlessly onto the Rim when [PAWN_pronoun] joined a Golden Age pirate chapter after a falling out with [PAWN_possessive] space pirate captain.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -506,23 +513,32 @@
         <value>12</value>
 	  </li>
     </skillGains>
+	<spawnCategories Inherit="False">
+		<li>PirateBackstory</li>
+		<li>Pirate</li>
+		<li>Raider</li>
+		<li>Offworld</li>
+		<li>ImperialFighter</li>
+	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
     <defName>ST_TerrestrialCannoneer</defName>
     <title>Cannoneer</title>
-    <baseDesc>[PAWN_nameDef] was in charge of manning the artillery in the navy of [PAWN_posessive} homeland. [PAWN_pronoun] was known as quite the marksman.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was in charge of manning the artillery in the navy of [PAWN_posessive] homeland. [PAWN_pronoun] was known as quite the marksman.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
 		<key>Shooting</key>
-        <value>5</value>
+        <value>6</value>
 	  </li>
     </skillGains>
 	<spawnCategories>
 		<li>PirateBackstory</li>
-		<li>Pirate</li>
+		<!-- <li>Pirate</li> -->
 		<li>Medieval</li>
+		<li>Hunter</li>
+		<li>Classical</li>
 		<li>ImperialFighter</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>  

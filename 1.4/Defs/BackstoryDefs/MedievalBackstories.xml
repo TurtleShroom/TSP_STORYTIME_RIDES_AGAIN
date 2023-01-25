@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 	<AlienRace.AlienBackstoryDef Name="STMedievalBackstories" Abstract="True">
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
 	    <spawnCategories>
 			<li>Medieval</li>
 	    </spawnCategories>
@@ -71,15 +72,16 @@
     <baseDesc>[PAWN_nameDef] was apprenticed to a local wizard at a young age. [PAWN_pronoun] learned many things during this apprenticeship.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
-      <li>
-        <key>Intellectual</key>
-        <value>3</value>
-	  </li>
+
+		<li>
+			<key>Intellectual</key>
+			<value>3</value>
+		</li>
     </skillGains>
 	<forcedTraitsChance>
         <li MayRequire="Torann.ARimworldOfMagic">
             <defName MayRequire="Torann.ARimworldOfMagic">TM_Gifted</defName>
-            <chance MayRequire="Torann.ARimworldOfMagic">30</chance>
+            <chance MayRequire="Torann.ARimworldOfMagic">50</chance>
         </li>
 	</forcedTraitsChance>
 	<femaleCommonality>0</femaleCommonality>
@@ -87,6 +89,7 @@
 	<spawnCategories>
 		<li>HSAU_BS_MLN_ChildhoodGerman</li>
 		<li>HSAU_BS_MLN_ChildhoodEarth</li>
+		<li>GoblinBackstory</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -112,7 +115,7 @@
     <forcedTraitsChance>
         <li MayRequire="Torann.ARimworldOfMagic">
             <defName MayRequire="Torann.ARimworldOfMagic">TM_Gifted</defName>
-            <chance MayRequire="Torann.ARimworldOfMagic">35</chance>
+            <chance MayRequire="Torann.ARimworldOfMagic">50</chance>
         </li>
     </forcedTraitsChance>
 	<!-- <femaleCommonality>20</femaleCommonality> -->
@@ -120,6 +123,7 @@
 	<spawnCategories>
 		<li>HSAU_BS_MLN_ChildhoodGerman</li>
 		<li>HSAU_BS_MLN_ChildhoodEarth</li>
+		<li>GoblinBackstory</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -140,6 +144,9 @@
             <chance>50</chance>
         </li>
     </forcedTraitsChance>
+	<relationSettings>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>
+	</relationSettings>
 	<spawnCategories Inherit="False">
 		<li>Medieval</li>
 		<li>MedievalClergy</li>
@@ -243,6 +250,11 @@
 		<li>Medieval</li>
 		<li>MedievalCriminal</li>
 		<li>Rare</li>
+		<li>Hunter</li>
+		<li>TribalHunter</li>
+		<li>SW_Hutts_Backstory</li>
+		<li>TTancon_Standard</li>
+		<li>TTancon_Military</li>
 	</spawnCategories>
 	<linkedBackstory>ST_Assassin</linkedBackstory>
   </AlienRace.AlienBackstoryDef>
@@ -274,14 +286,18 @@
             <chance>33</chance>
         </li>
     </forcedTraitsChance>
-	<spawnCategories Inherit="False">
+	<spawnCategories>
+		<li>Outlander</li>
+		<li>Offworld</li>
+		<li>Pirate</li>
 		<li>Medieval</li>
 		<li>MedievalLow</li>
 		<li>MedievalServant</li>
 		<li>MedievalPeasant</li>
-		<li>Pirate</li>
 		<li>PirateBackstory</li>
 		<li>Classical</li>
+		<li>ESCP_DunmerBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -314,7 +330,6 @@
         </li>
     </disallowedTraitsChance>
 	<relationSettings>
-		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierChild>0</relationChanceModifierChild>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
 	</relationSettings>
@@ -330,6 +345,8 @@
 		<li>MedievalMisc</li>
 		<li>WoodBeetBackstory</li>
 		<li>JeubBackstory</li>
+		<li>ESCP_DunmerBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -477,8 +494,19 @@
 		<li>Sadist</li>
 		<li>Madman</li>
 		<li>Mate</li>
-		<li>Rare</li>
+		<!-- <li>Rare</li> -->
 	</spawnCategories>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierChild>0</relationChanceModifierChild>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>
+		<relationChanceModifierLover>0</relationChanceModifierLover>
+		<relationChanceModifierLover>0</relationChanceModifierLover>
+		<relationChanceModifierFiance>0</relationChanceModifierFiance>
+		<relationChanceModifierExFiance>0</relationChanceModifierExFiance>
+		<relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+		<relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
@@ -692,6 +720,7 @@
 		<li>MedievalTownsfolk</li>
 		<li>WoodBeetBackstory</li>
 		<li>Pirate</li>
+		<li>Raider</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>    
 
@@ -713,7 +742,7 @@
 	<forcedTraitsChance>
 		<li>
 			<defName>ST_SemiFeral</defName>
-			<chance>33</chance>
+			<chance>50</chance>
 		</li>
 	</forcedTraitsChance>
 	<!--
@@ -750,8 +779,8 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Archchancellor</defName>
     <title>stupid arch-chancellor</title>
-	<titleShort>arch-chancellor</titleShort>
-    <baseDesc>[PAWN_nameDef] was the arch-chancellor of a prestigious university. [PAWN_pronoun] had a rather non-standard approach to scholarship, and preferred to intimidate [PAWN_possessive] underlings with ranged weapons rather than engage in intellectual pursuits.</baseDesc>
+	<titleShort>neptocrat chancellor</titleShort>
+    <baseDesc>[PAWN_nameDef] was the arch-chancellor of a prestigious university, appointed only because of his relationship to its president. [PAWN_pronoun] had a rather non-standard approach to scholarship, and preferred to intimidate [PAWN_possessive] underlings with ranged weapons rather than engage in intellectual pursuits.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -770,6 +799,9 @@
 		</li>
 		<li MayRequire="Torann.ARimworldOfMagic">
 			<defName MayRequire="Torann.ARimworldOfMagic">TM_Gifted</defName>
+		</li>
+		<li>
+			<defName>ST_Stupid</defName>
 		</li>
 	</forcedTraitsChance>
 	<spawnCategories>
@@ -1142,6 +1174,7 @@
 		<li>WoodBeetBackstory</li>
 		<li>Offworld</li>
 		<li>Classical</li>
+		<li>Sadist</li>
 		<li>HSAU_BS_MLN_AdultTrainedGhoul</li>
 		<li>HSAU_BS_MLN_AdultArtVampSoldier</li>
 	</spawnCategories>
@@ -1150,7 +1183,7 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Assassin</defName>
     <title>assassin</title>
-    <baseDesc>[PAWN_nameDef] was an assassin for the Assassin's Guild. [PAWN_pronoun] inhumed many with flair and style.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was an assassin for an Assassin's Guild. [PAWN_pronoun] inhumed many with flair and style.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -1178,7 +1211,11 @@
 	<!-- <linkedBackstory>ST_AssassinStudent</linkedBackstory> -->
 	<spawnCategories>
 		<li>Medieval</li>
+		<li>MedievalCriminal</li>
 		<li>TribalHunter</li>
+		<li>SW_Hutts_Backstory</li>
+		<li>TTancon_Standard</li>
+		<li>TTancon_Military</li>
 		<li>HSAU_BS_MLN_AdultArtVampSoldier</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>      
@@ -1205,6 +1242,8 @@
 		<li>Scientist</li>
 		<li>Classical</li>
 		<li>Offworld</li>
+		<li>ESCP_DunmerBackstory</li>
+		<li>ESCP_DunmerTelvanniBackstory</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 </Defs>

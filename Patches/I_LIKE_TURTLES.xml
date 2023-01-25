@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/shuffleable</xpath>
+			<value>
+				<shuffleable>true</shuffleable>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/requiredWorkTags</xpath>
+			<value>
+				<requiredWorkTags>
+					<li>Animals</li>
+				</requiredWorkTags>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/titleShort</xpath>
+			<value>
+				<titleShort>turtle herdsman</titleShort>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<value>
+				<spawnCategories>
+					<li>Outlander</li>
+					<li>Offworld</li>
+					<li>Tribal</li>
+					<li>Farmer</li>
+					<li>TribalFarmer</li>
+					<li>ImperialCommon</li>
+					<li>Medieval</li>
+					<li>MedievalLow</li>
+					<li>MedievalPeasant</li>
+					<li>MedievalTownsfolk</li>
+					<li>MedievalServant</li>
+					<li>MedievalMisc</li>
+					<li>Classical</li>
+					<li>GnomeBackstory</li>
+					<li>BeetnikhBackstory</li>
+					<li>SW_Hutts_Backstory</li>
+					<li>TTancon_Standard</li>
+					<li>GoblinBackstory</li>
+					<li>TSP_TurtleCult</li>
+				</spawnCategories>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<value>
+				<possessions>
+					<li>
+						<key>EggTortoiseFertilized</key>
+						<value>12</value>
+					</li>
+				</possessions>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
