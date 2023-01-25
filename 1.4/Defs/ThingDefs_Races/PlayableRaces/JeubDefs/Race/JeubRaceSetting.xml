@@ -23,7 +23,7 @@
 			<forcedRaceTraitEntries>
 			  <li>
 				<defName>Psychopath</defName>
-				<chance>100</chance>
+				<chance>90</chance>
 			  </li>          
 			  <li>
 				<defName>Cannibal</defName>
@@ -48,6 +48,8 @@
 			  </headTypes>
 			  <bodyTypes Inherit="False">
 				<li>Male</li>
+				<li>Female</li>
+				<li>Thin</li>
 				<li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
 				<li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
 			  </bodyTypes>
@@ -56,6 +58,22 @@
 			  <customPortraitDrawSize>(0.7, 0.605)</customPortraitDrawSize>
 			  <customPortraitHeadDrawSize>(0.8, 0.8)</customPortraitHeadDrawSize>
 			  <headOffset>(0.0, -0.077)</headOffset>
+				<newbornBackstoryFilter>
+					<li>
+						<categories>
+							<li>JeubColonyNewborn</li>
+						</categories>
+						<commonality>1</commonality>
+					</li>
+				</newbornBackstoryFilter>
+				<adultBackstoryFilter>
+					<li>
+						<categories>
+							<li>JeubColonyAdult</li>
+						</categories>
+						<commonality>1</commonality>
+					</li>
+				</adultBackstoryFilter>
 			  <colorChannels>
 				<li>
 				  <name>skin</name>
@@ -263,6 +281,10 @@
 			<li>
 			  <def>HumanlikeBaby</def>
 			  <minAge>0</minAge>
+			  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+			  <soundDeath>Pawn_Megascarab_Death</soundDeath>
+			  <soundCall>Pawn_Megascarab_Call</soundCall>
+			  <soundAngry>Pawn_Megascarab_Angry</soundAngry>
 			</li>
 			<li>
 			  <def>HumanlikeChild</def>
@@ -275,10 +297,14 @@
 			<li MayRequire="Ludeon.RimWorld.Biotech">
 			  <def>HumanlikePreTeenager</def>
 			  <minAge>6</minAge>
+			  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+			  <soundDeath>Pawn_Megascarab_Death</soundDeath>
+			  <soundCall>Pawn_Megascarab_Call</soundCall>
+			  <soundAngry>Pawn_Megascarab_Angry</soundAngry>
 			</li>
 			<li>
 			  <def>HumanlikeTeenager</def>
-			  <minAge>10</minAge>
+			  <minAge>8</minAge>
 			  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
 			  <soundDeath>Pawn_Megascarab_Death</soundDeath>
 			  <soundCall>Pawn_Megascarab_Call</soundCall>
@@ -296,11 +322,11 @@
 		  <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
 			<Firefighter>2</Firefighter>
 			<Patient>0</Patient>
-			<Doctor>15</Doctor>
+			<Doctor>14</Doctor>
 			<PatientBedRest>0</PatientBedRest>
 			<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
-			<BasicWorker>2</BasicWorker>
-			<Warden>2</Warden>
+			<BasicWorker>1</BasicWorker>
+			<Warden>10</Warden>
 			<Handling>2</Handling>
 			<Cooking>2</Cooking>
 			<Hunting>2</Hunting>
@@ -314,7 +340,7 @@
 			<Crafting>2</Crafting>
 			<Hauling>5</Hauling>
 			<Cleaning>2</Cleaning>
-			<Research>15</Research>
+			<Research>13</Research>
 		  </lifeStageWorkSettings>  
 		  <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 		  <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>

@@ -254,6 +254,7 @@
       <li>AnimalCommon</li>
 	  <li>AnimalPet</li>
 	  <li>PiratePet</li>
+	  <li>StorytimeAnimal</li>
     </tradeTags>
   </ThingDef>
 
@@ -267,8 +268,15 @@
     <ecoSystemWeight>0.2</ecoSystemWeight>
 	<alternateGraphicChance>0.3</alternateGraphicChance>
     <alternateGraphics>
-      <li><texPath>Things/Pawn/Animal/Parrot/BlueParrot/BlueParrot</texPath></li>
-	  <li><texPath>Things/Pawn/Animal/Parrot/ModestParrot_BackUp/ModestParrot_BackUp</texPath></li>
+		<li>
+			<texPath>Things/Pawn/Animal/Parrot/BlueParrot/BlueParrot</texPath></li>
+		<li>
+			<texPath>Things/Pawn/Animal/Parrot/ModestParrot_BackUp/ModestParrot_BackUp</texPath>
+		</li>
+		<!-- Only works if you have this Mod: https://www.steamcommunity.com/sharedfiles/filedetails/?id=2794752505 -->
+		<li MayRequire="zeitloser.birdsbeyond.trf">
+			<texPath MayRequire="zeitloser.birdsbeyond.trf">Things/Pawn/Animal/Parrot/ParrotA</texPath>
+		</li>
     </alternateGraphics>
     <lifeStages>
       <li>

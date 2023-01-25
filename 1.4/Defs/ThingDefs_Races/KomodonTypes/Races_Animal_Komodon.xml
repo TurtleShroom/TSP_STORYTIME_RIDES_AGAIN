@@ -3,12 +3,12 @@
   <ThingDef ParentName="KomodonAnimalThingBase">
     <defName>ST_Exanth_Komodon</defName>
     <label>Komodon</label>
-    <description>Komodons are spectacular, absolutely massive tortoises that grow to be the size of an elephant. Unlike all other turtles, Komodons are extremely intelligent and able to engage even Thrumboes, all to come out alive. This heavily armored land-dwelling reptile is built like a tank and moves as slow as on. Its bite is capable of severing legs off in one blow. Due to its natural armor, it is tough to kill and can do serious damage during drawn-out melee fights. Only Ultra Tech Armor exceeds the natural durability of a Komodon's shell.</description>
+    <description>Komodons are spectacular, absolutely massive tortoises that grow to be the size of an elephant. Unlike all other turtles, Komodons are extremely intelligent and able to engage even Thrumboes, all to come out alive. This heavily armored land-dwelling reptile is built like a tank and moves as slow as one. Its bite is capable of severing legs off in one blow. Due to its natural armor, it is tough to kill and can do serious damage during drawn-out melee fights. Only Ultra Tech Armor exceeds the natural durability of a Komodon's shell.</description>
     <statBases>
       <MoveSpeed>1.0</MoveSpeed>
       <MarketValue>500</MarketValue>
-      <ArmorRating_Blunt>1.1</ArmorRating_Blunt>
-      <ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.25</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
       <ComfyTemperatureMin>2</ComfyTemperatureMin>
       <ComfyTemperatureMax>90</ComfyTemperatureMax>
 	  <LeatherAmount>300</LeatherAmount>
@@ -20,7 +20,7 @@
           <li>Bite</li>
         </capacities>
         <power>50</power>
-        <cooldownTime>5</cooldownTime>
+        <cooldownTime>4</cooldownTime>
         <linkedBodyPartsGroup>TurtleBeakAttackTool</linkedBodyPartsGroup>
 		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
@@ -29,7 +29,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>20</power>
+        <power>13</power>
         <cooldownTime>5</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -53,7 +53,7 @@
       <baseBodySize>5</baseBodySize>
       <baseHungerRate>2</baseHungerRate>
       <baseHealthScale>6</baseHealthScale>
-      <foodType>OmnivoreRoughAnimal</foodType>
+      <foodType>OmnivoreRoughAnimal, Fluid, Kibble</foodType>
 	  <useMeatFrom>Tortoise</useMeatFrom>
       <leatherDef>Leather_Lizard</leatherDef>
       <wildness>0.2</wildness>
@@ -61,7 +61,7 @@
       <lifeExpectancy>180</lifeExpectancy>
 	  <nameOnTameChance>0.9</nameOnTameChance>
 	  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
-      <manhunterOnDamageChance>0.4</manhunterOnDamageChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -282,7 +282,7 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Komodon/Komodon</texPath>
-          <drawSize>3</drawSize>
+          <drawSize>4.2</drawSize>
           <shadowData>
             <volume>(0.45, 0.45, 0.45)</volume>
             <offset>(0,0,0)</offset>
@@ -290,7 +290,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
            <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
-          <drawSize>3</drawSize>
+          <drawSize>4</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
