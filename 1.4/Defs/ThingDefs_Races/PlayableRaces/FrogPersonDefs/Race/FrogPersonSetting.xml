@@ -35,6 +35,7 @@
 				<li>Hulk</li>
 				<li>Thin</li>
 				<li>Male</li>
+				<!-- <li>Female</li> -->
 				<li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
 				<li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
 			</bodyTypes>
@@ -94,6 +95,7 @@
 		  </generalSettings>
 		  <graphicPaths>
 			  <head>Things/Pawn/Humanlike/FrogPeople/Head/</head>
+			  <!-- <head>Things/Pawn/Humanlike/FrogPeople/Body/</head> -->
 		  </graphicPaths>
 		  <relationSettings>
 			<relationChanceModifierSibling>3</relationChanceModifierSibling>
@@ -398,14 +400,24 @@
 		</comps>
 		<modExtensions>
 			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_FrogSapient</li>
+					<li>ST_FrogCommon</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_FrogSapientDesc</li>
+					<li>ST_FrogCommonDesc</li>
+				</statDescriptions>				
 				<showImageInInfoCard>true</showImageInInfoCard>
 				<ImageToShowInInfoCard>UI/Lore/FrogmanLore</ImageToShowInInfoCard>						
 			</li>
 		</modExtensions>
 	</AlienRace.ThingDef_AlienRace>
-  
-  
-	  
+
 	<AlienRace.RaceSettings>
 		<defName>FrogPersonRaceSettings</defName>
 		<pawnKindSettings>

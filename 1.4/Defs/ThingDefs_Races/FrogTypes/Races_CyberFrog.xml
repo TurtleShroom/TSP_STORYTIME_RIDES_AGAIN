@@ -140,6 +140,30 @@
       <!-- <li>AnimalExotic</li> -->
 	  <li>AnimalInsectSpace</li>
     </tradeTags>
+	<modExtensions>
+		<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+			<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+		</li>
+		<li Class="AnimalBehaviours.AnimalStatExtension">
+			<statToAdd>
+				<li>ST_FrogRole</li>
+				<li>ST_FrogRoleSecondary</li>					
+				<li>ST_FrogRarity</li>					
+			</statToAdd>
+			<statValues>
+				<li>TSP_ST_FrogMachine</li>
+				<li>ST_MeleeTank</li>	
+				<li>TSP_ST_FrogCommonality_Hostile</li>					
+			</statValues>
+			<statDescriptions>
+				<li>TSP_ST_FrogMachineDesc</li>
+				<li>ST_MeleeTankDesc</li>	
+				<li>TSP_ST_FrogCommonality_Hostile_Desc</li>
+			</statDescriptions>
+			<showImageInInfoCard>true</showImageInInfoCard>
+			<ImageToShowInInfoCard>UI/Lore/CyberFrogLore</ImageToShowInInfoCard>						
+		</li>
+	</modExtensions>
   </ThingDef>
 
   <PawnKindDef ParentName="BaseMechanoidKind">

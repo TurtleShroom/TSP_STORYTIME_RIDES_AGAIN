@@ -15,7 +15,10 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>Werefrog</defName>
 		<label>Werefrog</label>
-		<description>Half man, half frog, all evil. Whatever soul this creature once had has gone to the afterlife, leaving an abomination is ravenous, mindless, and pitiless. Watch out for its bite.</description>		
+		<description>Half man, half frog, all evil. Whatever soul this creature once had has gone to the afterlife, leaving an abomination is ravenous, mindless, and pitiless. Watch out for its bite.</description>	
+		<descriptionHyperlinks>
+			<thingDef>WerefrogBlood</thingDef>
+		</descriptionHyperlinks>
 		<statBases>
 			<MoveSpeed>7</MoveSpeed>
 			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
@@ -85,7 +88,7 @@
 			<useMeatFrom>ST_BullFrog</useMeatFrom>
 			<gestationPeriodDays>45</gestationPeriodDays>
 			<lifeExpectancy>5</lifeExpectancy>
-			<foodType>Corpse, CarnivoreAnimalStrict, CarnivoreAnimal, Meat, OvivoreAnimal, Fluid, Kibble</foodType>
+			<foodType>Corpse, CarnivoreAnimalStrict, CarnivoreAnimal, Meat, Meal, Fluid, Kibble</foodType>
 			<baseHungerRate>1.25</baseHungerRate>
 			<predator>true</predator>
 			<maxPreyBodySize>5</maxPreyBodySize>
@@ -108,12 +111,27 @@
 				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0.5</SCR_SCP610Biome>
 				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.01</MorrowRim_BlightedAshlands>
 				<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">0.01</TKKN_Desert> <!-- SALT FIELDS -->
-				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.01</AB_MiasmicMangrove>
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.03</AB_MiasmicMangrove>
 			</wildBiomes>
 		</race>
 		<modExtensions>
 			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+			</li>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_FrogEnemy</li>
+					<li>ST_FrogCommonality_Hostile</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_FrogEnemyDesc</li>
+					<li>ST_FrogCommonality_Hostile_Desc</li>
+				</statDescriptions>				
 			</li>
 		</modExtensions>
 	</ThingDef>

@@ -6,24 +6,16 @@
     <description>Millinea of genetic engineering has created frogs capable of serving the niches of most livestock roles, as well as extending their life and abilities. Other frogs, by accident or design, are vicious and threatening. In some parts of the galactic Rim, the overpopulation of these frogs has caused pockets of swamp lands to be completely overrun by nothing but frogs and other amphibians.</description>
     <workerClass>BiomesKit.UniversalBiomeWorker</workerClass>
 	<modExtensions>
-		<li Class="BiomesKit.BiomesKitControls">
-			<allowOnLand>True</allowOnLand>
-			<spawnOnBiomes>
-				<li>ColdBog</li>
-				<li>TemperateSwamp</li>
-				<li>TropicalSwamp</li>
-				<li MayRequire="sarg.alphabiomes">AB_MiasmicMangrove</li>
-				<li MayRequire="zylle.morevanillabiomes">ZBiome_Marsh</li>
-				<li MayRequire="zylle.morevanillabiomes">ZBiome_CoastalDunes</li>
-				<li MayRequire="mlie.advancedbiomes">Wetland</li>
-			</spawnOnBiomes>
-			<minHilliness>Flat</minHilliness>
-			<maxHilliness>1</maxHilliness>
-			<frequency>45</frequency>
-			<usePerlin>true</usePerlin>
-			<useAlternativePerlinSeedPreset>true</useAlternativePerlinSeedPreset>
-			<perlinCulling>0.25</perlinCulling>
-		</li>
+		  <li Class="BiomesKit.BiomesKitControls">
+		  <spawnOnBiomes>
+			<li>TropicalSwamp</li>
+			<li>TemperateSwamp</li>
+		  </spawnOnBiomes>
+		  <maxHilliness>1</maxHilliness>
+		  <frequency>50</frequency>
+		  <usePerlin>true</usePerlin>
+		  <perlinCulling>0.25</perlinCulling>
+		  </li>
 		<li Class="RockSettings.DefModExtension_BiomeSettings">
 			<rockCount>1</rockCount>
 			<allowedRockDefs>
@@ -39,7 +31,7 @@
     <movementDifficulty>4</movementDifficulty>
     <forageability>2</forageability>
     <foragedFood>ToadLegs</foragedFood>
-    <wildPlantRegrowDays>7</wildPlantRegrowDays>
+    <wildPlantRegrowDays>13</wildPlantRegrowDays>
     <texture>World/Biomes/FroggySwamp</texture>
     <soundsAmbient>
       <li>Ambient_NightInsects_Jungle</li>
@@ -162,7 +154,7 @@
     <wildPlants>
       <Plant_TallGrass>4.8</Plant_TallGrass>
       <Plant_ShrubLow>2.0</Plant_ShrubLow>
-      <Plant_TreeWillow>1.75</Plant_TreeWillow>
+      <Plant_TreeWillow>1.72</Plant_TreeWillow>
       <Plant_TreeCypress>1.72</Plant_TreeCypress>
       <Plant_TreeMaple>1.2</Plant_TreeMaple>
       <Plant_Chokevine>1</Plant_Chokevine>
@@ -174,26 +166,29 @@
 	  <AB_MangroveTree MayRequire="sarg.alphabiomes">0.8</AB_MangroveTree>
     </wildPlants>
     <wildAnimals>
-      <BloodFrog>0.2</BloodFrog>
-      <BudgettFrog>1</BudgettFrog>
-      <ST_BullFrog>1</ST_BullFrog>
-      <CyberFrogDocile>0.1</CyberFrogDocile>
-      <FireBelliedToad>0.3</FireBelliedToad>
-      <JudasFrog>0.2</JudasFrog>
-      <LeviathanFrog>0.08</LeviathanFrog>
-      <SpringPeeper>1.15</SpringPeeper>
-      <PoisonDartFrog>1</PoisonDartFrog>
-      <ST_Toad>1</ST_Toad>
-      <TomatoFrog>1</TomatoFrog>
-      <ST_TreeFrog>1</ST_TreeFrog>
-      <ST_WoodFrog>0.5</ST_WoodFrog>
-	  <MilkFrog>0.2</MilkFrog>
-	  <HC_Bullfrog MayRequire="hc.animal.2">1.25</HC_Bullfrog>
-	  <Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
+		<BloodFrog>0.2</BloodFrog>
+		<BudgettFrog>1</BudgettFrog>
+		<ST_BullFrog>1</ST_BullFrog>
+		<CyberFrogDocile>0.1</CyberFrogDocile>
+		<FireBelliedToad>0.3</FireBelliedToad>
+		<JudasFrog>0.2</JudasFrog>
+		<LeviathanFrog>0.08</LeviathanFrog>
+		<SpringPeeper>1.15</SpringPeeper>
+		<PoisonDartFrog>1</PoisonDartFrog>
+		<ST_Toad>1</ST_Toad>
+		<TomatoFrog>1</TomatoFrog>
+		<ST_TreeFrog>1</ST_TreeFrog>
+		<ST_WoodFrog>0.5</ST_WoodFrog>
+		<MilkFrog>0.2</MilkFrog>
+		<FlyingFrog>0.001</FlyingFrog>
+		<PepsiFrog>0.01</PepsiFrog>
+		<PumpkinToadlet>0.05</PumpkinToadlet>
+		<HC_Bullfrog MayRequire="hc.animal.2">1.25</HC_Bullfrog>
+		<Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
     </wildAnimals>
     <allowedPackAnimals>
-		<li>Muffalo</li>
-		<li>LeviathanFrog</li>
+      <li>Muffalo</li>
+	  <li>LeviathanFrog</li>
     </allowedPackAnimals>
   </BiomeDef>
 </Defs>

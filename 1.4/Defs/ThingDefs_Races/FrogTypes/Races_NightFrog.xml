@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   
   <ThingDef ParentName="BaseBullet">
@@ -19,7 +19,7 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>NightFrog</defName>
     <label>Night Frog</label>
-    <description>These black frogs haunt the night, hunting their prey by licking them with their neurotoxin-coated tongues to paralyze them and leave them helpless. Alone among all known species of frog, these creatures are purely carnivorous and have been known to hunt humans.</description>
+    <description>These black frogs haunt the night, hunting their prey by licking them with their venomous tongues. Their tongues secrete a lethal venom that paralyzes their prey and leaves them helpless. Alone among all known species of frog, these creatures are the only frogs to be purely carnivorous, and have been known to hunt men.</description>
     <statBases>
       <MoveSpeed>6.0</MoveSpeed>
       <MarketValue>300</MarketValue>
@@ -40,7 +40,7 @@
         <eggCountRange>1</eggCountRange>
       </li>
 		<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
-			<resourceDef>Neurotoxin</resourceDef>
+			<resourceDef>ST_NightFrog_Venom</resourceDef>
 			<gatheringIntervalDays>4</gatheringIntervalDays>
 			<resourceAmount>25</resourceAmount>
 			<customResourceString>PoisonGather</customResourceString>
@@ -114,7 +114,7 @@
 			<TropicalRainforest>0.015</TropicalRainforest>
 			<AridShrubland>0.005</AridShrubland>
 	  </wildBiomes>	
-      <body>LickyFrogBody</body>
+      <body>QuadrupedAnimalWithClawsTailAndJowl</body>
       <nameGenerator>FrogNamerMale</nameGenerator>
       <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
       <baseBodySize>1.25</baseBodySize>
@@ -124,11 +124,11 @@
 	  <manhunterOnDamageChance>0.85</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.15</manhunterOnTameFailChance>
       <baseHungerRate>0.85</baseHungerRate>
-      <foodType>CarnivoreAnimal</foodType>
+      <foodType>CarnivoreAnimal, CarnivoreAnimalStrict, Corpse,</foodType>
       <leatherDef>Leather_NightFrog</leatherDef>
       <wildness>0.8</wildness>
       <trainability>Advanced</trainability>
-      <useMeatFrom>Toad</useMeatFrom>
+      <useMeatFrom>ST_BullFrog</useMeatFrom>
       <petness>0.4</petness>
       <lifeExpectancy>16</lifeExpectancy>
       <lifeStageAges>
@@ -166,17 +166,17 @@
 				</statToAdd>
 				<statValues>
 					<li>ST_FrogPoison</li>
-					<li>ST_FrogLick</li>
+					<li>ST_FrogRanged</li>
 					<li>ST_FrogUncommon</li>					
 				</statValues>
 				<statDescriptions>
 					<li>ST_FrogPoisonDesc</li>
-					<li>ST_FrogLickDesc</li>
+					<li>ST_FrogRangedDesc</li>
 					<li>ST_FrogUncommonDesc</li>
 				</statDescriptions>				
 			</li>
-		<li Class="NocturnalAnimals.ExtendedRaceProperties">
-			<bodyClock>Nocturnal</bodyClock>
+		<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+			<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
 		</li>
 	</modExtensions>
   </ThingDef>
@@ -186,8 +186,8 @@
     <defName>NightFrog</defName>
     <label>Night Frog</label>
     <race>NightFrog</race>
-    <combatPower>60</combatPower>
-    <ecoSystemWeight>0.2</ecoSystemWeight>
+    <combatPower>85</combatPower>
+    <ecoSystemWeight>0</ecoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>

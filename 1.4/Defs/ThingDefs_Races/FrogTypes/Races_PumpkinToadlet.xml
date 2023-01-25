@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-
-
   <ThingDef ParentName="AnimalThingBase">
     <defName>PumpkinToadlet</defName>
-    <label>Pumpkin Toadlet</label>
-    <description>This small orange frog with big anime eyes is notable for being the only frog capable of doing a gainer. Unfortunately, the reason it is able to do this is because it is actually terrible at jumping and completely loses control when it tries, causing it to spin through the air wildly. This is simultaneously badass and also painful for the frog. Also, these frogs are closely related to the Poison Dart Frog. While considerably less poisonous than their kin, they can still cause problems.</description>
+    <label>pumpkin false toad</label>
+    <description>In competitive diving competitions, a gainer is a form of dive in which the diver performs a full backwards somersault before entering the water in a vertical position. Ever seen a frog do it? \n \n Named for its coloration, this small orange false toad is notable for being the only frog capable of doing a gainer. \n Unfortunately, the reason it is able to do this is because it is actually terrible at long-distance jumping and completely loses control when it tries, causing it to leap vertically while spinning through the air. This is simultaneously amazing to watch and also painful for the frog. The bite of a pumpkin false toad is venomous; while considerably less dangerous than a poison dart frog's secretions, it can still cause problems. \n \n A toad is a type of frog with dry, leathery skin, (usually) short legs, and large bumps on their back. They are divided into the "true toads", which all come from the taxnomic family &lt;i>Bufonidae&lt;/i> , and the nine species of "false toads", the latter endemic only to Old Earth's Chile and Thailand. The pumpkin false toad falls under the former, as a false &lt;i>Calyptocephalellidae&lt;/i> toad.</description>
     <statBases>
       <MoveSpeed>2.5</MoveSpeed>
       <MarketValue>100</MarketValue>
       <ComfyTemperatureMin>-60</ComfyTemperatureMin>
       <ComfyTemperatureMax>60</ComfyTemperatureMax>
+	  <MeleeDodgeChance>40</MeleeDodgeChance>
     </statBases>
 	<comps>
 	  <li Class="CompProperties_EggLayer">
@@ -21,12 +21,12 @@
         <eggCountRange>1</eggCountRange>
       </li>
 		<li Class="AnimalBehaviours.CompProperties_ThoughtEffecter">
-			<radius>10</radius>
+			<radius>15</radius>
 			<tickInterval>2500</tickInterval>
-			<thoughtDef>GainerThought</thoughtDef>
+			<thoughtDef>ST_GainerThought</thoughtDef>
 		</li>
 		<li Class="AnimalBehaviours.CompProperties_InitialHediff">
-			<hediffname>GainerFrog</hediffname>
+			<hediffname>ST_GainerFrog</hediffname>
 		</li>
     </comps>
     <tools>
@@ -137,7 +137,7 @@
   
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>PumpkinToadlet</defName>
-    <label>Pumpkin Toadlet</label>
+    <label>pumpkin false toad</label>
     <race>PumpkinToadlet</race>
     <combatPower>18</combatPower>
     <ecoSystemWeight>0.1</ecoSystemWeight>
@@ -181,9 +181,9 @@
 
 
   <HediffDef>
-    <defName>GainerFrog</defName>
-    <label>Clumsy Toadlet</label>
-    <description>Pumpkin Toadlets will occasionally injure themselves attempting to do gainers.</description>
+    <defName>ST_GainerFrog</defName>
+    <label>Clumsy False Toad</label>
+    <description>Pumpkin false toads will occasionally injure themselves in the process of performing the backwards somersault phase of a gainer. In competitive diving competitions, a gainer is a form of dive in which the diver performs a full backwards somersault before entering the water in a vertical position.</description>
   	<defaultLabelColor>(255,117,24)</defaultLabelColor>
     <stages>
       <li>
@@ -198,9 +198,9 @@
   </HediffDef>
 
   <HediffDef>
-    <defName>FailedGainer</defName>
+    <defName>ST_FailedGainer</defName>
     <label>Failed Gainer</label>
-    <description>This pumpkin toadlet tried to do a gainer, but all he accomplished was doing a pathetic flip and twisting his little froggy leg!</description>
+    <description>This pumpkin false tried to do a gainer dive, but all he accomplished was doing a pathetic flip, causing him a minor injury. In competitive diving competitions, a gainer is a form of dive in which the diver performs a full backwards somersault before entering the water in a vertical position.</description>
 	<hediffClass>HediffWithComps</hediffClass>
   	<defaultLabelColor>(161,75,18)</defaultLabelColor>
     <comps>
@@ -211,34 +211,8 @@
     </comps>
     <stages>
       <li>
-		<painOffset>0.8</painOffset>		
+		<painOffset>0.4</painOffset>		
       </li>
     </stages>
   </HediffDef>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 </Defs>
