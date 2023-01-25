@@ -34,7 +34,7 @@
 	<comps>
 	  <li Class="CompProperties_EggLayer">
         <eggUnfertilizedDef>NightFrogEggUnfertilized</eggUnfertilizedDef>
-        <eggFertilizedDef>NightFrogEggUnfertilized</eggFertilizedDef>
+        <eggFertilizedDef>NightFrogEggFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>15</eggLayIntervalDays>
         <eggCountRange>1</eggCountRange>
@@ -72,9 +72,9 @@
         <capacities>
           <li>ParalyzingLick</li>
         </capacities>
-        <power>10</power>
+        <power>5</power>
         <cooldownTime>2.5</cooldownTime>
-        <linkedBodyPartsGroup>Tongue</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
       </li>
       <li>
         <label>head</label>
@@ -119,14 +119,15 @@
       <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
       <baseBodySize>1.25</baseBodySize>
 	  <predator>true</predator>
-      <maxPreyBodySize>1.2</maxPreyBodySize>
+	  <canBePredatorPrey>false</canBePredatorPrey> <!-- In RL, only one creature- a type of snake -can actually eat a poison dart frog. Given the extreme venom in a Night Frog, the same will apply here. NO ONE is going to fight this sucker in melee. -->
+      <maxPreyBodySize>5</maxPreyBodySize>
       <baseHealthScale>1.5</baseHealthScale>
 	  <manhunterOnDamageChance>0.85</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.15</manhunterOnTameFailChance>
-      <baseHungerRate>0.85</baseHungerRate>
+      <baseHungerRate>1</baseHungerRate>
       <foodType>CarnivoreAnimal, CarnivoreAnimalStrict, Corpse,</foodType>
       <leatherDef>Leather_NightFrog</leatherDef>
-      <wildness>0.8</wildness>
+      <wildness>0.65</wildness>
       <trainability>Advanced</trainability>
       <useMeatFrom>ST_BullFrog</useMeatFrom>
       <petness>0.4</petness>
@@ -158,23 +159,23 @@
       <li>AnimalExotic</li>
     </tradeTags>
 	<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
-					<li>ST_FrogRole</li>
-					<li>ST_FrogRoleSecondary</li>
-					<li>ST_FrogRarity</li>					
-				</statToAdd>
-				<statValues>
-					<li>ST_FrogPoison</li>
-					<li>ST_FrogRanged</li>
-					<li>ST_FrogUncommon</li>					
-				</statValues>
-				<statDescriptions>
-					<li>ST_FrogPoisonDesc</li>
-					<li>ST_FrogRangedDesc</li>
-					<li>ST_FrogUncommonDesc</li>
-				</statDescriptions>				
-			</li>
+		<li Class="AnimalBehaviours.AnimalStatExtension">
+			<statToAdd>
+				<li>ST_FrogRole</li>
+				<li>ST_FrogRoleSecondary</li>
+				<li>ST_FrogRarity</li>					
+			</statToAdd>
+			<statValues>
+				<li>ST_FrogPoison</li>
+				<li>ST_FrogRanged</li>
+				<li>ST_FrogUncommon</li>					
+			</statValues>
+			<statDescriptions>
+				<li>ST_FrogPoisonDesc</li>
+				<li>ST_FrogRangedDesc</li>
+				<li>ST_FrogUncommonDesc</li>
+			</statDescriptions>				
+		</li>
 		<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
 			<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
 		</li>
