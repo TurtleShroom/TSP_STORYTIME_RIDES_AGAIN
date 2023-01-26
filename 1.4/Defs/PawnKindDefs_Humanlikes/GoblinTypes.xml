@@ -16,6 +16,7 @@
         <li>Neolithic</li>
 		<li>Tribal</li>
 		<li>Barbarian</li>
+		<li>GoblinWear</li>
     </apparelTags>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <techHediffsMoney>
@@ -43,7 +44,11 @@
     <label>goblin runner</label>
     <combatPower>45</combatPower>
     <defaultFactionType>GoblinTown</defaultFactionType>
-    <chemicalAddictionChance>0.06</chemicalAddictionChance>
+	<combatEnhancingDrugsChance>1</combatEnhancingDrugsChance>
+    <chemicalAddictionChance>0.15</chemicalAddictionChance>
+	<combatEnhancingDrugsCount>1~5</combatEnhancingDrugsCount>
+	<isFighter>true</isFighter>
+	<canBeSapper>true</canBeSapper>
     <apparelMoney>
       <min>250</min>
       <max>500</max>
@@ -69,7 +74,9 @@
     </techHediffsTags>
     <techHediffsChance>0.02</techHediffsChance>
 	<weaponTags>
+		<li>MedievalMeleeDestructive</li>
 		<li>GoblinBasic</li>
+		<li>Spear</li>
     </weaponTags>
     <inventoryOptions>
       <subOptionsChooseOne>
@@ -112,12 +119,13 @@
     <techHediffsChance>0.02</techHediffsChance>
 	<weaponTags>
 		<li>GoblinBow</li>
+		<li>Bowmen</li>
     </weaponTags>
     <inventoryOptions>
       <subOptionsChooseOne>
         <li>
           <thingDef>GoblinPoison</thingDef>
-          <countRange>-10~15</countRange>
+          <countRange>-5~15</countRange>
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
@@ -187,7 +195,7 @@
         <li>MedievalArmorDecent</li>
         <li>MedievalArmorBasic</li>
 		<li>Medieval</li>
-		<li>MedievalBasic</li>
+		<li>Tribal</li>
     </apparelTags>
 	<weaponMoney>
          <min>200</min>
@@ -216,14 +224,17 @@
     <defaultFactionType>GoblinTown</defaultFactionType>
     <factionLeader>true</factionLeader>
     <chemicalAddictionChance>0.03</chemicalAddictionChance>
+	<canBeSapper>false</canBeSapper>
     <apparelMoney>
       <min>350</min>
       <max>1200</max>
     </apparelMoney>
 	<apparelTags>
         <li>MedievalBasic</li>
+		<li>BarbarianNoble</li>
         <li>MedievalArmorElite</li>
         <li>MedievalArmorDecent</li>
+		<li>RoyalTier1</li>
 		<li>RoyalTier2</li>
     </apparelTags>
 	<weaponMoney>

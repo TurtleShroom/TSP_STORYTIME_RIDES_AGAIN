@@ -12,8 +12,9 @@
   
   <AlienRace.AlienBackstoryDef ParentName="BeetBackstories">
     <defName>CommunalChildWoodBeet</defName>
-    <title>communaly abused</title>
-    <baseDesc>[PAWN_nameDef] never knew [PAWN_possessive] parents. [PAWN_pronoun]  was 'raised' by the tribe communally. This involved a lot of drugs and other questionable parenting decisions.</baseDesc>
+    <title>Child of the Wood Beet Commune</title>
+	<titleShort>Communally Abused</titleShort>
+    <baseDesc>[PAWN_nameDef] never knew [PAWN_possessive] parents or homeland. [PAWN_pronoun] was 'adopted' by Wood Beets and 'raised' communally. This involved a lot of drugs and other questionable parenting decisions.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -30,10 +31,22 @@
       </li>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>DrugDesire</defName>
-        <degree>2</degree>
-      </li>
+		<li>
+			<defName>DrugDesire</defName>
+			<degree>2</degree>
+		</li>
+		<li>
+            <defName>Psychopath</defName>
+			<chance>3</chance>
+        </li>
+		<li>
+            <defName>Cannibal</defName>
+			<chance>1</chance>
+        </li>
+		<li>
+			<defName>Bloodlust</defName>
+			<chance>10</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories Inherit="False">
 		<li>WoodBeetBackstory</li>
@@ -54,7 +67,7 @@
 		<relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierChild>0</relationChanceModifierChild>
-		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>
 	</relationSettings>
   </AlienRace.AlienBackstoryDef>
   
@@ -95,6 +108,9 @@
         </li>
 		<li>
             <defName>Cannibal</defName>
+        </li>
+		<li>
+            <defName>Bloodlust</defName>
         </li>
     </disallowedTraitsChance>
 	<spawnCategories>

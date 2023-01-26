@@ -13,7 +13,8 @@
   <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetHerderChild</defName>
     <title>Young Herdsman</title>
-    <baseDesc>[PAWN_nameDef] helped herd the sheep that lived on his family's homestead. It was a lonely upbringing.</baseDesc>
+	<titleShort>herdsman</titleShort>
+    <baseDesc>[PAWN_nameDef] helped herd the livestock that lived on his family's homestead. It was a lonely upbringing.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -32,6 +33,7 @@
 	<spawnCategories>
       <li>BeetnikhBackstory</li>
 	  <li>Farmer</li>
+	  <li>TribalFarmer</li>
 	  <li>Outsider</li>
 	  <li>Outlander</li>
     </spawnCategories>
@@ -40,6 +42,7 @@
   <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetFisherChild</defName>
     <title>Young Fisherman</title>
+	<titleShort>fisherman</titleShort>
     <baseDesc>[PAWN_nameDef] lived in town and helped catch fish. Everybody liked [PAWN_pronoun] when  landed a big one.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -165,7 +168,7 @@
   
   <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
     <defName>BeetGuard</defName>
-    <title>Town Guard</title>
+    <title>Town Guardsman</title>
     <baseDesc>[PAWN_nameDef] worked as a guard in town, protecting the citizenry from pirates and drunkards.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -181,40 +184,65 @@
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
-    <defName>BeetAlcoholic</defName>
-    <title>Alcoholic</title>
-    <baseDesc>[PAWN_nameDef] can't stop drinking alcohol. This has made them violent and dangerous to society.</baseDesc>
-    <slot>Adulthood</slot>
-    <skillGains>
-      <li>
-		<key>Social</key>
-        <value>-6</value>
-	  </li>
-      <li>
-		<key>Melee</key>
-        <value>15</value>
-	  </li>
-    </skillGains>
-	<forcedTraitsChance>
-      <li>
-        <defName>DrugDesire</defName>
-        <degree>2</degree>
-      </li>
-	  <li>
-        <defName>Bloodlust</defName>
-      </li>
-	  <li>
-		<defName>Brawler</defName>
-	  </li>
-    </forcedTraitsChance>
-	<requiredWorkTags>
-		<li>Violent</li>
-	</requiredWorkTags>
-	<workDisables>
-	  <li>Caring</li>
-	  <li>Intellectual</li>
-	  <li>ManualSkilled</li>
-    </workDisables>
+		<defName>BeetAlcoholic</defName>
+		<title>Vicious Drunkard</title>
+		<titleShort>Drunkard</titleShort>
+		<baseDesc>[PAWN_nameDef] can't stop drinking alcohol. This has made [PAWN_objective] violent and dangerous to society.</baseDesc>
+		<slot>Adulthood</slot>
+		<skillGains>
+		  <li>
+			<key>Social</key>
+			<value>-6</value>
+		  </li>
+		  <li>
+			<key>Melee</key>
+			<value>5</value>
+		  </li>
+		</skillGains>
+		<forcedTraitsChance>
+			<!--
+			<li>
+				<defName>DrugDesire</defName>
+				<degree>2</degree>
+			</li>
+			-->
+			<li>
+				<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Lush</defName>
+			</li>
+			<li>
+				<defName>Bloodlust</defName>
+			</li>
+			<li>
+				<defName>Brawler</defName>
+			</li>
+			<li MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Lush</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<forcedHediffs>
+		  <li>AlcoholAddiction</li>
+		</forcedHediffs>
+		<workDisables>
+		  <li>Caring</li>
+		  <li>Intellectual</li>
+		  <li>ManualSkilled</li>
+		</workDisables>
+		<conflictingTraits>
+			<li>DrugDesire</li>
+		</conflictingTraits>
+		<spawnCategories>
+		  <li>WoodBeetBackstory</li>
+		  <li>Outsider</li>
+		  <li>Madman</li>
+		  <li>Pirate</li>
+		  <li>Offworld</li>
+		  <li>Outlander</li>
+		  <li>JeubBackstory</li>
+		  <li>ESCP_DunmerTelvanniBackstory</li>
+		  <li>ESCP_DunmerBackstory</li>
+		  <li>ESCP_DunmerSlaveBackstory</li>
+		</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef>

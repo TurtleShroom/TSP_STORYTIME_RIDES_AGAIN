@@ -192,7 +192,7 @@
 			<MoveSpeed>3</MoveSpeed> <!-- Bulborbs are slow -->
 			<Flammability>1</Flammability>
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin> <!-- Sapient Bulborbs cannot wear clothes so this is for the sake of game play -->
-			<ComfyTemperatureMax>50</ComfyTemperatureMax>
+			<ComfyTemperatureMax>55</ComfyTemperatureMax>
 			<MeatAmount>130</MeatAmount> <!-- "Pikmin II" says that Bulborbs are delicious and prized for their abundant meat -->
 			<LeatherAmount>50</LeatherAmount>
 			<PsychicSensitivity>0.5</PsychicSensitivity>
@@ -295,7 +295,7 @@
 		  <nameGenerator>BeanMaleName</nameGenerator>
 		  <nameGeneratorFemale>BeanFemaleName</nameGeneratorFemale>
 		  <leatherDef>Leather_BeanMan</leatherDef>
-		  <!-- <bloodDef>Filth_BeanBlood</bloodDef> -->
+		  <bloodDef>Filth_BeanBlood</bloodDef>
 		  <makesFootprints>true</makesFootprints>
 		  <lifeExpectancy>120</lifeExpectancy>
 		  <nameCategory>HumanStandard</nameCategory>
@@ -380,6 +380,29 @@
 				<soundAngry>TSP_BulborbSnort</soundAngry>
 			</li>
 		  </lifeStageAges>
+			<lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+				<Firefighter>0</Firefighter>
+				<Patient>0</Patient>
+				<Doctor>0</Doctor>
+				<PatientBedRest>0</PatientBedRest>
+				<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+				<BasicWorker>0</BasicWorker>
+				<Warden>0</Warden>
+				<Handling>0</Handling>
+				<Cooking>0</Cooking>
+				<Hunting>0</Hunting>
+				<Construction>0</Construction>
+				<Growing>0</Growing>
+				<Mining>0</Mining>
+				<PlantCutting>0</PlantCutting>
+				<Smithing>0</Smithing>
+				<Tailoring>0</Tailoring>
+				<Art>0</Art>
+				<Crafting>0</Crafting>
+				<Hauling>0</Hauling>
+				<Cleaning>0</Cleaning>
+				<Research>0</Research>
+			</lifeStageWorkSettings>
 		  <soundMeleeHitPawn>TSP_BulborbSnort</soundMeleeHitPawn>
 		  <soundMeleeHitBuilding>TSP_Bulborb_SnortDwarf</soundMeleeHitBuilding>
 		  <soundMeleeMiss>TSP_BulborbShake</soundMeleeMiss>
@@ -392,7 +415,7 @@
 			  <li>(0,0)</li>
 			  <li>(8,50)</li>
 			  <li>(30,50)</li>
-			  <li>(80,30)</li>
+			  <li>(80,10)</li>
 			  <li>(130,0)</li>
 			</points>
 		  </ageGenerationCurve>

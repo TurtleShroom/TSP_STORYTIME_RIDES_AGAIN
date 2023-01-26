@@ -7,6 +7,7 @@
 			<li>PoorPirateClothing</li>
 			<li>NormalPirateClothing</li>
 			<li>RichPirateClothing</li>
+			<li>GoblinWear</li>
 		</value>
 	</Operation>
 	
@@ -25,21 +26,26 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel/tags</xpath>
-		<value>
-			<li>RichPirateClothing</li>
-			<li>NormalPirateClothing</li>
-			<li>ST_GnomeClothing</li>
-			<li>JeubWear</li>
-			<li>FrenchLineOfficerApparel</li>
-			<li>FrenchLineOfficerBicornApparel</li>
-			<li>FrenchGreandierOfficerBearskinApparel</li>
-			<li>FrenchCuirassApparel</li>
-			<li>BritishInfantryOfficerApparel</li>
-			<li>PrussianLandwehrApparel</li>
-			<li>PrussianLandwehrOff</li>
-		</value>
+			<value>
+				<li>RichPirateClothing</li>
+				<li>NormalPirateClothing</li>
+				<li>ST_GnomeClothing</li>
+				<li>JeubWear</li>
+				<li>FrenchLineOfficerApparel</li>
+				<li>FrenchLineOfficerBicornApparel</li>
+				<li>FrenchGreandierOfficerBearskinApparel</li>
+				<li>FrenchCuirassApparel</li>
+				<li>BritishInfantryOfficerApparel</li>
+				<li>PrussianLandwehrApparel</li>
+				<li>PrussianLandwehrOff</li>
+			</value>
+		</match>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
@@ -69,6 +75,7 @@
 				<li>Klan_apparel</li> <!-- We Dixies call them "britches", breeches is from where the word comes -->
 				<li>JeubWear</li>
 				<li>ST_GnomeClothing</li>
+				<li>GoblinWear</li>
 				<li>FrenchInfantryApparelBP</li>
 				<li>FrenchLightInfantryApparel</li>
 				<li>FrenchGreandierApparel</li>
@@ -106,6 +113,7 @@
 				<li>RoyalTier7</li>
 				<li>JeubWear</li>
 				<li>ST_GnomeClothing</li>
+				<li>Officer</li>
 				<li>FrenchLineOfficerApparel</li>
 				<li>FrenchLineOfficerBicornApparel</li>
 				<li>FrenchGreandierOfficerBearskinApparel</li>
@@ -113,7 +121,7 @@
 				<li>BritishInfantryOfficerApparel</li>
 				<li>PrussianLandwehrApparel</li>
 				<li>PrussianLandwehrOff</li>
-				<li>FrogmanWear</li>
+				<li>FrogmanWear</li> <!-- Michigan J. Frog -->
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -237,6 +245,7 @@
 				<li>IndustrialBasic</li>
 				<li>JeubWear</li>
 				<li>ST_GnomeClothing</li>
+				<li>GoblinWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -259,6 +268,7 @@
 				<li>SK_Khan_Apparel_Tag</li>
 				<li>WeebClothing</li>
 				<li>FrogmanWear</li>
+				<li>GoblinWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -284,6 +294,8 @@
 				<li>IndustrialMilitaryBasic</li>
 				<li>IndustrialMilitaryAdvanced</li>
 				<li>JeubWear</li>
+				<li>BeetWear</li>
+				<li>ST_BeetClothing</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -304,6 +316,7 @@
 				<li>Royal</li>
 				<li>RoyalTier1</li>
 				<li>RoyalTier2</li>
+				<li>JeubWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -324,6 +337,7 @@
 				<li>RoyalTier2</li>
 				<li>RoyalTier3</li>
 				<li>RoyalTier1</li>
+				<li>JeubWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -345,6 +359,7 @@
 				<li>RoyalTier1</li>
 				<li>Dame</li>
 				<li>RichPirateClothing</li>
+				<li>Gnoble</li>
 			</value>
 		</match>
 		<!-- If it does, add this. -->
@@ -361,6 +376,7 @@
 					<li>RoyalTier1</li>
 					<li>Dame</li>
 					<li>RichPirateClothing</li>
+					<li>Gnoble</li>
 				</tags>
 			</value>
 		</nomatch>
@@ -425,6 +441,7 @@
 			<xpath>/Defs/ThingDef[defName="RWP_M1822Musket"]/weaponTags</xpath>
 			<value>
 				<li>PoorPirate</li>
+				<li>GoblinBow</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -439,6 +456,7 @@
 			<xpath>/Defs/ThingDef[defName="RWP_M1822MusketBayoneted"]/weaponTags</xpath>
 			<value>
 				<li>PoorPirate</li>
+				<li>GoblinBow</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -457,6 +475,7 @@
 				<li>CallOfCthulhu_Lumberjack</li>
 				<li>NeolithicMeleeAdvanced</li>
 				<li>NormalPirate</li>
+				<li>GoblinBasic</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -517,6 +536,8 @@
 				<li>NormalPirate</li>
 				<li>PoorPirate</li>
 				<li>FrogmanMelee</li>
+				<li>GoblinBasic</li>
+				<li>GoblinDecent</li>
 				<!-- <li>Spear</li> -->
 			</value>
 		</match>
@@ -538,6 +559,7 @@
 				<li>RichPirate</li>
 				<li>EgyptianNoble</li>
 				<li>EgyptianHeavy</li>
+				<li>GoblinAdvanced</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -558,6 +580,8 @@
 				<li>CallOfCthulhu_CoastalGuns</li>
 				<li>CallOfCthulhu_Angler</li>
 				<li>CallOfCthulhu_Townsfolk_Angler</li>
+				<li>GoblinTech</li>
+				<li>GoblinGrenadier</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -615,6 +639,7 @@
 				<li>OniRangedAdvanced</li>
 				<li>SimpleGun</li>
 				<li>EgyptianRoyal</li>
+				<li>GoblinTech</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

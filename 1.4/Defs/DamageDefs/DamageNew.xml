@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<DamageDef ParentName="CutBase">
+		<defName>ST_Demolish_Sharp</defName>
+		<buildingDamageFactor>10</buildingDamageFactor>
+		<buildingDamageFactorImpassable>0.75</buildingDamageFactorImpassable>
+	</DamageDef>
+	
+<!--Goblin Poison Damage-->
+
+  <DamageDef>
+    <defName>GoblinPoison</defName>
+    <label>goblin poison</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <additionalHediffs>
+      <li>
+        <hediff>GoblinPoisonBuildup</hediff>
+        <severityPerDamageDealt>0.011</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+		<inverseStatScaling>true</inverseStatScaling>
+      </li>
+    </additionalHediffs>
+    <deathMessage>{0} has realized too late that goblins are real.</deathMessage>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+  
+  <DamageDef ParentName="Bomb">
+    <defName>GoblinPoisonExplosive</defName>
+    <label>goblin poison</label>
+    <additionalHediffs>
+      <li>
+        <hediff>GoblinPoisonBuildup</hediff>
+        <severityPerDamageDealt>0.01</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+		<inverseStatScaling>true</inverseStatScaling>
+      </li>
+    </additionalHediffs>
+    <deathMessage>{0} has realized too late that goblins are real.</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <defaultDamage>10</defaultDamage>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+</Defs>

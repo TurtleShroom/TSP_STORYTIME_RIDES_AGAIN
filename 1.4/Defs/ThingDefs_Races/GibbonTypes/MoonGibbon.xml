@@ -7,10 +7,12 @@
     <label>Moon Gibbon</label>
     <description>A mysterious creature initially hailing from colonies on Old Earth's only moon. They were the result of incorporating Archotech technology into a normal gibbon. Incredibly, they thrive on moons and planets without an atmosphere thanks to their Archotech "spacesuits". Moon Gibbons only need to eat a few times a year. \n Using their Archotech abilities, they are capable of teleporting to the planet their moon orbits in order to feed, after which they depart back to their habitat. However, this incredible power is significantly limited. A Moon Gibbon can only teleport to a planet to feed when the heavens are perfectly aligned. This alignment is a phenomenon known as a Gibbonous Moon. Owing to their Archotech origins, Moon Gibbons possess an otherworldly beauty and being near them tends to improve the mood of most people. \n \n  A gibbon, also known as the "lesser ape", is a type of tailless monkey (apes are monkeys) capable of swinging through trees and is the fastest tree-dwelling, flightless mammal on Old Earth. Unlike the greater apes (e.g. chimpanzees and gorillas), lesser apes are significantly smaller, do not form nests, cannot use tools unless genetically engineered to do so (as the Moon Gibbon is), and often mate for life.</description>
     <statBases>
-      <MoveSpeed>5</MoveSpeed>
-      <MarketValue>400</MarketValue>
-      <ComfyTemperatureMin>-300</ComfyTemperatureMin>
-      <ComfyTemperatureMax>200</ComfyTemperatureMax>
+		<MoveSpeed>5</MoveSpeed>
+		<MarketValue>400</MarketValue>
+		<ComfyTemperatureMin>-300</ComfyTemperatureMin>
+		<ComfyTemperatureMax>200</ComfyTemperatureMax>
+		<ToxicSensitivity>1</ToxicSensitivity>
+		<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance> <!-- Literally wears a spacesuit -->
     </statBases>
 	<comps>
 		<li Class="AnimalBehaviours.CompProperties_ThoughtEffecter">
@@ -55,7 +57,7 @@
     </tools>
     <race>
 		<wildBiomes MayRequire="kentington.saveourship2" Inherit="False">
-			<OuterSpaceBiome MayRequire="kentington.saveourship2">1</OuterSpaceBiome>
+			<OuterSpaceBiome MayRequire="kentington.saveourship2">0.001</OuterSpaceBiome>
 		</wildBiomes>
       <body>ST_Ape</body>
       <baseBodySize>0.55</baseBodySize>
@@ -92,6 +94,7 @@
     </race>
 	<tradeTags>
 		<li>ST_Gibbon</li>
+		<li>StorytimeAnimalRare</li>
 		<li>AnimalExotic</li>
 		<li>AnimalInsectSpace</li> <!-- The creature can naturally breathe in space -->
 	</tradeTags>
@@ -111,7 +114,7 @@
     <label>moon gibbon</label>
     <race>MoonGibbon</race>
     <combatPower>15</combatPower>
-	<ecoSystemWeight>0</ecoSystemWeight>
+	<ecoSystemWeight>0.5</ecoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>

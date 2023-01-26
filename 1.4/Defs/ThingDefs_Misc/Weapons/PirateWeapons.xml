@@ -70,7 +70,7 @@
 		<li>Revolver</li>
     </weaponTags>
     <costList>
-      <Steel>30</Steel>
+      <Steel>20</Steel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <recipeMaker>
@@ -154,6 +154,7 @@
 		<li>BritishSkirmish</li>
 		<li>FrenchSkirmish</li>
 		<li>PrussianSkirmish</li>
+		<li>GoblinDecent</li>
     </weaponTags>
     <costList>
       <Steel>60</Steel>
@@ -326,6 +327,7 @@
 		<li>SamuraiRangedHeavy</li>
 		<li>SkeletonRanged</li>
 		<li>Officer</li>
+		<li>GoblinTech</li>
     </weaponTags>
     <verbs>
       <li>
@@ -398,7 +400,7 @@
   <ThingDef ParentName="BaseWeapon">
     <defName>PirateBola</defName>
     <label>bola balls</label>
-    <description>Two heavy balls separated by a rope. This is not particularly harmful, but it tends to trip people up.</description>
+    <description>Two heavy balls separated by a rope. This is not particularly harmful, but it tends to trip people up. It can only be thrown once, so aim carefully!</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Items/PirateWeapons/Bola</texPath>
@@ -410,11 +412,11 @@
     <statBases>
 		<MarketValue>20</MarketValue>
 		<Mass>1</Mass>
-		<AccuracyTouch>0.8</AccuracyTouch>
-		<AccuracyShort>0.75</AccuracyShort>
+		<AccuracyTouch>0.95</AccuracyTouch>
+		<AccuracyShort>0.85</AccuracyShort>
 		<AccuracyMedium>0.7</AccuracyMedium>
 		<AccuracyLong>0.1</AccuracyLong>
-		<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+		<RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
 		<WorkToMake>910</WorkToMake>
     </statBases>
 	<!-- <tradeability>Sellable</tradeability> -->
@@ -439,10 +441,7 @@
 	  <li MayRequire="Dubwise.Rimefeller">Plastic</li>
 	  <li MayRequire="Dubwise.Rimefeller">Composite</li>
     </stuffCategories>
-	<costStuffCount>60</costStuffCount>
-    <costList>
-      <Steel>2</Steel>
-    </costList>
+	<costStuffCount>50</costStuffCount>
     <weaponTags>
       <li>PoorPirate</li>
 	  <li>Slinger</li>
@@ -455,13 +454,13 @@
     <verbs>
       <li>
         <label>throw bola balls</label>
-        <verbClass>Verb_LaunchProjectile</verbClass>
+        <verbClass>Verb_ShootOneUse</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <range>20</range>
         <warmupTime>2</warmupTime>
         <noiseRadius>4</noiseRadius>
         <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
-		<onlyManualCast>false</onlyManualCast>
+		<onlyManualCast>true</onlyManualCast>
         <soundCast>ThrowGrenade</soundCast>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
@@ -557,9 +556,12 @@
 		<li>PoorPirate</li>
 		<li>NormalPirate</li>
 		<li>CallOfCthulhu_Lumberjack</li>
+		<li>CallOfCthulhu_CoastalMelee</li>
+		<li>CallOfCthulhu_Angler</li>
 		<li>MedievalMeleeDestructive</li>
 		<li>BritishMelee</li>
 		<li>BritishInfantryMelee</li>
+		<li>GoblinDecent</li>
     </weaponTags>
     <statBases>
       <WorkToMake>5000</WorkToMake>
@@ -661,14 +663,13 @@
       <li>
         <label>head</label>
         <capacities>
-          <li>Blunt</li>
 		  <li>Poke</li>
 		  <li>Cut</li>
 		  <li>Demolish</li>
 		  <li>TSP_ST_Thump</li>
         </capacities>
         <power>36</power>
-        <cooldownTime>3.85</cooldownTime>
+        <cooldownTime>4</cooldownTime>
       </li>
     </tools>
 	<comps>
