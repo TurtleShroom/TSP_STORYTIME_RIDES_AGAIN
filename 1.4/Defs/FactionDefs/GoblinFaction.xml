@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
   <FactionDef>
     <defName>GoblinTown</defName>
     <label>goblin clan</label>
-    <description>The Politically Organized Goblins.</description>
+    <description>Politically Organized Goblins.</description>
     <pawnsPlural>goblins</pawnsPlural>
     <settlementGenerationWeight>0.4</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
@@ -12,16 +13,32 @@
     <canMakeRandomly>true</canMakeRandomly>
     <canStageAttacks>true</canStageAttacks>
 	<canSiege>true</canSiege>
+	<basicMemberKind>GoblinPeon</basicMemberKind>
     <factionIconPath>World/Goblins/GoblinLogo</factionIconPath>
     <colorSpectrum>
       <li>(150, 175, 25)</li>
     </colorSpectrum>
     <disallowedMemes>
-      <li MayRequire="vanillaexpanded.vmemese">VME_Vegan</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Gestalt</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginChristian</li>
+		
+		<!-- If you have the Mod -->
+		<li MayRequire="Qux.factionhippie">PeaceLove</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Vegan</li>
+		<li MayRequire="Zezz.Altrumeme">Altruism</li>
+		<li MayRequire="Sarg.AlphaMemes">AM_NonViolence</li>
     </disallowedMemes>
     <requiredMemes>
       <li MayRequire="vanillaexpanded.vmemese">VME_Scrapper</li>
     </requiredMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+	</disallowedPrecepts>
     <allowedCultures>
 		<li>STGoblin</li>
 	</allowedCultures>
@@ -40,6 +57,7 @@
 		<li>Caravan_Neolithic_BulkGoods</li>
 		<li>Caravan_Neolithic_WarMerchant</li>
 		<li>Caravan_Neolithic_Slaver</li>
+		<li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Drugs</li>
 		<li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Textiles</li>
 		<li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Farming</li>
     </caravanTraderKinds>
@@ -89,7 +107,7 @@
           <GoblinPeon>20</GoblinPeon>
           <GoblinArcher>20</GoblinArcher>
           <GoblinRunner>25</GoblinRunner>
-          <GoblinTinkerer>10</GoblinTinkerer>
+          <GoblinTinkerer>30</GoblinTinkerer>
 		  <GoblinWarrior>20</GoblinWarrior>
           <GoblinWarlord>5</GoblinWarlord>
         </options>
@@ -100,13 +118,14 @@
           <GoblinTrader>1</GoblinTrader>
         </traders>
         <carriers>
-          <Muffalo>100</Muffalo>
+          <Muffalo>1</Muffalo>
+		  <Elephant>100</Elephant>
         </carriers>
         <guards>
           <GoblinPeon>20</GoblinPeon>
           <GoblinArcher>20</GoblinArcher>
           <GoblinRunner>25</GoblinRunner>
-          <GoblinTinkerer>10</GoblinTinkerer>
+          <GoblinTinkerer>30</GoblinTinkerer>
 		  <GoblinWarrior>20</GoblinWarrior>
           <GoblinWarlord>5</GoblinWarlord>
         </guards>
@@ -123,7 +142,7 @@
         </options>
       </li>
     </pawnGroupMakers>
-    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    <settlementTexturePath>World/Goblins/GoblinLogo</settlementTexturePath>
 	<modExtensions>
       <li Class="FactionSounds.FactionSound">
         <soundDef>Goblin_Town</soundDef>
