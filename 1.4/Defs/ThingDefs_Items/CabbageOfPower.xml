@@ -3,7 +3,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>CabbageOfPower</defName>
     <label>Cabbage of Power</label>
-    <description>"'Why is he carrying a cabbage', they asked, full of mirth." \n \n "'What is he going to do, pelt us', they queried, bursting into laughter." \n \n "'It's just a vegetable', they said, guffawing at my weapon of choice." \n \n "Oh, how they laughed at me. \n \n "I laughed as I dug their graves."</description>
+    <description>"'Why is he carrying a cabbage,' they asked, full of mirth." \n \n "'What is he going to do, pelt us?' they queried, bursting into laughter." \n \n "'It's just a vegetable,' they said, guffawing at my weapon of choice." \n \n "Oh, how they laughed at me." \n \n "I laughed as I dug their graves."</description>
     <techLevel>Neolithic</techLevel>
     <graphicData>
       <texPath>Things/Items/PowerCabbage</texPath>
@@ -44,12 +44,12 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Cabbage_Toss</defaultProjectile>
-        <warmupTime>0.8</warmupTime>
+        <warmupTime>1.05</warmupTime>
         <range>100</range>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <burstShotCount>2</burstShotCount>
         <soundCast>Interact_BeatFire</soundCast>
-        <muzzleFlashScale>30</muzzleFlashScale>
+        <muzzleFlashScale>300</muzzleFlashScale>
       </li>
     </verbs>
     <tools>
@@ -88,7 +88,7 @@
 		  <damageDef>ST_CabbageBlast</damageDef>
 		  <damageAmountBase>60</damageAmountBase>
 		  <armorPenetrationBase>0.75</armorPenetrationBase>
-		  <speed>30</speed>
+		  <speed>10</speed>
 		</projectile>
     </ThingDef>
 
@@ -102,7 +102,7 @@
 		<hediffSolid>ST_CabbageBlast</hediffSolid>
 		<impactSoundType>Slice</impactSoundType>
 		<armorCategory>Blunt</armorCategory>
-		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<overkillPctToDestroyPart>0~0.2</overkillPctToDestroyPart>
 		<isRanged>true</isRanged>
 		<makesAnimalsFlee>true</makesAnimalsFlee>
    </DamageDef>
@@ -115,7 +115,7 @@
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
-        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelTendedWellInner>slawed</labelTendedWellInner>
         <labelSolidTendedWell>slawed</labelSolidTendedWell>
       </li>
       <li Class="HediffCompProperties_Infecter">
@@ -127,12 +127,12 @@
       </li>
     </comps>
     <injuryProps>
-      <painPerSeverity>0.025</painPerSeverity>
-      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <painPerSeverity>0.007</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00525</averagePainPerSeverityPermanent>
       <bleedRate>0.06</bleedRate>
       <canMerge>false</canMerge>
-      <destroyedLabel>Blasted off by a cabbage</destroyedLabel>
-      <destroyedOutLabel>Blasted out by a cabbage</destroyedOutLabel>
+      <destroyedLabel>blasted off by a cabbage</destroyedLabel>
+      <destroyedOutLabel>blasted out by a cabbage</destroyedOutLabel>
     </injuryProps>
   </HediffDef>
 </Defs>

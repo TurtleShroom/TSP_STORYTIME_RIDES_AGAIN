@@ -3,9 +3,10 @@
 
   <ThingDef ParentName="BasePawn" Name="ST_MiracleAnimal" Abstract="True">
     <statBases>
-      <LeatherAmount>40</LeatherAmount>
-      <ToxicResistance>0.5</ToxicResistance>
-      <ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+		<MeatAmount>100</MeatAmount>
+		<LeatherAmount>100</LeatherAmount>
+		<ToxicResistance>1</ToxicResistance>
+		<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
     </statBases>
     <race>
       <thinkTreeMain>Animal</thinkTreeMain>

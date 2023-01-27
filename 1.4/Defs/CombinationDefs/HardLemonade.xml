@@ -3,7 +3,7 @@
 <Defs>
 	<ProcessorFramework.ProcessDef>
 		<defName>ST_MikesHardLemonade</defName>
-		<thingDef>MikesLemonade</thingDef>
+		<thingDef>ST_MikesLemonade</thingDef>
 		<ingredientFilter>
 		<thingDefs>
 			<li>ST_Lemon</li>
@@ -11,10 +11,10 @@
 		</ingredientFilter>
 		<processDays>3</processDays> <!-- in days, a day is 60,000 ticks -->
 		<capacityFactor>1</capacityFactor>
-		<efficiency>0.5</efficiency>
+		<efficiency>0.75</efficiency>
 		<usesTemperature>true</usesTemperature>
 		<temperatureSafe>-20.0~64.0</temperatureSafe>
-		<temperatureIdeal>7.0~32.0</temperatureIdeal>
+		<temperatureIdeal>-7.0~32.0</temperatureIdeal>
 		<ruinedPerDegreePerHour>0.001</ruinedPerDegreePerHour>
 		<speedBelowSafe>0.1</speedBelowSafe>
 		<speedAboveSafe>1.0</speedAboveSafe>
@@ -33,7 +33,7 @@
 		<customLabel>hard lemonade</customLabel>
 		<destroyChance>0.0</destroyChance>
 		<bonusOutputs>
-			<Rat>(0.1, 1)</Rat>
+			<Horse>(0.001, 1)</Horse>
 		</bonusOutputs>
 	</ProcessorFramework.ProcessDef>
 </Defs>
