@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RecipeDef>
+		<defName>ST_MakeGoblinPoison</defName>
+		<label>grind goblin poison</label>
+		<description>Mix goblin poison from regular poison and worms.</description>    
+		<jobString>mixing goblin poison</jobString>
+		<workAmount>800</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<recipeUsers>
+			<li>Grinder</li>
+			<li>ElectricGrinder</li>
+		</recipeUsers>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_Poison</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_Worm</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_Poison</li>
+				<li>ST_Worm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_GoblinPoison>15</ST_GoblinPoison>
+		</products>
+	</RecipeDef>
+  
+</Defs>
+  

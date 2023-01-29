@@ -2,7 +2,7 @@
 
 <Defs>
   <ThingDef ParentName="ResourceBase">
-    <defName>GoblinPoison</defName>
+    <defName>ST_GoblinPoison</defName>
     <label>goblin poison</label>
     <description>A special type of poison cooked up by some sadistic goblin. Designed to inflict as much pain as possible, it also has a greater than normal tendency to cause permanent damage to its victims.</description>
     <graphicData>
@@ -14,7 +14,7 @@
       <Mass>0.01</Mass>
     </statBases>
     <thingCategories>
-      <li>ST_Poison</li>
+      <li>Drugs</li>
     </thingCategories>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
@@ -30,7 +30,7 @@
 		<optimalityOffsetFeedingAnimals>-999</optimalityOffsetFeedingAnimals>
 		<outcomeDoers>
 			<li Class="IngestionOutcomeDoer_GiveHediff">
-			<hediffDef>GoblinPoisonBuildup</hediffDef>
+			<hediffDef>ST_GoblinPoisonBuildup</hediffDef>
 			<severity>0.5</severity>
 			<divideByBodySize>true</divideByBodySize>
 			</li>

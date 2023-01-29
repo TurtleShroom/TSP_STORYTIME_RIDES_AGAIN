@@ -121,7 +121,7 @@
 	<ThoughtDef>
 		<defName>TSP_ST_ButterscotchHigh_Thought</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>TSP_ST_ButterscotchHigh</hediff>
+		<hediff>TSP_ST_SpikedButterscotchHigh</hediff>
 		<stages>
 		  <li>
 			<label>ate spiked butterscotch</label>
@@ -159,7 +159,7 @@
 	<HediffDef ParentName="DrugToleranceBase">
 		<defName>TSP_ST_SpikedButterscotch_Tolerance</defName>
 		<label>spiked butterscotch</label>
-		<description>A built-up tolerance to spiked butterscotch. The more severe this tolerance is, the more spiked butterscotch that it takes to get the synesthesia effect.</description>
+		<description>A built-up tolerance to the halluciogenic effects of spiked butterscotch. The more severe this tolerance is, the more spiked butterscotch that it takes to get the synesthesia effect.</description>
 		<defaultLabelColor>227, 150, 62</defaultLabelColor>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<comps>
@@ -208,15 +208,13 @@
 						<capacity>Hearing</capacity>
 						<offset>-0.2</offset>
 					</li>
-						<li>
-							<mentalStateGivers>
-								<li>
-									<mentalState>Binging_DrugMajor</mentalState>
-									<mtbDays>20</mtbDays>
-								</li>
-							</mentalStateGivers>
-						</li>
 				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Binging_DrugMajor</mentalState>
+						<mtbDays>20</mtbDays>
+					</li>
+				</mentalStateGivers>
 			</li>
 		</stages>
 	</HediffDef>
@@ -287,6 +285,7 @@
 				<li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
 			</categories>
 			<thingDefs>
+				<li>ST_Butterscotch</li>
 				<li>HerbaLeaves</li>
 				<li>GuamLeaves</li>
 				<li>SmokeleafLeaves</li>
@@ -300,6 +299,21 @@
 				<li MayRequire="rince.dowcdrug1997">D_OWC</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
+			</categories>
+			<thingDefs>
+				<li>ST_Butterscotch</li>
+				<li>HerbaLeaves</li>
+				<li>GuamLeaves</li>
+				<li>SmokeleafLeaves</li>
+				<li>PsychoidLeaves</li>
+				<li MayRequire="stoneanvil.smokeleaf.genetics.korundgen.kush">KorundgenKushBuds</li>
+				<li MayRequire="senbulworth.angeldust">AngelDust</li>
+				<li MayRequire="rince.dowcdrug1997">D_OWC</li>
+			</thingDefs>
+		</defaultIngredientFilter>
 		<products>
 			<TSP_ST_SpikedButterscotch_Wort>10</TSP_ST_SpikedButterscotch_Wort>
 		</products>
@@ -310,8 +324,9 @@
 		<label>spiked butterscotch batter</label>
 		<description>Molten butterscotch and recreational drugs, ground and ready todray. This substance needs to ferment and solidfy in a fermenting barrel before it is usable as a drug.</description>
 		<graphicData>
-		<texPath>Things/Item/Resource/Wort</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Item/Resource/Wort</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(227, 150, 62)</color>
 		</graphicData>
 		<healthAffectsPrice>false</healthAffectsPrice>
 		<rotatable>false</rotatable>

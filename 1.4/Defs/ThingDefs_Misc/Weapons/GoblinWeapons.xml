@@ -29,7 +29,7 @@
       <li>MeleePiercer</li>
     </weaponClasses>
     <costList>
-      <GoblinPoison>30</GoblinPoison>
+      <ST_GoblinPoison>30</ST_GoblinPoison>
     </costList> 
     <costStuffCount>30</costStuffCount>
     <statBases>
@@ -54,7 +54,7 @@
       <li>
         <label>blade</label>
         <capacities>
-          <li>GoblinPoison</li>
+          <li>ST_GoblinPoison</li>
         </capacities>
         <power>10</power>
         <cooldownTime>1.5</cooldownTime>
@@ -62,7 +62,7 @@
       <li>
         <label>point</label>
         <capacities>
-          <li>GoblinPoison</li>
+          <li>ST_GoblinPoison</li>
         </capacities>
         <power>9</power>
         <cooldownTime>1.7</cooldownTime>
@@ -96,7 +96,7 @@
       <li>MeleePiercer</li>
     </weaponClasses>
     <costList>
-      <GoblinPoison>50</GoblinPoison>
+      <ST_GoblinPoison>50</ST_GoblinPoison>
     </costList> 
     <costStuffCount>50</costStuffCount>
     <statBases>
@@ -122,7 +122,7 @@
       <li>
         <label>point</label>
         <capacities>
-          <li>GoblinPoison</li>
+          <li>ST_GoblinPoison</li>
         </capacities>
         <power>14</power>
         <armorPenetration>0.50</armorPenetration>        
@@ -145,7 +145,7 @@
     <techLevel>Medieval</techLevel>
     <costStuffCount>50</costStuffCount>
     <costList>
-      <GoblinPoison>50</GoblinPoison>
+      <ST_GoblinPoison>50</ST_GoblinPoison>
     </costList> 
     <statBases>
       <WorkToMake>6000</WorkToMake>
@@ -187,7 +187,7 @@
         <label>flanges</label>
         <labelUsedInLogging>false</labelUsedInLogging>
         <capacities>
-          <li>GoblinPoison</li>
+          <li>ST_GoblinPoison</li>
         </capacities>
         <armorPenetration>0.25</armorPenetration> 
         <power>21</power>
@@ -213,7 +213,7 @@
       <li>GoblinDecent</li>
     </weaponTags>
     <costList>
-      <GoblinPoison>50</GoblinPoison>
+      <ST_GoblinPoison>50</ST_GoblinPoison>
     </costList> 
     <costStuffCount>50</costStuffCount>
     <statBases>
@@ -237,7 +237,7 @@
       <li>
         <label>head</label>
         <capacities>
-          <li>Demolish_Sharp</li>
+          <li>ST_Demolish_Sharp</li>
         </capacities>
         <power>10</power>
         <cooldownTime>1</cooldownTime>
@@ -245,7 +245,7 @@
       <li>
         <label>spike</label>
         <capacities>
-          <li>GoblinPoison</li>
+          <li>ST_GoblinPoison</li>
         </capacities>
         <power>12</power>
         <cooldownTime>2</cooldownTime>
@@ -280,7 +280,7 @@
       <li>GoblinAdvanced</li>
     </weaponTags>
     <costList>
-      <GoblinPoison>75</GoblinPoison>
+      <ST_GoblinPoison>75</ST_GoblinPoison>
     </costList> 
     <costStuffCount>100</costStuffCount>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
@@ -304,7 +304,7 @@
       <li>
         <label>point</label>
         <capacities>
-          <li>GoblinPoison</li>
+          <li>ST_GoblinPoison</li>
         </capacities>
         <power>20</power>
         <cooldownTime>2.6</cooldownTime>
@@ -312,7 +312,7 @@
       <li>
         <label>edge</label>
         <capacities>
-          <li>GoblinPoison</li>
+          <li>ST_GoblinPoison</li>
         </capacities>
         <power>20</power>
         <cooldownTime>2.6</cooldownTime>
@@ -355,7 +355,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <damageDef>GoblinPoison</damageDef>
+      <damageDef>ST_GoblinPoison</damageDef>
       <damageAmountBase>8</damageAmountBase>
       <speed>44</speed>
     </projectile>
@@ -432,14 +432,14 @@
 						<MaxShots>1</MaxShots>
 						<AmmoFilter>
 							<thingDefs>
-								<li>GoblinPoison</li>
+								<li>ST_GoblinPoison</li>
 							</thingDefs>
 						</AmmoFilter>
 						<ItemsPerShot>1</ItemsPerShot>
 						<ReloadTimePerShot>0.15</ReloadTimePerShot>
 						<NewVerbClass>Verb_Shoot</NewVerbClass>
 						<GenerateAmmo>
-							<GoblinPoison>5~15</GoblinPoison>
+							<ST_GoblinPoison>5~15</ST_GoblinPoison>
 						</GenerateAmmo>
 					</li>
 				</comps>
@@ -470,9 +470,19 @@
       <AccuracyLong>0.47</AccuracyLong>
       <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
     </statBases>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+	  
+	  <!-- Mod support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+    </stuffCategories>
     <costList>
-      <Steel>75</Steel>
-      <GoblinPoison>25</GoblinPoison>
+      <!-- <Steel>75</Steel> -->
+      <ST_GoblinPoison>25</ST_GoblinPoison>
     </costList>
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -513,7 +523,7 @@
       <li>
         <label>bayonet</label>
         <capacities>
-          <li>GoblinPoison</li>
+          <li>ST_GoblinPoison</li>
         </capacities>
         <power>15</power>
         <cooldownTime>3</cooldownTime>
@@ -573,7 +583,7 @@
       <arcHeightFactor>2.2</arcHeightFactor>
       <explosionRadius>1.5</explosionRadius>
 	  <stoppingPower>6</stoppingPower>
-      <damageDef>GoblinPoisonExplosive</damageDef>
+      <damageDef>ST_GoblinPoisonExplosive</damageDef>
       <explosionDelay>80</explosionDelay>
     </projectile>
   </ThingDef>
@@ -597,7 +607,7 @@
     </statBases>
     <costList>
       <Chemfuel>50</Chemfuel>
-      <GoblinPoison>50</GoblinPoison>
+      <ST_GoblinPoison>50</ST_GoblinPoison>
     </costList>
     <weaponTags>
       <li>GoblinTech</li>
@@ -626,7 +636,7 @@
     <comps>
       <li Class="CompProperties_Explosive">
         <explosiveRadius>2.0</explosiveRadius>
-        <explosiveDamageType>GoblinPoisonExplosive</explosiveDamageType>
+        <explosiveDamageType>ST_GoblinPoisonExplosive</explosiveDamageType>
         <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
       </li>
 	  <li>

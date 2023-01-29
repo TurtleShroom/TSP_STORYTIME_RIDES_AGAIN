@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<Defs>
   <ThingDef ParentName="MakeableDrugBase">
     <defName>GoblinCrack</defName>
     <label>goblin psychite</label>
-    <description>Coliqually known as 'goblin crack', 'black crack', and many other names, goblin psychite is a special form of Flake that was probably brewed up in some makeshift goblin laboratory. It produces an impressive high and an equally impressive crashing aftermath.</description>
+    <description>Coliqually known as 'goblin crack', 'Goblin Flake' 'black crack', and many other names, goblin psychite is a special form of Flake that was probably brewed up in some makeshift goblin laboratory. It produces an impressive high and an equally impressive crashing aftermath.</description>
     <descriptionHyperlinks>
 		<thingDef>Flake</thingDef>
 		<HediffDef>GoblinCrackHigh</HediffDef>
@@ -43,6 +43,7 @@
       <ingestReportString>Snorting {0}.</ingestReportString>
       <useEatingSpeedStat>false</useEatingSpeedStat>
       <chairSearchRadius>0</chairSearchRadius>
+	  <tableDesired>false</tableDesired>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>GoblinCrackHigh</hediffDef>
@@ -69,13 +70,13 @@
       <soundWorking>Recipe_Drug</soundWorking>
     </recipeMaker>
     <costList>
-      <PsychoidLeaves>4</PsychoidLeaves>
-      <Worm>6</Worm>
+      <PsychoidLeaves>5</PsychoidLeaves>
+      <ST_Worm>6</ST_Worm>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Psychite</chemical>
-        <addictiveness>0.06</addictiveness>
+        <addictiveness>0.15</addictiveness>
         <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
         <isCombatEnhancingDrug>true</isCombatEnhancingDrug>

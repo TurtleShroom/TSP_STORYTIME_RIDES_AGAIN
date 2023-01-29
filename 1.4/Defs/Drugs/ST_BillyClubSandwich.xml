@@ -26,16 +26,22 @@
 				<li>PlantFoodRaw</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 			  </categories>
+			  <thingDefs>
+				<li>ST_ProcessedCheese</li>
+			  </thingDefs>
 			</filter>
 			<count>10</count>
 		  </li>
 		</ingredients>
 		<fixedIngredientFilter>
-		  <categories>
-			<li>MeatRaw</li>
-			<li>PlantFoodRaw</li>
-			<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
-		  </categories>
+			<categories>
+				<li>MeatRaw</li>
+				<li>PlantFoodRaw</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			</categories>
+			<thingDefs>
+				<li>ST_ProcessedCheese</li>
+			</thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 		  <categories>
@@ -60,7 +66,7 @@
 		<description>''It's a sandwich, but you sense that something is off about it...'' \n \n Across the galaxy, truncheons have many terms. Night stick, rod, punisher, pacifier, cattle prod, cop stop, stopping power, melee weapon, club, and glitter delay are just some of them. However, one of the oldest terms, originating from certain regions on Old Earth, is ''billy club''. That is where this sandwich gets its name, and for the exact same reason a truncheon was called that. \n \n For reasons unknown to science, consuming this sandwich can, and will, immediately incapacitate whosoever dares to eat it. However, its consumption is not worthless. The poison in a Billy Club Sandwich is not lethal and though highly addictive and dangerous to one's stomach in the long term, it nonetheless bestows tremendous healing properties on any man that eats it. \n \n Eating a Billy Club Sandwich has been known to save lives at the cost of incapacitation for a day or so. The immunity gains from it are worth passing out over.</description>
 		<descriptionHyperlinks>
 			<!-- <RecipeDef>TSP_ST_BoDetox</RecipeDef> -->
-			<HediffDef>PoisonSting</HediffDef>
+			<HediffDef>ST_PoisonSting</HediffDef>
 		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Items/Resources/BillyClub</texPath>
@@ -97,11 +103,12 @@
 			<ingestCommandString>Eat {0}</ingestCommandString>
 			<ingestReportString>Eating sandwich.</ingestReportString>
 			<useEatingSpeedStat>true</useEatingSpeedStat>
+			<tableDesired>true</tableDesired>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>PoisonSting</hediffDef>
+					<hediffDef>ST_PoisonSting</hediffDef>
 					<severity>1</severity>
-					<toleranceChemical>PoisonSting</toleranceChemical>
+					<toleranceChemical>ST_PoisonSting</toleranceChemical>
 					<divideByBodySize>false</divideByBodySize>
 				</li>
 				<li Class="IngestionOutcomeDoer_OffsetNeed">
@@ -109,7 +116,7 @@
 					<offset>-2</offset>
 				</li>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>PoisonTolerance</hediffDef>
+					<hediffDef>ST_PoisonTolerance</hediffDef>
 					<severity>0.065</severity>
 					<divideByBodySize>false</divideByBodySize>
 				</li>
@@ -119,7 +126,7 @@
 		</ingestible>
 		<comps>
 		  <li Class="CompProperties_Drug">
-			<chemical>PoisonSting</chemical>
+			<chemical>ST_PoisonSting</chemical>
 			<addictiveness>0.66</addictiveness>
 			<minToleranceToAddict>0.07</minToleranceToAddict>
 			<existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
@@ -132,8 +139,8 @@
 	</ThingDef>
 
   <HediffDef>
-    <defName>PoisonSting</defName>
-    <label>poison sting</label>
+    <defName>ST_PoisonSting</defName>
+    <label>Poison Sting</label>
     <labelNoun>poison sting</labelNoun>
     <description>"That sandwich... I think it gave me food poisoning..."</description>
 	<descriptionHyperlinks>
@@ -170,6 +177,7 @@
 				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
 				<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_Corprus</li>
 				<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_CorprusPermanent</li>
+				<li MayRequire="fxz.mouthulcers">FXZ_MouthUlcers</li>
 			</makeImmuneTo>
 			<statOffsets>
 				<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">-0.99</HSAU_GhoulismSusceptibility>
@@ -202,10 +210,10 @@
   </HediffDef>
   
   <ChemicalDef>
-    <defName>PoisonSting</defName>
+    <defName>ST_PoisonSting</defName>
     <label>Poison Sting</label>
-    <addictionHediff>BillyAddiction</addictionHediff>
-    <toleranceHediff>PoisonTolerance</toleranceHediff>
+    <addictionHediff>ST_BillyAddiction</addictionHediff>
+    <toleranceHediff>ST_PoisonTolerance</toleranceHediff>
     <onGeneratedAddictedToleranceChance>0.4</onGeneratedAddictedToleranceChance>
     <onGeneratedAddictedEvents>
       <li>
@@ -219,7 +227,7 @@
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">
-    <defName>Chemical_Billy</defName>
+    <defName>ST_Chemical_Billy</defName>
     <needClass>Need_Chemical</needClass>
     <label>Billy Club sandwiches</label>
     <description>This Pawn feels a hunger for Billy Club sandwiches.</description>
@@ -227,7 +235,7 @@
   </NeedDef>
   
   <HediffDef ParentName="DrugToleranceBase">
-    <defName>PoisonTolerance</defName>
+    <defName>ST_PoisonTolerance</defName>
     <label>poison sting tolerance</label>
     <description>A built up immunity to the poison contained in Billy Club sandwiches. No amount of tolerance stops the incapacitating effects of consuming the sandwich.</description>
 	<descriptionHyperlinks>
@@ -239,7 +247,7 @@
         <severityPerDay>-0.08</severityPerDay>
       </li>
       <li Class="HediffCompProperties_DrugEffectFactor">
-        <chemical>PoisonSting</chemical>
+        <chemical>ST_PoisonSting</chemical>
       </li>
     </comps>
     <hediffGivers>
@@ -255,14 +263,14 @@
   </HediffDef>
   
   <HediffDef ParentName="AddictionBase">
-    <defName>BillyAddiction</defName>
+    <defName>ST_BillyAddiction</defName>
     <label>sandwich addiction</label>
     <description>A need for Billy Club sandwiches...</description>
 	<descriptionHyperlinks>
 		<ThingDef>BillyClub</ThingDef>
 	</descriptionHyperlinks>
     <hediffClass>Hediff_Addiction</hediffClass>
-    <causesNeed>Chemical_Billy</causesNeed>
+    <causesNeed>ST_Chemical_Billy</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.09</severityPerDay>
@@ -298,9 +306,9 @@
   </HediffDef>
   
   <ThoughtDef>
-    <defName>BillyWithdrawal</defName>
+    <defName>ST_BillyWithdrawal</defName>
     <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>BillyAddiction</hediff>
+    <hediff>ST_BillyAddiction</hediff>
     <validWhileDespawned>true</validWhileDespawned>
 	<stages>
       <li>
