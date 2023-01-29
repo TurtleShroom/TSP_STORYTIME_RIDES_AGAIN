@@ -23,11 +23,11 @@
     <pawnsPlural>bean guardians</pawnsPlural>
     <settlementGenerationWeight>0.2</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
-	<maxCountAtGameStart>1</maxCountAtGameStart>
+	<maxCountAtGameStart>2</maxCountAtGameStart>
 	<maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
     <canMakeRandomly>true</canMakeRandomly>
     <canStageAttacks>true</canStageAttacks>
-    <leaderTitle>warlord</leaderTitle>
+    <leaderTitle>Beanblax</leaderTitle>
     <factionIconPath>World/BeanMen/BeanGuardianFactionLogo</factionIconPath>
     <naturalEnemy>true</naturalEnemy>
     <colorSpectrum>
@@ -41,10 +41,14 @@
       <li MayRequire="Ludeon.RimWorld.Ideology">HAR_Xenophobia</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
     </requiredMemes>
-    <allowedCultures><li>STBeanGuardian</li></allowedCultures>
+    <allowedCultures>
+		<li>STBeanGuardian</li>
+	</allowedCultures>
+	<!--
     <structureMemeWeights>
       <STBeanGuardianOrigin MayRequire="Ludeon.RimWorld.Ideology">1</STBeanGuardianOrigin>
     </structureMemeWeights>
+	-->
     <factionNameMaker>NamerFactionBeanGuardians</factionNameMaker>
     <settlementNameMaker>BeanSettlementName</settlementNameMaker>
     <techLevel>Industrial</techLevel>
@@ -89,6 +93,8 @@
         <kindDef>Peaceful</kindDef>
         <options>
           <BeanGuardianBasic>1000</BeanGuardianBasic>
+          <BeanGuardianAdvanced>25</BeanGuardianAdvanced>
+		  <BeanGuardianLeader>1</BeanGuardianLeader>
         </options>
       </li>
       <li>

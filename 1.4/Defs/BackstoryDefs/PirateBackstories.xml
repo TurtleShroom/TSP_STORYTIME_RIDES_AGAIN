@@ -48,10 +48,11 @@
 		<key>Crafting</key>
         <value>3</value>
       </li>
+	  <li>
+		<key>Social</key>
+		<value>-4</value>
+	  </li>
     </skillGains>
-    <workDisables>
-	  <li>Social</li>
-    </workDisables>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
@@ -191,13 +192,18 @@
         <value>5</value>
       </li>
 	  <li>
+		<key>Shooting</key>
+		<value>5</value>
+	  </li>
+	  <li>
         <key>Intellectual</key>
-        <value>5</value>
+        <value>1</value>
 	  </li>
     </skillGains>
 	<forcedTraitsChance>
       <li>
         <defName>Abrasive</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
@@ -216,9 +222,11 @@
 	<forcedTraitsChance>
       <li>
         <defName>Bloodlust</defName>
+		<chance>100</chance>
       </li>
 	  <li>
 		<defName>Tough</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
 		<workDisables>
@@ -232,7 +240,7 @@
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
     <defName>ST_TreasureHunter</defName>
     <title>Treasure Hunter</title>
-    <baseDesc>Unlike most Golden Age pirates, [PAWN_nameDef] never set foot on a spaceship. Rather, [PAWN_pronoun] spent most of [PAWN_possessive] adult life searching for a hidden treasure on this Rim World without success. When a local Golden Age pirate chapter offered [PAWN_objective] a chance to attain vast treasures, he immediately jumped on the opportunity.</baseDesc>
+    <baseDesc>Unlike most Golden Age pirates, [PAWN_nameDef] never set foot on a spaceship. Rather, [PAWN_pronoun] spent most of [PAWN_possessive] adult life searching for a hidden treasure on this Rim World without success. When a local Golden Age pirate chapter offered [PAWN_objective] a chance to attain vast treasures, [PAWN_pronoun] immediately jumped on the opportunity.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -287,6 +295,7 @@
 	<spawnCategories>
       <li>PirateBackstory</li>
 	  <li>Pirate</li>
+	  <li>Raider</li>
 	  <li>Offworld</li>
 	  <li>Sadist</li>
 	  <li>TTancon_Standard</li>
@@ -304,6 +313,7 @@
 	<forcedTraitsChance>
       <li>
         <defName>Psychopath</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
 	<requiredWorkTags>
@@ -314,7 +324,7 @@
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
     <defName>ST_ShipDoctor</defName>
     <title>Pirate Doctor</title> 
-    <baseDesc>[PAWN_nameDef] served as the chief medical expert of a crew of space pirates. Before [PAWN_nameDef] joined, [PAWN_pronoun] had no formal training and relied primarily on herbal remedies and other folk knowledge. Since [PAWN_pronoun] was not seeking to broaden [PAWN_pronoun] skills beyond traditional medicine, [PAWN_pronoun] was replaced with a more open-minded doctor. His skills were perfect for the shoestring budget of Golden Age pirates, however.</baseDesc>
+    <baseDesc>[PAWN_nameDef] served as the chief medical expert of a crew of space pirates. Before [PAWN_nameDef] joined, [PAWN_pronoun] had no formal training and relied primarily on herbal remedies and other folk knowledge. Since [PAWN_pronoun] was not seeking to broaden [PAWN_pronoun] skills beyond traditional medicine at the time, [PAWN_pronoun] was replaced with a more open-minded doctor. His skills were perfect for the shoestring budget of Golden Age pirates, however.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -363,6 +373,7 @@
 	<forcedTraitsChance>
 		<li>
 			<defName>Kind</defName>
+			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
@@ -370,7 +381,7 @@
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
     <defName>ST_Shanghaied</defName>
     <title>Shanghaied</title>
-    <baseDesc>Unlike most Golden Age pirates, [PAWN_nameDef] has never set foot on a spacer's pirate ship, having grown up on this Rim World. This is because [PAWN_pronoun] was kidnapped by Golden Age pirates while passed out drunk, after which [PAWN_pronoun] was forced to join the crew. [PAWN_pronoun] came to love his new job and never left.</baseDesc>
+    <baseDesc>Unlike most Golden Age pirates, [PAWN_nameDef] has never set foot on a spacer's pirate ship, having grown up on this Rim World. This is because [PAWN_pronoun] was kidnapped by Golden Age pirates while passed out on drugs, after which [PAWN_pronoun] was forced to join the crew. [PAWN_pronoun] came to love [PAWN_possessive] new job and never left.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -394,6 +405,7 @@
       <li>
         <defName>DrugDesire</defName>
         <degree>1</degree>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
@@ -439,6 +451,9 @@
 	<workDisables>
       <li>ManualDumb</li>
     </workDisables>
+	<requiredWorkTags Inherit="False">
+		<li>Social</li>
+	</requiredWorkTags>
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
@@ -459,6 +474,7 @@
 	<forcedTraitsChance>
       <li>
         <defName>Nimble</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
@@ -474,7 +490,7 @@
         <value>8</value>
 	  </li>
     </skillGains>
-	<requiredWorkTags>
+	<requiredWorkTags Inherit="False">
 		<li>Crafting</li>
 	</requiredWorkTags>
   </AlienRace.AlienBackstoryDef>
@@ -498,6 +514,7 @@
 	<forcedTraitsChance>
       <li>
         <defName>Brawler</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
@@ -505,7 +522,7 @@
   <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
     <defName>ST_Cannoneer</defName>
     <title>Cannoneer</title>
-    <baseDesc>[PAWN_nameDef] was in charge of manning the rail gun cannons on a pirate spaceship. [PAWN_pronoun] was known as quite the marksman. Those skills transferred effortlessly onto the Rim when [PAWN_pronoun] joined a Golden Age pirate chapter after a falling out with [PAWN_possessive] space pirate captain.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was in charge of manning the rail gun cannons on a pirate spaceship. [PAWN_pronoun] was known as quite the marksman. Those skills transferred effortlessly onto the Rim when [PAWN_pronoun] left after a falling out with [PAWN_possessive] space pirate captain.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>

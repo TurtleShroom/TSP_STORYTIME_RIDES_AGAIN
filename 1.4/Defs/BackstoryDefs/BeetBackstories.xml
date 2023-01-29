@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
   <AlienRace.AlienBackstoryDef Name="BeetnikhBackstories" Abstract="True">
@@ -62,6 +62,7 @@
 	<forcedTraitsChance MayRequire="VanillaExpanded.VCEF">
       <li MayRequire="VanillaExpanded.VCEF">
         <defName MayRequire="VanillaExpanded.VCEF">VCEF_Fisherman</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
 	<spawnCategories>
@@ -116,6 +117,7 @@
       <li>
         <defName>DrugDesire</defName>
         <degree>2</degree>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
 	<workDisables>
@@ -208,14 +210,16 @@
 			-->
 			<li>
 				<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Lush</defName>
+				<chance>100</chance>
 			</li>
 			<li>
 				<defName>Bloodlust</defName>
+				<chance>100</chance>
 			</li>
 			<li>
 				<defName>Brawler</defName>
+				<chance>100</chance>
 			</li>
-			<li MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Lush</li>
 		</forcedTraitsChance>
 		<requiredWorkTags>
 			<li>Violent</li>
@@ -228,9 +232,9 @@
 		  <li>Intellectual</li>
 		  <li>ManualSkilled</li>
 		</workDisables>
-		<conflictingTraits>
-			<li>DrugDesire</li>
-		</conflictingTraits>
+		<disallowedTraits>
+			<DrugDesire>0</DrugDesire>
+		</disallowedTraits>
 		<spawnCategories>
 		  <li>WoodBeetBackstory</li>
 		  <li>Outsider</li>

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AlienRace.AlienBackstoryDef Name="JeubBackstories" Abstract="True">
 	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
-    <bodyTypeMale>Thin</bodyTypeMale>
+    <!-- <bodyTypeMale>Thin</bodyTypeMale> -->
     <bodyTypeFemale>Thin</bodyTypeFemale>
 	<spawnCategories>
       <li>JeubBackstory</li>
@@ -12,7 +12,7 @@
   <AlienRace.AlienBackstoryDef ParentName="JeubBackstories">
     <defName>Livestock_Jeub</defName>
     <title>livestock</title>
-    <baseDesc>[PAWN_nameDef]'s parents intended to eat [PAWN_objective] after [PAWN_possessive] birth. Somehow [PAWN_pronoun] was able to slither away before being eaten and grew up alone in the wilds.</baseDesc>
+    <baseDesc>[PAWN_nameDef]'s parents intended to eat [PAWN_objective] after [PAWN_possessive] birth. Somehow, [PAWN_pronoun] was able to slither away before being eaten and grew up alone in the wilds.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
 		<!--
@@ -40,6 +40,12 @@
 	<workDisables>
 		<li>Social</li>
 	</workDisables>
+	<disallowedTraits>
+		<Cannibal>0</Cannibal>
+		<Psychopath>0</Psychopath>
+		<Brawler>0</Brawler>
+		<Bloodlust>0</Bloodlust>
+	</disallowedTraits>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
@@ -113,24 +119,19 @@
 	<forcedTraitsChance>
 		<li>
 			<defName>Xenophobia</defName>
-			<degree>1</degree>
+			<degree>-1</degree>
+			<chance>100</chance>
 		</li>
 		<li>
 			<defName>Kind</defName>
 			<chance>15</chance>
 		</li>
 	</forcedTraitsChance>
-	<disallowedTraitsChance>
-		<li>
-			<defName>Psychopath</defName>
-		</li>
-		<li>
-			<defName>Cannibal</defName>
-		</li>
-		<li>
-			<defName>Abrasive</defName>
-		</li>
-	</disallowedTraitsChance>
+	<disallowedTraits>
+		<Psychopath>0</Psychopath>
+		<Cannibal>0</Cannibal>
+		<Abrasive>0</Abrasive>
+	</disallowedTraits>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
@@ -140,7 +141,7 @@
   <AlienRace.AlienBackstoryDef ParentName="JeubBackstories">
     <defName>Slum_Child_Jeub</defName>
     <title>Rata Jeub orphan</title>
-    <baseDesc>[PAWN_nameDef] is not native to the Rim. Instead, he lived in the slums of the planet Rata Jeub, the original planet from which all Jeubs originate. [PAWN_pronoun] had to learn many skills to survive in such a competetive environment, and put those to good use when he finally saved up enough pieces of silver to escape.</baseDesc>
+    <baseDesc>[PAWN_nameDef] is not native to the Rim. Instead, he lived in the slums of the planet Rata Jeub, the original planet from which all Jeubs originate. [PAWN_pronoun] had to learn many skills to survive in such a competitive environment, and put those to good use when he finally saved up enough pieces of silver to escape.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -196,11 +197,9 @@
 		<li>Outlander</li>
 		<li>Jews</li> <!-- I didn't make this name up, it's part of the Amogus Mod by Cualaflower -->
 	</spawnCategories>
-	<disallowedTraitsChance>
-		<li>
-			<defName>Kind</defName>
-		</li>
-	</disallowedTraitsChance>
+	<disallowedTraits>
+		<Kind>0</Kind>
+	</disallowedTraits>
 	<requiredWorkTags>
 		<li>Social</li>
 		<li>Violent</li>
@@ -328,17 +327,17 @@
 		<li>Pirate</li>
 		<li>Raider</li>
     </spawnCategories>
-	<disallowedTraitsChance>
-		<li>
-			<defName>Kind</defName>
-		</li>
-	</disallowedTraitsChance>
+	<disallowedTraits>
+		<Kind>0</Kind>
+	</disallowedTraits>
 	<forcedTraitsChance>
       <li>
         <defName>Psychopath</defName>
+		<chance>100</chance>
       </li>
 	  <li>
 		<defName>Brawler</defName>
+		<chance>100</chance>
 	  </li>
     </forcedTraitsChance>
 	<requiredWorkTags>
@@ -366,7 +365,7 @@
         <value>4</value>
       </li>
     </skillGains>
-	<forcedTraitsChanceChance>
+	<forcedTraitsChance>
 		<!--
 		<li>
 			<defName>NaturalMood</defName>
@@ -375,28 +374,19 @@
 		-->
 		<li>
 			<defName>Kind</defName>
+			<chance>100</chance>
 		</li>
-    </forcedTraitsChanceChance>
+    </forcedTraitsChance>
 	<workDisables>
       <li>Violent</li>
     </workDisables>
-	<disallowedTraitsChance>
-		<li>
-			<defName>Psychopath</defName>
-		</li>
-		<li>
-			<defName>Cannibal</defName>
-		</li>
-		<li>
-			<defName>Brawler</defName>
-		</li>
-		<li>
-			<defName>Abrasive</defName>
-		</li>
-		<li>
-			<defName>Bloodlust</defName>
-		</li>
-	</disallowedTraitsChance>
+	<disallowedTraits>
+		<Psychopath>0</Psychopath>
+		<Cannibal>0</Cannibal>
+		<Brawler>0</Brawler>
+		<Abrasive>0</Abrasive>
+		<Bloodlust>0</Bloodlust>
+	</disallowedTraits>
 	<requiredWorkTags>
 		<li>Social</li>
 	</requiredWorkTags>
@@ -438,6 +428,7 @@
 		<li>Pirate</li>
 		<li>Farmer</li>
 		<li>TribalFarmer</li>
+		<li>Tribal</li>
 		<li>Madman</li>
 		<li>WoodBeetBackstory</li>
 	</spawnCategories>

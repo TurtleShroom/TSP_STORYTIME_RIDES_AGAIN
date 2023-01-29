@@ -102,17 +102,11 @@
         <value>3</value>
       </li>
     </skillGains>
-	 <disallowedTraitsChance>
-		<li>
-            <defName>Psychopath</defName>
-        </li>
-		<li>
-            <defName>Cannibal</defName>
-        </li>
-		<li>
-            <defName>Bloodlust</defName>
-        </li>
-    </disallowedTraitsChance>
+	 <disallowedTraits>
+		<Psychopath>0</Psychopath>
+		<Cannibal>0</Cannibal>
+		<Bloodlust>0</Bloodlust>
+    </disallowedTraits>
 	<spawnCategories>
 		<li>Uncommon</li>
 	</spawnCategories>
@@ -146,17 +140,11 @@
         <value>4</value>
       </li>
     </skillGains>
-	 <disallowedTraitsChance>
-        <li>
-            <defName>Bloodlust</defName>
-        </li>
-		<li>
-            <defName>Psychopath</defName>
-        </li>
-		<li>
-            <defName>Cannibal</defName>
-        </li>
-    </disallowedTraitsChance>
+	 <disallowedTraits>
+		<Bloodlust>0</Bloodlust>
+		<Psychopath>0</Psychopath>
+		<Cannibal>0</Cannibal>
+    </disallowedTraits>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="BeetBackstories">
@@ -175,6 +163,7 @@
       <li>
         <defName>DrugDesire</defName>
         <degree>2</degree>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
 	<workDisables>
@@ -218,9 +207,11 @@
 	<forcedTraitsChance>
       <li>
         <defName>Cannibal</defName>
+		<chance>100</chance>
       </li>
 	  <li>
 		<defName>Psychopath</defName>
+		<chance>100</chance>
 	  </li>
     </forcedTraitsChance>
 	<spawnCategories Inherit="False">
@@ -425,8 +416,8 @@
   
   <AlienRace.AlienBackstoryDef Name="PecanJoeBackstories" Abstract="True">
 	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
-    <bodyTypeMale>Male</bodyTypeMale>
-	<bodyTypeFemale>Female</bodyTypeFemale>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+	<bodyTypeFemale>Hulk</bodyTypeFemale>
 	<spawnCategories Inherit="False">
       <li>PecanJoeBackstory</li>
     </spawnCategories>
@@ -436,7 +427,7 @@
     <defName>PecanJoeWoodBeet</defName>
 	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
     <title>Pecan Joe</title>
-    <baseDesc>[PAWN_nameDef] is believed to be a reincarnation of a previous Pecan Joe, the leader of the Wood Beets and in many ways their god.</baseDesc>
+    <baseDesc>[PAWN_nameDef] is believed to be a reincarnation of a previous Pecan Joe, and therefore [PAWN_pronoun] is deemed the rightful leader of all Wood Beets.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -455,19 +446,24 @@
 	<forcedTraitsChance>
       <li>
         <defName>Bloodlust</defName>
+		<chance>100</chance>
       </li>
 	  <li>
 		<defName>Psychopath</defName>
+		<chance>100</chance>
       </li>
       <li>
         <defName>DrugDesire</defName>
         <degree>2</degree>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
 	<spawnCategories Inherit="False">
       <li>WoodBeetJoe</li>
 	  <li>PecanJoeBackstory</li>
     </spawnCategories>
+	<femaleCommonality>0</femaleCommonality>
+	<maleCommonality>999</maleCommonality>
   </AlienRace.AlienBackstoryDef>
   
 </Defs>

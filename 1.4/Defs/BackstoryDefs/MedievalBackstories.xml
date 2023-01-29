@@ -175,6 +175,7 @@
     <forcedTraitsChance>
         <li>
             <defName>Tough</defName>
+			<chance>100</chance>
         </li>
     </forcedTraitsChance>
 	<spawnCategories Inherit="False">
@@ -239,11 +240,11 @@
         </li>
         <li>
             <defName>NightOwl</defName>
-            <chance>50</chance>
+            <chance>60</chance>
         </li>
         <li>
             <defName>Nimble</defName>
-            <chance>50</chance>
+            <chance>100</chance>
         </li>
     </forcedTraitsChance>
 	<spawnCategories Inherit="False">
@@ -324,11 +325,9 @@
         <li>Constructing</li>
         <li>Intellectual</li>
     </workDisables>
-    <disallowedTraitsChance>
-        <li>
-            <defName>Gourmand</defName>
-        </li>
-    </disallowedTraitsChance>
+    <disallowedTraits>
+        <Gourmand>0</Gourmand>
+    </disallowedTraits>
 	<relationSettings>
 		<relationChanceModifierChild>0</relationChanceModifierChild>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
@@ -368,11 +367,11 @@
     <workDisables>
         <li>Intellectual</li>
     </workDisables>
-    <disallowedTraitsChance>
-        <li>
-            <defName>ST_Rich</defName>
-        </li>
-    </disallowedTraitsChance>
+    <disallowedTraits>
+        <ST_Rich>0</ST_Rich>
+		<Greedy>0</Greedy>
+		<VTE_Snob MayRequire="vanillaexpanded.vanillatraitsexpanded">0</VTE_Snob>
+    </disallowedTraits>
 	<spawnCategories Inherit="False">
 		<li>Medieval</li>
 		<li>MedievalPeasant</li>
@@ -442,19 +441,20 @@
 	<forcedTraitsChance>
 		<li>
 			<defName>ST_Rincewind</defName>
+			<chance>100</chance>
 		</li>
 		<li>
 			<defName>Wimp</defName>
+			<chance>100</chance>
 		</li>
 		<li>
 			<defName>Nimble</defName>
+			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
-    <disallowedTraitsChance>
-        <li MayRequire="Torann.ARimworldOfMagic">
-            <defName MayRequire="Torann.ARimworldOfMagic">TM_Gifted</defName>
-        </li>
-    </disallowedTraitsChance>
+    <disallowedTraits>
+		<TM_Gifted MayRequire="Torann.ARimworldOfMagic">0</TM_Gifted>
+    </disallowedTraits>
     <workDisables>
         <li>Violent</li>
     </workDisables>
@@ -480,12 +480,15 @@
 	<forcedTraitsChance>
 		<li>
 			<defName>Psychopath</defName>
+			<chance>100</chance>
 		</li>
 		<li>
 			<defName>Bloodlust</defName>
+			<chance>100</chance>
 		</li>
 		<li MayRequire="Torann.ARimworldOfMagic">
 			<defName MayRequire="Torann.ARimworldOfMagic">TM_Gifted</defName>
+			<chance MayRequire="Torann.ARimworldOfMagic">100</chance>
 		</li>
 	</forcedTraitsChance>
 	<femaleCommonality>0</femaleCommonality>
@@ -501,9 +504,8 @@
 		<relationChanceModifierChild>0</relationChanceModifierChild>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>
 		<relationChanceModifierLover>0</relationChanceModifierLover>
-		<relationChanceModifierLover>0</relationChanceModifierLover>
+		<relationChanceModifierExLover>0</relationChanceModifierExLover>
 		<relationChanceModifierFiance>0</relationChanceModifierFiance>
-		<relationChanceModifierExFiance>0</relationChanceModifierExFiance>
 		<relationChanceModifierSpouse>0</relationChanceModifierSpouse>
 		<relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
 	</relationSettings>
@@ -555,9 +557,11 @@
 	<forcedTraitsChance>
 		<li>
 			<defName>ST_Rich</defName>
+			<chance>100</chance>
 		</li>
 		<li>
 			<defName>Kind</defName>
+			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
 	<spawnCategories Inherit="False">
@@ -573,6 +577,8 @@
     <title>wicked baron</title>
     <baseDesc>[PAWN_nameDef] was an unjust nobleman, ruling over [PAWN_possessive] small fiefdom with an iron fist and earning the hatred of [PAWN_possessive] subjects.</baseDesc>
     <slot>Adulthood</slot>
+	<bodyTypeMale>Fat</bodyTypeMale>
+	<bodyTypeFemale>Fat</bodyTypeFemale>
     <skillGains>
 	  <li>
 		<key>Social</key>
@@ -589,9 +595,11 @@
 	<forcedTraitsChance>
 		<li>
 			<defName>Psychopath</defName>
+			<chance>100</chance>
 		</li>
 		<li>
 			<defName>ST_Rich</defName>
+			<chance>100</chance>
 		</li>
 		<li>
 			<defName>Gourmand</defName>
@@ -710,6 +718,7 @@
 	<forcedTraitsChance>
 		<li>
 			<defName>Greedy</defName>
+			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
 	<spawnCategories Inherit="False">
@@ -727,6 +736,7 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_LibrarianApe</defName>
     <title>accidental ape</title>
+	<titleShort>ex-orangutan</titleShort>
     <baseDesc>The life of [PAWN_nameDef] changed when an accident involving Glitter World tech and a lot of bananas turned [PAWN_objective] into an orangutang. [PAWN_pronoun] didn't mind, though; [PAWN_nameDef] was actually quite angry when, a few years later, [PAWN_possessive] colleagues restored [PAWN_possessive] true form.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -766,6 +776,7 @@
 		<li>
 			<defName>Immunity</defName>
 			<degree>1</degree>
+			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
 	<spawnCategories Inherit="False">
@@ -778,7 +789,7 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Archchancellor</defName>
-    <title>stupid arch-chancellor</title>
+    <title>stupid neptocrat arch-chancellor</title>
 	<titleShort>neptocrat chancellor</titleShort>
     <baseDesc>[PAWN_nameDef] was the arch-chancellor of a prestigious university, appointed only because of his relationship to its president. [PAWN_pronoun] had a rather non-standard approach to scholarship, and preferred to intimidate [PAWN_possessive] underlings with ranged weapons rather than engage in intellectual pursuits.</baseDesc>
     <slot>Adulthood</slot>
@@ -799,9 +810,11 @@
 		</li>
 		<li MayRequire="Torann.ARimworldOfMagic">
 			<defName MayRequire="Torann.ARimworldOfMagic">TM_Gifted</defName>
+			<chance MayRequire="Torann.ARimworldOfMagic">100</chance>
 		</li>
 		<li>
 			<defName>ST_Stupid</defName>
+			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
 	<spawnCategories>
@@ -968,24 +981,14 @@
 			<defName MayRequire="Torann.ARimworldOfMagic">TM_Gifted</defName>
 		</li>
     </forcedTraitsChance>
-    <disallowedTraitsChance>
-		<li>
-			<defName>Nerves</defName>
-			<degree>-2</degree>
-		</li>
-		<li>
-			<defName>Nerves</defName>
-			<degree>-1</degree>
-		</li>
-		<li>
-			<defName>Neurotic</defName>
-			<degree>2</degree>
-		</li>
-		<li>
-			<defName>Neurotic</defName>
-			<degree>1</degree>
-		</li>
-    </disallowedTraitsChance>
+	<!--
+    <disallowedTraits>
+		<Nerves>-2</Nerves>
+		<Nerves>-1</Nerves>
+		<Neurotic>1</Neurotic>
+		<Neurotic>2</Neurotic>
+    </disallowedTraits>
+	-->
 	<femaleCommonality>50</femaleCommonality>
 	<maleCommonality>0</maleCommonality>
   </AlienRace.AlienBackstoryDef> 
@@ -993,7 +996,7 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Courtier</defName>
     <title>courtier</title>
-    <baseDesc>[PAWN_nameDef] was a courtier at the local lord's court. [PAWN_pronoun] spent most of [PAWN_possessive] time networking with the other members of the court.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was a courtier at a local lord's court. [PAWN_pronoun] spent most of [PAWN_possessive] time networking with the other members of the court.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -1052,7 +1055,7 @@
     <defName>ST_MedievalDoctor</defName>
     <title>unskilled doctor</title>
 	<titleShort>Quack</titleShort>
-    <baseDesc>[PAWN_nameDef] was a doctor in [PAWN_possessive] small hamlet, tending to peasants and the poor. Secretly, [PAWN_pronoun] had no idea what [PAWN_pronoun] was doing.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was a doctor in [PAWN_possessive] small hamlet, tending to peasants and the poor. Secretly, [PAWN_nameDef] had no idea what [PAWN_pronoun] was doing.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -1102,6 +1105,7 @@
 	<spawnCategories>
 		<li>Medieval</li>
 		<li>Offworld</li>
+		<li>ESCP_DunmerBackstory</li>
 		<li>HSAU_BS_HLS_Adulthood</li>
 		<li>HSAU_BS_ISC_Adulthood</li>
 	</spawnCategories>
@@ -1127,17 +1131,23 @@
       </li>
     </skillGains>
     <forcedTraitsChance>
+		<!--
         <li>
             <defName>DrugDesire</defName>
 			<degree>1</degree>
             <chance>67</chance>
         </li>
+		-->
+		<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
+			<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Lush</defName>
+			<chance MayRequire="vanillaexpanded.vanillatraitsexpanded">100</chance>
+		</li>
     </forcedTraitsChance>
     <forcedHediffs>
       <li>AlcoholAddiction</li>
     </forcedHediffs>
     <forcedItems>
-      <GnomeBeer>3~15</GnomeBeer>
+      <GnomeBeer>6~15</GnomeBeer>
     </forcedItems>
 	<spawnCategories Inherit="False">
 		<li>Medieval</li>
@@ -1172,6 +1182,7 @@
 		<li>Pirate</li>
 		<li>PirateBackstory</li>
 		<li>WoodBeetBackstory</li>
+		<li>GoblinBackstory</li>
 		<li>Offworld</li>
 		<li>Classical</li>
 		<li>Sadist</li>
@@ -1198,6 +1209,7 @@
     <forcedTraitsChance>
         <li>
             <defName>Psychopath</defName>
+			<chance>100</chance>
         </li>
         <li>
             <defName>NightOwl</defName>
@@ -1205,7 +1217,7 @@
         </li>
         <li>
             <defName>Nimble</defName>
-            <chance>50</chance>
+            <chance>100</chance>
         </li>
     </forcedTraitsChance>
 	<!-- <linkedBackstory>ST_AssassinStudent</linkedBackstory> -->
@@ -1216,6 +1228,7 @@
 		<li>SW_Hutts_Backstory</li>
 		<li>TTancon_Standard</li>
 		<li>TTancon_Military</li>
+		<li>Sadist</li>
 		<li>HSAU_BS_MLN_AdultArtVampSoldier</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>      

@@ -2,8 +2,10 @@
 <Defs>
   <AlienRace.AlienBackstoryDef Name="FrogBackstories" Abstract="True">
 	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
-    <bodyTypeMale>Male</bodyTypeMale>
-    <bodyTypeFemale>Female</bodyTypeFemale>
+	<!--
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+	-->
 	<spawnCategories>
       <li>FrogPersonBackstory</li>
     </spawnCategories>
@@ -20,7 +22,7 @@
         <value>5</value>
 	  </li>
 	  <li>
-		<key>Melee</key>
+		<key>Shooting</key>
         <value>2</value>
 	  </li>
     </skillGains>
@@ -55,7 +57,7 @@
   <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
     <defName>Frog_TransformedDruid</defName>
     <title>Transformed Druid</title>
-    <baseDesc>[PAWN_nameDef] was once a druid who reached a great age before deciding to polymorph into a frogman and start over with his life. [PAWN_pronoun] retained much of [PAWN_possessive] wisdom.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was once a druid who reached a great age before deciding to transform into a frogman and start over with his life. [PAWN_pronoun] retained much of [PAWN_possessive] wisdom.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
 		<li>
@@ -188,6 +190,7 @@
 	<forcedTraitsChance>
       <li>
         <defName>Cannibal</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
 	<requiredWorkTags>

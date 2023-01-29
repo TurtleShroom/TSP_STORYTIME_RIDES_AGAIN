@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <AlienRace.AlienBackstoryDef Name="BeanBackstories" Abstract="True">
 	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
@@ -30,13 +30,12 @@
 	<forcedTraitsChance>
       <li>
         <defName>BeanMan</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
-	<disallowedTraitsChance>
-		<li>
-			<defName>BodyPurist</defName>
-		</li>
-	</disallowedTraitsChance>
+	<disallowedTraits>
+		<BodyPurist>0</BodyPurist>
+	</disallowedTraits>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="BeanBackstories">
@@ -57,12 +56,11 @@
 	<forcedTraitsChance>
       <li>
         <defName>BeanMan</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
-	<disallowedTraitsChance>
-		<li>
-			<defName>BodyPurist</defName>
-		</li>
-	</disallowedTraitsChance>
+	<disallowedTraits>
+		<BodyPurist>0</BodyPurist>
+	</disallowedTraits>
   </AlienRace.AlienBackstoryDef>
 </Defs>

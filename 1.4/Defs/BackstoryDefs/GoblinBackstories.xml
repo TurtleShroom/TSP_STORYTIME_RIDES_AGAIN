@@ -48,6 +48,7 @@
 	<forcedTraitsChance>
 	  <li>
 		<defName>Greedy</defName>
+		<chance>100</chance>
       </li>
 	  <li>
 		<defName>Abrasive</defName>
@@ -60,7 +61,7 @@
     <defName>ChildGoblin_MaggotSpawnofMordor</defName>
     <title>spawn</title>
     <titleShort>spawn</titleShort>
-    <baseDesc>Unlike most goblins, [PAWN_nameDef] was not born through natural means. Instead [PAWN_pronoun] was birthed through the use of unholy magic in the spawning pits of a powerful dark sorcerer's realm.</baseDesc>
+    <baseDesc>Unlike most goblins, [PAWN_nameDef] was not born through natural means. Instead [PAWN_pronoun] was birthed through the use of unholy magic in the vats of a powerful dark sorcerer's realm.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -72,6 +73,14 @@
         <value>6</value>
 	  </li>
     </skillGains>
+	<spawnCategories>
+		<li>Vatgrown</li>
+	</spawnCategories>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>
+		<relationChanceModifierChild>0</relationChanceModifierChild>
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
@@ -90,8 +99,13 @@
       <li>
         <defName>Xenophobia</defName>
 		<degree>-1</degree>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
@@ -118,18 +132,33 @@
 		<chance>50</chance>
       </li>
     </forcedTraitsChance>
+	<relationSettings>
+		<relationChanceModifierParent>999</relationChanceModifierParent>
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>ChildGoblin_Feral</defName>
     <title>feral</title>
     <titleShort>feral</titleShort>
-    <baseDesc>[PAWN_nameDef] ] was abandoned by [PAWN_possessive] parents as an infant. Somehow, [PAWN_pronoun] on his own in the wilds, but [PAWN_possessive] isolation from society stunted [PAWN_possessive] social skills.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was abandoned by [PAWN_possessive] parents as an infant. Somehow, [PAWN_pronoun] on his own in the wilds, but [PAWN_possessive] isolation from society stunted [PAWN_possessive] social skills.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
         <key>Social</key>
         <value>-6</value>
+	  </li>
+	  <li>
+		<key>Melee</key>
+		<value>2</value>
+	  </li>
+	  <li>
+		<key>Shooting</key>
+		<value>1</value>
+	  </li>
+	  <li>
+		<key>Plants</key>
+		<value>4</value>
 	  </li>
     </skillGains>
 	<forcedTraitsChance>
@@ -138,13 +167,17 @@
 		<chance>40</chance>
       </li>
     </forcedTraitsChance>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>ChildGoblin_Beggar</defName>
     <title>beggar</title>
     <titleShort>beggar</titleShort>
-    <baseDesc>[PAWN_nameDef] grew up in a large, primarily human city. There was a great deal of anti-goblin prejudice in the city, so [PAWN_possessive] parents were unable to find work. As a result, the family was forced to beg for a living.</baseDesc>
+    <baseDesc>[PAWN_nameDef] grew up in a large city that was populated by non-Goblin sapient races. There was a great deal of anti-goblin prejudice in the city, so [PAWN_possessive] parents were unable to find work. As a result, the family was forced to beg for a living.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -195,7 +228,7 @@
     <defName>ChildGoblin_AnimalLover</defName>
     <title>animal lover</title>
     <titleShort>animal lover</titleShort>
-    <baseDesc>Unlike most in [PAWN_possessive] tribe, [PAWN_nameDef] loved animals. And not just for eating, either!</baseDesc>
+    <baseDesc>Unlike most in [PAWN_possessive] tribe, [PAWN_nameDef] loved animals, and not just for eating, either!</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -242,8 +275,11 @@
         <key>Social</key>
         <value>3</value>
 	  </li>
-
     </skillGains>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>
 
 
@@ -264,6 +300,7 @@
 	<forcedTraitsChance>
 	  <li>
 		<defName>Undergrounder</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
@@ -283,6 +320,7 @@
 	<forcedTraitsChance>
 	  <li>
 		<defName>Bloodlust</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>  
@@ -365,20 +403,19 @@
   
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_DarkSlave</defName>
-    <title>slave of the dark lord</title>
+    <title>Slave of the Dark Lord</title>
     <titleShort>slave</titleShort>
     <baseDesc>As has been the fate of many goblins over the millenia, [PAWN_nameDef] was for many years a conscript in the armies of some dark lord or another. [PAWN_pronoun] was forced to fight on the front lines as cannon fodder. It was a miracle that [PAWN_pronoun] survived.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
-        <key>Melee</key>
+        <key>Shooting</key>
         <value>3</value>
 	  </li>
     </skillGains>
     <workDisables>
         <li>Artistic</li>
         <li>Intellectual</li>
-		<li>Social</li>
         <li>Caring</li>
     </workDisables>
   </AlienRace.AlienBackstoryDef>  
@@ -387,7 +424,7 @@
     <defName>Goblin_DarkOverseer</defName>
     <title>overseer</title>
     <titleShort>overseer</titleShort>
-    <baseDesc>[PAWN_nameDef] joined the infernal legions of an evil overlord willingly. [PAWN_pronoun] rose through the ranks quickly through ruthless cunning, eventually attaining the highest rank that a goblin could: Overseer. In this role [PAWN_pronoun] operated by the principle of: 'Where there's a whip, there's a way!'</baseDesc>
+    <baseDesc>[PAWN_nameDef] joined the infernal legions of an evil overlord willingly. [PAWN_pronoun] rose through the ranks quickly through ruthless cunning, eventually attaining the highest rank that a goblin could earn: Overseer. In this role [PAWN_pronoun] operated by the principle of: 'Where there's a whip, there's a way!'.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -405,9 +442,10 @@
 	<forcedTraitsChance>
 	  <li>
 		<defName>Psychopath</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
-  </AlienRace.AlienBackstoryDef>    
+  </AlienRace.AlienBackstoryDef>
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Banker</defName>
@@ -429,6 +467,7 @@
 	<forcedTraitsChance>
 	  <li>
 		<defName>ST_Rich</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>  
@@ -477,15 +516,16 @@
 	<forcedTraitsChance>
 	  <li>
 		<defName>Nimble</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>      
   
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Warlord</defName>
-    <title>warlord</title>
+    <title>ex-warlord</title>
     <titleShort>warlord</titleShort>
-    <baseDesc>[PAWN_nameDef] came into control of a powerful goblin horde, power which [PAWN_pronoun] used to launch a vast war of annihilation against the humans of [PAWN_possessive] planet. Many thousands died before [PAWN_possessive] were eventually defeated.</baseDesc>
+    <baseDesc>[PAWN_nameDef] came into control of a powerful goblin horde, power which [PAWN_pronoun] used to launch a vast war of annihilation against the inhabitants of [PAWN_possessive] planet. Many thousands died before [PAWN_possessive] were eventually defeated.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -500,6 +540,7 @@
 	<forcedTraitsChance>
 	  <li>
 		<defName>Bloodlust</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>    
@@ -508,7 +549,7 @@
     <defName>Goblin_GobbieRights</defName>
     <title>goblin rights activist</title>
     <titleShort>activist</titleShort>
-    <baseDesc>[PAWN_nameDef] spent [PAWN_possessive] constantly in the shadow of the prejudice against [PAWN_possessive] people felt by many humans. As an adult, [PAWN_pronoun] dedicated [PAWN_possessive] life to advocating for the rights of goblins everywhere. [PAWN_pronoun] swore off violence to prove that [PAWN_possessive] people were not all savages.</baseDesc>
+    <baseDesc>[PAWN_nameDef] spent [PAWN_possessive] constantly in the shadow of the prejudice against [PAWN_possessive] people felt by many other creatures. As an adult, [PAWN_pronoun] dedicated [PAWN_possessive] life to advocating for the rights of goblins everywhere. [PAWN_pronoun] swore off violence to prove that [PAWN_possessive] people were not all savages.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -519,7 +560,7 @@
 	<forcedTraitsChance>
 	  <li>
 		<defName>Kind</defName>
-		<chance>50</chance>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
     <workDisables>
@@ -550,15 +591,15 @@
 	<forcedTraitsChance>
 	  <li>
 		<defName>Tough</defName>
-		<chance>50</chance>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>  
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_NightHaunter</defName>
-    <title>night haunter</title>
-    <titleShort>night haunter</titleShort>
+    <title>Night Haunter</title>
+    <titleShort>Night Haunter</titleShort>
     <baseDesc>[PAWN_nameDef] lived alone out in the wilds. [PAWN_pronoun] survived by sneaking into the homes of the unsuspecting during the middle of the night, killing them, and eating the bodies. [PAWN_possessive] crimes were infamous and [PAWN_pronoun] quickly gained the nickname 'the Night Haunter'.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -570,21 +611,28 @@
 	<forcedTraitsChance>
 	  <li>
 		<defName>NightOwl</defName>
+		<chance>100</chance>
       </li>
 	  <li>
 		<defName>Cannibal</defName>
+		<chance>100</chance>
       </li>
 	  <li>
 		<defName>Psychopath</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>  
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Deserter</defName>
     <title>deserter</title>
     <titleShort>deserter</titleShort>
-    <baseDesc>After countless meaningless battles in the service of the Dark Lord, [PAWN_nameDef] grew tired of the violence and deserted the army to live a life of peace as a farmer.</baseDesc>
+    <baseDesc>After countless meaningless battles in the service of a warlord, [PAWN_nameDef] grew tired of the violence and deserted the army to live a life of peace as a farmer.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -595,6 +643,10 @@
     <workDisables>
         <li>Violent</li>
     </workDisables>
+	<relationSettings>
+		<relationChanceModifierParent>0</relationChanceModifierParent>
+		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
+	</relationSettings>
   </AlienRace.AlienBackstoryDef>  
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
@@ -624,6 +676,7 @@
       </li>
 	  <li>
 		<defName>Greedy</defName>
+		<chance>100</chance>
       </li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>  
@@ -654,7 +707,7 @@
     <defName>Goblin_CityGoblin</defName>
     <title>city goblin</title>
     <titleShort>city goblin</titleShort>
-    <baseDesc>[PAWN_nameDef] made a living in a large human city. Finding work was tough, but [PAWN_pronoun] was able to find various odd jobs to make ends meet.</baseDesc>
+    <baseDesc>[PAWN_nameDef] made a living in an urban center on [PAWN_possessive] home world. Finding work was tough, but [PAWN_pronoun] was able to find various odd jobs to make ends meet.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -690,7 +743,7 @@
     <defName>Goblin_TrophyKeeper</defName>
     <title>trophy-keeper</title>
     <titleShort>trophy-keeper</titleShort>
-    <baseDesc>[PAWN_nameDef] fought in many battles, brawls, and general scuffles. Everytime [PAWN_pronoun] killed a foe, [PAWN_pronoun] made a special point of gathering a grisly trophy from the body- an ear, a nose, a finger, something like that. While not a particularly pleasant habit, it did give [PAWN_objective] a bit of knowledge about... human anatomy.</baseDesc>
+    <baseDesc>[PAWN_nameDef] fought in many battles, brawls, and general scuffles. Everytime [PAWN_pronoun] killed a foe, [PAWN_pronoun] made a special point of gathering a grisly trophy from the body- an ear, a nose, a finger, something like that. While not a particularly pleasant habit, it did give [PAWN_objective] a bit of knowledge about... anatomy.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -702,6 +755,12 @@
         <value>2</value>
 	  </li>
     </skillGains>
+	<forcedTraitsChance>
+	  <li>
+		<defName>Psychopath</defName>
+		<chance>100</chance>
+      </li>
+    </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef> 
 
 
