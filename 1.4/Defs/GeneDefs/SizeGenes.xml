@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-	<GeneDef>
-		<defName>ST_Tall</defName>
-		<label>tall</label>
+	<GeneDef MayRequire="ludeon.rimworld.biotech">
+		<defName MayRequire="ludeon.rimworld.biotech">ST_Tall</defName>
+		<label>extremely tall</label>
 		<description>Carriers of this gene are much taller than normal.</description>
 		<iconPath>UI/Icons/Genes/Tall</iconPath>
-		<exclusionTags>
-			<li>BodySize</li>
+		<exclusionTags MayRequire="ludeon.rimworld.biotech">
+			<li>BodyType</li>
 		</exclusionTags>
-		
-		<statFactors>
+		<statFactors MayRequire="ludeon.rimworld.biotech">
 			<Mass>1.3</Mass>
 			<MeatAmount>1.3</MeatAmount>
 			<LeatherAmount>1.3</LeatherAmount>
@@ -18,15 +18,15 @@
 			<HuntingStealth>0.6</HuntingStealth>
 			<CarryingCapacity>1.3</CarryingCapacity>		
 		</statFactors>
-		<displayCategory>BodySize</displayCategory>
-		<displayOrderInCategory>10</displayOrderInCategory>
+		<displayCategory>Cosmetic_Body</displayCategory>
+		<displayOrderInCategory>1</displayOrderInCategory>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>-1</biostatMet>
 		<selectionWeight>0</selectionWeight>
-		<modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<bodyScaleFactor>(1.15,1.15)</bodyScaleFactor>
-				<headScaleFactor>(1.1,1.1)</headScaleFactor>
+		<modExtensions MayRequire="ludeon.rimworld.biotech">
+			<li Class="VanillaGenesExpanded.GeneExtension" MayRequire="ludeon.rimworld.biotech">
+				<bodyScaleFactor>(1.15,2)</bodyScaleFactor>
+				<headScaleFactor>(1.1,1.12)</headScaleFactor>
 			</li>
 		</modExtensions>
 	</GeneDef>	
