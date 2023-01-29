@@ -239,7 +239,7 @@
     <backstoryCategories>
 		<li>WoodBeetBackstory</li>
     </backstoryCategories>
-    <geneticVariance>0.8</geneticVariance>
+    <!-- <geneticVariance>0.8</geneticVariance> -->
     <raidLootMaker>PirateRaidLootMaker</raidLootMaker>
     <caravanTraderKinds>
       <li>Caravan_Neolithic_BulkGoods</li>
@@ -316,6 +316,16 @@
 			<Jonah_Dog>0.01</Jonah_Dog>
         </options>
       </li>
+     <li>
+        <kindDef>Combat</kindDef>
+		<commonality>80</commonality>
+        <options>
+			<WoodBeetWarrior>100</WoodBeetWarrior>
+			<WoodBeetArcher>100</WoodBeetArcher>
+			<WoodBeetLeader>50</WoodBeetLeader>
+			<TSP_ST_WoodBeetCabbageinator>1</TSP_ST_WoodBeetCabbageinator>
+        </options>
+      </li>
       <li MayRequire="neronix17.kakamora">
         <kindDef MayRequire="neronix17.kakamora">Combat</kindDef>
 		<commonality MayRequire="neronix17.kakamora">10</commonality>
@@ -336,7 +346,6 @@
 		  <Alpaca>1</Alpaca>
 		  <Dromedary>1</Dromedary>
 		  <Elephant>100</Elephant>
-		  <Reaper MayRequire="halloweenparade.velcroboy333">50</Reaper>
         </carriers>
         <guards>
 			<WoodBeetWarrior>20</WoodBeetWarrior>
@@ -346,7 +355,6 @@
 			<WoodBeetLeader>10</WoodBeetLeader>
 			<TSP_ST_WoodBeetCabbageinator>25</TSP_ST_WoodBeetCabbageinator>
 			<O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">1</O21_Kakamora_BlankSmall>
-			<Bat MayRequire="zal.witchinghour">3</Bat>
         </guards>
       </li>
       <li>
@@ -359,7 +367,7 @@
 			<WoodBeetLeader>25</WoodBeetLeader>
 			<TSP_BeetMaster>10</TSP_BeetMaster>
 			<TSP_ST_WoodBeetCabbageinator>30</TSP_ST_WoodBeetCabbageinator>
-			<O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">20</O21_Kakamora_BlankSmall>
+			<O21_Kakamora_BlankSmall MayRequire="neronix17.kakamora">10</O21_Kakamora_BlankSmall>
 			<Reaper MayRequire="halloweenparade.velcroboy333">5</Reaper>
         </options>
       </li>
@@ -369,10 +377,12 @@
     <fixedLeaderKinds>
       <li>TSP_BeetMaster</li>
     </fixedLeaderKinds>
-    <!--    <modExtensions> -->
-    <!--      <li Class="JecsTools.FactionSettings"> -->
-    <!--        <entrySoundDef>War_Pipes</entrySoundDef> -->
-    <!--      </li> -->
-    <!--    </modExtensions> -->
+    <!--
+    <modExtensions>
+		<li Class="JecsTools.FactionSettings">
+			<entrySoundDef>War_Pipes</entrySoundDef>
+		</li>
+	</modExtensions>
+	-->
   </FactionDef>
 </Defs>

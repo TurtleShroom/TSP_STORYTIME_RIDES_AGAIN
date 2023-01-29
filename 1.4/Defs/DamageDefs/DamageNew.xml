@@ -10,12 +10,12 @@
 <!--Goblin Poison Damage-->
 
   <DamageDef>
-    <defName>GoblinPoison</defName>
+    <defName>ST_GoblinPoison</defName>
     <label>goblin poison</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <additionalHediffs>
       <li>
-        <hediff>GoblinPoisonBuildup</hediff>
+        <hediff>ST_GoblinPoisonBuildup</hediff>
         <severityPerDamageDealt>0.011</severityPerDamageDealt>
         <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
         <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
@@ -31,11 +31,11 @@
   </DamageDef>
   
   <DamageDef ParentName="Bomb">
-    <defName>GoblinPoisonExplosive</defName>
+    <defName>ST_GoblinPoisonExplosive</defName>
     <label>goblin poison</label>
     <additionalHediffs>
       <li>
-        <hediff>GoblinPoisonBuildup</hediff>
+        <hediff>ST_GoblinPoisonBuildup</hediff>
         <severityPerDamageDealt>0.01</severityPerDamageDealt>
         <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
         <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
@@ -48,6 +48,25 @@
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Slice</impactSoundType>
     <defaultDamage>10</defaultDamage>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>BananaScytheDamage</defName>
+    <label>banana scythe</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <additionalHediffs>
+      <li>
+        <hediff>Hed_Bones2Bananas</hediff>
+        <severityPerDamageDealt>0.01</severityPerDamageDealt>
+        <victimSeverityScaling>PsychicSensitivity</victimSeverityScaling>
+      </li>
+    </additionalHediffs>
+    <deathMessage>{0} has been killed by bananas.</deathMessage>
+    <hediff>Peeled</hediff>
+    <hediffSolid>Peeled</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
     <armorCategory>Sharp</armorCategory>
   </DamageDef>
 </Defs>

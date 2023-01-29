@@ -17,13 +17,13 @@
 			</blackGeneTags>
 		  </raceRestriction>
 		  <generalSettings>
-			<maleGenderProbability>0.65</maleGenderProbability>
+			<maleGenderProbability>0.7</maleGenderProbability>
 			<immuneToAge>false</immuneToAge>
 			<canLayDown>true</canLayDown>
 			<forcedRaceTraitEntries>
 			  <li>
 				<defName>Psychopath</defName>
-				<chance>90</chance>
+				<chance>60</chance>
 			  </li>          
 			  <li>
 				<defName>Cannibal</defName>
@@ -58,22 +58,6 @@
 			  <customPortraitDrawSize>(0.7, 0.605)</customPortraitDrawSize>
 			  <customPortraitHeadDrawSize>(0.8, 0.8)</customPortraitHeadDrawSize>
 			  <headOffset>(0.0, -0.077)</headOffset>
-				<newbornBackstoryFilter>
-					<li>
-						<categories>
-							<li>JeubColonyNewborn</li>
-						</categories>
-						<commonality>1</commonality>
-					</li>
-				</newbornBackstoryFilter>
-				<adultBackstoryFilter>
-					<li>
-						<categories>
-							<li>JeubColonyAdult</li>
-						</categories>
-						<commonality>1</commonality>
-					</li>
-				</adultBackstoryFilter>
 			  <colorChannels>
 				<li>
 				  <name>skin</name>
@@ -172,6 +156,22 @@
 			</renamer>
 		  </relationSettings>
 		</alienRace>
+		<newbornBackstoryFilter MayRequire="Ludeon.RimWorld.Biotech">
+			<li MayRequire="Ludeon.RimWorld.Biotech">
+				<categories>
+					<li>JeubColonyNewborn</li>
+				</categories>
+				<commonality>1</commonality>
+			</li>
+		</newbornBackstoryFilter>
+		<adultBackstoryFilter MayRequire="Ludeon.RimWorld.Biotech">
+			<li MayRequire="Ludeon.RimWorld.Biotech">
+				<categories>
+					<li>JeubColonyAdult</li>
+				</categories>
+				<commonality>1</commonality>
+			</li>
+		</adultBackstoryFilter>
 		<statBases>
 		  <MarketValue>500</MarketValue>
 		  <MoveSpeed>6.25</MoveSpeed>

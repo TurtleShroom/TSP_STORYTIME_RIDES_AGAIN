@@ -36,7 +36,7 @@
 
   <ThingDef ParentName="ST_MiracleAnimal">
     <defName>FlyingFrog</defName>
-    <label>trascendant Flying Frog</label>
+    <label>Flying Frog</label>
     <description>No one can truly describe a Transcendant World, in which a fully realized Archotech Intelligence has completely incorporated a planet or solar system into itself. Upon transcension, these worlds fall silent, but there is one notable exception. The Archotech governing the Transcendant World of Poobah continues to send out cargo ships on one-way journeys. These ships have been recorded for centuries and have populated much of the galaxy. Contact with these ships is impossible, and any attempts to impede their travel result in hostility. \n \n The ship's contents are always the same. Inside the Archotech ship is a frog forged by means indecipherable by man. Dubbed the Flying Frog, it flies around on its little cloud for reasons unknown. Flying frogs can be convinced to join your colony and will from time to time clone itself using Archotech technology. It will occasionally use its Archotech powers to heal allies that stand near it.</description>
     <statBases>
       <MoveSpeed>5.5</MoveSpeed>
@@ -45,21 +45,21 @@
       <ComfyTemperatureMax>600</ComfyTemperatureMax>
     </statBases>
 	<comps>
-	<li Class="AnimalBehaviours.CompProperties_NoFilth"> </li>
-	<li Class="AnimalBehaviours.CompProperties_Regeneration">
-		<rateInTicks>100</rateInTicks>
-	</li>	
-	<li Class="AnimalBehaviours.CompProperties_Floating">
-	</li>
-	<li Class="AnimalBehaviours.CompProperties_AsexualReproduction">
-		<reproductionIntervalDays>30</reproductionIntervalDays>
-		<customString>Cloning in:</customString>
-	</li>			
-	<li Class="AnimalBehaviours.CompProperties_PassiveRegenerator">
-		<radius>5</radius>
-		<needsToBeTamed>true</needsToBeTamed>
-		<tickInterval>600</tickInterval>	
-	</li>
+		<li Class="AnimalBehaviours.CompProperties_NoFilth"> </li>
+		<li Class="AnimalBehaviours.CompProperties_Regeneration">
+			<rateInTicks>100</rateInTicks>
+		</li>	
+		<li Class="AnimalBehaviours.CompProperties_Floating">
+		</li>
+		<li Class="AnimalBehaviours.CompProperties_AsexualReproduction">
+			<reproductionIntervalDays>30</reproductionIntervalDays>
+			<customString>Cloning in:</customString>
+		</li>			
+		<li Class="AnimalBehaviours.CompProperties_PassiveRegenerator">
+			<radius>5</radius>
+			<needsToBeTamed>true</needsToBeTamed>
+			<tickInterval>600</tickInterval>	
+		</li>
     </comps>
     <tools>
       <li>
@@ -67,7 +67,7 @@
         <capacities>
           <li>Scratch</li>
         </capacities>
-        <power>2</power>
+        <power>12</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
       </li>
@@ -76,7 +76,7 @@
         <capacities>
           <li>Scratch</li>
         </capacities>
-        <power>2</power>
+        <power>12</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
       </li>
@@ -84,7 +84,7 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>5</power>
+        <power>15</power>
         <cooldownTime>2.6</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
@@ -94,7 +94,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>1</power>
+        <power>10</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -106,28 +106,20 @@
       <nameGenerator>FrogNamerMale</nameGenerator>
       <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
       <bloodDef>Filth_IchorBlood</bloodDef>
-      <baseBodySize>0.15</baseBodySize>
-      <baseHealthScale>0.3</baseHealthScale>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHealthScale>4</baseHealthScale>
       <baseHungerRate>0</baseHungerRate>
-      <foodType>OmnivoreRoughAnimal</foodType>
+      <foodType>None</foodType>
       <leatherDef>Leather_Frog</leatherDef>
       <wildness>0</wildness>
       <trainability>Advanced</trainability>
-      <useMeatFrom>Toad</useMeatFrom>
+      <useMeatFrom>ST_BullFrog</useMeatFrom>
       <petness>0.4</petness>
       <lifeExpectancy>4</lifeExpectancy>
       <lifeStageAges>
         <li>
-          <def>AnimalBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>AnimalJuvenile</def>
-          <minAge>0.09</minAge>
-        </li>
-        <li>
           <def>AnimalAdult</def>
-          <minAge>0.25</minAge>
+          <minAge>0</minAge>
           <soundWounded>Pawn_Iguana_Wounded</soundWounded>
           <soundDeath>Pawn_Iguana_Death</soundDeath>
           <soundCall>Pawn_Iguana_Call</soundCall>
@@ -165,7 +157,7 @@
   
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>FlyingFrog</defName>
-    <label>Flying Frog</label>
+    <label>transcendant Flying Frog</label>
     <race>FlyingFrog</race>
     <combatPower>20</combatPower>
     <ecoSystemWeight>0.3</ecoSystemWeight>

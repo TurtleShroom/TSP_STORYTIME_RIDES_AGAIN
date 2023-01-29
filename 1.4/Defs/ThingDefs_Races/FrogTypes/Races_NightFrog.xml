@@ -2,14 +2,14 @@
 
 <Defs>
 	<ThingDef ParentName="BaseBullet">
-		<defName>ParalyzingLick</defName>
+		<defName>ST_ParalyzingLick</defName>
 		<label>lick</label>
 		<graphicData>
 			<texPath>Projectiles/NeurotoxinLick</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
-			<damageDef>ParalyzingLick</damageDef>
+			<damageDef>ST_ParalyzingLick</damageDef>
 			<damageAmountBase>10</damageAmountBase>
 			<speed>10</speed>
 		</projectile>
@@ -27,7 +27,7 @@
       <ComfyTemperatureMax>60</ComfyTemperatureMax>
       <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
-	  <ArmorRating_Lick>1</ArmorRating_Lick>
+	  <!-- <ArmorRating_Lick>1</ArmorRating_Lick> -->
 	  <ToxicResistance>0.6</ToxicResistance>
       <ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
     </statBases>
@@ -70,7 +70,7 @@
       <li>
         <label>tongue</label>
         <capacities>
-          <li>ParalyzingLick</li>
+          <li>ST_ParalyzingLick</li>
         </capacities>
         <power>5</power>
         <cooldownTime>2.5</cooldownTime>
@@ -96,7 +96,7 @@
 				<accuracyMedium>0.8</accuracyMedium>
 				<accuracyLong>0.75</accuracyLong>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>ParalyzingLick</defaultProjectile>
+				<defaultProjectile>ST_ParalyzingLick</defaultProjectile>
 				<warmupTime>3</warmupTime>
 				<range>4</range>				
 				<soundCast>Lick</soundCast>
