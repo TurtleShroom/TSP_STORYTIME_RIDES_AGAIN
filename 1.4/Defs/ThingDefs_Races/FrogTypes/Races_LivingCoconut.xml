@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<HediffDef>
+		<defName>Hediff_CoconutFrog</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>When a coconut frog is killed, its remaining cysts that naturally grow to forms identical to coconuts sprout into a synthetic coconut tree.</description>
+		<label>coconut</label>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		<comps>
+			<li Class="StoryTime.HediffCompProperties_CoconutDeath">
+				<targetCoconut>Rylex_Tree_CoconutPalm</targetCoconut>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThingDef ParentName="BasePawn">
+		<defName>LivingCoconut</defName>
+		<label>coconut frog</label>
+		<description>Genetically engineered using the same basic process as a tomato frog, the coconut frog grows cysts that, when cut, are totally indistinguishable from real coconuts. These cysts provide it with significant natural armor. When a coconut frog is killed, its remaining cysts that naturally grow to forms identical to coconuts sprout into a synthetic coconut tree.</description>
+		<statBases>
+			<MoveSpeed>1.5</MoveSpeed>
+			<MarketValue>150</MarketValue>
+			<ComfyTemperatureMin>5</ComfyTemperatureMin>
+			<ComfyTemperatureMax>45</ComfyTemperatureMax>
+			<LeatherAmount>30</LeatherAmount>
+			<MeatAmount>30</MeatAmount>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicResistance>1</ToxicResistance>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<Flammability>1</Flammability>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+		</statBases>
+		<tools>
+			<li>
+				<label>front-left hand</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>front-right hand</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>vomerine teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<thinkTreeMain>Animal</thinkTreeMain>
+			<thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+			<bloodDef>Filth_Sand</bloodDef>
+			<wildBiomes>
+				<TemperateForest>0.01</TemperateForest>
+				<TemperateSwamp>0.05</TemperateSwamp>
+				<TropicalRainforest>0.2</TropicalRainforest>
+				<TropicalSwamp>0.1</TropicalSwamp>
+				<AridShrubland>0.001</AridShrubland>
+			</wildBiomes>
+			<body>QuadrupedAnimalWithClawsTailAndJowl</body>
+			<petness>0</petness>
+			<needsRest>true</needsRest>
+			<hasGenders>true</hasGenders>
+			<baseBodySize>1</baseBodySize>
+			<baseHungerRate>0.3</baseHungerRate>
+			<baseHealthScale>3</baseHealthScale>
+			<gestationPeriodDays>80</gestationPeriodDays>
+			<nameOnTameChance>1</nameOnTameChance>
+			<trainability>Intermediate</trainability>
+			<wildness>0.4</wildness>
+			<nuzzleMtbHours>9</nuzzleMtbHours>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+			<useMeatFrom>ST_BullFrog</useMeatFrom>
+			<leatherDef>Rylex_Coconut</leatherDef>
+			<foodType>VegetarianAnimal, VegetarianRoughAnimal, Plant, Fluid, Meal, Kibble</foodType>
+			<lifeExpectancy>20</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>CoconutAngry</soundDeath>
+					<soundAngry>Frog_Angry</soundAngry> 
+					<soundCall>CoconutNeutral</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>CoconutAngry</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>CoconutAngry</soundMeleeHitBuilding>
+			<soundMeleeMiss>CoconutNeutral</soundMeleeMiss>      
+			<nameGenerator>FrogNamerMale</nameGenerator>
+			<nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
+		</race>
+		<tradeTags>
+			<li>AnimalExotic</li>
+			<li>StorytimeAnimalRare</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Animals</li>
+		</thingCategories>
+		<recipes>
+			<li>Euthanize</li>
+			<li>Anesthetize</li>
+		</recipes>   
+		<comps>
+			<li Class="StoryTime.CompProperties_Tomato">
+				<tomatoDef>Rylex_Coconut</tomatoDef>
+				<tomatoIntervalDays>1</tomatoIntervalDays>
+				<tomatoAmount>5</tomatoAmount>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+				<hediffname>Hediff_CoconutFrog</hediffname>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef">
+				<needsDiggableTerrain>true</needsDiggableTerrain>
+				<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut</texPath>
+				<gizmoLabel>ST_WoodFrog_CommandLabel</gizmoLabel>
+				<gizmoDesc>ST_WoodFrog_CommandDesc</gizmoDesc>
+				<defToChangeTo>Rylex_Tree_CoconutPalm</defToChangeTo>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRoleSecondary</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>ST_FrogFoodProduction</li>
+					<li>ST_MeleeTank</li>
+					<li>ST_FrogRare</li>					
+				</statValues>
+				<statDescriptions>
+					<li>ST_FrogPoisonDesc</li>
+					<li>ST_FrogRangedDesc</li>
+					<li>ST_FrogRareDesc</li>
+				</statDescriptions>				
+			</li>
+			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+				<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
+			</li>
+		</modExtensions>
+	</ThingDef>
+  
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>LivingCoconut</defName>
+		<label>coconut frog</label>
+		<race>LivingCoconut</race>
+		<combatPower>100</combatPower>
+		<ecoSystemWeight>30</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<label>living coconut</label>
+				<labelPlural>living coconuts</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut</texPath>
+					<drawSize>1.25</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut</texPath>
+					<drawSize>1.25</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>  
+</Defs>

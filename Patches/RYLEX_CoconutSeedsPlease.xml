@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<SeedsPlease.SeedDef ParentName="SeedBase">
+					<defName>Rylex_Seed_Coconut</defName>
+					<label>coconut seeds</label>
+					<sources>
+						<li>Rylex_Tree_CoconutPalm</li>
+					</sources>
+					<graphicData><texPath>Things/Item/Seeds/TreePalm</texPath></graphicData>
+				</SeedsPlease.SeedDef>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<RecipeDef ParentName="ExtractSeed">
+					<defName>Rylex_ExtractSeedCoconut</defName>
+					<label>extract coconut seeds</label>
+					<description>Extract seeds from coconuts.</description>
+					<ingredients>
+					<li>
+						<filter>
+						<thingDefs>
+							<li>Rylex_Fruit_Coconut</li>
+						</thingDefs>
+						</filter>
+						<count>10</count>
+					</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>Rylex_Fruit_Coconut</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<Rylex_Seed_Coconut>5</Rylex_Seed_Coconut>
+					</products>
+				</RecipeDef>
+			</value>
+		</match>
+	</Operation>
+</Patch>

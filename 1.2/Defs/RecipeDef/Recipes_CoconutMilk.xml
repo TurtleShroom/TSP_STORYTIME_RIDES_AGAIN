@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef>
+		<defName>ProcessCoconuts</defName>
+		<label>make coconut milk</label>
+		<description>Process raw coconuts into coconut milk. Coconut milk can be used as a subsititue for animal milk.</description>
+		<jobString>Making coconut milk.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Fruit_Coconut</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Fruit_Coconut</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CocoMilk>25</CocoMilk>
+		</products>
+		<skillRequirements>
+			<Cooking>8</Cooking>
+		</skillRequirements>
+	</RecipeDef>
+</Defs>
