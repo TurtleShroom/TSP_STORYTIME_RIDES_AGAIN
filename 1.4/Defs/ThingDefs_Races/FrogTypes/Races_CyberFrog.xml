@@ -3,21 +3,30 @@
 <Defs>
   <ThingDef ParentName="BaseMechanoid">
     <defName>CyberFrogHostile</defName>
-    <label>Mechanoid Frog</label>
+    <label>Mechanoid Cyber-Frog</label>
     <description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particualar Cyber Frogs have since betrayed their own kind and joined the Mechanoids in their conquest. Randy have mercy on us all.</description>
     <statBases>
       <MoveSpeed>9</MoveSpeed>
-      <MarketValue Inherit="False">0</MarketValue>
+      <MarketValue>41</MarketValue>
 	  <!--
       <ComfyTemperatureMin>-600</ComfyTemperatureMin>
       <ComfyTemperatureMax>600</ComfyTemperatureMax>
 	  -->
-	  <MeatAmount Inherit="False">10</MeatAmount>
-	  <LeatherAmount Inherit="False">4</LeatherAmount>
+	  <MeatAmount Inherit="False">25</MeatAmount>
+	  <LeatherAmount Inherit="False">10</LeatherAmount>
       <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
-      <PsychicSensitivity Inherit="False">2</PsychicSensitivity>
+      <PsychicSensitivity Inherit="False">4</PsychicSensitivity>
+	  <ToxicResistance>0.9</ToxicResistance>
+	  <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</ToxicEnvironmentResistance>
+      <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">0</BandwidthCost>
+      <ControlTakingTime MayRequire="Ludeon.Rimworld.Biotech">34</ControlTakingTime>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</ToxicEnvironmentResistance>
+      <MechEnergyLossPerHP MayRequire="Ludeon.Rimworld.Biotech">0.5</MechEnergyLossPerHP>
+      <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">0</WastepacksPerRecharge>
+      <WorkSpeedGlobal MayRequire="Ludeon.Rimworld.Biotech">0.5</WorkSpeedGlobal>
     </statBases>
+	<tradeability>None</tradeability>
 	<comps>
 		<!--
 		<li Class="CompProperties_EggLayer">
@@ -36,9 +45,16 @@
 		<li Class="CompProperties_CanBeDormant" />
 		<li Class="CompProperties_WakeUpDormant">
 			<wakeUpOnDamage>true</wakeUpOnDamage>
-			<!-- <anyColonistCloseCheckRadius>30</anyColonistCloseCheckRadius> -->
-			<wakeUpSound>MechanoidsWakeUp</wakeUpSound>
+			<!-- <anyColonistCloseCheckRadius>3</anyColonistCloseCheckRadius> -->
+			<wakeUpSound>Frog_Angry</wakeUpSound>
 		</li>
+		<li MayRequire="Ludeon.Rimworld.Biotech" Class="CompProperties_OverseerSubject">
+			<needsOverseerEffect>MechUncontrolled</needsOverseerEffect>
+			<delayUntilFeralCheck>600000</delayUntilFeralCheck>
+			<feralMtbDays>100</feralMtbDays>
+			<feralCascadeRadialDistance>0</feralCascadeRadialDistance>
+		</li>
+		<li MayRequire="Ludeon.Rimworld.Biotech" Class="CompProperties_MechRepairable" />
     </comps>
     <tools>
       <li>
@@ -83,6 +99,7 @@
     <race>
       <intelligence Inherit="False">ToolUser</intelligence>
       <thinkTreeMain Inherit="False">Mechanoid</thinkTreeMain>
+	  <thinkTreeConstant MayRequire="Ludeon.RimWorld.Biotech" Inherit="False">MechConstant</thinkTreeConstant>
 	  <fleshType Inherit="False">Mechanoid</fleshType>
 	  <wildBiomes Inherit="False">
 			<BorealForest>0</BorealForest>
@@ -99,28 +116,28 @@
 			<ExtremeDesert>0</ExtremeDesert>
 	  </wildBiomes>
       <body Inherit="False">QuadrupedAnimalWithClawsTailAndJowl</body>
+      <nameGenerator>FrogNamerMale</nameGenerator>
+      <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
       <baseBodySize>0.35</baseBodySize>
-      <baseHealthScale>4</baseHealthScale>
-	  <!--
+      <baseHealthScale>3</baseHealthScale>
       <baseHungerRate>0.15</baseHungerRate>
-      <foodType Inherit="False">OmnivoreRoughAnimal, Kibble</foodType>
-	  -->
+      <foodType Inherit="False">OmnivoreRoughAnimal, VegetarianRoughAnimal, Corpse, Tree, Plant, Kibble</foodType>
 	  <useMeatFrom>ST_BullFrog</useMeatFrom>
-      <leatherDef>Steel</leatherDef>
+      <leatherDef>Leather_Frog</leatherDef>
 	  <!--
       <wildness>0</wildness>
       <trainability>Advanced</trainability>
       <petness>1</petness>
 	  -->
-      <lifeExpectancy>999</lifeExpectancy>
-	  <hasGenders>false</hasGenders>
+      <lifeExpectancy>200</lifeExpectancy>
+	  <hasGenders>true</hasGenders>
       <lifeStageAges>
         <li>
-          <def>AnimalBaby</def>
+          <def>MechanoidFullyFormed</def>
           <minAge>0</minAge>
         </li>
         <li>
-          <def>AnimalJuvenile</def>
+          <def>MechanoidFullyFormed</def>
           <minAge>0.01</minAge>
         </li>
         <li>
@@ -140,6 +157,11 @@
       <!-- <li>AnimalExotic</li> -->
 	  <li>AnimalInsectSpace</li>
     </tradeTags>
+	<butcherProducts>
+		<!-- <Meat_ST_BullFrog>5</Meat_ST_BullFrog> -->
+		<Steel>15</Steel>
+		<ComponentSpacer>2</ComponentSpacer>
+	</butcherProducts>
 	<modExtensions>
 		<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 			<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
@@ -173,6 +195,7 @@
     <combatPower Inherit="False">40</combatPower>
     <ecoSystemWeight Inherit="False">0</ecoSystemWeight>
 	<minGenerationAge Inherit="False">80</minGenerationAge>
+	<maxGenerationAge Inherit="False">180</maxGenerationAge>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -210,38 +233,19 @@
       </li>
     </lifeStages>
     <weaponMoney>3000~9999</weaponMoney>
+    <techHediffsChance MayRequire="Ludeon.RimWorld.Biotech">1</techHediffsChance>
+    <techHediffsMoney>9999~9999</techHediffsMoney>
     <weaponTags>
 		<li>SpacerGun</li>
 		<li>MechanoidGunMedium</li>
     </weaponTags>
-	<modExtensions>
-		<li Class="AnimalBehaviours.AnimalStatExtension">
-			<statToAdd>
-				<li>ST_FrogRole</li>
-				<li>ST_FrogRoleSecondary</li>					
-				<li>ST_FrogRarity</li>					
-			</statToAdd>
-			<statValues>
-				<li>TSP_ST_FrogMachine</li>
-				<li>ST_MeleeTank</li>	
-				<li>ST_FrogUncommon</li>					
-			</statValues>
-			<statDescriptions>
-				<li>TSP_ST_FrogMachineDesc</li>
-				<li>ST_MeleeTankDesc</li>	
-				<li>ST_FrogRareDesc</li>
-			</statDescriptions>
-			<showImageInInfoCard>true</showImageInInfoCard>
-			<ImageToShowInInfoCard>UI/Lore/CyberFrogLore</ImageToShowInInfoCard>						
-		</li>
-	</modExtensions>
   </PawnKindDef>
 
 
   <ThingDef ParentName="BasePawn">
     <defName>CyberFrogDocile</defName>
     <label>Cyber Frog</label>
-    <description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particular Cyber Frogs resisted the Mechanoids and are therefore less intelligent because of the absence of the up-link to the Mechanoid Hive Network.</description>
+    <description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particular Cyber Frogs refused the Mechanoids' offer and are therefore less intelligent because of the absence of the up-link to the Mechanoid Hive Network.</description>
     <statBases>
       <MoveSpeed>9</MoveSpeed>
       <MarketValue Inherit="False">400</MarketValue>
