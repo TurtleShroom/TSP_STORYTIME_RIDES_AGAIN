@@ -1,26 +1,28 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-
-
 <!--Rare Genius-->
 	<TraitDef>
-		<defName>ST_RareGenius</defName>
-		<commonality>0.05</commonality>
+		<!-- It has to have this +@(+#*( Def Name because Isengriff put it into C-Sharp. I hope it doesn't cause problems. -->
+		<defName>RareGenius</defName>
+		<commonality>0.01</commonality>
+		<commonalityFemale>0</commonalityFemale>
 		<degreeDatas>
 			<li>
 				<label>&lt;color=#FFDD43&gt;Rare Genius&lt;/color&gt;</label>
-				<description>A poet of later times wrote of [PAWN_nameDef]:
+				<description>A poet who served alongside [PAWN_nameDef] once wrote:
 				
 [PAWN_nameDef]'s mighty name hangs proudly on the upper sphere;
-Stern and grand, the royal liege man's likeness claims respect.
+Stern and grand, the [PAWN_possessive] likeness claims respect.
 In the tri-part world below [PAWN_pronoun] spun deep schemes.
 In the age-old realm of cloud, one single plume unites our gaze.
-Who rank [PAWN_possessive] peers? Yi Yin and Jiang Ziya.
-In command [PAWN_pronoun] was more sure than Xiao or Cao.
-But the stars had turned, [PAWN_pronoun] could not save Han's Reign.
-Toiling to the end, body broken, will unbroke.
+Who rank among [PAWN_possessive] peers?
+In command [PAWN_pronoun] was more sure than any other.
+But the stars had turned, [PAWN_pronoun] could not save [PAWN_possessive] lord's Reign.
+Toiling to the end, body broken, will unbroken.
 				
 				</description>
+				<socialFightChanceFactor>0</socialFightChanceFactor>
 				<statFactors>
 					<ResearchSpeed>1.5</ResearchSpeed>
 					<GlobalLearningFactor>2</GlobalLearningFactor>
@@ -29,7 +31,7 @@ Toiling to the end, body broken, will unbroke.
 				</statFactors>
 				<statOffsets>
 				  <SocialImpact>0.25</SocialImpact>
-				  <HuntingStealth>0.5</HuntingStealth>
+				  <HuntingStealth>1</HuntingStealth>
 				</statOffsets>
 			</li>
 		</degreeDatas>
@@ -40,6 +42,14 @@ Toiling to the end, body broken, will unbroke.
 		<forcedPassions>
 		  <li>Intellectual</li>
 		</forcedPassions>
+		<!--
+		<forcedTraitsChance>
+			<li MayRequire="dajian.chiteaditional.expanded">
+				<defName MayRequire="dajian.chiteaditional.expanded">Chi_TraA</defName>
+				<chance MayRequire="dajian.chiteaditional.expanded">100</chance>
+			</li>
+		</forcedTraitsChance>
+		-->
     <conflictingTraits>
       <li>ST_Stupid</li>
       <li>ST_Savant</li>

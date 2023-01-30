@@ -80,6 +80,7 @@
     <defName>BeetSchoolChild</defName>
     <title>Schoolboy</title>
 	<titleFemale>Schoolgirl</titleFemale>
+	<titleShort>student</titleShort>
     <baseDesc>[PAWN_nameDef]'s family was well off enough that [PAWN_pronoun] was able to attend school instead of helping out around the house.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -237,7 +238,7 @@
 		  <li>ManualSkilled</li>
 		</workDisables>
 		<disallowedTraits>
-			<DrugDesire>0</DrugDesire>
+			<!-- <DrugDesire>0</DrugDesire> -->
 		</disallowedTraits>
 		<spawnCategories>
 		  <li>WoodBeetBackstory</li>
@@ -247,6 +248,8 @@
 		  <li>Offworld</li>
 		  <li>Outlander</li>
 		  <li>JeubBackstory</li>
+		  <li>Sadist</li>
+		  <li>ImperialFighter</li>
 		  <li>ESCP_DunmerTelvanniBackstory</li>
 		  <li>ESCP_DunmerBackstory</li>
 		  <li>ESCP_DunmerSlaveBackstory</li>
@@ -254,45 +257,46 @@
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef>
-	<!-- Only applies to a civilized Beetnikh nobleman -->
+		<!-- Only applies to a civilized Beetnikh nobleman -->
 		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
-	<bodyTypeMale Inherit="False">Fat</bodyTypeMale>
-	<bodyTypeFemale Inherit="False">Fat</bodyTypeFemale>
-    <defName>BeetEmperor</defName>
-    <title>Beet Emperor</title>
-	<titleFemale>Beet Empress</titleFemale>
-    <baseDesc>Thanks to [PAWN_possessive] spectacular military prowess, [PAWN_nameDef] somehow managed to become the ruler of a great Beetnikh Empire. Considering how stupid [PAWN_pronoun] is at governing, [PAWN_pronoun] cannot do it alone. [PAWN_pronoun] is surrounded by a host of advisors that do most of the peacetime work.</baseDesc>
-    <slot>Adulthood</slot>
-    <skillGains Inherit="False">
-      <li>
-		<key>Melee</key>
-        <value>12</value>
-	  </li>
-	  <li>
-		<key>Shooting</key>
-        <value>8</value>
-	  </li>
-	  <li>
-		<key>Social</key>
-        <value>12</value>
-	  </li>
-    </skillGains>
-	<workDisables>
-		<li>Animals</li>
-		<!-- <li>Tailoring</li> -->
-		<li>Crafting</li>
-		<li>Mining</li>
-		<li>Constructing</li>
-		<li>Cooking</li>
-		<li>Intellectual</li>
-    </workDisables>
-	<requiredWorkTags>
-		<li>Social</li>
-		<li>Violent</li>
-	</requiredWorkTags>
-	<spawnCategories Inherit="False">
-      <li>CivilizedBeetEmperor</li>
-    </spawnCategories>
+		<bodyTypeMale Inherit="False">Fat</bodyTypeMale>
+		<bodyTypeFemale Inherit="False">Fat</bodyTypeFemale>
+		<defName>BeetEmperor</defName>
+		<title>Beet Emperor</title>
+		<titleFemale>Beet Empress</titleFemale>
+		<titleShort>Beet Emperor</titleShort>
+		<baseDesc>Thanks to [PAWN_possessive] spectacular military prowess, [PAWN_nameDef] somehow managed to become the ruler of a great Beetnikh realm. Considering how stupid [PAWN_pronoun] is at governing, [PAWN_pronoun] cannot do it alone. [PAWN_nameDef] is surrounded by a host of advisors that do most of the peacetime work.</baseDesc>
+		<slot>Adulthood</slot>
+		<skillGains Inherit="False">
+		  <li>
+			<key>Melee</key>
+			<value>12</value>
+		  </li>
+		  <li>
+			<key>Shooting</key>
+			<value>8</value>
+		  </li>
+		  <li>
+			<key>Social</key>
+			<value>12</value>
+		  </li>
+		</skillGains>
+		<workDisables>
+			<li>Animals</li>
+			<!-- <li>Tailoring</li> -->
+			<li>Crafting</li>
+			<li>Mining</li>
+			<li>Constructing</li>
+			<li>Cooking</li>
+			<li>Intellectual</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Social</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<spawnCategories Inherit="False">
+		  <li>CivilizedBeetEmperor</li>
+		</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
