@@ -11,7 +11,8 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_MedievalPeasantChild</defName>
-    <title>peasant</title>
+    <title>Peasant</title>
+	<titleShort>peasant</titleShort>
     <baseDesc>[PAWN_nameDef] was born to a peasant family and spent [PAWN_possessive] youth working on their small plot of farmland.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -42,7 +43,8 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_NobleHeir</defName>
-    <title>noble heir</title>
+    <title>Noble Heir</title>
+	<titleShort>heir</titleShort>
     <baseDesc>[PAWN_nameDef] was born the scion of an ancient noble house. [PAWN_pronoun] spent [PAWN_pronoun] childhood pampered by servants and learning the art of rulership.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -69,6 +71,7 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_WizardsApprentice</defName>
     <title>wizard's apprentice</title>
+	<titleShort>apprentice</titleShort>
     <baseDesc>[PAWN_nameDef] was apprenticed to a local wizard at a young age. [PAWN_pronoun] learned many things during this apprenticeship.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -96,6 +99,7 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_WitchsApprentice</defName>
     <title>witch's apprentice</title>
+	<titleShort>apprentice</titleShort>
     <baseDesc>[PAWN_nameDef] was apprenticed to a local witch at a young age. [PAWN_pronoun] learned many things about herbalism during this apprenticeship.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -130,6 +134,7 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_ChildCrusader</defName>
     <title>popular crusader</title>
+	<titleShort>crusader</titleShort>
     <baseDesc>[PAWN_nameDef] took part in a makeshift "popular crusade", unsanctioned by [PAWN_possessive] people's faith, and led by children and peasants to try and drive out a religious enemy. It was an absolute disaster and many died. The rest of them were traumatized for life.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -141,7 +146,7 @@
     <forcedTraitsChance>
         <li>
             <defName>Ascetic</defName>
-            <chance>50</chance>
+            <chance>90</chance>
         </li>
     </forcedTraitsChance>
 	<relationSettings>
@@ -160,6 +165,7 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_BlacksmithApprentice</defName>
     <title>blacksmith's apprentice</title>
+	<titleShort>blacksmith's apprentice</titleShort>
     <baseDesc>[PAWN_nameDef] was apprenticed to the town blacksmith for many years. The hard physical labor greatly honed [PAWN_possessive] physique.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -192,7 +198,8 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Squire</defName>
-    <title>squire</title>
+    <title>Squire</title>
+	<titleShort>squire</titleShort>
     <baseDesc>[PAWN_nameDef] was a squire to a noble knight and aided him in many ways while learning the art of combat.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -263,6 +270,7 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_ServantChild</defName>
     <title>servant's child</title>
+	<titleShort>servant</titleShort>
     <baseDesc>[PAWN_nameDef] was born to a pair of servants, and spent [PAWN_possessive] time helping them with their tasks.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -304,8 +312,9 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Wildling</defName>
-    <title>wildling</title>
-    <baseDesc>[PAWN_nameDef] lived in the forest with [PAWN_possessive] father, living off the land and shunning organized society.</baseDesc>
+    <title>Wildling</title>
+    <baseDesc>[PAWN_nameDef] lived in the forest with [PAWN_possessive] parents, living off the land and shunning organized society.</baseDesc>
+	<titleShort>wildling</titleShort>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -351,7 +360,8 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_MedievalOrphan</defName>
-    <title>orphan</title>
+    <title>Orphan</title>
+	<titleShort>orphan</titleShort>
     <baseDesc>[PAWN_nameDef]'s parents died when [PAWN_pronoun] was very young. [PAWN_pronoun] had to survive on [PAWN_possessive] own on the dangerous streets of a major city.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -370,6 +380,7 @@
     <disallowedTraits>
         <ST_Rich>0</ST_Rich>
 		<Greedy>0</Greedy>
+		<Jealous>0</Jealous>
 		<VTE_Snob MayRequire="vanillaexpanded.vanillatraitsexpanded">0</VTE_Snob>
     </disallowedTraits>
 	<spawnCategories Inherit="False">
@@ -386,6 +397,10 @@
 		<li>Raider</li>
 		<li>PirateBackstory</li>
 		<li>Classical</li>
+		<li>WoodBeetBackstory</li>
+		<li>JeubBackstory</li>
+		<li>ESCP_DunmerBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
 	</spawnCategories>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
@@ -398,7 +413,8 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_MedievalPeasant</defName>
-    <title>peasant</title>
+    <title>Peasant</title>
+	<titleShort>peasant</titleShort>
     <baseDesc>[PAWN_nameDef] lived the life of a peasant, farming to sustain [PAWN_possessive] family. [PAWN_pronoun] was looked down on by the other members of [PAWN_possessive] society.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -421,8 +437,11 @@
 	<spawnCategories Inherit="False">
 		<li>Medieval</li>
 		<li>MedievalLow</li>
+		<li>MedievalPeasant</li>
+		<li>MedievalServant</li>
 		<li>Farmer</li>
 		<li>TribalFarmer</li>
+		<li>Classical</li>
 		<li>Outlander</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
@@ -430,6 +449,7 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_FailedWizard</defName>
     <title>failed wizard</title>
+	<titleShort>Rincewind</titleShort>
     <baseDesc>[PAWN_nameDef] attempted to become a wizard but couldn't manage even the simplest spell.  [PAWN_nameDef] instead learned to run from all [PAWN_possessive] problems.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -465,6 +485,7 @@
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_MagicAztec</defName>
     <title>Sunset Invader</title>
+	<titleShort>Nahuatl LARP</titleShort>
     <baseDesc>[PAWN_nameDef] thinks that [PAWN_pronoun] is a Magic Aztec. According to [PAWN_objective], [PAWN_nameDef] participated in the failed campaigns of conquest against Old Earth's Europe thousands of years ago. No records of such an invasion exist. [PAWN_nameDef] claims that [PAWN_pronoun] was eventually sealed into a highly advanced, Aztec obsidian chamber for crypto-sleep. Somehow, [PAWN_pronoun] has ended up stranded on this Rim World. \n While [PAWN_possessive] supposed origins are almost certainly not real, [PAWN_possessive] training certainly is. Few will be able to withstand [PAWN_objective] in battle.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -513,7 +534,8 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Blacksmith</defName>
-    <title>blacksmith</title>
+    <title>Blacksmith</title>
+	<titleShort>blacksmith</titleShort>
     <baseDesc>[PAWN_nameDef] was a blacksmith, crafting tools and weapons for [PAWN_possessive] community.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -525,6 +547,7 @@
 	<forcedTraitsChance>
 		<li>
 			<defName>Tough</defName>
+			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
 	<spawnCategories Inherit="False">
@@ -574,7 +597,8 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_EvilMedievalLord</defName>
-    <title>wicked baron</title>
+    <title>Wicked Baron</title>
+	<titleShort>wicked baron</titleShort>
     <baseDesc>[PAWN_nameDef] was an unjust nobleman, ruling over [PAWN_possessive] small fiefdom with an iron fist and earning the hatred of [PAWN_possessive] subjects.</baseDesc>
     <slot>Adulthood</slot>
 	<bodyTypeMale>Fat</bodyTypeMale>
@@ -603,7 +627,7 @@
 		</li>
 		<li>
 			<defName>Gourmand</defName>
-			<chance>50</chance>
+			<chance>80</chance>
 		</li>
 	</forcedTraitsChance>
 	<spawnCategories Inherit="False">
@@ -615,7 +639,8 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Knight</defName>
-    <title>knight</title>
+    <title>Knight</title>
+	<titleShort>knight</titleShort>
     <baseDesc>[PAWN_nameDef] was a knight of a small fiefdom, serving in multiple campaigns and wars over the years, while keeping the peace at home.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -636,7 +661,8 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Crusader</defName>
-    <title>crusader</title>
+    <title>Crusader</title>
+	<titleShort>Crusader</titleShort>
     <baseDesc>[PAWN_nameDef] served in an offensive crusade to capture a region deemed sacred to [PAWN_possessive] religion, learning the arts of war in the process.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -659,7 +685,7 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_MedievalMerchant</defName>
-    <title>medieval caravaneer</title>
+    <title>Caravaneer</title>
 	<titleShort>caravaneer</titleShort>
     <baseDesc>[PAWN_nameDef] was a merchant, travelling by caravan from city to city and peddling [PAWN_possessive] goods far and wide.</baseDesc>
     <slot>Adulthood</slot>
@@ -673,7 +699,8 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Jester</defName>
-    <title>jester</title>
+    <title>Jester</title>
+	<titleShort>jester</titleShort>
     <baseDesc>[PAWN_nameDef] was a jester, entertaining [PAWN_possessive] lord with [PAWN_possessive] foolish antics. [PAWN_pronoun] has few actual skills, however...</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -697,12 +724,14 @@
 		<li>Medieval</li>
 		<li>MedievalMisc</li>
 		<li>Outsider</li>
+		<li>JeubBackstory</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>    
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_SausageSalesman</defName>
-    <title>sausage conman</title>
+    <title>Sausage Conman</title>
+	<titleShort>sausage conman</titleShort>
     <baseDesc>[PAWN_nameDef] spent [PAWN_possessive] days running a sausage business. The sausages were universally regarded as vile, but somehow [PAWN_nameDef] managed to get people to buy them anyway...</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -735,7 +764,7 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_LibrarianApe</defName>
-    <title>accidental ape</title>
+    <title>Accidental Ape</title>
 	<titleShort>ex-orangutan</titleShort>
     <baseDesc>The life of [PAWN_nameDef] changed when an accident involving Glitter World tech and a lot of bananas turned [PAWN_objective] into an orangutang. [PAWN_pronoun] didn't mind, though; [PAWN_nameDef] was actually quite angry when, a few years later, [PAWN_possessive] colleagues restored [PAWN_possessive] true form.</baseDesc>
     <slot>Adulthood</slot>
@@ -752,7 +781,7 @@
 	<forcedTraitsChance>
 		<li>
 			<defName>ST_SemiFeral</defName>
-			<chance>50</chance>
+			<chance>60</chance>
 		</li>
 	</forcedTraitsChance>
 	<!--
@@ -763,8 +792,9 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_PlagueVictim</defName>
-    <title>plague victim</title>
-    <baseDesc>[PAWN_nameDef] suffered from a terrible disease which nearly took [PAWN_possessive] life. [PAWN_pronoun] was strengthed from the experience in the long run, however, and has a raised resistance to disease.</baseDesc>
+    <title>Plague Survivor</title>
+	<titleShort>plague survivor</titleShort>
+    <baseDesc>[PAWN_nameDef] suffered from a terrible disease which nearly took [PAWN_possessive] life. [PAWN_pronoun] was strengthened from the experience in the long run, however, and has a raised resistance to disease.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -789,8 +819,8 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Archchancellor</defName>
-    <title>stupid neptocrat arch-chancellor</title>
-	<titleShort>neptocrat chancellor</titleShort>
+    <title>Stupid Neptocrat Arch-Chancellor</title>
+	<titleShort>neptocrat</titleShort>
     <baseDesc>[PAWN_nameDef] was the arch-chancellor of a prestigious university, appointed only because of his relationship to its president. [PAWN_pronoun] had a rather non-standard approach to scholarship, and preferred to intimidate [PAWN_possessive] underlings with ranged weapons rather than engage in intellectual pursuits.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -830,7 +860,7 @@
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Bursar</defName>
-    <title>maddened bursar</title>
+    <title>Maddened Bursar</title>
 	<titleShort>pilled bursar</titleShort>
     <baseDesc>[PAWN_nameDef] was the bursar of an university. [PAWN_pronoun] was known for [PAWN_possessive] mental instability and required a constant supply of dried frog pills to maintain [PAWN_possessive] sanity. It is an addiction [PAWN_pronoun] will never break.</baseDesc>
     <slot>Adulthood</slot>
@@ -892,7 +922,7 @@
   
   <AlienRace.AlienBackstoryDef>
     <defName>ST_FrogPilled</defName>
-    <title>dried frog pill addict</title>
+    <title>Dried Frog Pill Addict</title>
 	<titleShort>frog pilled</titleShort>
     <baseDesc>[PAWN_nameDef] discovered dried frog pills at the end of [PAWN_possessive] his adolescence. [PAWN_pronoun] was searching for a means of "doping" to get ahead without putting the hard work into learning [PAWN_posessive] chosen craft. What [PAWN_nameDef] got is an addiction [PAWN_pronoun] will never break.</baseDesc>
     <slot>Adulthood</slot>
@@ -953,9 +983,9 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Witch</defName>
-    <title>village witch</title>
+    <title>Village Witch</title>
 	<titleShort>witch</titleShort>
-    <baseDesc>[PAWN_nameDef] was the local witch of a small village. She helped them with their problems using her mastery of herbology, as well as a bit of magic.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was the local witch of a small village. She helped them with their problems using her mastery of botany, as well as a bit of magic.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 	  <li>
@@ -979,6 +1009,7 @@
         </li>
 		<li MayRequire="Torann.ARimworldOfMagic">
 			<defName MayRequire="Torann.ARimworldOfMagic">TM_Gifted</defName>
+			<chance MayRequire="Torann.ARimworldOfMagic">100</chance>
 		</li>
     </forcedTraitsChance>
 	<!--
@@ -989,13 +1020,14 @@
 		<Neurotic>2</Neurotic>
     </disallowedTraits>
 	-->
-	<femaleCommonality>50</femaleCommonality>
+	<!-- <femaleCommonality>50</femaleCommonality> -->
 	<maleCommonality>0</maleCommonality>
   </AlienRace.AlienBackstoryDef> 
 
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Courtier</defName>
-    <title>courtier</title>
+    <title>Courtier</title>
+	<titleShort>courtier</titleShort>
     <baseDesc>[PAWN_nameDef] was a courtier at a local lord's court. [PAWN_pronoun] spent most of [PAWN_possessive] time networking with the other members of the court.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -1053,7 +1085,7 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_MedievalDoctor</defName>
-    <title>unskilled doctor</title>
+    <title>Unskilled Doctor</title>
 	<titleShort>Quack</titleShort>
     <baseDesc>[PAWN_nameDef] was a doctor in [PAWN_possessive] small hamlet, tending to peasants and the poor. Secretly, [PAWN_nameDef] had no idea what [PAWN_pronoun] was doing.</baseDesc>
     <slot>Adulthood</slot>
@@ -1075,7 +1107,8 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Adventurer</defName>
-    <title>adventurer</title>
+    <title>Adventurer</title>
+	<titleShort>adventurer</titleShort>
     <baseDesc>[PAWN_nameDef] was an adventurer. [PAWN_pronoun] spent [PAWN_possessive] life wandering across [PAWN_possessive] home world to help people with their problems while getting paid for it.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -1104,6 +1137,8 @@
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>Medieval</li>
+		<li>MedievalMisc</li>
+		<li>MedievalKnight</li>
 		<li>Offworld</li>
 		<li>ESCP_DunmerBackstory</li>
 		<li>HSAU_BS_HLS_Adulthood</li>
@@ -1117,7 +1152,8 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Tavernkeep</defName>
-    <title>tavern keeper</title>
+    <title>Tavern Keeper</title>
+	<titleShort>drunken tavern owner</titleShort>
     <baseDesc>[PAWN_nameDef] owned the local tavern in a Gnome settlement, and was generally respected by the community. Unfortunately, [PAWN_pronoun] tended to get drunk on his own supply.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -1158,13 +1194,16 @@
 		<li>Classical</li>
 		<li>GnomeBackstory</li>
 		<li>BeetnikhBackstory</li>
+		<li>JeubBackstory</li>
+		<li>Jews</li> <!-- Not my name, this is what Caulaflour named his Among Us Spacemen Backstories. -->
 		<li>PirateBackstory</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Poacher</defName>
-    <title>poacher</title>
+    <title>Poacher</title>
+	<titleShort>poacher</titleShort>
     <baseDesc>[PAWN_nameDef] lived in the wilds, illegally poaching on sanctioned hunting grounds to survive.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -1193,7 +1232,8 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_Assassin</defName>
-    <title>assassin</title>
+    <title>Assassin</title>
+	<titleShort>assassin</titleShort>
     <baseDesc>[PAWN_nameDef] was an assassin for an Assassin's Guild. [PAWN_pronoun] inhumed many with flair and style.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
@@ -1235,7 +1275,8 @@
   
   <AlienRace.AlienBackstoryDef ParentName="STMedievalBackstories">
     <defName>ST_MedievalAlchemist</defName>
-    <title>failed alchemist</title>
+    <title>Failed Alchemist</title>
+	<titleShort>alchemist</titleShort>
     <baseDesc>[PAWN_nameDef] was an alchemist who sought, with little success, to transmute mundane ingredients into valuable ones, including gold. [PAWN_pronoun] did manage to learn a lot about making other stuff, however.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>

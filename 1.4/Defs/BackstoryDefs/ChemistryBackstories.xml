@@ -45,6 +45,7 @@
 		<li>Offworlder</li>
 		<li>Outlander</li>
 		<li>Medieval</li>
+		<li>Scientist</li>
 		<li>ESCP_DunmerBackstory</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
@@ -52,7 +53,7 @@
 <!-- Pirate -->
   <AlienRace.AlienBackstoryDef>
     <defName>ST_BreakingBad</defName>
-    <title>kingpin chemist</title>
+    <title>Ex-Chemistry Teacher</title>
     <titleShort>kingpin</titleShort>
     <baseDesc>[PAWN_nameDef] was once an innocent chemistry teacher on an Urb-World known for a large black market. When he fell ill, he started applying [PAWN_possessive] knowledge to make drugs to raise money for a Healer Mech Serum. When [PAWN_nameDef] finally got one, [PAWN_pronoun] found that [PAWN_pronoun] loved making drugs, hurting people, and getting rich. From then on, [PAWN_nameDef] grew more and more powerful until becoming a kingpin of a vast drug empire.</baseDesc>
     <slot>Adulthood</slot>
@@ -84,6 +85,15 @@
 			<defName>Psychopath</defName>
 			<chance>100</chance>
 		</li>
+		<li>
+			<defName>Greedy</defName>
+			<chance>100</chance>
+		</li>
+      <li>
+        <defName>DrugDesire</defName>
+        <degree>2</degree>
+		<chance>10</chance>
+      </li>
 	</forcedTraitsChance>	
   </AlienRace.AlienBackstoryDef>
 
@@ -110,21 +120,28 @@
 		<li>Outlander</li>
 		<li>ESCP_DunmerBackstory</li>
 	</spawnCategories>
+	<forcedTraitsChance>
+		<li>
+			<defName>DrugDesire</defName>
+			<degree>2</degree>
+			<chance>1</chance>
+		</li>
+	</forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
 
 <!-- Tribal -->
   <AlienRace.AlienBackstoryDef>
-    <defName>ST_HerbloreExpert</defName>
+    <defName>ST_HerbExpert</defName>
     <title>herbologist</title>
     <titleShort>herbologist</titleShort>
-    <baseDesc>[PAWN_nameDef] collected medicinal herbs for [PAWN_possessive] tribe, an important role in a society as poor as his.</baseDesc>
+    <baseDesc>[PAWN_nameDef] collected medicinal herbs for [PAWN_possessive] tribe, an important role in a society as poor as [PAWN_possessive] was.</baseDesc>
     <slot>Adulthood</slot>
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <skillGains>
       <li>
         <key>Plants</key>
-        <value>5</value>
+        <value>4</value>
 	  </li>
 	  <li>
 		<key>Medicine</key>
@@ -133,6 +150,7 @@
     </skillGains>
 	<spawnCategories>
 		<li>Tribal</li>
+		<li>TribalFarmer</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 </Defs>
