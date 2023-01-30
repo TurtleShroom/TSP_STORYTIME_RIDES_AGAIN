@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="RoughPlantBase">
+		<defName>ST_BananaScytheCorpse</defName>
+		<label>poly-morphic banana</label>
+		<description>"Mmm, this looks tasty. Wait, it was once a WHAT?!" \n \n This banana is the terminal stage of the Banana Scythe's curse. It was once a living Pawn, but when he came into contact with the Banana Scythe and died while the curse was in effect, he was transformed, atom by atom, into this banana. The process killed him, and the result isn't even especially delicious.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/Fruits/Banana</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.001</MarketValue>
+			<Flammability>5</Flammability>
+			<Nutrition>5</Nutrition>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>0.5</daysToRotStart>
+				<rotDestroys>false</rotDestroys>
+			</li>
+		</comps>
+		<thingCategories>
+			<!-- <li>CorpsesHumanlike</li> -->
+			<li>AnimalProductRaw</li>
+			<li>PlantFoodRaw</li>
+			<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+			<li MayRequire="mlie.badmeatcategory">MeatBad</li>
+		</thingCategories>
+		<ingestible>
+			<foodType Inherit="False">VegetableOrFruit, Plant, DendrovoreAnimal, Seed, Tree, Corpse</foodType>
+			<preferability>DesperateOnly</preferability>
+			<specialThoughtDirect>AteCorpse</specialThoughtDirect>
+		</ingestible>
+		<!--
+		<ingredient>
+			<mergeCompatibilityTags>
+				<li MayRequire="Ludeon.RimWorld.Ideology">HumanMeat</li> It has the same "creepiness factor" as eating a corpse.
+			</mergeCompatibilityTags>
+		</ingredient>
+		-->
+	</ThingDef>
+</Defs>

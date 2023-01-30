@@ -5,9 +5,23 @@
 		<xpath>/Defs/ThingDef[defName="ROM_StrangeMealSimple"]</xpath>
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="ST_BananaScytheCorpse"]/thingCategories</xpath>
+			<value>
+				<thingCategories>
+					<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_CosmicHorrorCorpses</li>
+					<li MayRequire="mlie.badmeatcategory">MeatBad</li>
+				</thingCategories>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ROM_StrangeMealSimple"]</xpath>
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Bullet_CursedRifle"]/damageDef</xpath>
 			<value>
-				<damageDef>ROM_Psychic</damageDef>
+				<damageDef MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_Psychic</damageDef>
 			</value>
 		</match>
 	</Operation>
@@ -19,7 +33,7 @@
 			<xpath>/Defs/ThingDef[defName="CursedCutlass"]/tools/li[2]/capacities</xpath>
 			<value>
 				<capacities>
-					<li>ROM_Psychic</li>
+					<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_Psychic</li>
 				</capacities>
 			</value>
 		</match>
@@ -32,7 +46,7 @@
 			<xpath>/Defs/ThingDef[defName="CursedGun"]/tools/li[3]/capacities</xpath>
 			<value>
 				<capacities>
-					<li>ROM_Psychic</li>
+					<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_Psychic</li>
 				</capacities>
 			</value>
 		</match>

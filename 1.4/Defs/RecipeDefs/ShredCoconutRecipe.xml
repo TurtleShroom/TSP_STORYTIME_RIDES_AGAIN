@@ -3,12 +3,12 @@
 
   <RecipeDef>
     <defName>Make_ShreddedCoconut</defName>
-    <label>make shredded coconut</label>
-    <description>shred coconut.</description>
-    <jobString>shredding.</jobString>
+    <label>shred coconuts</label>
+    <description>Grind the flesh of coconuts into delicious shavings that go great on any seafood.</description>
+    <jobString>shredding coconuts</jobString>
     <workAmount>300</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <workSkill>Crafting</workSkill>
+    <workSkill>Cooking</workSkill>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
     <ingredients>
@@ -32,12 +32,17 @@
 		</thingDefs>
     </defaultIngredientFilter>
 	<recipeUsers>
-    		<li>ElectricGrinder</li>
-		    <li>ManualGrinder</li>
+		<li>ElectricGrinder</li>
+		<li>ManualGrinder</li>
+		<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentPrepTable</li>
 	</recipeUsers>
 	<products>
-		<ShreddedCoconut>50</ShreddedCoconut>
+		<ST_ShreddedCoconut>75</ST_ShreddedCoconut>
+		<Rylex_CoconutMilk>5</Rylex_CoconutMilk>
 	</products>
+	<researchPrerequisites>
+		<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentsResearch</li>
+	</researchPrerequisites>
   </RecipeDef>
 
 </Defs>

@@ -11,14 +11,15 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<recipeUsers>
-			<li>Grinder</li>
+			<li>ManualGrinder</li>
 			<li>ElectricGrinder</li>
 		</recipeUsers>
 		<ingredients>
 		  <li>
 			<filter>
 				<thingDefs>
-					<li>ST_Poison</li>
+					<li>ST_PoisonExtract</li>
+					<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
 				</thingDefs>
 			</filter>
 			<count>10</count>
@@ -34,8 +35,9 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>ST_Poison</li>
+				<li>ST_PoisonExtract</li>
 				<li>ST_Worm</li>
+				<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>

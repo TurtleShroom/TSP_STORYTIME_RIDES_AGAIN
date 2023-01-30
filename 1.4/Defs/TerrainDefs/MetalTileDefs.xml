@@ -31,7 +31,7 @@
     <costList>
       <ST_Blackium>7</ST_Blackium>
     </costList>
-    <designationHotKey>Misc4</designationHotKey>
+    <!-- <designationHotKey>Misc4</designationHotKey> -->
   </TerrainDef>    
   
   <TerrainDef ParentName="TileStorytimeBase">
@@ -53,7 +53,7 @@
       <li>FineFloor</li>
 	  <li>NoInfestation</li>
     </tags>
-    <designationHotKey>Misc5</designationHotKey>
+    <!-- <designationHotKey>Misc5</designationHotKey> -->
   </TerrainDef>      
   
   <TerrainDef ParentName="TileStorytimeBase">
@@ -74,7 +74,7 @@
     <tags>
       <li>FineFloor</li>
     </tags>
-    <designationHotKey>Misc6</designationHotKey>
+    <!-- <designationHotKey>Misc6</designationHotKey> -->
 	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
   </TerrainDef>      
 
@@ -99,7 +99,7 @@
 	  <li>Road</li>
 	  <li>NoInfestation</li>
     </tags>
-    <designationHotKey>Misc7</designationHotKey>
+    <!-- <designationHotKey>Misc7</designationHotKey> -->
 	<constructionSkillPrerequisite>7</constructionSkillPrerequisite>
   </TerrainDef>      
 
@@ -122,7 +122,7 @@
       <li>FineFloor</li>
     </tags>
 	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-    <designationHotKey>Misc8</designationHotKey>
+    <!-- <designationHotKey>Misc8</designationHotKey> -->
   </TerrainDef>    
 
   <TerrainDef ParentName="TileStorytimeBase">
@@ -144,7 +144,7 @@
     <tags>
       <li>FineFloor</li>
     </tags>
-    <designationHotKey>Misc9</designationHotKey>
+    <!-- <designationHotKey>Misc9</designationHotKey> -->
 	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
   </TerrainDef>
   
@@ -156,9 +156,11 @@
 	<texturePath Inherit="False">Terrain/Surfaces/TileStoneFine</texturePath>
 	<isPaintable>false</isPaintable>
     <color>(0, 182, 213)</color>
+	<burnedDef>GroundWeezer</burnedDef>
     <statBases>
       <WorkToBuild>800</WorkToBuild>
       <Beauty>5</Beauty>
+	  <Flammability>0.1</Flammability>
     </statBases>
     <costList>
       <Weezer>8</Weezer>
@@ -167,6 +169,17 @@
       <li>FineFloor</li>
 	  <li>Road</li>
     </tags>
-    <designationHotKey>Misc6</designationHotKey>
+    <!-- <designationHotKey>Misc6</designationHotKey> -->
+  </TerrainDef>  
+  
+  <TerrainDef ParentName="BurnedFloorBase">
+    <defName>GroundWeezer</defName>
+    <label>burnt Weezer shards</label>
+    <renderPrecedence>201</renderPrecedence>
+    <description>Optical discs from Weezer albums, melted into a linoleum-like substance. That linoleum has since caught on fire and has been completely ruined.</description>
+	<texturePath Inherit="False">Terrain/Surfaces/BurnedCarpet</texturePath>
+	<edgeType>FadeRough</edgeType>
+	<isPaintable>false</isPaintable>
+    <color>(0, 182, 213)</color>
   </TerrainDef>  
 </Defs> 

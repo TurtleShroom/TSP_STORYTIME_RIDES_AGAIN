@@ -15,7 +15,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>Werefrog</defName>
 		<label>Werefrog</label>
-		<description>Half man, half frog, all evil. Whatever soul this creature once had has gone to the afterlife, leaving an abomination is ravenous, mindless, and pitiless. Watch out for its bite.</description>	
+		<description>Half man, half frog, all evil. Whatever soul this creature once had has gone to the afterlife, leaving an abomination that is ravenous, mindless, and pitiless. Watch out for its bite.</description>	
 		<descriptionHyperlinks>
 			<thingDef>WerefrogBlood</thingDef>
 		</descriptionHyperlinks>
@@ -77,12 +77,11 @@
 			</li>
 			<li Class="AnimalBehaviours.CompProperties_DoesntFlee"></li>
 		</comps>
-
 		<race>
 			<body>FrogPersonBody</body>
 			<baseBodySize>1.25</baseBodySize>
 			<baseHealthScale>2</baseHealthScale>
-			<herdMigrationAllowed>true</herdMigrationAllowed>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
 			<needsRest>false</needsRest>
 			<leatherDef>Leather_Frog</leatherDef>
 			<useMeatFrom>ST_BullFrog</useMeatFrom>
@@ -91,7 +90,7 @@
 			<foodType>Corpse, CarnivoreAnimalStrict, CarnivoreAnimal, Meat, Meal, Fluid, Kibble</foodType>
 			<baseHungerRate>1.25</baseHungerRate>
 			<predator>true</predator>
-			<maxPreyBodySize>5</maxPreyBodySize>
+			<maxPreyBodySize>10</maxPreyBodySize>
 			<wildness>1</wildness>
 			<intelligence Inherit="False">ToolUser</intelligence>
 			<lifeStageAges>
@@ -135,12 +134,11 @@
 		</modExtensions>
 	</ThingDef>
 	
-	
 	<PawnKindDef>
 		<defName>Werefrog</defName>
 		<label>Werefrog</label>
 		<race>Werefrog</race>
-		<combatPower>320</combatPower>
+		<combatPower>100</combatPower>
 		<canArriveManhunter>true</canArriveManhunter>
 		<ecoSystemWeight>0</ecoSystemWeight>
 		<defaultFactionType>Werefrogs</defaultFactionType>
@@ -167,4 +165,36 @@
 		</lifeStages>
 	</PawnKindDef>
 
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>ManFrog</defName>
+		<label>man-frog</label>
+		<race>Werefrog</race>
+		<combatPower>160</combatPower>
+		<canArriveManhunter>true</canArriveManhunter>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<defaultFactionType>Werefrogs</defaultFactionType>
+		<maxGenerationAge>2</maxGenerationAge>
+		<lifeStages>
+			<li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/Animal/Abomination_Types/ManFrog/ManFrog</texPath>
+				<drawSize>1.5</drawSize>
+				<shadowData>
+					<volume>(0.35, 0.4, 0.35)</volume>
+					<offset>(0,0,0)</offset>
+				</shadowData>
+			</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<modExtensions>
+			<li Class="GeneticRim.DefExtension_Hybrid" MayRequire="VanillaExpanded.VGeneticsE">
+				<dominantGenome MayRequire="VanillaExpanded.VGeneticsE">GR_HumanoidGenetic</dominantGenome>
+				<secondaryGenome MayRequire="VanillaExpanded.VGeneticsE">ST_FrogGenetic</secondaryGenome>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
 </Defs>

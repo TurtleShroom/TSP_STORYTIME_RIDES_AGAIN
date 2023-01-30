@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- THE PUS IS SEASONING IF YOU HAVE THE MOD -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="ST_ShreddedCoconut"]/thingCategories</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories>
+					<li Inherit="False">PlantMatter</li>
+					<li MayRequire="tikubonn.rimseasoning">RimSeasoning_Seasoning</li>
+					<li MayRequire="vanillaexpanded.vcooke" Inherit="False">VCE_Condiments</li>
+				</thingCategories>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ST_ShreddedCoconut"]/comps</xpath>
+			<success>Always</success>
+			<value>
+				<li Class="RimSeasoning.CompProperties_Seasoning" MayRequire="tikubonn.RimSeasoning">
+					<compClass MayRequire="tikubonn.RimSeasoning">RimSeasoning.CompSeasoning</compClass>
+					<consumedThought MayRequire="tikubonn.RimSeasoning">TSP_ST_DoesCoconutShrimpHaveCoconuts_Thought</consumedThought>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<!-- Keeps Pawns from seeking this out when it's a seasoning -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="ST_ShreddedCoconut"]/ingestible/preferability</xpath>
+			<success>Always</success>
+			<value>
+				<preferability>DesperateOnlyForHumanlikes</preferability>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<!-- Keeps Pawns from getting the bigger bonus if they don't put the pus on food as a seasoning -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="ST_ShreddedCoconut"]/ingestible/specialThoughtAsIngredient</xpath>
+			<success>Always</success>
+			<value>
+				<specialThoughtAsIngredient>TSP_ST_ShreddedCoconut_Direct</specialThoughtAsIngredient>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<!-- Keeps Pawns from seeking this out when it's a seasoning -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ST_ShreddedCoconut"]/ingestible</xpath>
+			<success>Always</success>
+			<value>
+				<optimalityOffsetHumanlikes>-15</optimalityOffsetHumanlikes>
+				<optimalityOffsetFeedingAnimals>-15</optimalityOffsetFeedingAnimals>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<!-- Keeps Pawns from seeking this out when it's a seasoning -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[@Name="CookMealBase"]/defaultIngredientFilter/disallowedThingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>ST_ShreddedCoconut</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>

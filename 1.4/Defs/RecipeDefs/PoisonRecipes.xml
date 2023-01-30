@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
  <RecipeDef>
@@ -11,7 +11,7 @@
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
 	<recipeUsers>
-		<li>Grinder</li>
+		<li>ManualGrinder</li>
 		<li>ElectricGrinder</li>
     </recipeUsers>
     <ingredients>
@@ -28,7 +28,8 @@
 			<thingDefs>
 				<li>GuamLeaves</li>
 				<li>ST_MixedHerbs</li>
-				<li>VCE_RawSpices</li>
+				<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
 				<li MayRequire="tikubonn.rimseasoning">RimSeasoning_RedPepper</li>
 				<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
 			</thingDefs>
@@ -41,12 +42,14 @@
 			<li>ST_Bean</li>
 			<li>GuamLeaves</li>
 			<li>ST_MixedHerbs</li>
+			<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li>
+			<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
 			<li MayRequire="tikubonn.rimseasoning">RimSeasoning_RedPepper</li>
 			<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
 		</thingDefs>
     </fixedIngredientFilter>
 	<products>
-		<ST_Poison>25</ST_Poison>
+		<ST_PoisonExtract>25</ST_PoisonExtract>
 	</products>
   </RecipeDef>
 </Defs>
