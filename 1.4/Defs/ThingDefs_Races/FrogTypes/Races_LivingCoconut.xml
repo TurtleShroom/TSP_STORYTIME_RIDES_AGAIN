@@ -18,8 +18,8 @@
 		</comps>
 	</HediffDef>
 
-	<ThingDef ParentName="BasePawn">
-		<defName>LivingCoconut</defName>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>ST_LivingCoconut</defName>
 		<label>coconut frog</label>
 		<description>Genetically engineered using the same basic process as a tomato frog, the coconut frog grows cysts that, when cut, are totally indistinguishable from real coconuts. These cysts provide it with significant natural armor. When a coconut frog is killed, its remaining cysts that naturally grow to forms identical to coconuts sprout into a synthetic coconut tree.</description>
 		<statBases>
@@ -45,6 +45,7 @@
 				<power>3</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+				<chanceFactor>0.1</chanceFactor>
 			</li>
 			<li>
 				<label>front-right hand</label>
@@ -54,6 +55,7 @@
 				<power>3</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+				<chanceFactor>0.1</chanceFactor>
 			</li>
 			<li>
 				<label>vomerine teeth</label>
@@ -63,18 +65,18 @@
 				<power>4</power>
 				<cooldownTime>2.6</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-				<chanceFactor>0.7</chanceFactor>
+				<chanceFactor>0.5</chanceFactor>
 			</li>
 			<li>
 				<label>head</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>2.5</power>
+				<power>7</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.2</chanceFactor>
+				<chanceFactor>1</chanceFactor>
 			</li>
 		</tools>
 		<race>
@@ -93,7 +95,7 @@
 			<needsRest>true</needsRest>
 			<hasGenders>true</hasGenders>
 			<baseBodySize>1</baseBodySize>
-			<baseHungerRate>0.3</baseHungerRate>
+			<baseHungerRate>0.4</baseHungerRate>
 			<baseHealthScale>3</baseHealthScale>
 			<gestationPeriodDays>80</gestationPeriodDays>
 			<nameOnTameChance>1</nameOnTameChance>
@@ -108,12 +110,28 @@
 			<lifeExpectancy>20</lifeExpectancy>
 			<lifeStageAges>
 				<li>
-					<def>AnimalAdult</def>
+					<def>AnimalBaby</def>
 					<minAge>0</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>CoconutAngry</soundDeath>
 					<soundAngry>Frog_Angry</soundAngry> 
 					<soundCall>CoconutNeutral</soundCall>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.096</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>CoconutAngry</soundDeath>
+					<soundAngry>Frog_Angry</soundAngry> 
+					<soundCall>CoconutNeutral</soundCall>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.45</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
 				</li>
 			</lifeStageAges>
 			<soundMeleeHitPawn>CoconutAngry</soundMeleeHitPawn>
@@ -125,6 +143,7 @@
 		<tradeTags>
 			<li>AnimalExotic</li>
 			<li>StorytimeAnimalRare</li>
+			<li>AnimalFrog</li>
 		</tradeTags>
 		<thingCategories>
 			<li>Animals</li>
@@ -168,25 +187,59 @@
 					<li>ST_FrogRareDesc</li>
 				</statDescriptions>				
 			</li>
-			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
-				<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
-			</li>
 		</modExtensions>
 	</ThingDef>
   
 	<PawnKindDef ParentName="AnimalKindBase">
 		<defName>LivingCoconut</defName>
 		<label>coconut frog</label>
-		<race>LivingCoconut</race>
+		<race>ST_LivingCoconut</race>
 		<combatPower>100</combatPower>
 		<ecoSystemWeight>30</ecoSystemWeight>
 		<lifeStages>
 			<li>
-				<label>living coconut</label>
 				<labelPlural>living coconuts</labelPlural>
 				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Frog_Types/Tomato_Frog/TomatoFrog</texPath>
+					<drawSize>0.6</drawSize>
+					<color>(65, 65, 1)</color>
+					<shadowData>
+						<volume>(0.25, 0.3, 0.25)</volume>
+						<offset>(0,0,0)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut</texPath>
 					<drawSize>1.25</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<labelPlural>living coconuts</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Frog_Types/Tomato_Frog/TomatoFrog</texPath>
+					<color></color>
+					<drawSize>0.8</drawSize>
+					<color>(65, 65, 1)</color>
+					<shadowData>
+						<volume>(0.25, 0.3, 0.25)</volume>
+						<offset>(0,0,0)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut</texPath>
+					<drawSize>1.25</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<labelPlural>living coconuts</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Frog_Types/Tomato_Frog/TomatoFrog</texPath> <!-- Temporary -->
+					<drawSize>1</drawSize>
+					<color>(65, 65, 1)</color>
+					<shadowData>
+						<volume>(0.25, 0.3, 0.25)</volume>
+						<offset>(0,0,0)</offset>
+					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut</texPath>

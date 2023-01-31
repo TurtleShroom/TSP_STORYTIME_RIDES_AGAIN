@@ -21,7 +21,6 @@
 	  <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</ToxicEnvironmentResistance>
       <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">0</BandwidthCost>
       <ControlTakingTime MayRequire="Ludeon.Rimworld.Biotech">34</ControlTakingTime>
-      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</ToxicEnvironmentResistance>
       <MechEnergyLossPerHP MayRequire="Ludeon.Rimworld.Biotech">0.5</MechEnergyLossPerHP>
       <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">0</WastepacksPerRecharge>
       <WorkSpeedGlobal MayRequire="Ludeon.Rimworld.Biotech">0.5</WorkSpeedGlobal>
@@ -48,13 +47,13 @@
 			<!-- <anyColonistCloseCheckRadius>3</anyColonistCloseCheckRadius> -->
 			<wakeUpSound>Frog_Angry</wakeUpSound>
 		</li>
-		<li MayRequire="Ludeon.Rimworld.Biotech" Class="CompProperties_OverseerSubject">
+		<li Class="CompProperties_OverseerSubject" MayRequire="Ludeon.Rimworld.Biotech">
 			<needsOverseerEffect>MechUncontrolled</needsOverseerEffect>
 			<delayUntilFeralCheck>600000</delayUntilFeralCheck>
 			<feralMtbDays>100</feralMtbDays>
 			<feralCascadeRadialDistance>0</feralCascadeRadialDistance>
 		</li>
-		<li MayRequire="Ludeon.Rimworld.Biotech" Class="CompProperties_MechRepairable" />
+		<li Class="CompProperties_MechRepairable" MayRequire="Ludeon.Rimworld.Biotech" />
     </comps>
     <tools>
       <li>
@@ -76,6 +75,7 @@
         <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
       </li>
       <li>
+		<label>enhanced vomerine teeth</label>
         <capacities>
           <li>Bite</li>
         </capacities>
@@ -85,7 +85,7 @@
         <chanceFactor>0.7</chanceFactor>
       </li>
       <li>
-        <label>head</label>
+        <label>head plate</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
@@ -120,10 +120,11 @@
       <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
       <baseBodySize>0.35</baseBodySize>
       <baseHealthScale>3</baseHealthScale>
-      <baseHungerRate>0.15</baseHungerRate>
+      <baseHungerRate>0.1</baseHungerRate>
       <foodType Inherit="False">OmnivoreRoughAnimal, VegetarianRoughAnimal, Corpse, Tree, Plant, Kibble</foodType>
 	  <useMeatFrom>ST_BullFrog</useMeatFrom>
       <leatherDef>Leather_Frog</leatherDef>
+	  <mechWeightClass MayRequire="Ludeon.RimWorld.Biotech">Light</mechWeightClass>
 	  <!--
       <wildness>0</wildness>
       <trainability>Advanced</trainability>
@@ -200,6 +201,9 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <maskPath MayRequire="Ludeon.RimWorld.Biotech">Things/Pawn/Mechanoid/AllegianceOverlays/TSP_CyberFrog_Pacified</maskPath>
+          <shaderType MayRequire="Ludeon.RimWorld.Biotech">CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>0.6</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -210,6 +214,9 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <maskPath MayRequire="Ludeon.RimWorld.Biotech">Things/Pawn/Mechanoid/AllegianceOverlays/TSP_CyberFrog_Pacified</maskPath>
+          <shaderType MayRequire="Ludeon.RimWorld.Biotech">CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>0.8</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -220,6 +227,9 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <maskPath MayRequire="Ludeon.RimWorld.Biotech">Things/Pawn/Mechanoid/AllegianceOverlays/TSP_CyberFrog_Pacified</maskPath>
+          <shaderType MayRequire="Ludeon.RimWorld.Biotech">CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1</drawSize>
           <shadowData>
             <volume>(0.3, 0.35, 0.3)</volume>
@@ -234,7 +244,7 @@
     </lifeStages>
     <weaponMoney>3000~9999</weaponMoney>
     <techHediffsChance MayRequire="Ludeon.RimWorld.Biotech">1</techHediffsChance>
-    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <techHediffsMoney MayRequire="Ludeon.RimWorld.Biotech">9999~9999</techHediffsMoney>
     <weaponTags>
 		<li>SpacerGun</li>
 		<li>MechanoidGunMedium</li>
@@ -254,6 +264,8 @@
       <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
       <PsychicSensitivity>0</PsychicSensitivity>
+	  <ToxicResistance>0.9</ToxicResistance>
+	  <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</ToxicEnvironmentResistance>
     </statBases>
 	<comps>
 		<li Class="CompProperties_EggLayer">
@@ -527,10 +539,10 @@
       <baseBodySize>0.35</baseBodySize>
       <baseHealthScale>3</baseHealthScale>
       <baseHungerRate>0.15</baseHungerRate>
-      <foodType Inherit="False">OmnivoreRoughAnimal, Kibble</foodType>
+      <foodType Inherit="False">OmnivoreRoughAnimal, VegetarianRoughAnimal, Kibble</foodType>
 	  <useMeatFrom>ST_BullFrog</useMeatFrom>
-      <leatherDef>Steel</leatherDef>
-      <wildness>0</wildness>
+      <leatherDef>Leather_Frog</leatherDef>
+      <wildness>0.1</wildness>
       <trainability>Advanced</trainability>
       <petness>1</petness>
       <lifeExpectancy>999</lifeExpectancy>
@@ -559,6 +571,10 @@
       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
+	<butcherProducts>
+		<Steel>15</Steel>
+		<ComponentSpacer>1</ComponentSpacer>
+	</butcherProducts>
     <tradeTags>
       <li>AnimalExotic</li>
 	  <li>AnimalInsectSpace</li>
