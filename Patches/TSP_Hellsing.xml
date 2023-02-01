@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
 	<Operation Class="PatchOperationConditional">
@@ -23,7 +23,7 @@
 			<success>Always</success>
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="BloodFrog"]/statBases/MeatAmount</xpath>
 			<value>
-				<MeatAmount>2</MeatAmount>
+				<MeatAmount>4</MeatAmount>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -51,7 +51,54 @@
 			<success>Always</success>
 			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="BloodFrog"]/race/baseHungerRate</xpath>
 			<value>
-				<baseHungerRate>4</baseHungerRate>
+				<baseHungerRate>3</baseHungerRate>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="HSAU_BloodPouch"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="BloodFrog"]/comps</xpath>
+			<value>
+				<comps>
+					<li Class="CompProperties_EggLayer">
+						<eggUnfertilizedDef MayRequire="baskerville.hellsingarmsultimate">HSAU_BloodPouch</eggUnfertilizedDef>
+						<eggFertilizedDef>TSP_ST_BloodFrogEgg_Fertilized</eggFertilizedDef>
+						<eggFertilizationCountMax>1</eggFertilizationCountMax>
+						<eggLayIntervalDays>25</eggLayIntervalDays>
+						<eggCountRange>2</eggCountRange>
+					</li>
+					<li Class="StoryTime.CompProperties_Tomato" MayRequire="baskerville.hellsingarmsultimate">
+						<tomatoDef MayRequire="baskerville.hellsingarmsultimate">HSAU_BloodPouch</tomatoDef>
+						<tomatoIntervalDays MayRequire="baskerville.hellsingarmsultimate">1.2</tomatoIntervalDays>
+						<tomatoAmount MayRequire="baskerville.hellsingarmsultimate">1</tomatoAmount>
+					</li>
+					<!-- These frogs are so fragile that the player should be allowed to intervene at any time to move them. -->
+					<li Class="AnimalBehaviours.CompProperties_Draftable">
+						<makeNonFleeingToo>true</makeNonFleeingToo>
+					</li>
+				</comps>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="HSAU_BloodPouch"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="BloodFrog"]/butcherProducts</xpath>
+			<value>
+				<butcherProducts>
+					<HSAU_BloodPouch MayRequire="baskerville.hellsingarmsultimate">10</HSAU_BloodPouch>
+				</butcherProducts>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

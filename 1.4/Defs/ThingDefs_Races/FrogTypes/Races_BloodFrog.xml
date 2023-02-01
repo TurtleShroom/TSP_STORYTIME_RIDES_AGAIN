@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-  <DamageDef Name="BloodExplosion">
-    <defName>BloodExplosion</defName>
-    <label>engorged amphibious detonation</label>
-    <workerClass>DamageWorker_AddInjury</workerClass>
-    <externalViolence>true</externalViolence>
-	<externalViolenceForMechanoids>true</externalViolenceForMechanoids>
-    <isExplosive>true</isExplosive>
-	<makesBlood>true</makesBlood>
-    <deathMessage>{0} has died to a popped engorged Frogglobin. How embarassing!</deathMessage>
-    <hediff>Shredded</hediff>
-    <hediffSolid>Bruise</hediffSolid>
-    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-    <impactSoundType>Slice</impactSoundType>
-    <armorCategory>Sharp</armorCategory>
-    <minDamageToFragment>15</minDamageToFragment>
-    <defaultDamage>6</defaultDamage>
-    <defaultStoppingPower>0</defaultStoppingPower>
-    <defaultArmorPenetration>0</defaultArmorPenetration>
-    <buildingDamageFactorImpassable>0</buildingDamageFactorImpassable>
-    <buildingDamageFactorPassable>0</buildingDamageFactorPassable>
-    <plantDamageFactor>2</plantDamageFactor>
-    <explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
-    <explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
-	<explosionInteriorFleck>BloodSplash</explosionInteriorFleck>
-    <explosionCellFleck>BloodSplash</explosionCellFleck>
-	<makesAnimalsFlee>true</makesAnimalsFlee>
-	<canInterruptJobs>true</canInterruptJobs>
-    <explosionColorCenter>(255, 0, 0)</explosionColorCenter>
-    <explosionColorEdge>(230, 2, 2)</explosionColorEdge>
-    <combatLogRules>Damage_Bomb</combatLogRules>
-    <soundExplosion>FrogPop</soundExplosion>
-  </DamageDef>
+	<DamageDef Name="BloodExplosion">
+		<defName>BloodExplosion</defName>
+		<label>engorged amphibious detonation</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<externalViolenceForMechanoids>true</externalViolenceForMechanoids>
+		<isExplosive>true</isExplosive>
+		<makesBlood>true</makesBlood>
+		<deathMessage>{0} has died to a popped engorged Frogglobin. How embarassing!</deathMessage>
+		<hediff>Shredded</hediff>
+		<hediffSolid>Bruise</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>7</defaultDamage>
+		<defaultStoppingPower>0</defaultStoppingPower>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<buildingDamageFactorImpassable>0</buildingDamageFactorImpassable>
+		<buildingDamageFactorPassable>0</buildingDamageFactorPassable>
+		<plantDamageFactor>2</plantDamageFactor>
+		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+		<explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
+		<explosionInteriorFleck>BloodSplash</explosionInteriorFleck>
+		<explosionCellFleck>BloodSplash</explosionCellFleck>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<canInterruptJobs>true</canInterruptJobs>
+		<explosionColorCenter>(255, 0, 0)</explosionColorCenter>
+		<explosionColorEdge>(230, 2, 2)</explosionColorEdge>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<soundExplosion>FrogPop</soundExplosion>
+	</DamageDef>
  
    <ThingDef ParentName="AnimalThingBase">
     <defName>BloodFrog</defName>
@@ -48,16 +48,16 @@
     </statBases>
 	<comps>
 		<li Class="CompProperties_EggLayer">
-			<eggUnfertilizedDef MayRequire="baskerville.hellsingarmsultimate">HSAU_BloodPouch</eggUnfertilizedDef>
+			<eggUnfertilizedDef MayRequire="ludeon.rimworld.biotech">HemogenPack</eggUnfertilizedDef>
 			<eggFertilizedDef>TSP_ST_BloodFrogEgg_Fertilized</eggFertilizedDef>
 			<eggFertilizationCountMax>1</eggFertilizationCountMax>
-			<eggLayIntervalDays>25</eggLayIntervalDays>
-			<eggCountRange>2</eggCountRange>
+			<eggLayIntervalDays>18</eggLayIntervalDays>
+			<eggCountRange>1~3</eggCountRange>
 		</li>
-		<li Class="StoryTime.CompProperties_Tomato" MayRequire="baskerville.hellsingarmsultimate">
-			<tomatoDef MayRequire="baskerville.hellsingarmsultimate">HSAU_BloodPouch</tomatoDef>
-			<tomatoIntervalDays MayRequire="baskerville.hellsingarmsultimate">6</tomatoIntervalDays>
-			<tomatoAmount MayRequire="baskerville.hellsingarmsultimate">1</tomatoAmount>
+		<li Class="StoryTime.CompProperties_Tomato" MayRequire="ludeon.rimworld.biotech">
+			<tomatoDef MayRequire="ludeon.rimworld.biotech">HemogenPack</tomatoDef>
+			<tomatoIntervalDays MayRequire="ludeon.rimworld.biotech">2</tomatoIntervalDays>
+			<tomatoAmount MayRequire="ludeon.rimworld.biotech">1</tomatoAmount>
 		</li>
 		<!-- These frogs are so fragile that the player should be allowed to intervene at any time to move them. -->
 		<li Class="AnimalBehaviours.CompProperties_Draftable">
@@ -289,6 +289,7 @@
       <baseHungerRate>0.2</baseHungerRate>
       <foodType>CarnivoreAnimal, CarnivoreAnimalStrict, Kibble</foodType>
 	  <useMeatFrom>ST_BullFrog</useMeatFrom>
+	  <!-- <specificMeatDef MayRequire="ludeon.rimworld.biotech">HemogenPack</specificMeatDef> -->
 	  <!-- <specificMeatDef MayRequire="baskerville.hellsingarmsultimate">HSAU_BloodPouch</specificMeatDef> -->
       <leatherDef>Leather_Frog</leatherDef>
       <wildness>0.1</wildness>
@@ -328,7 +329,8 @@
       <soundMeleeMiss>FrogPop</soundMeleeMiss>
     </race>
 	<butcherProducts>
-		<HSAU_BloodPouch MayRequire="baskerville.hellsingarmsultimate">10</HSAU_BloodPouch>
+		<HemogenPack MayRequire="ludeon.rimworld.biotech">10</HemogenPack>
+		<!-- <HSAU_BloodPouch MayRequire="baskerville.hellsingarmsultimate">10</HSAU_BloodPouch> -->
 	</butcherProducts>
     <tradeTags>
 		<li>AnimalFrog</li>
