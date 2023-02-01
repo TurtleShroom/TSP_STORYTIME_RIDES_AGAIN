@@ -3,7 +3,7 @@
 	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
 		<defName>Alien_ST_Goblin</defName>
 		<label>goblin</label>
-		<description>"DUDE! LET ME IN: I'M A FAIRY! DON'T YOU BELIEVE IN FAIRIES?" \n \n While fairies were traditionally considered spiritual beings, the colonization of the Milky Way confirmed, beyond a reasonable doubt, that the supernatural and psychic realms existed, and temporal creatures could be derived from both. Goblins are one such fairy, and a very ugly fairy at that. \n \n Goblins have always been a part of Old Earth folklore, and were largely believed to not exist. As it turns out, goblins are real, but were almost never present on Old Earth, manifesting periodically at most. The few goblins on Old Earth were historically too stealthy and camoflauged to actually be detected. The revelation of goblins' occured during the expansion of man's colonization in the third millineum, in which a planet, now a Core World, was discovered to be full of them. Outside that planet, goblins exist to varying degrees across the galaxy, and can be encountered as far as man has settled, up to and including the Galactic Rim of civilization.</description>
+		<description>"DUDE! LET ME IN: I'M A FAIRY! DON'T YOU BELIEVE IN FAIRIES?" \n \n While fairies were traditionally considered spiritual beings, the colonization of the Milky Way confirmed, beyond a reasonable doubt, that the supernatural and psychic realms existed, and temporal creatures could be derived from both. Goblins are one such fairy, and a very ugly fairy at that. \n \n Goblins have always been a part of Old Earth folklore, and were largely believed to not exist. As it turns out, goblins are real, but were almost never present on Old Earth, manifesting periodically at most. The few goblins on Old Earth were historically too stealthy and camoflauged to actually be detected. One advantage they had was that goblins uniquely boast four ears capable of swivelling like a cat's ears, allowing them to detect sounds from a greater distance, and know immediately where the sound originates. \n The revelation of goblins' occured during the expansion of man's colonization in the early third millineum, in which a planet, now a Core World, was discovered to be full of them. Outside that planet, goblins exist to varying degrees across the galaxy, and can be encountered as far as man has settled, up to and including the Galactic Rim of civilization.</description>
 		<alienRace>
 		  <raceRestriction>
 				<recipeList>
@@ -36,11 +36,11 @@
 			  </li>   		  
 			  <li>
 				<defName>ST_SemiFeral</defName>
-				<chance>5</chance>
+				<chance>10</chance>
 			  </li>     
 			  <li>
 				<defName>Cannibal</defName>
-				<chance>15</chance>
+				<chance>5</chance>
 			  </li>
 			</forcedRaceTraitEntries>
 			<maxDamageForSocialfight>3</maxDamageForSocialfight>
@@ -53,9 +53,9 @@
 				<li>Hulk</li>
 				<li>Thin</li>
 				<li>Male</li>
-				<li>Female</li>
-				<li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
-				<li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
+				<!-- <li>Female</li> -->
+				<li MayRequire="Ludeon.Rimworld.Biotech">Baby</li>
+				<li MayRequire="Ludeon.Rimworld.Biotech">Child</li>
 			  </bodyTypes>
 			  <customDrawSize>(0.75, 0.75)</customDrawSize>
 			  <customHeadDrawSize>(0.8, 0.8)</customHeadDrawSize>
@@ -158,7 +158,7 @@
 		  <ComfyTemperatureMax>50</ComfyTemperatureMax>
 		  <PsychicSensitivity>1</PsychicSensitivity>
 		  <ToxicResistance>0.9</ToxicResistance>
-		  <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.4</ToxicEnvironmentResistance>
+		  <ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">0.4</ToxicEnvironmentResistance>
 		  <Mass>40</Mass>
 		</statBases>
 		<tools>
@@ -253,7 +253,7 @@
 			  <def>HumanlikeChild</def>
 			  <minAge>1</minAge>
 			</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">
+			<li MayRequire="Ludeon.Rimworld.Biotech">
 			  <def>HumanlikePreTeenager</def>
 			  <minAge>6</minAge>
 			</li>
@@ -266,12 +266,12 @@
 			  <minAge>15</minAge>
 			</li>
 		  </lifeStageAges>
-		  <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+		  <lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
 			<Firefighter>2</Firefighter>
 			<Patient>0</Patient>
 			<Doctor>15</Doctor>
 			<PatientBedRest>0</PatientBedRest>
-			<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+			<Childcare MayRequire="Ludeon.Rimworld.Biotech">0</Childcare>
 			<BasicWorker>3</BasicWorker>
 			<Warden>7</Warden>
 			<Handling>7</Handling>
@@ -298,16 +298,16 @@
 		  </specialShadowData>
 		  <ageGenerationCurve>
 			<points>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>  
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>      
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li><!-- End exclude -->
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(0,0)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(0.001,43)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(8,86)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0)</li>  
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13,0)</li>      
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.001,122)</li><!-- End exclude -->
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.999,130)</li>
 			  <li>(14,0)</li>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(14.001,130)</li>
 			  <li>(18,0)</li>
 			  <li>(30,100)</li>
 			  <li>(35,100)</li>
@@ -345,18 +345,18 @@
 		  <li>Euthanize</li>
 		  <li>Anesthetize</li>
 		  <li>CureScaria</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">TubalLigation</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">ExtractOvum</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">Vasectomy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ReverseVasectomy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">TubalLigation</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ExtractOvum</li>
 		  <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
 		  <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ExtractHemogenPack</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">BloodTransfusion</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantXenogerm</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantIUD</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">RemoveIUD</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">TerminatePregnancy</li>
 		</recipes>
 		<comps>
 			<li Class="AnimalBehaviours.CompProperties_InitialHediff">

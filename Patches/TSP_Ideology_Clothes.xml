@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
-	<Operation Class="PatchOperationConditional">
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.royalty">
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
 		<!-- If it does, add this. -->
+		<!--
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
 			<value>
@@ -19,10 +20,12 @@
 				<li>RoyalTier1</li>
 				<li>MedievalApparelNoble</li>
 				<li>RichPirateClothing</li>
+				<li>GoblinWear</li>
 			</value>
 		</match>
-		<!-- If it does NOT exist, add this. -->
-		<nomatch Class="PatchOperationAdd">
+		-->
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
 			<xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
 			<value>
 				<tags>
@@ -40,7 +43,7 @@
 					<li>RichPirateClothing</li>
 				</tags>
 			</value>
-		</nomatch>
+		</match>
 		<!-- In the end, something will always get added. -->
 	</Operation>
 	

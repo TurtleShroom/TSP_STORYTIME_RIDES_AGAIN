@@ -36,8 +36,8 @@
 				<li>Thin</li>
 				<li>Male</li>
 				<!-- <li>Female</li> -->
-				<li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
-				<li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
+				<li MayRequire="Ludeon.Rimworld.Biotech">Baby</li>
+				<li MayRequire="Ludeon.Rimworld.Biotech">Child</li>
 			</bodyTypes>
 			  <customDrawSize>(0.95,0.95)</customDrawSize>
 			  <customHeadDrawSize>(1.1,1.1)</customHeadDrawSize>
@@ -235,16 +235,22 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<accuracyTouch>1</accuracyTouch>
 				<accuracyShort>0.9</accuracyShort>
-				<accuracyMedium>0.6</accuracyMedium>
+				<accuracyMedium>0.88</accuracyMedium>
 				<accuracyLong>0.6</accuracyLong>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>ST_Lick</defaultProjectile>
 				<warmupTime>0.3</warmupTime>
-				<range>6</range>				
+				<range>13</range>				
 				<soundCast>Lick</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
-				<label>lick shot</label>
+				<label>extend tongue</label>
 				<commonality>2</commonality>
+				<onlyManualCast>false</onlyManualCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+					<canTargetBuildings>true</canTargetBuildings>
+					<neverTargetIncapacitated>false</neverTargetIncapacitated>
+				</targetParams>
 			</li>
 		</verbs>
 		<race>
@@ -279,7 +285,7 @@
 			  <def>HumanlikeChild</def>
 			  <minAge>2</minAge>
 			</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">
+			<li MayRequire="Ludeon.Rimworld.Biotech">
 			  <def>HumanlikePreTeenager</def>
 			  <minAge>9</minAge>
 			</li>
@@ -292,12 +298,12 @@
 			  <minAge>14</minAge>
 			</li>
 		  </lifeStageAges>
-		  <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+		  <lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
 			<Firefighter>7</Firefighter>
 			<Patient>0</Patient>
 			<Doctor>10</Doctor>
 			<PatientBedRest>0</PatientBedRest>
-			<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+			<Childcare MayRequire="Ludeon.Rimworld.Biotech">0</Childcare>
 			<BasicWorker>3</BasicWorker>
 			<Warden>10</Warden>
 			<Handling>7</Handling>
@@ -324,16 +330,16 @@
 		  </specialShadowData>
 		  <ageGenerationCurve>
 			<points>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>  
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>      
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li><!-- End exclude -->
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(0,0)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(0.001,43)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(8,86)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0)</li>  
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13,0)</li>      
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.001,122)</li><!-- End exclude -->
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.999,130)</li>
 			  <li>(14,0)</li>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(14.001,130)</li>
 			  <li>(16,100)</li>
 			  <li>(50,100)</li>
 			  <li>(60,30)</li>
@@ -380,18 +386,18 @@
 		  <li>Euthanize</li>
 		  <li>Anesthetize</li>
 		  <li>CureScaria</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">TubalLigation</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">ExtractOvum</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">Vasectomy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ReverseVasectomy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">TubalLigation</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ExtractOvum</li>
 		  <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
 		  <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ExtractHemogenPack</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">BloodTransfusion</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantXenogerm</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantIUD</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">RemoveIUD</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">TerminatePregnancy</li>
 		</recipes>
 		<comps>
 			<li Class="AnimalBehaviours.CompProperties_InitialHediff">

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Genepack"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<GeneDef ParentName="GeneSkinColorOverride" MayRequire="ludeon.rimworld.biotech">
+					<defName>Skin_Weezer</defName>
+					<label>Weezer skin</label>
+					<labelShortAdj>Weezer</labelShortAdj>
+					<description>Carriers of this Gene are colored a brilliant blue, which is reminiscant of the cover of a Weezer optical disc album.</description>
+					<skinColorOverride>(0, 182, 213)</skinColorOverride>
+					<displayOrderInCategory>95</displayOrderInCategory>
+					<symbolPack>
+						<prefixSymbols>
+							<li>
+								<symbol>weezer</symbol>
+							</li>
+						</prefixSymbols>
+					</symbolPack>
+				</GeneDef>
+			</value>
+		</match>
+	</Operation>
+</Patch>

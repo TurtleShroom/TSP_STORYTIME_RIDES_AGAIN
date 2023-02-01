@@ -597,7 +597,7 @@
 			<value>
 				<li>Gun</li>
 				<li>SimpleGun</li>
-				<li>SamuraiRangedAdvanced</li>
+				<!-- <li>SamuraiRangedAdvanced</li> -->
 				<li>HSSamuraiGunner</li>
 				<li>OniRangedMelee</li>
 				<li>OniRanged</li>
@@ -618,6 +618,7 @@
 			<value>
 				<li>GrenadePirate</li>
 				<li>FrogmanRanged</li>
+				<li>GoblinGrenadier</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -792,5 +793,32 @@
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>/Defs/PawnKindDef[defName="Pirate"]/weaponTags</xpath>
+		<value>
+			<li>ST_PirateRanged</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>/Defs/PawnKindDef[defName="Thrasher"]/weaponTags</xpath>
+		<value>
+			<li>ST_PirateMelee</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>/Defs/PawnKindDef[@Name="PirateBase"]</xpath>
+		<value>
+			<apparelTags>
+				<li>PoorPirateClothing</li>
+				<li>NormalPirateClothing</li>
+			</apparelTags>
+		</value>
 	</Operation>
 </Patch>

@@ -28,8 +28,8 @@
     </graphicData>
 	<weaponTags>
 		<li>PeeledWeapon</li>
-		<li>Potato Cannon</li>
 		<li>Folian</li>
+		<!-- <li>Potato Cannon</li> -->
 		<!-- <li>SpacerGun</li> -->
     </weaponTags>
     <soundInteract>Interact_SMG</soundInteract>
@@ -47,6 +47,23 @@
     <tradeability>Sellable</tradeability>
 	<smeltable>true</smeltable>
     <burnableByRecipe>true</burnableByRecipe>
+	<stuffCategories Inherit="False">
+		<li>Metallic</li>
+
+		<!-- Mod support -->
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+    </stuffCategories>
+	<costList>
+		<RawPotatoes>100</RawPotatoes>
+		<ComponentIndustrial>7</ComponentIndustrial>
+	</costList>
+	<recipeMaker Inherit="False">
+		<!-- You cannot make this yourself! -->
+		<recipeUsers Inherit="False">
+		</recipeUsers>
+	</recipeMaker>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -82,7 +99,7 @@
       </li>
     </tools>
 	<equippedStatOffsets>
-		<TerrorSource>0.1</TerrorSource>
+		<TerrorSource MayRequire="Ludeon.RimWorld.Ideology">0.1</TerrorSource>
 	</equippedStatOffsets>
   </ThingDef>
   
@@ -99,6 +116,7 @@
 	<generateCommonality>1.5</generateCommonality>
     <uiIconScale>1.6</uiIconScale>
 	<tradeability>Sellable</tradeability>
+	<costStuffCount>40</costStuffCount>
 	<stuffCategories Inherit="False">
       <li>Metallic</li>
 	  
@@ -107,6 +125,11 @@
       <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
       <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
+	<recipeMaker Inherit="False">
+		<!-- You cannot make this yourself! -->
+		<recipeUsers Inherit="False">
+		</recipeUsers>
+	</recipeMaker>
 	<smeltable>true</smeltable>
     <burnableByRecipe>true</burnableByRecipe>
 	<thingCategories>
@@ -120,7 +143,7 @@
 	<statBases>
       <Mass>0.05</Mass>
 	  <MarketValue>300</MarketValue>
-	  <TerrorSource>0.1</TerrorSource>
+	  <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">0.1</TerrorSource>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <tools>

@@ -33,7 +33,7 @@
 		<li MayRequire="Zezz.Altrumeme">Altruism</li>
 		<li MayRequire="sarg.alphamemes">AM_NonViolence</li>
 		<li MayRequire="vanillaexpanded.vmemese">VME_Egalitarian</li>
-		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_Xenophobia</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_Xenophobia</li>
 		<li MayRequire="vanillaexpanded.vmemese">VME_Vegan</li>
     </disallowedMemes>
     <requiredMemes>
@@ -60,11 +60,11 @@
     <!-- <geneticVariance>1</geneticVariance> -->
     <caravanTraderKinds>
       <li>Caravan_Storytime_Pirate</li>
-      <li>Caravan_Outlander_Exotic</li>
 	  <li>Caravan_Outlander_PirateMerchant</li>
+	  <li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
     </caravanTraderKinds>
     <visitorTraderKinds>
-      <li>Visitor_Outlander_Standard</li>
+      <li>Caravan_Outlander_PirateMerchant</li>
     </visitorTraderKinds>
     <baseTraderKinds>
 		<!-- <li>Base_Outlander_Standard</li> -->
@@ -109,11 +109,6 @@
 		  <PirateJuggernaut>5</PirateJuggernaut>
 		  <Pirate>1</Pirate>
 		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
-		  <!-- ANIMALS CANNOT BE PEACEFUL VISITORS!! -->
-		  <!--
-          <Monkey>5</Monkey>
-		  <ST_Parrot>5</ST_Parrot>
-		  -->
         </options>
       </li>
 		<li>
@@ -139,7 +134,8 @@
           <Monkey>5</Monkey>
 		  <ST_Parrot>5</ST_Parrot>
 		  <Pirate>4</Pirate>
-		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">2</VFEP_Footsoldier>
+		  <ST_LivingCoconut>2</ST_LivingCoconut>
         </options>
       </li>
       <li>
@@ -163,6 +159,7 @@
 		  <ST_Parrot>8</ST_Parrot>
 		  <PirateCaptain>1</PirateCaptain>
 		  <Grenadier_Smoke>1</Grenadier_Smoke>
+		  <ST_LivingCoconut>2</ST_LivingCoconut>
 		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">4</VFEP_Footsoldier>
         </guards>
       </li>
@@ -178,6 +175,7 @@
 		  <ST_Parrot>10</ST_Parrot>
 		  <TSP_PirateTradesman>2</TSP_PirateTradesman>
 		  <Pirate>15</Pirate>
+		  <ST_LivingCoconut>1</ST_LivingCoconut>
         </options>
       </li>
     </pawnGroupMakers>
@@ -267,12 +265,14 @@
       <li>Caravan_Storytime_Pirate</li>
       <li>Caravan_Outlander_Exotic</li>
 	  <li>Caravan_Outlander_PirateMerchant</li>
+	  <li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
     </caravanTraderKinds>
     <visitorTraderKinds>
-      <li>Visitor_Outlander_Standard</li>
+      <li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
     </visitorTraderKinds>
     <baseTraderKinds>
 		<!-- <li>Base_Outlander_Standard</li> -->
+		<li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
 		<li>Caravan_Storytime_Pirate</li>
     </baseTraderKinds>
     <allowedArrivalTemperatureRange>

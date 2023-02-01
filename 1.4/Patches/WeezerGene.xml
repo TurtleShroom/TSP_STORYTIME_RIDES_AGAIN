@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Genepack"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<GeneDef MayRequire="ludeon.rimworld.biotech">
+					<defName>WeezerGene</defName>
+					<label>Weezer miracle</label>
+					<description>The creature's DNA, through mechanisms unknown to science, somehow causes Weezer albums to manifest around him.</description>
+					<iconPath>Things/Items/Resources/Ores/Weezer/Weezer_a</iconPath>
+					<customEffectDescriptions>
+						<li>Five Weezer albums will spawn around this Pawn once every day.</li>
+					</customEffectDescriptions>
+					<exclusionTags>
+					  <li>Weezer</li>
+					</exclusionTags>
+					<biostatMet>-2</biostatMet>
+					<biostatCpx>1</biostatCpx>
+					<displayCategory>ST_SpecialEffects</displayCategory>
+					<selectionWeight>0</selectionWeight>
+					<modExtensions>
+						<li Class="VanillaGenesExpanded.GeneExtension" MayRequire="ludeon.rimworld.biotech">
+							<hediffToWholeBody>WeezerGene_Hediff</hediffToWholeBody>
+						</li>
+					</modExtensions>
+				</GeneDef>
+			</value>
+		</match>
+	</Operation>
+</Patch>

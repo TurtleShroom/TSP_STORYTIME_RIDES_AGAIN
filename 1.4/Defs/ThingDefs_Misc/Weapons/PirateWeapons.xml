@@ -12,11 +12,16 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+	<weaponTags>
+		<li>ST_PirateRanged</li>
+	</weaponTags>
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <recipeUsers>
 		<li>TableMachining</li>
+		<li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
       </recipeUsers>
       <effectWorking>Cook</effectWorking>
       <soundWorking>Recipe_Machining</soundWorking>
@@ -69,6 +74,11 @@
 		<li>PrussianSkirmish</li>
 		<li>Revolver</li>
     </weaponTags>
+	<weaponClasses>
+		<li>Ranged</li>
+		<li>RangedLight</li>
+		<li>ShortShots</li>
+	</weaponClasses>
     <costList>
       <Steel>20</Steel>
       <ComponentIndustrial>1</ComponentIndustrial>
@@ -78,6 +88,9 @@
       <skillRequirements>
         <Crafting>2</Crafting>
       </skillRequirements>
+      <recipeUsers>
+		<li>TableMachining</li>
+      </recipeUsers>
     </recipeMaker>
     <verbs>
       <li>
@@ -163,6 +176,11 @@
     <recipeMaker>
 	  <researchPrerequisite>pirateGunsmithing</researchPrerequisite>
     </recipeMaker>
+	<weaponClasses>
+		<li>Ranged</li>
+		<li>RangedLight</li>
+		<li>ShortShots</li>
+	</weaponClasses>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -236,14 +254,28 @@
       <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
       <WorkToMake>9000</WorkToMake>
     </statBases>
+    <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
+    <costStuffCount>10</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      
+      <!-- Support for Mod Stuff -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+    </stuffCategories>
     <costList>
-      <Steel>5</Steel>
       <Chemfuel>30</Chemfuel>
     </costList>
     <weaponTags>
       <li>GrenadePirate</li>
 	  <li>PirateGrenadier</li>
     </weaponTags>
+	<weaponClasses>
+		<li>Ranged</li>
+		<li>RangedLight</li>
+		<li>ShortShots</li>
+	</weaponClasses>
     <thingCategories>
       <li>Grenades</li>
     </thingCategories>
@@ -296,7 +328,7 @@
     </projectile>
   </ThingDef>
   
-  <ThingDef ParentName="BaseGun">
+  <ThingDef ParentName="PirateRangedWeapon">
     <defName>PirateCannon</defName>
     <label>detached cannon</label>
     <description>A small artillery piece converted into some sort of bizarre, barely portable weapon. Extremely difficult to use and painful to hold, but it looks like it could do some damage.</description>
@@ -311,21 +343,43 @@
       <Mass>20</Mass>
 	  <AccuracyTouch>0.6</AccuracyTouch>
       <AccuracyShort>0.40</AccuracyShort>
-      <AccuracyMedium>0.15</AccuracyMedium>
-      <AccuracyLong>0.1</AccuracyLong>
-      <RangedWeapon_Cooldown>7</RangedWeapon_Cooldown>
+      <AccuracyMedium>0.25</AccuracyMedium>
+      <AccuracyLong>0.15</AccuracyLong>
+      <RangedWeapon_Cooldown>5.5</RangedWeapon_Cooldown>
     </statBases>
 	<generateCommonality>0.28</generateCommonality>
     <techLevel>Medieval</techLevel>
+	<weaponClasses>
+		<li>Ranged</li>
+		<li>RangedHeavy</li>
+		<li>LongShots</li>
+	</weaponClasses>
 	<smeltable>true</smeltable>
     <burnableByRecipe>true</burnableByRecipe>
 	<equippedStatOffsets>
 		<MoveSpeed>-0.25</MoveSpeed>
 		<PainShockThreshold>-0.1</PainShockThreshold>
 	</equippedStatOffsets>
-    <weaponTags>
+    <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      
+      <!-- Support for Mod Stuff -->
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+    </stuffCategories>
+	<recipeMaker>
+		<recipeUsers Inherit="False">
+			<li>TableMachining</li>
+			<li>ElectricSmelter</li>
+			<li MayRequire="mlie.ancientrimcore">AR_Smelter</li>
+		</recipeUsers>
+	</recipeMaker>
+    <weaponTags Inherit="False">
 		<li>JuggernautPirate</li>
 		<li>MedievalRangedHeavy</li>
+		<li>MedievalHeavy</li>
 		<li>SamuraiRangedHeavy</li>
 		<li>SkeletonRanged</li>
 		<li>Officer</li>
@@ -339,8 +393,8 @@
         <forcedMissRadius>1.1</forcedMissRadius>
         <warmupTime>10</warmupTime>
         <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
-		<minRange>2</minRange>
-        <range>45</range>
+		<minRange>3</minRange>
+        <range>60</range>
 		<soundCast>Explosion_Bomb</soundCast>
         <!-- <soundCast>Mortar_LaunchA</soundCast> -->
 		<soundCastTail>GunTail_Heavy</soundCastTail>
@@ -374,8 +428,8 @@
 	  <li>
         <compClass>CompQuality</compClass>
       </li>
-	  <li>
-		<compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+	  <li MayRequire="jecrell.jecstools">
+		<compClass MayRequire="jecrell.jecstools">CompOversizedWeapon.CompOversizedWeapon</compClass>
 	  </li>
     </comps>
   </ThingDef>
@@ -413,7 +467,7 @@
     <soundInteract>Interact_Grenade</soundInteract>
     <statBases>
 		<MarketValue>20</MarketValue>
-		<Mass>1</Mass>
+		<Mass>2</Mass>
 		<AccuracyTouch>0.95</AccuracyTouch>
 		<AccuracyShort>0.85</AccuracyShort>
 		<AccuracyMedium>0.7</AccuracyMedium>
@@ -434,8 +488,12 @@
       <effectWorking>Cook</effectWorking>
       <!-- <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef> -->
     </recipeMaker>
+	<weaponClasses>
+		<li>Neolithic</li>
+	</weaponClasses>
     <stuffCategories>
       <li>Metallic</li>
+	  <li>Stony</li>
 	  
 	  <!-- Mod support -->
 	  <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
@@ -500,12 +558,17 @@
 		<li>FrenchInfantryMelee</li>
 		<li>BritishInfantryMelee</li>
 		<li>Pirate</li>
+		<li>ST_PirateMelee</li>
     </weaponTags>
     <statBases>
       <WorkToMake>12000</WorkToMake>
       <Mass>0.85</Mass>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
+	<weaponClasses>
+		<li>Melee</li>
+		<li>MeleePiercer</li>
+	</weaponClasses>
     <stuffCategories>
       <li>Metallic</li>
 	  
@@ -546,7 +609,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>BoardingAxe</defName>
     <label>boarding axe</label>
-    <description>A short hatchet used for various shipboard tasks on any spaceship or terrestrial ship. While it is commonly used among Spacer Pirates for utility purposes, here on the Rim it can be used to demolish one's way through walls and, more importantly, other ships.</description>
+    <description>A short hatchet used for various shipboard tasks on any spaceship or terrestrial ship. It is commonly used among Spacer Pirates for utility purposes; however, here on the Rim it can be used to demolish one's way through walls and, more importantly, other ships.</description>
     <graphicData>
       <texPath>Things/Items/PirateWeapons/BoardingAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -564,6 +627,7 @@
 		<li>BritishMelee</li>
 		<li>BritishInfantryMelee</li>
 		<li>GoblinDecent</li>
+		<li>ST_PirateMelee</li>
     </weaponTags>
     <statBases>
       <WorkToMake>5000</WorkToMake>
@@ -578,6 +642,10 @@
 		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
 		<li MayRequire="Dubwise.Rimefeller">Composite</li>
     </stuffCategories>
+	<weaponClasses>
+		<li>Melee</li>
+		<li>MeleePiercer</li>
+	</weaponClasses>
     <tools>
 	  <li>
         <label>handle</label>
@@ -591,7 +659,7 @@
       <li>
         <label>edge</label>
         <capacities>
-			<li>Demolish</li>
+			<li>ST_Demolish_Sharp</li>
         </capacities>
         <power>8</power> <!-- Slightly more powerful than the Vanilla rendition's Breaching Axe -->
         <cooldownTime>2</cooldownTime>
@@ -615,7 +683,7 @@
 	  <drawSize>2</drawSize>
     </graphicData>
     <uiIconScale>1.4</uiIconScale>
-	<generateCommonality>1</generateCommonality>
+	<generateCommonality>0.9</generateCommonality>
     <smeltable>true</smeltable>
     <burnableByRecipe>true</burnableByRecipe>
 	<inspectorTabs>
@@ -624,6 +692,10 @@
     <thingCategories>
       <li>WeaponsMelee</li>
     </thingCategories>
+	<weaponClasses>
+		<li>Melee</li>
+		<li>MeleeBlunt</li>
+	</weaponClasses>
     <techLevel>Medieval</techLevel>
 	<equippedStatOffsets>
 		<MoveSpeed>-0.3</MoveSpeed>
@@ -633,12 +705,14 @@
 		<li>CallOfCthulhu_TownsfolkAngler</li>
 		<li>CallOfCthulhu_Angler</li>
 		<li>CallOfCthulhu_CoastalMelee</li>
+		<li>ST_PirateMelee</li>
     </weaponTags>
     <statBases>
       <WorkToMake>10000</WorkToMake>
       <Mass>10</Mass>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
+	<costStuffCount>100</costStuffCount>
     <stuffCategories>
 		<li>Metallic</li>
 		<li>Stony</li>
@@ -649,6 +723,13 @@
 		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
 		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
+	<recipeMaker>
+		<recipeUsers>
+			<li>TableMachining</li>
+			<li>ElectricSmelter</li>
+			<li MayRequire="mlie.ancientrimcore">AR_Smelter</li>
+		</recipeUsers>
+	</recipeMaker>
     <tools>
 	  <li>
         <label>point</label>
@@ -665,8 +746,6 @@
       <li>
         <label>head</label>
         <capacities>
-		  <li>Poke</li>
-		  <li>Cut</li>
 		  <li>Demolish</li>
 		  <li>TSP_ST_Thump</li>
         </capacities>
@@ -683,8 +762,8 @@
         <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
         <minQualityForArtistic>Legendary</minQualityForArtistic>
       </li>
-	  <li>
-		<compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+	  <li MayRequire="jecrell.jecstools">
+		<compClass MayRequire="jecrell.jecstools">CompOversizedWeapon.CompOversizedWeapon</compClass>
 	  </li>
     </comps>
   </ThingDef>
