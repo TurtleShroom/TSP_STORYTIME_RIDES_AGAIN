@@ -7,7 +7,7 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="BloodFrog"]/race/useMeatFrom</xpath>
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/race/useMeatFrom</xpath>
 			<value>
 				<specificMeatDef>HSAU_BloodPouch</specificMeatDef>
 			</value>
@@ -21,7 +21,7 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="BloodFrog"]/statBases/MeatAmount</xpath>
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/statBases/MeatAmount</xpath>
 			<value>
 				<MeatAmount>4</MeatAmount>
 			</value>
@@ -35,9 +35,9 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="BloodFrog"]/statBases/MarketValue</xpath>
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/statBases/MarketValue</xpath>
 			<value>
-				<MarketValue>700</MarketValue>
+				<MarketValue>500</MarketValue>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -49,7 +49,7 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="BloodFrog"]/race/baseHungerRate</xpath>
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/race/baseHungerRate</xpath>
 			<value>
 				<baseHungerRate>3</baseHungerRate>
 			</value>
@@ -63,7 +63,7 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="BloodFrog"]/comps</xpath>
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/comps</xpath>
 			<value>
 				<comps>
 					<li Class="CompProperties_EggLayer">
@@ -94,7 +94,7 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="BloodFrog"]/butcherProducts</xpath>
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/butcherProducts</xpath>
 			<value>
 				<butcherProducts>
 					<HSAU_BloodPouch MayRequire="baskerville.hellsingarmsultimate">10</HSAU_BloodPouch>
