@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<Defs>
 	<DamageDef>
 		<defName>ST_PoisonDart</defName>
 		<label>poison dart frog skin</label>
@@ -33,17 +33,17 @@
       <MarketValue>250</MarketValue>
       <ComfyTemperatureMin>-60</ComfyTemperatureMin>
       <ComfyTemperatureMax>60</ComfyTemperatureMax>
-      <ToxicResistance>1</ToxicResistance>
-	  <ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance> <!-- Rainforest creatures are very sensitive to pollution! -->
+      <ToxicResistance>1</ToxicResistance> <!-- Resistant to itself -->
+	  <ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">0.2</ToxicEnvironmentResistance> <!-- Rainforest creatures are very sensitive to pollution! -->
     </statBases>
 	<comps>
-	  <li Class="CompProperties_EggLayer">
-        <eggUnfertilizedDef>PoisonDartEggUnFertilized</eggUnfertilizedDef>
-        <eggFertilizedDef>PoisonDartEggFertilized</eggFertilizedDef>
-        <eggFertilizationCountMax>1</eggFertilizationCountMax>
-        <eggLayIntervalDays>8</eggLayIntervalDays>
-        <eggCountRange>1~3</eggCountRange>
-      </li>
+		<li Class="CompProperties_EggLayer">
+			<eggUnfertilizedDef>PoisonDartEggUnFertilized</eggUnfertilizedDef>
+			<eggFertilizedDef>PoisonDartEggFertilized</eggFertilizedDef>
+			<eggFertilizationCountMax>1</eggFertilizationCountMax>
+			<eggLayIntervalDays>8</eggLayIntervalDays>
+			<eggCountRange>1~3</eggCountRange>
+		</li>
 		<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
 			<resourceDef>ST_PoisonExtract</resourceDef>
 			<gatheringIntervalDays>2</gatheringIntervalDays>

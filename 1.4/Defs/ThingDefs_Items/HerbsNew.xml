@@ -4,7 +4,7 @@
  <ThingDef ParentName="RoughPlantBase">
     <defName>HarralanderLeaves</defName>
     <label>harra leaves</label>
-    <description>Raw cut leaves of a harra plant.</description>
+    <description>Raw, cut leaves of a harra plant.</description>
     <graphicData>
       <texPath>Things/Items/Resources/Herbs/HarralanderLeaves</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -20,19 +20,21 @@
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
-    <thingCategories>
-      <li>PlantMatter</li>
+    <thingCategories Inherit="False">
+      <li>PlantFoodRaw</li>
+	  <li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
     </thingCategories>
     <ingestible>
       <preferability>DesperateOnly</preferability>
       <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+	  <specialThoughtAsIngredient>TSP_ST_HarraSpice</specialThoughtAsIngredient>
     </ingestible>
   </ThingDef>  
   
  <ThingDef ParentName="RoughPlantBase">
     <defName>LantadymeLeaves</defName>
     <label>lantadyme leaves</label>
-    <description>Raw cut leaves of a lantadyme plant.</description>
+    <description>Raw, cut leaves of a lantadyme plant. Beware! Lantadyme leaves are extremely spicy!</description>
     <graphicData>
       <texPath>Things/Items/Resources/Herbs/LantadymeLeaves</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -48,19 +50,21 @@
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
-    <thingCategories>
-      <li>PlantMatter</li>
+    <thingCategories Inherit="False">
+      <li>PlantFoodRaw</li>
+	  <li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
     </thingCategories>
     <ingestible>
       <preferability>DesperateOnly</preferability>
       <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+	  <specialThoughtAsIngredient>TSP_ST_LantadymeSpice</specialThoughtAsIngredient>
     </ingestible>
   </ThingDef>    
 
  <ThingDef ParentName="RoughPlantBase">
     <defName>DwarfWeedLeaves</defName>
     <label>dwarf weed leaves</label>
-    <description>Raw cut leaves of a dwarf weed plant.</description>
+    <description>Raw, cut leaves of a dwarf weed plant.</description>
     <graphicData>
       <texPath>Things/Items/Resources/Herbs/DwarfWeedLeaves</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -76,7 +80,7 @@
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
-    <thingCategories>
+    <thingCategories Inherit="False">
       <li>PlantMatter</li>
     </thingCategories>
     <ingestible>
@@ -88,7 +92,7 @@
  <ThingDef ParentName="RoughPlantBase">
     <defName>RannarLeaves</defName>
     <label>rannar leaves</label>
-    <description>Raw cut leaves of a rannar plant.</description>
+    <description>Raw, cut leaves of a rannar plant.</description>
     <graphicData>
       <texPath>Things/Items/Resources/Herbs/RannarLeaves</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -104,19 +108,21 @@
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
-    <thingCategories>
-      <li>PlantMatter</li>
+    <thingCategories Inherit="False">
+      <li>PlantFoodRaw</li>
+	  <li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
     </thingCategories>
     <ingestible>
       <preferability>DesperateOnly</preferability>
       <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+	  <specialThoughtAsIngredient>TSP_ST_RannarSpice</specialThoughtAsIngredient>
     </ingestible>
   </ThingDef>  
 
  <ThingDef ParentName="RoughPlantBase">
     <defName>TorstolLeaves</defName>
     <label>torstol leaves</label>
-    <description>Raw cut leaves of a torstol plant.</description>
+    <description>Raw, cut leaves of a torstol plant.</description>
     <graphicData>
       <texPath>Things/Items/Resources/Herbs/TorstolLeaves</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -132,36 +138,40 @@
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
-    <thingCategories>
-      <li>PlantMatter</li>
+    <thingCategories Inherit="False">
+      <li>PlantFoodRaw</li>
+	  <li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
     </thingCategories>
     <ingestible>
       <preferability>DesperateOnly</preferability>
       <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+	  <specialThoughtAsIngredient>TSP_ST_TorstolSpice</specialThoughtAsIngredient>
     </ingestible>
   </ThingDef>  
 
  <ThingDef ParentName="RoughPlantBase">
     <defName>ToadflaxLeaves</defName>
-    <label>toadflax leaves</label>
-    <description>Raw cut leaves of a toadflax plant. Toadflax is a descendant of flax bred by Frogmen to grow in the swamps. It grows easily in poor soil. Toadflax is a cereal, but is toad-ally not a grain, because it is actually a seed. It can be used, among other things, for baking and making flour. In its raw form, it is inedible and must be ground into something useful.</description>
+    <label>toadflax</label>
+    <description>Raw, cut leaves of a toadflax plant. Toadflax is a descendant of flax bred by Frogmen to grow in the swamps. It grows easily in poor soil. Toadflax is a cereal, but is toad-ally not a grain, because it is actually a seed. It can be used, among other things, for baking and making flour.</description>
     <graphicData>
       <texPath>Things/Items/Resources/Herbs/ToadflaxLeaves</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <Nutrition>0.02</Nutrition>
+      <Nutrition>0.03</Nutrition>
       <MarketValue>1.4</MarketValue>
       <Flammability>1.3</Flammability>
     </statBases>
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>30</daysToRotStart>
+        <daysToRotStart>70</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
-    <thingCategories>
-      <li>PlantMatter</li>
+    <thingCategories Inherit="False">
+		<li>PlantFoodRaw</li>
+		<li>PlantMatter</li>
+		<li MayRequire="Mlie.TakisRandomStuff">Cereal</li>
     </thingCategories>
     <ingestible>
       <preferability>DesperateOnly</preferability>
@@ -172,12 +182,12 @@
   <ThingDef ParentName="PlantFoodRawBase">
     <defName>ST_MixedHerbs</defName>
     <label>mixed herbs</label>
-    <description>Fewer than 11 herbs and spices, but they still add a nice flavor to any meal.</description>
+    <description>Though this does not neccesarily include eleven herbs and spices, it still adds a nice flavor to any meal.</description>
     <graphicData>
       <texPath>Things/Items/Resources/Herbs/MixedHerbLeaves</texPath>
     </graphicData>
     <statBases>
-      <MarketValue>1.4</MarketValue>
+      <MarketValue>3</MarketValue>
     </statBases>
     <ingestible>
       <foodType>VegetableOrFruit</foodType>
@@ -185,21 +195,9 @@
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>30</daysToRotStart>
+        <daysToRotStart>90</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
   </ThingDef>
-
-    <ThoughtDef>
-    <defName>ST_HerbMeal</defName>
-    <durationDays>1</durationDays>
-    <stages>
-      <li>
-        <label>ate meal with herbs</label>
-        <description>Those herbs really improved the meal.</description>
-        <baseMoodEffect>5</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
 </Defs>

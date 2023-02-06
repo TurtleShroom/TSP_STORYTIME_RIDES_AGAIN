@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>GoblinCrack</defName>
     <label>goblin psychite</label>
-    <description>Coliqually known as 'goblin crack', 'Goblin Flake' 'black crack', and many other names, goblin psychite is a special form of Flake that was probably brewed up in some makeshift goblin laboratory. It produces an impressive high and an equally impressive crashing aftermath.</description>
+    <description>Coliqually known as "goblin crack", "Goblin Flake", "black crack", and many other names, goblin psychite is a special form of Flake that was probably brewed up in some makeshift goblin laboratory. It produces an impressive high and an equally impressive crashing aftermath.</description>
     <descriptionHyperlinks>
 		<thingDef>Flake</thingDef>
 		<HediffDef>GoblinCrackHigh</HediffDef>
@@ -30,7 +30,7 @@
       <joyKind>Chemical</joyKind>
       <joy>0.5</joy>
       <baseIngestTicks>200</baseIngestTicks>
-      <nurseable>true</nurseable>
+      <nurseable>false</nurseable>
       <drugCategory>Hard</drugCategory>
       <ingestSound>Ingest_Snort</ingestSound>
       <ingestHoldOffsetStanding>
@@ -76,13 +76,13 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Psychite</chemical>
-        <addictiveness>0.15</addictiveness>
+        <addictiveness>0.25</addictiveness>
         <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
         <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
         <listOrder>110</listOrder>
-        <overdoseSeverityOffset>0.38~0.45</overdoseSeverityOffset>
-        <largeOverdoseChance>0.02</largeOverdoseChance>
+        <overdoseSeverityOffset>0.08~0.45</overdoseSeverityOffset>
+        <largeOverdoseChance>0.01</largeOverdoseChance>
       </li>
     </comps>
   </ThingDef>
@@ -108,10 +108,14 @@
           <label>crashing</label>
           <painFactor>1.05</painFactor>
             <capMods>
-              <li>
-                <capacity>Moving</capacity>
-                <setMax>0.3</setMax>
-              </li>
+				<li>
+					<capacity>Moving</capacity>
+					<setMax>0.3</setMax>
+				</li>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.85</setMax>
+				</li>
             </capMods>
         </li>
         <li>
@@ -119,14 +123,14 @@
           <label>Got'ta go fast!</label>
           <painFactor>0.15</painFactor>
           <capMods>
-            <li>
-              <capacity>Consciousness</capacity>
-              <offset>0.20</offset>
-            </li>
-            <li>
-              <capacity>Moving</capacity>
-              <offset>1</offset>
-            </li>
+			<li>
+				<capacity>Consciousness</capacity>
+				<offset>0.20</offset>
+			</li>
+			<li>
+				<capacity>Moving</capacity>
+				<offset>1</offset>
+			</li>
           </capMods>
         </li>
       </stages>
