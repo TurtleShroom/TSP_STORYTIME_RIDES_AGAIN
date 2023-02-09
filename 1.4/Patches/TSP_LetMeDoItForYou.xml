@@ -6,6 +6,38 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef/statBases/ToxicSensitivity</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
 		<xpath>/Defs/FactionDef/geneticVariance</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef/initialWillRange</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/PawnKindDef</xpath>
+			<value>
+				<initialWillRange>1~3</initialWillRange>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef/initialResistanceRange</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/PawnKindDef</xpath>
+			<value>
+				<initialResistanceRange>2~5</initialResistanceRange>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 </Patch>
