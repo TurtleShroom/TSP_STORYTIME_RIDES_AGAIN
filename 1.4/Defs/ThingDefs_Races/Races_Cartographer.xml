@@ -1,122 +1,127 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
 
-  <ThingDef ParentName="AnimalThingBase">
-    <defName>Cartographer</defName>
-    <label>cartographer</label>
-    <description>It's so fast, I can't get a read on it!</description>
-    <statBases>
-      <MoveSpeed Inherit="False">40</MoveSpeed>
-      <MarketValue>1000</MarketValue>
-      <ComfyTemperatureMin>-160</ComfyTemperatureMin>
-	  <LeatherAmount>100</LeatherAmount>
-    </statBases>
-    <tools>
-      <li>
-        <label>left claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>5.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <label>right claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>5.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>2.2</power>
-        <cooldownTime>2.6</cooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.7</chanceFactor>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>Human</body>
-      <petness>0.8</petness>
-      <baseBodySize>0.2</baseBodySize>
-      <baseHungerRate>0.5</baseHungerRate>
-      <baseHealthScale>1.5</baseHealthScale>
-      <foodType>OmnivoreAnimal, OvivoreAnimal, VegetarianRoughAnimal, Kibble</foodType>
-      <leatherDef>Leather_Cartographer</leatherDef>
-      <gestationPeriodDays>100</gestationPeriodDays>
-      <nameOnTameChance>1</nameOnTameChance>
-      <trainability>Advanced</trainability>
-      <wildness>0.9</wildness>
-      <nuzzleMtbHours>4</nuzzleMtbHours>
-      <manhunterOnDamageChance>1</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>1</manhunterOnTameFailChance>
-	  <giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
-      <litterSizeCurve>
-        <points>
-          <li>(0.5, 0)</li>
-          <li>(1, 1)</li>
-          <li>(2, 1.7)</li>
-          <li>(3, 0.7)</li>
-          <li>(3.5, 0)</li>
-        </points>
-      </litterSizeCurve>
-      <lifeExpectancy>200</lifeExpectancy>
-      <lifeStageAges>
-        <li>
-          <def>AnimalBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>AnimalJuvenile</def>
-          <minAge>0.25</minAge>
-        </li>
-        <li>
-          <def>AnimalAdult</def>
-          <minAge>0.5</minAge>
-          <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
-          <soundDeath>Pawn_Megascarab_Death</soundDeath>
-          <soundCall>Pawn_Megascarab_Call</soundCall>
-          <soundAngry>Pawn_Megascarab_Angry</soundAngry> 
-        </li>
-      </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
-    </race>
-    <tradeTags>
-      <li>AnimalExotic</li>
-      <li>AnimalPet</li>
-    </tradeTags>
-	<comps>
-		<li Class="AnimalBehaviours.CompProperties_Draftable">
-			<makeNonFleeingToo>true</makeNonFleeingToo>
-		</li>
-	</comps>
-	<modExtensions>
-		<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
-			<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
-		</li>
-		<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
-			<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Crepuscular</bodyClock>
-		</li>
-	</modExtensions>
-  </ThingDef>
+<Defs>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>Cartographer</defName>
+		<label>Cartographer</label>
+		<description>"It's so fast, I can't get a read on it!" \n \n An animal of indeterminate origin, the Cartographer is a rare creature that is extremely difficult to catch. It is the fast creature in the galaxy, as far is known to man. Its leather has properties that increase the speed of those who wear clothing made of it.</description>
+		<statBases>
+		  <MoveSpeed Inherit="False">40</MoveSpeed>
+		  <MarketValue>1000</MarketValue>
+		  <ComfyTemperatureMin>-160</ComfyTemperatureMin>
+		  <LeatherAmount>100</LeatherAmount>
+		</statBases>
+		<tools>
+		  <li>
+			<label>left claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>5.5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<label>right claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>5.5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>2.2</power>
+			<cooldownTime>2.6</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.7</chanceFactor>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
+		  <body>Human</body>
+		  <petness>0.9</petness>
+		  <baseBodySize>0.2</baseBodySize>
+		  <baseHungerRate>0.5</baseHungerRate>
+		  <baseHealthScale>1.5</baseHealthScale>
+		  <foodType>OmnivoreAnimal, OvivoreAnimal, VegetarianRoughAnimal, Kibble</foodType>
+		  <leatherDef>Leather_Cartographer</leatherDef>
+		  <gestationPeriodDays>100</gestationPeriodDays>
+		  <nameOnTameChance>1</nameOnTameChance>
+		  <trainability>Advanced</trainability>
+		  <wildness>0.9</wildness>
+		  <nuzzleMtbHours>2</nuzzleMtbHours>
+		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
+		  <manhunterOnTameFailChance>0.9</manhunterOnTameFailChance>
+		  <giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
+		  <litterSizeCurve>
+			<points>
+			  <li>(0.5, 0)</li>
+			  <li>(1, 1)</li>
+			  <li>(2, 1.7)</li>
+			  <li>(4, 0.6)</li>
+			  <li>(5, 0)</li>
+			</points>
+		  </litterSizeCurve>
+		  <lifeExpectancy>200</lifeExpectancy>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>AnimalJuvenile</def>
+			  <minAge>0.25</minAge>
+			</li>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0.5</minAge>
+			  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+			  <soundDeath>Pawn_Megascarab_Death</soundDeath>
+			  <soundCall>Pawn_Megascarab_Call</soundCall>
+			  <soundAngry>Pawn_Megascarab_Angry</soundAngry> 
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+		  <li>AnimalExotic</li>
+		  <li>AnimalPet</li>
+		  <li>StorytimeAnimalRare</li>
+		</tradeTags>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+		</comps>
+		<butcherProducts>
+			<Leather_Cartographer>100</Leather_Cartographer>
+		</butcherProducts>
+		<modExtensions>
+			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+			</li>
+			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+				<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Crepuscular</bodyClock>
+			</li>
+		</modExtensions>
+	</ThingDef>
   
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>Cartographer</defName>

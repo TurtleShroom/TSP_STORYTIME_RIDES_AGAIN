@@ -1,184 +1,216 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-  <ThingDef ParentName="KomodonAnimalThingBase">
-    <defName>ST_Exanth_Komodon</defName>
-    <label>Komodon</label>
-    <description>Komodons are spectacular, absolutely massive tortoises that grow to be the size of an elephant. Unlike all other turtles, Komodons are extremely intelligent and able to engage even Thrumboes, all to come out alive. This heavily armored land-dwelling reptile is built like a tank and moves as slow as one. Its bite is capable of severing legs off in one blow. Due to its natural armor, it is tough to kill and can do serious damage during drawn-out melee fights. Only Ultra Tech Armor exceeds the natural durability of a Komodon's shell.</description>
-    <statBases>
-      <MoveSpeed>1.0</MoveSpeed>
-      <MarketValue>500</MarketValue>
-      <ArmorRating_Blunt>1.25</ArmorRating_Blunt>
-      <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
-      <ComfyTemperatureMin>2</ComfyTemperatureMin>
-      <ComfyTemperatureMax>90</ComfyTemperatureMax>
-	  <LeatherAmount>300</LeatherAmount>
-    </statBases>
-    <tools>
-      <li>
-        <label>beak</label>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>50</power>
-        <cooldownTime>4</cooldownTime>
-        <linkedBodyPartsGroup>TurtleBeakAttackTool</linkedBodyPartsGroup>
-		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>13</power>
-        <cooldownTime>5</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.01</chanceFactor>
-      </li>
-    </tools>
-    <comps>
-      <li Class="CompProperties_EggLayer">
-        <eggFertilizedDef>EggKomodonFertilized</eggFertilizedDef>
-        <eggFertilizationCountMax>1</eggFertilizationCountMax>
-        <eggLayIntervalDays>20</eggLayIntervalDays>
-        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
-        <eggCountRange>
-          <min>1</min>
-          <max>3</max>
-        </eggCountRange>
-      </li>
-    </comps>
-    <race>
-      <body>TurtleLike</body>
-      <baseBodySize>5</baseBodySize>
-      <baseHungerRate>2</baseHungerRate>
-      <baseHealthScale>6</baseHealthScale>
-      <foodType>OmnivoreRoughAnimal, Fluid, Kibble</foodType>
-	  <useMeatFrom>Tortoise</useMeatFrom>
-      <leatherDef>Leather_Lizard</leatherDef>
-      <wildness>0.2</wildness>
-	  <trainability>Advanced</trainability>
-      <lifeExpectancy>180</lifeExpectancy>
-	  <nameOnTameChance>0.9</nameOnTameChance>
-	  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
-      <manhunterOnDamageChance>1</manhunterOnDamageChance>
-      <lifeStageAges>
-        <li>
-          <def>AnimalBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>AnimalJuvenile</def>
-          <minAge>0.15</minAge>
-        </li>
-        <li>
-          <def>AnimalAdult</def>
-          <minAge>1</minAge>
-          <soundWounded>Pawn_Tortoise_Wounded</soundWounded>
-          <soundDeath>Pawn_Tortoise_Death</soundDeath>
-          <soundCall>Pawn_Tortoise_Call</soundCall>
-          <soundAngry>Pawn_Tortoise_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
+	<ThingDef ParentName="KomodonAnimalThingBase">
+		<defName>ST_Exanth_Komodon</defName>
+		<label>Komodon</label>
+		<description>Komodons are spectacular, absolutely massive tortoises that grow to be the size of an elephant. Unlike all other turtles, Komodons are extremely intelligent and able to engage even Thrumboes, all to come out alive. This heavily armored land-dwelling reptile is built like a tank and moves as slow as one. Its bite is capable of severing legs off in one blow. Due to its natural armor, it is tough to kill and can do serious damage during drawn-out melee fights. Only Ultra Tech Armor exceeds the natural durability of a Komodon's shell.</description>
+		<statBases>
+		  <MoveSpeed>1.0</MoveSpeed>
+		  <MarketValue>500</MarketValue>
+		  <ArmorRating_Blunt>1.25</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+		  <ComfyTemperatureMin>2</ComfyTemperatureMin>
+		  <ComfyTemperatureMax>90</ComfyTemperatureMax>
+		  <LeatherAmount>300</LeatherAmount>
+		</statBases>
+		<tools>
+		  <li>
+			<label>beak</label>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>50</power>
+			<cooldownTime>4</cooldownTime>
+			<linkedBodyPartsGroup>TurtleBeakAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>13</power>
+			<cooldownTime>5</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.01</chanceFactor>
+		  </li>
+		</tools>
+		<comps>
+		  <li Class="CompProperties_EggLayer">
+			<eggFertilizedDef>EggKomodonFertilized</eggFertilizedDef>
+			<eggFertilizationCountMax>1</eggFertilizationCountMax>
+			<eggLayIntervalDays>20</eggLayIntervalDays>
+			<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+			<eggCountRange>
+			  <min>1</min>
+			  <max>3</max>
+			</eggCountRange>
+		  </li>
+		</comps>
+		<race>
+		  <body>TurtleLike</body>
+		  <baseBodySize>5</baseBodySize>
+		  <baseHungerRate>2</baseHungerRate>
+		  <baseHealthScale>6</baseHealthScale>
+		  <foodType>OmnivoreRoughAnimal, Fluid, Kibble</foodType>
+		  <useMeatFrom>Tortoise</useMeatFrom>
+		  <leatherDef>Leather_Lizard</leatherDef>
+		  <wildness>0.2</wildness>
+		  <trainability>Advanced</trainability>
+		  <lifeExpectancy>180</lifeExpectancy>
+		  <nameOnTameChance>0.9</nameOnTameChance>
+		  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>AnimalJuvenile</def>
+			  <minAge>0.15</minAge>
+			</li>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>1</minAge>
+			  <soundWounded>Pawn_Tortoise_Wounded</soundWounded>
+			  <soundDeath>Pawn_Tortoise_Death</soundDeath>
+			  <soundCall>Pawn_Tortoise_Call</soundCall>
+			  <soundAngry>Pawn_Tortoise_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
 
-      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
-	  
-	  <wildBiomes>
-			<BorealForest>0.001</BorealForest>
-			<ColdBog>0.01</ColdBog>
-			<TemperateSwamp>0.01</TemperateSwamp>
-			<TropicalSwamp>0.05</TropicalSwamp>
-			<TemperateForest>0.001</TemperateForest>
-			<TropicalRainforest>0.05</TropicalRainforest>
-			<AridShrubland>0.01</AridShrubland>
-			<Desert>0.01</Desert>
-			<ExtremeDesert>0.01</ExtremeDesert>
+		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		  
+		  <wildBiomes>
+				<!-- RimWorld.Core -->
+				<!-- VANILLA RENDITION -->
+
+				<BorealForest>0.001</BorealForest>
+
+				<Tundra>0</Tundra>
+
+				<ColdBog>0.01</ColdBog>
+
+				<IceSheet>0</IceSheet>
+
+				<SeaIce>0</SeaIce>
+
+				<TemperateForest>0.001</TemperateForest>
+
+				<TemperateSwamp>0.01</TemperateSwamp>
+
+				<TropicalRainforest>0.05</TropicalRainforest>
+
+				<TropicalSwamp>0.05</TropicalSwamp>
+
+				<AridShrubland>0.01</AridShrubland>
+
+				<Desert>0.01</Desert>
+
+				<ExtremeDesert>0.01</ExtremeDesert>
+
+
+
+
+				<!-- ___________________ -->			
+				<!-- Mod Biomes -->
+				<!-- ___________________ -->
+
+				<!-- sarg.alphabiomes -->
+				<!-- ALPHA BIOMES -->
+				
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.1</AB_FeraliskInfestedJungle>
+
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.01</AB_GallatrossGraveyard>
+
+				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.001</AB_GelatinousSuperorganism>
+
+				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.08</AB_MycoticJungle>
+
+				<AB_OcularForest MayRequire="sarg.alphabiomes">0.01</AB_OcularForest>
+
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.001</AB_PyroclasticConflagration>
+
+				<AB_RockyCrags MayRequire="sarg.alphabiomes">0.08</AB_RockyCrags>
+
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.04</AB_TarPits>
+				
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.1</AB_MiasmicMangrove>
 			
-			<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.1</AB_FeraliskInfestedJungle>
-
-			<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.01</AB_GallatrossGraveyard>
-
-			<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.001</AB_GelatinousSuperorganism>
-
-			<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.08</AB_MycoticJungle>
-
-			<AB_OcularForest MayRequire="sarg.alphabiomes">0.01</AB_OcularForest>
-
-			<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.001</AB_PyroclasticConflagration>
-
-			<AB_RockyCrags MayRequire="sarg.alphabiomes">0.08</AB_RockyCrags>
-
-			<AB_TarPits MayRequire="sarg.alphabiomes">0.04</AB_TarPits>
-			
-			<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.1</AB_MiasmicMangrove>
-		
-			<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">1</AB_IdyllicMeadows>
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">1</AB_IdyllicMeadows>
 
 
-			<!-- ___________________ -->
+				<!-- ___________________ -->
 
-			<!-- BiomesTeam.Oasis -->
-			<!-- CHROMATIC OASIS -->
+				<!-- BiomesTeam.Oasis -->
+				<!-- CHROMATIC OASIS -->
 
-			<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.15</BMT_ChromaticOasis>
-
-
-			<!-- ___________________ -->
-
-			<!-- Mlie.AdvancedBiomes -->
-			<!-- ADVANCED BIOMES -->
-
-			<Savanna MayRequire="Mlie.AdvancedBiomes">0.01</Savanna>
-			
-			<Volcano MayRequire="Mlie.AdvancedBiomes">0.005</Volcano>
-			
-			<Wetland MayRequire="Mlie.AdvancedBiomes">0.25</Wetland>
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.15</BMT_ChromaticOasis>
 
 
-			<!-- ____________________ -->
+				<!-- ___________________ -->
 
-			<!-- zylle.MoreVanillaBiomes -->
-			<!-- More Vanilla Biomes -->
+				<!-- Mlie.AdvancedBiomes -->
+				<!-- ADVANCED BIOMES -->
 
-			<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_AlpineMeadow>
-
-			<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_CloudForest>
-
-			<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_CoastalDunes>
-
-			<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_DesertOasis>
-
-			<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.02</ZBiome_Grasslands>
-
-			<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.25</ZBiome_Marsh>
-
-			<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_Sandbar_NoBeach>
+				<Savanna MayRequire="Mlie.AdvancedBiomes">0.01</Savanna>
+				
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.005</Volcano>
+				
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.25</Wetland>
 
 
-			<!-- ___________________ -->
+				<!-- ____________________ -->
 
-			<!-- Mlie.NaturesPrettySweet -->
-			<!-- NATURE IS PRETTY SWEET -->
+				<!-- zylle.MoreVanillaBiomes -->
+				<!-- More Vanilla Biomes -->
 
-			<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.1</TKKN_VolcanicFlow>
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_AlpineMeadow>
 
-			<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.08</TKKN_RedwoodForest>
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_CloudForest>
 
-			<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.02</TKKN_Grasslands> <!-- PRAIRIE -->
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_CoastalDunes>
 
-			<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.02</TKKN_Savanna>
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_DesertOasis>
 
-			<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.25</TKKN_Oasis>
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.02</ZBiome_Grasslands>
+
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.25</ZBiome_Marsh>
+
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_Sandbar_NoBeach>
 
 
-			<!-- ___________________ -->
+				<!-- ___________________ -->
 
-			<!-- Heis.Edo.Themed.Expansion -->
-			<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+				<!-- Mlie.NaturesPrettySweet -->
+				<!-- NATURE IS PRETTY SWEET -->
 
-			<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.05</HSBambooForest>
+				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.1</TKKN_VolcanicFlow>
+
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.08</TKKN_RedwoodForest>
+
+				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.02</TKKN_Grasslands> <!-- PRAIRIE -->
+
+				<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.02</TKKN_Savanna>
+
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.25</TKKN_Oasis>
+				
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_GlacialShield>
+				
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.15</ZBiome_Badlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- Heis.Edo.Themed.Expansion -->
+				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.05</HSBambooForest>
 
 
 
@@ -244,13 +276,29 @@
 				<!-- deemainiac.securecontainrimworld -->
 				<!-- SCP FOUNDATION -->
 				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0</SCR_SCP610Biome>
-	  </wildBiomes>
-    </race>
-    <tradeTags>
-		<li>AnimalPet</li>
-		<li>AnimalUncommon</li>
-    </tradeTags>
-  </ThingDef>
+				
+				
+				<!-- _________________ -->
+
+				<!-- regrowth.botr.volcanicicesheet -->
+				<!-- VOLCANIC ICE SHEET -->
+
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.001</RG-VIS_VulcanicIceSheet> <!-- Make me, Helixian. MAKE ME. -->
+				
+				
+				<!-- _________________ -->
+				
+				<!-- ironscruff.primordialgeysers -->
+				<!-- PRIMORDIAL GEYSERS -->
+				
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.3</IronScruff_PrimordialGeysers>
+		  </wildBiomes>
+		</race>
+		<tradeTags>
+			<li>AnimalPet</li>
+			<li>AnimalUncommon</li>
+		</tradeTags>
+	</ThingDef>
 
   <PawnKindDef>
     <defName>ST_Exanth_Komodon</defName>
