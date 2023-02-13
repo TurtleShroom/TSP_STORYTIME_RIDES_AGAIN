@@ -1,16 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
-	<Operation Class="PatchOperationRemove">
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 		<xpath>/Defs/PawnKindDef/baseRecruitDifficulty</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef/baseRecruitDifficulty</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<Operation Class="PatchOperationRemove">
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef/statBases/ToxicSensitivity</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/statBases/ToxicSensitivity</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<Operation Class="PatchOperationRemove">
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 		<xpath>/Defs/FactionDef/geneticVariance</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/FactionDef/geneticVariance</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">

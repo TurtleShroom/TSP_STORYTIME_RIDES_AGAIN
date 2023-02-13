@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
   <ThingDef ParentName="OrganicProductBase">
@@ -31,17 +31,18 @@
       <foodType>Fluid, VegetableOrFruit, VegetarianAnimal, VegetarianRoughAnimal, Seed, Plant, Kibble</foodType>
 	  <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HedSpecialMilk</hediffDef>
+          <hediffDef>ST_Hed_SpecialMilk</hediffDef>
           <severity>1</severity>
         </li>
       </outcomeDoers>
     </ingestible>
-    <thingCategories>
+    <thingCategories Inherit="False">
 		<li>FoodMeals</li>
-		<li>PlantMatter</li>
-		<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+		<li MayRequire="sierra.milkshakes.digitaldeluxeedition">Sierra_Milkshakes</li>
+		<!-- <li>PlantMatter</li> -->
+		<!-- <li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li> -->
     </thingCategories>
-    <allowedArchonexusCount>800</allowedArchonexusCount>
+    <allowedArchonexusCount>8000</allowedArchonexusCount>
   </ThingDef>
   
 </Defs>

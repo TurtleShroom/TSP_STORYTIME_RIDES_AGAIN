@@ -14,9 +14,9 @@
 	  </ThoughtDef>
 
 	  <ThingDef ParentName="OrganicProductBase">
-		<defName>GreenOoze</defName>
+		<defName>ST_GreenOoze</defName>
 		<label>Green Ooze</label>
-		<description>Liquid from a green ooze. Vile when raw, but healthy.</description>
+		<description>Liquid extracted from slime. Vile when raw, but healthy.</description>
 		<graphicData>
 		  <texPath>Things/Items/Resources/Slimes/Green_Ooze</texPath>
 		</graphicData>
@@ -26,18 +26,15 @@
 		  <Mass>0.045</Mass>
 		  <MaxHitPoints>60</MaxHitPoints>
 		  <Flammability>0.2</Flammability>
-		  <Nutrition>0.08</Nutrition>
+		  <Nutrition>0.09</Nutrition>
 		</statBases>
 		<comps>
-		  <li Class="CompProperties_Rottable">
-			<daysToRotStart>20</daysToRotStart>
-			<rotDestroys>true</rotDestroys>
-		  </li>
 		</comps>
 		<ingestible>
-		  <preferability>RawBad</preferability>
-		  <foodType>AnimalProduct, Fluid</foodType>
-		  <tasteThought>AteOoze</tasteThought>
+			<preferability>RawBad</preferability>
+			<foodType>AnimalProduct, Fluid</foodType>
+			<specialThoughtDirect>AteOoze</specialThoughtDirect>
+			<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient> <!-- It tastes just fine when cooked! -->
 		</ingestible>
 		<thingCategories>
 		  <li>AnimalProductRaw</li>

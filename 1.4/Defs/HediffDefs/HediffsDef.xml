@@ -1,89 +1,89 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
- <HediffDef>
-    	<defName>ST_Hed_MeatNugget</defName>
-    	<label>Ate Meat Nugget</label>
-		<description>Ate a Meat Nugget!</description>		
-    	<initialSeverity>1</initialSeverity>
-		<defaultLabelColor>(0,128,128)</defaultLabelColor>
-		<hediffClass>HediffWithComps</hediffClass>
-		<isBad>false</isBad>
-		<scenarioCanAdd>false</scenarioCanAdd>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.0</severityPerDay>
-		<showHoursToRecover>true</showHoursToRecover>
-      </li>
-		<li Class="HediffCompProperties_Disappears">
-			<disappearsAfterTicks>
-				<min>14000</min>
-				<max>16000</max>
-			</disappearsAfterTicks>
-		</li>
-    </comps>
-    <stages>
-        <li>
-          <minSeverity>0</minSeverity>
-          <label>Nugget Speed</label>
-            <capMods>
-              <li>
-                <capacity>Moving</capacity>
-                <offset>0.3</offset>
-              </li>
+	<HediffDef>
+			<defName>ST_Hed_MeatNugget</defName>
+			<label>Ate Meat Nugget</label>
+			<description>Ate a Meat Nugget!</description>		
+			<initialSeverity>1</initialSeverity>
+			<defaultLabelColor>(0,128,128)</defaultLabelColor>
+			<hediffClass>HediffWithComps</hediffClass>
+			<isBad>false</isBad>
+			<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+		  <li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-1.0</severityPerDay>
+			<showHoursToRecover>true</showHoursToRecover>
+		  </li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>14000</min>
+					<max>16000</max>
+				</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			  <minSeverity>0</minSeverity>
+			  <label>Nugget Speed</label>
+				<capMods>
+				  <li>
+					<capacity>Moving</capacity>
+					<offset>0.3</offset>
+				  </li>
 
-            </capMods>
-        </li>
-      </stages>
-  </HediffDef>
+				</capMods>
+			</li>
+		  </stages>
+	  </HediffDef>
   
    <HediffDef>
     	<defName>ST_AteCandy_DPAD</defName>
     	<label>Ate Directional Pad Candy</label>
 		<description>Ate Directional Pad Candy!</description>		
     	<initialSeverity>1</initialSeverity>
-  	<defaultLabelColor>(0,128,128)</defaultLabelColor>
-	<hediffClass>HediffWithComps</hediffClass>
-    <isBad>true</isBad>
-	<scenarioCanAdd>false</scenarioCanAdd>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.0</severityPerDay>
-		<showHoursToRecover>true</showHoursToRecover>
-      </li>
-	  <li Class="HediffCompProperties_Disappears">
-			<disappearsAfterTicks>
-				<min>30000</min>
-				<max>50000</max>
-			</disappearsAfterTicks>
-		</li>
-    </comps>
-    <stages>
-        <li>
-          <minSeverity>0</minSeverity>
-          <label>D-Pad Awakening</label>
-            <capMods>
-              <li>
-                <capacity>Consciousness</capacity>
-                <offset>0.5</offset>
-              </li>
-            </capMods>
-        </li>
-      </stages>
-  </HediffDef>
+		<defaultLabelColor>(0,128,128)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>true</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+		  <li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-1.0</severityPerDay>
+			<showHoursToRecover>true</showHoursToRecover>
+		  </li>
+		  <li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>30000</min>
+					<max>50000</max>
+				</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			  <minSeverity>0</minSeverity>
+			  <label>D-Pad Awakening</label>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>0.5</offset>
+				  </li>
+				</capMods>
+			</li>
+		  </stages>
+	</HediffDef>
   
-  <ThoughtDef>
-    <defName>ST_GrossCandy</defName>
-    <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>ST_AteCandy_DPAD</hediff>
-    <stages>
-      <li>
-        <label>Ate Directional Pad Candy</label>
-        <description>Ugh! That candy was trash... but it certainly perked me up.</description>
-        <baseMoodEffect>-15</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
+	<ThoughtDef>
+		<defName>ST_GrossCandy</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ST_AteCandy_DPAD</hediff>
+		<stages>
+		  <li>
+			<label>Ate Directional Pad Candy</label>
+			<description>Ugh! That candy was trash... but it certainly perked me up.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		</stages>
+	</ThoughtDef>
   
   
    <HediffDef>
@@ -91,35 +91,35 @@
     	<label>Ate Fuh</label>
 		<description>Ate Fuh!</description>		
     	<initialSeverity>1</initialSeverity>
-  	<defaultLabelColor>(0,128,128)</defaultLabelColor>
-	<hediffClass>HediffWithComps</hediffClass>
-    <isBad>false</isBad>
-	<scenarioCanAdd>false</scenarioCanAdd>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.0</severityPerDay>
-		<showHoursToRecover>true</showHoursToRecover>
-      </li>
-	  	<li Class="HediffCompProperties_Disappears">
-			<disappearsAfterTicks>
-				<min>30000</min>
-				<max>50000</max>
-			</disappearsAfterTicks>
-		</li>
-    </comps>
-    <stages>
-        <li>
-          <minSeverity>0</minSeverity>
-          <label>Satiated by Fuh</label>
-            <capMods>
-              <li>
-                <capacity>Manipulation</capacity>
-                <offset>0.25</offset>
-              </li>
-            </capMods>
-        </li>
-      </stages>
-  </HediffDef>
+		<defaultLabelColor>(0,128,128)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+		  <li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-1.0</severityPerDay>
+			<showHoursToRecover>true</showHoursToRecover>
+		  </li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>30000</min>
+					<max>50000</max>
+				</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			  <minSeverity>0</minSeverity>
+			  <label>Satiated by Fuh</label>
+				<capMods>
+				  <li>
+					<capacity>Manipulation</capacity>
+					<offset>0.25</offset>
+				  </li>
+				</capMods>
+			</li>
+		  </stages>
+	</HediffDef>
   
    <ThoughtDef>
     <defName>YummyFuh</defName>
@@ -172,18 +172,18 @@
 		  </stages>
   </HediffDef>
   
-  <ThoughtDef>
-    <defName>DeliciousBurrito</defName>
-    <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>ST_Actually_Sour_Cream_Is_Delicious</hediff>
-    <stages>
-      <li>
-        <label>Ate Burrito</label>
-        <description>That was one of the greatest burritos that I have ever eaten.</description>
-        <baseMoodEffect>15</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
+	<ThoughtDef>
+		<defName>DeliciousBurrito</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ST_Actually_Sour_Cream_Is_Delicious</hediff>
+		<stages>
+			<li>
+				<label>Ate Burrito</label>
+				<description>That was one of the greatest burritos that I have ever eaten!</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
   
   
    <HediffDef>
@@ -197,7 +197,7 @@
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<comps>
 		  <li Class="HediffCompProperties_SeverityPerDay">
-			<severityPerDay>-0.75</severityPerDay>
+			<severityPerDay>-1.1</severityPerDay>
 			<showHoursToRecover>true</showHoursToRecover>
 		  </li>
 			<li Class="HediffCompProperties_Disappears">
@@ -251,9 +251,7 @@
 			<livesLeft>2</livesLeft>
 		  </li>
 		</comps>
-	</HediffDef>  
- 
-
+	</HediffDef>
  
    <HediffDef>
     	<defName>HedPepsi</defName>
@@ -287,12 +285,12 @@
 			<baseMoodEffect>2</baseMoodEffect>
 			</li>
 		</stages>
-	</ThoughtDef>  
+	</ThoughtDef>
   
 	<HediffDef>
-    	<defName>HedSpecialMilk</defName>
-    	<label>Drank Special Milk</label>
-		<description>Drank special milk!</description>		
+    	<defName>ST_Hed_SpecialMilk</defName>
+    	<label>Drank Banana Milk</label>
+		<description>Drank special milk! Consumption of Banana Milk temporarily strengthens a Pawn's resolve and endurance, allowing them to sustain less damage when struck or shot.</description>		
     	<initialSeverity>1</initialSeverity>
 		<defaultLabelColor>(0,128,128)</defaultLabelColor>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -305,11 +303,24 @@
 		</comps>
 			<stages>
 				<li>
-				<label>Strengthened Bones</label>	
+				<label>Resolute</label>	
 					<statOffsets>
 						<IncomingDamageFactor>-0.25</IncomingDamageFactor>					
 					</statOffsets>
 				</li>
 			</stages>
 	  </HediffDef>
+	  
+	<ThoughtDef>
+		<defName>TSP_ST_BananaMilk_Thought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ST_Hed_SpecialMilk</hediff>
+		<stages>
+			<li>
+				<label>Drank Banana Milk</label>
+				<description>It says "Nanner Milk" on the carton!</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef> 
 </Defs>

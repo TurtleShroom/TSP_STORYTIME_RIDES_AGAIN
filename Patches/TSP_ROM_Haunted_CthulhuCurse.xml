@@ -5,20 +5,6 @@
 		<xpath>/Defs/ThingDef[defName="ROM_StrangeMealSimple"]</xpath>
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="ST_BananaScytheCorpse"]/thingCategories</xpath>
-			<value>
-				<thingCategories>
-					<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_CosmicHorrorCorpses</li>
-					<li MayRequire="mlie.badmeatcategory">MeatBad</li>
-				</thingCategories>
-			</value>
-		</match>
-	</Operation>
-
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="ROM_StrangeMealSimple"]</xpath>
-		<match Class="PatchOperationReplace">
-			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Bullet_CursedRifle"]/damageDef</xpath>
 			<value>
 				<damageDef MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_Psychic</damageDef>
