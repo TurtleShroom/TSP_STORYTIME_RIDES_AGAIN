@@ -25,6 +25,17 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef/statBases/ToxicSensitivity</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/equippedStatOffsets/ToxicSensitivity</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 		<xpath>/Defs/FactionDef/geneticVariance</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationRemove">
