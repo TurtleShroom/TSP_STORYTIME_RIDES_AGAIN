@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-<!-- Rich -->
+	<!-- Rich -->
 	<TraitDef>
 		<defName>ST_Rich</defName>
 		<commonality>0.7</commonality>
@@ -13,7 +14,7 @@
 		<degreeDatas>
 			<li>
 				<label>rich</label>
-				<description>''I'm rich you know.'' \n \n That's what [PAWN_nameDef] says to anyone [PAWN_pronoun] meets. Regardless of [PAWN_possessive] actual wealth or status, [PAWN_nameDef] has an unusual charisma and ability to either fake being a socialite, or [PAWN_pronoun] is really good at actually being one.</description>
+				<description>''I'm rich you know.'' \n \n That's what {PAWN_nameDef} says to anyone {PAWN_pronoun} meets. Regardless of {PAWN_possessive} actual wealth or status, {PAWN_nameDef} has an unusual charisma and ability to either fake being a socialite, or {PAWN_pronoun} is really good at actually being one.</description>
 				<skillGains>
 					<li>
 						<key>Social</key>
@@ -27,14 +28,14 @@
 		</degreeDatas>
 	</TraitDef>
 	
-<!-- Stupid -->
+	<!-- Stupid -->
 	<TraitDef>
 		<defName>ST_Stupid</defName>
-		<commonality>0.7</commonality>
+		<commonality>0.66</commonality>
 		<degreeDatas>
 			<li>
 				<label>stupid</label>
-				<description>Wuh?</description>
+				<description>{PAWN_nameDef} has reduced intellect, be it to genetic or environmental factors, or simply to a lack of education. {PAWN_pronoun}</description>
 				<skillGains>
 					<li>
 						<key>Intellectual</key>
@@ -51,6 +52,7 @@
 		<conflictingTraits>
 			<li>TooSmart</li>
 			<li>FastLearner</li>
+			<li>ST_Rich</li>
 		</conflictingTraits>
 	</TraitDef>	
 	
@@ -64,7 +66,7 @@
 		<stages>
 			<li>
 				<label>stupid</label>
-				<description>I am too stupid to be sad.</description>
+				<description>Wuh?</description>
 				<baseMoodEffect>15</baseMoodEffect>
 			</li>
 		</stages>

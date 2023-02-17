@@ -7,7 +7,7 @@
 		<degreeDatas>
 			<li>
 				<label>Semi-Feral</label>
-				<description>Bunga.</description>
+				<description>Early in {PAWN_possessive} life, {PAWN_nameDef} spent a short period in the wild, without any contact with other sapient life. Using only {PAWN_possessive} animal instincts, {PAWN_nameDef} managed to survive with no education or interaction with sapient beings. Fortunately, {PAWN_pronoun} was eventually found and adopted into modern society, where {PAWN_nameDef} was able to pick up social skills and make up for much of the isolation {PAWN_pronoun} once experienced. \n However, missing such a critical part of {PAWN_possessive} life means that {PAWN_nameDef} will always have trouble studying, conversing, and controlling {PAWN_possessive} emotions.</description>
 				<skillGains>
 					<li>
 						<key>Intellectual</key>
@@ -20,16 +20,17 @@
 				</skillGains>
 				<statOffsets>
 					<ResearchSpeed>-0.5</ResearchSpeed>
-					<TradePriceImprovement>-0.50</TradePriceImprovement>
+					<GlobalLearningFactor>-0.15</GlobalLearningFactor>
+					<TradePriceImprovement>-0.5</TradePriceImprovement>
 					<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
 				</statOffsets>
-				<randomMentalState>Berserk</randomMentalState>
+				<randomMentalState>Tantrum</randomMentalState>
 				<randomMentalStateMtbDaysMoodCurve>
 				  <points>
-					<li>(0, 60)</li>
+					<li>(0, 45)</li>
 				  </points>
 				</randomMentalStateMtbDaysMoodCurve>
-				<marketValueFactorOffset>-0.15</marketValueFactorOffset>
+				<marketValueFactorOffset>-0.33</marketValueFactorOffset>
 				<allowedMeditationFocusTypes>
 					<li>Natural</li>
 					<li>Morbid</li>
@@ -39,6 +40,7 @@
 		<conflictingTraits>
 			<li>FastLearner</li>
 			<li>ST_Rich</li>
+			<li>TooSmart</li>
 		</conflictingTraits>
 	</TraitDef>	
 	<ThoughtDef>
@@ -50,14 +52,14 @@
 		</requiredTraits>
 		<stages>
 			<li>
-				<label>feral</label>
-				<description>Unga bunga</description>
+				<label>semi-feral</label>
+				<description>Unga bunga!</description>
 				<baseMoodEffect>-5</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>	
 	
-<!-- Rock Expert -->		
+	<!-- Rock Expert -->		
 
 	<TraitDef>
 		<defName>ST_RockExpert</defName>
@@ -68,7 +70,7 @@
 		<degreeDatas>
 			<li>
 				<label>Rock Expert</label>
-				<description>Independent of whether or not he was actually formally schooled in the topic, this Pawn is the very model of a modern major geologist. He has information mineral, mineral, and mineral! In short, in matters mineral, mineral, and mineral, he is the very model of a modern major geologist!</description>
+				<description>Independent of whether or not {PAWN_pronoun} was actually formally schooled in the topic, {PAWN_nameDef} is the very model of a modern major geologist. {PAWN_pronoun} has information mineral, mineral, and mineral! In short, in matters mineral, mineral, and mineral, {PAWN_pronoun} is the very model of a modern major geologist!</description>
 				<skillGains>
 					<li>
 						<key>Mining</key>
@@ -82,15 +84,15 @@
 		</degreeDatas>
 	</TraitDef>						
 
-<!-- Rincewind -->
+	<!-- Rincewind -->
 	<TraitDef>
 		<defName>ST_Rincewind</defName>
 		<commonality>0.7</commonality>
 		<degreeDatas>
 			<li>
-				<label>runner</label>
-				<description>"Dead is only for once, but running away is for ever." 
-		-Noted Runner</description>
+				<label>Rincewind</label>
+				<description>"Dead is only for once, but running away is for ever." \n
+			-Noted Runner</description>
 				<statOffsets>
 					<MoveSpeed>1</MoveSpeed>
 				</statOffsets>
