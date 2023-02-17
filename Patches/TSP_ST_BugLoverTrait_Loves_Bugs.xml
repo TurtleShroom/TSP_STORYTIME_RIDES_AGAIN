@@ -200,4 +200,199 @@
 		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
+			<value>
+				<requiredTraits>
+					<li>Buglover</li>
+				</requiredTraits>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
+			<!--
+			<value>
+				<requiredTraits>
+					<li>Buglover</li>
+				</requiredTraits>
+			</value>
+			-->
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/MentalStateDef[defName="BugForaging"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/MentalStateDef[defName="BugForaging"]/category</xpath>
+			<value>
+				<category>Misc</category>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/MentalBreakDef[defName="BugForaging"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/MentalBreakDef[defName="BugForaging"]/requiredTrait</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/stages</xpath>
+			<value>
+				<stages>
+					<li>
+						<label>insect nature stroll</label>
+						<description>To calm myself, I took a stroll and observed some little insects. I picked a few up and let them crawl on me. I feel.... oddly calmer.</description>
+						<baseMoodEffect>20</baseMoodEffect>
+					</li>
+				</stages>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/durationDays</xpath>
+			<value>
+				<durationDays>4</durationDays> <!-- Longer than normal Catharsis
+				-->
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/MentalBreakDef[defName="BugForaging"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/MentalBreakDef[defName="BugForaging"]/requiredTrait</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/MentalStateDef[defName="BugForaging"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/MentalStateDef[defName="BugForaging"]/prisonersCanDo</xpath>
+			<value>
+				<prisonersCanDo>true</prisonersCanDo>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/MentalStateDef[defName="BugForaging"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/MentalStateDef[defName="BugForaging"]/prisonersCanDo</xpath>
+			<value>
+				<prisonersCanDo>true</prisonersCanDo>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThoughtDef[defName="ObservedForaging"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThoughtDef[defName="ObservedForaging"]/nullifyingTraits</xpath>
+			<value>
+				<nullifyingTraits>
+					<li>Buglover</li>
+					<li>BeanMan</li>
+					<li>ST_SemiFeral</li>
+				</nullifyingTraits>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/ThoughtDef[defName="AteInsectMeatAsEntomophagous"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThoughtDef[defName="AteInsectMeatAsEntomophagous"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/TraitDef[defName="Entomophagous"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/TraitDef[defName="Entomophagous"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
 </Patch>
