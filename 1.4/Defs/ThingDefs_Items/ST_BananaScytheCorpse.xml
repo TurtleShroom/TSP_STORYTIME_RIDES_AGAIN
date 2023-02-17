@@ -4,14 +4,14 @@
 	<ThingDef ParentName="RoughPlantBase">
 		<defName>ST_BananaScytheCorpse</defName>
 		<label>poly-morphic banana</label>
-		<description>"Mmm, this looks tasty. Wait, it was once a WHAT?!" \n \n This man-sized, magical banana is the terminal stage of the Banana Scythe's curse. It was once a living Pawn, but when he came into contact with the Banana Scythe and died while the curse was in effect, he was transformed, atom by atom, into a banana. The process killed him, and the result isn't even especially delicious, tasting "off" when eaten raw. If it is cooked into a meal, however, most people are not capable of tasting anything except a banana that was not allowed to ripen.</description>
+		<description>"Mmm, this looks tasty. Wait, it was once a WHAT?!" \n \n This man-sized, magical banana is the terminal stage of the Banana Scythe's curse. It was once a living Pawn, but when he came into contact with the Banana Scythe and died while the curse was in effect, he was transformed, atom by atom, into a banana. The process killed him, and the result isn't even especially delicious, tasting "off" when eaten raw. If it is cooked into a meal, however, no one is capable of tasting anything except a banana that was not allowed to ripen.</description>
 		<graphicData>
 			<texPath>Things/Items/Resources/Fruits/Banana/Banana_a</texPath>
 			<drawSize>2</drawSize>
 			<!-- <graphicClass>Graphic_StackCount</graphicClass> -->
 		</graphicData>
 		<statBases>
-			<MarketValue>0.001</MarketValue>
+			<MarketValue>0.01</MarketValue>
 			<Flammability>5</Flammability>
 			<Nutrition>10</Nutrition>
 		</statBases>
@@ -21,9 +21,10 @@
 			<li>CorpsesHumanlike</li>
 			<li>PlantFoodRaw</li>
 			<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
-			<li MayRequire="mlie.badmeatcategory">MeatBad</li>
+			<!-- <li MayRequire="mlie.badmeatcategory">MeatBad</li> -->
 			<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
 			<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_CosmicHorrorCorpses</li>
+			<li MayRequire="vanillaexpanded.vcooke" Inherit="False">VCE_Condiments</li>
 		</thingCategories>
 		<ingestible>
 			<foodType Inherit="False">VegetableOrFruit, VegetarianRoughAnimal, Plant, DendrovoreAnimal, Seed, Tree, Corpse</foodType>

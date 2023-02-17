@@ -4,7 +4,7 @@
 	<HediffDef>
 		<defName>Hediff_CoconutFrog</defName>
 		<hediffClass>HediffWithComps</hediffClass>
-		<description>When a coconut frog is killed, its remaining cysts that naturally grow to forms identical to coconuts sprout into a synthetic coconut tree.</description>
+		<description>When a coconut frog is killed, its remaining cysts that naturally grow to forms that are identical to coconuts will then sprout, forming a coconut tree.</description>
 		<label>coconut</label>
 		<stages>
 			<li>
@@ -21,7 +21,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>ST_LivingCoconut</defName>
 		<label>coconut frog</label>
-		<description>Genetically engineered using the same basic process as a tomato frog, the coconut frog grows cysts that, when cut, are totally indistinguishable from real coconuts. These cysts provide it with significant natural armor. When a coconut frog is killed, its remaining cysts that naturally grow to forms identical to coconuts sprout into a synthetic coconut tree.</description>
+		<description>Genetically engineered using the same basic process as a tomato frog, the coconut frog grows cysts that, when cut, are totally indistinguishable from real coconuts. These cysts provide it with significant natural armor. When a coconut frog is killed, its remaining cysts that naturally grow to forms identical to coconuts will sprout into a synthetic coconut tree.</description>
 		<statBases>
 			<MoveSpeed>1.5</MoveSpeed>
 			<MarketValue>150</MarketValue>
@@ -36,6 +36,8 @@
 			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
 		</statBases>
+		<uiIconPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</uiIconPath>
+		<uiIconScale>1.25</uiIconScale>
 		<tools>
 			<li>
 				<label>front-left hand</label>
@@ -428,7 +430,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut</texPath>
+					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</texPath>
 					<drawSize>1.25</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
@@ -444,14 +446,14 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut</texPath>
+					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</texPath>
 					<drawSize>1.25</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
 			<li>
 				<labelPlural>living coconuts</labelPlural>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Animal/Frog_Types/Tomato_Frog/TomatoFrog</texPath> <!-- Temporary -->
+					<texPath>Things/Pawn/Animal/Frog_Types/Tomato_Frog/TomatoFrog</texPath>
 					<drawSize>1</drawSize>
 					<color Inherit="False">(65, 65, 1)</color>
 					<shadowData>
@@ -460,7 +462,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut</texPath>
+					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</texPath>
 					<drawSize>1.25</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>

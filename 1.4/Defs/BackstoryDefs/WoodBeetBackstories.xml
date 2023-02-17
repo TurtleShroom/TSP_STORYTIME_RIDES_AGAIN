@@ -34,6 +34,7 @@
 		<li>
 			<defName>DrugDesire</defName>
 			<degree>2</degree>
+			<chance>100</chance>
 		</li>
 		<li>
             <defName>Psychopath</defName>
@@ -60,6 +61,7 @@
 		<li>Raider</li>
 		<li>Pirate</li>
 		<li>HSAU_BS_MLN_ChildhoodGerman</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
     </spawnCategories>
 	<relationSettings>
 		<relationChanceModifierLover>0</relationChanceModifierLover>
@@ -127,7 +129,7 @@
     <defName>ParentedChildWoodBeet</defName>
     <title>Loved Beet</title>
 	<titleShort>beloved child</titleShort>
-    <baseDesc>[PAWN_nameDef] was one of the rare Wood Beets whose parents actually cared enough to raise their children. Because of this, [PAWN_pronoun] had a stable, functional family life.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was one of the rare Wood Beets whose parents actually cared enough to raise their children. Because of this, [PAWN_pronoun] had a stable, functional family life. [PAWN_nameDef] and [PAWN_possessive] family would go on to leave the Wood Beets and serve the more civilized Beetnikh Empire.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -150,6 +152,9 @@
 		<Abrasive>0</Abrasive>
 		<DrugDesire>0</DrugDesire>
     </disallowedTraits>
+	<spawnCategories Inherit="False">
+		<li>BeetnikhBackstory</li>
+	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="BeetBackstories">
@@ -230,6 +235,8 @@
 		<li>Madman</li>
 		<li>Mate</li>
 		<li>HSAU_BS_MLN_AdultArtVampSoldier</li>
+		<li>HSAU_BS_MLN_AdulthoodGerman</li>
+		<li>HSAU_BS_MLN_Adulthood</li>
 	</spawnCategories>
 	<requiredWorkTags Inherit="False">
 		<li>Violent</li>
@@ -290,6 +297,8 @@
 		<li>TribalHunter</li>
 		<li>MedievalKnight</li>
 		<li>Offworld</li>
+		<li>HSAU_BS_MLN_ChildhoodGerman</li>
+		<li>HSAU_BS_MLN_ChildhoodEarth</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
