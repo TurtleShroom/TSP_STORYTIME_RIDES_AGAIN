@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Uses code derived from the POW Camp Militor Mod, by Panacea -->
+	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2883698190 -->
+
+	<!-- Mechanoids that have a Food Need should now be able to eat, e.g. the cybernetic Cyber Frogs that joined the Mechanoids -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThinkTreeDef[defName="Mechanoid"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThinkTreeDef[defName="Mechanoid"]/thinkRoot/subNodes</xpath>
+			<success>Always</success>
+			<value>
+				<!-- Eat random things out of curiosity -->
+				<li Class="ThinkNode_ChancePerHour_Constant">
+					<mtbDays>45</mtbDays>
+					<subNodes>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>SatisfyingNeeds</tagToGive>
+							<subNodes>
+								<li Class="JobGiver_EatRandom"/>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+				
+				<!-- Satisfy basic needs -->
+				<li Class="ThinkNode_Subtree">
+					<treeDef>SatisfyBasicNeeds</treeDef>
+				</li>
+				
+				<li Class="ThinkNode_Tagger">
+					<tagToGive>SatisfyingNeeds</tagToGive>
+					<subNodes>
+						<li Class="ThinkNode_PrioritySorter">
+							<subNodes>
+								<li Class="JobGiver_GetFood"/>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+				
+				<li Class="ThinkNode_ConditionalStarving">
+					<subNodes>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>SatisfyingNeeds</tagToGive>
+							<subNodes>
+								<li Class="JobGiver_GetFood">
+									<leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BodyPartDef[defName="ArtificialBrain"]/tags</xpath>
+		<value>
+			<li>TalkingSource</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="Milk"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="Milk"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="Milk"]</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="Shear"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="Shear"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="Shear"]</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="Shear"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="Shear"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="Shear"]</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="Shear"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="Shear"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="Shear"]</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="HandlingFeedPatientAnimals"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="HandlingFeedPatientAnimals"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="HandlingFeedPatientAnimals"]</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="Slaughter"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="Slaughter"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="Slaughter"]</xpath>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="TakeRoamingAnimalsToPen"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="TakeRoamingAnimalsToPen"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="TakeRoamingAnimalsToPen"]</xpath>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="TakeToPen"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="TakeToPen"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="TakeToPen"]</xpath>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="VEF_AnimalResource"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="VEF_AnimalResource"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="VEF_AnimalResource"]</xpath>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]</xpath>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]</xpath>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]\canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]\canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]</xpath>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+</Patch>
