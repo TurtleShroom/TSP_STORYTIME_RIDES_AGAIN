@@ -417,13 +417,10 @@
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
-	<Operation Class="PatchOperationFindMod">
-		<!-- Is this Mod installed? -->
-		<mods>
-			<li>VGP More Veggies</li>
-			<li>Vanilla Cooking Expanded</li>
-		</mods>
-		<!-- If it is, do this replacement. -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
 			<xpath>/Defs/ThingCategoryDef[defName="FruitFoodRaw"]/parent</xpath>
@@ -435,11 +432,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="FruitFoodRaw"]</xpath>
+		<xpath>/Defs/ThingDef[defName="Rawsquash"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingCategoryDef[defName="FruitFoodRaw"]/parent</xpath>
+			<xpath>/Defs/ThingDef[@Name="VG_RawFruitBase"]/thingCategories</xpath>
 			<value>
 				<thingCategories>
 					<li>PlantFoodRaw</li>

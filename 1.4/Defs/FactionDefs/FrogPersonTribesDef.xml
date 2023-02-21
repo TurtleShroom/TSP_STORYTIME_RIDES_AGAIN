@@ -61,16 +61,16 @@
     </allowedArrivalTemperatureRange>
     <maxPawnCostPerTotalPointsCurve>
       <points>
-        <li>(0,35)</li>
+        <li>(0,40)</li>
         <li>(70, 50)</li>
-        <li>(700, 100)</li>
-        <li>(1300, 150)</li>
+        <li>(700, 150)</li>
+        <li>(1300, 200)</li>
         <li>(100000, 10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
 	<raidLootValueFromPointsCurve>
       <points>
-        <li>(35,     15)</li>
+        <li>(35,     30)</li>
         <li>(100,   120)</li>
         <li>(1000,  500)</li>
         <li>(2000,  800)</li>
@@ -79,16 +79,16 @@
     </raidLootValueFromPointsCurve>
     <raidCommonalityFromPointsCurve>
       <points>
-        <li>(0, 1)</li>
-        <!-- Constant 1 at all points levels -->
+        <li>(0, 2)</li>
+        <!-- Constant two at all points levels -->
       </points>
     </raidCommonalityFromPointsCurve>
     <pawnGroupMakers>
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-			<FrogPersonHunter>100</FrogPersonHunter>
-			<FrogPersonWarrior>100</FrogPersonWarrior>
+			<FrogPersonHunter>50</FrogPersonHunter>
+			<FrogPersonWarrior>50</FrogPersonWarrior>
 			<ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
 			<DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
 			<!-- INCORRECT! ALLOWING ANIMALS TO JOIN THE PEACEFUL GROUP WILL CAUSE THE GAME TO SPAM ERRORS, OR EVEN CRASH! -->
@@ -129,7 +129,6 @@
 			<BudgettFrog>5</BudgettFrog>
 			<ST_TreeFrog>5</ST_TreeFrog>
 			<TomatoFrog>5</TomatoFrog>
-			<CyberFrogDocile>5</CyberFrogDocile>
 			<FireBelliedToad>10</FireBelliedToad>
 			<Frug MayRequire="crazedmonkey231.frug">1</Frug>
         </options>
@@ -180,12 +179,50 @@
 			<FrogPersonWarrior>0.001</FrogPersonWarrior>
         </options>
       </li>
+      <li>
+        <kindDef>Combat</kindDef>
+		<commonality>0.4</commonality>
+        <options>
+			<NightFrog>999</NightFrog>	
+			<FrogPersonHunter>0.001</FrogPersonHunter>
+			<FrogPersonWarrior>0.001</FrogPersonWarrior>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+		<commonality>1</commonality>
+        <options>
+			<FrogPersonHunter>4</FrogPersonHunter>
+			<FrogPersonWarrior>4</FrogPersonWarrior>
+			<FrogPersonChief>0.01</FrogPersonChief>
+			<Dromedary>0.001</Dromedary>
+			<BloodFrog>0.02</BloodFrog>
+			<BudgettFrog>1</BudgettFrog>
+			<HC_Bullfrog MayRequire="hc.animal.2">1.25</HC_Bullfrog>
+			<ST_BullFrog>1</ST_BullFrog>
+			<CyberFrogDocile>0.1</CyberFrogDocile>
+			<FireBelliedToad>0.3</FireBelliedToad>
+			<Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
+			<LeviathanFrog>0.08</LeviathanFrog>
+			<ST_LivingCoconut>0.1</ST_LivingCoconut>
+			<MilkFrog>0.14</MilkFrog>
+			<NightFrog>0.08</NightFrog>
+			<PepsiFrog>0.075</PepsiFrog>
+			<PumpkinToadlet>0.1</PumpkinToadlet>
+			<SpringPeeper>1.15</SpringPeeper>
+			<PoisonDartFrog>1</PoisonDartFrog>
+			<ST_Toad>1.1</ST_Toad>
+			<TomatoFrog>1</TomatoFrog>
+			<ST_TreeFrog>1</ST_TreeFrog>
+			<ST_WoodFrog>0.33</ST_WoodFrog>
+        </options>
+      </li>
       <li MayRequire="crazedmonkey231.frug">
         <kindDef MayRequire="crazedmonkey231.frug">Combat</kindDef>
 		<commonality MayRequire="crazedmonkey231.frug">0.7</commonality>
 		<commonality MayRequire="crazedmonkey231.frug">0.1</commonality>
         <options MayRequire="crazedmonkey231.frug">
-			<Frug MayRequire="crazedmonkey231.frug">1</Frug>
+			<Frug MayRequire="crazedmonkey231.frug">100</Frug>
 			<FrogPersonHunter MayRequire="crazedmonkey231.frug">0.001</FrogPersonHunter>
 			<FrogPersonWarrior MayRequire="crazedmonkey231.frug">0.001</FrogPersonWarrior>
         </options>
@@ -197,7 +234,7 @@
           <FrogPersonHunter MayRequire="emilskin.forgrace.forgs">0.1</FrogPersonHunter>
 		  <FrogPersonWarrior MayRequire="emilskin.forgrace.forgs">0.1</FrogPersonWarrior>
           <PoisonDartFrog MayRequire="emilskin.forgrace.forgs">20</PoisonDartFrog>
-		  <FireBelliedToad>5</FireBelliedToad>
+		  <FireBelliedToad MayRequire="emilskin.forgrace.forgs">5</FireBelliedToad>
 		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">100</ForgPawnKindDef>
 		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">100</DuoPawnKindDef>
 		  <Frug MayRequire="crazedmonkey231.frug">1</Frug>
@@ -238,26 +275,20 @@
         <carriers>
           <LeviathanFrog>999</LeviathanFrog>
 		  <Muffalo>0.001</Muffalo>
-		  <Dromedary>0.001</Dromedary>
+		  <Dromedary>1</Dromedary>
         </carriers>
         <guards>
 		  <LeviathanFrog>65</LeviathanFrog>
-		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
-		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
+		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">15</ForgPawnKindDef>
+		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">15</DuoPawnKindDef>
         </guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
-		<commonality>1.2</commonality>
+		<commonality>0.4</commonality>
         <options>
           <FrogPersonHunter>90</FrogPersonHunter>
 		  <FrogPersonWarrior>90</FrogPersonWarrior>
-          <PoisonDartFrog>5</PoisonDartFrog>
-          <SpringPeeper>5</SpringPeeper>		  
-          <BudgettFrog>5</BudgettFrog>
-          <ST_TreeFrog>5</ST_TreeFrog>
-          <TomatoFrog>5</TomatoFrog>		
-          <CyberFrogDocile>5</CyberFrogDocile>
 		  <FrogPersonChief>5</FrogPersonChief>
 		  <Frug MayRequire="crazedmonkey231.frug">1</Frug>
 		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">3.5</ForgPawnKindDef>
@@ -269,15 +300,27 @@
         <kindDef>Settlement</kindDef>
 		<commonality>0.4</commonality>
         <options>
-          <PoisonDartFrog>5</PoisonDartFrog>
-          <SpringPeeper>5</SpringPeeper>		  
-          <BudgettFrog>5</BudgettFrog>
-          <ST_TreeFrog>5</ST_TreeFrog>
-          <TomatoFrog>5</TomatoFrog>		
-          <CyberFrogDocile>5</CyberFrogDocile>
-		  <Frug MayRequire="crazedmonkey231.frug">1</Frug>
-		  <FrogPersonChief>0.05</FrogPersonChief>
-		  <Dromedary>0.001</Dromedary>
+			<FrogPersonChief>0.01</FrogPersonChief>
+			<Dromedary>0.001</Dromedary>
+			<BloodFrog>0.2</BloodFrog>
+			<BudgettFrog>1</BudgettFrog>
+			<HC_Bullfrog MayRequire="hc.animal.2">1.25</HC_Bullfrog>
+			<ST_BullFrog>1</ST_BullFrog>
+			<CyberFrogDocile>0.1</CyberFrogDocile>
+			<FireBelliedToad>0.3</FireBelliedToad>
+			<Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
+			<LeviathanFrog>0.08</LeviathanFrog>
+			<ST_LivingCoconut>0.1</ST_LivingCoconut>
+			<MilkFrog>0.14</MilkFrog>
+			<NightFrog>0.08</NightFrog>
+			<PepsiFrog>0.075</PepsiFrog>
+			<PumpkinToadlet>0.1</PumpkinToadlet>
+			<SpringPeeper>1.15</SpringPeeper>
+			<PoisonDartFrog>1</PoisonDartFrog>
+			<ST_Toad>1.1</ST_Toad>
+			<TomatoFrog>1</TomatoFrog>
+			<ST_TreeFrog>1</ST_TreeFrog>
+			<ST_WoodFrog>0.33</ST_WoodFrog>
         </options>
       </li>
       <li MayRequire="emilskin.forgrace.forgs">
@@ -317,10 +360,12 @@
 				<li>TropicalSwamp</li>
 				<li>TropicalRainforest</li>
 				<li>froggySwamp</li>
+				<li MayRequire="SirMashedPotato.MorrowRim.ashswamp">MorrowRim_AshSwamp</li>
 				<li MayRequire="comigogames.biomes.greaterswamps">COMIGO_GreaterSwamp_Cold</li>
 				<li MayRequire="comigogames.biomes.greaterswamps">COMIGO_GreaterSwamp_Temperate</li>
 				<li MayRequire="comigogames.biomes.greaterswamps">COMIGO_GreaterSwamp_Tropical</li>
 				<li MayRequire="mlie.advancedbiomes">PoisonForest</li>
+				<li MayRequire="ironscruff.primordialgeysers">IronScruff_PrimordialGeysers</li>
 			</allowedBiomes>					
 		</li>
 	</modExtensions>
