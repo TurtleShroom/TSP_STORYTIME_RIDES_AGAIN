@@ -31,7 +31,6 @@
 					<capacity>Moving</capacity>
 					<offset>0.3</offset>
 				  </li>
-
 				</capMods>
 			</li>
 		  </stages>
@@ -247,9 +246,11 @@
 			<disappearsAfterTicks>5000</disappearsAfterTicks>
 			<showRemainingTime>True</showRemainingTime>
 		  </li>
+		  <!--
 		  <li Class="AnimalBehaviours.HediffCompProperties_Resurrect">
 			<livesLeft>2</livesLeft>
 		  </li>
+		  -->
 		</comps>
 	</HediffDef>
  
@@ -288,9 +289,9 @@
 	</ThoughtDef>
   
 	<HediffDef>
-    	<defName>ST_Hed_SpecialMilk</defName>
+    	<defName>ST_Hed_SpecialBananaMilk</defName>
     	<label>Drank Banana Milk</label>
-		<description>Drank special milk! Consumption of Banana Milk temporarily strengthens a Pawn's resolve and endurance, allowing them to sustain less damage when struck or shot.</description>		
+		<description>Drank special banana milk! Consumption of Banana Milk temporarily strengthens a Pawn's resolve and endurance, allowing them to sustain less damage when struck or shot.</description>		
     	<initialSeverity>1</initialSeverity>
 		<defaultLabelColor>(0,128,128)</defaultLabelColor>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -303,18 +304,18 @@
 		</comps>
 			<stages>
 				<li>
-				<label>Resolute</label>	
+					<label>Resolute</label>	
 					<statOffsets>
 						<IncomingDamageFactor>-0.25</IncomingDamageFactor>					
 					</statOffsets>
 				</li>
 			</stages>
-	  </HediffDef>
+	</HediffDef>
 	  
 	<ThoughtDef>
 		<defName>TSP_ST_BananaMilk_Thought</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>ST_Hed_SpecialMilk</hediff>
+		<hediff>ST_Hed_SpecialBananaMilk</hediff>
 		<stages>
 			<li>
 				<label>Drank Banana Milk</label>

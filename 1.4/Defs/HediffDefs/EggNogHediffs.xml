@@ -148,7 +148,7 @@
   </ThoughtDef>
   
   
-   <HediffDef>
+	<HediffDef>
     	<defName>HedFrogNog</defName>
     	<label>Drank Frog-Nog</label>
 		<description>[PAWN_nameDef] has drank a bottle of Frog-Nog! Frog-Nog provides a quick, minor boost to the Consciousness of anyone that consumes it.</description>		
@@ -197,49 +197,50 @@
   </ThoughtDef>
   
   
-   <HediffDef>
+	<HediffDef>
     	<defName>HedProfaneNog</defName>
     	<label>Drank Profane Egg Nog</label>
-		<description>[PAWN_NameDef] has drank a bottle of Profane Egg Nog! Its miraculous benefits come come at a steep price. Profane Nog causes extreme audio hallucinations and can drive a Pawn straight into a Mental Break with but one sip.</description>		
+		<description>{PAWN_NameDef} has drank a bottle of Profane Egg Nog! Its miraculous benefits come come at a steep price. Profane Nog causes extreme audio hallucinations and can drive a Pawn straight into a Mental Break with but one sip.</description>		
     	<initialSeverity>1</initialSeverity>
 		<defaultLabelColor>(0,128,128)</defaultLabelColor>
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>true</isBad>
 		<scenarioCanAdd>false</scenarioCanAdd>
+		<taleOnVisible>ToxicityRevealed</taleOnVisible>
 		<comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.05</severityPerDay>
-		<showHoursToRecover>true</showHoursToRecover>
-      </li>
-	  <li Class="HediffCompProperties_Disappears">
-			<disappearsAfterTicks>
-				<min>60000</min>
-				<max>60000</max>
-			</disappearsAfterTicks>
-		</li>
-    </comps>
-    <stages>
-        <li>
-          <minSeverity>0</minSeverity>
-          <label>AAAAAGGHHH!</label>
-            <capMods>
-              <li>
-                <capacity>Consciousness</capacity>
-                <offset>2</offset>
-              </li>
-              <li>
-                <capacity>Moving</capacity>
-                <offset>2</offset>
-              </li>
-            </capMods>
-        </li>
-      </stages>
-  </HediffDef>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.05</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>60000</min>
+					<max>60000</max>
+				</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			  <minSeverity>0</minSeverity>
+			  <label>AAAAAGGHHH!</label>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>2</offset>
+				  </li>
+				  <li>
+					<capacity>Moving</capacity>
+					<offset>2</offset>
+				  </li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
   
 	<HediffDef>
 		<defName>HedFireNog</defName>
 		<label>Drank Fire Egg Nog</label>
-		<description>[PAWN_defName] has drank Fire Egg Nog! Even now, [PAWN_pronoun] feels the fire of nog flow through [PAWN_objective]: [PAWN_pronoun] will be able to literally spit fireballs as a ranged weapon, which poses no harm to [PAWN_possessive] digestive tract but plenty of harm to his target.</description>		
+		<description>{PAWN_defName} has drank Fire Egg Nog! Even now, {PAWN_pronoun} feels the fire of nog flow through {PAWN_objective}: {PAWN_pronoun} will be able to literally spit fireballs as a ranged weapon, which poses no harm to {PAWN_possessive} digestive tract but plenty of harm to his target.</description>		
 		<initialSeverity>1</initialSeverity>
 		<defaultLabelColor>(255,36,0)</defaultLabelColor>      	
 		<hediffClass>HediffWithComps</hediffClass>
