@@ -83,11 +83,11 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<Operation Class="PatchOperationConditional">
+	<Operation Class="PatchOperationConditional" MayRequire="crazedmonkey231.frug">
 	<!-- Does this exist? -->
 	<xpath>/Defs/ThingDef[defName="Frug"]/comps</xpath>
 		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
+		<match Class="PatchOperationAdd" MayRequire="crazedmonkey231.frug">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Frug"]/comps</xpath>
 			<value>
@@ -101,7 +101,7 @@
 			</value>
 		</match>
 		<!-- If it DOES NOT, add this. -->
-		<nomatch Class="PatchOperationAdd">
+		<nomatch Class="PatchOperationAdd" MayRequire="crazedmonkey231.frug">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
 			<value>
@@ -167,7 +167,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Frug"]</xpath>
+	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAddModExtension">
 			<success>Always</success>
