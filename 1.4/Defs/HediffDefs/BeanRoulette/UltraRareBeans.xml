@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs> 
+<!--Bean-->  
+	<HediffDef>
+		<defName>ST_Bean_Bean</defName>
+		<label>Roulette Beans: Bean</label>
+		<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled... a bean. It's not a jelly bean either, just a normal Glitter Bean. \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; None.</description>
+		<descriptionHyperlinks>
+			<ThingDef>ST_Bean</ThingDef>
+		</descriptionHyperlinks>
+		<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(200,150,150)</defaultLabelColor>      	
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>30000</disappearsAfterTicks>
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Ultra-Rare</label>
+				<minSeverity>0</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	
+	<ThoughtDef>
+		<defName>TSP_ST_BeanThought_Bean</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ST_Bean_Bean</hediff>
+		<stages>
+		  <li>
+			<label>Neutral Bean Roulette Outcome: Bean</label>
+			<description>That wasn't a jelly bean. It was just a normal bean. Huh.</description>
+			<baseMoodEffect>0</baseMoodEffect>
+		  </li>
+		</stages>
+	</ThoughtDef>
+</Defs>

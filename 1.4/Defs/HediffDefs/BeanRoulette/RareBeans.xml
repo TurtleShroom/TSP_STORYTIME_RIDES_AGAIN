@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+ 
+ <!--Tongue-->  
+  
+	<HediffDef>
+		<defName>ST_Bean_Tongue</defName>
+		<label>Roulette Beans: Friendly Frog</label>
+		<description>As {PAWN_NameDef} was about to consume the jelly bean, it moved! It's no bean, just a little frog, and it wants to help {PAWN_NameDef}! For a brief time, the frog will follow {PAWN_objective} and shoot its tongue on command.\n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Allows the use of a frog's tongue attack.</description>		
+		<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(209,144,142)</defaultLabelColor>      	
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>120000</disappearsAfterTicks>
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		  <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+						<verbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<accuracyTouch>1</accuracyTouch>
+								<accuracyShort>0.8</accuracyShort>
+								<accuracyMedium>0.7</accuracyMedium>
+								<accuracyLong>0.65</accuracyLong>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>ST_Lick</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12</range>				
+								<soundCast>Lick</soundCast>
+								<muzzleFlashScale>0</muzzleFlashScale>
+								<label>lick</label>
+								<commonality>1</commonality>
+							</li>
+						</verbs>
+						<verbProps>
+							<li>
+								<label>head</label>
+								<draw>false</draw>
+								<canBeToggled>true</canBeToggled>
+							</li>
+						</verbProps>
+					</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Rare</label>
+				<minSeverity>0</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	
+	<ThoughtDef>
+		<defName>TSP_ST_BeanThought_FrogFriend</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ST_Bean_Tongue</hediff>
+		<stages>
+		  <li>
+			<label>Won the Bean Roulette: Made a Friend</label>
+			<description>Hello, little frog! I would love to have you help shoot my enemies for a few days!</description>
+			<baseMoodEffect>2</baseMoodEffect>
+		  </li>
+		</stages>
+	</ThoughtDef>
+
+<!--Antibiotic-->  
+
+	<HediffDef>
+		<defName>ST_Bean_Antibiotic</defName>
+		<label>Roulette Beans: Antibiotic</label>
+		<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a gummy pill that tastes like a jelly bean! \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Greatly increases immunity gain speed at a rate matching a Billy Club Sandwich.</description>		
+		<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(0,200,150)</defaultLabelColor>      	
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>30000</disappearsAfterTicks>
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Rare</label>
+				<minSeverity>0</minSeverity>
+				<statOffsets>
+					<ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+				</statOffsets>	
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>TSP_ST_BeanThought_Antibiotic</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ST_Bean_Antibiotic</hediff>
+		<stages>
+		  <li>
+			<label>Won the Bean Roulette: Antibiotic</label>
+			<description>Momma always said to take my vitamins and minerals!</description>
+			<baseMoodEffect>2</baseMoodEffect>
+		  </li>
+		</stages>
+	</ThoughtDef>
+	
+<!--Bogey-->  
+
+	<HediffDef>
+		<defName>ST_Bean_Bogey</defName>
+		<label>Roulette Bean: Vomit Fountain</label>
+		<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a bean that has completely spoiled! \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Induces nonstop vomiting for a short time.</description>
+		<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(115, 179, 0)</defaultLabelColor>      	
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>True</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2000</disappearsAfterTicks> <!-- About one hour -->
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Rare</label>
+				<minSeverity>0</minSeverity>
+				<vomitMtbDays>0.00001</vomitMtbDays> <!-- VOMIT FOUNTAIN TIME!!! -->
+				<capMods>
+				  <li>
+					<capacity>Moving</capacity>
+					<setMax>0.01</setMax>
+				  </li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+    <ThoughtDef>
+		<defName>ST_BeanThought_Bogey</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ST_Bean_Bogey</hediff>
+		<stages>
+		  <li>
+			<label>Lost the Bean Roulette: BLEAAAARRGGHHH</label>
+			<description>Absolutely vile! Bleaaargh!</description>
+			<baseMoodEffect>-25</baseMoodEffect>
+		  </li>
+		</stages>
+  </ThoughtDef>
+</Defs> 

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="MealBaseIngredientless">
+		<defName>ST_RouletteBean</defName>
+		<label>Roulette Beans</label>
+		<description>All Bean Men originate from Glitter World hobbyists enlightening Bulborbs to sapience, using Ultra Tech technology. Roulette Bean Men are unique in their distinct origin point. They originally came from a batch of Glitter World mad scientists that had taken up space in an illicit laboratory, deep in some seedy Urb World. These mad scientists engineered special jelly beans to mix with the Sapient Bean Matrix, which caused bizarre properties. Through technology barely understood, even by their creators, Roulette Beans variety possesses an Ultra Tech quirk that randomly changes their flavor and gives some of them unique properties when one partakes in them. \n \n Roulette Beans live up to their name: each time one is consumed, any number of remarkable effects, good or bad, or even none at all, will take place. Sometimes, a Roulette Bean isn't even a bean at all, but something worse disguised as a jelly bean... \n \n \n NOTICE: THE BEAN ROULETTE REQUIRES THE MOHAR FRAMEWORK MOD. WITHOUT IT, EATING A ROULETTE BEAN DOES NOTHING BUT SATISFY RECREATION.</description>
+		<statBases>
+		  <Mass>0.01</Mass>
+		  <Nutrition>0.25</Nutrition>
+		  <MarketValue>20</MarketValue>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Items/Resources/Bean/RouletteBeans</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>  
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<minRewardCount>50</minRewardCount>  
+		<tradeTags>
+		  <li>ExoticMisc</li>
+		  <li>RareBeans</li>
+		</tradeTags>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<foodType>Processed</foodType>
+			<joy>0.25</joy>
+			<joyKind>TSP_ST_EatRouletteBeans</joyKind>
+			<tableDesired>false</tableDesired>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>Hediff_RouletteBeanManBuildup</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>    
+	</ThingDef>
+</Defs>

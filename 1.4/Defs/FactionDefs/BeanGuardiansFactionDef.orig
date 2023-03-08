@@ -1,25 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Defs>
-  <AlienRace.AlienBackstoryDef>
-    <defName>BeanManAdult_Bott_Guardian</defName>
-    <title>Bertie Bott's every flavor bean man</title>
-	<titleShort>bean man</titleShort>
-	<bodyTypeGlobal>Bott</bodyTypeGlobal>
-	<spawnCategories>
-      <li>BeanGuardian</li>
-    </spawnCategories>
-    <baseDesc>Born with a close affinity to the rare and powerful beans of Bertie Bott, this bean man variety possesses a biological quirk that causes them to produce Every Flavor Beans inside their stomach. Practically speaking, this means that they periodically suffer (or benefit) from the random effects of Bertie Bott's Every Flavor Beans.</baseDesc>
-    <slot>Adulthood</slot>
-    <forcedHediffs>
-      <li>HedBottBeanMan</li>
-      <li>Hediff_BertieBottBeanManBuildup</li>
-    </forcedHediffs>
-  </AlienRace.AlienBackstoryDef>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
+<Defs>
   <FactionDef>
     <defName>BeanGuardians</defName>
     <label>bean guardians</label>
-    <description>A sworn brotherhood of Bertie Bott's Every Flavor Bean Men who have banded together to prevent anyone from misusing the Every Flavor Beans. In their minds, this means anyone using them (except themselves, of course).</description>
+    <description>A sworn brotherhood of Roulette Bean Men who have banded together to prevent anyone from misusing Roulette Beans. In their minds, this means anyone using them (except themselves, of course).</description>
     <pawnsPlural>bean guardians</pawnsPlural>
     <settlementGenerationWeight>0.2</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
@@ -27,18 +12,22 @@
 	<maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
     <canMakeRandomly>true</canMakeRandomly>
     <canStageAttacks>true</canStageAttacks>
-    <leaderTitle>Beanblax</leaderTitle>
+    <leaderTitle>Roulette Master</leaderTitle>
     <factionIconPath>World/BeanMen/BeanGuardianFactionLogo</factionIconPath>
     <naturalEnemy>true</naturalEnemy>
     <colorSpectrum>
       <li>(150, 20, 20)</li>
     </colorSpectrum>
     <disallowedMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+
+		<!-- If you have the Mod -->
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Corporate</li>
     </disallowedMemes>
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">HAR_Xenophobia</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
     </requiredMemes>
     <allowedCultures>

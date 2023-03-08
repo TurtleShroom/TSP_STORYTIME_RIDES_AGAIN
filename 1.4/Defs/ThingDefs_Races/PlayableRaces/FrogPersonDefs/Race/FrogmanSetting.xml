@@ -151,6 +151,17 @@
 					</li>
 				</replacerList>
 			</thoughtSettings>
+			<raceRestriction>
+				<blackEndoCategories>
+					<li>Head</li>
+					<li>Melanin</li> <!-- Can get an overridden skin color, but will always be a natural born green Pawn otherwise -->
+				</blackEndoCategories>
+				<blackGeneTags>
+					<!-- <li>SkinColor</li> -->
+					<li>Head</li>
+					<li>Eyes</li>
+				</blackGeneTags>
+			</raceRestriction>
 		</alienRace>
 		<statBases>
 		  <MarketValue>500</MarketValue>
@@ -336,11 +347,12 @@
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0)</li>  
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(13,0)</li>      
-			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.001,122)</li><!-- End exclude -->
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.001,122)</li> <!-- End exclude -->
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.999,130)</li>
-			  <li>(14,0)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(14.001,130)</li>
-			  <li>(16,100)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(16,100)</li>
+			  <li>(21,100)</li>
 			  <li>(50,100)</li>
 			  <li>(60,30)</li>
 			  <li>(70,18)</li>
