@@ -25,7 +25,7 @@
 			</li>
 			<li Class="RockSettings.DefModExtension_BiomeSettings">
 				<rockCount>1</rockCount>
-				<allowedRockDefs>
+				<allowedRockDefs Inherit="False">
 					<li>ST_MudStone</li>
 					<li MayRequire="sarg.alphabiomes">AB_Mudstone</li>
 				</allowedRockDefs>
@@ -37,13 +37,13 @@
 		<movementDifficulty>4</movementDifficulty>
 		<forageability>2</forageability>
 		<foragedFood>ToadLegs</foragedFood>
-		<wildPlantRegrowDays>13</wildPlantRegrowDays>
+		<wildPlantRegrowDays>6</wildPlantRegrowDays>
 		<texture>World/Biomes/FroggySwamp</texture>
 		<soundsAmbient>
 		  <li>Ambient_NightInsects_Jungle</li>
 		  <li>Ambient_DayInsects_Jungle</li>
 		</soundsAmbient>
-		<diseaseMtbDays>28</diseaseMtbDays>
+		<diseaseMtbDays>20</diseaseMtbDays>
 		<diseases>
 		  <li>
 			<diseaseInc>Disease_Malaria</diseaseInc>
@@ -150,7 +150,7 @@
 		  </li>
 		</terrainPatchMakers>
 		<baseWeatherCommonalities>
-		  <Clear>2</Clear>
+		  <Clear>1</Clear>
 		  <Fog>40</Fog>
 		  <Rain>25</Rain>
 		  <RainyThunderstorm>15</RainyThunderstorm>
@@ -169,11 +169,23 @@
 		  <Plant_Clivia>0.07</Plant_Clivia>
 		  <Plant_Berry>0.08</Plant_Berry>
 		  <Plant_Rafflesia>0.005</Plant_Rafflesia>
-		  <AB_MangroveTree MayRequire="sarg.alphabiomes">1.1</AB_MangroveTree>
 		  <Rylex_Tree_CoconutPalm>0.01</Rylex_Tree_CoconutPalm>
 		  <ST_LemonTree>0.009</ST_LemonTree>
 		  <ST_OrangeTree>0.008</ST_OrangeTree>
 		  <ST_CookingAppleTree>0.008</ST_CookingAppleTree>
+		  <Herb_Guam>0.005</Herb_Guam>
+		  <AB_MangroveTree MayRequire="sarg.alphabiomes">2</AB_MangroveTree>
+		  <AB_GiantGamma MayRequire="sarg.alphabiomes">0.002</AB_GiantGamma>
+		  <PoisonMushroom MayRequire="mlie.advancedbiomes">0.01</PoisonMushroom>
+		  <BMT_Cattail MayRequire="biomesteam.oasis">1</BMT_Cattail>
+		  <BMT_Lilypad MayRequire="biomesteam.oasis">3</BMT_Lilypad>
+		  <RN_PlantClover MayRequire="rimnature.velcroboy333">1</RN_PlantClover>
+		  <Plant_CandyCaneGreen MayRequire="thatbartguy.candy">0.001</Plant_CandyCaneGreen>
+		  <BMT_MayoaPortugallica MayRequire="biomesteam.biomesprehistoric">0.02</BMT_MayoaPortugallica>
+		  <BMT_Alethopteris MayRequire="biomesteam.biomesprehistoric">0.02</BMT_Alethopteris>
+		  <PlantDemonBreath MayRequire="tarojun.morishep.onioftherim">0.001</PlantDemonBreath>
+		  <MorrowRim_FunnelCap MayRequire="sirmashedpotato.morrowrim">0.001</MorrowRim_FunnelCap>
+		  <MorrowRim_WeepingParasol MayRequire="sirmashedpotato.morrowrim.ashswamp">0.03</MorrowRim_WeepingParasol>
 		</wildPlants>
 		<wildAnimals>
 			<BloodFrog>0.2</BloodFrog>
@@ -188,6 +200,8 @@
 			<ST_LivingCoconut>0.1</ST_LivingCoconut>
 			<MilkFrog>0.14</MilkFrog>
 			<NightFrog>0.008</NightFrog>
+			<GiantToad MayRequire="yamazakioghw.gianttoads">0.12</GiantToad>
+			<KingToad MayRequire="yamazakioghw.gianttoads">0.001</KingToad>
 			<PepsiFrog>0.075</PepsiFrog>
 			<PumpkinToadlet>0.1</PumpkinToadlet>
 			<SpringPeeper>1.15</SpringPeeper>
@@ -196,6 +210,7 @@
 			<TomatoFrog>1</TomatoFrog>
 			<ST_TreeFrog>1</ST_TreeFrog>
 			<ST_WoodFrog>0.33</ST_WoodFrog>
+			<Onibi MayRequire="x3v21.jmc">0.01</Onibi> <!-- Will-o-wisp -->
 		</wildAnimals>
 		<allowedPackAnimals>
 		  <li>Muffalo</li>

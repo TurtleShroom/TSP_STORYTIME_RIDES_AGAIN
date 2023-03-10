@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="GiantToad"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="GiantToad"]/race/leatherDef</xpath>
+			<value>
+				<leatherDef>Leather_Frog</leatherDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="GiantToad"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="GiantToad"]/race/useMeatFrom</xpath>
+			<value>
+				<useMeatFrom>ST_BullFrog</useMeatFrom>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="GiantToad"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="GiantToad"]/race/lifeStageAges</xpath>
+			<value>
+				<lifeStageAges>
+					<li>
+						<def>AnimalBaby</def>
+						<minAge>0</minAge>
+						<soundWounded>Pawn_GiantToad_Wounded</soundWounded>
+						<soundDeath>Pawn_GiantToad_Angry</soundDeath>
+						<soundCall>Pawn_GiantToad_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalJuvenile</def>
+						<minAge>0.09</minAge>
+						<soundWounded>Pawn_GiantToad_Wounded</soundWounded>
+						<soundDeath>Pawn_GiantToad_Angry</soundDeath>
+						<soundCall>Pawn_GiantToad_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalAdult</def>
+						<minAge>0.25</minAge>
+						<soundWounded>Pawn_GiantToad_Wounded</soundWounded>
+						<soundDeath>Pawn_GiantToad_Angry</soundDeath>
+						<soundCall>Pawn_GiantToad_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="GiantToad"]/tradeTags</xpath>
+			<value>
+				<li>AnimalFrog</li>
+				<li>AnimalUncommon</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="GiantToad"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="KingToad"]/tradeTags</xpath>
+			<value>
+				<li>AnimalFrog</li>
+				<li>AnimalExotic</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="GiantToad"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAddModExtension">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="GiantToad"]</xpath>
+			<value>
+				<li Class="AnimalBehaviours.AnimalStatExtension">
+					<statToAdd>
+						<li>ST_FrogRole</li>
+						<li>ST_FrogRarity</li>		
+					</statToAdd>
+					<statValues>
+						<li>ST_MeleeTank</li>
+						<li>ST_FrogUncommon</li>					
+					</statValues>
+					<statDescriptions>
+						<li>ST_MeleeTankDesc</li>
+						<li>ST_FrogUncommonDesc</li>
+					</statDescriptions>
+				</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="KingToad"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="KingToad"]/race/leatherDef</xpath>
+			<value>
+				<leatherDef>Leather_Frog</leatherDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="KingToad"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="KingToad"]/race/useMeatFrom</xpath>
+			<value>
+				<useMeatFrom>ST_BullFrog</useMeatFrom>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="KingToad"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="KingToad"]/race/lifeStageAges</xpath>
+			<value>
+				<lifeStageAges>
+					<li>
+						<def>AnimalAdult</def>
+						<minAge>0</minAge>
+						<soundWounded>Pawn_GiantToad_Wounded</soundWounded>
+						<soundDeath>Pawn_GiantToad_Angry</soundDeath>
+						<soundCall>Pawn_GiantToad_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="KingToad"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="KingToad"]/tradeTags</xpath>
+			<value>
+				<li>AnimalFrog</li>
+				<li>AnimalExotic</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="KingToad"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAddModExtension">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="KingToad"]</xpath>
+			<value>
+				<li Class="AnimalBehaviours.AnimalStatExtension">
+					<statToAdd>
+						<li>ST_FrogRole</li>
+						<li>ST_FrogRarity</li>		
+					</statToAdd>
+					<statValues>
+						<li>ST_MeleeTank</li>
+						<li>ST_FrogLegendary</li>					
+					</statValues>
+					<statDescriptions>
+						<li>ST_MeleeTankDesc</li>
+						<li>ST_FrogLegendaryDesc</li>
+					</statDescriptions>
+				</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>
