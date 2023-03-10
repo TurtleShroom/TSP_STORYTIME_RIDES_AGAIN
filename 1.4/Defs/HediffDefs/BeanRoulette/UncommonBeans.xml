@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
 
@@ -49,14 +49,14 @@
 	<HediffDef>
 		<defName>ST_Bean_Vomit</defName>
 		<label>Roulette Beans: Nausea</label>
-		<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a jelly bean that tastes akin to vomit! Blegh! It could have been worse, though. There's some that would make {PAWN_objective} throw up even worse... \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Tastes bad and causes periodic vomiting.</description>
+		<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a jelly bean that tastes akin to vomit! Blegh! It could have been worse, though. There's some that would make {PAWN_objective} throw up even worse... \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Tastes bad and causes mild vomiting over the course of the day.</description>
 		<initialSeverity>1</initialSeverity>
 		<defaultLabelColor>(148, 178, 28)</defaultLabelColor>      	
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>90000</disappearsAfterTicks>
+				<disappearsAfterTicks>60000</disappearsAfterTicks>
 				<showRemainingTime>True</showRemainingTime>
 			</li>
 		</comps>
@@ -70,9 +70,9 @@
 	</HediffDef>
 
     <ThoughtDef>
-		<defName>BeanThought_Vomit</defName>
+		<defName>ST_BeanThought_Vomit</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>Bean_Vomit</hediff>
+		<hediff>ST_Bean_Vomit</hediff>
 		<stages>
 		  <li>
 			<label>Lost the Bean Roulette: Nausea</label>
@@ -86,7 +86,7 @@
 <!--Gold-->
 
 	<HediffDef>
-		<defName>ST_Bean_Gold</defName>
+		<defName>ST_BeanGold</defName>
 		<label>Roulette Beans: Golden</label>
 		<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a golden jelly bean! It's delicious and doesn't taste like gold!  \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Increases trading ability.</description>		
 		<initialSeverity>1</initialSeverity>
@@ -123,11 +123,4 @@
 			  </li>
 			</stages>
 	  </ThoughtDef>
-  
-  
-  
-  
-  
-  
-  
 </Defs>

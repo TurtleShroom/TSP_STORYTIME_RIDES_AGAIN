@@ -5,7 +5,7 @@
 		<defName>Hediff_CoconutFrog</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<description>When a coconut frog is killed, its remaining cysts that naturally grow to forms that are identical to coconuts will then sprout, forming a coconut tree.</description>
-		<label>coconut</label>
+		<label>coconut cysts</label>
 		<stages>
 			<li>
 				<becomeVisible>false</becomeVisible>
@@ -21,7 +21,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>ST_LivingCoconut</defName>
 		<label>coconut frog</label>
-		<description>Genetically engineered using the same basic process as a tomato frog, the coconut frog grows cysts that, when cut, are totally indistinguishable from real coconuts. These cysts provide it with significant natural armor. When a coconut frog is killed, its remaining cysts that naturally grow to forms identical to coconuts will sprout into a synthetic coconut tree.</description>
+		<description>Genetically engineered using the same basic process as a tomato frog, the coconut frog grows cysts that, when cut, are totally indistinguishable from real coconuts. These cysts provide it with significant natural armor. When a coconut frog is killed, its remaining cysts that naturally grow into forms identical to coconuts will sprout into a coconut tree.</description>
 		<statBases>
 			<MoveSpeed>1.5</MoveSpeed>
 			<MarketValue>150</MarketValue>
@@ -349,9 +349,9 @@
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0.45</minAge>
-					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundWounded>CoconutAngry</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
-					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundCall>CoconutNeutral</soundCall>
 					<soundAngry>Frog_Angry</soundAngry>
 				</li>
 			</lifeStageAges>
@@ -403,8 +403,8 @@
 					<li>ST_FrogRare</li>					
 				</statValues>
 				<statDescriptions>
-					<li>ST_FrogPoisonDesc</li>
-					<li>ST_FrogRangedDesc</li>
+					<li>ST_FrogProductionDesc</li>
+					<li>ST_MeleeTankDesc</li>
 					<li>ST_FrogRareDesc</li>
 				</statDescriptions>				
 			</li>
