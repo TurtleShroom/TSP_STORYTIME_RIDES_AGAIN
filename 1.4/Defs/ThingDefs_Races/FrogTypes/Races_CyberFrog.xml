@@ -4,7 +4,8 @@
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>CyberFrogHostile</defName>
 		<label>Mechanoid Cyber-Frog</label>
-		<description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particualar Cyber Frogs have since betrayed their own kind and joined the Mechanoids in their conquest. Randy have mercy on us all.</description>
+		<description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particualar Cyber Frogs have since betrayed their own kind and joined the Mechanoids in their conquest. Randy have mercy on us all. \n \n A Mechanoid Cyber-Frog that has been brought under a Mechanitor's command is capable of multiple forms of work: their cuteness makes them great at entertaining Guests*, they flip switches, they are adept at caring for livestock, and they (like most frogs) have good marksmanship when hunting. When completely idle, a Mechanoid Cyber-Frog with nothing else to do will haul things. \n \n \n \n
+		* = Requires Hospitality Mod</description>
 		<statBases>
 		  <MoveSpeed>9</MoveSpeed>
 		  <MarketValue>41</MarketValue>
@@ -101,6 +102,24 @@
 		  <thinkTreeMain Inherit="False">Mechanoid</thinkTreeMain>
 		  <thinkTreeConstant MayRequire="Ludeon.Rimworld.Biotech" Inherit="False">MechConstant</thinkTreeConstant>
 		  <fleshType Inherit="False">Mechanoid</fleshType>
+			<mechEnabledWorkTypes>
+				<li>Hunting</li>
+				<li>Hauling</li>
+				<li>BasicWorker</li>
+				<!-- <li>Handling</li> -->
+				<li MayRequire="orion.hospitality">Diplomat</li>
+				<li MayRequire="sera.apinialienrace">ApiniHoneyMaker</li>
+				<li MayRequire="dubwise.rimefeller">RimefellerCrafting</li>
+			</mechEnabledWorkTypes>
+			<mechWorkTypePriorities>
+				<BasicWorker>3</BasicWorker>
+				<!-- <Handling>2</Handling> -->
+				<Hauling>4</Hauling>
+				<Hunting>2</Hunting>
+				<Diplomat MayRequire="orion.hospitality">1</Diplomat>
+				<ApiniHoneyMaker MayRequire="sera.apinialienrace">1</ApiniHoneyMaker>
+				<RimefellerCrafting MayRequire="dubwise.rimefeller">3</RimefellerCrafting>
+			</mechWorkTypePriorities>
 		  <wildBiomes Inherit="False">
 				<BorealForest>0</BorealForest>
 				<IceSheet>0</IceSheet>
@@ -121,15 +140,15 @@
 		  <baseBodySize>0.35</baseBodySize>
 		  <baseHealthScale>3</baseHealthScale>
 		  <baseHungerRate>0.1</baseHungerRate>
-		  <foodType Inherit="False">OmnivoreRoughAnimal, VegetarianRoughAnimal, Corpse, Tree, Plant, Kibble</foodType>
+		  <foodType Inherit="False">None, OmnivoreRoughAnimal, VegetarianRoughAnimal, Corpse, Tree, Plant, Kibble</foodType>
 		  <useMeatFrom>ST_BullFrog</useMeatFrom>
 		  <leatherDef>Leather_Frog</leatherDef>
 		  <mechWeightClass MayRequire="Ludeon.Rimworld.Biotech">Light</mechWeightClass>
+		  <trainability>None</trainability> <!-- It's already trained! -->
 		  <!--
-		  <wildness>0</wildness>
-		  <trainability>Advanced</trainability>
-		  <petness>1</petness>
-		  -->
+			<wildness>0</wildness>
+			<petness>1</petness>
+		   -->
 		  <lifeExpectancy>200</lifeExpectancy>
 		  <hasGenders>true</hasGenders>
 		  <lifeStageAges>
@@ -161,7 +180,8 @@
 		<butcherProducts>
 			<!-- <Meat_ST_BullFrog>5</Meat_ST_BullFrog> -->
 			<Steel>15</Steel>
-			<ComponentSpacer>2</ComponentSpacer>
+			<ComponentSpacer>1</ComponentSpacer>
+			<VFE_ComponentMechanoid MayRequire="wvc.sergkart.core">4</VFE_ComponentMechanoid>
 		</butcherProducts>
 		<modExtensions>
 			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
@@ -596,6 +616,7 @@
 	<butcherProducts>
 		<Steel>15</Steel>
 		<ComponentSpacer>1</ComponentSpacer>
+		<VFE_ComponentMechanoid MayRequire="wvc.sergkart.core">1</VFE_ComponentMechanoid>
 	</butcherProducts>
     <tradeTags>
       <li>AnimalExotic</li>

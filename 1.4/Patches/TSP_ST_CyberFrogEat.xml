@@ -290,10 +290,11 @@
 		</nomatch>
 	</Operation>
 	
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
+	Does this exist?
 		<xpath>/Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]/canBeDoneByMechs</xpath>
-		<!-- If it does, do this replacement. -->
+		If it does, do this replacement.
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
@@ -301,7 +302,7 @@
 				<canBeDoneByMechs>true</canBeDoneByMechs>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
+		If it DOES NOT, add this instead.
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]</xpath>
 			<value>
@@ -309,4 +310,5 @@
 			</value>
 		</nomatch>
 	</Operation>
+	-->
 </Patch>
