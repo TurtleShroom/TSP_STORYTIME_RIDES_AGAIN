@@ -240,6 +240,14 @@
 		  <Frug MayRequire="crazedmonkey231.frug">1</Frug>
         </options>
       </li>
+	  <li MayRequire="yamazakioghw.gianttoads">
+		<kindDef MayRequire="yamazakioghw.gianttoads">Combat</kindDef>
+		<commonality>0.5</commonality>
+		<options MayRequire="yamazakioghw.gianttoads">
+			<GiantToad MayRequire="yamazakioghw.gianttoads">2</GiantToad>
+			<KingToad MayRequire="yamazakioghw.gianttoads">0.1</KingToad>
+		</options>
+	  </li>
       <li>
         <kindDef>Trader</kindDef>
 		<commonality>1.5</commonality>
@@ -264,6 +272,8 @@
 		  <LeviathanFrog>65</LeviathanFrog>
 		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
 		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
+		  <GiantToad MayRequire="yamazakioghw.gianttoads">2</GiantToad>
+		  <KingToad MayRequire="yamazakioghw.gianttoads">0.01</KingToad>
         </guards>
       </li>
       <li>
@@ -281,11 +291,13 @@
 		  <LeviathanFrog>65</LeviathanFrog>
 		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">15</ForgPawnKindDef>
 		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">15</DuoPawnKindDef>
+		  <GiantToad MayRequire="yamazakioghw.gianttoads">2</GiantToad>
+		  <KingToad MayRequire="yamazakioghw.gianttoads">0.1</KingToad>
         </guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
-		<commonality>0.4</commonality>
+		<commonality>0.2</commonality>
         <options>
           <FrogPersonHunter>90</FrogPersonHunter>
 		  <FrogPersonWarrior>90</FrogPersonWarrior>
@@ -294,11 +306,13 @@
 		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">3.5</ForgPawnKindDef>
 		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">3.5</DuoPawnKindDef>
 		  <Dromedary>0.001</Dromedary>
+		  <GiantToad MayRequire="yamazakioghw.gianttoads">0.2</GiantToad>
+		  <KingToad MayRequire="yamazakioghw.gianttoads">0.1</KingToad>
         </options>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
-		<commonality>0.4</commonality>
+		<commonality>0.8</commonality>
         <options>
 			<FrogPersonChief>0.01</FrogPersonChief>
 			<Dromedary>0.001</Dromedary>
@@ -321,32 +335,47 @@
 			<TomatoFrog>1</TomatoFrog>
 			<ST_TreeFrog>1</ST_TreeFrog>
 			<ST_WoodFrog>0.33</ST_WoodFrog>
+			<GiantToad MayRequire="yamazakioghw.gianttoads">0.1</GiantToad>
+			<KingToad MayRequire="yamazakioghw.gianttoads">0.01</KingToad>
         </options>
       </li>
       <li MayRequire="emilskin.forgrace.forgs">
         <kindDef MayRequire="emilskin.forgrace.forgs">Settlement</kindDef>
-		<commonality MayRequire="emilskin.forgrace.forgs">0.05</commonality>
+		<commonality MayRequire="emilskin.forgrace.forgs">0.33</commonality>
         <options MayRequire="emilskin.forgrace.forgs">
 		  <Frug MayRequire="crazedmonkey231.frug">1</Frug>
 		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">1</ForgPawnKindDef>
 		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">1</DuoPawnKindDef>
 		  <FrogPersonChief MayRequire="emilskin.forgrace.forgs">0.05</FrogPersonChief>
+		  <GiantToad MayRequire="yamazakioghw.gianttoads">0.2</GiantToad>
+		  <KingToad MayRequire="yamazakioghw.gianttoads">0.01</KingToad>
         </options>
       </li>
       <li>
 		<!-- Overrun Werefrog infestation -->
         <kindDef>Settlement</kindDef>
-		<commonality>0.1</commonality>
+		<commonality>0.3</commonality>
         <options>
 		  <Frug MayRequire="crazedmonkey231.frug">4</Frug>
 		  <Werefrog>10</Werefrog>
 		  <Dromedary>0.001</Dromedary>
+		  <GiantToad MayRequire="yamazakioghw.gianttoads">0.02</GiantToad>
+		  <KingToad MayRequire="yamazakioghw.gianttoads">0.008</KingToad>
+        </options>
+      </li>
+      <li MayRequire="yamazakioghw.gianttoads">
+		<!-- Overrun King Toad infestation -->
+        <kindDef MayRequire="yamazakioghw.gianttoads">Settlement</kindDef>
+		<commonality MayRequire="yamazakioghw.gianttoads">0.3</commonality>
+        <options MayRequire="yamazakioghw.gianttoads">
+		  <GiantToad MayRequire="yamazakioghw.gianttoads">1</GiantToad>
+		  <KingToad MayRequire="yamazakioghw.gianttoads">3</KingToad>
         </options>
       </li>
     </pawnGroupMakers>
-    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    <settlementTexturePath>World/FrogPeople/FrogPeopleFactionLogo</settlementTexturePath>
 	<modExtensions>
-		<li Class="VFECore.FactionDefExtension">			
+		<li Class="VFECore.FactionDefExtension">
 			<disallowedBiomes>
 				<li>Desert</li>
 				<li>ExtremeDesert</li>
