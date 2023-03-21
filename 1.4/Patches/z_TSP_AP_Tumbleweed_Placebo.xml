@@ -3,7 +3,7 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/ThingDef[defName="AP_Snakeoil"]</xpath>
+	<xpath>/Defs/ThingDef[defName="AP_Snakeoil"]/recipeMaker</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
@@ -14,7 +14,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/ThingDef[defName="AP_Snakeoil"]</xpath>
+	<xpath>/Defs/ThingDef[defName="AP_Snakeoil"]/costList</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
@@ -33,13 +33,14 @@
 			<value>
 				<RecipeDef>
 					<defName>TSP_AP_TooTooTootsieGoodbye_Recipe</defName>
-					<label>use life hack to synthesize some DIY Snake Oil with one weird little trick</label>
+					<label>use life hack to synthesize DIY Snake Oil with one weird little trick</label>
 					<description>With this miraculous, do-it-yourself recipe (INVENTED BY A MOM), use this one weird little trick to craft the finest elixer on the planet. It's Snake Oil, which is the cure to all your needs. \n It comes under many names, but all agree that it is the self-made, elixir version of a similar panacea: Jeremiah Peabody's Poly-Unsaturated, Extra-Strength, Long-Lasting, Green and Purple Pills.</description>    
 					<jobString>mixing patent medicine</jobString>
 					<workAmount>800</workAmount>
 					<workSpeedStat>DrugCookingSpeed</workSpeedStat>
 					<effectWorking>Cook</effectWorking>
 					<soundWorking>Recipe_Drug</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
 					<recipeUsers>
 						<li>ManualGrinder</li>
 						<li>ElectricGrinder</li>
@@ -49,54 +50,64 @@
 					<ingredients>
 					  <li>
 						<filter>
-							<thingDefs>
-								<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
-								<li MayRequire="stoneanvil.smokeleaf.genetics.korundgen.kush">KorundgenKushBuds</li>
-								<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
-								<li>MedicineHerbal</li>
-							</thingDefs>
-						</filter>
-						<count>10</count>
-					  </li>
-					  <li>
-						<filter>
-							<thingDefs>
-								<li>Chemfuel</li>
-								<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
-								<li MayRequire="TSP.Isengriff.Storytime">GuamLeaves</li>
-								<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
-								<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_RumWort</li>
-								<li MayRequire="TSP.Isengriff.Storytime">ST_KrakenRum</li>
-								<li MayRequire="TSP.Isengriff.Storytime">ST_MikesLemonade</li>
-								<!-- <li MayRequire="stoneanvil.smokeleaf.genetics.korundgen.kush">KorundgenKushBuds</li> -->
-								<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
-							</thingDefs>
-						</filter>
-						<count>10</count>
-					  </li>
-					  <li>
-						<filter>
+							<!-- First we add the toxin -->
 							<categories>
 								<li MayRequire="mlie.takisrandomstuff">MedicalHerbs</li>
 							</categories>
 							<thingDefs>
+								<li>MedicineHerbal</li>
+								<li>PsychiteLeaves</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
+								<li MayRequire="stoneanvil.smokeleaf.genetics.korundgen.kush">KorundgenKushBuds</li>
+								<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
+							</thingDefs>
+							<disallowedThingDefs>
+								<li MayRequire="TSP.Isengriff.Storytime">HerbaLeaves</li>
+							</disallowedThingDefs>
+						</filter>
+						<count>10</count>
+					  </li>
+					  <li>
+						<filter>
+							<!-- Then we add the "spice" -->
+							<thingDefs>
+								<li>Chemfuel</li>
+								<li MayRequire="TSP.Isengriff.Storytime">GuamLeaves</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+								<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li>
+								<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+								<li MayRequire="herbs.plants">RawMint</li>
+								<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
+								
+								<!-- Literally Chemful and booze mix -->
+								<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandy_Brewed</li>
+								<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandy</li>
+								<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandyPrecursor</li>
+							</thingDefs>
+						</filter>
+						<count>10</count>
+					  </li>
+					  <li>
+						<filter>
+							<!-- Lastly, we add the booze -->
+							<thingDefs>
 								<li>Hops</li>
 								<li>Wort</li>
 								<li>Beer</li>
-								<li>PsychiteLeaves</li>
+								<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_RawComberry</li>
 								<li MayRequire="TSP.Isengriff.Storytime">GnomeWort</li>
 								<li MayRequire="TSP.Isengriff.Storytime">GnomeBeer</li>
 								<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_RumWort</li>
 								<li MayRequire="TSP.Isengriff.Storytime">ST_KrakenRum</li>
 								<li MayRequire="TSP.Isengriff.Storytime">ST_MikesLemonade</li>
-								<li MayRequire="stoneanvil.smokeleaf.genetics.korundgen.kush">KorundgenKushBuds</li>
 								<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
-								<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li>
-								<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+								
+								<!-- Literally Chemful and booze mix -->
+								<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandy_Brewed</li>
+								<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandy</li>
+								<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandyPrecursor</li>
 							</thingDefs>
-							<disallowedThingDefs>
-								<li MayRequire="TSP.Isengriff.Storytime">HerbaLeaves</li>
-							</disallowedThingDefs>
 						</filter>
 						<count>5</count>
 					  </li>
@@ -111,6 +122,10 @@
 							<li>Hops</li>
 							<li>Wort</li>
 							<li>Beer</li>
+							<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandyPrecursor</li>
+							<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_RawComberry</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_MikesLemonade</li>
+							<li MayRequire="herbs.plants">RawMint</li>
 							<li MayRequire="TSP.Isengriff.Storytime">GnomeWort</li>
 							<li MayRequire="TSP.Isengriff.Storytime">GnomeBeer</li>
 							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
@@ -122,6 +137,11 @@
 							<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
 							<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li>
 							<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+							
+							<!-- Literally Chemful and booze mix -->
+							<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandy_Brewed</li>
+							<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandy</li>
+							<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandyPrecursor</li>
 						</thingDefs>
 						<disallowedThingDefs>
 							<li MayRequire="TSP.Isengriff.Storytime">HerbaLeaves</li>
@@ -134,11 +154,16 @@
 						<thingDefs>
 							<li>Chemfuel</li>
 							<li>Hops</li>
+							<li MayRequire="herbs.plants">RawMint</li>
 							<li MayRequire="TSP.Isengriff.Storytime">GuamLeaves</li>
 							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 							<li MayRequire="TSP.Isengriff.Storytime">ST_MikesLemonade</li>
 							<li MayRequire="stoneanvil.smokeleaf.genetics.korundgen.kush">KorundgenKushBuds</li>
 							<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
+							
+							<!-- Literally Chemful and booze mix -->
+							<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandy_Brewed</li>
+							<li MayRequire="sirmashedpotato.morrowrim.alcoholremade">MorrowRim_DagothBrandyPrecursor</li>
 						</thingDefs>
 					</defaultIngredientFilter>
 					<products>
