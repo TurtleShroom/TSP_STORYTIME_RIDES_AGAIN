@@ -1,6 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>ST_NightFrog_Venom</defName>
+		<label>night frog venom</label>
+		<description>Insidious venom extracted from a night frog's tongue. It can be used in weapons, ammo, and traps to add that little extra nastiness.</description>
+		<graphicData>
+		  <texPath>Things/Items/Resources/Neurotoxin</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>4</MarketValue>
+		  <Mass>0.01</Mass>
+		</statBases>
+		<thingCategories>
+			<li>Drugs</li>
+			<!-- <li>ST_Poison</li> -->
+		</thingCategories>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>25</stackLimit>
+		<tickerType>Rare</tickerType>
+		<burnableByRecipe>false</burnableByRecipe>
+		<allowedArchonexusCount>1000</allowedArchonexusCount>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<foodType>Liquor</foodType>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<optimalityOffsetHumanlikes>-999</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-999</optimalityOffsetFeedingAnimals>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>ST_NeurotoxinBuildup</hediffDef>
+				<severity>0.5</severity>
+				<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+		  <li Class="CompProperties_Rottable">
+			<daysToRotStart>30</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		  </li>
+		</comps>
+		<tradeTags>
+			<li>ST_Poison</li>
+		</tradeTags>
+	</ThingDef>
+	
 	<RecipeDef>
 		<defName>MakeNeurotoxinBillyClub</defName>
 		<label>synthesize night frog venom from a Billy Club sandwich</label>
@@ -82,69 +129,4 @@
 			<ST_NightFrog_Venom>5</ST_NightFrog_Venom>
 		</products>
 	</RecipeDef>
-	
-	<RecipeDef>
-		<defName>TSP_ST_ExtractSandwichPoison</defName>
-		<label>concentrate Billy Club Poison Sting into poison</label>
-		<description>By removing the "normal" ingredients from a Billy Club sandwich- that is, making it cease to be a sandwich at all -the potent poison in the dish can be extracted and concentrated for weapon and medicinal usages.</description>    
-		<jobString>Extracting poison.</jobString>
-		<workAmount>1200</workAmount>
-		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
-		<effectWorking>Cook</effectWorking>
-		<soundWorking>Recipe_CookMeal</soundWorking>
-		<recipeUsers>
-			<li>DrugLab</li>
-		</recipeUsers>
-		<ingredients>
-		  <li>
-			<filter>
-				<thingDefs>
-					<li>BillyClub</li>
-				</thingDefs>
-			</filter>
-			<count>2</count>
-		  </li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>BillyClub</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-		<products>
-			<ST_PoisonExtract>5</ST_PoisonExtract>
-		</products>
-	</RecipeDef>
-	
-	<RecipeDef>
-		<defName>MakeNeurotoxinBotox_General</defName>
-		<label>purify botulinium toxins</label>
-		<description>Botox Fruit is the most powerful and concentrated form of botulinium toxins. By further concentrating and isolating the toxins, a potent, general-use poison can be synthesized.</description>    
-		<jobString>synthesizing poison</jobString>
-		<workAmount>800</workAmount>
-		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
-		<effectWorking>Cook</effectWorking>
-		<soundWorking>Recipe_CookMeal</soundWorking>
-		<recipeUsers>
-			<li>DrugLab</li>
-		</recipeUsers>
-		<ingredients>
-		  <li>
-			<filter>
-				<thingDefs>
-					<li>BotoxFruit</li>
-				</thingDefs>
-			</filter>
-			<count>5</count>
-		  </li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>BotoxFruit</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-		<products>
-			<ST_PoisonExtract>5</ST_PoisonExtract>
-		</products>
-	</RecipeDef>
 </Defs>
-  

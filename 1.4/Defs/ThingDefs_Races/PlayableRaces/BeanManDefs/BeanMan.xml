@@ -28,10 +28,12 @@
 			<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
             <whiteApparelList>
 				<li>Apparel_Parka</li>
+				<!--
 				<li MayRequire="Ludeon.Rimworld.Biotech">Apparel_AirwireHeadset</li>
 				<li MayRequire="Ludeon.Rimworld.Biotech">Apparel_IntegratorHeadset</li>
 				<li MayRequire="Ludeon.Rimworld.Biotech">Apparel_GasMask</li>
 				<li MayRequire="Ludeon.Rimworld.Biotech">Apparel_ClothMask</li>
+				-->
             </whiteApparelList>
 		  </raceRestriction>
 			<styleSettings>
@@ -72,22 +74,20 @@
 				<li>Hulk</li>
 				<li>Male</li>
 				<li>Female</li>
-				<!--
-				<li>Red</li>
-				<li>Orange</li>
-				<li>Blue</li>
-				<li>Green</li>
-				<li>Coffee</li>
-				<li>Shiny</li>
-				<li>Silver</li>
-				<li>Black</li>
-				<li>Purple</li>
-				<li>Whiptongue</li>
-				<li>Stinky</li>
-				<li>Chili</li>
-				<li>Cave</li>
-				-->
-				<li>Roulette</li>
+				<li>ST_BulborbRed</li>
+				<li>ST_BulborbOrange</li>
+				<li>ST_BulborbBlue</li>
+				<li>ST_BulborbGreen</li>
+				<li>ST_BulborbCoffee</li>
+				<li>ST_BulborbShiny</li>
+				<li>ST_BulborbSilver</li>
+				<li>ST_BulborbBlack</li>
+				<li>ST_BulborbPurple</li>
+				<!-- <li>ST_BulborbWhiptongue</li> -->
+				<li>ST_BulborbStinky</li>
+				<li>ST_BulborbChili</li>
+				<li>ST_BulborbCave</li>
+				<li>ST_BulborbRoulette</li>
 			  </bodyTypes>
 			  <customDrawSize>(0.9, 0.9)</customDrawSize>
 			  <customHeadDrawSize>(0.75, 0.75)</customHeadDrawSize>
@@ -134,13 +134,13 @@
 			  </li>
 			  <li>
 				<relation>Spouse</relation>
-				<label>Husband</label>
-				<femaleLabel>Wife</femaleLabel>
+				<label>Mate</label>
+				<femaleLabel>Mate</femaleLabel>
 			  </li>
 			  <li>
 				<relation>ExSpouse</relation>
-				<label>ExHusband</label>
-				<femaleLabel>ExWife</femaleLabel>
+				<label>Ex-Husband</label>
+				<femaleLabel>Ex-Wife</femaleLabel>
 			  </li>
 			  <li>
 				<relation>Sibling</relation>
@@ -485,10 +485,6 @@
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<showImageInInfoCard>true</showImageInInfoCard>
-				<ImageToShowInInfoCard>Achievements/beanManAchievement</ImageToShowInInfoCard>						
-			</li>
 			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
 				<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
 			</li>
