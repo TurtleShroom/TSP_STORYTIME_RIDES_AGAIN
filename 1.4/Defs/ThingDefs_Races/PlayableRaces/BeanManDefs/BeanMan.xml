@@ -184,6 +184,10 @@
 				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Female</li>
 				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Male</li>
 				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Female</li>
+				
+				<!-- Bean Men are spawned in "Growth Vats", so they don't have a taboo against them, even if the Faction they are in does. -->
+				<li MayRequire="ludeon.rimworld.biotech">GrowthVat_Prohibited_GrowthVatInColony</li>
+				<li MayRequire="ludeon.rimworld.biotech">GrowthVat_Prohibited_ChildInGrowthVat</li>
 
 				<li>AteKibble</li> <!-- Bulborbs are not picky eaters -->
 				<li>EnvironmentDark</li> <!-- Bulborbs are noctunral -->
@@ -219,6 +223,7 @@
 			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">-1</HSAU_GhoulismSusceptibility>
 			<ToxicResistance>0.9</ToxicResistance>
 			<ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">0.78</ToxicEnvironmentResistance>
+			<GrowthVatOccupantSpeed MayRequire="ludeon.rimworld.biotech">0</GrowthVatOccupantSpeed> <!-- Cannot be grown in Growth Vats! -->
 		</statBases>
 		<!--■■■■■■■■■■■■■■■■■■TOOLS■■■■■■■■■■■■■■■■■■■■■■■
 			■■■ TEETH ■■■-->
