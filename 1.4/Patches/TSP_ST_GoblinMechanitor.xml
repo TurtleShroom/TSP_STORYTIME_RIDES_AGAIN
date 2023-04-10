@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Mechlink"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/techHediffsTags</xpath>
+			<success>Always</success>
+			<value>
+				<li>Mechanitor</li>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch MayRequire="ludeon.rimworld.biotech">
+			<xpath MayRequire="ludeon.rimworld.biotech">/Defs/HediffDef[defName="MechlinkImplant"]</xpath>
+			<success MayRequire="ludeon.rimworld.biotech">Always</success>
+			<value MayRequire="ludeon.rimworld.biotech">
+				<techHediffsTags MayRequire="ludeon.rimworld.biotech">
+					<li MayRequire="ludeon.rimworld.biotech">Mechanitor</li>
+				</techHediffsTags>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/HediffDef[defName="MechlinkImplant"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/removeOnRedressIfNotOfKind</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+</Patch>

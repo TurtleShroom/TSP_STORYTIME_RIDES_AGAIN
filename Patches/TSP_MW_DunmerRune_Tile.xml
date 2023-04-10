@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/TerrainDef[@Name="MorrowRim_Dunmeri_Floor_StoneTileBase"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs</xpath>
+			<value>
+				<TerrainDef ParentName="MorrowRim_Dunmeri_Floor_StoneTileBase">
+					<defName>TSP_ST_MW_RuneEssence_DunmerTiles</defName>
+					<label>runic Dunmer tiles</label>
+					<color>(110, 115, 115)</color>
+					<costList>
+						<BlankRune>20</BlankRune>
+					</costList>
+				</TerrainDef>
+				
+				<TerrainDef ParentName="MorrowRim_Dunmeri_Floor_StoneTileBase">
+					<defName>TSP_ST_MW_DagothUrTheBuilding_Tiles</defName>
+					<label>Dagoth tiles</label>
+					<description>Fine stone tiles in a Dunmeri style, hewn from cursed Mordor Bricks. These strongly resemble tiles you would find located in Dagoth Ur. By this, reference is being made to Dagoth Ur (the Building) on Red Mountain, that is, not Dagoth Ur (the god).</description>
+					<color>(25,25,25)</color>
+					<statBases>
+						<Flammability>0</Flammability>
+						<Beauty>4</Beauty>
+						<StyleDominance>10</StyleDominance>
+					</statBases>
+					<costList>
+						<Mordor_Brick>20</Mordor_Brick>
+					</costList>
+					<dominantStyleCategory MayRequire="sirmashedpotato.morrowrim.thesixthhouse" Inherit="False">MorrowRim_DagothUrStyle</dominantStyleCategory>
+				</TerrainDef>
+				
+				<TerrainDef ParentName="MorrowRim_Dunmeri_Floor_StoneTileBase">
+					<defName>TSP_ST_MW_DagothUrthegod_Tiles</defName>
+					<label>ascended Dagoth tiles</label>
+					<description>Fine stone tiles in a Dunmeri style, hewn from Mordorite, which combines cursed Mordor Bricks, iron, and jade. These tiles truly honor the Sixth House and the Tribe Un-Mourned.</description>
+					<color>(37, 66, 28)</color>
+					<statBases>
+						<Flammability>0</Flammability>
+						<Beauty>5</Beauty>
+						<StyleDominance>20</StyleDominance>
+					</statBases>
+					<costList>
+						<ST_Adamantium>20</ST_Adamantium>
+					</costList>
+					<dominantStyleCategory MayRequire="sirmashedpotato.morrowrim.thesixthhouse" Inherit="False">MorrowRim_DagothUrStyle</dominantStyleCategory>
+				</TerrainDef>
+				
+				<TerrainDef ParentName="MorrowRim_Dunmeri_Floor_StoneTileBase">
+					<defName>TSP_ST_MW_Mordorite_DunmerTiles</defName>
+					<label>Dunmeri Runite tiles</label>
+					<color>(25, 100, 125)</color>
+					<costList>
+						<ST_Runite>20</ST_Runite>
+					</costList>
+				</TerrainDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

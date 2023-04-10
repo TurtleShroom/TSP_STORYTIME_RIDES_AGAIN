@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/terrainDef[@Name="RoundMosaikBase"]</xpath>
+	<xpath>/Defs/TerrainDef[@Name="RoundMosaikBase"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>Defs</xpath>
+			<xpath>/Defs</xpath>
 			<value>
 				<terrainDef ParentName="RoundMosaikBase">
 					<defName>TSP_ST_MosaikFleshTile</defName>

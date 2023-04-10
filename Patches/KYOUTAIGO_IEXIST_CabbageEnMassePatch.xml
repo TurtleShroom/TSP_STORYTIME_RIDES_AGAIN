@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- This code was provided by the user 'I Exist', and then butchered and simplified on Dub's Discord chat room by Kyoutaigo -->
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="RawDaBaiCai"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="RawDaBaiCai"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="RawDaBaiCai"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="RawDaBaiCai"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="RawDaBaiCai"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="RawDaBaiCai"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="RawDaBaiCai"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

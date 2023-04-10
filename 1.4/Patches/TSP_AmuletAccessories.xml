@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[@Name="AmuletBase"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[@Name="AmuletBase"]/apparel/layers</xpath>
+			<success>Always</success>
+			<value>
+				<layers>
+					<li>ST_Jewelry</li>
+				</layers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[@Name="AmuletBase"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[@Name="MedallionBase"]/apparel/layers</xpath>
+			<success>Always</success>
+			<value>
+				<layers>
+					<li>ST_Jewelry</li>
+				</layers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[@Name="AmuletBase"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[@Name="BasicRingBase"]/apparel/layers</xpath>
+			<success>Always</success>
+			<value>
+				<layers>
+					<li>ST_Jewelry</li>
+				</layers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="VBY_TreasureHunter"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VBY_TreasureHunter"]/pawnGroupMarkers/li/traders</xpath>
+			<success>Always</success>
+			<value>
+				<GoblinTrader>1</GoblinTrader>
+				<BeanManTrader>1</BeanManTrader>
+				<TSP_PirateTradesman>2</TSP_PirateTradesman>
+			</value>
+		</match>
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="VBY_TreasureHunter"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VBY_TreasureHunter"]/pawnGroupMarkers/li/guards</xpath>
+			<success>Always</success>
+			<value>
+				<GoblinTinkerer>2</GoblinTinkerer>
+			</value>
+		</match>
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="VBY_TreasureHunter"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VBY_TreasureHunter"]/pawnGroupMarkers/li/options</xpath>
+			<success>Always</success>
+			<value>
+				<GoblinTinkerer>2</GoblinTinkerer>
+			</value>
+		</match>
+    </Operation>
+</Patch>

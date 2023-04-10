@@ -27,4 +27,20 @@
 			<EvilRock>0.03</EvilRock>
 		</value>
 	</Operation>
+	
+	<!-- If you have the Mod, the Gnomes now sell a feast at their base -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TraderKindDef[defName="Caravan_GTGCivilianIndustrial_Foods"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="TreeGnomeEmpire"]/baseTraderKinds</xpath>
+			<success>Always</success>
+			<value>
+				<baseTraderKinds>
+					<li MayRequire="teiwaz.gtgalpha">Caravan_GTGCivilianIndustrial_Foods</li>
+				</baseTraderKinds>
+			</value>
+		</match>
+    </Operation>
 </Patch>
