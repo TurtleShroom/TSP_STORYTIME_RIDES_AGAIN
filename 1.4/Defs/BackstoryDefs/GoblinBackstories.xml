@@ -18,7 +18,7 @@
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>ChildGoblin_Cave</defName>
     <title>cave child</title>
-    <titleShort>cave child</titleShort>
+    <titleShort>orphan</titleShort>
     <baseDesc>[PAWN_nameDef] was birthed in a cave and left behind by [PAWN_possessive] mother immediately. [PAWN_pronoun] had to survive all on [PAWN_possessive] own in the depths of the earth.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
@@ -67,7 +67,9 @@
     <defName>ChildGoblin_MaggotSpawnofMordor</defName>
     <title>spawn</title>
     <titleShort>spawn</titleShort>
-    <baseDesc>[PAWN_nameDef] was not born through natural means. Instead [PAWN_pronoun] was birthed in the vats of a powerful dark lord's base.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was not born through natural means. Instead [PAWN_pronoun] was birthed in the Growth Vats of a powerful dark lord's base. He was completely deprived of a childhood, spit out of the Growth Vat as an adult.</baseDesc>
+	<bodyTypeMale>Hulk</bodyTypeMale>
+	<bodyTypeFemale>Hulk</bodyTypeFemale>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -75,7 +77,15 @@
         <value>-6</value>
 	  </li>
       <li>
+        <key>Social</key>
+        <value>-6</value>
+	  </li>
+      <li>
         <key>Melee</key>
+        <value>6</value>
+	  </li>
+      <li>
+        <key>Shooting</key>
         <value>6</value>
 	  </li>
     </skillGains>
