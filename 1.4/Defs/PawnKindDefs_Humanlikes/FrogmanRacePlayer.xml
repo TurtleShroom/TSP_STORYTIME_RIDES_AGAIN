@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <PawnKindDef Abstract="True" Name="BasePlayerFrogPersonPawnKind">
     <race>Alien_FrogPerson</race>
@@ -10,6 +10,20 @@
     <isFighter>false</isFighter>
     <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
     <forceNormalGearQuality>true</forceNormalGearQuality>
+	<apparelTags>
+		<li>RWPGentlemanWear</li> <!-- Michelin J. Frog -->
+		<li>School_Thai</li>
+	</apparelTags>
+	<modExtensions>
+		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+					<defName MayRequire="sarg.alphagenes,jecrell.jecstools">AG_FrogVoice</defName>
+					<chance MayRequire="sarg.alphagenes,jecrell.jecstools">999</chance>
+				</li>
+			</genes>
+		</li>
+	</modExtensions>
   </PawnKindDef>
   
   <PawnKindDef ParentName="BasePlayerFrogPersonPawnKind">
