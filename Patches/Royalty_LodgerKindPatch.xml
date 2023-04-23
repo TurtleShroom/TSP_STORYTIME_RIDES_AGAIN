@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!-- Code courtesy of the Elder Scrolls Mod by Sirmashedpotato -->
+	<Operation Class="PatchOperationInsert">
+		<xpath>Defs/QuestScriptDef[defName="Util_ChooseRandomQuestLodgerKind"]/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_IsSet"]/node[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices/li[factionDef="Empire"]</xpath>
+		<value>
+			<li>
+				<factionDef>Jeubscalon</factionDef>
+				<pawnKinds>
+					<li>PlayerJeub</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>GoblinTown</factionDef>
+				<pawnKinds>
+					<li>GoblinTinkerer</li>
+					<li>GoblinRunner</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>BeanManFaction</factionDef>
+				<pawnKinds>
+					<li>BeanManGuard</li>
+					<li>BeanManLeader</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>Beetnikh</factionDef>
+				<pawnKinds>
+					<li>BeetLeader</li>
+					<li>TSP_BeetMaster</li>
+					<li>BeetArcher</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>WoodBeetTribe</factionDef>
+				<pawnKinds>
+					<li>WoodBeetWarrior</li>
+					<li>TSP_ST_WoodBeetCabbageinator</li>
+					<li>WoodBeetWarrior</li>
+					<li>WoodBeetArcher</li>
+					<li>TSP_BeetMaster</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>FrogTribes</factionDef>
+				<pawnKinds>
+					<li>FrogPersonHunter</li>
+					<li>FrogPersonWarrior</li>
+					<li>FrogPersonChief</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>TreeGnomeEmpire</factionDef>
+				<pawnKinds>
+					<li>TSP_ST_GnomePeasant</li>
+					<li>TSP_ST_RoyaltyGnoble</li>
+				</pawnKinds>
+			</li>
+		</value>
+	</Operation>
+</Patch>
