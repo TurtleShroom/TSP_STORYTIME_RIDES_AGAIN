@@ -3,12 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.royalty">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
+		<xpath MayRequire="ludeon.rimworld.royalty">/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
 		<!-- If it does, add this. -->
-		<!--
-		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
-			<value>
+		<match Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
+			<xpath MayRequire="ludeon.rimworld.royalty">/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
+			<value MayRequire="ludeon.rimworld.royalty">
 				<li>Robe</li>
 				<li>RoyalRobe</li>
 				<li>Medieval</li>
@@ -19,16 +18,14 @@
 				<li>Royal</li>
 				<li>RoyalTier1</li>
 				<li>MedievalApparelNoble</li>
-				<li>RichPirateClothing</li>
 				<li>GoblinWear</li>
 			</value>
 		</match>
-		-->
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
-			<xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
-			<value>
-				<tags>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
+			<xpath MayRequire="ludeon.rimworld.royalty">/Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
+			<value MayRequire="ludeon.rimworld.royalty">
+				<tags MayRequire="ludeon.rimworld.royalty">
 					<li>Robe</li>
 					<li>RoyalRobe</li>
 					<li>Medieval</li>
@@ -43,7 +40,7 @@
 					<li>RichPirateClothing</li>
 				</tags>
 			</value>
-		</match>
+		</nomatch>
 		<!-- In the end, something will always get added. -->
 	</Operation>
 	

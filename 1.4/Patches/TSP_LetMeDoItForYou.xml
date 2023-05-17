@@ -100,8 +100,8 @@
 					<label>legacy toxic sensitivity (DEPRECATED)</label>
 					<description>If you see this, report it to the author of the Mod on which you spotted it. This is not supposed to exist, because it was replaced by the "ToxicResistance" statement.</description>
 					<category>BasicsPawn</category>
-					<defaultBaseValue>0.99</defaultBaseValue>
-					<hideAtValue>0.99</hideAtValue>
+					<defaultBaseValue>0.967</defaultBaseValue>
+					<hideAtValue>0.967</hideAtValue>
 					<minValue>0</minValue>
 					<toStringStyle>PercentZero</toStringStyle>
 					<showIfUndefined>false</showIfUndefined>
@@ -147,13 +147,34 @@
 					<label>legacy hunger rate multiplier (DEPRECATED)</label>
 					<description>If you see this, report it to the author of the Mod on which you spotted it. This is not supposed to exist, because it was removed after the release of the "Biotech" Expansion Pack.</description>
 					<category>BasicsPawn</category>
-					<defaultBaseValue>0.99</defaultBaseValue>
-					<hideAtValue>0.99</hideAtValue>
+					<defaultBaseValue>0.967</defaultBaseValue>
+					<hideAtValue>0.967</hideAtValue>
 					<minValue>0</minValue>
 					<toStringStyle>PercentZero</toStringStyle>
 					<showIfUndefined>false</showIfUndefined>
 					<displayPriorityInCategory>1</displayPriorityInCategory>
 				</StatDef>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef/stuffProps/canSuggestUseDefaultStuff</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/stuffProps/canSuggestUseDefaultStuff</xpath>
+			<value>
+				<canSuggestUseDefaultStuff Inherit="False">true</canSuggestUseDefaultStuff>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/stuffProps</xpath>
+			<value>
+				<canSuggestUseDefaultStuff Inherit="False">true</canSuggestUseDefaultStuff>
 			</value>
 		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->

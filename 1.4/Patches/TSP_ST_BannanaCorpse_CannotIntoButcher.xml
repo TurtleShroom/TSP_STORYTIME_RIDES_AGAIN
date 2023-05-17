@@ -56,4 +56,58 @@
 		</match>
 		<!-- If nothing matches the first XPATH, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+	<!-- Are any of these Mods installed? -->
+		<mods>
+			<li>Biomes! Islands</li>
+			<li>Tropi[CKAPP] Rainforest Mod (Continued)</li>
+			<li>A Monkey Expansion</li>
+			<li>Vanilla Plants Expanded</li>
+		</mods>
+		<!-- If any one of these are, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter/thingDefs</xpath>
+			<value>
+				<li MayRequireAnyOf="vanillaexpanded.vplantse,mlie.tropickapprainforestmod,catlover366.monketime,biomesteam.biomesislands">ST_BananaScytheCorpse</li>
+			</value>
+		</match>
+		<!-- If none of these Mods are installed at all, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter</xpath>
+			<value>
+				<thingDefs>
+					<li MayRequireAnyOf="vanillaexpanded.vplantse,mlie.tropickapprainforestmod,catlover366.monketime,biomesteam.biomesislands">ST_BananaScytheCorpse</li>
+				</thingDefs>
+			</value>
+		</nomatch>
+		<!-- If none of the Mods in the first XPATH are installed, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+	<!-- Are any of these Mods installed? -->
+		<mods>
+			<li>Biomes! Islands</li>
+			<li>Tropi[CKAPP] Rainforest Mod (Continued)</li>
+			<li>A Monkey Expansion</li>
+			<li>Vanilla Plants Expanded</li>
+		</mods>
+		<!-- If any one of these are, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter/thingDefs</xpath>
+			<value>
+				<li MayRequireAnyOf="vanillaexpanded.vplantse,mlie.tropickapprainforestmod,catlover366.monketime,biomesteam.biomesislands">ST_BananaScytheCorpse</li>
+			</value>
+		</match>
+		<!-- If none of these Mods are installed at all, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter</xpath>
+			<value>
+				<thingDefs>
+					<li MayRequireAnyOf="vanillaexpanded.vplantse,mlie.tropickapprainforestmod,catlover366.monketime,biomesteam.biomesislands">ST_BananaScytheCorpse</li>
+				</thingDefs>
+			</value>
+		</nomatch>
+		<!-- If none of the Mods in the first XPATH are installed, the original code stands. -->
+	</Operation>
 </Patch>

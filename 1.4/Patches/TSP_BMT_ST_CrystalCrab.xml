@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BMT_CrystalCrab_Sandstone"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<ThingDef ParentName="BMT_CrystalCrab_Base">
+					<defName>TSP_BMT_Butterscotch_Crab</defName>
+					<description Inherit="False">A large and powerful relative of the decorator crab, cavern crystals grow from the minerals on this crab's rocky shell. Despite its strong exoskeleton, the Crystal Crab hauls around this heavy shell, the reason for which is unknown. They are not known to breed in captivity... \n \n Or, that is what would be said if it grew crystals. No, those are not crystals. That is butterscotch. Yes, butterscotch. If this sucker is killed and butchered, it will yield a mountain (pun intended) of butterscotch. Go on. Try it. Like all Crystal Crabs, its rocky strength makes it a tough shell to crack, so good luck.</description>
+					<race>
+						<specificMeatDef Inherit="False">ST_Butterscotch</specificMeatDef>
+					</race>
+					<butcherProducts>
+						<ST_Butterscotch>100</ST_Butterscotch>
+					</butcherProducts>
+				</ThingDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="BMT_CrystalCrab_Sandstone"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<PawnKindDef MayRequire="biomesteam.biomesislands" ParentName="AnimalKindBase">
+					<defName>TSP_BMT_Butterscotch_Crab</defName>
+					<label>butterscotch crystal crab</label>
+					<race>TSP_BMT_Butterscotch_Crab</race>
+					<combatPower>290</combatPower>
+					<ecoSystemWeight>0</ecoSystemWeight>
+					<wildGroupSize>2</wildGroupSize>
+					<lifeStages>
+						<li>
+							<bodyGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Male</texPath>
+								<drawSize>1.5</drawSize>
+								<color>(227, 150, 62)</color>
+								<shaderType>CutoutComplex</shaderType>
+								<shadowData>
+									<volume>(0.4, 0.3, 0.3)</volume>
+									<offset>(0,0,-0.2)</offset>
+								</shadowData>
+							</bodyGraphicData>
+							<femaleGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Female</texPath>
+								<drawSize>1.5</drawSize>
+								<color>(227, 150, 62)</color>
+								<shaderType>CutoutComplex</shaderType>
+								<shadowData>
+									<volume>(0.4, 0.3, 0.3)</volume>
+									<offset>(0,0,-0.2)</offset>
+								</shadowData>
+							</femaleGraphicData>
+							<dessicatedBodyGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Male</texPath>
+								<drawSize>1.5</drawSize>
+							</dessicatedBodyGraphicData>
+							<femaleDessicatedBodyGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Female</texPath>
+								<drawSize>1.5</drawSize>
+							</femaleDessicatedBodyGraphicData>
+						</li>
+						<li>
+							<bodyGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Male</texPath>
+								<drawSize>2.25</drawSize>
+								<color>(227, 150, 62)</color>
+								<shaderType>CutoutComplex</shaderType>
+								<shadowData>
+									<volume>(0.6, 0.45, 0.45)</volume>
+									<offset>(0,0,-0.25)</offset>
+								</shadowData>
+							</bodyGraphicData>
+							<femaleGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Female</texPath>
+								<drawSize>2.25</drawSize>
+								<color>(227, 150, 62)</color>
+								<shaderType>CutoutComplex</shaderType>
+								<shadowData>
+									<volume>(0.6, 0.45, 0.45)</volume>
+									<offset>(0,0,-0.25)</offset>
+								</shadowData>
+							</femaleGraphicData>
+							<dessicatedBodyGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Male</texPath>
+								<drawSize>2.25</drawSize>
+							</dessicatedBodyGraphicData>
+							<femaleDessicatedBodyGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Female</texPath>
+								<drawSize>2.25</drawSize>
+							</femaleDessicatedBodyGraphicData>
+						</li>
+						<li>
+							<bodyGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Male</texPath>
+								<drawSize>3.3</drawSize>
+								<color>(227, 150, 62)</color>
+								<shaderType>CutoutComplex</shaderType>
+								<shadowData>
+									<volume>(0.8, 0.6, 0.6)</volume>
+									<offset>(0,0,-0.3)</offset>
+								</shadowData>
+							</bodyGraphicData>
+							<femaleGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Female</texPath>
+								<drawSize>3.3</drawSize>
+								<color>(227, 150, 62)</color>
+								<shaderType>CutoutComplex</shaderType>
+								<shadowData>
+									<volume>(0.8, 0.6, 0.6)</volume>
+									<offset>(0,0,-0.3)</offset>
+								</shadowData>
+							</femaleGraphicData>
+							<dessicatedBodyGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Male</texPath>
+								<drawSize>3.3</drawSize>
+							</dessicatedBodyGraphicData>
+							<femaleDessicatedBodyGraphicData>
+								<texPath>BMT_Caverns/Things/Animal/CrystalCrab/CrystalCrab_Female</texPath>
+								<drawSize>3.3</drawSize>
+							</femaleDessicatedBodyGraphicData>
+						</li>
+					</lifeStages>
+				</PawnKindDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BMT_CrystalCrab_Sandstone"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/BiomeDef[defName = "BMT_CrystalCaverns" or defName = "BMT_EarthenDepths" or defName = "BMT_FungalForest"]/wildAnimals</xpath>
+			<value>
+				<TSP_BMT_Butterscotch_Crab>0.5</TSP_BMT_Butterscotch_Crab>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

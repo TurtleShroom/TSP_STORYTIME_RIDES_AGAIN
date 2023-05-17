@@ -100,6 +100,7 @@
     <pawnGroupMakers>
       <li>
         <kindDef>Peaceful</kindDef>
+		<commonality>100</commonality>
         <options>
           <GoblinPeon>20</GoblinPeon>
           <GoblinArcher>20</GoblinArcher>
@@ -108,6 +109,14 @@
 		  <GoblinWarrior>20</GoblinWarrior>
           <GoblinWarlord>5</GoblinWarlord>
 		  <GoblinTrader>1</GoblinTrader>
+		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
+        </options>
+      </li>
+      <li MayRequire="oskarpotocki.vfe.empire">
+        <kindDef MayRequire="oskarpotocki.vfe.empire">Peaceful</kindDef>
+		<commonality MayRequire="oskarpotocki.vfe.empire">0.01</commonality>
+        <options MayRequire="oskarpotocki.vfe.empire">
+		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">999</TSP_ST_VFEE_GoblinDeserter>
         </options>
       </li>
       <li>
@@ -120,6 +129,7 @@
           <GoblinTinkerer>30</GoblinTinkerer>
 		  <GoblinWarrior>20</GoblinWarrior>
           <GoblinWarlord>5</GoblinWarlord>
+		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
 		  <Bat MayRequire="zal.witchinghour">1</Bat>
 		  <HalloweenBat MayRequire="halloweenparade.velcroboy333">1</HalloweenBat>
 		  <FunnyFungus MayRequire="halloweenparade.velcroboy333">1</FunnyFungus>
@@ -135,6 +145,7 @@
           <GoblinRunner>10</GoblinRunner>
           <GoblinTinkerer>60</GoblinTinkerer>
           <GoblinWarlord>5</GoblinWarlord>
+		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
         </options>
       </li>
       <li>
@@ -154,6 +165,7 @@
           <GoblinTinkerer>30</GoblinTinkerer>
 		  <GoblinWarrior>20</GoblinWarrior>
           <GoblinWarlord>5</GoblinWarlord>
+		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
 		  <Bat MayRequire="zal.witchinghour">15</Bat>
 		  <HalloweenBat MayRequire="halloweenparade.velcroboy333">15</HalloweenBat>
 		  <FunnyFungus MayRequire="halloweenparade.velcroboy333">1</FunnyFungus>
@@ -171,6 +183,7 @@
           <GoblinTinkerer>5</GoblinTinkerer>
 		  <GoblinWarrior>20</GoblinWarrior>
           <GoblinWarlord>15</GoblinWarlord>
+		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
 		  <Bat MayRequire="zal.witchinghour">5</Bat>
 		  <HalloweenBat MayRequire="halloweenparade.velcroboy333">5</HalloweenBat>
 		  <FunnyFungus MayRequire="halloweenparade.velcroboy333">1</FunnyFungus>
@@ -182,9 +195,13 @@
     </pawnGroupMakers>
     <settlementTexturePath>World/Goblins/GoblinLogo</settlementTexturePath>
 	<modExtensions>
-      <li Class="FactionSounds.FactionSound">
-        <soundDef>Goblin_Town</soundDef>
-      </li>
+		<li Class="FactionSounds.FactionSound">
+			<soundDef>Goblin_Town</soundDef>
+		</li>
+		<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
+			<canSendDeserters MayRequire="oskarpotocki.vfe.empire">true</canSendDeserters>
+			<deserterKind MayRequire="oskarpotocki.vfe.empire">TSP_ST_VFEE_GoblinDeserter</deserterKind>
+		</li>
     </modExtensions>
   </FactionDef>
 </Defs>

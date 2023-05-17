@@ -155,15 +155,21 @@
     <techLevel>Spacer</techLevel> <!-- They can drop in from "magical" pods. They are actually Industrial Tech when it comes to the weapons they use. -->
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
     <allowedArrivalTemperatureRange>
-      <min>-255</min>
-      <max>255</max>
+      <min>-999</min>
+      <max>999</max>
     </allowedArrivalTemperatureRange>
-	<!--
 	<modExtensions>
-      <li Class="JecsTools.FactionSettings">
-        <entrySoundDef>SkeletonPirate_Theme</entrySoundDef>
-      </li>
+		<!--
+		<li Class="JecsTools.FactionSettings">
+			<entrySoundDef>SkeletonPirate_Theme</entrySoundDef>
+		</li>
+		-->
+		<!--
+		<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
+			<canSendDeserters MayRequire="oskarpotocki.vfe.empire">true</canSendDeserters>
+			<deserterKind MayRequire="oskarpotocki.vfe.empire">ST_GunSkeleton</deserterKind>
+		</li>
+		-->
     </modExtensions>
-	-->
   </FactionDef>
 </Defs>

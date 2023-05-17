@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="VFEE_Deserter"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<PawnKindDef ParentName="VFEE_DeserterBase">
+					<defName>TSP_ST_VFEE_GoblinDeserter</defName>
+					<race Inherit="False">Alien_ST_Goblin</race>
+					<label>goblin partisan</label>
+					<combatPower>100</combatPower>
+					<chemicalAddictionChance>0.15</chemicalAddictionChance>
+					<combatEnhancingDrugsChance>0.75</combatEnhancingDrugsChance>
+					<combatEnhancingDrugsCount>1~5</combatEnhancingDrugsCount>
+					<weaponTags Inherit="False">
+						<li>GoblinTech</li>
+					</weaponTags>
+					<apparelTags>
+						<li>GoblinWear</li>
+					</apparelTags>
+					<apparelRequired>
+						<li>PirateBandana</li>
+						<li>VFEE_Apparel_ArmorDeserter</li>
+					</apparelRequired>
+					<techHediffsTags>
+						<li>Advanced</li>
+						<li>ImplantEmpireCommon</li>
+						<li>ImplantEmpireRoyal</li>
+					</techHediffsTags>
+					<disallowedTraits>
+						<li>Wimp</li>
+						<li>Nudist</li>
+						<li>BodyPurist</li>
+					</disallowedTraits>
+					<skills>
+						<li>
+							<skill>Shooting</skill>
+							<range>8~12</range>
+						</li>
+						<li>
+							<skill>Melee</skill>
+							<range>8~12</range>
+						</li>
+					</skills>
+					<inventoryOptions>
+						<subOptionsChooseOne>
+							<li>
+								<thingDef>GoblinCrack</thingDef>
+								<countRange>4~12</countRange>
+							</li>
+						</subOptionsChooseOne>
+					</inventoryOptions>
+					<initialWillRange>1~7</initialWillRange>
+					<initialResistanceRange>7~26</initialResistanceRange>
+				</PawnKindDef>
+				
+				
+				<PawnKindDef ParentName="BasePlayerStorytimePiratePawnKind">
+					<defName>TSP_ST_VFEE_PirateDeserter</defName>
+					<!-- <race Inherit="False">Human</race> -->
+					<label>deserters' hired hitman</label>
+					<combatPower>40</combatPower>
+					<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+					<chemicalAddictionChance>0.15</chemicalAddictionChance>
+					<combatEnhancingDrugsChance>1</combatEnhancingDrugsChance>
+					<combatEnhancingDrugsCount>1~5</combatEnhancingDrugsCount>
+					<apparelTags Inherit="False">
+						<li>NormalPirateClothing</li>
+						<li>RichPirateClothing</li>
+						<li>NW_Apparel_BritishBicorn</li>
+					</apparelTags>
+					<weaponTags Inherit="False">
+						<li>PirateGrenade</li>
+						<li>NormalPirate</li>
+						<li>RichPirate</li>
+					</weaponTags>
+					<apparelRequired Inherit="False">
+						<li>ST_PirateHat</li>
+						<!-- <li>VFEE_Apparel_ArmorDeserter</li> -->
+					</apparelRequired>
+					<techHediffsRequired>
+						<li>DeathAcidifier</li>
+					</techHediffsRequired>
+					<techHediffsDisallowTags>
+						<li>PainCauser</li>
+					</techHediffsDisallowTags>
+					<disallowedTraits>
+						<li>Wimp</li>
+						<li>Nudist</li>
+						<li>BodyPurist</li>
+					</disallowedTraits>
+					<skills>
+						<li>
+							<skill>Shooting</skill>
+							<range>6~9</range>
+						</li>
+						<li>
+							<skill>Melee</skill>
+							<range>10~14</range>
+						</li>
+					</skills>
+					<inventoryOptions>
+						<subOptionsChooseOne>
+							<li>
+								<thingDef>ST_KrakenRum</thingDef>
+								<countRange>1~3</countRange>
+							</li>
+						</subOptionsChooseOne>
+					</inventoryOptions>
+					<biocodeWeaponChance>1</biocodeWeaponChance>
+					<maxGenerationAge>40</maxGenerationAge>
+					<apparelMoney>2700~4000</apparelMoney>
+					<techHediffsMoney>1000~2000</techHediffsMoney>
+					<techHediffsMaxAmount>1</techHediffsMaxAmount>
+					<initialWillRange>1~2</initialWillRange>
+					<initialResistanceRange>3~5</initialResistanceRange>
+				</PawnKindDef>
+				
+				<!-- Please clap -->
+				<PawnKindDef ParentName="BasePlayerJeubPawnKind">
+					<defName>TSP_ST_VFEE_JeubBush_Deserter</defName>
+					<race Inherit="False">Alien_Jeub</race>
+					<label>low energy Jeub nerd</label>
+					<labelPlural>nerd Jeubs</labelPlural>
+					<combatPower>15</combatPower>
+					<canBeSapper>true</canBeSapper>
+					<fixedGender>Male</fixedGender>
+					<acceptArrestChanceFactor>2</acceptArrestChanceFactor>
+					<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+					<aiAvoidCover>false</aiAvoidCover>
+					<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+					<apparelIgnorePollution MayRequire="ludeon.rimworld.biotech">true</apparelIgnorePollution>
+					<chemicalAddictionChance>0</chemicalAddictionChance>
+					<combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+					<combatEnhancingDrugsCount>0~0</combatEnhancingDrugsCount>
+					<weaponTags Inherit="False">
+						<li>Revolver</li>
+					</weaponTags>
+					<apparelTags Inherit="False">
+						<li>Glasses</li>
+						<li>IndustrialBasic</li>
+					</apparelTags>
+					<apparelDisallowTags>
+						<li>IndustrialMilitary</li>
+						<li>Military</li>
+					</apparelDisallowTags>
+					<styleItemTags>
+						<li>
+							<tag>Worker</tag>
+							<baseWeight>1</baseWeight>
+							<weightFactor>1</weightFactor>
+						</li>
+					</styleItemTags>
+					<forcedTraits>
+						<li>Wimp</li>
+						<li MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Coward</li>
+					</forcedTraits>
+					<apparelRequired Inherit="False">
+						<li>Apparel_CollarShirt</li>
+						<li MayRequireAnyOf="wool.uselessclothes,TSP.wool.uselessclothesridesagain">woolsuitpants</li>
+					</apparelRequired>
+					<techHediffsTags>
+					</techHediffsTags>
+					<disallowedTraits>
+						<li>Nudist</li>
+						<li>BodyPurist</li>
+					</disallowedTraits>
+					<skills>
+						<li>
+							<skill>Shooting</skill>
+							<range>8~12</range>
+						</li>
+						<li>
+							<skill>Melee</skill>
+							<range>8~12</range>
+						</li>
+					</skills>
+					<initialWillRange>1~7</initialWillRange>
+					<initialResistanceRange>7~26</initialResistanceRange>
+				</PawnKindDef>
+			</value>
+		</match>
+	</Operation>
+</Patch>

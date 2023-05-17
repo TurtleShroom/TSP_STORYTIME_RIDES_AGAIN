@@ -3,16 +3,17 @@
     <ThingDef ParentName="ApparelBase">
     <defName>BowlHat</defName>
     <label>bowl hat</label>
-    <description>"Wearing bowls like this is generally considered to be cute." \n \n A culinary dish or basin worn as a hat.</description>
+    <description>"A child wearing a bowl like this is generally considered to be cute." \n \n A culinary dish or basin worn as a hat. As it is meant to hold food, it has remarkable resistance against heat and burns, and its durability serves as a weak countermeasure to attacks when no helmet is available.</description>
     <recipeMaker>
 		  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		  <workSkill>Crafting</workSkill>
 		  <effectWorking>Tailor</effectWorking>
 		  <soundWorking>Recipe_Tailor</soundWorking>
-		  <researchPrerequisite>ComplexClothing</researchPrerequisite>
+		  <researchPrerequisite MayRequire="vanillaexpanded.vfeart" Inherit="False">VFE_Res_Pottery</researchPrerequisite>
 		  <recipeUsers>
 			<li>ElectricTailoringBench</li>
 			<li>HandTailoringBench</li>
+			<li>CraftingSpot</li>
 		  </recipeUsers>
 		  <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
@@ -22,20 +23,24 @@
       <drawSize>(0.9, 0.9)</drawSize>
     </graphicData>
     <statBases>
-      <WorkToMake>1500</WorkToMake>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Mass>4</Mass>
-      <Flammability>1</Flammability>
-      <EquipDelay>0.8</EquipDelay>
+		<Beauty>4</Beauty> <!-- Pottery -->
+		<WorkToMake>1500</WorkToMake>
+		<MaxHitPoints>300</MaxHitPoints>
+		<Mass>0.4</Mass>
+		<Flammability>0.1</Flammability>
+		<EquipDelay>0.02</EquipDelay>
+		<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+		<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+		<ArmorRating_Heat>0.99</ArmorRating_Heat>
     </statBases>
     <generateCommonality>0.15</generateCommonality>
     <equippedStatOffsets>
-      <SocialImpact>0.15</SocialImpact>
+      <SocialImpact>0.02</SocialImpact>
     </equippedStatOffsets>
     <thingCategories>
       <li>Headgear</li>
     </thingCategories>
-    <costStuffCount>20</costStuffCount>
+    <costStuffCount>10</costStuffCount>
     <stuffCategories>
       <li>Woody</li>
 	  <li>Stony</li>
@@ -56,6 +61,7 @@
       <tags>
         <li>IndustrialBasic</li>
         <li>Neolithic</li>
+		<li>GnomeChef</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -66,5 +72,19 @@
 	<tradeTags>
 		<li>StorytimeHats</li>
 	</tradeTags>
+	<inspectorTabs>
+		<li>ITab_Art</li>
+	</inspectorTabs>
+	<comps Inherit="False">
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+		<li Class="CompProperties_Art" MayRequire="vanillaexpanded.vfeart">
+			<nameMaker MayRequire="vanillaexpanded.vfeart">NamerArtSculpture</nameMaker>
+			<descriptionMaker MayRequire="vanillaexpanded.vfeart">ArtDescription_Pottery</descriptionMaker>
+			<minQualityForArtistic MayRequire="vanillaexpanded.vfeart">Awful</minQualityForArtistic>
+			<canBeEnjoyedAsArt MayRequire="vanillaexpanded.vfeart">false</canBeEnjoyedAsArt>
+		</li>
+	</comps>
   </ThingDef>
 </Defs>

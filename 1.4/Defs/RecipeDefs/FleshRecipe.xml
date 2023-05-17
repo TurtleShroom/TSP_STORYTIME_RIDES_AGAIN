@@ -5,7 +5,7 @@
     <defName>Make_FleshBricks</defName>
     <label>make flesh bricks</label>
     <description>Shape and bake meat into bricks.</description>
-    <jobString>Shaping.</jobString>
+    <jobString>Shaping</jobString>
     <workAmount>1000</workAmount>
     <workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
 	<allowMixingIngredients>True</allowMixingIngredients>
@@ -19,30 +19,33 @@
           <categories>
             <li>MeatRaw</li>
 			<li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_StrangeMeatRaw</li>
+			<li MayRequire="deemainiac.securecontainrimworld">SCPMeat</li>
           </categories>
         </filter>
-        <count>20</count>
+        <count>25</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <categories>
         <li>MeatRaw</li>
 		<li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_StrangeMeatRaw</li>
+		<li MayRequire="deemainiac.securecontainrimworld">SCPMeat</li>
       </categories>
     </fixedIngredientFilter>
     <defaultIngredientFilter>
       <categories>
         <li>MeatRaw</li>
 		<li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_StrangeMeatRaw</li>
+		<li MayRequire="deemainiac.securecontainrimworld">SCPMeat</li>
       </categories>
     </defaultIngredientFilter>
 	<recipeUsers>
 		<li>TableButcher</li>
 		<li>Campfire</li>
-		<li MayRequire="Mlie.AncientRimSPQRim">AR_Press</li>
-		<li MayRequire="Mlie.AncientRimCore">AR_Smelter</li>
 		<li>ElectricSmelter</li>
 		<li>BlastFurnaceHeater</li>
+		<li MayRequire="Mlie.AncientRimSPQRim">AR_Press</li>
+		<li MayRequire="Mlie.AncientRimCore">AR_Smelter</li>
 		<li MayRequire="TaosChagic.EmergencyFire">EmergencyFire</li>
 		<li MayRequire="NunahurAlShamikh.LightingAndHeat">MLH_Bonfire</li>
 		<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_Cooker</li>

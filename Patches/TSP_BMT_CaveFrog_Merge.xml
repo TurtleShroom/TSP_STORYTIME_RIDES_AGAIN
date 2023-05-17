@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BMT_Goeto"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BMT_Goeto"]/race/leatherDef</xpath>
+			<value>
+				<leatherDef>Leather_Frog</leatherDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BMT_Goeto"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BMT_Goeto"]/race/useMeatFrom</xpath>
+			<value>
+				<useMeatFrom>ST_BullFrog</useMeatFrom>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BMT_Goeto"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BMT_Goeto"]/race/lifeStageAges</xpath>
+			<value>
+				<lifeStageAges>
+					<li>
+						<def>AnimalBabyTiny</def>
+						<minAge>0</minAge>
+						<soundWounded>Pawn_Chick_Call</soundWounded>
+						<soundDeath>Pawn_Chick_Call</soundDeath>
+						<soundCall>Pawn_Chick_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalJuvenile</def>
+						<minAge>0.1</minAge>
+						<soundWounded>Pawn_Chick_Call</soundWounded>
+						<soundDeath>Pawn_Chick_Call</soundDeath>
+						<soundCall>Pawn_Chick_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalAdult</def>
+						<minAge>0.18</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BMT_Goeto"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BMT_Goeto"]/tradeTags</xpath>
+			<value>
+				<li>AnimalFrog</li>
+				<li>AnimalUncommon</li>
+				<li>AnimalFarm</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BMT_Goeto"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAddModExtension">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="BMT_Goeto"]</xpath>
+			<value>
+				<li Class="AnimalBehaviours.AnimalStatExtension">
+					<statToAdd>
+						<li>ST_FrogRole</li>
+						<li>ST_FrogRoleSecondary</li>
+						<li>ST_FrogRarity</li>
+					</statToAdd>
+					<statValues>
+						<li>ST_FrogFoodProduction</li>
+						<li>ST_FrogFriendly</li>
+						<li>ST_FrogCommon</li>					
+					</statValues>
+					<statDescriptions>
+						<li>ST_FrogFoodProductionDesc</li>
+						<li>ST_FrogFriendlyDesc</li>
+						<li>ST_FrogCommonDesc</li>
+					</statDescriptions>
+					<showImageInInfoCard>true</showImageInInfoCard>
+				</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>

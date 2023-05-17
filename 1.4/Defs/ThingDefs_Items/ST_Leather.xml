@@ -15,6 +15,10 @@
       <color>(169,169,169)</color>
       <commonality>0.08</commonality>
 	  <stuffAdjective>Jeubish</stuffAdjective>
+	  <categories Inherit="False">
+		<li>Fabric</li>
+		<li>Leathery</li>
+	  </categories>
     </stuffProps>
   </ThingDef>
   
@@ -34,8 +38,15 @@
 		<stuffAdjective>speedy</stuffAdjective>
 	  	<statOffsets>
 			<BedRestEffectiveness>0.5</BedRestEffectiveness>
-			<MoveSpeed>0.25</MoveSpeed>
+			<MoveSpeed>0.5</MoveSpeed>
 		</statOffsets>
+		<statFactors>
+			<MoveSpeed>0.25</MoveSpeed>
+		</statFactors>
+		<categories Inherit="False">
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</categories>			
     </stuffProps>
   </ThingDef>
   
@@ -51,7 +62,7 @@
 			<MarketValue>2.17</MarketValue>
 			<Flammability>1.75</Flammability>
 			<MaxHitPoints>40</MaxHitPoints>
-			<Mass>0.06</Mass>
+			<Mass>0.02</Mass>
 			<SharpDamageMultiplier Inherit="False">0.18</SharpDamageMultiplier>
 			<BluntDamageMultiplier Inherit="False">1.05</BluntDamageMultiplier>
 			<StuffPower_Insulation_Cold Inherit="False">0</StuffPower_Insulation_Cold>
@@ -67,6 +78,9 @@
 			<categories>
 				<li>Woody</li>
 				<li>Leathery</li>
+				
+				<!-- Mod support -->
+				<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
 			</categories>
 			<constructEffect>ConstructWood</constructEffect>
 			<appearance>Smooth</appearance>
@@ -153,12 +167,16 @@
 		<MarketValue>1.05</MarketValue>
 		<StuffPower_Insulation_Cold Inherit="False">17</StuffPower_Insulation_Cold> <!-- RL frogs either hibernate by burrowing or freeze solid in order to withstand the cold. -->
 		<StuffPower_Insulation_Heat Inherit="False">2</StuffPower_Insulation_Heat>
-		<Flammability>0.5</Flammability>
+		<Flammability>0.75</Flammability>
     </statBases>
     <stuffProps>
 		<color>(0,100,0)</color>
 		<commonality>0.02</commonality>
 		<stuffAdjective>frog</stuffAdjective>
+		<categories Inherit="False">
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</categories>
 		<statFactors>
 			<MaxHitPoints>0.8</MaxHitPoints>
 			<StuffPower_Armor_Sharp>0.1</StuffPower_Armor_Sharp>
@@ -206,7 +224,7 @@
     <stuffProps>
 		<stuffAdjective>gibbonous</stuffAdjective>
 		<color>(196,166,138)</color>
-		<commonality>0.03</commonality>
+		<commonality>0.08</commonality>
     </stuffProps>
   </ThingDef>
   

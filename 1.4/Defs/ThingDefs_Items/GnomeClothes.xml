@@ -23,6 +23,13 @@
       </defaultIngredientFilter>
 	  -->
     </recipeMaker>
+	<apparel>
+		<tags Inherit="False">
+			<li>ST_GnomeClothing</li>
+			<li>GnomePeasant</li>
+			<li>Owenapparel</li>
+		</tags>
+	</apparel>
   </ThingDef>
  
     <ThingDef ParentName="ApparelGnomeBase">
@@ -32,18 +39,20 @@
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/GnomeHat/GnomeHat</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(0.9, 0.9)</drawSize>
+      <drawSize>(0.9, 1)</drawSize>
     </graphicData>
     <statBases>
-		<MarketValue>4</MarketValue>
-		<WorkToMake>1500</WorkToMake>
-		<MaxHitPoints>200</MaxHitPoints>
-		<Mass>4</Mass>
-		<Flammability>0.6</Flammability>
+		<MarketValue>0.01</MarketValue>
+		<WorkToMake>15</WorkToMake>
+		<MaxHitPoints>20</MaxHitPoints>
+		<Mass>0.004</Mass>
+		<Flammability>1</Flammability>
 		<Insulation_Cold>19</Insulation_Cold>
 		<Insulation_Heat>13</Insulation_Heat>
-		<EquipDelay>5</EquipDelay>
+		<EquipDelay>0.001</EquipDelay>
     </statBases>
+	<generateCommonality>0.001</generateCommonality>
+	<generateAllowChance>0.001</generateAllowChance>
     <thingCategories>
       <li>Headgear</li>
     </thingCategories>
@@ -52,6 +61,7 @@
     </costList>
     <apparel>
 		<canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth> <!-- STOP SPAWNING THIS ON EVERYONE!! -->
+		<canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
 		<countsAsClothingForNudity>true</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>UpperHead</li>
@@ -64,8 +74,8 @@
 		<li>GnomePeasant</li>
       </tags>
       <defaultOutfitTags>
-        <li>Worker</li>
 		<li>Slave</li>
+		<li>Gnome</li>
       </defaultOutfitTags>
 	  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/GnomeHat/GnomeHat</wornGraphicPath>
     </apparel>
@@ -125,11 +135,13 @@
       <tags Inherit="False">
         <li>ST_GnomeClothing</li>
 		<li>GnomePeasant</li>
+		<li>Owenapparel</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
 		<li>Soldier</li>
 		<li>Slave</li>
+		<li>Gnome</li>
       </defaultOutfitTags>
 	  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/GnomeGoggles/GnomeGoggles</wornGraphicPath>
 	  <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
@@ -171,6 +183,7 @@
       <Gnome_Cloth>50</Gnome_Cloth>
     </costList>
     <apparel>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
       <bodyPartGroups>        
 	    <li>Torso</li>
         <li>Shoulders</li>
@@ -186,6 +199,7 @@
         <li>Worker</li>
 		<li>Soldier</li>
 		<li>Slave</li>
+		<li>Gnome</li>
       </defaultOutfitTags>
 	  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</wornGraphicPath>
 		<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
@@ -225,6 +239,7 @@
       <Gnome_Cloth>40</Gnome_Cloth>
     </costList>
     <apparel>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
       <bodyPartGroups>        
 	    <li>Legs</li>
       </bodyPartGroups>
@@ -239,9 +254,11 @@
         <li>Worker</li>
 		<li>Soldier</li>
 		<li>Slave</li>
+		<li>Gnome</li>
       </defaultOutfitTags>
 		<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
     </apparel>
+	<!-- <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth> -->
     <colorGenerator Class="ColorGenerator_Options">
       <options>
         <li>
