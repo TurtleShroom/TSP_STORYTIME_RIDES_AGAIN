@@ -27,7 +27,6 @@
 		<tags Inherit="False">
 			<li>ST_GnomeClothing</li>
 			<li>GnomePeasant</li>
-			<li>Owenapparel</li>
 		</tags>
 	</apparel>
   </ThingDef>
@@ -59,7 +58,7 @@
     <costList>
       <Gnome_Cloth>20</Gnome_Cloth>
     </costList>
-    <apparel>
+    <apparel Inherit="False">
 		<canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth> <!-- STOP SPAWNING THIS ON EVERYONE!! -->
 		<canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
 		<countsAsClothingForNudity>true</countsAsClothingForNudity>
@@ -126,25 +125,27 @@
       <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <apparel>
-      <bodyPartGroups>
-        <li>Eyes</li>
-      </bodyPartGroups>
-      <layers>
-        <li>EyeCover</li>
-      </layers>
-      <tags Inherit="False">
-        <li>ST_GnomeClothing</li>
-		<li>GnomePeasant</li>
-		<li>Owenapparel</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Worker</li>
-		<li>Soldier</li>
-		<li>Slave</li>
-		<li>Gnome</li>
-      </defaultOutfitTags>
-	  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/GnomeGoggles/GnomeGoggles</wornGraphicPath>
-	  <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+		<bodyPartGroups>
+			<li>Eyes</li>
+		</bodyPartGroups>
+		<layers>
+			<li>EyeCover</li>
+		</layers>
+		<tags Inherit="False">
+			<li>ST_GnomeClothing</li>
+			<li>GnomePeasant</li>
+			<li>Owenapparel</li>
+		</tags>
+		<defaultOutfitTags>
+			<li>Worker</li>
+			<li>Soldier</li>
+			<li>Slave</li>
+			<li>Gnome</li>
+		</defaultOutfitTags>
+		<wornGraphicPath>Things/Pawn/Humanlike/Apparel/GnomeGoggles/GnomeGoggles</wornGraphicPath>
+		<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+		<forceRenderUnderHair>true</forceRenderUnderHair>
+		<blocksVision>false</blocksVision>
 		<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
 		<countsAsClothingForNudity>false</countsAsClothingForNudity>
     </apparel>
@@ -249,6 +250,7 @@
       <tags Inherit="False">
         <li>ST_GnomeClothing</li>
 		<li>GnomePeasant</li>
+		<li>Owenapparel</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>

@@ -4,7 +4,7 @@
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>CyberFrogHostile</defName>
 		<label>Mechanoid Cyber-Frog</label>
-		<description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particualar Cyber Frogs have since betrayed their own kind and joined the Mechanoids in their conquest. Randy have mercy on us all. \n \n A Mechanoid Cyber-Frog that has been brought under a Mechanitor's command is capable of multiple forms of work: their cuteness makes them great at entertaining Guests*, they flip switches, they are adept at caring for livestock, and they (like most frogs) have good marksmanship when hunting. When completely idle, a Mechanoid Cyber-Frog with nothing else to do will haul things. \n \n \n \n
+		<description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particualar Cyber Frogs have since betrayed their own kind and joined the Mechanoids in their conquest. Randy have mercy on us all. \n \n A Mechanoid Cyber-Frog that has been brought under a Mechanitor's command is capable of multiple forms of work: their cuteness makes them great at entertaining Guests*, they flip switches, and they (like most frogs) have good marksmanship when hunting. When completely idle, a Mechanoid Cyber-Frog with nothing else to do will haul things. \n \n \n \n
 		* = Requires Hospitality Mod</description>
 		<statBases>
 		  <MoveSpeed>9</MoveSpeed>
@@ -139,8 +139,9 @@
 		  <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
 		  <baseBodySize>0.35</baseBodySize>
 		  <baseHealthScale>3</baseHealthScale>
-		  <baseHungerRate>0.1</baseHungerRate>
-		  <foodType Inherit="False">None, OmnivoreRoughAnimal, VegetarianRoughAnimal, Corpse, Tree, Plant, Kibble</foodType>
+		  <baseHungerRate>0</baseHungerRate>
+		  <!-- <foodType Inherit="False">None, OmnivoreRoughAnimal, VegetarianRoughAnimal, Corpse, Tree, Plant, Kibble</foodType> -->
+		  <foodType Inherit="False">None</foodType>
 		  <useMeatFrom>ST_BullFrog</useMeatFrom>
 		  <leatherDef>Leather_Frog</leatherDef>
 		  <mechWeightClass MayRequire="Ludeon.Rimworld.Biotech">Light</mechWeightClass>

@@ -145,11 +145,11 @@
 						<li>Glasses</li>
 						<li>IndustrialBasic</li>
 					</apparelTags>
-					<apparelDisallowTags>
+					<apparelDisallowTags Inherit="False">
 						<li>IndustrialMilitary</li>
 						<li>Military</li>
 					</apparelDisallowTags>
-					<styleItemTags>
+					<styleItemTags Inherit="False">
 						<li>
 							<tag>Worker</tag>
 							<baseWeight>1</baseWeight>
@@ -165,23 +165,29 @@
 						<li MayRequireAnyOf="wool.uselessclothes,TSP.wool.uselessclothesridesagain">woolsuitpants</li>
 					</apparelRequired>
 					<techHediffsTags>
+						<li>Simple</li>
+						<li>Common</li>
+						<li>Poor</li>
 					</techHediffsTags>
 					<disallowedTraits>
 						<li>Nudist</li>
-						<li>BodyPurist</li>
 					</disallowedTraits>
 					<skills>
 						<li>
 							<skill>Shooting</skill>
-							<range>8~12</range>
+							<range>0~2</range>
 						</li>
 						<li>
 							<skill>Melee</skill>
-							<range>8~12</range>
+							<range>0~2</range>
+						</li>
+						<li>
+							<skill>Social</skill>
+							<range>0~0</range>
 						</li>
 					</skills>
-					<initialWillRange>1~7</initialWillRange>
-					<initialResistanceRange>7~26</initialResistanceRange>
+					<initialWillRange>0.01~0.5</initialWillRange>
+					<initialResistanceRange>0.01~1</initialResistanceRange>
 				</PawnKindDef>
 			</value>
 		</match>
