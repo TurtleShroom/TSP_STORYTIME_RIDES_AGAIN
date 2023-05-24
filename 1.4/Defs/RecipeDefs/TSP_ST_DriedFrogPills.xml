@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
+<!-- _________________________________________________________________ -->
+<!-- ___________________________PRODUCTION!___________________________ -->
+<!-- _________________________________________________________________ -->
+
 	<RecipeDef>
 		<defName>TSP_ST_DriedFrogPills</defName>
 		<label>Process Dried Frog Pills (x5)</label>
-		<description>This recipe heats and dries raw ingredients from butchered frogs to make Dried Frog Pills.</description>
+		<description>This Recipe heats and dries raw ingredients from butchered frogs to make Dried Frog Pills.</description>
 		<jobString>Drying raw frog ingredients</jobString>
 		<workAmount>300</workAmount>
 		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -77,7 +81,7 @@
 	<RecipeDef>
 		<defName>TSP_ST_DriedFrogPills_Bulk</defName>
 		<label>Process Dried Frog Pills (x10)</label>
-		<description>This recipe heats and dries raw ingredients from butchered frogs to make Dried Frog Pills in bulk.</description>
+		<description>This Recipe heats and dries raw ingredients from butchered frogs to make Dried Frog Pills in bulk.</description>
 		<jobString>Drying raw frog ingredients</jobString>
 		<workAmount>600</workAmount>
 		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -151,7 +155,7 @@
 	<RecipeDef>
 		<defName>TSP_ST_DriedFrogPills_SuperBulk</defName>
 		<label>Process Dried Frog Pills (x25)</label>
-		<description>This recipe heats and dries raw ingredients from butchered frogs to make Dried Frog Pills in bulk.</description>
+		<description>This Recipe heats and dries raw ingredients from butchered frogs to make Dried Frog Pills in bulk.</description>
 		<jobString>Drying raw frog ingredients</jobString>
 		<workAmount>1400</workAmount>
 		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -225,7 +229,7 @@
 	<RecipeDef>
 		<defName>TSP_ST_DriedFrogPills_SuperDuperBulk</defName>
 		<label>Process Dried Frog Pills (x50)</label>
-		<description>This recipe heats and dries raw ingredients from butchered frogs to make Dried Frog Pills in bulk.</description>
+		<description>This Recipe heats and dries raw ingredients from butchered frogs to make Dried Frog Pills in bulk.</description>
 		<jobString>Drying raw frog ingredients</jobString>
 		<workAmount>1800</workAmount>
 		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -299,7 +303,7 @@
 	<RecipeDef>
 		<defName>TSP_ST_DriedFrogPills_SuperDuperUltraBulk</defName>
 		<label>Process Dried Frog Pills (x100)</label>
-		<description>This recipe heats and dries raw ingredients from butchered frogs to make obscene amounts of Dried Frog Pills.</description>
+		<description>This Recipe heats and dries raw ingredients from butchered frogs to make obscene amounts of Dried Frog Pills.</description>
 		<jobString>Drying raw frog ingredients en masse</jobString>
 		<workAmount>2400</workAmount>
 		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -373,7 +377,7 @@
 	<RecipeDef>
 		<defName>TSP_ST_DriedFrogPills_D</defName>
 		<label>Process Dried Frog Pills (x500)</label>
-		<description>This recipe heats and dries raw ingredients from butchered frogs to make obscene amounts of Dried Frog Pills!</description>
+		<description>This Recipe heats and dries raw ingredients from butchered frogs to make obscene amounts of Dried Frog Pills!</description>
 		<jobString>Drying raw frog ingredients en masse</jobString>
 		<workAmount>3000</workAmount>
 		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -447,7 +451,7 @@
 	<RecipeDef>
 		<defName>TSP_ST_DriedFrogPills_M</defName>
 		<label>Process Dried Frog Pills (x1000)!</label>
-		<description>This recipe heats and dries raw ingredients from butchered frogs to make OBSCENE AMOUNTS of Dried Frog Pills!</description>
+		<description>This Recipe heats and dries raw ingredients from butchered frogs to make OBSCENE AMOUNTS of Dried Frog Pills!</description>
 		<jobString>DEAR RANDY THAT'S A LOT OF FROG GUTS</jobString>
 		<workAmount>4000</workAmount>
 		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -517,6 +521,124 @@
 			<DriedFrogPills>1000</DriedFrogPills>
 		</products>
 	</RecipeDef>
+
+
+<!-- ______________________________________________________________________ -->
+<!-- ___________________________WEREFROG ORGANS!___________________________ -->
+<!-- ______________________________________________________________________ -->
+
+	<RecipeDef>
+		<defName>TSP_ST_DriedFrogPills_MinorOrgans</defName>
+		<label>Process Dried Frog Pills from Werefrog Organs</label>
+		<description>This Recipe heats and dries raw ingredients from Werefrog Organs to make Dried Frog Pills.</description>
+		<descriptionHyperlinks>
+			<thingDef>FrogTongue</thingDef>
+			<thingDef>FrogEye</thingDef>
+			<thingDef>FrogStomach</thingDef>
+			<thingDef>FrogLung</thingDef>
+		</descriptionHyperlinks>
+		<jobString>Drying Werefrog Organs</jobString>
+		<workAmount>750</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FrogTongue</li>
+						<li>FrogEye</li>
+						<li>FrogStomach</li>
+						<li>FrogLung</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FrogTongue</li>
+				<li>FrogEye</li>
+				<li>FrogStomach</li>
+				<li>FrogLung</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>FrogTongue</li>
+				<li>FrogEye</li>
+				<li>FrogStomach</li>
+				<li>FrogLung</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li MayRequire="morishep.tarojun.onioftherim">Oni_GroundOven</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<products>
+			<DriedFrogPills>30</DriedFrogPills>
+		</products>
+	</RecipeDef>
+
+
+	<RecipeDef>
+		<defName>TSP_ST_DriedFrogPills_Limbs</defName>
+		<label>Process Dried Frog Pills from Werefrog Limbs</label>
+		<description>This Recipe heats and dries raw ingredients from Werefrog Limbs to make Dried Frog Pills.</description>
+		<descriptionHyperlinks>
+			<ThingDef>FrogArm</ThingDef>
+			<ThingDef>FrogLeg</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Drying raw frog ingredients</jobString>
+		<workAmount>1355</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FrogLeg</li>
+						<li>FrogArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>FrogLeg</li>
+				<li>FrogArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>FrogLeg</li>
+				<li>FrogArm</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li MayRequire="morishep.tarojun.onioftherim">Oni_GroundOven</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<products>
+			<DriedFrogPills>75</DriedFrogPills>
+		</products>
+	</RecipeDef>
+
+
+
+
+
+<!-- ____________________________________________________________ -->
+<!-- ___________________________CURES!___________________________ -->
+<!-- ____________________________________________________________ -->
 	
 	<!-- Code for Recipe derived from Kasenra's Cure Catatonia Mod, except with bug fixes by me -->
 	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2209587618 -->
@@ -538,6 +660,7 @@
 		<skillRequirements>
 			<Medicine>1</Medicine>
 		</skillRequirements>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
 		<ingredients>
 			<li>
 				<filter>
@@ -545,7 +668,7 @@
 						<li>DriedFrogPills</li>
 					</thingDefs>
 				</filter>
-				<count>150</count> <!-- Dried Frog Pills are pretty easy to make if you have a massive frog killing operation. -->
+				<count>300</count> <!-- Dried Frog Pills are pretty easy to make if you have a massive frog killing operation. -->
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -558,7 +681,7 @@
 	<!-- Code for Recipe derived from Kasenra's Cure Catatonia Mod, except with bug fixes by me -->
 	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2209587618 -->
 	<RecipeDef ParentName="SurgeryFlesh">
-		<defName>TSP_KASENRA_CureResurrectioCorruption</defName>
+		<defName>TSP_KASENRA_CureResurrectionCorruption</defName>
 		<label>cure resurrection psychosis with Dried Frog Pills</label>
 		<description>This special medical operation was the initial intent and reason why Dried Frog Pills were created. A heavy dose of these pills will undo the corruption of decayed Healer Mech Serum Mechanites and restore a resurrected Pawn's brain to a functioning state. \n \n This, however, is not without cost. Using that many Dried Frog Pills at once will cause an immediate addiction to form, causing the patient to need to continue using them to remain sane.</description>
 		<workerClass>Recipe_RemoveHediff</workerClass>
@@ -570,12 +693,13 @@
 		<targetsBodyPart>false</targetsBodyPart>
 		<removesHediff>ResurrectionPsychosis</removesHediff>
 		<addsHediff>DriedFrogPillsAddiction</addsHediff>
-		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
 		<deathOnFailedSurgeryChance>0.01</deathOnFailedSurgeryChance>
 		<successfullyRemovedHediffMessage>Ribbit ribbit! Never shall {1} die!</successfullyRemovedHediffMessage>
 		<skillRequirements>
-			<Medicine>10</Medicine>
+			<Medicine>12</Medicine>
 		</skillRequirements>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
 		<ingredients>
 			<li>
 				<filter>
@@ -584,6 +708,84 @@
 					</thingDefs>
 				</filter>
 				<count>1000</count> <!-- Dried Frog Pills are pretty easy to make if you have a massive frog killing operation. -->
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>DriedFrogPills</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<!-- Code for Recipe derived from Kasenra's Cure Catatonia Mod, except with bug fixes by me -->
+	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2209587618 -->
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>TSP_KASENRA_CureAlzheimersCorruption</defName>
+		<label>cure Alzheimer's Disease with Dried Frog Pills</label>
+		<description>This special medical operation was the initial intent and reason why Dried Frog Pills were created. A heavy dose of these pills will undo the corruption of decayed Healer Mech Serum Mechanites and restore a Pawn's decaying brain to a functioning state. \n \n This, however, is not without cost. Using that many Dried Frog Pills at once will cause an immediate addiction to form, causing the patient to need to continue using them to remain sane.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Ribbitstoring consciousness</jobString>
+		<workAmount>3000</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<anesthetize>true</anesthetize>
+		<isViolation>false</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<removesHediff>Alzheimers</removesHediff>
+		<addsHediff>DriedFrogPillsAddiction</addsHediff>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<deathOnFailedSurgeryChance>0.01</deathOnFailedSurgeryChance>
+		<successfullyRemovedHediffMessage>Ribbit ribbit! Never shall {1} die!</successfullyRemovedHediffMessage>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+		</skillRequirements>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DriedFrogPills</li>
+					</thingDefs>
+				</filter>
+				<count>1000</count> <!-- Dried Frog Pills are pretty easy to make if you have a massive frog killing operation. -->
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>DriedFrogPills</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<!-- Code for Recipe derived from Kasenra's Cure Catatonia Mod, except with bug fixes by me -->
+	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2209587618 -->
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>TSP_KASENRA_CureDementiaCorruption</defName>
+		<label>cure dementia with Dried Frog Pills</label>
+		<description>This special medical operation was the initial intent and reason why Dried Frog Pills were created. A heavy dose of these pills will undo the corruption of decayed Healer Mech Serum Mechanites and restore a Pawn's decaying brain to a functioning state. \n \n This, however, is not without cost. Using that many Dried Frog Pills at once will cause an immediate addiction to form, causing the patient to need to continue using them to remain sane.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Ribbitstoring consciousness</jobString>
+		<workAmount>2250</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<anesthetize>true</anesthetize>
+		<isViolation>false</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<removesHediff>Dementia</removesHediff>
+		<addsHediff>DriedFrogPillsAddiction</addsHediff>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<deathOnFailedSurgeryChance>0.01</deathOnFailedSurgeryChance>
+		<successfullyRemovedHediffMessage>Ribbit ribbit! {1} can think clearly again!</successfullyRemovedHediffMessage>
+		<skillRequirements>
+			<Medicine>12</Medicine>
+		</skillRequirements>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DriedFrogPills</li>
+					</thingDefs>
+				</filter>
+				<count>500</count> <!-- Dried Frog Pills are pretty easy to make if you have a massive frog killing operation. -->
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
