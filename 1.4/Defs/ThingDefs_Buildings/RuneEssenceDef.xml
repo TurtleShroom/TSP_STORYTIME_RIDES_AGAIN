@@ -11,13 +11,20 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>500</MaxHitPoints>
-	  <Beauty>1</Beauty>
+	  <Beauty>2</Beauty>
     </statBases>
     <building>
       <mineableThing>ChunkEssence</mineableThing>
       <mineableDropChance>0.6</mineableDropChance>
       <!-- <smoothedThing>SmoothedEssence</smoothedThing> -->
     </building>
+	<modExtensions>
+		<li Class="BiomesCore.DefModExtensions.BiomesMap" MayRequire="biomesteam.biomescore">
+			<allowedBiomes MayRequire="biomesteam.biomescore">
+				<li MayRequire="biomesteam.biomescore,TSP.Isengriff.Storytime.RuneZone">runeEssenceMine</li>
+			</allowedBiomes>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="EssenceBase">
@@ -28,7 +35,7 @@
       <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
     </graphicData>
     <statBases>
-      <Beauty>1</Beauty>
+      <Beauty>2</Beauty>
       <MarketValue>25</MarketValue>
     </statBases>
     <building>
@@ -48,7 +55,8 @@
       <color>(110, 115, 115)</color>
     </graphicData>
     <statBases>
-      <Mass>15</Mass>
+		<Beauty>1</Beauty>
+		<Mass>15</Mass>
     </statBases>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <butcherProducts>
