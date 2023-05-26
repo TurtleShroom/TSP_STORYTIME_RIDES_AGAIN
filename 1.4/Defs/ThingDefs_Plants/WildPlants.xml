@@ -48,7 +48,7 @@
 		  <visualSizeRange>0.95~1.7</visualSizeRange>
 		  <topWindExposure>0.4</topWindExposure>
 		  <wildOrder>2</wildOrder>
-		  <neverBlightable>false</neverBlightable>
+		  <neverBlightable>true</neverBlightable>
 		  <wildBiomes>
 				<!-- RimWorld.Core -->
 				<!-- VANILLA RENDITION -->
@@ -271,10 +271,10 @@
 		  <purpose>Food</purpose>
 		</plant>
 		<modExtensions>
-			<li Class="BiomesCore.DefModExtensions.Biomes_PlantControl">
-				<allowInCave>true</allowInCave>
-				<allowInBuilding>true</allowInBuilding>
-				<allowUnroofed>true</allowUnroofed>
+			<li Class="BiomesCore.DefModExtensions.Biomes_PlantControl" MayRequire="biomesteam.biomescore">
+				<allowInCave MayRequire="biomesteam.biomescore">true</allowInCave>
+				<allowInBuilding MayRequire="biomesteam.biomescore">true</allowInBuilding>
+				<allowUnroofed MayRequire="biomesteam.biomescore">true</allowUnroofed>
 			</li>
 		</modExtensions>
 	</ThingDef>
