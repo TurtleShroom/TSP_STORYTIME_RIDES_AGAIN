@@ -17,8 +17,12 @@
         <label>minor</label>
         <capMods>
           <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.1</offset>
+            <capacity>Hearing</capacity>
+            <setMax>0.6</setMax>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <setMax>0.8</setMax>
           </li>
         </capMods>
       </li>
@@ -27,8 +31,16 @@
         <label>moderate</label>
         <capMods>
           <li>
+            <capacity>Hearing</capacity>
+            <setMax>0.5</setMax>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <setMax>0.5</setMax>
+          </li>
+          <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.2</offset>
+            <setMax>0.75</setMax>
           </li>
         </capMods>
       </li>
@@ -37,8 +49,16 @@
         <label>severe</label>
         <capMods>
           <li>
+            <capacity>Hearing</capacity>
+            <setMax>0.1</setMax>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <setMax>0.1</setMax>
+          </li>
+          <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.4</offset>
+            <setMax>0.5</setMax>
           </li>
         </capMods>
       </li>
@@ -47,17 +67,28 @@
         <label>extreme</label>
         <lifeThreatening>true</lifeThreatening>
         <capMods>
+			<!--
           <li>
             <capacity>Consciousness</capacity>
             <offset>-0.4</offset>
           </li>
+		  -->
           <li>
             <capacity>Consciousness</capacity>
             <setMax>0.1</setMax>
           </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <setMax>0.01</setMax>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <setMax>0.01</setMax>
+          </li>
         </capMods>
       </li>
     </stages>
+	<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
   </HediffDef>
   
 </Defs>

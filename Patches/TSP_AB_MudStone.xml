@@ -23,6 +23,31 @@
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
+			<xpath>Defs/BiomeDef[defName="froggySwamp"]/modExtensions/li[@Class="VFECore.BiomeExtension"]/uniqueRockTypes</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist/ -->
+		<xpath>/Defs/ThingDef[defName="AB_Mudstone"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/BiomeDef[defName="froggySwamp"]/modExtensions/li[@Class="VFECore.BiomeExtension"]/forceUniqueRockTypes</xpath>
+			<value>
+				<forceUniqueRockTypes>false</forceUniqueRockTypes>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="AB_Mudstone"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="ST_MudStone"]</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->

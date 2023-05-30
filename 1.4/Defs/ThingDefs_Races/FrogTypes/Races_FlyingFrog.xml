@@ -33,6 +33,11 @@
 		  <li>Sterilize</li>
 		  <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
 		</recipes>
+		<modExtensions>
+			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="ST_MiracleAnimal">
@@ -107,7 +112,7 @@
 		  <body>QuadrupedAnimalWithClawsTailAndJowl</body>
 		  <nameGenerator>FrogNamerMale</nameGenerator>
 		  <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
-		  <bloodDef>Filth_IchorBlood</bloodDef>
+		  <bloodDef>ST_Filth_IchorBlood</bloodDef>
 		  <baseBodySize>0.35</baseBodySize>
 		  <baseHealthScale>4</baseHealthScale>
 		  <baseHungerRate>0</baseHungerRate>
@@ -153,7 +158,6 @@
 					<li>ST_FrogDivineDesc</li>
 					<li>ST_FrogLegendaryDesc</li>
 				</statDescriptions>
-				<showImageInInfoCard>true</showImageInInfoCard>
 			</li>
 		</modExtensions>
 	</ThingDef>

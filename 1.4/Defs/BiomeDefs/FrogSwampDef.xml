@@ -7,6 +7,19 @@
 		<description>Millinea of genetic engineering has created frogs capable of serving the niches of most livestock roles, as well as extending their life and abilities. Other frogs, by accident or design, are vicious and threatening. In some parts of the galactic Rim, the overpopulation of these frogs has caused pockets of swamp lands to be completely overrun by nothing but frogs and other amphibians.</description>
 		<workerClass>BiomesKit.UniversalBiomeWorker</workerClass>
 		<modExtensions>
+			<li Class="VFECore.BiomeExtension">
+				<uniqueRockTypes>
+					<li>ST_MudStone</li>
+				</uniqueRockTypes> <!-- These types of rock will be removed from every other biome -->
+				<forceRockTypes>
+					<li MayRequire="sarg.alphabiomes">AB_Mudstone</li>
+				</forceRockTypes> <!-- These types of rock will always spawn in this biome -->
+				<disallowRockTypes>
+					<li>SmoothedEssence</li>
+				</disallowRockTypes> <!-- These types of rock will never spawn in this biome -->
+				<onlyAllowForcedRockTypes>false</onlyAllowForcedRockTypes> <!-- If true (the default), only the forced ricks will ever spawn in this biome -->
+				<forceUniqueRockTypes>true</forceUniqueRockTypes> <!-- If true (the default), then the unique rocks will also be forced -->
+			</li>
 			<li Class="BiomesKit.BiomesKitControls">
 				<spawnOnBiomes>
 					<li>ColdBog</li>
@@ -18,17 +31,22 @@
 					<li MayRequire="zylle.morevanillabiomes">ZBiome_Sandbar_NoBeach</li> <!-- Estuary -->
 					<li MayRequire="mlie.advancedbiomes">Wetland</li>
 				</spawnOnBiomes>
-				<maxHilliness>1</maxHilliness>
 				<frequency>50</frequency>
 				<usePerlin>true</usePerlin>
 				<perlinCulling>0.25</perlinCulling>
+				<maxHilliness>SmallHills</maxHilliness>
 			</li>
 			<li Class="RockSettings.DefModExtension_BiomeSettings">
-				<rockCount>1</rockCount>
+				<rockCount>1~2</rockCount>
 				<allowedRockDefs Inherit="False">
 					<li>ST_MudStone</li>
 					<li MayRequire="sarg.alphabiomes">AB_Mudstone</li>
 				</allowedRockDefs>
+			</li>
+			<li Class="GeologicalLandforms.BiomeProperties" MayRequire="m00nl1ght.geologicallandforms">
+				<applyToCaves MayRequire="m00nl1ght.geologicallandforms">false</applyToCaves>
+				<allowLandforms MayRequire="m00nl1ght.geologicallandforms">true</allowLandforms>
+				<allowBiomeTransitions MayRequire="m00nl1ght.geologicallandforms">false</allowBiomeTransitions>
 			</li>
 		</modExtensions>
 		<animalDensity>7</animalDensity>
@@ -178,7 +196,7 @@
 		  <AB_GiantGamma MayRequire="sarg.alphabiomes">0.002</AB_GiantGamma>
 		  <PoisonMushroom MayRequire="mlie.advancedbiomes">0.01</PoisonMushroom>
 		  <BMT_Cattail MayRequire="biomesteam.oasis">1</BMT_Cattail>
-		  <BMT_Lilypad MayRequire="biomesteam.oasis">3</BMT_Lilypad>
+		  <BMT_Lilypad MayRequire="biomesteam.oasis">3.5</BMT_Lilypad>
 		  <RN_PlantClover MayRequire="rimnature.velcroboy333">1</RN_PlantClover>
 		  <Plant_CandyCaneGreen MayRequire="thatbartguy.candy">0.001</Plant_CandyCaneGreen>
 		  <BMT_MayoaPortugallica MayRequire="biomesteam.biomesprehistoric">0.02</BMT_MayoaPortugallica>
@@ -190,18 +208,14 @@
 		<wildAnimals>
 			<BloodFrog>0.2</BloodFrog>
 			<BudgettFrog>1</BudgettFrog>
-			<HC_Bullfrog MayRequire="hc.animal.2">1.25</HC_Bullfrog>
 			<ST_BullFrog>1</ST_BullFrog>
 			<CyberFrogDocile>0.1</CyberFrogDocile>
 			<FireBelliedToad>0.3</FireBelliedToad>
-			<Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
 			<JudasFrog>0.2</JudasFrog>
 			<LeviathanFrog>0.08</LeviathanFrog>
 			<ST_LivingCoconut>0.1</ST_LivingCoconut>
 			<MilkFrog>0.14</MilkFrog>
 			<NightFrog>0.008</NightFrog>
-			<GiantToad MayRequire="yamazakioghw.gianttoads">0.12</GiantToad>
-			<KingToad MayRequire="yamazakioghw.gianttoads">0.001</KingToad>
 			<PepsiFrog>0.075</PepsiFrog>
 			<PumpkinToadlet>0.1</PumpkinToadlet>
 			<SpringPeeper>1.15</SpringPeeper>
@@ -210,7 +224,17 @@
 			<TomatoFrog>1</TomatoFrog>
 			<ST_TreeFrog>1</ST_TreeFrog>
 			<ST_WoodFrog>0.33</ST_WoodFrog>
-			<BMT_Goeto MayRequire="biomesteam.biomescaverns">0.02</BMT_Goeto>
+			<HC_Bullfrog MayRequire="hc.animal.2">1.25</HC_Bullfrog>
+			<Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
+			<GiantToad MayRequire="yamazakioghw.gianttoads">0.12</GiantToad>
+			<KingToad MayRequire="yamazakioghw.gianttoads">0.001</KingToad>
+			<BMT_Goeto MayRequire="biomesteam.biomescaverns">0.045</BMT_Goeto>
+			
+			<!-- Non-frogs -->
+			<BMT_GiantSlug MayRequire="biomesteam.biomescaverns">0.005</BMT_GiantSlug>
+			<BMT_GiantSnail MayRequire="biomesteam.biomescaverns">0.005</BMT_GiantSnail>
+			<BMT_GlowSlug MayRequire="biomesteam.biomescaverns">0.005</BMT_GlowSlug>
+			<BMT_GlowSnail MayRequire="biomesteam.biomescaverns">0.005</BMT_GlowSnail>
 			<Onibi MayRequire="x3v21.jmc">0.01</Onibi> <!-- Will-o-wisp -->
 		</wildAnimals>
 		<allowedPackAnimals>

@@ -300,7 +300,7 @@
 			</li>
 			<li MayRequire="Ludeon.Rimworld.Biotech">
 			  <def>HumanlikePreTeenager</def>
-			  <minAge>6</minAge>
+			  <minAge>4</minAge>
 			  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
 			  <soundDeath>Pawn_Megascarab_Death</soundDeath>
 			  <soundCall>Pawn_Megascarab_Call</soundCall>
@@ -316,7 +316,7 @@
 			</li>
 			<li>
 			  <def>HumanlikeAdult</def>
-			  <minAge>13</minAge>
+			  <minAge>11</minAge>
 			  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
 			  <soundDeath>Pawn_Megascarab_Death</soundDeath>
 			  <soundCall>Pawn_Megascarab_Call</soundCall>
@@ -326,9 +326,9 @@
 		  <lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
 			<Firefighter>0</Firefighter>
 			<Patient>0</Patient>
-			<Doctor>14</Doctor>
+			<Doctor>12</Doctor>
 			<PatientBedRest>0</PatientBedRest>
-			<Childcare MayRequire="Ludeon.Rimworld.Biotech">3</Childcare>
+			<Childcare MayRequire="Ludeon.Rimworld.Biotech">0</Childcare>
 			<BasicWorker>1</BasicWorker>
 			<Warden>3</Warden>
 			<Handling>0</Handling>
@@ -340,11 +340,11 @@
 			<PlantCutting>6</PlantCutting>
 			<Smithing>4</Smithing>
 			<Tailoring>6</Tailoring>
-			<Art>15</Art>
+			<Art>11</Art>
 			<Crafting>2</Crafting>
 			<Hauling>1</Hauling>
 			<Cleaning>6</Cleaning>
-			<Research>13</Research>
+			<Research>11</Research>
 		  </lifeStageWorkSettings>  
 		  <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 		  <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
@@ -365,8 +365,8 @@
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(10.999,130)</li>
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(14.001,130)</li>
-			  <li>(15,100)</li>
-			  <li>(25,100)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(15,100)</li>
+			  <li>(22,100)</li>
 			  <li>(35,30)</li>
 			  <li>(45,18)</li>
 			  <li>(55,10)</li>
@@ -421,7 +421,6 @@
 		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantXenogerm</li>
 		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantIUD</li>
 		  <li MayRequire="Ludeon.Rimworld.Biotech">RemoveIUD</li>
-		  <li MayRequire="Ludeon.Rimworld.Biotech">TerminatePregnancy</li>
 		</recipes>
 		<!--
 		<comps>
@@ -452,18 +451,6 @@
           </pawnKindEntries>
           <factionDefs>
             <li>PlayerTribe</li>
-          </factionDefs>
-        </li>
-        <li>
-          <pawnKindEntries>
-            <li>
-              <kindDefs>
-                <li>PlayerJeub</li>
-              </kindDefs>
-              <chance>5</chance>
-            </li>
-          </pawnKindEntries>
-          <factionDefs>
             <li>PlayerColony</li>
           </factionDefs>
         </li>
@@ -481,7 +468,7 @@
           <kindDefs>
             <li>PlayerJeub</li>
           </kindDefs>
-          <chance>6.0</chance>
+          <chance>14.0</chance>
         </li>
       </alienrefugeekinds>
       <alienwandererkinds>

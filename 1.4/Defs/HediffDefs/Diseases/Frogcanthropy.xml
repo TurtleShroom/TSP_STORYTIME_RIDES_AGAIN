@@ -9,7 +9,9 @@
     <label>frog-like arm</label>
     <labelNoun>a froglike arm</labelNoun>
     <description>The arm has warped into one similar to a frog- very powerful.</description>
-    <descriptionHyperlinks><ThingDef>FrogArm</ThingDef></descriptionHyperlinks>
+    <descriptionHyperlinks>
+		<ThingDef>FrogArm</ThingDef>
+	</descriptionHyperlinks>
     <spawnThingOnRemoved>FrogArm</spawnThingOnRemoved>
 	<isBad>false</isBad>
     <tendable>false</tendable>
@@ -40,7 +42,6 @@
           </li>
         </tools>
       </li>
-	  
     </comps>
     <addedPartProps>
       <solid>false</solid>
@@ -74,7 +75,7 @@
   
   <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
     <defName>InstallFrogArm</defName>
-    <label>install froglike arm</label>
+    <label>install frog-like arm</label>
     <description>Install a frog-like arm.</description>
     <descriptionHyperlinks>
       <ThingDef>FrogArm</ThingDef>
@@ -110,7 +111,9 @@
     <label>froglike leg</label>
     <labelNoun>a froglike leg</labelNoun>
     <description>The leg has warped into one similar to a frog- very good for jumping or swimming around quickly.</description>
-    <descriptionHyperlinks><ThingDef>FrogLeg</ThingDef></descriptionHyperlinks>
+    <descriptionHyperlinks>
+		<ThingDef>FrogLeg</ThingDef>
+	</descriptionHyperlinks>
     <spawnThingOnRemoved>FrogLeg</spawnThingOnRemoved>
 	<isBad>false</isBad>
     <tendable>false</tendable>
@@ -118,23 +121,18 @@
 	<scenarioCanAdd>false</scenarioCanAdd>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
-		<addedPartProps>
-			<solid>false</solid>
-			<partEfficiency>1.2</partEfficiency>
-			<betterThanNatural>true</betterThanNatural>
-		</addedPartProps>
 	<stages>
 		<li>
 			<becomeVisible>true</becomeVisible>
 			<statOffsets>
-				<SwimSpeed MayRequire="biomesteam.biomesislands">1.5</SwimSpeed> <!-- One leg each, total 3 -->
-				<MoveSpeed>0.5</MoveSpeed> <!-- One leg each, total 1 -->
+				<SwimSpeed MayRequire="biomesteam.biomesislands">2</SwimSpeed> <!-- One leg each, total four -->
+				<MoveSpeed>0.5</MoveSpeed> <!-- One leg each, total one -->
 			</statOffsets>
 		</li>
 	</stages>
     <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>1.5</partEfficiency>
+      <solid>false</solid>
+      <partEfficiency>1.15</partEfficiency>
       <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
   </HediffDef>
@@ -199,7 +197,9 @@
     <label>frog's tongue</label>
     <labelNoun>a froglike tongue</labelNoun>
     <description>The tongue has stretched out like that of a frog, giving it a biological ranged attack! A frog's tongue is attatched to the front of its mouth instead of the back. Most sapient creatures have a mouth too small to fit a frog tongue without significant difficulty, making speaking extremely difficult.</description>
-    <descriptionHyperlinks><ThingDef>FrogTongue</ThingDef></descriptionHyperlinks>
+    <descriptionHyperlinks>
+		<ThingDef>FrogTongue</ThingDef>
+	</descriptionHyperlinks>
     <spawnThingOnRemoved>FrogTongue</spawnThingOnRemoved>
 	<isBad>false</isBad>
     <tendable>false</tendable>
@@ -222,7 +222,7 @@
 				</li>
 			</capMods>
 			<statOffsets>
-				<EatingSpeed>0.1</EatingSpeed>
+				<EatingSpeed>0.25</EatingSpeed>
 			</statOffsets>
 		</li>
 	</stages>
@@ -237,7 +237,7 @@
 							<accuracyLong>0.7</accuracyLong>
 							<hasStandardCommand>true</hasStandardCommand>
 							<defaultProjectile>ST_Lick</defaultProjectile>
-							<warmupTime>1.7</warmupTime>
+							<warmupTime>0.7</warmupTime>
 							<range>6</range>				
 							<soundCast>Lick</soundCast>
 							<muzzleFlashScale>0</muzzleFlashScale>
@@ -315,7 +315,9 @@
 		<label>froglike eye</label>
 		<labelNoun>a froglike eye</labelNoun>
 		<description>This Pawn's eye has warped into the eye of a frog. Frogs actually have three eyelids, with two being transparent, and the third, called the nictating membrane, increases the frog's vision underwater. Frogs have a field of view of nearly three hundred sixty degrees, allowing them to see what is in front and behind them simultaneously. When eating, a frog retracts its eyeballs into its head in order to push the prey its tonge catches into hits mouth, after which it shuts its mouth and uses its teeth to keep the victim from escaping. Unfortunately, frog eyes are also near-sighted, but their depth perception is greatly increased, making them catch prey with their tongue more accurately. \n \n Due to the fact that frog eyes are drastically different in purpose and function against the eyes of most sapient races, those possessing them are given a mixed bag of blessings and curses. Werefrog eyes increase depth perception, allow its host to spot melee attacks from any direction, and increase eating speed. However, outside the evolutionary circumstances a frog would benefit, the eye is an overall reduction in the quality of its host's vision.</description>
-		<descriptionHyperlinks><ThingDef>FrogEye</ThingDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<ThingDef>FrogEye</ThingDef>
+		</descriptionHyperlinks>
 		<spawnThingOnRemoved>FrogEye</spawnThingOnRemoved>
 		<isBad>false</isBad>
 		<tendable>false</tendable>
@@ -334,7 +336,7 @@
 				<statOffsets>
 					<AimingDelayFactor>-0.025</AimingDelayFactor> <!-- One per each eye, total 0.05 -->
 					<ShootingAccuracyPawn>0.125</ShootingAccuracyPawn> <!-- One per each eye, total 0.25 -->
-					<MeleeDodgeChance>0.2</MeleeDodgeChance> <!-- One per each eye, total 0.4 -->
+					<MeleeDodgeChance>0.4</MeleeDodgeChance> <!-- One per each eye, total 0.8 -->
 					<MeleeHitChance>-0.15</MeleeHitChance> <!-- One per each eye, total 0.3 -->
 				</statOffsets>
 			</li>
@@ -344,7 +346,7 @@
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogEye</defName>
     <label>froglike eye</label>
-    <description>A human eye that has been warped into a froggy one.</description>
+    <description>A human eye that has been warped into a frog's eye, complete with three eyelids!</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -401,7 +403,9 @@
     <label>deformed frog stomach</label>
     <labelNoun>a frog like stomach</labelNoun>
     <description>The stomach has warped into one similar to a frog, although it is deformed. While this frog stomach can and will process any nutriets a frog or man can consume, it creates an unfulfillable compulsion to eat insect meat.</description>
-    <descriptionHyperlinks><ThingDef>FrogStomach</ThingDef></descriptionHyperlinks>
+    <descriptionHyperlinks>
+		<ThingDef>FrogStomach</ThingDef>
+	</descriptionHyperlinks>
     <spawnThingOnRemoved>FrogStomach</spawnThingOnRemoved>
 	<isBad>true</isBad>
 	<makesSickThought>false</makesSickThought>
@@ -411,7 +415,7 @@
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
     <addedPartProps>
-		<solid>true</solid>
+		<solid>false</solid>
 		<partEfficiency>0.9</partEfficiency>
 		<betterThanNatural>false</betterThanNatural>
     </addedPartProps>
@@ -430,7 +434,7 @@
   
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogStomach</defName>
-    <label>froglike stomach</label>
+    <label>deformed frog-like stomach</label>
     <description>A deformed stomach baring elements of werefrogs.</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
@@ -453,8 +457,8 @@
   
   <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
     <defName>InstallFrogStomach</defName>
-    <label>install froglike stomach</label>
-    <description>Install a froglike stomach.</description>
+    <label>install deformed frog stomach</label>
+    <description>Install a deformed frog stomach.</description>
     <descriptionHyperlinks>
       <ThingDef>FrogStomach</ThingDef>
       <HediffDef>FrogStomach</HediffDef>
@@ -501,7 +505,9 @@
     <label>froglike lung</label>
     <labelNoun>a froglike lung</labelNoun>
     <description>Frogs breathe through their skin, supplementing their lungs and mouth! Even without the skin respiration, a frog's powerful lungs allow it to stay underwater far longer without coming up for breath.</description>
-    <descriptionHyperlinks><ThingDef>FrogLung</ThingDef></descriptionHyperlinks>
+    <descriptionHyperlinks>
+		<ThingDef>FrogLung</ThingDef>
+	</descriptionHyperlinks>
     <spawnThingOnRemoved>FrogLung</spawnThingOnRemoved>
 	<isBad>false</isBad>
     <tendable>false</tendable>
@@ -524,7 +530,7 @@
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogLung</defName>
     <label>froglike lung</label>
-    <description>A human lung that has been warped into a froggy one.</description>
+    <description>A human lung that has been warped into a frog's lung. Does not allow breathing through the skin.</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -547,12 +553,12 @@
   <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
     <defName>InstallFrogLung</defName>
     <label>install froglike lung</label>
-    <description>Install a froglike lung.</description>
+    <description>Install a frog=like lung.</description>
     <descriptionHyperlinks>
       <ThingDef>FrogLung</ThingDef>
       <HediffDef>FrogLung</HediffDef>
     </descriptionHyperlinks>
-    <jobString>Installing froglike lung.</jobString>
+    <jobString>Installing frog-like lung.</jobString>
     <ingredients>
       <li>
         <filter>
@@ -610,7 +616,7 @@
 			<thingToTurnTo>Werefrog</thingToTurnTo>
 			<severityToTurn>0.99</severityToTurn>
 			<numberOfSpawn>
-				<li>1</li>
+				<li>2</li>
 				<li>5</li>
 			</numberOfSpawn>
 			<isHostile>true</isHostile> 
@@ -778,5 +784,6 @@
 		</makeImmuneTo>
       </li>
     </stages>
+	<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
   </HediffDef>
 </Defs>

@@ -5,6 +5,7 @@
     <!-- <defName>runeEssence</defName> -->
     <label>rune essence</label>
     <description>A beautiful stone brimming with potential.</description>
+	<uiIconPath>Things/Items/Resources/Runes/RuneBase</uiIconPath>
     <graphicData>
 		<texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
 		<color>(110, 115, 115)</color>
@@ -12,12 +13,15 @@
     <statBases>
       <MaxHitPoints>500</MaxHitPoints>
 	  <Beauty>2</Beauty>
+	  <Cleanliness>0</Cleanliness>
+	  <MarketValue>0</MarketValue>
     </statBases>
     <building>
-      <mineableThing>ChunkEssence</mineableThing>
-      <mineableDropChance>0.6</mineableDropChance>
+      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <!-- <smoothedThing>SmoothedEssence</smoothedThing> -->
     </building>
+	<!--
 	<modExtensions>
 		<li Class="BiomesCore.DefModExtensions.BiomesMap" MayRequire="biomesteam.biomescore">
 			<allowedBiomes MayRequire="biomesteam.biomescore">
@@ -25,27 +29,31 @@
 			</allowedBiomes>
 		</li>
 	</modExtensions>
+	-->
   </ThingDef>
   
   <ThingDef ParentName="EssenceBase">
     <defName>SmoothedEssence</defName>
     <label>rune essence</label>
     <description>A beautiful stone brimming with potential.</description>
+	<uiIconPath>Things/Items/Resources/Runes/RuneBase</uiIconPath>
     <graphicData>
       <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
     </graphicData>
     <statBases>
       <Beauty>2</Beauty>
-      <MarketValue>25</MarketValue>
+      <MarketValue>1</MarketValue>
+	  <Cleanliness>0</Cleanliness>
     </statBases>
     <building>
       <isNaturalRock>true</isNaturalRock>
-      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
-      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <mineableThing>ChunkEssence</mineableThing>
+      <mineableDropChance>0.6</mineableDropChance>
       <smoothedThing />
     </building>
     <saveCompressible>false</saveCompressible>
     <repairEffect>Repair</repairEffect>
+	<!--
 	<modExtensions Inherit="False">
 		<li Class="BiomesCore.DefModExtensions.BiomesMap" MayRequire="biomesteam.biomescore">
 			<allowedBiomes MayRequire="biomesteam.biomescore">
@@ -53,21 +61,52 @@
 			</allowedBiomes>
 		</li>
 	</modExtensions>
+	-->
+  </ThingDef>
+  
+  <ThingDef ParentName="EssenceBase">
+    <defName>SmoothedEssence_Ore</defName>
+    <label>rune essence</label>
+    <description>An isolated pocket of rune essence embedded into the earth. Normally, rune essence doesn't appear outside of deep caverns comprised of nothing but rune essence, but it can manifest elsewhere. Mining this deposit will yield massive amounts of blank runes for cutting.</description>
+	<uiIconPath>Things/Items/Resources/Runes/RuneBase</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
+	  <color>(120, 125, 125)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+	  <Beauty>2</Beauty>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>ChunkEssence</mineableThing>
+      <mineableYield>3</mineableYield>
+      <mineableScatterCommonality>0.2</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>6~8</mineableScatterLumpSizeRange>
+      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <smoothedThing />
+    </building>
   </ThingDef>
   
   <ThingDef ParentName="ChunkRockBase">
     <defName>ChunkEssence</defName>
     <label>rune essence chunk</label>
+	<pathCost>0</pathCost>
+	<pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
     <graphicData>
       <color>(110, 115, 115)</color>
     </graphicData>
     <statBases>
-		<Beauty>1</Beauty>
-		<Mass>15</Mass>
+		<Beauty>2</Beauty>
+		<Mass>25</Mass>
+		<Cleanliness>0</Cleanliness>
+		<MarketValue>0</MarketValue>
     </statBases>
+	<stackLimit Inherit="False">25</stackLimit>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <butcherProducts>
-      <BlankRune>20</BlankRune>
+      <BlankRune>25</BlankRune>
     </butcherProducts>
   </ThingDef>
 

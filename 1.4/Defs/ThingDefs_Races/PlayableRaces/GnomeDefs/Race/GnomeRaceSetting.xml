@@ -95,7 +95,7 @@
 			</generalSettings>
 			<graphicPaths>
 				<body>Things/Pawn/Humanlike/Gnome/Body/</body>
-				<head>Things/Pawn/Humanlike/Gnome/Head/</head>
+				<!-- <head>Things/Pawn/Humanlike/Gnome/Head/</head> -->
 			</graphicPaths>
 			<relationSettings>
 				<relationChanceModifierSibling>3</relationChanceModifierSibling>
@@ -413,11 +413,12 @@
 							<kindDefs MayRequire="Ludeon.RimWorld.Royalty">
 								<li MayRequire="Ludeon.RimWorld.Royalty">TSP_ST_RoyaltyGnoble</li>
 							</kindDefs>
-							<chance MayRequire="Ludeon.RimWorld.Royalty">3.0</chance>
+							<chance MayRequire="Ludeon.RimWorld.Royalty">6</chance>
 						</li>
 					</pawnKindEntries>
 					<factionDefs MayRequire="Ludeon.RimWorld.Royalty">
 						<li MayRequire="Ludeon.RimWorld.Royalty">Empire</li>
+						<li MayRequire="oskarpotocki.vfe.empire">VFEE_NewFamily</li>
 					</factionDefs>
 				</li>
 				<li MayRequire="Emilskin.forgRace.Forgs">
@@ -431,6 +432,7 @@
 					</pawnKindEntries>
 					<factionDefs MayRequire="Emilskin.forgRace.Forgs">
 						<li MayRequire="Emilskin.forgRace.Forgs">TreeGnomeEmpire</li>
+						<li MayRequire="Emilskin.forgRace.Forgs,oskarpotocki.vfe.empire">VFEE_NewFamily</li>
 					</factionDefs>
 				</li>
 			</startingColonists>
@@ -446,6 +448,7 @@
 				<li>
 					<kindDefs>
 						<li>PlayerGnome</li>
+						<li>TSP_ST_RoyaltyGnoble</li>
 					</kindDefs>
 					<chance>6</chance>
 				</li>
@@ -478,6 +481,7 @@
 					</pawnKindEntries>
 					<factionDefs MayRequire="Ludeon.RimWorld.Royalty">
 						<li MayRequire="Ludeon.RimWorld.Royalty">Empire</li>
+						<li MayRequire="oskarpotocki.vfe.empire">VFEE_NewFamily</li>
 					</factionDefs>
 				</li>
 			</alienwandererkinds>
