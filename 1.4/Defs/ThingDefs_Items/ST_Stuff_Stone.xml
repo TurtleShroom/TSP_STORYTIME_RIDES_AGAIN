@@ -4,7 +4,7 @@
  <ThingDef ParentName="ResourceBase">
     <defName>Mordor_Brick</defName>
     <label>Mordor Brick</label>
-    <description>The Black Brick of Mordor. While Mordor is not an actual location in the galaxy, its name has been used in Old Earth culture for thousands of years to indicate an evil, jagged, volcanic hellscape of obsidian, lava, and danger. It was described as such an accursed place, where darkness and the corruption of magical elements reigned, that Mordor could not simply be entered. Mordor Brick creation entails cursing stone materials with the metaphysical affinities of the rotted corpses of one's enemies. Mordor Bricks can be combined with iron and silver to form Mordorite.</description>
+    <description>The Black Brick of Mordor. While Mordor is not an actual location in the galaxy, its name has been used in Old Earth culture for thousands of years to indicate an evil, jagged, volcanic hellscape of obsidian, lava, and danger. It was described as such an accursed place, where darkness and the corruption of magical elements reigned, that Mordor could not simply be entered. \n \n Mordor Brick creation entails cursing stone materials with the metaphysical affinities of the rotted corpses of one's enemies. Mordor Bricks can be combined with iron or steel and silver to form Mordorite.</description>
     <graphicData>
       <texPath>Things/Item/Resource/StoneBlocks</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -17,8 +17,8 @@
     <statBases>
       <MarketValue Inherit="False">6</MarketValue>
       <Mass>0.5</Mass>
-      <StuffPower_Armor_Sharp>1</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>1</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Sharp>0.95</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.95</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>2</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>1</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>40</StuffPower_Insulation_Heat>
@@ -45,16 +45,17 @@
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <statOffsets>
-		<Beauty>2</Beauty>
+		<Beauty>1</Beauty>
 		<Flammability>0</Flammability>
       </statOffsets>
       <statFactors>
         <MaxHitPoints>3.2</MaxHitPoints>
-        <WorkToMake>6</WorkToMake>
+        <WorkToMake>4</WorkToMake>
         <WorkToBuild>1.5</WorkToBuild>
-        <Beauty>0.5</Beauty>
+        <Beauty>2</Beauty>
         <Flammability>0</Flammability>
         <MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
+		<Insulation_Heat>13</Insulation_Heat>
       </statFactors>
     </stuffProps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
@@ -113,7 +114,7 @@
       </statOffsets>
       <statFactors>
         <MaxHitPoints>0.5</MaxHitPoints>
-        <WorkToMake>0.8</WorkToMake>
+        <WorkToMake>0.7</WorkToMake>
         <WorkToBuild>0.8</WorkToBuild>
         <Beauty>-0.2</Beauty>
         <Flammability>0</Flammability>
@@ -136,7 +137,7 @@
       <Flesh_Brick>4</Flesh_Brick>
     </costList>
 	<statBases>
-      <WorkToBuild>500</WorkToBuild>
+      <WorkToBuild>50</WorkToBuild>
       <Beauty>-2</Beauty>
     </statBases>
   </TerrainDef>
@@ -152,7 +153,9 @@
     </graphicData>
     <statBases>
       <Mass>0.5</Mass>
+	  <Beauty>0.5</Beauty>
     </statBases>
+	<stackLimit>200</stackLimit>
     <stuffProps>
       <color>(110, 115, 115)</color>
 	  <commonality>0.025</commonality>
@@ -168,7 +171,7 @@
         <Beauty>2</Beauty>
         <MaxHitPoints>1.1</MaxHitPoints>
         <WorkToBuild>0.9</WorkToBuild>
-        <WorkToMake>1.1</WorkToMake>
+        <WorkToMake>1</WorkToMake>
       </statFactors>
       <statOffsets>
         <Beauty>1</Beauty>

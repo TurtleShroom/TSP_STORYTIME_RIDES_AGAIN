@@ -28,6 +28,7 @@
 		  <Flammability>0.2</Flammability>
 		  <Nutrition>0.09</Nutrition>
 		</statBases>
+		<stackLimit>500</stackLimit>
 		<comps>
 		</comps>
 		<ingestible>
@@ -35,7 +36,7 @@
 			<foodType>AnimalProduct, Fluid</foodType>
 			<specialThoughtDirect>AteOoze</specialThoughtDirect>
 			<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient> <!-- It tastes just fine when cooked! -->
-			<babiesCanIngest>true</babiesCanIngest>
+			<babiesCanIngest MayRequire="ludeon.rimworld.biotech">true</babiesCanIngest>
 		</ingestible>
 		<thingCategories>
 		  <li>AnimalProductRaw</li>

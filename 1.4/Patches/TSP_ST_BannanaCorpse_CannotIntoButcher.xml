@@ -94,17 +94,19 @@
 		</mods>
 		<!-- If any one of these are, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter/thingDefs</xpath>
 			<value>
-				<li MayRequireAnyOf="vanillaexpanded.vplantse,mlie.tropickapprainforestmod,catlover366.monketime,biomesteam.biomesislands">ST_BananaScytheCorpse</li>
+				<li>ST_BananaScytheCorpse</li>
 			</value>
 		</match>
 		<!-- If none of these Mods are installed at all, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter</xpath>
 			<value>
 				<thingDefs>
-					<li MayRequireAnyOf="vanillaexpanded.vplantse,mlie.tropickapprainforestmod,catlover366.monketime,biomesteam.biomesislands">ST_BananaScytheCorpse</li>
+					<li>ST_BananaScytheCorpse</li>
 				</thingDefs>
 			</value>
 		</nomatch>

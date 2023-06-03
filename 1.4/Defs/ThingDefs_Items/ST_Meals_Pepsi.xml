@@ -19,13 +19,16 @@
 			<preferability>MealFine</preferability>
 			<ingestEffect>EatVegetarian</ingestEffect>
 			<ingestSound>Ingest_Beer</ingestSound>
-			<babiesCanIngest>true</babiesCanIngest>
-			<outcomeDoers>
+			<babiesCanIngest MayRequire="ludeon.rimworld.biotech">true</babiesCanIngest>
+			<outcomeDoers Inherit="False">
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>ST_HedPepsi</hediffDef>
 					<severity>1</severity>
 				</li>
 			</outcomeDoers>
 		</ingestible>
+		<thingCategories>
+			<li MayRequire="rh2.randy.burger.fast.food">RH2_SoftDrinks</li>
+		</thingCategories>
 	</ThingDef>
 </Defs>
