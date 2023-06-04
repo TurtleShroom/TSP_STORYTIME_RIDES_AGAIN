@@ -102,27 +102,39 @@
       <drawSize>(0.9, 0.9)</drawSize>
     </graphicData>
     <statBases>
-		<MarketValue>4</MarketValue>
-		<WorkToMake>1500</WorkToMake>
-		<MaxHitPoints>200</MaxHitPoints>
+		<MarketValue Inherit="False">4</MarketValue>
+		<WorkToMake>500</WorkToMake>
+		<MaxHitPoints>100</MaxHitPoints>
 		<Mass>0.001</Mass>
 		<Flammability>0</Flammability>
 		<Insulation_Cold>0</Insulation_Cold>
 		<Insulation_Heat>0</Insulation_Heat>
-		<EquipDelay>5</EquipDelay>
+		<EquipDelay>0.01</EquipDelay>
     </statBases>
     <thingCategories>
       <li>Headgear</li>
     </thingCategories>
     <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
     <costStuffCount>15</costStuffCount>
-    <stuffCategories>
-      <li>Metallic</li>
+	<stuffCategories>
+		<li>Metallic</li>
+		<li>Woody</li>
+		<li>Stony</li>
+
+		<!-- Mod support -->
+		<li MayRequire="TaosChagic.Igloo">Snowy</li>
+		<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+		<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+		<li MayRequire="sarg.rimbees">RB_Waxy</li>
       
-      <!-- Support for Mod Stuff -->
-      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
-      <li MayRequire="Dubwise.Rimefeller">Composite</li>
-      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+		<!-- Support for Mod Stuff -->
+		<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <apparel>
 		<bodyPartGroups>
