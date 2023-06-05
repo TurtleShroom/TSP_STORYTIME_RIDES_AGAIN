@@ -22,6 +22,22 @@
 		<xpath>/Defs/ThingDef[@Name="AmuletBase"]</xpath>
 		<!-- If it does, add this replacement. -->
 		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[@Name="AmuletBase"]/apparel/bodyPartGroups</xpath>
+			<success>Always</success>
+			<value>
+				<bodyPartGroups>
+					<li>Neck</li>
+				</bodyPartGroups>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[@Name="MedallionBase"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[@Name="MedallionBase"]/apparel/layers</xpath>
 			<success>Always</success>
 			<value>
@@ -35,7 +51,23 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[@Name="AmuletBase"]</xpath>
+		<xpath>/Defs/ThingDef[@Name="MedallionBase"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[@Name="MedallionBase"]/apparel/bodyPartGroups</xpath>
+			<success>Always</success>
+			<value>
+				<bodyPartGroups>
+					<li>Neck</li>
+				</bodyPartGroups>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[@Name="BasicRingBase"]</xpath>
 		<!-- If it does, add this replacement. -->
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[@Name="BasicRingBase"]/apparel/layers</xpath>
@@ -44,6 +76,79 @@
 				<layers>
 					<li>ST_Jewelry</li>
 				</layers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[@Name="BasicRingBase"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[@Name="BasicRingBase"]/apparel/bodyPartGroups</xpath>
+			<success>Always</success>
+			<value>
+				<bodyPartGroups>
+					<li>MiddleFingers</li>
+				</bodyPartGroups>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_Beads"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_Beads"]/apparel</xpath>
+			<success>Always</success>
+			<value>
+				<apparel Inherit="False">
+					<wornGraphicPath>Things/Apparel/Beads/Beads</wornGraphicPath>
+					<layers>
+						<li>ST_Jewelry</li>
+					</layers>
+					<bodyPartGroups>
+						<li>Neck</li>
+					</bodyPartGroups>
+					<countsAsClothingForNudity>false</countsAsClothingForNudity>
+					<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+					<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+				</apparel>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DoctorStupid_Apparel_Necklace"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "DoctorStupid_Apparel_Necklace" or defName = "DoctorStupid_Apparel_Amulet" or defName = "DoctorStupid_Apparel_Beads"]/apparel/layers</xpath>
+			<success>Always</success>
+			<value>
+				<layers>
+					<li>ST_Jewelry</li>
+				</layers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DoctorStupid_Apparel_Necklace"]</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "DoctorStupid_Apparel_Necklace" or defName = "DoctorStupid_Apparel_Amulet" or defName = "DoctorStupid_Apparel_Beads"]/apparel/bodyPartGroups</xpath>
+			<success>Always</success>
+			<value>
+				<bodyPartGroups>
+					<li>Neck</li>
+				</bodyPartGroups>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

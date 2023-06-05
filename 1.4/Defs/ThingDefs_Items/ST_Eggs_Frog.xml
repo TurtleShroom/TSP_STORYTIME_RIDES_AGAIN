@@ -44,6 +44,9 @@
 				<hatcherPawn>SpringPeeper</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggUnfertBase">
@@ -77,6 +80,9 @@
 				<hatcherPawn>ST_BullFrog</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggUnfertBase">
@@ -110,6 +116,9 @@
 				<hatcherPawn>TomatoFrog</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggUnfertBase">
@@ -143,6 +152,9 @@
 				<hatcherPawn>BudgettFrog</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
   
 	<ThingDef ParentName="EggUnfertBase">
@@ -176,6 +188,9 @@
 				<hatcherPawn>ST_TreeFrog</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggUnfertBase">
@@ -209,6 +224,9 @@
 				<hatcherPawn>PoisonDartFrog</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 	
 	<ThingDef ParentName="EggUnfertBase">
@@ -242,6 +260,9 @@
 				<hatcherPawn>ST_Toad</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 	
 	<!--
@@ -270,10 +291,13 @@
 		</statBases>
 		<comps>
 			<li Class="CompProperties_Hatcher">
-				<hatcherDaystoHatch>6</hatcherDaystoHatch>
+				<hatcherDaystoHatch>9</hatcherDaystoHatch>
 				<hatcherPawn>CyberFrogDocile</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>  
 
 	<!--
@@ -317,6 +341,9 @@
 		<ingestible>
 			<foodType Inherit="False">Seed, Plant, VegetarianAnimal, VegetarianRoughAnimal, DendrovoreAnimal, Tree, Kibble</foodType>
 		</ingestible>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggUnfertBase">
@@ -337,28 +364,31 @@
 	</ThingDef>
 
 	<ThingDef ParentName="EggFertBase">
-	<defName>LeviathanFrogEggFertilized</defName>
-	<label>leviathan frog egg (fert.)</label>
-	<description>A fertilized leviathan frog egg. If all goes well, it should hatch into a leviathan frog tadpole. It can be eaten raw, but it's much better cooked.</description>
-	<graphicData>
-		<color>(254,216,177)</color>
-		<drawSize>2</drawSize>
-	</graphicData>
-	<statBases>
-		<MarketValue>30.0</MarketValue>
-		<Nutrition Inherit="False">1</Nutrition>
-	</statBases>
-	<comps>
-		<li Class="CompProperties_Hatcher">
-			<hatcherDaystoHatch>17</hatcherDaystoHatch>
-			<hatcherPawn>LeviathanFrog</hatcherPawn>
-		</li>
-		<li Class="CompProperties_TemperatureRuinable">
-			<minSafeTemperature>6</minSafeTemperature>
-			<maxSafeTemperature>90</maxSafeTemperature>
-			<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
-		</li>
-	</comps>
+		<defName>LeviathanFrogEggFertilized</defName>
+		<label>leviathan frog egg (fert.)</label>
+		<description>A fertilized leviathan frog egg. If all goes well, it should hatch into a leviathan frog tadpole. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>30.0</MarketValue>
+			<Nutrition Inherit="False">1</Nutrition>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>17</hatcherDaystoHatch>
+				<hatcherPawn>LeviathanFrog</hatcherPawn>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>6</minSafeTemperature>
+				<maxSafeTemperature>90</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef> 
 
 	<ThingDef ParentName="EggUnfertBase">
@@ -366,7 +396,7 @@
 		<label>Judas' frog egg (unfert.)</label>
 		<description>An unfertilized Judas' frog egg. It can be eaten raw, but it's much, much better cooked.</description>
 		<graphicData>
-		<color>(254,216,177)</color>
+			<color>(254,216,177)</color>
 		</graphicData>
 		<statBases>
 			<MarketValue>7.0</MarketValue>
@@ -409,25 +439,30 @@
 	<ThingDef ParentName="EggFertBase">
 		<defName>FireToadEggFertilized</defName>
 		<label>fire-bellied toad egg (fert.)</label>
-		<description>A fertilized fire-bellied toad egg. If all goes well, it should hatch into a fire-bellied toad tadpole. It can be eaten raw, but it's much better cooked.</description>
+		<description>A fertilized fire-bellied toad egg. If all goes well, it should hatch into a fire-bellied toad tadpole. It can be eaten raw, but it's much better cooked. The firery abilities of the fire-bellied toad within make the egg impossible to spoil due to temperature.</description>
 		<graphicData>
 			<color>(254,216,177)</color>
 		</graphicData>
 		<statBases>
 		<MarketValue>7.0</MarketValue>
 		</statBases>
-		<comps>
+		<comps Inherit="False">
 			<li Class="CompProperties_Hatcher">
 				<hatcherDaystoHatch>3</hatcherDaystoHatch>
 				<hatcherPawn>FireBelliedToad</hatcherPawn>
 			</li>
 			<!-- The egg naturally keeps itself warm -->
+			<!--
 			<li Class="CompProperties_TemperatureRuinable" Inherit="False">
 				<minSafeTemperature Inherit="False">-200</minSafeTemperature>
 				<maxSafeTemperature Inherit="False">200</maxSafeTemperature>
 				<progressPerDegreePerTick>0</progressPerDegreePerTick>
 			</li>
+			-->
 		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="ResourceBase">
@@ -444,6 +479,12 @@
 			<Nutrition Inherit="False">0</Nutrition>
 			<Mass>0.15</Mass>
 		</statBases>
+		<!--
+		<ingestible>
+			<foodType>None</foodType>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+		-->
 		<thingCategories Inherit="False">
 			<li>EggsFertilized</li>
 		</thingCategories>
@@ -458,5 +499,8 @@
 				<hatcherPawn>BloodFrog</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
 	</ThingDef>
 </Defs>

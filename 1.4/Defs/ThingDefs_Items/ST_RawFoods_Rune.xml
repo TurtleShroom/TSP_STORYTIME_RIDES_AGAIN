@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>TSP_ST_RuneJuice</defName>
+		<label>Rune Juice</label>
+		<description>A mysterious, delicious beverage derived from the mysterious properties of Rune Essence stones; it is also milked from the rare Runic Creatures of the fabled Rune Essence Mines.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/MilkTypes/Green_Milk</texPath>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>4</MarketValue>
+			<Mass>0.001</Mass>
+			<MaxHitPoints>1060</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Nutrition>0.08</Nutrition>
+			<FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>20</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<foodType>AnimalProduct, Fluid</foodType>
+			<babiesCanIngest>true</babiesCanIngest>
+		</ingestible>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+	</ThingDef>
+</Defs>

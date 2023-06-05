@@ -215,4 +215,21 @@
 			</value>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="EggToadFertilized"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="EggToadFertilized"]</xpath>
+			<value>
+				<tradeTags>
+					<li>UnfertilizedFrogEgg</li>
+					<li>FertilizedFrogEgg</li>
+				</tradeTags>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>
