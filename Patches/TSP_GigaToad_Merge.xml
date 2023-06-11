@@ -91,7 +91,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="KingToad"]/tradeTags</xpath>
 			<value>
-				<li>AnimalFrog</li>
+				<li>AnimalFrogRare</li>
 				<li>AnimalExotic</li>
 			</value>
 		</match>
@@ -122,6 +122,20 @@
 				</li>
 			</value>
 		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="GiantToad"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="GiantToad"]/race/body</xpath>
+			<value>
+				<body>ST_FrogLike</body>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
@@ -228,6 +242,20 @@
 					<li>UnfertilizedFrogEgg</li>
 					<li>FertilizedFrogEgg</li>
 				</tradeTags>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="KingToad"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="KingToad"]/race/body</xpath>
+			<value>
+				<body>ST_FrogLike</body>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
