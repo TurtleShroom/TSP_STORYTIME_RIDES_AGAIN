@@ -21,6 +21,7 @@
 			  <li>SkinColorOverride</li>
 			  <li>SkinColor</li>
 			  <li>Ears</li>
+			  <li>Melanin</li>
 			</blackGeneTags>
 			<traitList>
 				<li>BeanMan</li>
@@ -32,7 +33,6 @@
 				<li MayRequire="Ludeon.Rimworld.Biotech">Apparel_AirwireHeadset</li>
 				<li MayRequire="Ludeon.Rimworld.Biotech">Apparel_IntegratorHeadset</li>
 				<li MayRequire="Ludeon.Rimworld.Biotech">Apparel_GasMask</li>
-				<li MayRequire="Ludeon.Rimworld.Biotech">Apparel_ClothMask</li>
 				-->
             </whiteApparelList>
 		  </raceRestriction>
@@ -322,8 +322,8 @@
 		  <baseHungerRate>1.1</baseHungerRate>
 		  <!-- <herdAnimal>true</herdAnimal> -->
 		  <predator Inherit="False">false</predator> <!-- Bulborbs are VERY MUCH predators, but SAPIENT Bulborbs do not randomly go and eat animals when there is food around. This fixes a weird occurence where a Bulborb at the start of a game will try and eat a nearby animal and get clapped. -->
-		  <!-- <foodType>OmnivoreRoughAnimal, CarnivoreRoughAnimal, VegetarianRoughAnimal, OmnivoreAnimal, CarnivoreAnimal, OvivoreAnimal, Meals, Processed, Kibble</foodType> --> <!-- VegetarianRoughAnimal makes them eat grass. Grass doesn't dissappear after so it's super unbalanced-->
-		  <foodType>OmnivoreHuman, OmnivoreAnimal, CarnivoreAnimal, CarnivoreAnimalStrict, VegetarianRoughAnimal, Processed, Meal, Fluid, Meat, Plant, Fungus, Kibble</foodType>
+		  <!-- VegetarianRoughAnimal makes them eat grass. Grass doesn't dissappear after so it's super unbalanced-->
+		  <foodType>OmnivoreHuman, OmnivoreAnimal, CarnivoreAnimal, CarnivoreAnimalStrict, VegetarianRoughAnimal, Processed, Meal, Fluid, Meat, Corpse, Seed, Liquor, Plant, Fungus, Kibble</foodType>
 		  <!-- Actually, grass DOES disappear when eaten, I tested it -->
 		  <gestationPeriodDays>65</gestationPeriodDays>
 		  <litterSizeCurve>

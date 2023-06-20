@@ -60,4 +60,269 @@
 			</operations>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="O_RawTomatoes"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef/products/O_RawTomatoes</xpath>
+					<success>Always</success>
+					<value>
+						<TomatoCyst>25</TomatoCyst>
+						<VCE_RawTomatoes MayRequire="vanillaexpanded.vplantse">25</VCE_RawTomatoes>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef/costList/O_RawTomatoes</xpath>
+					<success>Always</success>
+					<value>
+						<TomatoCyst>5</TomatoCyst>
+					</value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="O_RawTomatoes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+						<defName>O_RawTomatoes</defName>
+							<label>tomat-ohs (ERROR)</label>
+							<description>TurtleShroom's version of the Storytime Mod removes the Oh Ingredients Mod's duplicate Tomato. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData Inherit="False">
+								<texPath>Things/Item/PlantFoodRaw/Tomato</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<color>(132,80,52)</color>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="O_TomatoPlant"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/BiomeDef/wildPlants/O_TomatoPlant</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="MakeTomatoSauce or defName="MakeTomatoSauceBulk"]/fixedIngredientFilter/thingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li>TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="MakeTomatoSauce" or defName="MakeTomatoSauceBulk"]/ingredients/li/filter/thingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li>TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeTomatoSauce"]/products</xpath>
+					<success>Always</success>
+					<value>
+						<products>
+							<O_TomatoSauce>4</O_TomatoSauce>
+						</products>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MakeTomatoSauceBulk"]/products</xpath>
+					<success>Always</success>
+					<value>
+						<products>
+							<O_TomatoSauce>8</O_TomatoSauce>
+						</products>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="O_TomatoSauce"]/ingestible</xpath>
+					<success>Always</success>
+					<value>
+						<specialThoughtAsIngredient>TSP_OH_TomatoSauce</specialThoughtAsIngredient>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="O_TomatoSauce"]/comps</xpath>
+					<success>Always</success>
+					<value>
+						<!-- If you have the Mod, you can season non-Mediterranean food with olive oil too! -->
+						<li Class="RimSeasoning.CompProperties_Seasoning" MayRequire="tikubonn.RimSeasoning">
+							<compClass MayRequire="tikubonn.RimSeasoning">RimSeasoning.CompSeasoning</compClass>
+							<consumedThought MayRequire="tikubonn.RimSeasoning">TSP_OH_TomatoSauce</consumedThought>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThoughtDef>
+							<defName>TSP_OH_TomatoSauce</defName>
+							<showBubble>true</showBubble>
+							<icon>Things/Mote/ThoughtSymbol/Food</icon>
+							<durationDays>0.8</durationDays>
+							<stages>
+								<li>
+									<label>ate dish with extra tomato sauce</label>
+									<description>I enjoyed a meal that was enhanced with tomato paste! It sure was an interesting addition to the dish!</description>
+									<baseMoodEffect>5</baseMoodEffect>
+								</li>
+							</stages>
+						</ThoughtDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName = "MakeTomatoSauce" or "defName = "MakeTomatoSauceBulk"]/recipeUsers</xpath>
+					<success>Always</success>
+					<value>
+						<!--
+						<li>ElectricStove</li>
+						<li>FueledStove</li>
+						-->
+						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+						<li MayRequire="TSP.Isengriff.Storytime">GnomeTable</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentPrepTable</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod" MayRequire="onekimchiman.ingredienttime">
+	<!-- Do any of the following Mods exist? -->
+		<mods MayRequire="onekimchiman.ingredienttime">
+			<li>Vanilla Cooking Expanded</li>
+			<li>RimSeasoning</li>
+			<li>RimSeasoning VCE Patch (Continued)</li>
+		</mods>
+		<match Class="PatchOperationReplace" MayRequire="onekimchiman.ingredienttime">
+			<xpath>Defs/ThingDef[defName="O_TomatoSauce"]/thingCategories</xpath>
+			<success>Always</success>
+			<value MayRequire="onekimchiman.ingredienttime">
+				<thingCategories>
+					<li MayRequire="VanillaExpanded.VCookE">VCE_Condiments</li>
+					<li MayRequire="tikubonn.RimSeasoning">RimSeasoning_Seasoning</li>
+					<li>PlantMatter</li>
+				</thingCategories>
+			</value>
+		</match>
+	</Operation>
 </Patch>

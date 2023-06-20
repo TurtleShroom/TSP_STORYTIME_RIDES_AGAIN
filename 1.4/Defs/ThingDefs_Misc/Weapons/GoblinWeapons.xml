@@ -23,7 +23,7 @@
 	  <li>Knife</li>
     </weaponTags>
     <weaponClasses>
-      <li>Neolithic</li>
+      <li>Goblin</li>
       <li>Melee</li>
       <li>MeleePiercer</li>
     </weaponClasses>
@@ -79,6 +79,10 @@
     <equippedStatOffsets>
       <ButcheryFleshSpeed>0.20</ButcheryFleshSpeed>
     </equippedStatOffsets>
+		<tradeTags>
+			<li>WeaponMelee</li>
+			<li>Goblin</li>
+		</tradeTags>
   </ThingDef>
  
 <!-- Goblin Spear -->
@@ -103,6 +107,7 @@
       <li>Neolithic</li>
       <li>Melee</li>
       <li>MeleePiercer</li>
+	  <li>Goblin</li>
     </weaponClasses>
     <costList>
       <ST_GoblinPoison>50</ST_GoblinPoison>
@@ -146,6 +151,10 @@
 		<cooldownTime>2.0</cooldownTime>
       </li>
     </tools>
+		<tradeTags>
+			<li>WeaponMelee</li>
+			<li>Goblin</li>
+		</tradeTags>
   </ThingDef>
 
 <!-- Goblin Mace -->
@@ -220,6 +229,15 @@
         <cooldownTime>3</cooldownTime>
       </li>
     </tools>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleeBlunt</li>
+			<li>Goblin</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>WeaponMelee</li>
+			<li>Goblin</li>
+		</tradeTags>
   </ThingDef>
 
 <!-- Goblin Axe -->
@@ -239,6 +257,7 @@
       <li>GoblinDecent</li>
 	  <li>Lian_Defence</li>
 	  <li>MedievalMeleeDestructive</li>
+	  <li>Axe</li>
     </weaponTags>
     <costList>
       <ST_GoblinPoison>50</ST_GoblinPoison>
@@ -296,6 +315,15 @@
 		<compClass MayRequire="jecrell.jecstools">CompOversizedWeapon.CompOversizedWeapon</compClass>
 	  </li>
 	</comps>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleePiercer</li>
+			<li>Goblin</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>WeaponMelee</li>
+			<li>Goblin</li>
+		</tradeTags>
   </ThingDef>
 
 <!-- Goblin Sword -->
@@ -372,6 +400,15 @@
 		<compClass MayRequire="jecrell.jecstools">CompOversizedWeapon.CompOversizedWeapon</compClass>
 	  </li>
 	</comps>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleePiercer</li>
+			<li>Goblin</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>WeaponMelee</li>
+			<li>Goblin</li>
+		</tradeTags>
   </ThingDef>
 
 
@@ -450,6 +487,7 @@
       <li>Ranged</li>
       <li>RangedLight</li>
 	  <li>Neolithic</li>
+	  <li>Goblin</li>
     </weaponClasses>
     <recipeMaker>
       <recipeUsers>
@@ -512,6 +550,10 @@
 		</li>
 		-->
     </comps>
+		<tradeTags>
+			<li>WeaponRanged</li>
+			<li>Goblin</li>
+		</tradeTags>
   </ThingDef>
   
 <!-- Goblin Shotgun -->
@@ -615,8 +657,17 @@
 	  <li MayRequire="jecrell.jecstools">
 		<compClass MayRequire="jecrell.jecstools">CompOversizedWeapon.CompOversizedWeapon</compClass>
 	  </li>
-	  
 	</comps>
+		<weaponClasses>
+			<li>Ranged</li>
+			<li>RangedLight</li>
+			<li>ShortShots</li>
+			<li>Goblin</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>WeaponRanged</li>
+			<li>Goblin</li>
+		</tradeTags>
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
@@ -675,7 +726,7 @@
     </statBases>
     <costList>
       <Chemfuel>50</Chemfuel>
-      <ST_GoblinPoison>50</ST_GoblinPoison>
+      <ST_GoblinPoison>20</ST_GoblinPoison>
     </costList>
     <weaponTags>
 		<li>GoblinTech</li>
@@ -728,5 +779,15 @@
 		</li>
 		-->
 	</modExtensions>
+		<weaponClasses>
+			<li>Ranged</li>
+			<li>RangedLight</li>
+			<li>ShortShots</li>
+			<li>Goblin</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>WeaponRanged</li>
+			<li>Goblin</li>
+		</tradeTags>
   </ThingDef>
 </Defs>

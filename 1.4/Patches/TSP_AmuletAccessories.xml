@@ -97,15 +97,14 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
     </Operation>
 	
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_Beads"]</xpath>
-		<!-- If it does, add this replacement. -->
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_Beads"]/apparel</xpath>
 			<success>Always</success>
 			<value>
-				<apparel Inherit="False">
+				<apparel>
 					<wornGraphicPath>Things/Apparel/Beads/Beads</wornGraphicPath>
 					<layers>
 						<li>ST_Jewelry</li>
@@ -113,19 +112,38 @@
 					<bodyPartGroups>
 						<li>Neck</li>
 					</bodyPartGroups>
+					<hatRenderedFrontOfFace>false</hatRenderedFrontOfFace>
+					<hatRenderedAboveBody>false</hatRenderedAboveBody>
+					<hatRenderedBehindHead>false</hatRenderedBehindHead>
 					<countsAsClothingForNudity>false</countsAsClothingForNudity>
 					<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
 					<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
 				</apparel>
 			</value>
 		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
     </Operation>
 	
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_Beads"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="VIEHAR_Apparel_Beads"]/graphicData</xpath>
+			<success>Always</success>
+			<value>
+				<graphicData>
+					<texPath>UI/ItemIcons/VFEMIH_BeadsFix</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>0.8</drawSize>
+				</graphicData>
+			</value>
+		</match>
+    </Operation>
+	-->
+	
+	<!--
+	<Operation Class="PatchOperationConditional">
+	Does this exist?
 		<xpath>/Defs/ThingDef[defName="DoctorStupid_Apparel_Necklace"]</xpath>
-		<!-- If it does, add this replacement. -->
+		If it does, add this replacement.
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[defName = "DoctorStupid_Apparel_Necklace" or defName = "DoctorStupid_Apparel_Amulet" or defName = "DoctorStupid_Apparel_Beads"]/apparel/layers</xpath>
 			<success>Always</success>
@@ -135,8 +153,9 @@
 				</layers>
 			</value>
 		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
+		If the first XPATH does not exist, the original code stands.
     </Operation>
+	-->
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->

@@ -12,12 +12,26 @@
 				<ThingDef ParentName="BMT_CrystalCrab_Base">
 					<defName>TSP_BMT_Butterscotch_Crab</defName>
 					<description Inherit="False">A large and powerful relative of the decorator crab, cavern crystals grow from the minerals on this crab's rocky shell. Despite its strong exoskeleton, the Crystal Crab hauls around this heavy shell, the reason for which is unknown. They are not known to breed in captivity... \n \n Or, that is what would be said if it grew crystals. No, those are not crystals. That is butterscotch. Yes, butterscotch. If this sucker is killed and butchered, it will yield a mountain (pun intended) of butterscotch. Go on. Try it. Like all Crystal Crabs, its rocky strength makes it a tough shell to crack, so good luck.</description>
+					<statBases>
+						<LeatherAmount>140</LeatherAmount>
+						<MeatAmount>140</MeatAmount>
+					</statBases>
 					<race>
-						<specificMeatDef Inherit="False">ST_Butterscotch</specificMeatDef>
+						<useMeatFrom>BMT_CrystalCrab_Sandstone</useMeatFrom>
+						<leatherDef Inherit="False">ST_Butterscotch</leatherDef>
+						<wildBiomes Inherit="False">
+						</wildBiomes>
 					</race>
 					<butcherProducts>
 						<ST_Butterscotch>100</ST_Butterscotch>
 					</butcherProducts>
+					<comps>
+						<li Class="CompProperties_Shearable">
+							<woolDef>ST_Butterscotch</woolDef>
+							<shearIntervalDays>1</shearIntervalDays>
+							<woolAmount>3</woolAmount>
+						</li>
+					</comps>
 				</ThingDef>
 			</value>
 		</match>
@@ -36,9 +50,9 @@
 					<defName>TSP_BMT_Butterscotch_Crab</defName>
 					<label>butterscotch crystal crab</label>
 					<race>TSP_BMT_Butterscotch_Crab</race>
-					<combatPower>290</combatPower>
+					<combatPower>265</combatPower>
 					<ecoSystemWeight>0</ecoSystemWeight>
-					<wildGroupSize>2~3</wildGroupSize>
+					<wildGroupSize>3~5</wildGroupSize>
 					<lifeStages>
 						<li>
 							<bodyGraphicData>
@@ -146,6 +160,20 @@
 			<xpath>/Defs/BiomeDef[defName = "BMT_CrystalCaverns" or defName = "BMT_EarthenDepths" or defName = "BMT_FungalForest"]/wildAnimals</xpath>
 			<value>
 				<TSP_BMT_Butterscotch_Crab>0.1</TSP_BMT_Butterscotch_Crab>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BiomesIslands_RimCrab"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="TSP_BMT_Butterscotch_Crab"]/race/useMeatFrom</xpath>
+			<value>
+				<useMeatFrom>BiomesIslands_RimCrab</useMeatFrom>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

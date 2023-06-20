@@ -20,7 +20,7 @@
 					<defName>JeubReward</defName>
 					<label>Summon a Swarm of Jeubs</label>
 					<tab>Storytime</tab>
-					<cost>10</cost>
+					<cost>5</cost>
 					<incident>Jeub_Swarm</incident>
 				</AchievementsExpanded.Reward_EnemyRaid>
 				
@@ -90,7 +90,7 @@
 				<AchievementsExpanded.AchievementDef>
 					<defName>froglordAchievement</defName>
 					<label>Frog Lord</label>
-					<description>Have one of each Bullet Tree, Spring Peeeper, Tomato, Poison Dart, Budgett's, and Embittered frogs.</description>
+					<description>Have one of each of these frogs: Bullet Tree, Spring Peeeper, Tomato, Poison Dart, Budgett's, and Embittered frogs.</description>
 					<tab>Storytime</tab>
 					<tracker Class="AchievementsExpanded.KindDefTracker">
 						<kindDefs>
@@ -187,7 +187,7 @@
 						<count MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">1</count>
 					</tracker>
 					<texPath MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">Achievements/runePlateAchievement</texPath>
-					<points MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">25</points>
+					<points MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">60</points>
 				</AchievementsExpanded.AchievementDef>
 				
 				<AchievementsExpanded.AchievementDef>
@@ -200,20 +200,84 @@
 						<count>1</count>
 					</tracker>
 					<texPath>Achievements/gibbonousMoonAchievement</texPath>
-					<points>10</points>
+					<points>30</points>
 				</AchievementsExpanded.AchievementDef>
 
 				<AchievementsExpanded.AchievementDef>
 					<defName>beanManAchievement</defName>
 					<label>THE BULBORB HAS ASCENDED</label>
-					<description>Create a Bean Man Larva.</description>
+					<description>Obtain a Bean Man Larva.</description>
 					<tab>Storytime</tab>		
 					<tracker Class="AchievementsExpanded.ItemCraftTracker">
 						<def>BeanManLarva</def>
 						<count>1</count>
 					</tracker>
 					<texPath>Achievements/beanManAchievement</texPath>
-					<points>60</points> 
+					<points>75</points> 
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>TSP_ST_Komodon_HappyTogether_ACHIEVEMENT</defName>
+					<label>Me and You, and You and Me</label>
+					<description>Befriend a Komodon! So happy together!</description>
+					<tab>Storytime</tab>		
+					<tracker Class="AchievementsExpanded.KindDefTracker">
+						<kindDefs>
+							<li>
+								<key>ST_Exanth_Komodon</key>
+								<value>1</value>
+							</li>
+						</kindDefs>
+					</tracker>
+					<texPath>Achievements/turtlesHappyTogetherSingleAchievement</texPath>
+					<points>30</points> 
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>TSP_ST_Tortoise_SoHappyTogether_ACHIEVEMENT</defName>
+					<label>So Happy Together</label>
+					<description>Befriend twelve normal tortoises! So happy together!</description>
+					<tab>Storytime</tab>		
+					<tracker Class="AchievementsExpanded.KindDefTracker">
+						<kindDefs>
+							<li>
+								<key>Tortoise</key>
+								<value>12</value>
+							</li>
+						</kindDefs>
+					</tracker>
+					<texPath>Achievements/turtlesHappyTogetherSingleAchievement</texPath>
+					<points>100</points> 
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>TSP_ST_REEEEEE_ACHIEVEMENT</defName>
+					<label>Infesting In Your Kids' Ears and Nesting!</label>
+					<description>Withstand the noise to subjugate twelve Grand Budgett's Frogs!</description>
+					<tab>Storytime</tab>		
+					<tracker Class="AchievementsExpanded.KindDefTracker">
+						<kindDefs>
+							<li>
+								<key>BudgettFrog</key>
+								<value>12</value>
+							</li>
+						</kindDefs>
+					</tracker>
+					<texPath>Achievements/frogAchievement</texPath>
+					<points>100</points> 
+				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>TSP_ST_TomatoFrog_ACHIEVEMENT</defName>
+					<label>IT'S NOT A TOOMAH!</label>
+					<description>Harvest three hundred Tomato Frog cysts!</description>
+					<tab>Storytime</tab>
+					<tracker Class="AchievementsExpanded.ItemTracker">
+						<def>TomatoCyst</def>
+						<count>300</count>
+					</tracker>
+					<texPath>Achievements/ahnuldTumorAchievement</texPath>
+					<points>40</points> 
 				</AchievementsExpanded.AchievementDef>
 			</value>
 		</match>

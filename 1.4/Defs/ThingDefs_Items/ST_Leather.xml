@@ -85,13 +85,14 @@
 			</categories>
 			<constructEffect>ConstructWood</constructEffect>
 			<appearance>Smooth</appearance>
+			<!-- <appearance MayRequire="sera.apinialienrace">Hive</appearance> -->
 			<soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
 			<soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
 			<statOffsets>
 				<WorkToBuild>-50</WorkToBuild>
 				<!-- <MaxHitPoints>-30</MaxHitPoints> -->
-				<Beauty>-0.05</Beauty>
+				<Beauty>-0.5</Beauty>
 			</statOffsets>
 			<statFactors>
 				<MaxHitPoints>0.18</MaxHitPoints>
@@ -123,7 +124,7 @@
 		</thingCategories>
 		<statBases>
 			<MarketValue>0.4</MarketValue>
-			<Nutrition>0.15</Nutrition>
+			<Nutrition>0.35</Nutrition>
 			<Mass>0.01</Mass>
 			<Flammability>1.5</Flammability>
 			<StuffPower_Insulation_Cold>27</StuffPower_Insulation_Cold>
@@ -152,7 +153,7 @@
 			<foodType Inherit="False">Kibble</foodType>
 			<tasteThought>AteKibble</tasteThought>
 			<optimalityOffsetHumanlikes>-100</optimalityOffsetHumanlikes>
-			<optimalityOffsetFeedingAnimals>1</optimalityOffsetFeedingAnimals>
+			<optimalityOffsetFeedingAnimals>10</optimalityOffsetFeedingAnimals>
 			<tableDesired>false</tableDesired>
 		</ingestible>
   </ThingDef>
@@ -184,7 +185,7 @@
 			<StuffPower_Armor_Blunt>0.1</StuffPower_Armor_Blunt>
 		</statFactors>
 		<statOffsets>
-			<SwimSpeed MayRequire="BiomesTeam.BiomesIslands">0.5</SwimSpeed> <!-- "Super Mario" reference -->
+			<SwimSpeed MayRequire="BiomesTeam.BiomesIslands">1</SwimSpeed> <!-- "Super Mario" reference -->
 			<Flammability>-0.5</Flammability>
 		</statOffsets>
     </stuffProps>

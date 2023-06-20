@@ -87,4 +87,104 @@
 			</operations>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="O_GrainFlour"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_GrainFlour"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>GnomeFlour</li>
+						<li>ToadflaxLeaves</li>
+						<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li>
+						<li MayRequire="lordoftherims.elves">LotRE_Lembasflour</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_GrainFlour"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>GnomeFlour</li>
+						<li>ToadflaxLeaves</li>
+						<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li>
+						<li MayRequire="lordoftherims.elves">LotRE_Lembasflour</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_GrainFlour"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>GnomeFlour</li>
+						<li>ToadflaxLeaves</li>
+						<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li>
+						<li MayRequire="lordoftherims.elves">LotRE_Lembasflour</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="vanillaexpanded.vcooke">
+					<xpath MayRequire="vanillaexpanded.vcooke">Defs/ThingDef[defName="O_GrainFlour"]/thingCategories</xpath>
+					<success>Always</success>
+					<value MayRequire="vanillaexpanded.vcooke">
+						<thingCategories>
+							<li MayRequire="Mlie.TakisRandomStuff">Cereal</li>
+							<li>PlantMatter</li>
+							<!-- <li>PlantFoodRaw</li> -->
+						</thingCategories>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li>O_GrainFlour</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+		
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="WorkedRawRice"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="WorkedRawRice"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ToadflaxLeaves</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="WorkedRawRice"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ToadflaxLeaves</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="WorkedRawRice"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ToadflaxLeaves</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
 </Patch>

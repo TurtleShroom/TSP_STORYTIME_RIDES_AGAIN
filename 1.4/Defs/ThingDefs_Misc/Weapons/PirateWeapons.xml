@@ -27,6 +27,13 @@
       <soundWorking>Recipe_Machining</soundWorking>
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+	<tradeTags>
+		<li>WeaponRanged</li>
+		<li>Pirate</li>
+	</tradeTags>
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
@@ -252,7 +259,7 @@
     <statBases>
       <Mass>1</Mass>
       <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
-      <WorkToMake>9000</WorkToMake>
+      <WorkToMake>2000</WorkToMake>
     </statBases>
     <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
     <costStuffCount>10</costStuffCount>
@@ -495,6 +502,8 @@
     </recipeMaker>
 	<weaponClasses>
 		<li>Neolithic</li>
+		<li>ShortShots</li>
+		<li>RangedLight</li>
 	</weaponClasses>
     <stuffCategories>
       <li>Metallic</li>
@@ -543,6 +552,9 @@
         <compClass>CompQuality</compClass>
       </li>
     </comps>
+	<tradeTags>
+		<li>Pirate</li>
+	</tradeTags>
   </ThingDef>
   
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
@@ -611,6 +623,10 @@
         <Crafting>6</Crafting>
       </skillRequirements>
     </recipeMaker>
+	<tradeTags>
+		<li>WeaponMelee</li>
+		<li>Pirate</li>
+	</tradeTags>
   </ThingDef>
   
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
@@ -678,6 +694,10 @@
         <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
+	<tradeTags>
+		<li>WeaponMelee</li>
+		<li>Pirate</li>
+	</tradeTags>
   </ThingDef>
   
   <ThingDef ParentName="BaseWeapon">
@@ -773,5 +793,9 @@
 		<compClass MayRequire="jecrell.jecstools">CompOversizedWeapon.CompOversizedWeapon</compClass>
 	  </li>
     </comps>
+	<tradeTags>
+		<li>WeaponMelee</li>
+		<li>Pirate</li>
+	</tradeTags>
   </ThingDef>
 </Defs>

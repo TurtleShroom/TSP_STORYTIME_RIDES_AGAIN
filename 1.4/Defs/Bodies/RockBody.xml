@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<Defs>
   <BodyPartGroupDef>
     <defName>ST_RockBody</defName>
     <label>boulder</label>
@@ -11,7 +11,7 @@
     <defName>ST_RockShell</defName>
     <label>boulder</label>
     <hitPoints>25</hitPoints>
-    <frostbiteVulnerability>0.1</frostbiteVulnerability>
+    <frostbiteVulnerability>0</frostbiteVulnerability>
     <permanentInjuryChanceFactor>0.25</permanentInjuryChanceFactor>
     <skinCovered>true</skinCovered>
     <solid>true</solid>
@@ -37,6 +37,12 @@
       <depth>Outside</depth>
       <groups>
           <li>ST_RockBody</li>
+		  <li>Neck</li>
+		  <li>Torso</li>
+		  <li>FullHead</li>
+		  <li>UpperHead</li>
+		  <li>Feet</li>
+		  <li>HeadAttackTool</li>
       </groups>
     </corePart>
   </BodyDef>

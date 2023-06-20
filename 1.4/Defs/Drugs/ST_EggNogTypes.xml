@@ -25,8 +25,9 @@
       </li>
 	  <li Class="CompProperties_Ingredients" />
     </comps>
-    <thingCategories>
-		<li>AnimalProductRaw</li>
+    <thingCategories Inherit="False">
+		<!-- <li>AnimalProductRaw</li> -->
+		<li>Manufactured</li>
     </thingCategories>
 	<!--
 	<tradeTags>
@@ -65,7 +66,7 @@
 	  <FoodPoisonChanceFixedHuman>0.5</FoodPoisonChanceFixedHuman>
     </statBases>
 	<stackLimit>15</stackLimit>
-    <thingCategories>
+    <thingCategories Inherit="False">
 		<!-- <li>AnimalProductRaw</li> -->
 		<li>Manufactured</li>
     </thingCategories>
@@ -189,6 +190,10 @@
         <overdoseSeverityOffset>0</overdoseSeverityOffset>
         <largeOverdoseChance>0</largeOverdoseChance>
       </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>9</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
 	  <li Class="CompProperties_Ingredients" />
 	  <li Class="CompProperties_Forbiddable"></li>
     </comps>
@@ -256,7 +261,7 @@
         </li>
       </outcomeDoers>
     </ingestible>
-    <comps>
+    <comps Inherit="False">
 		<!-- Cannot get addicted -->
 	  <li Class="CompProperties_Drug">
         <chemical>EggNogChemical</chemical>
@@ -267,6 +272,10 @@
         <listOrder>10</listOrder>
       </li>
 	  <li Class="CompProperties_Forbiddable"></li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>18</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
     </comps>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
   </ThingDef>
@@ -366,6 +375,10 @@
         <listOrder>10</listOrder>
       </li>
 	  <li Class="CompProperties_Forbiddable"></li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>38</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
     </comps>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
     <orderedTakeGroup>Drug</orderedTakeGroup>
@@ -559,6 +572,10 @@
         <needLevelOffset>1</needLevelOffset>
         <listOrder>10</listOrder>
 		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+      </li>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>8</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
       </li>
     </comps>
 	<tradeTags>

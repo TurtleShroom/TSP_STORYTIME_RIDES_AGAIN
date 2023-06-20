@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
 		<defName>Alien_ST_Goblin</defName>
@@ -387,11 +387,38 @@
               <kindDefs>
                 <li>PlayerGoblin</li>
               </kindDefs>
-              <chance>2.0</chance>
+              <chance>8.0</chance>
             </li>
           </pawnKindEntries>
           <factionDefs>
             <li>PlayerTribe</li>
+			<li>PlayerColony</li>
+          </factionDefs>
+        </li>
+        <li MayRequire="vanillaexpanded.vfea">
+          <pawnKindEntries MayRequire="vanillaexpanded.vfea">
+            <li MayRequire="vanillaexpanded.vfea">
+              <kindDefs MayRequire="vanillaexpanded.vfea">
+                <li>GoblinTinkerer</li>
+              </kindDefs>
+              <chance>1.0</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs MayRequire="vanillaexpanded.vfea">
+            <li MayRequire="vanillaexpanded.vfea">VFEA_NewVault</li>
+          </factionDefs>
+        </li>
+        <li MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
+          <pawnKindEntries MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
+            <li MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
+              <kindDefs MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
+                <li MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">GoblinGenius</li>
+              </kindDefs>
+              <chance MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">0.25</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
+            <li MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">VFEA_NewVault</li>
           </factionDefs>
         </li>
       </startingColonists>
@@ -399,16 +426,24 @@
         <li>
           <kindDefs>
             <li>PlayerGoblin</li>
+			<li>GoblinTinkerer</li>
           </kindDefs>
-          <chance>6.0</chance>
+          <chance>16.0</chance>
+        </li>
+        <li MayRequire="ludeon.rimworld.biotech">
+          <kindDefs MayRequire="ludeon.rimworld.biotech">
+            <li MayRequire="ludeon.rimworld.biotech">GoblinGenius</li>
+          </kindDefs>
+          <chance MayRequire="ludeon.rimworld.biotech">0.9</chance>
         </li>
       </alienslavekinds>
       <alienrefugeekinds>
         <li>
           <kindDefs>
-            <li>PlayerGoblin</li>
+            <!-- <li>PlayerGoblin</li> -->
+			<li>GoblinTinkerer</li>
           </kindDefs>
-          <chance>6.0</chance>
+          <chance>8.0</chance>
         </li>
       </alienrefugeekinds>
       <alienwandererkinds>
@@ -417,8 +452,9 @@
             <li>
               <kindDefs>
                 <li>PlayerGoblin</li>
+				<li>GoblinTinkerer</li>
               </kindDefs>
-              <chance>4.0</chance>
+              <chance>7.0</chance>
             </li>
           </pawnKindEntries>
           <factionDefs>

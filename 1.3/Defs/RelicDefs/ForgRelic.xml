@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseWeapon">
+    <defName>ForgFigure</defName>
+    <label>Forg Figurine</label>
+    <description>A small forg figurine, I guess you could hit your enemies with this?</description>
+    <graphicData>
+      <texPath>Things/Relics/ForgFigure</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <costStuffCount>25</costStuffCount>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <statBases>
+      <WorkToMake>100</WorkToMake>
+      <Mass>1.00</Mass>
+    </statBases>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite></researchPrerequisite>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <weaponTags>
+      <li>Melee</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>left leg</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.12</armorPenetration>
+      </li>
+      <li>
+        <label>body</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>0.18</armorPenetration>
+      </li>
+      <li>
+        <label>right leg</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>0.14</armorPenetration>
+      </li>
+    </tools>
+    <relicChance>1</relicChance>
+  </ThingDef>
+</Defs>

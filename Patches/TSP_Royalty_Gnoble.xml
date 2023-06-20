@@ -13,4 +13,101 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+			<value>
+				<race Inherit="False">Alien_Gnome</race>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/specificApparelRequirements</xpath>
+			<value>
+				<specificApparelRequirements>
+					<li>
+						<bodyPartGroup>UpperHead</bodyPartGroup>
+						<requiredTag>RoyalTier6</requiredTag>
+						<stuff>Weezer</stuff>
+						<color>(0, 182, 213)</color>
+					</li>
+					<li>
+						<bodyPartGroup>Torso</bodyPartGroup>
+						<apparelLayer>Middle</apparelLayer>
+						<requiredTag>RoyalTier5</requiredTag>
+						<color>(69,193,69)</color>
+					</li>
+					<li>
+						<bodyPartGroup>Torso</bodyPartGroup>
+						<apparelLayer>OnSkin</apparelLayer>
+						<requiredTag>RoyalTier2</requiredTag>
+						<color>(69,193,69)</color>
+						<alternateTagChoices>
+							<li>
+								<tag>Gnoble</tag>
+								<chance>0.5</chance>
+							</li>
+						</alternateTagChoices>
+					</li>
+					<li>
+						<bodyPartGroup>Torso</bodyPartGroup>
+						<apparelLayer>Shell</apparelLayer>
+						<requiredTag>Cape</requiredTag>
+						<stuff>Weezer</stuff>
+						<color>(0, 182, 213)</color>
+					</li>
+					<!--
+					<li>
+						<bodyPartGroup>Torso</bodyPartGroup>
+						<stuff>Gnome_Cloth</stuff>
+					</li>
+					<li>
+						<bodyPartGroup>Legs</bodyPartGroup>
+						<stuff>Gnome_Cloth</stuff>
+					</li>
+					-->
+				</specificApparelRequirements>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/xenotypeSet</xpath>
+			<value>
+				<xenotypeSet Inherit="False">
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/xenotypeSet</xpath>
+			<value>
+				<xenotypeSet Inherit="False">
+					<Weezey>0.05</Weezey>
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

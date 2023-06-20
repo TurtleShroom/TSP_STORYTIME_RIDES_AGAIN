@@ -9,9 +9,10 @@
 		</backstoryCategories>
 		<!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
 		<isFighter>false</isFighter>
-		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
 		<forceNormalGearQuality>true</forceNormalGearQuality>
 		<apparelColor>(69,193,69)</apparelColor>
+		<favoriteColor>(69,193,69)</favoriteColor>
 		<invNutrition>4</invNutrition>
 		<invFoodDef>TangledToadLegs</invFoodDef>
 		<specificApparelRequirements>
@@ -388,17 +389,18 @@
   
 	<PawnKindDef ParentName="BasePlayerGnomePawnKind">
 		<defName>TSP_ST_GnomePeasant</defName>
-		<label>Gnome</label>
+		<label>Gnome peasant</label>
 		<labelPlural>Gnome peasants</labelPlural>
 		<combatPower>10</combatPower>
 		<defaultFactionType>TreeGnomeEmpire</defaultFactionType>
+		<apparelIgnoreSeasons Inherit="False">true</apparelIgnoreSeasons>
 		<backstoryCategories Inherit="False">
 			<li Inherit="False">GnomeBackstory</li>
 		</backstoryCategories>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
 		<apparelMoney Inherit="False"> <!-- They wear nothing else but the apparel below -->
-			<min Inherit="False">13000</min>
-			<max Inherit="False">30100</max>
+			<min Inherit="False">99999</min>
+			<max Inherit="False">99999</max>
 		</apparelMoney>
 		<specificApparelRequirements>
 		  <li>
@@ -442,7 +444,7 @@
 		</techHediffsTags>
 		<techHediffsChance>0.02</techHediffsChance>
 		<apparelTags Inherit="False"> <!-- Gnome peasants wear nothing else -->
-			<li>GnomePeasant</li>
+			<!-- <li>GnomePeasant</li> -->
 		</apparelTags>
 		<weaponTags Inherit="False">
 			<li>GnomeSimpleMelee</li>
@@ -451,6 +453,6 @@
 			<li>Toolagri</li>
 		</weaponTags>
 		<initialWillRange>0.25~1</initialWillRange>
-		<initialResistanceRange>1~3</initialResistanceRange>
+		<initialResistanceRange>1~4</initialResistanceRange>
 	  </PawnKindDef>
 </Defs>

@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<ThingDef Name="ApparelGnomeBase" ParentName="ApparelBase" Abstract="True">
-    <recipeMaker>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <effectWorking>Tailor</effectWorking>
-      <soundWorking>Recipe_Tailor</soundWorking>
-      <researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
-	  <recipeUsers>
-        <li>ElectricTailoringBench</li>
-        <li>HandTailoringBench</li>
-		<li>CraftingSpot</li>
-		<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_TailorsBench</li>
-      </recipeUsers>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
-	  <!--
-      <defaultIngredientFilter>
-        <categories>
-          <li>Root</li>
-        </categories>
-      </defaultIngredientFilter>
-	  -->
-    </recipeMaker>
-	<apparel>
-		<tags Inherit="False">
-			<li>ST_GnomeClothing</li>
-			<li>GnomePeasant</li>
-		</tags>
-	</apparel>
-  </ThingDef>
+	<ThingDef Name="ApparelGnomeBase" ParentName="ApparelNoQualityBase" Abstract="True">
+		<recipeMaker>
+		  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		  <workSkill>Crafting</workSkill>
+		  <effectWorking>Tailor</effectWorking>
+		  <soundWorking>Recipe_Tailor</soundWorking>
+		  <researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+		  <recipeUsers>
+			<li>ElectricTailoringBench</li>
+			<li>HandTailoringBench</li>
+			<li>CraftingSpot</li>
+			<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_TailorsBench</li>
+		  </recipeUsers>
+		  <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+		  <!--
+		  <defaultIngredientFilter>
+			<categories>
+			  <li>Root</li>
+			</categories>
+		  </defaultIngredientFilter>
+		  -->
+		</recipeMaker>
+		<apparel>
+			<tags Inherit="False">
+				<li>ST_GnomeClothing</li>
+				<li>GnomePeasant</li>
+			</tags>
+		</apparel>
+	</ThingDef>
  
     <ThingDef ParentName="ApparelGnomeBase">
-    <defName>GnomeHat</defName>
+    <defName>ST_GnomeHat</defName>
     <label>gnome hat</label>
     <description>Stylish, by gnome child standards.</description>
     <graphicData>
@@ -50,8 +50,8 @@
 		<Insulation_Heat>13</Insulation_Heat>
 		<EquipDelay>0.001</EquipDelay>
     </statBases>
-	<generateCommonality>0.001</generateCommonality>
-	<generateAllowChance>0.001</generateAllowChance>
+	<generateCommonality>0</generateCommonality>
+	<generateAllowChance>0</generateAllowChance>
     <thingCategories>
       <li>Headgear</li>
     </thingCategories>
@@ -62,6 +62,8 @@
 		<canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth> <!-- STOP SPAWNING THIS ON EVERYONE!! -->
 		<canBeGeneratedToSatisfyToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech" Inherit="False">false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
 		<countsAsClothingForNudity>true</countsAsClothingForNudity>
+		<ai_pickUpOpportunistically>false</ai_pickUpOpportunistically>
+		<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>

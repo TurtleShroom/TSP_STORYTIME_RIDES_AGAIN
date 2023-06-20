@@ -28,7 +28,7 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]</xpath>
+		<xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel/tags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel/tags</xpath>
@@ -46,6 +46,25 @@
 				<li>PrussianLandwehrOff</li>
 			</value>
 		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel</xpath>
+			<value>
+				<tags>
+					<li>RichPirateClothing</li>
+					<li>NormalPirateClothing</li>
+					<li>ST_GnomeClothing</li>
+					<li>JeubWear</li>
+					<li>FrenchLineOfficerApparel</li>
+					<li>FrenchLineOfficerBicornApparel</li>
+					<li>FrenchGreandierOfficerBearskinApparel</li>
+					<li>FrenchCuirassApparel</li>
+					<li>BritishInfantryOfficerApparel</li>
+					<li>PrussianLandwehrApparel</li>
+					<li>PrussianLandwehrOff</li>
+				</tags>
+			</value>
+		</nomatch>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
@@ -69,6 +88,7 @@
 				<li>Medieval</li>
 				<li>MedievalBasic</li>
 				<li>MedievalApparelBasic</li>
+				<li>RWPWesternWear</li>
 				<li>IndustrialBasic</li>
 				<li>mafia</li>
 				<li>SK_Khan_Apparel_Tag</li>
@@ -360,13 +380,16 @@
 				<li>Dame</li>
 				<li>RichPirateClothing</li>
 				<li>Gnoble</li>
+				<li>RWPGentlemanWear</li> <!-- For female socialites, that is -->
+				<li>MedievalApparelNoble</li>
+				<li>MedievalNoble</li>
 			</value>
 		</match>
 		<!-- If it does, add this. -->
-		<nomatch Class="PatchOperationAdd">
+		<nomatch Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Apparel_Corset"]/apparel</xpath>
-			<value>
+			<value MayRequire="ludeon.rimworld.royalty">
 				<tags>
 					<li>Royal</li>
 					<li>RoyalTier5</li>
@@ -377,6 +400,9 @@
 					<li>Dame</li>
 					<li>RichPirateClothing</li>
 					<li>Gnoble</li>
+					<li>RWPGentlemanWear</li> <!-- For female socialites, that is -->
+					<li>MedievalApparelNoble</li>
+					<li>MedievalNoble</li>
 				</tags>
 			</value>
 		</nomatch>
@@ -506,17 +532,25 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]</xpath>
+		<xpath>/Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]</xpath>
+			<xpath>/Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]/tradeTags</xpath>
 			<value>
-				<TradeTags>
-					<li>RWP_Gear</li>
-				</TradeTags>
+				<li>RWP_Gear</li>
 			</value>
 		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd" MayRequire="rimofmadness.callofcthulhu.factions">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]</xpath>
+			<value MayRequire="rimofmadness.callofcthulhu.factions">
+				<tradeTags>
+					<li>RWP_Gear</li>
+				</tradeTags>
+			</value>
+		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	

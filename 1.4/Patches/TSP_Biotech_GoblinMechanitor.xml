@@ -3,7 +3,7 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mechlink"]</xpath>
+		<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/techHediffsTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/techHediffsTags</xpath>
@@ -34,5 +34,22 @@
 			<success>Always</success>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ScenarioDef[defName="Mechanitor"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ScenarioDef[defName="Mechanitor"]/scenario/parts/li/kindCounts</xpath>
+			<success>Always</success>
+			<value>
+				<li>
+					<kindDef>GoblinGenius</kindDef>
+					<count>2</count>
+					<requiredAtStart>false</requiredAtStart>
+				</li>
+			</value>
+		</match>
 	</Operation>
 </Patch>
