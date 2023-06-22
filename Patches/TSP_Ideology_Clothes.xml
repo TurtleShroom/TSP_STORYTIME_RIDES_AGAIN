@@ -17,6 +17,7 @@
 				<li>ST_GnomeClothing</li>
 				<li>Royal</li>
 				<li>RoyalTier1</li>
+				<li>RoyalTier2</li>
 				<li>MedievalApparelNoble</li>
 				<li>GoblinWear</li>
 			</value>
@@ -36,6 +37,7 @@
 					<li>ST_GnomeClothing</li>
 					<li>Royal</li>
 					<li>RoyalTier1</li>
+					<li>RoyalTier2</li>
 					<li>MedievalApparelNoble</li>
 					<li>RichPirateClothing</li>
 				</tags>
@@ -92,21 +94,21 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="VAE_Apparel_Skirt"]</xpath>
-		<match Class="PatchOperationAdd">
+	<Operation Class="PatchOperationConditional" MayRequire="vanillaexpanded.vappe">
+		<xpath>/Defs/ThingDef[defName="VAE_Apparel_Skirt"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd" MayRequire="vanillaexpanded.vappe">
 			<xpath>/Defs/ThingDef[defName="VAE_Apparel_Skirt"]/apparel</xpath>
-			<value>
+			<value MayRequire="vanillaexpanded.vappe">
 				<gender>Female</gender>
 			</value>
-		</match>
+		</nomatch>
 	</Operation>
 	
-	<Operation Class="PatchOperationConditional">
+	<Operation Class="PatchOperationConditional" MayRequire="vanillaexpanded.vappe">
 		<xpath>/Defs/ThingDef[defName="VAE_Apparel_Blouse"]</xpath>
-		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="VAE_Apparel_Blouse"]/apparel</xpath>
-			<value>
+		<match Class="PatchOperationAdd" MayRequire="vanillaexpanded.vappe">
+			<xpath MayRequire="vanillaexpanded.vappe">/Defs/ThingDef[defName="VAE_Apparel_Blouse"]/apparel</xpath>
+			<value MayRequire="vanillaexpanded.vappe">
 				<gender>Female</gender>
 			</value>
 		</match>
@@ -473,10 +475,10 @@
 			</value>
 		</match>
 		<!-- If it does NOT exist, add this. -->
-		<nomatch Class="PatchOperationAdd">
+		<nomatch Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel</xpath>
-			<value>
+			<value MayRequire="ludeon.rimworld.royalty">
 				<tags>
 					<!-- <li>WeebClothes</li> -->
 					<li>WeebElite</li>
@@ -506,6 +508,7 @@
 			<value>
 				<li>MedievalApparelGnoble</li>
 				<li>MedievalApparelNoble</li>
+				<li>MedievalNoble</li>
 				<li>Gnoble</li>
 				<li>JeubWear</li>
 				<li>RichPirateClothing</li>
@@ -531,6 +534,7 @@
 		<value>
 			<li>JeubWear</li>
 			<li>BeetWear</li>
+			<li>FrogmanWear</li>
 			<li>ST_BeetClothing</li>
 			<li>GoblinWear</li>
 			<li>Neolithic</li>
@@ -540,5 +544,16 @@
 			<li>BarbarianBasic</li>
 			<li>GaulStart</li>
 		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="High_School_Uniform_Thai_Girl_A"]</xpath>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName = "High_School_Uniform_Thai_Girl_A" or defName = "HSUTGirl_A_Kid" or defName = "HSUTGirl_A_Kid_Dye" or defName = "HSUTGirl_A_Dye"]/apparel</xpath>
+			<value>
+				<gender>Female</gender>
+			</value>
+		</match>
 	</Operation>
 </Patch>

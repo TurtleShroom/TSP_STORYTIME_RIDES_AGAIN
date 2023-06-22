@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<Defs>
   <BodyPartGroupDef>
-    <defName>SlimeBody</defName>
+    <defName>ST_SlimeBody</defName>
     <label>body</label>
     <listOrder>1</listOrder>
   </BodyPartGroupDef>
 
   <BodyPartGroupDef>
-    <defName>SlimeLeftTentacle</defName>
+    <defName>ST_SlimeLeftTentacle</defName>
     <label>left tentacle</label>
-    <listOrder>1</listOrder>
+    <listOrder>2</listOrder>
   </BodyPartGroupDef>
 
   <BodyPartGroupDef>
-    <defName>SlimeRightTentacle</defName>
+    <defName>ST_SlimeRightTentacle</defName>
     <label>right tentacle</label>
-    <listOrder>1</listOrder>
+    <listOrder>2</listOrder>
   </BodyPartGroupDef>
   
   <BodyPartDef>
-    <defName>SlimeCore</defName>
+    <defName>ST_SlimeCore</defName>
     <label>core</label>
     <hitPoints>10</hitPoints>
     <frostbiteVulnerability>0.1</frostbiteVulnerability>
@@ -34,72 +34,87 @@
       <li>MovingLimbCore</li>
       <li>BreathingSource</li>
       <li>EatingSource</li>
-      <!-- <li>TalkingSource</li> -->
       <li>MetabolismSource</li>
     </tags>
   </BodyPartDef>
   
   <BodyPartDef>
-    <defName>SlimeTentacle</defName>
+    <defName>ST_SlimeTentacle</defName>
     <label>tentacle</label>
     <hitPoints>5</hitPoints>
     <frostbiteVulnerability>0.1</frostbiteVulnerability>
     <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
     <skinCovered>false</skinCovered>
     <solid>false</solid>
-    <alive>false</alive>
+    <alive>true</alive>
     <bleedRate>7</bleedRate>
     <tags>
       <li>ManipulationLimbCore</li>
+	  <li>TalkingSource</li>
     </tags>
   </BodyPartDef>
 
 
 
   <BodyDef>
-    <defName>Slime</defName>
-    <label>body</label>
+    <defName>ST_Slime</defName>
     <corePart>
-      <def>SlimeCore</def>
-      <height>Middle</height>
+      <def>ST_SlimeCore</def>
+      <height>Bottom</height>
       <depth>Outside</depth>
+	  <label>nucleus</label>
+	  <bleedRate>5</bleedRate>
       <groups>
-          <li>SlimeBody</li>
+          <li>ST_SlimeBody</li>
+		  <li>UpperHead</li>
+		  <li>Feet</li>
       </groups>
 	  <parts>
         <li>
-          <def>SlimeTentacle</def>
+          <def>ST_SlimeTentacle</def>
           <customLabel>tentacle</customLabel>
           <coverage>0.2</coverage>
           <height>Middle</height>
 		  <depth>Outside</depth>  
 		  <groups>
-			  <li>SlimeLeftTentacle</li>
+			  <li>ST_SlimeLeftTentacle</li>
+			  <li MayRequire="sarg.alphaanimals">AA_TentacleAttackTool</li>
+			  <li>Neck</li>
+			  <li>Feet</li>
 		  </groups>
         </li>
         <li>
-          <def>SlimeTentacle</def>
+          <def>ST_SlimeTentacle</def>
           <customLabel>tentacle</customLabel>
           <coverage>0.2</coverage>
           <height>Top</height>
 		  <depth>Outside</depth>  
 		  <groups>
-			  <li>SlimeLeftTentacle</li>
-			  <li>SlimeRightTentacle</li>
+			  <li>ST_SlimeLeftTentacle</li>
+			  <li>ST_SlimeRightTentacle</li>
+			  <li MayRequire="sarg.alphaanimals">AA_TentacleAttackTool</li>
+			  <li>Neck</li>
+			  <li>MiddleFingers</li>
+			  <li>Feet</li>
+			  <li>FullHead</li>
+			  <li>UpperHead</li>
 		  </groups>
         </li>
         <li>
-          <def>SlimeTentacle</def>
+          <def>ST_SlimeTentacle</def>
           <customLabel>tentacle</customLabel>
           <coverage>0.2</coverage>
           <height>Middle</height>
 		  <depth>Outside</depth> 
 		  <groups>
-			  <li>SlimeRightTentacle</li>
+			  <li>ST_SlimeRightTentacle</li>
+			  <li MayRequire="sarg.alphaanimals">AA_TentacleAttackTool</li>
+			  <li>RightHand</li>
+			  <li>Neck</li>
+			  <li>Feet</li>
 		  </groups>
-        </li>	
-	  </parts>		
+        </li>
+	  </parts>
     </corePart>
   </BodyDef>
-  
 </Defs>
