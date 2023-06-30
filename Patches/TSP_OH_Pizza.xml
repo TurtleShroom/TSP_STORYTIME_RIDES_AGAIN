@@ -262,8 +262,23 @@
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="O_Cheese"]/statBases/MarketValue</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "MakeCheese" or defName = "MakeCheeseBulk"]</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites Inherit="False">
+					<li MayRequire="vanillaexpanded.vcooke">VCE_CheeseMaking</li>
+				</researchPrerequisites>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="O_Cheese"]/statBases/MarketValue</xpath>
 			<success>Always</success>
 			<value>
 				<MarketValue>6</MarketValue>

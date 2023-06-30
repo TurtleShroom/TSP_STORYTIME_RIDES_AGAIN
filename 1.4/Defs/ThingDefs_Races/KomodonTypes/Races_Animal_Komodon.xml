@@ -12,7 +12,7 @@
 		  <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
 		  <ComfyTemperatureMin>2</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>90</ComfyTemperatureMax>
-		  <MeatAmount>80</MeatAmount> <!-- Actually much higher, but size increase it by far -->
+		  <MeatAmount>80</MeatAmount> <!-- Actually much higher, but size increases it by far -->
 		  <LeatherAmount>80</LeatherAmount>
 		</statBases>
 		<tools>
@@ -31,11 +31,11 @@
 			<capacities>
 			  <li>Blunt</li>
 			</capacities>
-			<power>13</power>
+			<power>17</power>
 			<cooldownTime>5</cooldownTime>
 			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-			<chanceFactor>0.01</chanceFactor>
+			<chanceFactor>0.4</chanceFactor>
 		  </li>
 		</tools>
 		<comps>
@@ -82,11 +82,9 @@
 			  <soundAngry>Pawn_Tortoise_Angry</soundAngry>
 			</li>
 		  </lifeStageAges>
-
 		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
 		  <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
 		  <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
-		  
 		  <wildBiomes>
 				<!-- RimWorld.Core -->
 				<!-- VANILLA RENDITION -->
@@ -284,7 +282,7 @@
 				<!-- regrowth.botr.volcanicicesheet -->
 				<!-- VOLCANIC ICE SHEET -->
 
-				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.001</RG-VIS_VulcanicIceSheet> <!-- Make me, Helixian. MAKE ME. -->
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.001</RG-VIS_VulcanicIceSheet>
 				
 				
 				<!-- _________________ -->
@@ -293,6 +291,10 @@
 				<!-- PRIMORDIAL GEYSERS -->
 				
 				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.3</IronScruff_PrimordialGeysers>
+
+				<BMT_CrystalCaverns MayRequire="BiomesTeam.BiomesCaverns">0.02</BMT_CrystalCaverns>
+				<BMT_EarthenDepths MayRequire="BiomesTeam.BiomesCaverns">0</BMT_EarthenDepths>				
+				<BMT_FungalForest MayRequire="BiomesTeam.BiomesCaverns">0.17</BMT_FungalForest>
 		  </wildBiomes>
 		</race>
 		<tradeTags>

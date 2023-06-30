@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DarkDescent_Brute"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[@Name="DarkDescent_CreationBase"]/comps</xpath>
+			<success>Always</success>
+			<value>
+				<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+					<hediffname>ST_HedUnholyAbomination</hediffname>
+					<hediffseverity>1</hediffseverity>
+				</li>
+				<li Class="AnimalBehaviours.CompProperties_Draftable">
+					<makeNonFleeingToo>true</makeNonFleeingToo>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="MO_AbominationRace"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="MO_AbominationRace"]/comps</xpath>
+			<success>Always</success>
+			<value>
+				<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+					<hediffname>ST_HedUnholyAbomination</hediffname>
+					<hediffseverity>1</hediffseverity>
+				</li>
+				<li Class="AnimalBehaviours.CompProperties_Draftable">
+					<makeNonFleeingToo>true</makeNonFleeingToo>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="MO_AbominationRace"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="MO_AbominationRace"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<useMeatFrom>Human</useMeatFrom>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>

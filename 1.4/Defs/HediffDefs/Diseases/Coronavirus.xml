@@ -18,16 +18,16 @@
 				<severityPerDayTended>-0.0791</severityPerDayTended>
 			</li>
 			<li Class="HediffCompProperties_Immunizable">
-				<severityPerDayNotImmune>0.245</severityPerDayNotImmune>
-				<immunityPerDaySick>0.256</immunityPerDaySick>
-				<severityPerDayImmune>-0.71</severityPerDayImmune>
-				<immunityPerDayNotSick>-0.065</immunityPerDayNotSick>
+				<severityPerDayNotImmune>0.235</severityPerDayNotImmune>
+				<immunityPerDaySick>0.259</immunityPerDaySick>
+				<severityPerDayImmune>-0.41</severityPerDayImmune>
+				<immunityPerDayNotSick>-0.07</immunityPerDayNotSick>
 			</li>
 		</comps>
 		<stages>
 		<li>
 			<label>initial infection</label>
-			<restFallFactorOffset>0.5</restFallFactorOffset>
+			<restFallFactorOffset>0.7</restFallFactorOffset>
 			<painOffset>0.03</painOffset>
 			<capMods>
 				<li>
@@ -37,9 +37,9 @@
 			</capMods>
 		</li>
 		<li>
-			<minSeverity>0.66</minSeverity>
-			<label>major</label>
-			<restFallFactorOffset>0.6</restFallFactorOffset>
+			<minSeverity>0.5</minSeverity>
+			<label>minor</label>
+			<restFallFactorOffset>0.8</restFallFactorOffset>
 			<painOffset>0.05</painOffset>
 			<capMods>
 				<li>
@@ -50,6 +50,22 @@
 					<capacity>Breathing</capacity>
 					<setMax>0.6</setMax>
 				</li>
+			</capMods>
+		</li>
+		<li>
+			<minSeverity>0.66</minSeverity>
+			<label>major</label>
+			<restFallFactorOffset>0.9</restFallFactorOffset>
+			<painOffset>0.08</painOffset>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.9</setMax>
+				</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<setMax>0.5</setMax>
+				</li>
 				<li>
 					<capacity>BloodFiltration</capacity>
 					<setMax>0.95</setMax>
@@ -57,10 +73,10 @@
 			</capMods>
 		</li>
 		<li>
-			<minSeverity>0.833</minSeverity>
+			<minSeverity>0.86</minSeverity>
 			<label>extreme</label>
 			<lifeThreatening>true</lifeThreatening>
-			<restFallFactorOffset>0.75</restFallFactorOffset>
+			<restFallFactorOffset>1</restFallFactorOffset>
 			<painOffset>0.5</painOffset>
 			<capMods>
 				<li>
@@ -78,11 +94,11 @@
 			</capMods>
 			</li>
 			<li>
-				<minSeverity>0.94</minSeverity>
+				<minSeverity>0.97</minSeverity>
 				<label>terminal</label>
 				<lifeThreatening>true</lifeThreatening>
-				<restFallFactorOffset>1</restFallFactorOffset>
-				<painOffset>0.5</painOffset> <!-- Unconscious already -->
+				<restFallFactorOffset>2</restFallFactorOffset>
+				<painOffset>0.75</painOffset> <!-- Unconscious already -->
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -99,6 +115,11 @@
 				</capMods>
 			</li>
 		</stages>
+		<!--
+		<appliedOnFixedBodyParts>
+			<li>Lung</li>
+		</appliedOnFixedBodyParts>
+		-->
 		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 	</HediffDef>
   
