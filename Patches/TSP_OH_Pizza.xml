@@ -9,7 +9,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName = "MakeBoringPizza" or defName = "MakeCheesePizza" or defName = "MakePepperoniPizza" or defName = "MakeCombinationPizza" or defName = "MakeBaconPizza" or defName = "MakeBulgogiPizza" or defName = "MakeVeggiePizza" or defName = "MakeSteakPizza" or defName = "MakeMeatBallPizza" or defName = "MakeBoomratPizza" or defName = "MakeAmbrosiaPizza" or defName = "MakeBoringPizzaBulk" or defName = "MakeCheesePizzaBulk" or defName = "MakePepperoniPizzaBulk" or defName = "MakeCombinationPizzaBulk" or defName = "MakeBaconPizzaBulk" or defName = "MakeBulgogiPizzaBulk" or defName = "MakeVeggiePizzaBulk" or defName = "MakeSteakPizzaBulk" or defName = "MakeMeatBallPizzaBulk" or defName = "MakeBoomratPizzaBulk" or defName = "MakeAmbrosiaPizzaBulk"]/researchPrerequisite</xpath>
 			<value>
-				<researchPrerequisite>pizzaTime</researchPrerequisite>
+				<researchPrerequisite MayRequire="TSP.Isengriff.Storytime">pizzaTime</researchPrerequisite>
 			</value>
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
@@ -17,7 +17,7 @@
 			<success>Always</success>
 			<xpath MayRequire="onekimchiman.pizzatime">/Defs/ThingDef[defName = "MakeBoringPizza" or defName = "MakeCheesePizza" or defName = "MakePepperoniPizza" or defName = "MakeCombinationPizza" or defName = "MakeBaconPizza" or defName = "MakeBulgogiPizza" or defName = "MakeVeggiePizza" or defName = "MakeSteakPizza" or defName = "MakeMeatBallPizza" or defName = "MakeBoomratPizza" or defName = "MakeAmbrosiaPizza" or defName = "MakeBoringPizzaBulk" or defName = "MakeCheesePizzaBulk" or defName = "MakePepperoniPizzaBulk" or defName = "MakeCombinationPizzaBulk" or defName = "MakeBaconPizzaBulk" or defName = "MakeBulgogiPizzaBulk" or defName = "MakeVeggiePizzaBulk" or defName = "MakeSteakPizzaBulk" or defName = "MakeMeatBallPizzaBulk" or defName = "MakeBoomratPizzaBulk" or defName = "MakeAmbrosiaPizzaBulk"]</xpath>
 			<value MayRequire="onekimchiman.pizzatime">
-				<researchPrerequisite>pizzaTime</researchPrerequisite>
+				<researchPrerequisite MayRequire="TSP.Isengriff.Storytime">pizzaTime</researchPrerequisite>
 			</value>
 		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -193,6 +193,7 @@
 						<filter>
 							<thingDefs>
 								<li>Milk</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
 								<li MayRequire="TSP.Isengriff.Storytime">ST_GreenOoze</li>
 							</thingDefs>
 						</filter>
