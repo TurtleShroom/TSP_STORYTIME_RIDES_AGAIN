@@ -22,7 +22,7 @@
 					<workAmount>450</workAmount>
 					<hideBodyPartNames>true</hideBodyPartNames>
 					<isViolation>false</isViolation>
-					<targetsBodyPart>false</targetsBodyPart>
+					<!-- <targetsBodyPart>false</targetsBodyPart> -->
 					<removesHediff>ROM_SanityLoss</removesHediff>
 					<successfullyRemovedHediffMessage>Ribbit ribbit! {0} has successfully restored {1}'s mental state!</successfullyRemovedHediffMessage>
 					<surgerySuccessChanceFactor>999</surgerySuccessChanceFactor>
@@ -68,10 +68,9 @@
 	</Operation>
 	
 	<!-- Since this Mod requires the Humanoid Alien Races Mod by way of the Storytime Mod, this Patch shouldn't be needed. It will be kept here in case I am wrong. -->
-	<!--
-	Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes
+	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
 	<Operation Class="PatchOperationConditional">
-	 Does this exist?
+	 <!--  Does this exist? -->
 		<xpath>/Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -80,9 +79,8 @@
 				<li>TSP_KASENRA_CureInsanity</li>
 			</value>
 		</match>
-		If the first XPATH does not exist, the original code stands.
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
-	-->
 	
 	<!-- This allows insane animals to be cured, too. -->
 	<Operation Class="PatchOperationConditional">
@@ -117,21 +115,21 @@
 	</Operation>
 	
 	<!-- Since this Mod requires the Humanoid Alien Races Mod by way of the Storytime Mod, this Patch shouldn't be needed. It will be kept here in case I am wrong. -->
-	<!--
-	Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes
+	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
 	<Operation Class="PatchOperationConditional">
-	 Does this exist?
+	 <!-- Does this exist? -->
 		<xpath>/Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Human"]/recipes</xpath>
 			<value>
 				<li>TSP_KASENRA_CureCatatonia</li>
+				<li>TSP_KASENRA_CureDementiaCorruption</li>
+				<li>TSP_KASENRA_CureAlzheimersCorruption</li>
 			</value>
 		</match>
-		If the first XPATH does not exist, the original code stands.
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
-	-->
 	
 	<!-- This allows insane animals to be cured, too. -->
 	<Operation Class="PatchOperationConditional">

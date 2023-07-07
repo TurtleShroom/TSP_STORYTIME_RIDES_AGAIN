@@ -1,32 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
 
+<Defs>
   <ThingDef Name="BaseWeaponGnome" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Neolithic</techLevel>
-    <weaponTags>
-      <li>GnomeRanged</li>
-    </weaponTags>
-    <thingCategories>
-      <li>WeaponsRanged</li>
-    </thingCategories>
     <burnableByRecipe>true</burnableByRecipe>
+	<smeltable>true</smeltable>
     <comps>
-      <li>
-        <compClass>CompQuality</compClass>
-      </li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
     </comps>
     <recipeMaker>
-      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <recipeUsers>
-		<li>CraftingSpot</li>
-        <li>ElectricSmithy</li>
-        <li>FueledSmithy</li>
-      </recipeUsers>
-      <effectWorking>Smelt</effectWorking>
-      <soundWorking>Recipe_MakeBow</soundWorking>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+		</recipeUsers>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_MakeBow</soundWorking>
+		<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+		<researchPrerequisites>
+			<li>ST_GnomeCulture</li>
+		</researchPrerequisites>
     </recipeMaker>
+	<smeltProducts>
+		<ST_GnomeHat>1</ST_GnomeHat>
+		<GnomeGoggles>1</GnomeGoggles>
+		<GnomeShirt>1</GnomeShirt>
+		<GnomePants>1</GnomePants>
+	</smeltProducts>
+	<weaponTags>
+		<li>GnomeWeapon</li>
+	</weaponTags>
   </ThingDef>
 
   <ThingDef ParentName="BaseWeaponGnome">
@@ -61,7 +68,7 @@
       <AccuracyMedium>0.7</AccuracyMedium>
       <AccuracyLong>0.65</AccuracyLong>
       <RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
-	  <ShootingAccuracyOutdoorsDarkOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</ShootingAccuracyOutdoorsDarkOffset>
+	  <ShootingAccuracyOutdoorsDarkOffset MayRequire="Ludeon.RimWorld.Ideology">0.5</ShootingAccuracyOutdoorsDarkOffset>
     </statBases>
     <recipeMaker>
       <recipeUsers>
@@ -70,10 +77,10 @@
         <li>FueledSmithy</li>
       </recipeUsers>
 	  <researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>1</Crafting>
-      </skillRequirements>
     </recipeMaker>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -102,7 +109,7 @@
   </ThingDef>
   
   
-    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <ThingDef ParentName="BaseWeaponGnome">
     <defName>GnomeSword</defName>
     <label>gnome sword</label>
     <description>"Do you really think you can hurt me with that? All it's going to do is make my face look cooler!" \n \n A short little gnome "sword". It's basically a dagger for midgets.</description>
@@ -113,11 +120,13 @@
     </graphicData>
     <techLevel>Medieval</techLevel>
 	<weaponTags>
-		<li>GnomeMelee</li>
+		<li>GnomeSimpleMelee</li>
+		<li>NeolithicMelee</li>
 		<li>NeolithicMeleeBasic</li>
 		<li>Knife</li>
 		<!-- <li>GnomeWeapon</li> -->
 		<li>Dagger</li>
+		<li>GnomeSimpleMelee</li>
     </weaponTags>
     <costStuffCount>30</costStuffCount>
     <statBases>
@@ -148,20 +157,19 @@
           <li>Poke</li>
         </capacities>
         <power>7</power>
-        <cooldownTime>0.5</cooldownTime>
+        <cooldownTime>1</cooldownTime>
       </li>
       <li>
         <label>edge</label>
         <capacities>
           <li>Scratch</li>
         </capacities>
-        <power>7</power>
+        <power>5</power>
         <cooldownTime>0.5</cooldownTime>
       </li>
     </tools>
-    <recipeMaker>
-      <researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
-    </recipeMaker>
+	<thingCategories Inherit="Flase">
+		<li>WeaponsMelee</li>
+	</thingCategories>
   </ThingDef>
- 
 </Defs>

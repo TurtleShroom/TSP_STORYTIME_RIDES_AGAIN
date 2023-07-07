@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <TraderKindDef>
+    <defName>Caravan_Raider_StolenGoods</defName>
+    <label>장물 판매상</label>
+    <stockGenerators>
+
+      <!-- Resources -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>8000~12000</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentIndustrial</thingDef>
+        <countRange>20~30</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentSpacer</thingDef>
+        <countRange>6~13</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Steel</thingDef>
+        <countRange>500~1400</countRange>
+      </li>
+	   <li Class="StockGenerator_SingleDef">
+        <thingDef>Cloth</thingDef>
+        <countRange>250~800</countRange>
+      </li>
+	        <li Class="StockGenerator_SingleDef">
+        <thingDef>Beer</thingDef>
+        <totalPriceRange>40~120</totalPriceRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Chocolate</thingDef>
+        <totalPriceRange>80~1600</totalPriceRange>
+      </li>
+
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+
+	</stockGenerators>
+	</TraderKindDef>
+	
+   <TraderKindDef>
+    <defName>Caravan_Raider_Combat</defName>
+    <label>전투장비 거래상</label>
+    <stockGenerators>
+
+      <!-- Resources -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>8000~12000</countRange>
+      </li>
+	  
+      <!-- Weapons -->
+	  <!--
+      <li Class="StockGenerator_WeaponsRanged">
+        <countRange>5~8</countRange>
+      </li>
+	  -->
+	  
+      <li Class="StockGenerator_Category">
+        <categoryDef>WeaponsMelee</categoryDef>
+        <thingDefCountRange>6~9</thingDefCountRange>
+        <countRange>2~3</countRange>
+      </li>
+	  
+	  <li Class="StockGenerator_Category">
+        <categoryDef>WeaponsRanged</categoryDef>
+        <thingDefCountRange>6~9</thingDefCountRange>
+        <countRange>2~3</countRange>
+      </li>
+      
+      <!-- Apparel -->
+	  <!--
+      <li Class="StockGenerator_Armor">
+        <countRange>4</countRange>
+      </li>
+	  -->
+
+      <!-- Buying -->
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>HiTechArmor</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+      
+    </stockGenerators>
+  </TraderKindDef>
+  
+  <TraderKindDef>
+    <defName>Caravan_Raider_Drugs</defName>
+    <label>마약 거래상</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>11800~15000</countRange>
+      </li>
+	
+     <li Class="StockGenerator_Category">
+        <categoryDef>Drugs</categoryDef>
+		<thingDefCountRange>12~17</thingDefCountRange>
+		<countRange>5~10</countRange>
+     </li>
+   
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+	  <li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+     
+	 </stockGenerators>
+   </TraderKindDef>
+	  
+ <TraderKindDef>
+    <defName>Caravan_Raider_Slaver</defName>
+    <label>노예상</label>
+    <stockGenerators>
+      
+      <!-- Resources -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>8800~15000</countRange>
+      </li>
+
+      <!-- Slaves -->
+      <li Class="StockGenerator_Slaves">
+		<respectPopulationIntent>false</respectPopulationIntent>
+		<countRange>6~12</countRange>
+      </li>
+      
+      <!-- Animals -->
+      <!-- none -->
+
+      <!-- Buying -->
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+	  <li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+      
+    </stockGenerators>
+  </TraderKindDef>
+</Defs>

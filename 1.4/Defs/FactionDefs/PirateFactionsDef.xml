@@ -45,6 +45,26 @@
 		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+		
+		<!-- DUH -->
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Slavery_Forbidden</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+		<!-- For some reason, the game eliminates the entire Slavery Precept when generating this Faction if this exists in the code -->
+		<!-- <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Acceptable</li> -->
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+		<!-- The following Precepts are only forbidden if you have the Mod -->
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Abhorrent</li>
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Horrible</li>
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Disapproved</li>
+
+		<!-- <li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Respected</li> -->
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Abhorrent</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Horrible</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Disapproved</li>
+		<!-- For some reason, the game eliminates the entire Precept category when generating this Faction if this exists in the code -->
 	</disallowedPrecepts>
     <allowedCultures>
 		<li>ST_PirateCulture</li>
@@ -65,14 +85,15 @@
     </caravanTraderKinds>
     <visitorTraderKinds>
       <li>Caravan_Outlander_PirateMerchant</li>
+	  <li>Caravan_Storytime_Pirate</li>
     </visitorTraderKinds>
     <baseTraderKinds>
 		<!-- <li>Base_Outlander_Standard</li> -->
 		<li>Caravan_Storytime_Pirate</li>
     </baseTraderKinds>
     <allowedArrivalTemperatureRange>
-      <min>-30</min>
-      <max>55</max>
+      <min>-130</min>
+      <max>155</max>
     </allowedArrivalTemperatureRange>
     <maxPawnCostPerTotalPointsCurve>
       <points>
@@ -220,6 +241,7 @@
 	<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
 	<permanentEnemyToEveryoneExcept>
 		<li>Pirate</li>
+		<li>RaiderGroup</li>
 		<li MayRequire="OskarPotocki.VFE.Pirates">VFEP_Junkers</li>
 		<li MayRequire="OskarPotocki.VFE.Pirates">VFEP_Mercenaries</li>
 		<li MayRequire="OskarPotocki.VFE.Pirates">VFEP_PlayerPirate</li>
@@ -252,6 +274,26 @@
 		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+		
+		<!-- DUH -->
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Slavery_Forbidden</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+		<!-- For some reason, the game eliminates the entire Slavery Precept when generating this Faction if this exists in the code -->
+		<!-- <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Acceptable</li> -->
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+		<!-- The following Precepts are only forbidden if you have the Mod -->
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Abhorrent</li>
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Horrible</li>
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Disapproved</li>
+
+		<!-- <li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Respected</li> -->
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Abhorrent</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Horrible</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Disapproved</li>
+		<!-- For some reason, the game eliminates the entire Precept category when generating this Faction if this exists in the code -->
 	</disallowedPrecepts>
     <allowedCultures>
 		<li>ST_PirateCulture</li>
@@ -317,6 +359,7 @@
 		  <PirateGrenadier>15</PirateGrenadier>
 		  <PirateCaptain>15</PirateCaptain>
 		  <PirateJuggernaut>15</PirateJuggernaut>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkAngler>
 		  <!-- ANIMALS CANNOT BE PEACEFUL VISITORS!! -->
 		  <!--
           <Monkey>5</Monkey>
@@ -336,6 +379,7 @@
           <Monkey>5</Monkey>
 		  <ST_Parrot>5</ST_Parrot>
 		  <Pirate>3</Pirate>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkAngler>
 		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
         </options>
       </li>
@@ -359,6 +403,7 @@
 		  <ST_Parrot>5</ST_Parrot>
 		  <PirateCaptain>5</PirateCaptain>
 		  <Pirate>1</Pirate>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkAngler>
 		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
         </guards>
       </li>
@@ -373,6 +418,7 @@
           <Monkey>5</Monkey>
 		  <ST_Parrot>5</ST_Parrot>
 		  <Pirate>10</Pirate>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">10</ROM_TownsfolkAngler>
 		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">3</VFEP_Footsoldier>
         </options>
       </li>

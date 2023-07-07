@@ -6,6 +6,7 @@
 		<xpath MayRequire="ludeon.rimworld.royalty">/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
+			<success>Always</success>
 			<xpath MayRequire="ludeon.rimworld.royalty">/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
 			<value MayRequire="ludeon.rimworld.royalty">
 				<li>Robe</li>
@@ -24,6 +25,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
+			<success>Always</success>
 			<xpath MayRequire="ludeon.rimworld.royalty">/Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
 			<value MayRequire="ludeon.rimworld.royalty">
 				<tags MayRequire="ludeon.rimworld.royalty">
@@ -39,7 +41,7 @@
 					<li>RoyalTier1</li>
 					<li>RoyalTier2</li>
 					<li>MedievalApparelNoble</li>
-					<li>RichPirateClothing</li>
+					<li>RichPirate</li>
 				</tags>
 			</value>
 		</nomatch>
@@ -51,6 +53,7 @@
 		<xpath>/Defs/ThingDef[defName="VAE_Apparel_Skirt"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="VAE_Apparel_Skirt"]/apparel/tags</xpath>
 			<value>
 				<li>Skirt</li>
@@ -63,9 +66,9 @@
 				<li>MedievalApparel</li>
 				<li>MedievalApparelBasic</li>
 				<li>ST_GnomeClothing</li>
-				<li>PoorPirateClothing</li>
-				<li>NormalPirateClothing</li>
-				<li>RichPirateClothing</li>
+				<li>PoorPirate</li>
+				<li>NormalPirate</li>
+				<li>RichPirate</li>
 				<li>JeubWear</li>
 				<li>JeubKing</li>
 				<li>ST_BeetClothing</li>
@@ -106,14 +109,14 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional" MayRequire="vanillaexpanded.vappe">
-		<xpath>/Defs/ThingDef[defName="VAE_Apparel_Blouse"]</xpath>
-		<match Class="PatchOperationAdd" MayRequire="vanillaexpanded.vappe">
+		<xpath>/Defs/ThingDef[defName="VAE_Apparel_Blouse"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd" MayRequire="vanillaexpanded.vappe">
 			<success>Always</success>
 			<xpath MayRequire="vanillaexpanded.vappe">/Defs/ThingDef[defName="VAE_Apparel_Blouse"]/apparel</xpath>
 			<value MayRequire="vanillaexpanded.vappe">
 				<gender>Female</gender>
 			</value>
-		</match>
+		</nomatch>
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
@@ -128,8 +131,8 @@
 				<li>JeubWear</li>
 				<li>ST_BeetClothing</li>
 				<li>GoblinWear</li>
-				<li>PoorPirateClothing</li>
-				<li>NormalPirateClothing</li>
+				<li>PoorPirate</li>
+				<li>NormalPirate</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -158,7 +161,7 @@
 			<xpath>/Defs/ThingDef[defName="ROM_Apparel_DetectiveSlacks"]/apparel/tags</xpath>
 			<value>
 				<li>JeubWear</li>
-				<li>RichPirateClothing</li>
+				<li>RichPirate</li>
 				<li>WeebClothes</li>
 				<li>WeebPants</li>
 				<li>RWPGentlemanWear</li>
@@ -391,7 +394,7 @@
 				<li>ST_BeetClothing</li>
 				<li>ST_GnomeClothing</li>
 				<li>JeubWear</li>
-				<li>PoorPirateClothing</li>
+				<li>PoorPirate</li>
 				<li>RWPWesternWear</li>
 				<li>GoblinWear</li>
 			</value>
@@ -515,7 +518,7 @@
 				<li>MedievalNoble</li>
 				<li>Gnoble</li>
 				<li>JeubWear</li>
-				<li>RichPirateClothing</li>
+				<li>RichPirate</li>
 				<li>Royal</li>
 				<li>RoyalTier1</li>
 				<li>RoyalTier2</li>

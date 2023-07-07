@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+	<AlienRace.ThingDef_AlienRace Name="ST_Frogman" ParentName="BasePawn">
 		<defName>Alien_FrogPerson</defName>
 		<label>frogman</label>
 		<description>Half frog, half man. Powerful. Frogmen are known for their resistance to disease gained from living in the swamp.</description>
@@ -24,8 +24,13 @@
 			<maleGenderProbability>0.5</maleGenderProbability>
 			<immuneToAge>false</immuneToAge>
 			<canLayDown>false</canLayDown> <!-- Frogs can "assume the position" like cats, but they do not lay down to sleep. Frogs crouch. -->
-			<maxDamageForSocialfight>3</maxDamageForSocialfight>
+			<maxDamageForSocialfight>1</maxDamageForSocialfight>
 			<humanRecipeImport>true</humanRecipeImport>
+				<notXenophobistTowards Inherit="False">
+					<li>Human</li>
+					<li>Forg_Duo</li>
+					<li>Forg_Forg</li>
+				</notXenophobistTowards>
 			<alienPartGenerator>
 			  <headTypes Inherit="False">
 				<li>Frogman_Average_Normal</li>
@@ -35,7 +40,6 @@
 				<li>Hulk</li>
 				<li>Thin</li>
 				<li>Male</li>
-				<!-- <li>Female</li> -->
 				<li MayRequire="Ludeon.Rimworld.Biotech">Baby</li>
 				<li MayRequire="Ludeon.Rimworld.Biotech">Child</li>
 			</bodyTypes>
@@ -274,17 +278,19 @@
 		  <makesFootprints>true</makesFootprints>
 		  <lifeExpectancy>60</lifeExpectancy>
 		  <nameCategory>HumanStandard</nameCategory>
-		  <body>FrogPersonBody</body>
+		  <body>ST_FrogLike</body>
 		  <baseBodySize>0.9</baseBodySize>
 		  <baseHealthScale>0.9</baseHealthScale>
-		  <foodType>OmnivoreRoughAnimal, Meal, Processed, Liquor, Kibble</foodType>
+		  <foodType>OmnivoreRoughAnimal, Meal, Processed, Fluid, Liquor, Kibble</foodType>
 		  <gestationPeriodDays>10</gestationPeriodDays>
 		  <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>
-			  <li>(1, 1)</li>
-			  <li>(2, 0.02)</li>
-			  <li>(4, 0.001)</li>
+			  <li>(1, 0.15)</li>
+			  <li>(2, 0.35)</li>
+			  <li>(3, 1)</li>
+			  <li>(4, 0.5)</li>
+			  <li>(5, 0)</li>
 			</points>
 		  </litterSizeCurve>
 		  <lifeStageAges>
@@ -310,26 +316,26 @@
 			</li>
 		  </lifeStageAges>
 		  <lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
-			<Firefighter>7</Firefighter>
+			<Firefighter>2</Firefighter>
 			<Patient>0</Patient>
 			<Doctor>10</Doctor>
 			<PatientBedRest>0</PatientBedRest>
-			<Childcare MayRequire="Ludeon.Rimworld.Biotech">0</Childcare>
-			<BasicWorker>3</BasicWorker>
-			<Warden>10</Warden>
-			<Handling>7</Handling>
-			<Cooking>7</Cooking>
-			<Hunting>7</Hunting>
-			<Construction>10</Construction>
-			<Growing>7</Growing>
+			<Childcare MayRequire="Ludeon.Rimworld.Biotech">4</Childcare>
+			<BasicWorker>1</BasicWorker>
+			<Warden>8</Warden>
+			<Handling>1</Handling>
+			<Cooking>6</Cooking>
+			<Hunting>1</Hunting>
+			<Construction>12</Construction>
+			<Growing>5</Growing>
 			<Mining>7</Mining>
 			<PlantCutting>7</PlantCutting>
 			<Smithing>13</Smithing>
 			<Tailoring>7</Tailoring>
-			<Art>10</Art>
-			<Crafting>7</Crafting>
-			<Hauling>3</Hauling>
-			<Cleaning>3</Cleaning>
+			<Art>6</Art>
+			<Crafting>6</Crafting>
+			<Hauling>2</Hauling>
+			<Cleaning>5</Cleaning>
 			<Research>13</Research>
 		  </lifeStageWorkSettings>
 		  <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -342,16 +348,17 @@
 		  <ageGenerationCurve>
 			<points>
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(0,0)</li>
-			  <li MayRequire="Ludeon.Rimworld.Biotech">(0.001,43)</li>
-			  <li MayRequire="Ludeon.Rimworld.Biotech">(8,86)</li>
-			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
-			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0)</li>  
-			  <li MayRequire="Ludeon.Rimworld.Biotech">(13,0)</li>      
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(0.001,3)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(8,6)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.5,18)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0.1)</li>  
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13,0.002)</li>      
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.001,122)</li> <!-- End exclude -->
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.999,130)</li>
-			  <li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(14,20)</li>
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(14.001,130)</li>
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(16,100)</li>
+			  <li>(20,0)</li>
 			  <li>(21,100)</li>
 			  <li>(50,100)</li>
 			  <li>(60,30)</li>
@@ -359,6 +366,7 @@
 			  <li>(80,10)</li>
 			  <li>(90,3)</li>
 			  <li>(100,0)</li>
+			  <li>(200,0)</li>
 			</points>
 		  </ageGenerationCurve>
 		  <hediffGiverSets>
@@ -412,9 +420,7 @@
 		  <li MayRequire="Ludeon.Rimworld.Biotech">TerminatePregnancy</li>
 		</recipes>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
-				<hediffname>HedFrogMan</hediffname>
-			</li>
+
 		</comps>
 		<modExtensions>
 			<li Class="AnimalBehaviours.AnimalStatExtension">
@@ -430,8 +436,10 @@
 					<li>TSP_ST_FrogSapientDesc</li>
 					<li>ST_FrogCommonDesc</li>
 				</statDescriptions>
+				<!--
 				<showImageInInfoCard>true</showImageInInfoCard>
 				<ImageToShowInInfoCard>UI/Lore/FrogmanLore</ImageToShowInInfoCard>
+				-->
 			</li>
 		</modExtensions>
 	</AlienRace.ThingDef_AlienRace>
@@ -446,7 +454,14 @@
 				  <kindDefs>
 					<li>PlayerFrogPerson</li>
 				  </kindDefs>
-				  <chance>7.0</chance>
+				  <chance>9.0</chance>
+				</li>
+				<li>
+				  <kindDefs>
+					<li>ForgPawnKindDef</li>
+					<li>DuoPawnKindDef</li>
+				  </kindDefs>
+				  <chance>6.0</chance>
 				</li>
 			  </pawnKindEntries>
 			  <factionDefs>
@@ -462,6 +477,13 @@
 			  </kindDefs>
 			  <chance>12.0</chance>
 			</li>
+			<li>
+			  <kindDefs>
+				<li>ForgPawnKindDef</li>
+				<li>DuoPawnKindDef</li>
+			  </kindDefs>
+			  <chance>5.0</chance>
+			</li>
 		  </alienslavekinds>
 		  <alienrefugeekinds>
 			<li>
@@ -469,6 +491,13 @@
 				<li>PlayerFrogPerson</li>
 			  </kindDefs>
 			  <chance>6.0</chance>
+			</li>
+			<li>
+			  <kindDefs>
+				<li>ForgPawnKindDef</li>
+				<li>DuoPawnKindDef</li>
+			  </kindDefs>
+			  <chance>10</chance>
 			</li>
 		  </alienrefugeekinds>
 		  <alienwandererkinds>
@@ -479,6 +508,13 @@
 					<li>PlayerFrogPerson</li>
 				  </kindDefs>
 				  <chance>10.0</chance>
+				</li>
+				<li>
+				  <kindDefs>
+					<li>ForgPawnKindDef</li>
+					<li>DuoPawnKindDef</li>
+				  </kindDefs>
+				  <chance>4.0</chance>
 				</li>
 			  </pawnKindEntries>
 			  <factionDefs>

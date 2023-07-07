@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <FactionDef>
     <defName>FrogTribes</defName>
@@ -86,12 +86,23 @@
     <pawnGroupMakers>
       <li>
         <kindDef>Peaceful</kindDef>
+		<commonality>1</commonality>
         <options>
-			<FrogPersonHunter>50</FrogPersonHunter>
-			<FrogPersonWarrior>50</FrogPersonWarrior>
-			<ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
-			<DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
+			<FrogPersonHunter>60</FrogPersonHunter>
+			<FrogPersonWarrior>60</FrogPersonWarrior>
+			<ForgPawnKindDef>5</ForgPawnKindDef>
+			<DuoPawnKindDef>5</DuoPawnKindDef>
 			<!-- INCORRECT! ALLOWING ANIMALS TO JOIN THE PEACEFUL GROUP WILL CAUSE THE GAME TO SPAM ERRORS, OR EVEN CRASH! -->
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+		<commonality>0.5</commonality>
+        <options>
+			<ForgPawnKindDef>50</ForgPawnKindDef>
+			<DuoPawnKindDef>70</DuoPawnKindDef>
+			<FrogPersonHunter>5</FrogPersonHunter>
+			<FrogPersonWarrior>5</FrogPersonWarrior>
         </options>
       </li>
       <li>
@@ -109,8 +120,8 @@
 		  <FireBelliedToad>15</FireBelliedToad>
 		  <LeviathanFrog>20</LeviathanFrog>
 		  <FrogPersonChief>1</FrogPersonChief>
-		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
-		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
+		  <ForgPawnKindDef>5</ForgPawnKindDef>
+		  <DuoPawnKindDef>5</DuoPawnKindDef>
 		  <Frug MayRequire="crazedmonkey231.frug">5</Frug>
         </options>
       </li>
@@ -227,22 +238,22 @@
 			<FrogPersonWarrior MayRequire="crazedmonkey231.frug">0.001</FrogPersonWarrior>
         </options>
       </li>
-      <li MayRequire="emilskin.forgrace.forgs">
-        <kindDef MayRequire="emilskin.forgrace.forgs">Combat</kindDef>
-		<commonality MayRequire="emilskin.forgrace.forgs">0.9</commonality>
-        <options MayRequire="emilskin.forgrace.forgs">
-          <FrogPersonHunter MayRequire="emilskin.forgrace.forgs">0.1</FrogPersonHunter>
-		  <FrogPersonWarrior MayRequire="emilskin.forgrace.forgs">0.1</FrogPersonWarrior>
-          <PoisonDartFrog MayRequire="emilskin.forgrace.forgs">20</PoisonDartFrog>
-		  <FireBelliedToad MayRequire="emilskin.forgrace.forgs">5</FireBelliedToad>
-		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">100</ForgPawnKindDef>
-		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">100</DuoPawnKindDef>
+      <li>
+        <kindDef>Combat</kindDef>
+		<commonality>0.95</commonality>
+        <options>
+          <FrogPersonHunter>0.1</FrogPersonHunter>
+		  <FrogPersonWarrior>0.1</FrogPersonWarrior>
+          <PoisonDartFrog>20</PoisonDartFrog>
+		  <FireBelliedToad>5</FireBelliedToad>
+		  <ForgPawnKindDef>100</ForgPawnKindDef>
+		  <DuoPawnKindDef>100</DuoPawnKindDef>
 		  <Frug MayRequire="crazedmonkey231.frug">1</Frug>
         </options>
       </li>
 	  <li MayRequire="yamazakioghw.gianttoads">
 		<kindDef MayRequire="yamazakioghw.gianttoads">Combat</kindDef>
-		<commonality>0.5</commonality>
+		<commonality>0.8</commonality>
 		<options MayRequire="yamazakioghw.gianttoads">
 			<GiantToad MayRequire="yamazakioghw.gianttoads">2</GiantToad>
 			<KingToad MayRequire="yamazakioghw.gianttoads">0.1</KingToad>
@@ -252,7 +263,9 @@
         <kindDef>Trader</kindDef>
 		<commonality>1.5</commonality>
         <traders>
-          <FrogPersonTrader>1</FrogPersonTrader>
+          <FrogPersonTrader>2</FrogPersonTrader>
+          <TSP_TwoForgsInTrenchcoat_Merchant>0.05</TSP_TwoForgsInTrenchcoat_Merchant>
+		  <TSP_ForgMerchant>0.05</TSP_ForgMerchant>
         </traders>
         <carriers>
           <LeviathanFrog>999</LeviathanFrog>
@@ -270,17 +283,19 @@
 		  <FireBelliedToad>5</FireBelliedToad>
           <CyberFrogDocile>15</CyberFrogDocile>
 		  <LeviathanFrog>65</LeviathanFrog>
-		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">5</ForgPawnKindDef>
-		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">5</DuoPawnKindDef>
+		  <ForgPawnKindDef>5</ForgPawnKindDef>
+		  <DuoPawnKindDef>5</DuoPawnKindDef>
 		  <GiantToad MayRequire="yamazakioghw.gianttoads">2</GiantToad>
 		  <KingToad MayRequire="yamazakioghw.gianttoads">0.01</KingToad>
+		  <Dromedary>0.001</Dromedary>
         </guards>
       </li>
       <li>
         <kindDef>Trader</kindDef>
 		<commonality>0.5</commonality>
         <traders>
-          <FrogPersonTrader>1</FrogPersonTrader>
+          <TSP_TwoForgsInTrenchcoat_Merchant>3</TSP_TwoForgsInTrenchcoat_Merchant>
+		  <TSP_ForgMerchant>1</TSP_ForgMerchant>
         </traders>
         <carriers>
           <LeviathanFrog>999</LeviathanFrog>
@@ -289,10 +304,11 @@
         </carriers>
         <guards>
 		  <LeviathanFrog>65</LeviathanFrog>
-		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">15</ForgPawnKindDef>
-		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">15</DuoPawnKindDef>
+		  <ForgPawnKindDef>15</ForgPawnKindDef>
+		  <DuoPawnKindDef>15</DuoPawnKindDef>
 		  <GiantToad MayRequire="yamazakioghw.gianttoads">2</GiantToad>
 		  <KingToad MayRequire="yamazakioghw.gianttoads">0.1</KingToad>
+		  <Dromedary>0.001</Dromedary>
         </guards>
       </li>
       <li>
@@ -303,8 +319,8 @@
 		  <FrogPersonWarrior>90</FrogPersonWarrior>
 		  <FrogPersonChief>5</FrogPersonChief>
 		  <Frug MayRequire="crazedmonkey231.frug">1</Frug>
-		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">3.5</ForgPawnKindDef>
-		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">3.5</DuoPawnKindDef>
+		  <ForgPawnKindDef>5</ForgPawnKindDef>
+		  <DuoPawnKindDef>5</DuoPawnKindDef>
 		  <Dromedary>0.001</Dromedary>
 		  <GiantToad MayRequire="yamazakioghw.gianttoads">0.2</GiantToad>
 		  <KingToad MayRequire="yamazakioghw.gianttoads">0.1</KingToad>
@@ -339,14 +355,14 @@
 			<KingToad MayRequire="yamazakioghw.gianttoads">0.01</KingToad>
         </options>
       </li>
-      <li MayRequire="emilskin.forgrace.forgs">
-        <kindDef MayRequire="emilskin.forgrace.forgs">Settlement</kindDef>
-		<commonality MayRequire="emilskin.forgrace.forgs">0.33</commonality>
-        <options MayRequire="emilskin.forgrace.forgs">
+      <li>
+        <kindDef>Settlement</kindDef>
+		<commonality>0.33</commonality>
+        <options>
 		  <Frug MayRequire="crazedmonkey231.frug">1</Frug>
-		  <ForgPawnKindDef MayRequire="emilskin.forgrace.forgs">1</ForgPawnKindDef>
-		  <DuoPawnKindDef MayRequire="emilskin.forgrace.forgs">1</DuoPawnKindDef>
-		  <FrogPersonChief MayRequire="emilskin.forgrace.forgs">0.05</FrogPersonChief>
+		  <ForgPawnKindDef>1</ForgPawnKindDef>
+		  <DuoPawnKindDef>1</DuoPawnKindDef>
+		  <FrogPersonChief>0.05</FrogPersonChief>
 		  <GiantToad MayRequire="yamazakioghw.gianttoads">0.2</GiantToad>
 		  <KingToad MayRequire="yamazakioghw.gianttoads">0.01</KingToad>
         </options>
@@ -357,7 +373,7 @@
 		<commonality>0.3</commonality>
         <options>
 		  <Frug MayRequire="crazedmonkey231.frug">4</Frug>
-		  <Werefrog>10</Werefrog>
+		  <Werefrog>15</Werefrog>
 		  <Dromedary>0.001</Dromedary>
 		  <GiantToad MayRequire="yamazakioghw.gianttoads">0.02</GiantToad>
 		  <KingToad MayRequire="yamazakioghw.gianttoads">0.008</KingToad>

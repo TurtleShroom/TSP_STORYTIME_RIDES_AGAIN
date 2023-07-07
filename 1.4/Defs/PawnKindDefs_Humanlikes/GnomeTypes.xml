@@ -74,6 +74,10 @@
 		<li>MedievalApparelBasic</li>
 		<li>Classical</li>
     </apparelTags>
+	<apparelRequired Inherit="False">
+		<li Inherit="False">GnomeShirt</li>
+		<li Inherit="False">GnomePants</li>
+	</apparelRequired>
 	<weaponMoney>
          <min>250</min>
          <max>2500</max>
@@ -455,4 +459,53 @@
 		<initialWillRange>0.25~1</initialWillRange>
 		<initialResistanceRange>1~4</initialResistanceRange>
 	  </PawnKindDef>
+	  
+		<PawnKindDef ParentName="BasePlayerGnomePawnKind">
+			<defName>GnomeChef</defName>
+			<label>Gnome chef</label>
+			<isFighter>true</isFighter>
+			<combatPower>60</combatPower>
+			<chemicalAddictionChance>0.01</chemicalAddictionChance>
+			<apparelMoney>
+				<min>250</min>
+				<max>450</max>
+			</apparelMoney>
+			<apparelTags>
+				<li>GnomeChef</li>
+			</apparelTags>
+			<apparelRequired>
+				<li MayRequire="vanillaexpanded.vappe">VAE_Apparel_ChefsUniform</li>
+				<li MayRequire="vanillaexpanded.vappe">VAE_Headgear_ChefsToque</li>
+			</apparelRequired>
+			<weaponMoney>
+				<min>250</min>
+				<max>1600</max>
+			</weaponMoney>
+			<specificApparelRequirements>
+				<li>
+					<colorGenerator Class="ColorGenerator_Options">
+						<options>
+							<li>
+								<only>(69,193,69)</only> <!-- Neon green -->
+							</li>
+						</options>
+					</colorGenerator>
+				</li>
+			</specificApparelRequirements>
+			<backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>
+			<techHediffsMoney>
+				<min>50</min>
+				<max>50</max>
+			</techHediffsMoney>
+			<techHediffsTags>
+				<li>Poor</li>
+			</techHediffsTags>
+			<techHediffsChance>0.02</techHediffsChance>
+			<weaponTags>
+				<li>Knife</li>
+				<li>GnomeChef</li>
+			</weaponTags>
+		<initialWillRange>0.01~2</initialWillRange>
+		<initialResistanceRange>1~8</initialResistanceRange>
+	</PawnKindDef>
 </Defs>
