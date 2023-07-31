@@ -37,8 +37,9 @@
 
             <alienPartGenerator>
 				<headTypes Inherit="False">
-					<li>TSP_DuoForg_TopForg</li>
+					<li>DuoForg_Average_Normal</li>
 					<!--
+					<li>TSP_DuoForg_TopForg</li>
 					<li>TSP_DuoForg_TopForg_Male</li>
 					<li>TSP_DuoForg_TopForg_Female</li>
 					-->
@@ -127,8 +128,8 @@
 				<relationChanceModifierLover>0</relationChanceModifierLover>
 				<relationChanceModifierExLover>0</relationChanceModifierExLover>
 
-				<relationChanceModifierFiance>1</relationChanceModifierFiance>
-				<relationChanceModifierSpouse>1</relationChanceModifierSpouse>
+				<relationChanceModifierFiance>0</relationChanceModifierFiance>
+				<relationChanceModifierSpouse>0</relationChanceModifierSpouse>
 				<relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
 
 				<relationChanceModifierParent>1</relationChanceModifierParent>
@@ -200,16 +201,16 @@
 				<blackEndoCategories>
 					<li>Head</li>
 					<li>BodyType</li>
-					<li>Melanin</li> <!-- Can get an overridden skin color, but will always be a natural born green Pawn otherwise -->
+					<li>Melanin</li>
 				</blackEndoCategories>
 				<blackGeneTags>
-					<!-- <li>SkinColor</li> -->
+					<li>SkinColor</li>
 					<li>Head</li>
 					<li>Eyes</li>
 					<li>BodyType</li>
 				</blackGeneTags>
 			</raceRestriction>
-			<styleSettings>
+			<styleSettings Inherit="False">
 				<li>
 					<key>HairDef</key>
 					<value>
@@ -375,7 +376,7 @@
 				</capacities>
 				<power>3.5</power>
 				<cooldownTime>0.5</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<surpriseAttack>
 					<extraMeleeDamages>
 						<li>
@@ -498,7 +499,7 @@
 				<commonality>2</commonality>
 				<onlyManualCast>false</onlyManualCast>
 				<burstShotCount>2</burstShotCount>
-				<ticksBetweenBurstShots>1.8</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 					<canTargetBuildings>true</canTargetBuildings>

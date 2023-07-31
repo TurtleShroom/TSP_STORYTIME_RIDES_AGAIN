@@ -17,7 +17,7 @@
 						<MeatAmount>140</MeatAmount>
 					</statBases>
 					<race>
-						<useMeatFrom>BMT_CrystalCrab_Sandstone</useMeatFrom>
+						<specificMeatDef>ST_Butterscotch</specificMeatDef>
 						<leatherDef Inherit="False">ST_Butterscotch</leatherDef>
 						<wildBiomes Inherit="False">
 						</wildBiomes>
@@ -171,7 +171,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="TSP_BMT_Butterscotch_Crab"]/race/useMeatFrom</xpath>
+			<xpath>/Defs/ThingDef[defName="TSP_BMT_Butterscotch_Crab"]/race/specificMeatDef</xpath>
 			<value>
 				<useMeatFrom>BiomesIslands_RimCrab</useMeatFrom>
 			</value>
