@@ -279,7 +279,7 @@
 			<BasicWorker>3</BasicWorker>
 			<Warden>7</Warden>
 			<Handling>7</Handling>
-			<Cooking>7</Cooking>
+			<Cooking>6</Cooking>
 			<Hunting>3</Hunting>
 			<Construction>7</Construction>
 			<Growing>5</Growing>
@@ -291,7 +291,7 @@
 			<Crafting>7</Crafting>
 			<Hauling>3</Hauling>
 			<Cleaning>3</Cleaning>
-			<Research>15</Research>
+			<Research>10</Research>
 		  </lifeStageWorkSettings>  
 		  <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 		  <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
@@ -396,13 +396,26 @@
 			<li>PlayerColony</li>
           </factionDefs>
         </li>
+        <li MayRequire="ludeon.rimworld.biotech">
+          <pawnKindEntries MayRequire="ludeon.rimworld.biotech">
+            <li MayRequire="ludeon.rimworld.biotech">
+              <kindDefs MayRequire="ludeon.rimworld.biotech">
+                <li MayRequire="ludeon.rimworld.biotech">GoblinGenius</li>
+              </kindDefs>
+              <chance>0.8</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs>
+			<li>PlayerColony</li>
+          </factionDefs>
+        </li>
         <li MayRequire="vanillaexpanded.vfea">
           <pawnKindEntries MayRequire="vanillaexpanded.vfea">
             <li MayRequire="vanillaexpanded.vfea">
               <kindDefs MayRequire="vanillaexpanded.vfea">
                 <li>GoblinTinkerer</li>
               </kindDefs>
-              <chance>1.0</chance>
+              <chance>10</chance>
             </li>
           </pawnKindEntries>
           <factionDefs MayRequire="vanillaexpanded.vfea">
@@ -415,7 +428,7 @@
               <kindDefs MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
                 <li MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">GoblinGenius</li>
               </kindDefs>
-              <chance MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">0.25</chance>
+              <chance MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">1</chance>
             </li>
           </pawnKindEntries>
           <factionDefs MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
@@ -461,6 +474,19 @@
           <factionDefs>
             <li>PlayerColony</li>
             <li>PlayerTribe</li>
+          </factionDefs>
+        </li>
+        <li MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
+          <pawnKindEntries MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
+            <li MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
+              <kindDefs MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
+                <li MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">GoblinGenius</li>
+              </kindDefs>
+              <chance MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">0.8</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">
+            <li MayRequire="vanillaexpanded.vfea,ludeon.rimworld.biotech">VFEA_NewVault</li>
           </factionDefs>
         </li>
       </alienwandererkinds>

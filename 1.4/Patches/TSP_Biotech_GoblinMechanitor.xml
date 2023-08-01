@@ -2,30 +2,6 @@
 
 <Patch>
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/techHediffsTags</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/techHediffsTags</xpath>
-			<success>Always</success>
-			<value>
-				<li>Mechanitor</li>
-			</value>
-		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch Class="PatchOperationAdd" MayRequire="ludeon.rimworld.biotech">
-			<xpath MayRequire="ludeon.rimworld.biotech">/Defs/HediffDef[defName="MechlinkImplant"]</xpath>
-			<success MayRequire="ludeon.rimworld.biotech">Always</success>
-			<value MayRequire="ludeon.rimworld.biotech">
-				<techHediffsTags MayRequire="ludeon.rimworld.biotech">
-					<li MayRequire="ludeon.rimworld.biotech">Mechanitor</li>
-				</techHediffsTags>
-			</value>
-		</nomatch>
-		<!-- If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
 		<xpath>/Defs/HediffDef[defName="MechlinkImplant"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
@@ -46,7 +22,7 @@
 			<value>
 				<li>
 					<kindDef>GoblinGenius</kindDef>
-					<count>2</count>
+					<count>1</count>
 					<requiredAtStart>false</requiredAtStart>
 				</li>
 			</value>
@@ -64,11 +40,12 @@
 			  <PawnKindDef ParentName="MechanitorBase" MayRequire="ludeon.rimworld.biotech">
 				<defName MayRequire="ludeon.rimworld.biotech">GoblinGenius</defName>
 				<label MayRequire="ludeon.rimworld.biotech">goblin elite</label>
+				<race MayRequire="ludeon.rimworld.biotech">Alien_ST_Goblin</race>
 				<combatPower MayRequire="ludeon.rimworld.biotech">170</combatPower>
 				<factionLeader MayRequire="ludeon.rimworld.biotech">true</factionLeader>
 				<defaultFactionType MayRequire="ludeon.rimworld.biotech">GoblinTown</defaultFactionType>
 				<chemicalAddictionChance MayRequire="ludeon.rimworld.biotech">0.03</chemicalAddictionChance>
-				<apparelMoney MayRequire="ludeon.rimworld.biotech">
+				<apparelMoney MayRequire="ludeon.rimworld.biotech" Inherit="False">
 				  <min>1250</min>
 				  <max>3500</max>
 				</apparelMoney>
@@ -82,18 +59,20 @@
 				<apparelRequired MayRequire="ludeon.rimworld.biotech" Inherit="False">
 					<li MayRequire="vanillaexpanded.vappe">VAE_Apparel_LabCoat</li>
 				</apparelRequired>
-				<weaponMoney MayRequire="ludeon.rimworld.biotech">
+				<weaponMoney MayRequire="ludeon.rimworld.biotech" Inherit="False">
 					 <min>1200</min>
 					 <max>2000</max>
 				</weaponMoney>
 				<backstoryCryptosleepCommonality MayRequire="ludeon.rimworld.biotech">0.054</backstoryCryptosleepCommonality>
-				<techHediffsMoney MayRequire="ludeon.rimworld.biotech">
+				<techHediffsMoney MayRequire="ludeon.rimworld.biotech" Inherit="False">
 				  <min>1500</min>
 				  <max>5000</max>
 				</techHediffsMoney>
+				<!--
 				<techHediffsTags MayRequire="ludeon.rimworld.biotech">
 				  <li MayRequire="ludeon.rimworld.biotech">Mechanitor</li>
 				</techHediffsTags>
+				-->
 				<techHediffsRequired MayRequire="ludeon.rimworld.biotech">
 				  <li MayRequire="ludeon.rimworld.biotech">Mechlink</li>
 				</techHediffsRequired>
