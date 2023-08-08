@@ -327,18 +327,18 @@
 		  <!-- <herdAnimal>true</herdAnimal> -->
 		  <predator Inherit="False">false</predator> <!-- Bulborbs are VERY MUCH predators, but SAPIENT Bulborbs do not randomly go and eat animals when there is food around. This fixes a weird occurence where a Bulborb at the start of a game will try and eat a nearby animal and get clapped. -->
 		  <!-- VegetarianRoughAnimal makes them eat grass. Grass doesn't dissappear after so it's super unbalanced-->
-		  <foodType>OmnivoreHuman, OmnivoreAnimal, CarnivoreAnimal, CarnivoreAnimalStrict, VegetarianRoughAnimal, Processed, Meal, Fluid, Meat, Corpse, Seed, Liquor, Plant, Fungus, Kibble</foodType>
+		  <foodType>OmnivoreHuman, OmnivoreAnimal, CarnivoreAnimal, CarnivoreAnimalStrict, VegetarianRoughAnimal, Processed, Meal, Fluid, Meat, Corpse, Seed, Liquor, Plant, Fungus, VegetableOrFruit, Kibble</foodType>
 		  <!-- Actually, grass DOES disappear when eaten, I tested it -->
 		  <gestationPeriodDays>65</gestationPeriodDays>
 		  <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>
 			  <li>(1, 1)</li>
-			  <li>(1.01, 0.02)</li>
+			  <li>(1.01, 0)</li>
 			  <li>(3.5, 0)</li>
 			</points>
 		  </litterSizeCurve>
-		  <lifeStageAges>
+		  <lifeStageAges Inherit="False">
 			<li>
 			  <def>BeanManBabyStage</def>
 			  <minAge>0</minAge>
