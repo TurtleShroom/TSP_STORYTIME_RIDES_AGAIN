@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
   <ThingDef ParentName="ResourceBase">
     <defName>CursedCoin</defName>
@@ -21,7 +22,13 @@
     </thingCategories>
     <stackLimit>500</stackLimit>
     <burnableByRecipe>false</burnableByRecipe>
-    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	<deepCountPerPortion MayRequire="romyashi.treasures">2000</deepCountPerPortion>
+	<modExtensions>
+		<li Class="RomyTreasures.TreasureThingDef" MayRequire="romyashi.treasures">
+			<treasureCommonality MayRequire="romyashi.treasures">0.5</treasureCommonality>
+			<treasureAmountPerCell MayRequire="romyashi.treasures">30</treasureAmountPerCell>
+		</li>
+	</modExtensions>
   </ThingDef>
-  
 </Defs>
