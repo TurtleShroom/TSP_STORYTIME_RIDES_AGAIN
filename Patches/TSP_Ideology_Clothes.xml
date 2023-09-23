@@ -1,6 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Apparel_Robe"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Apparel_Robe"]</xpath>
+			<success>Always</success>
+            <value>
+                <comps></comps>
+            </value>
+        </nomatch>
+    </Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
+			<success>Always</success>
+            <value>
+                <tags></tags>
+            </value>
+        </nomatch>
+    </Operation>
+
 	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.royalty">
 	<!-- Does this exist? -->
 		<xpath MayRequire="ludeon.rimworld.royalty">/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
@@ -23,28 +47,6 @@
 				<li>GoblinWear</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
-			<success>Always</success>
-			<xpath MayRequire="ludeon.rimworld.royalty">/Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
-			<value MayRequire="ludeon.rimworld.royalty">
-				<tags MayRequire="ludeon.rimworld.royalty">
-					<li>Robe</li>
-					<li>RoyalRobe</li>
-					<li>Medieval</li>
-					<li>MedievalApparel</li>
-					<li>MedievalApparelDecent</li>
-					<li>ST_GnomeClothing</li>
-					<li>JeubWear</li>
-					<li>ST_GnomeClothing</li>
-					<li>Royal</li>
-					<li>RoyalTier1</li>
-					<li>RoyalTier2</li>
-					<li>MedievalApparelNoble</li>
-					<li>RichPirate</li>
-				</tags>
-			</value>
-		</nomatch>
 		<!-- In the end, something will always get added. -->
 	</Operation>
 	
@@ -459,6 +461,18 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel/tags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel</xpath>
+			<success>Always</success>
+            <value>
+                <tags></tags>
+            </value>
+        </nomatch>
+    </Operation>
+	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel/tags</xpath>
@@ -481,28 +495,6 @@
 				<li>JeubWear</li>
 			</value>
 		</match>
-		<!-- If it does NOT exist, add this. -->
-		<nomatch Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
-			<success>Always</success>
-			<xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel</xpath>
-			<value MayRequire="ludeon.rimworld.royalty">
-				<tags>
-					<!-- <li>WeebClothes</li> -->
-					<li>WeebElite</li>
-					<li>Royal</li>
-					<li>RoyalTier1</li>
-					<li>RoyalTier2</li>
-					<li>Medieval</li>
-					<li>MedievalApparel</li>
-					<li>MedievalApparelNoble</li>
-					<li>MedievalApparelGnoble</li>
-					<li>King</li>
-					<li>ST_GnomeClothing</li>
-					<li>JeubWear</li>
-				</tags>
-			</value>
-		</nomatch>
-		<!-- In the end, something will always get added. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
@@ -562,5 +554,65 @@
 				<gender>Female</gender>
 			</value>
 		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Apparel_Skirt"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Apparel_Skirt"]/apparel/tags</xpath>
+			<value>
+				<li>Skirt</li>
+				<li>IndustrialBasic</li>
+				<li>IndustrialDecent</li>
+				<li>IndustrialAdvanced</li>
+				<li>Outlander</li>
+				<li>Medieval</li>
+				<li>MedievalBasic</li>
+				<li>MedievalApparel</li>
+				<li>MedievalApparelBasic</li>
+				<li>ST_GnomeClothing</li>
+				<li>PoorPirate</li>
+				<li>NormalPirate</li>
+				<li>RichPirate</li>
+				<li>JeubWear</li>
+				<li>JeubKing</li>
+				<li>ST_BeetClothing</li>
+				<li>BeetWear</li>
+				<li>GoblinWear</li>
+				<li>FrogmanWear</li>
+				<li>CallOfCthulhu_Townsfolk</li>
+				<li>CallOfCthulhu_Thug</li>
+				<li>SK_Khan_Apparel_Tag</li>
+				<li>OniWear</li>
+				<li>RWPWesternWear</li>
+				<li>CallOfCthulhu_TownsfolkNurse</li>
+				<li>Usa</li>
+				<li>klan</li>
+				<li>president</li>
+				<li>mafia</li>
+				<li>mafia_tete</li>
+				<li>WeebClothes</li>
+				<li>WeebGirl</li>
+				<li>WeebPants</li>
+				<li>Royal</li>
+				<li>RoyalTier1</li>
+				<li>RoyalTier2</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional" MayRequire="luxxkim.simpleskirt">
+		<xpath>/Defs/ThingDef[defName="Apparel_Skirt"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd" MayRequire="luxxkim.simpleskirt">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Apparel_Skirt"]/apparel</xpath>
+			<value MayRequire="luxxkim.simpleskirt">
+				<gender>Female</gender>
+			</value>
+		</nomatch>
 	</Operation>
 </Patch>

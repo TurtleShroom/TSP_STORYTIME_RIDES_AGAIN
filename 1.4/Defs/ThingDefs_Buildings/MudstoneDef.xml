@@ -1,7 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-  <ThingDef ParentName="UglyRockBase" Name="ST_MudstoneBase">
+  <ThingDef ParentName="UglyRockBase" Name="ST_MudstoneBase" Abstract="True">
+    <graphicData>
+      <color>(130, 84, 62)</color>
+    </graphicData>
+    <statBases>
+		<MaxHitPoints>90</MaxHitPoints>
+		<Cleanliness>-1</Cleanliness>
+    </statBases>
+    <building>
+      <mineableThing>ST_ChunkMudstone</mineableThing>
+      <mineableDropChance>0.6</mineableDropChance>
+      <smoothedThing>ST_SmoothedMudstone</smoothedThing>
+	  <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="ST_MudstoneBase">
     <defName>ST_MudStone</defName>
     <label>mud stone</label>
     <description>A brittle, brown stone made from dried and compressed mud.</description>
@@ -29,7 +45,7 @@
     </graphicData>
     <statBases>
       <Beauty Inherit="False">0</Beauty>
-      <MarketValue>25</MarketValue>
+      <MarketValue>5</MarketValue>
     </statBases>
     <building>
       <isNaturalRock>true</isNaturalRock>
@@ -66,6 +82,7 @@
     </graphicData>
     <statBases>
       <Mass>0.2</Mass>
+	  <MarketValue>2</MarketValue>
     </statBases>
     <stuffProps>
       <color>(130, 84, 62)</color>
@@ -74,9 +91,9 @@
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <stuffAdjective>muddy</stuffAdjective>
       <statFactors>
-        <Beauty>0.3</Beauty>
-        <MaxHitPoints>0.7</MaxHitPoints>
-        <WorkToBuild>0.8</WorkToBuild>
+        <Beauty>0.03</Beauty>
+        <MaxHitPoints>0.45</MaxHitPoints>
+        <WorkToBuild>0.4</WorkToBuild>
         <WorkToMake>0.3</WorkToMake>
       </statFactors>
       <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
