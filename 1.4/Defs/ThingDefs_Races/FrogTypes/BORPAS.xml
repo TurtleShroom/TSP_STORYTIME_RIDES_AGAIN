@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ======================= Borpa =============================== -->
+
+	<ThingDef ParentName="AnimalThingBase">
+    <defName>BORPA_Borpa</defName>
+    <label>borpa</label>
+    <description>A spinning frog that ruined a bald man's life. It is a curious creature that allows itself to be tamed and milked by humans. It greatly enjoys the company of its master and other Borpas.</description>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+	  <ComfyTemperatureMax>55</ComfyTemperatureMax>
+      <MarketValue>100</MarketValue>
+	   <FilthRate>2</FilthRate>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Milkable">
+        <milkDef>BORPA_Milk</milkDef>
+        <milkIntervalDays>1</milkIntervalDays>
+        <milkAmount>5</milkAmount>
+		<milkFemaleOnly>false</milkFemaleOnly>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>salami</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>3</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>foot</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>BORPA_FootAttackTool</linkedBodyPartsGroup>
+		<chanceFactor>0.5</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>ST_FrogLike</body>
+	  <nuzzleMtbHours>6</nuzzleMtbHours>
+      <predator>false</predator>
+	  <herdAnimal>true</herdAnimal>
+      <baseBodySize>1.4</baseBodySize>
+      <baseHungerRate>0.85</baseHungerRate>
+      <baseHealthScale>1.25</baseHealthScale>
+      <foodType>VegetarianRoughAnimal, Kibble</foodType>
+      <leatherDef>Leather_Borpa</leatherDef>
+      <wildness>0.06</wildness>
+      <trainability>Intermediate</trainability>
+      <meatLabel>borpa salami</meatLabel>
+	  <useMeatFrom>ST_BullFrog</useMeatFrom>
+      <gestationPeriodDays>25</gestationPeriodDays>
+      <lifeExpectancy>35</lifeExpectancy>
+      <manhunterOnDamageChance>0.1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.3</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Pawn_Borpa_Pain</soundWounded>
+          <soundDeath>Pawn_Borpa_Death</soundDeath>
+          <soundCall>Pawn_Borpa_Call</soundCall>
+          <soundAngry>Pawn_Borpa_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		<wildBiomes>
+				<BorealForest>0.15</BorealForest>
+				<TemperateForest>0.35</TemperateForest>
+				<TropicalRainforest>0.45</TropicalRainforest>
+				<TropicalSwamp>0.65</TropicalSwamp>
+				<AridShrubland>0.25</AridShrubland>
+				<Desert>0.15</Desert>
+				<ExtremeDesert>0.05</ExtremeDesert>
+		</wildBiomes>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+	  <li>AnimalFarm</li>
+	  <li>StorytimeAnimal</li>
+	  <li>AnimalFrog</li>
+    </tradeTags>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRoleSecondary</li>
+					<li>ST_FrogRoleTertiary</li>
+					<li>ST_FrogRarity</li>
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_Frog_BORPA</li>
+					<li>ST_FrogFoodProduction</li>
+					<li>ST_FrogFriendly</li>
+					<li>ST_FrogCommon</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_Frog_BORPA_Desc</li>
+					<li>ST_FrogFoodProduction</li>
+					<li>ST_FrogFriendlyDesc</li>
+					<li>ST_FrogCommonDesc</li>
+				</statDescriptions>				
+			</li>
+		</modExtensions>
+  </ThingDef>
+	 <PawnKindDef ParentName="AnimalKindBase">
+	
+    <defName>BORPA_Borpa</defName>
+    <label>borpa</label>
+    <labelMale>borpa</labelMale>
+	<labelFemale>gorpa</labelFemale>
+    <race>BORPA_Borpa</race>
+	<canArriveManhunter>true</canArriveManhunter>
+    <combatPower>90</combatPower>
+    <ecoSystemWeight>1.0</ecoSystemWeight>
+    <wildGroupSize>3~5</wildGroupSize>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Borpa</texPath>
+          <drawSize>0.8</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.15, 0.15)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Gorpa</texPath>
+          <drawSize>0.8</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.15, 0.15)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Dessicated_borpa</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Dessicated_borpa</texPath>
+          <drawSize>0.8</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Borpa</texPath>
+          <drawSize>1.0</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Gorpa</texPath>
+          <drawSize>1.0</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.2, 0.2)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Dessicated_borpa</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Dessicated_borpa</texPath>
+          <drawSize>0.8</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Borpa</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Gorpa</texPath>
+          <drawSize>1.3</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Dessicated_borpa</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Dessicated_borpa</texPath>
+          <drawSize>1.5</drawSize>
+        </femaleDessicatedBodyGraphicData>
+		 <butcherBodyPart>
+          <bodyPartGroup>Eyes</bodyPartGroup>
+          <thing>BORPA_BorpaEye</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+	<!-- Acrid Borpa -->
+	
+	
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>BORPA_AcridBorpa</defName>
+    <label>acrid borpa</label>
+    <description>A mutated Borpa crossed with a Night Frog. It infects and kills those it hunts with toxins that are excreted from its tongue and hands.</description>
+    <statBases>
+		<ToxicResistance>1</ToxicResistance>
+		<ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">1</ToxicEnvironmentResistance>
+		<MoveSpeed>4.5</MoveSpeed>
+		<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+		<ComfyTemperatureMax>55</ComfyTemperatureMax>
+		<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+		<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+		<ArmorRating_Heat>0.30</ArmorRating_Heat>
+		<MarketValue>1000</MarketValue>
+		<FilthRate>5</FilthRate>
+    </statBases>
+    <tools>
+	<li>
+		<label>right claw</label>
+		<capacities>
+		  <li>ScratchToxic</li>
+		</capacities>
+		<power>6</power>
+		<cooldownTime>1.5</cooldownTime>
+		<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+		<surpriseAttack>
+		  <extraMeleeDamages>
+			<li>
+			  <def>Stun</def>
+			  <amount>8</amount>
+			</li>
+		  </extraMeleeDamages>
+		</surpriseAttack>
+	 </li>
+	 <li>
+		<label>left claw</label>
+		<capacities>
+		  <li>ScratchToxic</li>
+		</capacities>
+		<power>6</power>
+		<cooldownTime>1.5</cooldownTime>
+		<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+		<surpriseAttack>
+		  <extraMeleeDamages>
+			<li>
+			  <def>Stun</def>
+			  <amount>8</amount>
+			</li>
+		  </extraMeleeDamages>
+		</surpriseAttack>
+	 </li>
+      <li>
+		<label>tongue</label>
+        <capacities>
+          <li>ST_ParalyzingLick</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>ST_FrogTongue</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>foot</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>0.9</cooldownTime>
+        <linkedBodyPartsGroup>BORPA_FootAttackTool</linkedBodyPartsGroup>
+		<chanceFactor>0.15</chanceFactor>
+      </li>
+    </tools>
+	<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>1</accuracyTouch>
+				<accuracyShort>0.9</accuracyShort>
+				<accuracyMedium>0.8</accuracyMedium>
+				<accuracyLong>0.7</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>BORPA_AcridSpit</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<minRange>5</minRange>
+				<range>9</range>
+				<soundCast>BORPA_AcridSpit</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<label>acidic spit</label>
+				<commonality>1.25</commonality>
+			</li>
+	</verbs>
+    <race>
+	  <maxPreyBodySize>3.5</maxPreyBodySize>
+      <body>ST_FrogLike</body>
+      <predator>true</predator>
+	  <herdAnimal>false</herdAnimal>
+      <baseBodySize>2.5</baseBodySize>
+      <baseHungerRate>1.15</baseHungerRate>
+      <baseHealthScale>3</baseHealthScale>
+      <foodType>CarnivoreAnimalStrict, Corpse, Meat, Fluid, Liquor, Kibble</foodType>
+      <leatherDef>Leather_AcridBorpa</leatherDef>
+      <wildness>0.90</wildness>
+      <trainability>Advanced</trainability>
+      <useMeatFrom>ST_BullFrog</useMeatFrom>
+      <gestationPeriodDays>25</gestationPeriodDays>
+      <lifeExpectancy>45</lifeExpectancy>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>.75</manhunterOnTameFailChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.3</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Pawn_Borpa_Pain</soundWounded>
+          <soundDeath>Pawn_Borpa_Death</soundDeath>
+          <soundCall>Pawn_AcridBorpa_Call</soundCall>
+          <soundAngry>Pawn_AcridBorpa_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		<wildBiomes>
+				<BorealForest>0.08</BorealForest>
+				<TemperateForest>0.08</TemperateForest>
+				<TropicalRainforest>0.08</TropicalRainforest>
+				<TropicalSwamp>0.08</TropicalSwamp>
+				<AridShrubland>0.08</AridShrubland>
+				<Desert>0.08</Desert>
+				<ExtremeDesert>0.08</ExtremeDesert>
+		</wildBiomes>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+	  <li>AnimalFighter</li>
+    </tradeTags>
+	<comps>
+		<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+			<resourceDef>ST_NightFrog_Venom</resourceDef>
+			<gatheringIntervalDays>3</gatheringIntervalDays>
+			<resourceAmount>5</resourceAmount>
+			<customResourceString>PoisonGather</customResourceString>
+		</li>
+	</comps>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRoleSecondary</li>
+					<li>ST_FrogRoleTertiary</li>
+					<li>ST_FrogRarity</li>
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_Frog_BORPA</li>
+					<li>ST_FrogPoison</li>
+					<li>ST_FrogRanged</li>
+					<li>ST_FrogUnommon</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_Frog_BORPA_Desc</li>
+					<li>TSP_ST_FrogPoisonDesc</li>
+					<li>ST_FrogRangedDesc</li>
+					<li>ST_FrogUncommonDesc</li>
+				</statDescriptions>				
+			</li>
+		</modExtensions>
+  </ThingDef>
+  
+   
+ <PawnKindDef ParentName="AnimalKindBase">
+    <defName>BORPA_AcridBorpa</defName>
+    <label>acrid borpa</label>
+    <race>BORPA_AcridBorpa</race>
+	<canArriveManhunter>true</canArriveManhunter>
+    <combatPower>300</combatPower>
+    <ecoSystemWeight>0</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_AcridBorpa/AcridBorpa</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_AcridBorpa/Dessicated_Acridborpa</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_AcridBorpa/AcridBorpa</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Dessicated_Acridborpa</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_AcridBorpa/AcridBorpa</texPath>
+          <drawSize>2.5</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.5, 0.5)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>      
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_AcridBorpa/Dessicated_Acridborpa</texPath>
+          <drawSize>2.5</drawSize>
+        </dessicatedBodyGraphicData>
+		 <butcherBodyPart>
+          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+          <thing>BORPA_BorpaEye</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  	<!-- ======================= Snorpa =============================== -->
+
+	<ThingDef ParentName="AnimalThingBase">
+    <defName>BORPA_Snorpa</defName>
+    <label>snorpa</label>
+    <description>These large snail-like creatures love to roam the forests of the rim. Their shells and hide are extremely durable. While they are friendly to human contact and generally docile, they use their powerful jaws to defend themselves from aggression.</description>
+    <statBases>
+      <MoveSpeed>2.0</MoveSpeed>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+	  <ComfyTemperatureMax>65</ComfyTemperatureMax>
+      <MarketValue>1500</MarketValue>
+	   <FilthRate>6</FilthRate>
+		<ArmorRating_Sharp>.9</ArmorRating_Sharp>
+		<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+		<ArmorRating_Heat>0.25</ArmorRating_Heat>
+    </statBases>
+    <comps>
+
+    </comps>
+    <tools>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>3</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>foot</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>4</cooldownTime>
+        <linkedBodyPartsGroup>BORPA_FootAttackTool</linkedBodyPartsGroup>
+		<chanceFactor>0.5</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>BORPA_SnorpaBodyDef</body>
+      <predator>false</predator>
+	  <herdAnimal>true</herdAnimal>
+      <baseBodySize>3.5</baseBodySize>
+      <baseHungerRate>1.00</baseHungerRate>
+      <baseHealthScale>4.5</baseHealthScale>
+      <foodType>VegetarianRoughAnimal, DendrovoreAnimal, Kibble</foodType>
+      <leatherDef>Leather_SnorpaHide</leatherDef>
+      <wildness>0.85</wildness>
+      <trainability>Intermediate</trainability>
+      <meatLabel>snoracargot</meatLabel>
+	  <specificMeatDef MayRequire="biomesteam.biomescore">BMT_GastropodMeat</specificMeatDef>
+      <gestationPeriodDays>24</gestationPeriodDays>
+      <lifeExpectancy>150</lifeExpectancy>
+      <manhunterOnDamageChance>0.95</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.3</minAge>
+          <soundWounded>Pawn_Snorpa_Pain</soundWounded>
+          <soundDeath>Pawn_Snorpa_Death</soundDeath>
+          <soundCall>Pawn_Snorpa_Call</soundCall>
+          <soundAngry>Pawn_Snorpa_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		<wildBiomes>
+				<BorealForest>0.08</BorealForest>
+				<TemperateForest>0.08</TemperateForest>
+				<TropicalRainforest>0.08</TropicalRainforest>
+				<TropicalSwamp>0.05</TropicalSwamp>
+				<AridShrubland>0.05</AridShrubland>
+				<Desert>0.01</Desert>
+				<ExtremeDesert>0.01</ExtremeDesert>
+		</wildBiomes>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+	  <li>StorytimeAnimal</li>
+	  <li>Borpa</li>
+    </tradeTags>
+  </ThingDef>
+	 <PawnKindDef ParentName="AnimalKindBase">
+	
+    <defName>BORPA_Snorpa</defName>
+    <label>snorpa</label>
+    <race>BORPA_Snorpa</race>
+	<canArriveManhunter>false</canArriveManhunter>
+    <combatPower>200</combatPower>
+    <ecoSystemWeight>2.0</ecoSystemWeight>
+    <wildGroupSize>1~3</wildGroupSize>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Snorpa</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.25, 0.25)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData> 
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Dessicated_Snorpa</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Snorpa</texPath>
+          <drawSize>2.5</drawSize>
+          <shadowData>
+            <volume>(0.45, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Dessicated_Snorpa</texPath>
+          <drawSize>2.5</drawSize>
+        </dessicatedBodyGraphicData>
+
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Snorpa</texPath>
+          <drawSize>3.5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Dessicated_Snorpa</texPath>
+          <drawSize>3.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+ 
+  	<!-- ======================= Kachorpa  =============================== -->
+
+	<ThingDef ParentName="AnimalThingBase">
+    <defName>BORPA_Kachorpa</defName>
+    <label>kachorpa</label>
+    <description>KACHOW! These experimental Borpa variants were created to make the ultimate racer, and as such are partially mechanical! Forty-two losers were created in the process. Kachorpas shed their excess chassis sheds regularly, but they need a little help in getting it off, which is a painless affair. After all, rust is bad for your image when you're this fast! \n \n As a side-effect to the creation of these creatures, liquor and fluids were found to be the only way to continually fuel a Kachorpa, until recently. It seems the Kachorpa have now adapted to also eating raw flesh, probably due to the lack of liquor available in the wild, or maybe that is just because of an insatiable thirst to KACHOW.</description>
+    <statBases>
+		<MoveSpeed>14.9</MoveSpeed>
+		<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+		<ComfyTemperatureMax>75</ComfyTemperatureMax>
+		<MarketValue>1000</MarketValue>
+		<FilthRate>5</FilthRate>
+		<CaravanRidingSpeedFactor>4</CaravanRidingSpeedFactor>
+		<MeatAmount>5</MeatAmount>
+		<LeatherAmount>100</LeatherAmount>
+    </statBases>
+    <comps>
+		<!--
+      <li Class="BorpaEventsAndBehaviors.CompProperties_KachorpaShedding">
+        <steelDef>BORPA_KachorpaSteel</steelDef>
+        <shedIntervalDays>1</shedIntervalDays>
+        <steelAmount>10</steelAmount>
+      </li>
+	  -->
+	  <li Class="StoryTime.CompProperties_Rippable">
+		<legDef>BORPA_KachorpaSteel</legDef>
+		<ripIntervalDays>1</ripIntervalDays>
+		<legAmount>4</legAmount>
+	  </li>
+	  <li Class="AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li> <!-- NOTHING SLOWS THIS SUCKER DOWN! HE IS SPEED! -->
+		<li Class="AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<gender MayRequire="oskarpotocki.vanillafactionsexpanded.core">Male</gender>
+		</li>
+    </comps>
+    <tools>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>salami</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>3</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>wheel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.0</cooldownTime>
+        <linkedBodyPartsGroup>BORPA_KachorpaWheelAttackTool</linkedBodyPartsGroup>
+		<chanceFactor>0.8</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>BORPA_KachorpaBodyDef</body>
+	     <hasGenders>false</hasGenders>
+	  <herdAnimal>true</herdAnimal>
+      <baseBodySize>3.5</baseBodySize>
+      <baseHungerRate>0.5</baseHungerRate>
+      <baseHealthScale>1.45</baseHealthScale>
+      <foodType>Liquor, Fluid, CarnivoreAnimalStrict, Corpse</foodType>
+      <wildness>0.75</wildness>
+      <trainability>Intermediate</trainability>
+      <gestationPeriodDays>50</gestationPeriodDays>
+      <lifeExpectancy>200</lifeExpectancy>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+	  <!--
+	  <fleshType MayRequire="vanillaexpanded.afvehicles">VAEAF_CarFlesh</fleshType>
+	  <leatherDef MayRequire="vanillaexpanded.afvehicles">VAEAP_Leather_Car</leatherDef>
+	  -->
+	  <leatherDef>Leather_Borpa</leatherDef>
+	  <specificMeatDef>BORPA_KachorpaSteel</specificMeatDef>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.1</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.2</minAge>
+          <soundWounded>Pawn_Borpa_Pain</soundWounded>
+          <soundDeath>Pawn_Borpa_Death</soundDeath>
+          <soundCall>Pawn_Borpa_Call</soundCall>
+          <soundAngry>Pawn_Borpa_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		<wildBiomes>
+				<BorealForest>0.05</BorealForest>
+				<TemperateForest>0.05</TemperateForest>
+				<TropicalRainforest>0.05</TropicalRainforest>
+				<TropicalSwamp>0.05</TropicalSwamp>
+				<AridShrubland>0.05</AridShrubland>
+				<Desert>0.05</Desert>
+				<ExtremeDesert>0.05</ExtremeDesert>
+		</wildBiomes>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+	  <li>AnimalFarm</li>
+	  <li>AnimalFrog</li>
+	  <li>StorytimeAnimal</li>
+    </tradeTags>
+	<butcherProducts>
+		<BORPA_KachorpaSteel>20</BORPA_KachorpaSteel>
+	</butcherProducts>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRoleSecondary</li>
+					<li>ST_FrogRoleTertiary</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_Frog_BORPA</li>
+					<li>TSP_ST_Frog_KACHOW</li>
+					<li>ST_FrogIntelligent</li>
+					<li>ST_FrogUncommon</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_Frog_BORPA_Desc</li>
+					<li>TSP_ST_Frog_KACHOW_Desc</li>
+					<li>ST_FrogIntelligentDesc</li>
+					<li>ST_FrogUncommonDesc</li>
+				</statDescriptions>				
+			</li>
+		</modExtensions>
+  </ThingDef>
+  
+  
+  
+	 <PawnKindDef ParentName="AnimalKindBase">
+	
+    <defName>BORPA_Kachorpa</defName>
+    <label>kachorpa</label>
+    <race>BORPA_Kachorpa</race>
+	<canArriveManhunter>true</canArriveManhunter>
+    <combatPower>90</combatPower>
+    <ecoSystemWeight>2.0</ecoSystemWeight>
+    <wildGroupSize>1~3</wildGroupSize>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.35, 0.35)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.5, 0.5)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+ 
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa</texPath>
+          <drawSize>2.5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+		 <butcherBodyPart>
+          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
+          <thing>BORPA_BorpaEye</thing>
+        </butcherBodyPart>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+ 
+	<!-- ======================= John Borpa =============================== -->
+
+	<ThingDef ParentName="AnimalThingBase">
+    <defName>BORPA_JohnBorpa</defName>
+    <label>John Borpa</label>
+    <description>A magnificent demon. Wielding an unique spear, John Borpa only wishes to torture you and your colony. \n \n He has nearly unlimited health. His armor is profound. He does not eat. He does not sleep. He walks. The only thing that can be done in his presence is to lock one's doors and wait for him to leave, which he will do after a day or two. \n \n Legends say that if a John Borpa is successfully killed, processing his body will yield enough food to sustain a colony for years.</description>
+    <statBases>
+		<ToxicResistance>1</ToxicResistance>
+		<ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">1</ToxicEnvironmentResistance>
+		<Flammability>0</Flammability>
+		<PsychicSensitivity>0</PsychicSensitivity>
+		<MoveSpeed>1</MoveSpeed>
+		<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+		<ComfyTemperatureMax>100</ComfyTemperatureMax>
+		<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+		<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+		<ArmorRating_Heat>10</ArmorRating_Heat>
+		<MarketValue>666</MarketValue>
+		<FilthRate>0</FilthRate>
+		<MeatAmount>666</MeatAmount>
+		<LeatherAmount>666</LeatherAmount>
+    </statBases>
+    <tools>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+      <body>ST_FrogLike</body>
+	  <!-- <deathActionWorkerClass>BorpaEventsAndBehaviors.DeathActionWorker_BorpaRemoveOnDeath</deathActionWorkerClass> -->
+	  <needsRest>false</needsRest>
+      <hasGenders>true</hasGenders>
+      <foodType>None</foodType>
+      <baseBodySize>1</baseBodySize>
+      <baseHungerRate>0</baseHungerRate>
+      <baseHealthScale>50</baseHealthScale>
+      <wildness>1</wildness>
+	  <intelligence>ToolUser</intelligence>
+      <lifeExpectancy>1000</lifeExpectancy>
+	  <specificMeatDef>TSP_ST_Borpa_JohnBorpaSteak</specificMeatDef>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_JBorpa_Pain</soundWounded>
+          <soundDeath>Pawn_JBorpa_Death</soundDeath>
+          <soundCall>Pawn_JBorpa_Angry</soundCall>
+          <soundAngry>Pawn_JBorpa_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_JBorpa_Angry</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Borpa_Call</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Borpa_Call</soundMeleeMiss>
+    </race>
+	<comps>
+		<li Class="AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
+		<li Class="AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<gender MayRequire="oskarpotocki.vanillafactionsexpanded.core">Male</gender>
+		</li>
+	</comps>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRoleSecondary</li>
+					<li>ST_FrogRoleTertiary</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_Frog_JOHNBORPA</li>
+					<li>ST_MeleeTank</li>
+					<li>TSP_ST_FrogEnemy</li>
+					<li>ST_FrogCommon</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_Frog_JOHNBORPA_Desc</li>
+					<li>ST_MeleeTankDesc</li>
+					<li>TSP_ST_FrogEnemyDesc</li>
+					<li>TSP_ST_FrogCommonality_Hostile_Desc</li>
+				</statDescriptions>				
+			</li>
+		</modExtensions>
+  </ThingDef>
+  
+  
+	 <PawnKindDef ParentName="AnimalKindBase">
+	
+    <defName>BORPA_JohnBorpa</defName>
+    <label>John Borpa</label>
+    <race>BORPA_JohnBorpa</race>
+	<destroyGearOnDrop>true</destroyGearOnDrop>
+	<canArriveManhunter>false</canArriveManhunter>
+    <combatPower>1000</combatPower>
+    <ecoSystemWeight>0</ecoSystemWeight>
+    <wildGroupSize>1</wildGroupSize>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_JohnBorpa/JohnBorpa</texPath>
+          <drawSize>2.0</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>   
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BORPA_Borpa/Dessicated_borpa</texPath>
+          <drawSize>2.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+	<weaponTags>
+      <li>ScrapingSpear</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+</Defs>

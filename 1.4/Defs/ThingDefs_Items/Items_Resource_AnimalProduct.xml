@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  
+  <!-- Borpa Milk -->
+  <ThingDef ParentName="OrganicProductBase">
+     <defName>BORPA_Milk</defName>
+    <label>borpa milk</label>
+    <description>"Milk" from a borpa.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Milk</texPath>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>3.1</MarketValue>
+      <Mass>0.045</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.08</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>7</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>AnimalProduct, Fluid</foodType>
+    </ingestible>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+<!-- Borpa Eye -->
+ <ThingDef ParentName="ResourceBase">
+    <defName>BORPA_BorpaEye</defName>
+    <label>borpa eye</label>
+    <description>The elongated eye of a borpa. It is said that a mutation caused borpas to seek cum using these eyes. Two of these eyes could be used to craft borpa goggles.</description>
+    <graphicData>
+      <texPath>Things/Item/Special/BorpaEye</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>150</MarketValue>
+      <MaxHitPoints>10</MaxHitPoints>
+      <Mass>0.1</Mass>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+    <stackLimit>20</stackLimit>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>AnimalPart</li>
+    </thingSetMakerTags>
+  </ThingDef>
+  
+</Defs>

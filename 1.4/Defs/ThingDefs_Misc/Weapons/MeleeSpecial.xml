@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef ParentName="BaseWeapon">
+    <defName>BORPA_MeleeWeapon_ScrapingSpear</defName>
+    <label>scraping spear</label>
+    <description>A long spear with countless thorns on the tip.
+
+It was forged from the Soul of the Demon "Phalanx."
+
+It scrapes away at an opponent's equipment and lowers its durability.</description>
+  <thingClass>ThingWithComps</thingClass>
+<category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>true</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <equipmentType>Primary</equipmentType>
+    <useHitPoints>false</useHitPoints>
+    <pathCost>14</pathCost>
+    <selectable>true</selectable>
+    <graphicData>
+      <texPath>Things/Item/Weapons/ScrapingSpear</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(3,3)</drawSize>
+	    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>ScrapingSpear</li>
+    </weaponTags>
+	<uiIconScale>0.5</uiIconScale>
+	<tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <costStuffCount>100</costStuffCount>
+	<recipeMaker></recipeMaker>
+	<relicChance>0</relicChance>
+	 <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <statBases>
+		<Mass>2</Mass>
+		<MarketValue>0</MarketValue>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+		<DeteriorationRate>2</DeteriorationRate>
+		<Beauty>-3</Beauty>
+		<SellPriceFactor>0.20</SellPriceFactor>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_Forbiddable"/>      
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li Class="CompProperties_Styleable"></li>
+    </comps>
+    <equippedAngleOffset>0</equippedAngleOffset>
+    <tools>
+    <!--  <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li> -->
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>BORPA_ScrapingSpear</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>1.0</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  
+</Defs>

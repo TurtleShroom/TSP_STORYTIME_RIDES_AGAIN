@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- =========== Bases =========== -->
+ <ThingDef ParentName="ChunkBase">
+    <defName>BORPA_ChunkKachorpaSlag</defName>
+    <label>kachorpa slag chunk</label>
+    <description>A chunk of kachorpa steel slag. While it's useless in its current form, it can be smelted to recover steel.</description>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkSlag</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+            <color>(221,18,0)</color>
+    </graphicData>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <soundDrop>ChunkSlag_Drop</soundDrop>
+    <thingCategories>
+      <li>Chunks</li>
+    </thingCategories>
+	<smeltable>true</smeltable>
+    <smeltProducts>
+      <Steel>15</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+</Defs>
