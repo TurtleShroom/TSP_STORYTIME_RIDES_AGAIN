@@ -7,7 +7,7 @@
   <ThingDef ParentName="LeatherBase">
     <defName>Leather_Borpa</defName>
     <label>borpaskin</label>
-    <description>A sticky textile made from the skin of a Borpa. It is covered in a white goop.</description>
+    <description>A textile made from the skin of a Borpa. It is soft to the touch in addition to being moist like a normal frog's skin.</description>
     <graphicData>
       <color>(34,177,76)</color>
     </graphicData>
@@ -20,7 +20,7 @@
     </statBases>
     <stuffProps>
       <color>(34,177,76)</color>
-      <commonality>0.075</commonality>
+      <commonality>0.08</commonality>
       <statFactors>
         <MaxHitPoints>1.1</MaxHitPoints>
         <Beauty>0.5</Beauty>
@@ -33,7 +33,7 @@
   <ThingDef ParentName="LeatherBase">
     <defName>Leather_SnorpaHide</defName>
     <label>snorpa hide</label>
-    <description>A hardened dried hide of a snorpa. It's like a flexible shell and is durable but not very insulating</description>
+    <description>The hardened, chitinous hide of a Snorpa. It's like a flexible shell. It is durable but not very insulating.</description>
     <graphicData>
       <color>(189,125,89)</color>
     </graphicData>
@@ -47,6 +47,12 @@
     <stuffProps>
       <color>(189,125,89)</color>
       <commonality>0.075</commonality>
+	  <categories>
+		<li>Leathery</li>
+		
+		<!-- Mod support -->
+		<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+	  </categories>
       <statFactors>
         <MaxHitPoints>1.8</MaxHitPoints>
         <Beauty>0.6</Beauty>
@@ -59,7 +65,7 @@
   <ThingDef ParentName="LeatherBase">
     <defName>Leather_AcridBorpa</defName>
     <label>acrid borpaskin</label>
-    <description>A tough textile from a mutated borpa. It is covered in slime.</description>
+    <description>A tough textile from an Acrid Borpa. It is covered in slime.</description>
     <graphicData>
       <color>(159,59,162)</color>
     </graphicData>
@@ -84,9 +90,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>BORPA_KachorpaSteel</defName>
     <label>kachorpa steel</label>
-    <description>A shiny red metal that a kachorpa can be "sheared" for. It can be used for everything that steel can, except it is more beautiful and sharper, but less protective.
-
-Legends warn of living in environments surrounded by this metal. A movie involving talking cars could invade your dreams and wake you every night with a terrible noise - KACHOW!</description>
+    <description>A shiny red metal that a kachorpa can be "sheared" for. It can be used for everything that steel can, except it is more beautiful and sharper, but less protective. Legends warn of living in environments surrounded by this metal. Your dreams could be invaded and wake you every night with a terrible noise - KACHOW!</description>
     <graphicData>
       <texPath>Things/Item/Resource/Steel</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -103,7 +107,7 @@ Legends warn of living in environments surrounded by this metal. A movie involvi
       <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
       <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
-      <BluntDamageMultiplier>.97</BluntDamageMultiplier>
+      <BluntDamageMultiplier>0.97</BluntDamageMultiplier>
     </statBases>
     <useHitPoints>false</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
@@ -119,6 +123,9 @@ Legends warn of living in environments surrounded by this metal. A movie involvi
     <stuffProps>
       <categories>
         <li>Metallic</li>
+		
+		<!-- Mod support -->
+		<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
       </categories>
       <appearance>Metal</appearance>
       <commonality>0.025</commonality>
@@ -128,7 +135,7 @@ Legends warn of living in environments surrounded by this metal. A movie involvi
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
       <statFactors>
-        <MaxHitPoints>.98</MaxHitPoints>
+        <MaxHitPoints>0.98</MaxHitPoints>
         <Beauty>1.5</Beauty>
         <Flammability>0.4</Flammability>
       </statFactors>
