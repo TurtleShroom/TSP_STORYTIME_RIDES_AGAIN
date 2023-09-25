@@ -203,6 +203,18 @@
 			</operations>
 		</match>
 	</Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="O_TomatoSauce"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
+			<success>Always</success>
+            <value>
+                <comps></comps>
+            </value>
+        </nomatch>
+    </Operation>
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
@@ -305,6 +317,18 @@
 			</operations>
 		</match>
 	</Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="O_TomatoSauce"]/thingCategories</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
+			<success>Always</success>
+            <value>
+                <thingCategories></thingCategories>
+            </value>
+        </nomatch>
+    </Operation>
 
 	<Operation Class="PatchOperationFindMod" MayRequire="onekimchiman.ingredienttime">
 	<!-- Do any of the following Mods exist? -->
