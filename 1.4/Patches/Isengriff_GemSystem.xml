@@ -88,6 +88,20 @@
 		</nomatch>
 	</Operation>
 	
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[@Name="ChunkRockBase"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[@Name="ChunkRockBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/comps</xpath>
@@ -103,22 +117,20 @@
 				</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch Class="PatchOperationAdd">
-			<success>Always</success>
-			<xpath>/Defs/ThingDef[@Name="ChunkRockBase"]</xpath>
-			<value>
-				<comps>
-					<li Class="StoryTime.CompProperties_GemDropper">
-						<commonGemDropRate>0.016</commonGemDropRate>
-						<uncommonGemDropRate>0.008</uncommonGemDropRate>
-						<rareGemDropRate>0.004</rareGemDropRate>
-					</li>
-				</comps>
-			</value>
-		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
+  
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[@Name="RockBase"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[@Name="RockBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
@@ -135,20 +147,6 @@
 				</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch Class="PatchOperationAdd">
-			<success>Always</success>
-			<xpath>/Defs/ThingDef[@Name="RockBase"]</xpath>
-			<value>
-				<comps>
-					<li Class="StoryTime.CompProperties_GemDropper">
-						<commonGemDropRate>0.016</commonGemDropRate>
-						<uncommonGemDropRate>0.008</uncommonGemDropRate>
-						<rareGemDropRate>0.004</rareGemDropRate>
-					</li>
-				</comps>
-			</value>
-		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
   
@@ -163,6 +161,18 @@
     </value>
   </Operation>
   
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Filth_Dirt"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Filth_Dirt"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+  
   	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="Filth_Dirt"]/thingCategories</xpath>
@@ -175,15 +185,16 @@
 				<li>ST_GemsCut_Common</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Filth_Dirt"]</xpath>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Filth_Sand"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Filth_Sand"]</xpath>
 			<success>Always</success>
 			<value>
-				<thingCategories>
-					<li>ST_GemsUncut_Common</li>
-					<li>ST_GemsCut_Common</li>
-				</thingCategories>
+				<thingCategories></thingCategories>
 			</value>
 		</nomatch>
 	</Operation>
@@ -200,15 +211,16 @@
 				<li>ST_GemsCut_Common</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Filth_Sand"]</xpath>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Silver"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Silver"]</xpath>
 			<success>Always</success>
 			<value>
-				<thingCategories>
-					<li>ST_GemsUncut_Common</li>
-					<li>ST_GemsCut_Common</li>
-				</thingCategories>
+				<thingCategories></thingCategories>
 			</value>
 		</nomatch>
 	</Operation>
@@ -225,15 +237,16 @@
 				<li>ST_GemsCut_Uncommon</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Silver"]</xpath>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Gold"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Gold"]</xpath>
 			<success>Always</success>
 			<value>
-				<thingCategories>
-					<li>ST_GemsUncut_Uncommon</li>
-					<li>ST_GemsCut_Uncommon</li>
-				</thingCategories>
+				<thingCategories></thingCategories>
 			</value>
 		</nomatch>
 	</Operation>
@@ -250,17 +263,6 @@
 				<li>ST_GemsCut_Rare</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Gold"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories>
-					<li>ST_GemsUncut_Rare</li>
-					<li>ST_GemsCut_Rare</li>
-				</thingCategories>
-			</value>
-		</nomatch>
 	</Operation>
   
 	<!--
@@ -269,6 +271,42 @@
 		"Ruby"
 		"Diamond"
 	-->
+  
+  	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Diamond"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Diamond"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Ruby"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Ruby"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Sapphire"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Sapphire"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
   
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
@@ -282,17 +320,6 @@
 				<li>ST_GemsCut_Rare</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Diamond"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories>
-					<li>ST_GemsUncut_Rare</li>
-					<li>ST_GemsCut_Rare</li>
-				</thingCategories>
-			</value>
-		</nomatch>
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
@@ -307,17 +334,7 @@
 				<li>ST_GemsCut_Uncommon</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Ruby"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories>
-					<li>ST_GemsUncut_Uncommon</li>
-					<li>ST_GemsCut_Uncommon</li>
-				</thingCategories>
-			</value>
-		</nomatch>
+
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
@@ -332,23 +349,24 @@
 				<li>ST_GemsCut_Uncommon</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Sapphire"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories>
-					<li>ST_GemsUncut_Uncommon</li>
-					<li>ST_GemsCut_Uncommon</li>
-				</thingCategories>
-			</value>
-		</nomatch>
 	</Operation>
 	
 	<!--
 		THING DEFS
 		"RawMagicyte"
 	-->
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="RawMagicyte"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RawMagicyte"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
@@ -362,25 +380,71 @@
 				<li>ST_GemsCut_Common</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="RawMagicyte"]</xpath>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="BMT_Sand"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="BMT_Sand"]</xpath>
 			<success>Always</success>
 			<value>
-				<thingCategories>
-					<li>ST_GemsUncut_Common</li>
-					<li>ST_GemsCut_Common</li>
-				</thingCategories>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="BMT_ChunkSand"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="BMT_ChunkSand"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="BMT_ChunkSand"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="BMT_ChunkSand"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BMT_ChunkSand"]/thingClass</xpath>
+		<!-- If it does, do this replacement. -->
+		<match  Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="BMT_ChunkSand"]/thingClass</xpath>
+			<success>Always</success>
+			<value>
+				<thingClass>ThingWithComps</thingClass>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch  Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="BMT_ChunkSand"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingClass>ThingWithComps</thingClass>
 			</value>
 		</nomatch>
 	</Operation>
 	
   	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="BMT_Sand"]/thingCategories</xpath>
+		<xpath>/Defs/ThingDef[defName="BMT_ChunkSand"]/thingCategories</xpath>
 		<!-- If it does, add this. -->
 		<match  Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="BMT_Sand"]/thingCategories</xpath>
+			<xpath>/Defs/ThingDef[defName="BMT_ChunkSand"]/thingCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>ST_GemsUncut_Common</li>
@@ -389,17 +453,37 @@
 				<li>ST_GemsCut_Uncommon</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd" MayRequire="biomesteam.biomescaverns">
-			<xpath>/Defs/ThingDef[defName="BMT_Sand"]</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BMT_ChunkSand"]/stackLimit</xpath>
+		<!-- If it does, do this replacement. -->
+		<match  Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="BMT_ChunkSand"]/stackLimit</xpath>
 			<success>Always</success>
-			<value MayRequire="biomesteam.biomescaverns">
-				<thingCategories>
-					<li>ST_GemsUncut_Common</li>
-					<li>ST_GemsCut_Common</li>
-					<li>ST_GemsUncut_Uncommon</li>
-					<li>ST_GemsCut_Uncommon</li>
-				</thingCategories>
+			<value>
+				<stackLimit>50</stackLimit>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="BMT_ChunkSand"]</xpath>
+			<success>Always</success>
+			<value>
+				<stackLimit>50</stackLimit>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="BMT_ResourceBlueCrystal"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="BMT_ResourceBlueCrystal"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
 			</value>
 		</nomatch>
 	</Operation>
@@ -416,22 +500,23 @@
 				<li>ST_GemsCut_Common</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd" MayRequire="biomesteam.biomescaverns">
-			<xpath>/Defs/ThingDef[defName="BMT_ResourceBlueCrystal"]</xpath>
-			<success>Always</success>
-			<value MayRequire="biomesteam.biomescaverns">
-				<thingCategories>
-					<li>ST_GemsUncut_Common</li>
-					<li>ST_GemsCut_Common</li>
-				</thingCategories>
-			</value>
-		</nomatch>
 	</Operation>
 	
 
 	<!-- THING DEFS -->
 	<!-- "N7_Porcelain" -->
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="N7_Porcelain"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="N7_Porcelain"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
 
   	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
@@ -445,22 +530,36 @@
 				<li>ST_GemsCut_Common</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="N7_Porcelain"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories>
-					<li>ST_GemsUncut_Common</li>
-					<li>ST_GemsCut_Common</li>
-				</thingCategories>
-			</value>
-		</nomatch>
 	</Operation>
 	
 	<!-- TRADITIONAL CHINESE MOD -->
 	<!-- "CiPian" (PORCELAIN) -->
 	<!-- "JunYongTaoCi" (MILITARY CERAMICS) -->
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="CiPian"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="CiPian"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="JunYongTaoCi"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="JunYongTaoCi"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
   	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="CiPian"]/thingCategories</xpath>
@@ -473,15 +572,16 @@
 				<li>ST_GemsCut_Common</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd" MayRequire="dajian.chiteaditional.expanded">
-			<xpath>/Defs/ThingDef[defName="CiPian"]</xpath>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="JunYongTaoCi"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="JunYongTaoCi"]</xpath>
 			<success>Always</success>
-			<value MayRequire="dajian.chiteaditional.expanded">
-				<thingCategories>
-					<li>ST_GemsUncut_Common</li>
-					<li>ST_GemsCut_Common</li>
-				</thingCategories>
+			<value>
+				<thingCategories></thingCategories>
 			</value>
 		</nomatch>
 	</Operation>
@@ -498,16 +598,62 @@
 				<li>ST_GemsCut_Rare</li>
 			</value>
 		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch  Class="PatchOperationAdd" MayRequire="dajian.chiteaditional.expanded">
-			<xpath>/Defs/ThingDef[defName="JunYongTaoCi"]</xpath>
+	</Operation>
+	
+	
+	<!-- MORROWRIM MOD -->
+	<!-- MorrowRim_Glass (ELDER SCROLLS VOLCANIC GLASS) -->
+	<!-- MorrowRim_Ebony (ELDER SCROLLS VOLCANIC EBONY) -->
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MorrowRim_Glass"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MorrowRim_Glass"]</xpath>
 			<success>Always</success>
-			<value MayRequire="dajian.chiteaditional.expanded">
-				<thingCategories>
-					<li>ST_GemsUncut_Rare</li>
-					<li>ST_GemsCut_Rare</li>
-				</thingCategories>
+			<value>
+				<thingCategories></thingCategories>
 			</value>
 		</nomatch>
+	</Operation>
+	
+  	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="MorrowRim_Glass"]/thingCategories</xpath>
+		<!-- If it does, add this. -->
+		<match  Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="MorrowRim_Glass"]/thingCategories</xpath>
+			<success>Always</success>
+			<value>
+				<li>ST_GemsUncut_Rare</li>
+				<li>ST_GemsCut_Rare</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MorrowRim_Ebony"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MorrowRim_Ebony"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+  	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="MorrowRim_Ebony"]/thingCategories</xpath>
+		<!-- If it does, add this. -->
+		<match  Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="MorrowRim_Ebony"]/thingCategories</xpath>
+			<success>Always</success>
+			<value>
+				<li>ST_GemsUncut_Rare</li>
+				<li>ST_GemsCut_Rare</li>
+			</value>
+		</match>
 	</Operation>
 </Patch>

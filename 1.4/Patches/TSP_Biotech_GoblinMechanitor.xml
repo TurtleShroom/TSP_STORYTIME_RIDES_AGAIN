@@ -3,7 +3,7 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/HediffDef[defName="MechlinkImplant"]</xpath>
+		<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/removeOnRedressIfNotOfKind</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/removeOnRedressIfNotOfKind</xpath>
@@ -36,6 +36,7 @@
 					<li>IndustrialBasic</li>
 					<li>IndustrialAdvanced</li>
 					<li>IndustrialMilitary</li>
+					<li>IndustrialMilitaryAdvanced</li>
 					<li>GoblinWear</li>
 					<li>Cape</li>
 				</apparelTags>
@@ -58,12 +59,14 @@
 				-->
 				<techHediffsRequired MayRequire="ludeon.rimworld.biotech">
 				  <li MayRequire="ludeon.rimworld.biotech">Mechlink</li>
+				  <li MayRequire="ludeon.rimworld.biotech">DeathAcidifier</li>
 				</techHediffsRequired>
 				<biocodeWeaponChance>1</biocodeWeaponChance>
 				<techHediffsChance>0.5</techHediffsChance>
 				<weaponTags MayRequire="ludeon.rimworld.biotech">
 					<li>GoblinTech</li>
 					<li>GoblinAdvanced</li>
+					<li>GoblinGenius</li>
 				</weaponTags>
 				<initialWillRange>21~24</initialWillRange>
 				<initialResistanceRange>48~101</initialResistanceRange>
