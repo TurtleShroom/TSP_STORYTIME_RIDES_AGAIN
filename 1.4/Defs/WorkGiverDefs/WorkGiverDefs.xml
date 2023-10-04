@@ -106,6 +106,25 @@
 		<prioritizeSustains>true</prioritizeSustains>
 		<canBeDoneByMechs>true</canBeDoneByMechs>
 	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>ST_Grinding_AsCook</defName>
+		<label>grind stuff at a grinder</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Cooking</workType> <!-- Anyone can turn a handle -->
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+		</fixedBillGiverDefs>
+		<verb>grind</verb>
+		<gerund>grinding at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+	</WorkGiverDef>
   
 	<WorkGiverDef>
 		<defName>TSP_BlastFurnace_Smelting</defName>

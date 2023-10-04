@@ -1,6 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
+  <PawnKindDef Abstract="True" Name="BaseGoblinKind">
+    <race>Alien_ST_Goblin</race>
+    <combatPower>30</combatPower>
+	<backstoryFiltersOverride>
+	  <li>
+		<categories>
+		  <li>GoblinBackstory</li>
+		</categories>
+	  </li>
+	</backstoryFiltersOverride>
+	<apparelTags>
+		<li>GoblinWear</li>
+		<li>Medieval</li>
+        <li>MedievalBasic</li>
+		<li>Barbarian</li>
+		<!-- <li>Klan_apparel</li> -->
+		<li>Skirt</li>
+		<li>Glasses</li>
+		<li>School_Thai</li>
+    </apparelTags>
+    <!-- <isFighter>false</isFighter> -->
+    <!-- <apparelIgnoreSeasons>true</apparelIgnoreSeasons> -->
+    <invNutrition>2</invNutrition>
+	<modExtensions>
+		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+				<li MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">
+					<defName MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">ROM_InnsmouthLook_VoiceFishman</defName>
+					<chance MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">100</chance>
+				</li>
+			</genes>
+		</li>
+	</modExtensions>
+  </PawnKindDef>
+
   <PawnKindDef ParentName="BaseGoblinKind">
 	<race>Alien_ST_Goblin</race>
     <defName>GoblinPeon</defName>
@@ -19,6 +54,7 @@
 		<li>Barbarian</li>
 		<li>GoblinWear</li>
 		<li>School_Thai</li>
+		<li>BeltDefenseTox</li>
     </apparelTags>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <techHediffsMoney>
@@ -46,9 +82,18 @@
 					<defName MayRequire="rimofmadness.callofcthulhu.factions,ludeon.rimworld.biotech">ROM_InnsmouthLook_VoiceFishman</defName>
 					<chance MayRequire="rimofmadness.callofcthulhu.factions,ludeon.rimworld.biotech">50</chance>
 				</li>
+				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+					<defName MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">ToxicEnvironmentResistance_Partial</defName>
+					<chance MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">7</chance>
+				</li>
+				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+					<defName MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">ToxicEnvironmentResistance_Total</defName>
+					<chance MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">1</chance>
+				</li>
 			</genes>
 		</li>
 	</modExtensions>
+	<comps></comps>
   </PawnKindDef>
 
   <PawnKindDef ParentName="BaseGoblinKind">
@@ -184,6 +229,7 @@
     <techHediffsChance>0.5</techHediffsChance>
 	<weaponTags>
 		<li>GoblinTech</li>
+		<li>Rusted</li>
     </weaponTags>
     <initialWillRange>1~4</initialWillRange>
     <initialResistanceRange>8~11</initialResistanceRange>
@@ -270,6 +316,7 @@
     <techHediffsChance>0.02</techHediffsChance>
 	<weaponTags>
 		<li>GoblinAdvanced</li>
+		<li>Rusted</li>
     </weaponTags>
     <initialWillRange>1~4</initialWillRange>
     <initialResistanceRange>18~20</initialResistanceRange>
@@ -320,4 +367,143 @@
     <initialWillRange>1~4</initialWillRange>
     <initialResistanceRange>5~20</initialResistanceRange>
   </PawnKindDef>
+  
+	<PawnKindDef ParentName="BaseGoblinKind">
+		<defName>PPHHYY_Doomsday_Goblin</defName>
+		<label>goblin mad scientist</label>
+		<combatPower>350</combatPower>
+		<factionLeader>false</factionLeader>
+		<chemicalAddictionChance>0.33</chemicalAddictionChance>
+		<canBeSapper>true</canBeSapper>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelMoney>
+			<min>1350</min>
+			<max>4200</max>
+		</apparelMoney>
+		<invFoodDef MayRequire="robtrg.tf2.sandvich">robtrg.tf2.sandvich</invFoodDef>
+		<invNutrition MayRequire="robtrg.tf2.sandvich">12</invNutrition>
+		<apparelTags Inherit="False">
+			<li>Military</li>
+			<li>IndustrialMilitary</li>
+			<li>IndustrialMilitaryAdvanced</li>
+			<li>MedievalArmorElite</li>
+			<li>GoblinWear</li>
+			<li>Cape</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>1500</min>
+			<max>4000</max>
+		</weaponMoney>
+		<backstoryCryptosleepCommonality>0.01</backstoryCryptosleepCommonality>
+		<techHediffsMoney>
+			<min>1150</min>
+			<max>3550</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Common</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<techHediffsRequired>
+			<li>DeathAcidifier</li>
+			<li>VenomFangs</li>
+			<li>VenomTalon</li>
+			<li>VenomTalon</li>
+		</techHediffsRequired>
+		<apparelRequired Inherit="False">
+			<li MayRequire="vanillaexpanded.vappe">VAE_Apparel_LabCoat</li>
+			<li MayRequire="ludeon.rimworld.biotech">Apparel_GasMask</li>
+		</apparelRequired>
+		<biocodeWeaponChance>0.9</biocodeWeaponChance>
+		<techHediffsChance>0.66</techHediffsChance>
+		<weaponTags>
+			<li>GoblinDoomsday</li>
+			<li>GoblinTech</li>
+			<li>Gun_ToxicNeedle</li>
+			<li>GunHeavy</li>
+			<li>SpacerGun</li>
+			<li>MiniToxSpray</li>
+		</weaponTags>
+		<initialWillRange>5~9</initialWillRange>
+		<initialResistanceRange>18~40</initialResistanceRange>
+		<skills>
+			<li>
+				<skill>Intellectual</skill>
+				<range>12~15</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~5</range> <!-- Backstory adds a LOT more -->
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>10</range>
+			</li>
+		</skills>
+		<disallowedTraits>
+			<li>Wimp</li>
+			<li>Nudist</li>
+			<li>BodyPurist</li>
+			<li>ST_Stupid</li>
+		</disallowedTraits>
+		<!--
+		<backstoryCategories Inherit="False">
+			<li>GoblinDoomsday</li>
+			<li>GoblinDoomsday_Child</li>
+			<li>GoblinDoomsday_Adult</li>
+		</backstoryCategories>
+		-->
+		<backstoryFiltersOverride Inherit="False">
+			<li Inherit="False">
+				<categories Inherit="False">
+					<li>GoblinDoomsday</li>
+					<li>GoblinDoomsday_Child</li>
+					<li>GoblinDoomsday_Adult</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<inventoryOptions>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>ST_GoblinPoison</thingDef>
+					<countRange>35~50</countRange>
+				</li>
+				<li>
+					<thingDef>ST_PoisonExtract</thingDef>
+					<countRange>10~25</countRange>
+				</li>
+				<li>
+					<thingDef>ST_NightFrog_Venom</thingDef>
+					<countRange>10~25</countRange>
+				</li>
+				<li>
+					<thingDef>WerefrogBlood</thingDef>
+					<countRange>1~2</countRange>
+				</li>
+				<li>
+					<thingDef>BillyClub</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+				<li MayRequire="punkyroo.containtoxicwaste">
+					<thingDef MayRequire="punkyroo.containtoxicwaste">WasteCanister</thingDef>
+					<countRange MayRequire="punkyroo.containtoxicwaste">3~15</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<modExtensions>
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+					<li MayRequire="rimofmadness.callofcthulhu.factions,ludeon.rimworld.biotech">
+						<defName MayRequire="rimofmadness.callofcthulhu.factions,ludeon.rimworld.biotech">ROM_InnsmouthLook_VoiceFishman</defName>
+						<chance MayRequire="rimofmadness.callofcthulhu.factions,ludeon.rimworld.biotech">999</chance>
+					</li>
+					<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+						<defName MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">ToxicEnvironmentResistance_Total</defName>
+						<chance MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">999</chance>
+					</li>
+				</genes>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
 </Defs>

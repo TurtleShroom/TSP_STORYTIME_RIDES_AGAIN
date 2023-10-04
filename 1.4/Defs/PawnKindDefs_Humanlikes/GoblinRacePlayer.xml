@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Defs>
-  <PawnKindDef Abstract="True" Name="BaseGoblinKind">
-    <race>Alien_ST_Goblin</race>
-    <combatPower>30</combatPower>
-	<backstoryFiltersOverride>
-	  <li>
-		<categories>
-		  <li>GoblinBackstory</li>
-		</categories>
-	  </li>
-	</backstoryFiltersOverride>
-	<apparelTags>
-		<li>GoblinWear</li>
-		<li>Medieval</li>
-        <li>MedievalBasic</li>
-		<li>Barbarian</li>
-		<li>Klan_apparel</li>
-		<li>Skirt</li>
-		<li>Glasses</li>
-		<li>School_Thai</li>
-    </apparelTags>
-    <!-- <isFighter>false</isFighter> -->
-    <!-- <apparelIgnoreSeasons>true</apparelIgnoreSeasons> -->
-    <invNutrition>2</invNutrition>
-	<modExtensions>
-		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
-			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
-				<li MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">
-					<defName MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">ROM_InnsmouthLook_VoiceFishman</defName>
-					<chance MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">100</chance>
-				</li>
-			</genes>
-		</li>
-	</modExtensions>
-  </PawnKindDef>
-  
+
+<Defs>  
   <PawnKindDef ParentName="BaseGoblinKind">
     <defName>PlayerGoblin</defName>
     <label>goblin</label>
