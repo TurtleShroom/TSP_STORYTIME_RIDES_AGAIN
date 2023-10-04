@@ -5,56 +5,56 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="VCE_RawTomatoes"]</xpath>
+	<xpath>/Defs/ThingDef[defName="VCE_RawTomatoes"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 					</value>
 				</li>
 			</operations>
@@ -63,82 +63,82 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="O_RawTomatoes"]</xpath>
+	<xpath>/Defs/ThingDef[defName="O_RawTomatoes"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
 					</value>
 				</li>
 
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationRemove">
-					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
 					<success>Always</success>
 				</li>
 				
 				<li Class="PatchOperationRemove">
-					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
 					<success>Always</success>
 				</li>
 				
 				<li Class="PatchOperationRemove">
-					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
 					<success>Always</success>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef/products/O_RawTomatoes</xpath>
+					<xpath>/Defs/RecipeDef/products/O_RawTomatoes</xpath>
 					<success>Always</success>
 					<value>
 						<TomatoCyst>25</TomatoCyst>
@@ -147,7 +147,7 @@
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef/costList/O_RawTomatoes</xpath>
+					<xpath>/Defs/ThingDef/costList/O_RawTomatoes</xpath>
 					<success>Always</success>
 					<value>
 						<TomatoCyst>5</TomatoCyst>
@@ -206,9 +206,9 @@
 	
     <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
     <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="O_TomatoSauce"]/comps</xpath>
+        <xpath>/Defs/ThingDef[defName="O_TomatoSauce"]/comps</xpath>
         <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
+            <xpath>/Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
 			<success>Always</success>
             <value>
                 <comps></comps>
@@ -218,31 +218,31 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
+	<xpath>/Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[defName="MakeTomatoSauce or defName="MakeTomatoSauceBulk"]/fixedIngredientFilter/thingDefs</xpath>
+					<xpath>/Defs/RecipeDef[defName="MakeTomatoSauce or defName="MakeTomatoSauceBulk"]/fixedIngredientFilter/thingDefs</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[defName="MakeTomatoSauce" or defName="MakeTomatoSauceBulk"]/ingredients/li/filter/thingDefs</xpath>
+					<xpath>/Defs/RecipeDef[defName="MakeTomatoSauce" or defName="MakeTomatoSauceBulk"]/ingredients/li/filter/thingDefs</xpath>
 					<success>Always</success>
 					<value>
-						<li>TomatoCyst</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
 						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName="MakeTomatoSauce"]/products</xpath>
+					<xpath>/Defs/RecipeDef[defName="MakeTomatoSauce"]/products</xpath>
 					<success>Always</success>
 					<value>
 						<products>
@@ -252,7 +252,7 @@
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName="MakeTomatoSauceBulk"]/products</xpath>
+					<xpath>/Defs/RecipeDef[defName="MakeTomatoSauceBulk"]/products</xpath>
 					<success>Always</success>
 					<value>
 						<products>
@@ -262,7 +262,7 @@
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="O_TomatoSauce"]/ingestible</xpath>
+					<xpath>/Defs/ThingDef[defName="O_TomatoSauce"]/ingestible</xpath>
 					<success>Always</success>
 					<value>
 						<specialThoughtAsIngredient>TSP_OH_TomatoSauce</specialThoughtAsIngredient>
@@ -270,7 +270,7 @@
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="O_TomatoSauce"]/comps</xpath>
+					<xpath>/Defs/ThingDef[defName="O_TomatoSauce"]/comps</xpath>
 					<success>Always</success>
 					<value>
 						<!-- If you have the Mod, you can season non-Mediterranean food with olive oil too! -->
@@ -301,7 +301,7 @@
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/RecipeDef[defName = "MakeTomatoSauce" or "defName = "MakeTomatoSauceBulk"]/recipeUsers</xpath>
+					<xpath>/Defs/RecipeDef[defName = "MakeTomatoSauce" or "defName = "MakeTomatoSauceBulk"]/recipeUsers</xpath>
 					<success>Always</success>
 					<value>
 						<!--
@@ -320,9 +320,9 @@
 	
     <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
     <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="O_TomatoSauce"]/thingCategories</xpath>
+        <xpath>/Defs/ThingDef[defName="O_TomatoSauce"]/thingCategories</xpath>
         <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
+            <xpath>/Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
 			<success>Always</success>
             <value>
                 <thingCategories></thingCategories>
@@ -338,7 +338,7 @@
 			<li>RimSeasoning VCE Patch (Continued)</li>
 		</mods>
 		<match Class="PatchOperationReplace" MayRequire="onekimchiman.ingredienttime">
-			<xpath>Defs/ThingDef[defName="O_TomatoSauce"]/thingCategories</xpath>
+			<xpath>/Defs/ThingDef[defName="O_TomatoSauce"]/thingCategories</xpath>
 			<success>Always</success>
 			<value MayRequire="onekimchiman.ingredienttime">
 				<thingCategories>
@@ -349,4 +349,25 @@
 			</value>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName = "MakeTomatoSauce" or defName = "MakeTomatoSauceBulk"]/recipeUsers</xpath>
+			<success>Always</success>
+			<value>
+				<!--
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+				-->
+				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeTable</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentPrepTable</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
 </Patch>

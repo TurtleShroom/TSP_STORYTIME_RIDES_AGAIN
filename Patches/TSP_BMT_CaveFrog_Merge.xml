@@ -90,7 +90,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAddModExtension">
 			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="BMT_Goeto"]</xpath>
+			<xpath>/Defs/ThingDef[defName="BMT_Goeto"]</xpath>
 			<value>
 				<li Class="AnimalBehaviours.AnimalStatExtension">
 					<statToAdd>
@@ -118,9 +118,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="BMT_EggGoetoFertilized"]/tradeTags</xpath>
+		<xpath>/Defs/ThingDef[defName="BMT_EggGoetoFertilized"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="BMT_EggGoetoFertilized"]</xpath>
+			<xpath>/Defs/ThingDef[defName="BMT_EggGoetoFertilized"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -130,9 +130,9 @@
 
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="BMT_EggGoetoUnfertilized"]/tradeTags</xpath>
+		<xpath>/Defs/ThingDef[defName="BMT_EggGoetoUnfertilized"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="BMT_EggGoetoUnfertilized"]</xpath>
+			<xpath>/Defs/ThingDef[defName="BMT_EggGoetoUnfertilized"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>

@@ -3,9 +3,9 @@
 <Patch>
     <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
     <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="Apparel_Robe"]/comps</xpath>
+        <xpath>/Defs/ThingDef[defName="Apparel_Robe"]/comps</xpath>
         <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="Apparel_Robe"]</xpath>
+            <xpath>/Defs/ThingDef[defName="Apparel_Robe"]</xpath>
 			<success>Always</success>
             <value>
                 <comps></comps>
@@ -15,9 +15,9 @@
 	
     <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
     <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
+        <xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
         <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
+            <xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
 			<success>Always</success>
             <value>
                 <tags></tags>
@@ -463,9 +463,9 @@
 	
     <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
     <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel/tags</xpath>
+        <xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel/tags</xpath>
         <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel</xpath>
+            <xpath>/Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel</xpath>
 			<success>Always</success>
             <value>
                 <tags></tags>
@@ -618,9 +618,9 @@
 	
     <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
     <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="VAE_Headgear_SummerHat"]/apparel/tags</xpath>
+        <xpath>/Defs/ThingDef[defName="VAE_Headgear_SummerHat"]/apparel/tags</xpath>
         <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="VAE_Headgear_SummerHat"]/apparel</xpath>
+            <xpath>/Defs/ThingDef[defName="VAE_Headgear_SummerHat"]/apparel</xpath>
 			<success>Always</success>
             <value>
                 <tags></tags>

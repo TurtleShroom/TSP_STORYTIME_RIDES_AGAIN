@@ -85,7 +85,7 @@
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "O_Cheese" or defName = "O_TomatoSauce" or defName = "O_GrainFlour"]/tradeability</xpath>
+			<xpath>/Defs/ThingDef[defName = "O_Cheese" or defName = "O_TomatoSauce" or defName = "O_GrainFlour"]/tradeability</xpath>
 			<success>Always</success>
 			<value>
 				<tradeability>All</tradeability>
@@ -98,7 +98,7 @@
 		<xpath>/Defs/ThingDef[defName="O_GrainFlour"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[@Name="IngredientFlourBase"]/statBases/Nutrition</xpath>
+			<xpath>/Defs/ThingDef[@Name="IngredientFlourBase"]/statBases/Nutrition</xpath>
 			<success>Always</success>
 			<value>
 				<Nutrition>0.08</Nutrition>
@@ -111,7 +111,7 @@
 		<xpath>/Defs/ThingDef[defName="O_GrainFlour"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/RecipeDef[defName="MakeFlour"]/products</xpath>
+			<xpath>/Defs/RecipeDef[defName="MakeFlour"]/products</xpath>
 			<success>Always</success>
 			<value>
 				<products>
@@ -126,7 +126,7 @@
 		<xpath>/Defs/ThingDef[defName="O_GrainFlour"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/RecipeDef[defName="MakeFlourBulk"]/products</xpath>
+			<xpath>/Defs/RecipeDef[defName="MakeFlourBulk"]/products</xpath>
 			<success>Always</success>
 			<value>
 				<products>
@@ -141,7 +141,7 @@
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[@Name="IngredientCBase"]/statBases/Nutrition</xpath>
+			<xpath>/Defs/ThingDef[@Name="IngredientCBase"]/statBases/Nutrition</xpath>
 			<success>Always</success>
 			<value>
 				<Nutrition>0.18</Nutrition>
@@ -154,7 +154,7 @@
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/RecipeDef[defName="MakeCheese"]/products</xpath>
+			<xpath>/Defs/RecipeDef[defName="MakeCheese"]/products</xpath>
 			<success>Always</success>
 			<value>
 				<products>
@@ -169,7 +169,7 @@
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/RecipeDef[defName="MakeCheeseBulk"]/products</xpath>
+			<xpath>/Defs/RecipeDef[defName="MakeCheeseBulk"]/products</xpath>
 			<success>Always</success>
 			<value>
 				<products>
@@ -184,7 +184,7 @@
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/RecipeDef[defName= "MakeCheese"]/ingredients</xpath>
+			<xpath>/Defs/RecipeDef[defName= "MakeCheese"]/ingredients</xpath>
 			<success>Always</success>
 			<value>
 				<!-- Uses Nutrition instead of a count -->
@@ -209,7 +209,7 @@
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/RecipeDef[defName="MakeCheeseBulk"]/ingredients</xpath>
+			<xpath>/Defs/RecipeDef[defName="MakeCheeseBulk"]/ingredients</xpath>
 			<success>Always</success>
 			<value>
 				<!-- Uses Nutrition instead of a count -->
@@ -233,7 +233,7 @@
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/RecipeDef[defName = "MakeCheese" or defName = "MakeCheeseBulk"]/fixedIngredientFilter</xpath>
+			<xpath>/Defs/RecipeDef[defName = "MakeCheese" or defName = "MakeCheeseBulk"]/fixedIngredientFilter</xpath>
 			<success>Always</success>
 			<value>
 				<fixedIngredientFilter>
@@ -251,7 +251,7 @@
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "O_Cheese" or defName = "O_TomatoSauce" or defName = "O_GrainFlour"]/tradeability</xpath>
+			<xpath>/Defs/ThingDef[defName = "O_Cheese" or defName = "O_TomatoSauce" or defName = "O_GrainFlour"]/tradeability</xpath>
 			<success>Always</success>
 			<value>
 				<tradeability>All</tradeability>
@@ -264,7 +264,7 @@
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName = "MakeCheese" or defName = "MakeCheeseBulk"]</xpath>
+			<xpath>/Defs/ThingDef[defName = "MakeCheese" or defName = "MakeCheeseBulk"]</xpath>
 			<success>Always</success>
 			<value>
 				<researchPrerequisites Inherit="False">
@@ -279,7 +279,7 @@
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>Defs/RecipeDef[defName="O_Cheese"]/statBases/MarketValue</xpath>
+			<xpath>/Defs/RecipeDef[defName="O_Cheese"]/statBases/MarketValue</xpath>
 			<success>Always</success>
 			<value>
 				<MarketValue>6</MarketValue>
@@ -292,7 +292,7 @@
 		<xpath>/Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="O_TomatoSauce"]/statBases/MarketValue</xpath>
+			<xpath>/Defs/ThingDef[defName="O_TomatoSauce"]/statBases/MarketValue</xpath>
 			<success>Always</success>
 			<value>
 				<MarketValue>7</MarketValue>
@@ -305,7 +305,7 @@
 		<xpath>/Defs/ThingDef[defName="O_GrainFlour"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="O_GrainFlour"]/statBases/MarketValue</xpath>
+			<xpath>/Defs/ThingDef[defName="O_GrainFlour"]/statBases/MarketValue</xpath>
 			<success>Always</success>
 			<value>
 				<MarketValue>0.27</MarketValue>
@@ -319,7 +319,7 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace" MayRequire="vanillaexpanded.vcooke">
 			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="O_Cheese"]/thingCategories</xpath>
+			<xpath>/Defs/ThingDef[defName="O_Cheese"]/thingCategories</xpath>
 			<value MayRequire="vanillaexpanded.vcooke">
 				<thingCategories>
 					<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
@@ -331,13 +331,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/RecipeDef[defName="MakeTomatoSauce"]</xpath>
+	<xpath>/Defs/RecipeDef[defName="MakeTomatoSauce"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName="MakeTomatoSauce"]/products</xpath>
+					<xpath>/Defs/RecipeDef[defName="MakeTomatoSauce"]/products</xpath>
 					<success>Always</success>
 					<value>
 						<products>
@@ -347,7 +347,7 @@
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName="MakeTomatoSauceBulk"]/products</xpath>
+					<xpath>/Defs/RecipeDef[defName="MakeTomatoSauceBulk"]/products</xpath>
 					<success>Always</success>
 					<value>
 						<products>
@@ -361,7 +361,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="O_BoringPizza"]</xpath>
+	<xpath>/Defs/ThingDef[defName="O_BoringPizza"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
