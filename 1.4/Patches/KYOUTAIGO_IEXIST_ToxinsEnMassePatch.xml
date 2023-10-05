@@ -278,7 +278,7 @@
 			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="Toxalope"]/comps</xpath>
 			<value>
-				<comps>
+				<comps Inherit="False">
 					<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
 						<resourceDef>ST_PoisonExtract</resourceDef>
 						<gatheringIntervalDays>1</gatheringIntervalDays>
@@ -292,10 +292,43 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/costList</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/costStuffCount</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/stuffCategories</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]</xpath>
-		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationReplace">
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/costList</xpath>
 			<value>
@@ -432,7 +465,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="WasteCanister"]/comps</xpath>
 			<value>
-				<comps>
+				<comps Inherit="False">
 					<li Class="CompProperties_GasOnDamage">
 						<type>ToxGas</type>
 						<damageFactor>16</damageFactor>
@@ -471,34 +504,32 @@
 			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/ingredients</xpath>
 			<value>
 				<ingredients>
-					<ingredients>
-						<li>
-							<filter>
-								<thingDefs>
-									<li>Wastepack</li>
-								</thingDefs>
-							</filter>
-							<count>1</count>
-						</li>
-						<li>
-							<filter>
-								<categories>
-									<li MayRequire="wvc.sergkart.core">WVC_MetalResources_Raw</li>
-									<li MayRequire="TSP.Isengriff.Storytime">ST_AlloyMetals</li>
-								</categories>
-								<thingDefs>
-									<li>Steel</li>
-									<li MayRequire="mlie.ancientrimcore">AR_Iron</li>
-									<li MayRequire="mlie.ancientrimcore">AR_Bronze</li>
-									<li MayRequire="mlie.ancientrimcore">AR_Copper</li>
-									<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Copper</li>
-									<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Tin</li>
-									<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Bronze</li>
-								</thingDefs>
-							</filter>
-							<count>5</count>
-						</li>
-					</ingredients>
+					<li>
+						<filter>
+							<thingDefs>
+								<li>Wastepack</li>
+							</thingDefs>
+						</filter>
+						<count>1</count>
+					</li>
+					<li>
+						<filter>
+							<categories>
+								<li MayRequire="wvc.sergkart.core">WVC_MetalResources_Raw</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_AlloyMetals</li>
+							</categories>
+							<thingDefs>
+								<li>Steel</li>
+								<li MayRequire="mlie.ancientrimcore">AR_Iron</li>
+								<li MayRequire="mlie.ancientrimcore">AR_Bronze</li>
+								<li MayRequire="mlie.ancientrimcore">AR_Copper</li>
+								<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Copper</li>
+								<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Tin</li>
+								<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Bronze</li>
+							</thingDefs>
+						</filter>
+						<count>5</count>
+					</li>
 				</ingredients>
 			</value>
 		</match>
@@ -655,9 +686,11 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="MutatedJawToxic"]/costList</xpath>
 			<value>
-				<ElTwoFour_Mutate>40</ElTwoFour_Mutate>
-				<ElTwoFour_MantoComponent>1</ElTwoFour_MantoComponent>
-				<ST_PoisonExtract>20</ST_PoisonExtract>
+				<costList>
+					<ElTwoFour_Mutate>40</ElTwoFour_Mutate>
+					<ElTwoFour_MantoComponent>1</ElTwoFour_MantoComponent>
+					<ST_PoisonExtract>20</ST_PoisonExtract>
+				</costList>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -671,9 +704,11 @@
 			<success>Always</success>
 			<xpath>/Defs/PawnKindDef[defName="PPHHYY_Doomsday_Goblin"]/weaponTags</xpath>
 			<value>
-				<li>GoblinDoomsday</li>
-				<li>Gun_ToxicNeedle</li>
-				<li>ToxCannonGun</li>
+				<weaponTags>
+					<li>GoblinDoomsday</li>
+					<li>Gun_ToxicNeedle</li>
+					<li>ToxCannonGun</li>
+				</weaponTags>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -687,9 +722,11 @@
 			<success>Always</success>
 			<xpath>/Defs/PawnKindDef[defName="PPHHYY_Doomsday_Goblin"]/weaponTags</xpath>
 			<value>
-				<li>GoblinDoomsday</li>
-				<li>Gun_ToxicNeedle</li>
-				<li>ToxCannonGun</li>
+				<weaponTags>
+					<li>GoblinDoomsday</li>
+					<li>Gun_ToxicNeedle</li>
+					<li>ToxCannonGun</li>
+				</weaponTags>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -964,7 +1001,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="WC_CargoContainerWaste"]/comps</xpath>
 			<value>
-				<comps>
+				<comps Inherit="False">
 					<li Class="CompProperties_GasOnDamage">
 						<type>ToxGas</type>
 						<damageFactor>6</damageFactor>
