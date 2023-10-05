@@ -58,8 +58,8 @@
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/FactionDef[defName="HAR_nebulaM87Race_P_Faction"]</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
 			<success>Always</success>
 			<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_KindBase"]/backstoryCategories</xpath>
 			<value>
