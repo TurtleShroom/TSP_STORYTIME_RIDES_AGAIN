@@ -218,5 +218,106 @@
 			</operations>	
 		</match>
 	</Operation>
+	
+	<!-- Code shamelessly derived from the Regrowth Patch for the Vanilla Cooking Expanded Mod by Flovall -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VBE_Juice"]</xpath>
+		<match Class="PatchOperationSequence"> 
+		<success>Always</success>
+		<operations>
+			 <li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name = "VBE_MixJuiceBase"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li>ST_CookingApple</li>
+						<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+						<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name = "VBE_MixJuiceBase"]/defaultIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li>ST_CookingApple</li>
+						<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+						<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="VBE_MixJuice"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li>ST_CookingApple</li>
+						<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+						<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="VBE_MixJuice"]/defaultIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li>ST_CookingApple</li>
+						<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+						<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="VBE_MixJuice"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li>ST_CookingApple</li>
+						<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+						<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="VBE_MixJuice"]/defaultIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li>ST_CookingApple</li>
+						<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+						<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="VBE_MixJuice"]/ingredients/li/filter/thingDefs</xpath>
+					<value>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li>ST_CookingApple</li>
+						<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+						<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+					</value>
+				</li>
+			</operations>	
+		</match>
+	</Operation>
 </Patch>
 
