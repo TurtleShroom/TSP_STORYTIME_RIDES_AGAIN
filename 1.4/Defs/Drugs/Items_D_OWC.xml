@@ -9,15 +9,17 @@
 			<texPath>Things/Items/Drugs/D_OWC</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
-		 <socialPropernessMatters>false</socialPropernessMatters>
+		<socialPropernessMatters>false</socialPropernessMatters>
 		<rotatable>false</rotatable>
 		<stackLimit>1</stackLimit>
 		<statBases>
 			<DeteriorationRate>0.5</DeteriorationRate>
-			<MarketValue>2009</MarketValue>
+			<MarketValue>1500</MarketValue>
 			<Mass>0.01</Mass>
 		</statBases>
 		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<foodType>Processed, Liquor, Kibble</foodType>
 			<drugCategory>Hard</drugCategory>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="sarg.alphaanimals">
@@ -26,6 +28,7 @@
 			</outcomeDoers>
 		</ingestible>
 		<techLevel>Ultra</techLevel>
+		<tradeability>None</tradeability>
 		<comps>
 			<li Class="CompProperties_Drug">
 				<listOrder>1000</listOrder>
