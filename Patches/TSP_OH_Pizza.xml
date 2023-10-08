@@ -474,4 +474,15 @@
 			</operations>
 		</match>
 	</Operation>
+	
+	<!-- Does this exist? -->
+	<xpath>/Defs/RecipeDef[defName="MakeTomatoSauce"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName = "MakeTomatoSauce" or defName = "MakeTomatoSauceBulk"]/recipeUsers</xpath>
+			<value>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentPrepTable</li>
+			</value>
+		</match>
+	</Operation>
 </Patch>
