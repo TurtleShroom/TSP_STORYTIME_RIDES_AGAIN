@@ -52,27 +52,21 @@
 				<hediffDef>DriedFrogPillsHigh</hediffDef>
 				<severity>1</severity>
 				<toleranceChemical>DriedFrogPills</toleranceChemical>
+				<multiplyByGeneToleranceFactors MayRequire="ludeon.rimworld.biotech">true</multiplyByGeneToleranceFactors>
 			</li>
 			<li Class="IngestionOutcomeDoer_GiveHediff">
 				<hediffDef>DriedFrogPillsTolerance</hediffDef>
 				<severity>0.07</severity>
 				<divideByBodySize>false</divideByBodySize>
 			</li>
+			<li Class="IngestionOutcomeDoer_GiveHediff" MayReqiore="vanillaexpanded.vbrewe">
+				<hediffDef MayRequire="vanillaexpanded.vbrewe">VBE_CaffeineTolerance</hediffDef>
+				<severity MayRequire="vanillaexpanded.vbrewe">0.299</severity>
+				<divideByBodySize MayRequire="vanillaexpanded.vbrewe">false</divideByBodySize>
+				<multiplyByGeneToleranceFactors MayRequire="vanillaexpanded.vbrewe,ludeon.rimworld.biotech">true</multiplyByGeneToleranceFactors>
+			</li> 
 		</outcomeDoers>
 	</ingestible>
-	<!--
-    <recipeMaker>
-      <recipeUsers>
-        <li>CraftingSpot</li>
-        <li>DrugLab</li>
-      </recipeUsers>
-      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
-      <workSkill>Cooking</workSkill>
-    </recipeMaker>
-    <costList>
-      <Leather_Frog>8</Leather_Frog>
-    </costList>
-	-->
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>DriedFrogPills</chemical>
@@ -84,6 +78,15 @@
         <overdoseSeverityOffset>0.001~0.01</overdoseSeverityOffset>
         <largeOverdoseChance>0</largeOverdoseChance>
       </li>
+		<li Class="CompProperties_Drug" MayRequire="vanillaexpanded.vbrewe">
+			<chemical MayRequire="vanillaexpanded.vbrewe">VBE_Caffeine</chemical>
+			<addictiveness MayRequire="vanillaexpanded.vbrewe">1</addictiveness>
+			<minToleranceToAddict MayRequire="vanillaexpanded.vbrewe">0.6</minToleranceToAddict>
+			<existingAddictionSeverityOffset MayRequire="vanillaexpanded.vbrewe">1</existingAddictionSeverityOffset>
+			<needLevelOffset>0.5</needLevelOffset>
+			<listOrder>20</listOrder>
+			<largeOverdoseChance>0</largeOverdoseChance>
+		</li>
     </comps>
 	<tradeTags>
 		<li>DriedFrogPills</li>
