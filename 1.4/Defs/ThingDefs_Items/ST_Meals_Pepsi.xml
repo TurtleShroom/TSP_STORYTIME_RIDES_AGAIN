@@ -19,6 +19,8 @@
 			<preferability>MealFine</preferability>
 			<ingestEffect>EatVegetarian</ingestEffect>
 			<ingestSound>Ingest_Beer</ingestSound>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<tableDesired>false</tableDesired>
 			<babiesCanIngest MayRequire="ludeon.rimworld.biotech">true</babiesCanIngest>
 			<outcomeDoers Inherit="False">
 				<li Class="IngestionOutcomeDoer_GiveHediff">
@@ -27,6 +29,7 @@
 				</li>
 			</outcomeDoers>
 		</ingestible>
+		<alwaysHaulable>true</alwaysHaulable> <!-- This should stop errors regarding taking it to one's inventory -->
 		<thingCategories>
 			<li MayRequire="rh2.randy.burger.fast.food">RH2_SoftDrinks</li>
 			<li MayRequire="vanillaexpanded.vbrewe">VBE_DrinksNonAlcoholic</li>

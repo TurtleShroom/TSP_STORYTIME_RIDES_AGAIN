@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VAEAF_CarFamily"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "MMTank_Buggy" or defName = "MMTank_Mosquito" or defName = "MMTank_NOBASU" or defName = "MMTank_R-wolf" or defName = "MMTank_SUNAMAMIREN"]/race/specificMeatDef</xpath>
+			<success>Always</success>
+			<value>
+				<useMeatFrom>VAEAF_CarFamily</useMeatFrom>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VAEAF_CarFamily"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "MMTank_Buggy" or defName = "MMTank_Mosquito" or defName = "MMTank_NOBASU" or defName = "MMTank_R-wolf" or defName = "MMTank_SUNAMAMIREN"]/race/leatherDef</xpath>
+			<success>Always</success>
+			<value>
+				<useLeatherFrom>VAEAF_CarFamily</useLeatherFrom>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VAEAF_CarFamily"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "MMTank_Buggy" or defName = "MMTank_Mosquito" or defName = "MMTank_NOBASU" or defName = "MMTank_R-wolf" or defName = "MMTank_SUNAMAMIREN"]/race/body</xpath>
+			<success>Always</success>
+			<value>
+				<body>VAEAF_CarBody</body>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/BodyDef[defName="VAEAF_CarBody"]</xpath>
+		<!-- If it does, insert this in the same qualifier as the target. -->
+		<match Class="PatchOperationInsert">
+			<success>Always</success>
+			<xpath>/Defs/BodyDef/corePart/parts/li/groups/li[text()="VAEAF_FrontGrilleGroup"]</xpath>
+			<value>
+				<li>HeadAttackTool</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>
