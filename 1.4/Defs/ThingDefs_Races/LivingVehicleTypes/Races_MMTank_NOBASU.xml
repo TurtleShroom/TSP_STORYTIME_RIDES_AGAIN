@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="TSP_VFEAAF_CarMaster">
     <defName>MMTank_NOBASU</defName>
-    <label>Wild bus</label>
+    <label>wild bus</label>
     <description>A proud field van that went wild after the legendary destruction.\nPeople called hunters repeatedly try to make their own cars, but they have failed except a few.\nIt's not have any weapons, but no human can withstand the accel turn of Van's big body.\nIt is equipped with a very cold metal detector, which in its spare time picks up iron scraps and components.</description>
     <statBases>
       <ComfyTemperatureMin>-100</ComfyTemperatureMin>
       <ComfyTemperatureMax>100</ComfyTemperatureMax>
-      <MeatAmount>110</MeatAmount>
-      <LeatherAmount>90</LeatherAmount>
+      <MeatAmount>20</MeatAmount>
+      <LeatherAmount>30</LeatherAmount>
       <ArmorRating_Blunt>1</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Heat>0.1</ArmorRating_Heat>
@@ -17,15 +17,15 @@
       <Flammability>10</Flammability>
       <MoveSpeed>5</MoveSpeed>
       <MarketValue>800</MarketValue>
-      <Mass>25</Mass>
+      <Mass>250</Mass>
     </statBases>
     <tools>
       <li>
-        <label>Accelerated turn</label>
+        <label>accelerated turn</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <cooldownTime>3</cooldownTime>
+        <cooldownTime>5</cooldownTime>
         <power>25</power>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <surpriseAttack>
@@ -39,30 +39,25 @@
       </li>
     </tools>
     <race>
-	  <fleshType>VAEAF_CarFlesh</fleshType>
-	  <body>VAEAF_CarBody</body>
-	  <bloodDef>Filth_MachineBits</bloodDef>
-	  <useMeatFrom>VAEAF_CarFamily</useMeatFrom>
-      <useLeatherFrom>VAEAF_CarFamily</useLeatherFrom>
       <packAnimal>true</packAnimal>
-      <petness>0.5</petness>
+      <petness>0</petness>
       <baseBodySize>20</baseBodySize>
-      <baseHungerRate>0.25</baseHungerRate>
+      <baseHungerRate>0.33</baseHungerRate>
 	  <!--
 	  <specificMeatDef>ChunkSlagSteel</specificMeatDef>
       <leatherDef>ChunkSlagSteel</leatherDef>
 	  -->
-      <baseHealthScale>0.1</baseHealthScale>
+      <baseHealthScale>0.078</baseHealthScale>
       <foodType>VegetarianRoughAnimal, Kibble</foodType>
       <gestationPeriodDays>60</gestationPeriodDays>
-      <trainability>Advanced</trainability>
-      <canBePredatorPrey>false</canBePredatorPrey>
+      <trainability>None</trainability>
+      <canBePredatorPrey>true</canBePredatorPrey>
       <wildness>0.3</wildness>
       <hasGenders>false</hasGenders>
-      <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>1</manhunterOnTameFailChance>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
       <nuzzleMtbHours>4</nuzzleMtbHours>
-      <wildBiomes>
+      <wildBiomes Inherit="False">
         <SeaIce>0.05</SeaIce>
         <IceSheet>0.05</IceSheet>
         <Tundra>0.05</Tundra>
@@ -77,53 +72,33 @@
         <TropicalSwamp>0.05</TropicalSwamp>
       </wildBiomes>
       <lifeExpectancy>500</lifeExpectancy>
-      <lifeStageAges>
-        <li>
-          <def>AnimalBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>AnimalAdult</def>
-          <minAge>0.5</minAge>
-        </li>
-      </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
     </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+    </tradeTags>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>ComponentIndustrial</milkDef>
-        <milkIntervalDays>10</milkIntervalDays>
-        <milkAmount>1</milkAmount>
-        <milkFemaleOnly>false</milkFemaleOnly>
-      </li>
       <li Class="CompProperties_Shearable">
         <woolDef>MM_Namaritake</woolDef>
         <shearIntervalDays>5</shearIntervalDays>
         <woolAmount>15</woolAmount>
       </li>
     </comps>
-    <tradeTags>
-      <li>AnimalCommon</li>
-      <li>AnimalUncommon</li>
-      <li>AnimalFighter</li>
-    </tradeTags>
     <butcherProducts>
       <ChunkSlagSteel>10</ChunkSlagSteel>
       <ComponentIndustrial>3</ComponentIndustrial>
     </butcherProducts>
   </ThingDef>
+  
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>MMTank_NOBASU</defName>
-    <label>Wild bus</label>
+    <label>wild bus</label>
     <race>MMTank_NOBASU</race>
     <canArriveManhunter>true</canArriveManhunter>
     <combatPower>500</combatPower>
     <ecoSystemWeight>0</ecoSystemWeight>
     <wildGroupSize>
       <min>1</min>
-      <max>1</max>
+      <max>2</max>
     </wildGroupSize>
     <minGenerationAge>10</minGenerationAge>
     <maxGenerationAge>200</maxGenerationAge>
@@ -131,8 +106,22 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/MMTank_NOBASU</texPath>
-          <drawSize>2</drawSize>
+          <drawSize>1</drawSize>
         </bodyGraphicData>
+      </li>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_NOBASU</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_NOBASU</texPath>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_NOBASU</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>

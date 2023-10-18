@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="TSP_VFEAAF_CarMaster">
     <defName>MMTank_Mosquito</defName>
     <label>Mosquito tankette</label>
-    <description>It is a small tankette for one passenger.\nIt was a hunter's car, but it fell off and went wild as it was.\nHe likes dogs. \n\nIn his spare time, he uses an uncooled land mine detector to search for nearby iron scraps and electronic components, but it's not cold enough to find them.</description>
+    <description>It is a small tankette for one passenger. It was a hunter's car, but it fell off and went wild as it was.\n\nIn his spare time, he uses an uncooled land mine detector to search for nearby iron scraps and electronic components, but it's not cold enough to find them. He likes dogs and HATES the cold.</description>
     <statBases>
-      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
-      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
       <MeatAmount>50</MeatAmount>
       <LeatherAmount>50</LeatherAmount>
-      <ArmorRating_Blunt>1</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-      <ArmorRating_Heat>1</ArmorRating_Heat>
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.21</ArmorRating_Heat>
       <ToxicResistance>1</ToxicResistance>
       <PsychicSensitivity>0.1</PsychicSensitivity>
       <Flammability>10</Flammability>
@@ -23,10 +23,10 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ChargeRifle</defaultProjectile>
+        <defaultProjectile>Bullet_Revolver</defaultProjectile>
         <warmupTime>1.0</warmupTime>
         <range>20</range>
-        <defaultCooldownTime>0.7</defaultCooldownTime>
+        <defaultCooldownTime>2</defaultCooldownTime>
         <soundCast>Shot_ChargeRifle</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
@@ -38,13 +38,14 @@
     </verbs>
     <tools>
       <li>
-        <label>Ram attack</label>
+        <label>ram attack</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <cooldownTime>3</cooldownTime>
+        <cooldownTime>5</cooldownTime>
         <power>15</power>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<linkedBodyPartsGroup>VAEAF_FrontGrilleGroup</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <surpriseAttack>
           <extraMeleeDamages>
             <li>
@@ -56,29 +57,25 @@
       </li>
     </tools>
     <race>
-	  <fleshType>VAEAF_CarFlesh</fleshType>
-	  <body>VAEAF_CarBody</body>
-	  <bloodDef>Filth_MachineBits</bloodDef>
-	  <useMeatFrom>VAEAF_CarFamily</useMeatFrom>
-      <useLeatherFrom>VAEAF_CarFamily</useLeatherFrom>
-      <petness>0.5</petness>
-      <baseBodySize>5</baseBodySize>
-      <baseHungerRate>0.25</baseHungerRate>
+      <petness>0</petness>
+      <baseBodySize>1</baseBodySize>
+      <baseHungerRate>1</baseHungerRate>
 	  <!--
 	  <specificMeatDef>ChunkSlagSteel</specificMeatDef>
       <leatherDef>ChunkSlagSteel</leatherDef>
 	  -->
-      <baseHealthScale>0.45</baseHealthScale>
+      <baseHealthScale>0.5</baseHealthScale>
       <foodType>VegetarianRoughAnimal, Kibble</foodType>
       <gestationPeriodDays>60</gestationPeriodDays>
+	  <packAnimal>true</packAnimal>
       <trainability>Advanced</trainability>
-      <canBePredatorPrey>false</canBePredatorPrey>
-      <wildness>0.30</wildness>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <wildness>0.50</wildness>
       <hasGenders>false</hasGenders>
-      <manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.8</manhunterOnTameFailChance>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
-      <nuzzleMtbHours>4</nuzzleMtbHours>
-      <wildBiomes>
+      <nuzzleMtbHours>6</nuzzleMtbHours>
+      <wildBiomes Inherit="False">
         <SeaIce>0.05</SeaIce>
         <IceSheet>0.05</IceSheet>
         <Tundra>0.05</Tundra>
@@ -93,21 +90,16 @@
         <TropicalSwamp>0.05</TropicalSwamp>
       </wildBiomes>
       <lifeExpectancy>500</lifeExpectancy>
-      <lifeStageAges>
-        <li>
-          <def>AnimalBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>AnimalAdult</def>
-          <minAge>0.5</minAge>
-        </li>
-      </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
     </race>
-    <comps>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+      <li>AnimalFighter</li>
+    </tradeTags>
+    <butcherProducts>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </butcherProducts>
+    <comps Inherit="False">
       <li Class="CompProperties_Milkable">
         <milkDef>ComponentIndustrial</milkDef>
         <milkIntervalDays>10</milkIntervalDays>
@@ -120,22 +112,15 @@
         <woolAmount>5</woolAmount>
       </li>
     </comps>
-    <tradeTags>
-      <li>AnimalCommon</li>
-      <li>AnimalUncommon</li>
-      <li>AnimalFighter</li>
-    </tradeTags>
-    <butcherProducts>
-      <ChunkSlagSteel>3</ChunkSlagSteel>
-      <ComponentIndustrial>2</ComponentIndustrial>
-    </butcherProducts>
+	<modExtensions></modExtensions>
   </ThingDef>
+  
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>MMTank_Mosquito</defName>
-    <label>Mosquito</label>
+    <label>Mosquito tankette</label>
     <race>MMTank_Mosquito</race>
     <canArriveManhunter>true</canArriveManhunter>
-    <combatPower>300</combatPower>
+    <combatPower>400</combatPower>
     <ecoSystemWeight>0</ecoSystemWeight>
     <wildGroupSize>
       <min>1</min>
@@ -147,17 +132,31 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/MMTank_Mosquito</texPath>
-          <drawSize>1.3</drawSize>
+          <drawSize>0.5</drawSize>
         </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Mosquito</texPath>
+          <drawSize>0.5</drawSize>
+        </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/MMTank_Mosquito</texPath>
-          <drawSize>1.3</drawSize>
+          <drawSize>0.8</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/MMTank_Mosquito</texPath>
-          <drawSize>1.3</drawSize>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Mosquito</texPath>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Mosquito</texPath>
+          <drawSize>1.1</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>

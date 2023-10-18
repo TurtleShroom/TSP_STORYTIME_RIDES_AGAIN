@@ -1,23 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
   <ThingDef ParentName="AnimalThingBase">
     <defName>MMTank_Drumcan</defName>
-    <label>Drum can</label>
-    <description>There was a drum can in a town called Descles.\nA drum can of veteran that has been pushed, hated and loved by countless people. One day he became a Tsukumogami (inanimate object, furniture, or tool granted a soul) and wandered around looking for someone to push him.\nHe can carry a large amount of luggage with mysterious power.</description>
+    <label>drum can</label>
+    <description>There once was a drum can in a town called Descles.\nA drum can of veteran that has been pushed, hated and loved by countless people. One day he became a Tsukumogami (an inanimate object, furniture, or tool granted a soul) and wandered around looking for someone to push him.\nHe can carry a large amount of luggage with mysterious power.</description>
     <statBases>
       <ComfyTemperatureMin>-100</ComfyTemperatureMin>
-      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <ComfyTemperatureMax>200</ComfyTemperatureMax>
       <MeatAmount>0</MeatAmount>
       <LeatherAmount>0</LeatherAmount>
-      <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
       <ArmorRating_Heat>0.7</ArmorRating_Heat>
-      <ToxicResistance>1</ToxicResistance>
-      <PsychicSensitivity>0</PsychicSensitivity>
+      <ToxicResistance>0.1</ToxicResistance>
+      <PsychicSensitivity>1</PsychicSensitivity>
       <Flammability>0</Flammability>
       <MoveSpeed>2.5</MoveSpeed>
       <MarketValue>100</MarketValue>
-      <Mass>5</Mass>
+      <Mass>700</Mass>
     </statBases>
     <tools>
       <li>
@@ -40,33 +41,33 @@
     </tools>
     <race>
       <body>MechanicalCentipede</body>
+	  <bloodDef>Filth_MachineBits</bloodDef>
 	  <!--
 	  <fleshType>VAEAF_CarFlesh</fleshType>
 	  <body>VAEAF_CarBody</body>
 	  -->
-	  <bloodDef>Filth_MachineBits</bloodDef>
 	  <!--
 	  <useMeatFrom>VAEAF_CarFamily</useMeatFrom>
       <useLeatherFrom>VAEAF_CarFamily</useLeatherFrom>
 	  -->
-      <packAnimal>false</packAnimal>
+      <packAnimal>true</packAnimal>
       <petness>0.8</petness>
-      <baseBodySize>30</baseBodySize>
-	  <baseHealthScale>0.1</baseHealthScale>
-      <baseHungerRate>0.11</baseHungerRate>
+      <baseBodySize>2</baseBodySize>
+	  <baseHealthScale>0.025</baseHealthScale>
+      <baseHungerRate>1.3</baseHungerRate>
 	  <specificMeatDef>ChunkSlagSteel</specificMeatDef>
       <leatherDef>ChunkSlagSteel</leatherDef>
       <baseHealthScale>5.0</baseHealthScale>
       <foodType>VegetarianRoughAnimal, Kibble</foodType>
       <gestationPeriodDays>60</gestationPeriodDays>
-      <trainability>None</trainability>
-      <canBePredatorPrey>false</canBePredatorPrey>
-      <wildness>0.01</wildness>
+      <trainability>Advanced</trainability>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <wildness>0</wildness>
       <hasGenders>false</hasGenders>
       <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
-      <nuzzleMtbHours>48</nuzzleMtbHours>
-      <wildBiomes>
+      <nuzzleMtbHours>4</nuzzleMtbHours>
+      <wildBiomes Inherit="False">
         <SeaIce>0.05</SeaIce>
         <IceSheet>0.05</IceSheet>
         <Tundra>0.05</Tundra>
@@ -81,21 +82,36 @@
         <TropicalSwamp>0.05</TropicalSwamp>
       </wildBiomes>
       <lifeExpectancy>500</lifeExpectancy>
-      <lifeStageAges>
+		<litterSizeCurve>
+			<points>
+				<li>(0.5, 0.75)</li>
+				<li>(1, 1)</li>
+				<li>(2, 0.1)</li>
+				<li>(2.5, 0.01)</li>
+				<li>(3, 0.001)</li>
+			</points>
+		</litterSizeCurve>
+      <lifeStageAges Inherit="False">
         <li>
-          <def>AnimalBaby</def>
-          <minAge>0</minAge>
+			<def>AnimalBaby</def>
+			<minAge>0</minAge>
+			<soundWounded>VAEAF_Cars_Wounded</soundWounded>
+			<soundDeath>VAEAF_Cars_Death</soundDeath>
+			<soundCall>VAEAF_Cars_Call</soundCall>
         </li>
         <li>
-          <def>AnimalAdult</def>
-          <minAge>0.5</minAge>
+			<def>AnimalAdult</def>
+			<minAge>0.55</minAge>
+			<soundWounded>VAEAF_Cars_Wounded</soundWounded>
+			<soundDeath>VAEAF_Cars_Death</soundDeath>
+			<soundCall>VAEAF_Cars_Call</soundCall>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
     </race>
-    <comps>
+    <comps Inherit="False">
       <li Class="CompProperties_Milkable">
         <milkDef>ComponentIndustrial</milkDef>
         <milkIntervalDays>4</milkIntervalDays>
@@ -109,9 +125,7 @@
       </li>
     </comps>
     <tradeTags>
-      <li>AnimalCommon</li>
       <li>AnimalUncommon</li>
-      <li>AnimalFighter</li>
     </tradeTags>
     <butcherProducts>
       <ChunkSlagSteel>10</ChunkSlagSteel>
@@ -119,10 +133,10 @@
   </ThingDef>
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>MMTank_Drumcan</defName>
-    <label>Drum can</label>
+    <label>drum can</label>
     <race>MMTank_Drumcan</race>
     <canArriveManhunter>true</canArriveManhunter>
-    <combatPower>100</combatPower>
+    <combatPower>80</combatPower>
     <ecoSystemWeight>0</ecoSystemWeight>
     <wildGroupSize>
       <min>1</min>
@@ -134,8 +148,12 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/MMTank_Drumcan_N</texPath>
-          <drawSize>1.5</drawSize>
+          <drawSize>0.5</drawSize>
         </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Drumcan_B</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>

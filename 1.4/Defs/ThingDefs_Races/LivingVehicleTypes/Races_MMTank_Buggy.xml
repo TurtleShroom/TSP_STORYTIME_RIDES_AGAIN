@@ -1,24 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-  <ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="TSP_VFEAAF_CarMaster">
     <defName>MMTank_Buggy</defName>
-    <label>Off-Road Dune Buggy</label>
+    <label>off-road dune buggy</label>
     <description>Buggy car that can carry multiple people.\nIt was carefully maintained at a certain factory, so it is more friendly than a van.\nBuggy like flowers.\nIn his spare time, he uses an uncooled land mine detector to search for nearby iron scraps and electronic components, but it's not cold enough to find them.</description>
     <statBases>
-      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
-      <ComfyTemperatureMax>100</ComfyTemperatureMax>
-      <MeatAmount>0</MeatAmount>
-      <LeatherAmount>0</LeatherAmount>
-      <ArmorRating_Blunt>1</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-      <ArmorRating_Heat>1</ArmorRating_Heat>
-      <ToxicResistance>1</ToxicResistance>
-      <PsychicSensitivity>0.1</PsychicSensitivity>
-      <Flammability>0.3</Flammability>
-      <MoveSpeed>13.0</MoveSpeed>
-      <MarketValue>750</MarketValue>
-      <Mass>300</Mass>
+		<ComfyTemperatureMin>-8</ComfyTemperatureMin>
+		<ComfyTemperatureMax>110</ComfyTemperatureMax>
+		<MeatAmount>30</MeatAmount>
+		<MoveSpeed>9</MoveSpeed>
+		<LeatherAmount>20</LeatherAmount>
+		<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+		<ArmorRating_Sharp>1</ArmorRating_Sharp>
+		<ArmorRating_Heat>1</ArmorRating_Heat>
+		<ToxicResistance>1</ToxicResistance>
+		<PsychicSensitivity>0.1</PsychicSensitivity>
+		<Flammability>0.3</Flammability>
+		<MoveSpeed>13.0</MoveSpeed>
+		<MarketValue>750</MarketValue>
+		<Mass>300</Mass>
     </statBases>
     <tools>
       <li>
@@ -26,9 +27,10 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <cooldownTime>1</cooldownTime>
+        <cooldownTime>2</cooldownTime>
         <power>10</power>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<linkedBodyPartsGroup>VAEAF_FrontGrilleGroup</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <surpriseAttack>
           <extraMeleeDamages>
             <li>
@@ -40,55 +42,40 @@
       </li>
     </tools>
     <race>
-	  <fleshType>VAEAF_CarFlesh</fleshType>
-	  <body>VAEAF_CarBody</body>
-	  <bloodDef>Filth_MachineBits</bloodDef>
-	  <useMeatFrom>VAEAF_CarFamily</useMeatFrom>
-      <useLeatherFrom>VAEAF_CarFamily</useLeatherFrom>
-	  <packAnimal>true</packAnimal>
-      <petness>0.5</petness>
-      <baseBodySize>2</baseBodySize>
-      <baseHungerRate>1</baseHungerRate>
-      <baseHealthScale>0.5</baseHealthScale>
-      <foodType>VegetarianRoughAnimal, Fluid, Kibble</foodType>
-      <gestationPeriodDays>60</gestationPeriodDays>
-      <trainability>Advanced</trainability>
-      <canBePredatorPrey>false</canBePredatorPrey>
-      <wildness>0.10</wildness>
-      <hasGenders>false</hasGenders>
-      <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
-      <manhunterOnDamageChance>0.50</manhunterOnDamageChance>
-      <nuzzleMtbHours>8</nuzzleMtbHours>
-      <wildBiomes>
-        <SeaIce>0.05</SeaIce>
-        <IceSheet>0.05</IceSheet>
-        <Tundra>0.05</Tundra>
-        <BorealForest>0.05</BorealForest>
-        <TemperateForest>0.1</TemperateForest>
-        <TropicalRainforest>0.15</TropicalRainforest>
-        <AridShrubland>0.05</AridShrubland>
-        <Desert>0.05</Desert>
-        <ExtremeDesert>0.1</ExtremeDesert>
-        <TemperateSwamp>0.05</TemperateSwamp>
-        <ColdBog>0.05</ColdBog>
-        <TropicalSwamp>0.05</TropicalSwamp>
-      </wildBiomes>
-      <lifeExpectancy>500</lifeExpectancy>
-      <lifeStageAges>
-        <li>
-          <def>AnimalBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>AnimalAdult</def>
-          <minAge>0.0001</minAge>
-        </li>
-      </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		<packAnimal>true</packAnimal>
+		<petness>0.5</petness>
+		<baseBodySize>1.1</baseBodySize>
+		<baseHungerRate>1</baseHungerRate>
+		<baseHealthScale>0.5</baseHealthScale>
+		<foodType>VegetarianRoughAnimal, Fluid, Kibble</foodType>
+		<gestationPeriodDays>60</gestationPeriodDays>
+		<trainability>Advanced</trainability>
+		<canBePredatorPrey>true</canBePredatorPrey>
+		<wildness>0.10</wildness>
+		<hasGenders>false</hasGenders>
+		<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+		<manhunterOnDamageChance>0.50</manhunterOnDamageChance>
+		<nuzzleMtbHours>8</nuzzleMtbHours>
+		<wildBiomes Inherit="False">
+			<SeaIce>0.05</SeaIce>
+			<IceSheet>0.05</IceSheet>
+			<Tundra>0.05</Tundra>
+			<BorealForest>0.05</BorealForest>
+			<TemperateForest>0.1</TemperateForest>
+			<TropicalRainforest>0.15</TropicalRainforest>
+			<AridShrubland>0.05</AridShrubland>
+			<Desert>0.05</Desert>
+			<ExtremeDesert>0.1</ExtremeDesert>
+			<TemperateSwamp>0.05</TemperateSwamp>
+			<ColdBog>0.05</ColdBog>
+			<TropicalSwamp>0.05</TropicalSwamp>
+		</wildBiomes>
+		<lifeExpectancy>500</lifeExpectancy>
+		<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
     </race>
-    <comps>
+    <comps Inherit="False">
       <li Class="CompProperties_Milkable">
         <milkDef>ComponentIndustrial</milkDef>
         <milkIntervalDays>10</milkIntervalDays>
@@ -103,7 +90,6 @@
     </comps>
     <tradeTags>
       <li>AnimalCommon</li>
-      <li>AnimalUncommon</li>
       <li>AnimalFighter</li>
     </tradeTags>
     <butcherProducts>
@@ -125,10 +111,10 @@
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>MMTank_Buggy</defName>
     <!-- <label>バギー</label> -->
-	<label>Off-Road Dune Buggy</label>
+	<label>Dune Buggy</label>
     <race>MMTank_Buggy</race>
     <canArriveManhunter>true</canArriveManhunter>
-    <combatPower>25</combatPower>
+    <combatPower>250</combatPower>
     <ecoSystemWeight>0</ecoSystemWeight>
     <wildGroupSize>
       <min>1</min>
@@ -140,8 +126,22 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/MMTank_Buggy</texPath>
+          <drawSize>0.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Buggy</texPath>
+          <drawSize>0.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Buggy</texPath>
           <drawSize>1</drawSize>
         </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Buggy</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>

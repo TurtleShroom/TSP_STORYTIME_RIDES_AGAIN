@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef Name="TSP_VFEAAF_CarMaster" ParentName="AnimalThingBase" Abstract="True">
+		<race>
+			<fleshType>VAEAF_CarFlesh</fleshType>
+			<bloodDef>Filth_MachineBits</bloodDef>
+			<body>VAEAF_CarBody</body>
+			<useMeatFrom>VAEAF_CarFamily</useMeatFrom>
+			<useLeatherFrom>VAEAF_CarFamily</useLeatherFrom>
+			<!-- <leatherDef>VAEAP_Leather_Car</leatherDef> -->
+			<herdAnimal>true</herdAnimal>
+			<predator>false</predator>
+			<gestationPeriodDays>13</gestationPeriodDays>
+			<nameOnTameChance>2</nameOnTameChance>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(2, 1)</li>
+					<li>(2.5, 1)</li>
+					<li>(3, 1)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+					<soundWounded>VAEAF_Cars_Wounded</soundWounded>
+					<soundDeath>VAEAF_Cars_Death</soundDeath>
+					<soundCall>VAEAF_Cars_Call</soundCall>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.1</minAge>
+					<soundWounded>VAEAF_Cars_Wounded</soundWounded>
+					<soundDeath>VAEAF_Cars_Death</soundDeath>
+					<soundCall>VAEAF_Cars_Call</soundCall>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.4</minAge>
+					<soundWounded>VAEAF_Cars_Wounded</soundWounded>
+					<soundDeath>VAEAF_Cars_Death</soundDeath>
+					<soundCall>VAEAF_Cars_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<lifeExpectancy>35</lifeExpectancy>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<comps>
+			<li Class="CompProperties_Milkable">
+				<milkDef>Chemfuel</milkDef>
+				<milkIntervalDays>2</milkIntervalDays>
+				<milkAmount>12</milkAmount>
+				<milkFemaleOnly>false</milkFemaleOnly>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+			</li>
+		</modExtensions>
+		<tradeTags>
+			<li>AnimalVehicle</li>
+			<li>StorytimeAnimal</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>
