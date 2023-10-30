@@ -68,60 +68,73 @@
 		
 		
 
-        <thoughtSettings>
-			<replacerList>
-			</replacerList>
+			<thoughtSettings>
+				<replacerList>
+					<!-- Frogmen LOVE insect meat! They will always seek it out and enjoy it! -->
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatDirect</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeat_Loved</replacer>
+					</li>
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient_Loved</replacer>
+					</li>
+				</replacerList>
 			
-			<cannotReceiveThoughtsAtAll>false</cannotReceiveThoughtsAtAll>
-			
-			<cannotReceiveThoughts>
-				<li>Naked</li>
-				<li>ApparelDamaged</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Memory</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Social_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Social_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Memory</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Social_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Social_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Social_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Social_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Social_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Social_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Social_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Social_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Female</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Male</li>
-				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Female</li>
-			</cannotReceiveThoughts>
-			
-			<canStillReceiveThoughts>
-			</canStillReceiveThoughts>
-			
-			<restrictedThoughts>
-			</restrictedThoughts>
-			
-			<butcherThoughtGeneral><!-- my Race reacts to all racese -->
-			</butcherThoughtGeneral>
-			
-			<ateThoughtGeneral><!-- my Race reacts to all racese -->
-			</ateThoughtGeneral>
-			
-			<butcherThoughtSpecific><!-- my Race reacts to a certain race -->
-			</butcherThoughtSpecific>
-			
-			<ateThoughtSpecific><!--  my Race reacts to a certain race -->
-			</ateThoughtSpecific>
+				<cannotReceiveThoughtsAtAll>false</cannotReceiveThoughtsAtAll>
+				
+				<cannotReceiveThoughts>
+					<li>Naked</li>
+					<li>ApparelDamaged</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Memory</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Memory</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Female</li>
+					
+					<!-- If they are not in a bug worshipping cult, they will ALWAYS enjoy eating insects. -->
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeat_Sacrilegious</li>
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeatAsIngredient_Sacrilegious</li>
+				</cannotReceiveThoughts>
+				
+				<canStillReceiveThoughts>
+				</canStillReceiveThoughts>
+				
+				<restrictedThoughts>
+				</restrictedThoughts>
+				
+				<butcherThoughtGeneral><!-- my Race reacts to all racese -->
+				</butcherThoughtGeneral>
+				
+				<ateThoughtGeneral><!-- my Race reacts to all racese -->
+				</ateThoughtGeneral>
+				
+				<butcherThoughtSpecific><!-- my Race reacts to a certain race -->
+				</butcherThoughtSpecific>
+				
+				<ateThoughtSpecific><!--  my Race reacts to a certain race -->
+				</ateThoughtSpecific>
 		</thoughtSettings>
 
         <relationSettings><!--  chance factor for my Race to spawn with these relationships 1 would be Normal Human chance -->
@@ -208,7 +221,20 @@
 					<li>Head</li>
 					<li>Eyes</li>
 					<li>BodyType</li>
+					<li>Ears</li>
+					<li>AG_Heads</li>
+					<li>Heads</li>
+					<li>Fur</li>
+					<li>AG_Bodies</li>
+					<li>Bodies</li>
+					<li>Body</li>
 				</blackGeneTags>
+				
+				<whiteReproductionList>
+					<li>Forg_Duo</li> <!-- Wait a minute, which Forg goes to town? -->
+					<li>Forg_Forg</li>
+					<li>Alien_FrogPerson</li>
+				</whiteReproductionList>
 			</raceRestriction>
 			<styleSettings Inherit="False">
 				<li>
@@ -291,9 +317,10 @@
 				<!-- these values must be less than your youngest pawnkind and greater than your oldest pawn kind of this Race -->
 				<points>
 					<li>(0,0)</li>
-					<li>(14,0)</li>
-					<li>(16,0)</li>
-					<li>(21,100)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(16,0)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(21,100)</li>
+					<li>(22,100)</li>
 					<li>(50,100)</li>
 					<li>(60,100)</li>
 					<li>(70,100)</li>
