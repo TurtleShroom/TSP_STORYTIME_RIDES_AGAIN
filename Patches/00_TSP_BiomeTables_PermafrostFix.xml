@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!-- Purge the animal entirely from the Biome Tables-->
+	<!--
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>/Defs/BiomeDef/wildAnimals/ANIMALNAME</xpath>
+		<value></value>
+	</Operation>
+	-->
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/BiomeDef[defName="Permafrost"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<success>Always</success>
+		<match Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef/race/wildBiomes/Permafrost</xpath>
+		</match>
+	</Operation>
+</Patch>
