@@ -85,7 +85,7 @@
       <baseHungerRate>9.75</baseHungerRate>
       <baseBodySize>1.75</baseBodySize>
       <baseHealthScale>2</baseHealthScale>
-      <foodType>CarnivoreAnimalStrict, CarnivoreAnimal, Meat, OvivoreAnimal, Corpse, Fluid, Meal, Processed, Liquor, Kibble</foodType>
+      <foodType>CarnivoreAnimalStrict, Meat, OvivoreAnimal, Corpse, Fluid, Liquor, Kibble</foodType>
       <gestationPeriodDays>2</gestationPeriodDays>
       <wildness>0.89</wildness>
       <lifeExpectancy>50</lifeExpectancy>
@@ -97,6 +97,58 @@
       <body>QuadrupedAnimalWithPawsAndTail</body>
       <petness>0.08</petness>
       <mateMtbHours>6</mateMtbHours>
+      <litterSizeCurve>
+        <points>
+          <li>(0, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 2)</li>
+          <li>(3, 3)</li>
+		  <li>(4,1)</li>
+		  <li>(5,0.4)</li>
+		  <li>(6,0.2)</li>
+		  <li>(7,0.1)</li>
+		  <li>(8,0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.1</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.2222</minAge>
+          <soundWounded>Pawn_Hare_Wounded</soundWounded>
+          <soundDeath>Pawn_Hare_Death</soundDeath>
+          <soundCall>Pawn_Hare_Call</soundCall>
+          <soundAngry>Pawn_Hare_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+	  <li>AnimalFighter</li>
+	  <li>StorytimeAnimal</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="ChungusBase">
+    <combatPower>400</combatPower>
+	<canArriveManhunter>true</canArriveManhunter>
+    <ecoSystemWeight>0</ecoSystemWeight>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BaseChungus">
+    <defName>Chungus</defName>
+    <label>Chungus</label>
+    <description>Watch out for the Big Chungus! \n \n Big Chunguses are the aggressive, predatory, carnivorous hares that plague the galaxy. Their origin is believed to have been an attempt to create livestock to farm abundant meat and leather, but something went wrong, causing them to become predatory and violent. Standing at nearly twice the size of a man, their voracious appetite is satiated by preying on any other animal, or man, present in the area. Big Chunguses are an invasive species that can and will devour an ecosystem to the point of collapse. They multiply like, well, rabbits. \nThe Chungus' rapid spread throughout the galaxy led to a mass culling in Core and Urb Worlds alike, but the sparser population of the Rim have made them impossible for those on the edge of civilization to clear then out entirely. They are extremely difficult to tame, but doing so will lead to an unbeatable fighter that multiplies in a matter of quadrums.</description>
+	<race>
 	  <wildBiomes Inherit="False">
 				<TemperateSwamp>0.18</TemperateSwamp> 
 				<TemperateForest>0.1</TemperateForest>
@@ -322,54 +374,9 @@
 				<!-- mlie.rfpermafrost -->
 				<!-- PERMAFROST ZONE -->
 
-				<Permafrost MayRequire="mlie.rfpermafrost">0.33</Permafrost>
+				<!-- <Permafrost MayRequire="mlie.rfpermafrost">0.33</Permafrost> -->
 	   </wildBiomes>
-      <litterSizeCurve>
-        <points>
-          <li>(1.0, 0)</li>
-          <li>(1, 1)</li>
-          <li>(3, 2)</li>
-          <li>(3, 3)</li>
-        </points>
-      </litterSizeCurve>
-      <lifeStageAges>
-        <li>
-          <def>AnimalBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>AnimalJuvenile</def>
-          <minAge>0.1</minAge>
-        </li>
-        <li>
-          <def>AnimalAdult</def>
-          <minAge>0.2222</minAge>
-          <soundWounded>Pawn_Hare_Wounded</soundWounded>
-          <soundDeath>Pawn_Hare_Death</soundDeath>
-          <soundCall>Pawn_Hare_Call</soundCall>
-          <soundAngry>Pawn_Hare_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
-    </race>
-    <tradeTags>
-	  <li>AnimalFighter</li>
-	  <li>StorytimeAnimal</li>
-    </tradeTags>
-  </ThingDef>
-
-  <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="ChungusBase">
-    <combatPower>400</combatPower>
-	<canArriveManhunter>true</canArriveManhunter>
-    <ecoSystemWeight>0</ecoSystemWeight>
-  </PawnKindDef>
-
-  <ThingDef ParentName="BaseChungus">
-    <defName>Chungus</defName>
-    <label>Chungus</label>
-    <description>Watch out for the Big Chungus! \n \n Big Chunguses are the aggressive, predatory, carnivorous hares that plague the galaxy. Their origin is believed to have been an attempt to create livestock to farm abundant meat and leather, but something went wrong, causing them to become predatory and violent. Standing at nearly twice the size of a man, their voracious appetite is satiated by preying on any other animal, or man, present in the area. Big Chunguses are an invasive species that can and will devour an ecosystem to the point of collapse. They multiply like, well, rabbits. \nThe Chungus' rapid spread throughout the galaxy led to a mass culling in Core and Urb Worlds alike, but the sparser population of the Rim have made them impossible for those on the edge of civilization to clear then out entirely. They are extremely difficult to tame, but doing so will lead to an unbeatable fighter that multiplies in a matter of quadrums.</description>
+	</race>
   </ThingDef>
 
   <PawnKindDef ParentName="ChungusBase">

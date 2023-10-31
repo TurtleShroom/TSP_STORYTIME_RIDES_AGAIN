@@ -98,14 +98,12 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]</xpath>
-		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationReplace">
-			<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/xenotypeSet</xpath>
+		<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/xenotypeSet/xenotypeChances</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/xenotypeSet/xenotypeChances</xpath>
 			<value>
-				<xenotypeSet Inherit="False">
-					<Weezey>0.05</Weezey>
-				</xenotypeSet>
+				<Weezey>0.05</Weezey>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

@@ -197,7 +197,7 @@
 								<li MayRequire="TSP.Isengriff.Storytime">ST_GreenOoze</li>
 							</thingDefs>
 						</filter>
-						<count>2.5</count>
+						<count>2</count>
 					</li>
 				</ingredients>
 			</value>
@@ -538,6 +538,81 @@
 			<success>Always</success>
 			<value>
 				<MarketValue>0.5</MarketValue>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="MakeBoringPizza"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName = "MakeBoringPizza" or defName = "MakeCheesePizza" or defName = "MakePepperoniPizza" or defName = "MakeCombinationPizza" or defName = "MakeBaconPizza" or defName = "MakeBulgogiPizza" or defName = "MakeVeggiePizza" or defName = "MakeSteakPizza" or defName = "MakeMeatBallPizza" or defName = "MakeBoomratPizza" or defName = "MakeAmbrosiaPizza" or defName = "MakeBoringPizzaBulk" or defName = "MakeCheesePizzaBulk" or defName = "MakePepperoniPizzaBulk" or defName = "MakeCombinationPizzaBulk" or defName = "MakeBaconPizzaBulk" or defName = "MakeBulgogiPizzaBulk" or defName = "MakeVeggiePizzaBulk" or defName = "MakeSteakPizzaBulk" or defName = "MakeMeatBallPizzaBulk" or defName = "MakeBoomratPizzaBulk" or defName = "MakeAmbrosiaPizzaBulk"]/recipeUsers</xpath>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeTable</li>
+				<li MayRequire="tarojun.morishep.onioftherim">Oni_GroundOven</li>
+				<li MayRequire="morishep.tarojun.onioftherim">Oni_GroundOven</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]/recipes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]</xpath>
+			<success>Always</success>
+			<value>
+				<recipes></recipes>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]/recipes</xpath>
+			<value>
+				<li MayRequire="onekimchiman.pizzatime">MakeBoringPizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeCheesePizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakePepperoniPizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeCombinationPizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeBaconPizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeBulgogiPizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeVeggiePizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeSteakPizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeMeatBallPizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeBoomratPizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeAmbrosiaPizza</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeBoringPizzaBulk</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeCheesePizzaBulk</li>
+				<li MayRequire="onekimchiman.pizzatime">MakePepperoniPizzaBulk</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeCombinationPizzaBulk</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeBaconPizzaBulk</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeBulgogiPizzaBulk</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeVeggiePizzaBulk</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeSteakPizzaBulk</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeMeatBallPizzaBulk</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeBoomratPizzaBulk</li>
+				<li MayRequire="onekimchiman.pizzatime">MakeAmbrosiaPizzaBulk</li>
 			</value>
 		</match>
 	</Operation>
