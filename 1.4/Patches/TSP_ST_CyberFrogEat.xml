@@ -5,15 +5,13 @@
 	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2883698190 -->
 
 	<!-- Mechanoids that have a Food Need should now be able to eat, e.g. the cybernetic Cyber Frogs that joined the Mechanoids -->
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
 		<xpath>/Defs/ThinkTreeDef[defName="Mechanoid"]</xpath>
-		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/ThinkTreeDef[defName="Mechanoid"]/thinkRoot/subNodes</xpath>
 			<success>Always</success>
 			<value>
-				<!-- Eat random things out of curiosity -->
 				<li Class="ThinkNode_ChancePerHour_Constant">
 					<mtbDays>45</mtbDays>
 					<subNodes>
@@ -26,7 +24,6 @@
 					</subNodes>
 				</li>
 				
-				<!-- Satisfy basic needs -->
 				<li Class="ThinkNode_Subtree">
 					<treeDef>SatisfyBasicNeeds</treeDef>
 				</li>
@@ -57,6 +54,7 @@
 			</value>
 		</match>
 	</Operation>
+	-->
 	
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/BodyPartDef[defName="ArtificialBrain"]/tags</xpath>
@@ -244,6 +242,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/WorkGiverDef[defName="VEF_AnimalResource"]</xpath>
+			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
 			</value>
@@ -264,6 +263,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]</xpath>
+			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
 			</value>
@@ -284,6 +284,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]</xpath>
+			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
 			</value>
@@ -311,4 +312,31 @@
 		</nomatch>
 	</Operation>
 	-->
+
+	<!-- Directly taken from the Mechanoid Skill Modification Module Mod -->
+	<!-- gege.mechanoidmodificationslwstandalone -->
+	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2975659336 -->
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="MOW_Mech_Demolisher"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOO!! -->
+		<match Class="PatchOperationSequence">
+		  <operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[@Name="InstallModificationBaseAll"]/recipeUsers</xpath>
+				<value>
+					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogHostile</li>
+					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogDocile</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[@Name="RemoveModificationBase"]/recipeUsers</xpath>
+				<value>
+					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogHostile</li>
+					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogDocile</li>
+				</value>
+			</li>
+		  </operations>	  
+	  </match>
+	</Operation>
 </Patch>

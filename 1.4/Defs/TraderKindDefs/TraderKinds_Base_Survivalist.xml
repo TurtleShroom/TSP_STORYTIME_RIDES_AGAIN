@@ -71,10 +71,26 @@
 
 	  <li Class="StockGenerator_Category">
         <categoryDef>Drugs</categoryDef>
-        <maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+        <maxTechLevelGenerate>Industrial</maxTechLevelGenerate>
         <thingDefCountRange>1~2</thingDefCountRange>
         <totalPriceRange>200~700</totalPriceRange>
       </li>
+	  
+		<li Class="StockGenerator_SingleDef" MayRequire="robtrg.tf2.sandvich">
+			<thingDef MayRequire="robtrg.tf2.sandvich">ROBTRG_Sandvich_TF</thingDef>
+			<countRange MayRequire="robtrg.tf2.sandvich">
+				<min MayRequire="robtrg.tf2.sandvich">4</min>
+				<max MayRequire="robtrg.tf2.sandvich">10</max>
+			</countRange>
+		</li>
+		
+		<li Class="StockGenerator_SingleDef" MayRequire="robtrg.tf2.sandvich">
+			<thingDef MayRequire="robtrg.tf2.sandvich">ROBTRG_Sandvich_TF_Veg</thingDef>
+			<countRange MayRequire="robtrg.tf2.sandvich">
+				<min MayRequire="robtrg.tf2.sandvich">4</min>
+				<max MayRequire="robtrg.tf2.sandvich">10</max>
+			</countRange>
+		</li>
 	  
 	  <li Class="StockGenerator_Techprints">
         <countChances>
@@ -121,6 +137,8 @@
         <thingDefCountRange>1~8</thingDefCountRange>
         <countRange>1~2</countRange>
       </li>
+	  
+	  
 
       <!-- Buildings -->
       <li Class="StockGenerator_Category">
@@ -160,8 +178,11 @@
           <li>AnimalPet</li>
         </tradeTagsSell>
         <tradeTagsBuy>
-          <li>AnimalUncommon</li>
-          <li>AnimalExotic</li>
+			<li>AnimalCommon</li>
+			<li>AnimalUncommon</li>
+			<li>AnimalFarm</li>
+			<li>AnimalExotic</li>
+			<li>StorytimeAnimal</li>
         </tradeTagsBuy>
         <kindCountRange>2~6</kindCountRange>
         <countRange>2~8</countRange>
@@ -169,8 +190,6 @@
 
       <!-- Buying -->
       <li Class="StockGenerator_BuyExpensiveSimple" />
-      <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
-      <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
     </stockGenerators>
   </TraderKindDef>
 
