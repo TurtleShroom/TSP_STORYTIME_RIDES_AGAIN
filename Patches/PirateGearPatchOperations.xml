@@ -31,7 +31,7 @@
         <xpath>Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel/tags</xpath>
         <nomatch Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[@Name="ApparelShirtRoyalTier2Base"]/apparel</xpath>
-			<success>Always</successApparel_Corset
+			<success>Always</success>
             <value>
                 <tags></tags>
             </value>
@@ -144,7 +144,7 @@
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="RCA_redcoat_rg"]</xpath>
 		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
+		<match Class="PatchOperationAdd"> 
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="RCA_redcoat_rg"]/apparel/tags</xpath>
 			<value>
@@ -361,7 +361,7 @@
         <xpath>Defs/ThingDef[defName="Apparel_Corset"]/apparel/tags</xpath>
         <nomatch Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="Apparel_Corset"]/apparel</xpath>
-			<success>Always</successApparel_Corset
+			<success>Always</success>
             <value>
                 <tags></tags>
             </value>
@@ -519,7 +519,7 @@
         <xpath>Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]/tradeTags</xpath>
         <nomatch Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="ROM_Gun_LPRifle_COC"]</xpath>
-			<success>Always</successApparel_Corset
+			<success>Always</success>
             <value>
                 <tradeTags></tradeTags>
             </value>
@@ -531,7 +531,7 @@
         <xpath>Defs/ThingDef[defName="Apparel_Corset"]/apparel/tags</xpath>
         <nomatch Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="Apparel_Corset"]/apparel</xpath>
-			<success>Always</successApparel_Corset
+			<success>Always</success>
             <value>
                 <tags></tags>
             </value>
@@ -843,14 +843,24 @@
 		</value>
 	</Operation>
 	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/PawnKindDef[@Name="PirateBase"]/apparelTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/PawnKindDef[@Name="PirateBase"]</xpath>
+			<success>Always</success>
+            <value>
+                <apparelTags></apparelTags>
+            </value>
+        </nomatch>
+    </Operation>
+	
 	<Operation Class="PatchOperationAdd">
 		<success>Always</success>
-		<xpath>/Defs/PawnKindDef[@Name="PirateBase"]</xpath>
+		<xpath>/Defs/PawnKindDef[@Name="PirateBase"]/apparelTags</xpath>
 		<value>
-			<apparelTags>
-				<li>PoorPirate</li>
-				<li>NormalPirate</li>
-			</apparelTags>
+			<li>PoorPirate</li>
+			<li>NormalPirate</li>
 		</value>
 	</Operation>
 </Patch>
