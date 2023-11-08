@@ -5,12 +5,12 @@
 	<ThingDef ParentName="HatMakeableBase">
 		<defName>BORPA_BorpaGoggles</defName>
 		<label>Borpa goggles</label>
-		<description>Borpa eyes fashioned into hilarious goggles. The constant stare amuses others. They allow the wearer to shoot with enhanced precision.</description>
+		<description>Borpa eyes fashioned into hilarious goggles. The constant stare amuses others, increasing friendly social relations when conversing with the barer. They allow the wearer to shoot with enhanced precision.</description>
 		<graphicData>
-		  <texPath>Things/Pawn/Humanlike/Apparel/BorpaGoggles</texPath>
-		  <drawSize>(0.9, 0.9)</drawSize>
-		  <shaderType>CutoutComplex</shaderType>
-		  <graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Pawn/Humanlike/Apparel/BorpaGoggles/BorpaGoggles_Icon</texPath>
+			<drawSize>(0.9, 0.9)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<recipeMaker>
 			<researchPrerequisite>ComplexClothing</researchPrerequisite>
@@ -23,7 +23,7 @@
 				<li>CraftingSpot</li>
 			</recipeUsers>
 		</recipeMaker>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<!-- <colorGenerator Class="ColorGenerator_StandardApparel" /> -->
 		<costStuffCount>10</costStuffCount>
 		<costList>
 			<BORPA_BorpaEye>2</BORPA_BorpaEye>
@@ -49,6 +49,8 @@
 		<apparel>
 			<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
 			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<forceRenderUnderHair>true</forceRenderUnderHair>
+			<blocksVision>false</blocksVision>
 			<defaultOutfitTags>
 				<li>Soldier</li>
 				<li>Slave</li>
@@ -61,7 +63,11 @@
 				<li>EyeCover</li>
 			</layers>
 			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/BorpaGoggles/BorpaGoggles</wornGraphicPath>
 		</apparel>
+		<tradeTags>
+			<li>StorytimeHats</li>
+		</tradeTags>
 	</ThingDef>
 </Defs>
