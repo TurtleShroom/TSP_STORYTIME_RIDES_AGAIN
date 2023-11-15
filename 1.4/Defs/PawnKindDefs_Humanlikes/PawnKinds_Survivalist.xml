@@ -2,18 +2,19 @@
 
 <Defs>
 	<PawnKindDef Name="SurvivalistBase" Abstract="True">
+		<labelPlural>Survivalists</labelPlural>
 		<race>Human</race>
 		<defaultFactionType>Survivalist_Group</defaultFactionType>
 		<chemicalAddictionChance>0.05</chemicalAddictionChance>
-		<backstoryCryptosleepCommonality>0.005</backstoryCryptosleepCommonality>
+		<backstoryCryptosleepCommonality>0.001</backstoryCryptosleepCommonality>
 		<minGenerationAge Inherit="False">7</minGenerationAge>
-		<maxGenerationAge>60</maxGenerationAge>
+		<maxGenerationAge>45</maxGenerationAge>
 		<invNutrition>3.3</invNutrition>
 		<invFoodDef>MealSurvivalPack</invFoodDef>
 		<apparelTags>
 			<li>Neolithic</li>
 			<li>IndustrialBasic</li>
-			<li>IndustrialAdvanced</li>
+			<li>RWBanditWear</li>
 		</apparelTags>
 		<initialWillRange>1~2</initialWillRange>
 		<initialResistanceRange>6~10</initialResistanceRange>
@@ -108,7 +109,7 @@
   <PawnKindDef ParentName="SurvivalistBase">
     <defName>Survivalist_Leader</defName>
     <label>생존지도자</label>
-    <labelPlural>town councilmen</labelPlural>
+    <labelPlural>bosses</labelPlural>
     <combatPower>40</combatPower>
     <factionLeader>true</factionLeader>
     <minGenerationAge>30</minGenerationAge>
@@ -142,7 +143,7 @@
   
   <!-- 생존주의자 전투부대 -->
   
-  <PawnKindDef ParentName="SurvivalistBase" Name='SurvivalistCombatBase' Abstract="True">
+  <PawnKindDef ParentName="SurvivalistBase" Name="SurvivalistCombatBase" Abstract="True">
     <combatPower>60</combatPower>
 	<maxGenerationAge>60</maxGenerationAge>
     <itemQuality>Normal</itemQuality>
@@ -185,7 +186,7 @@
     </weaponTags>
   </PawnKindDef>
   
-    <PawnKindDef ParentName="SurvivalistCombatBase">
+  <PawnKindDef ParentName="SurvivalistCombatBase">
     <defName>Striker</defName>
     <label>타격대</label>
 	<combatPower>70</combatPower>
@@ -208,9 +209,7 @@
 	<apparelTags>
 	  <li>Neolithic</li>
       <li>IndustrialBasic</li>
-      <li>IndustrialAdvanced</li>
 	  <li>IndustrialMilitaryBasic</li>
-	  <li>IndustrialMilitaryAdvanced</li>
     </apparelTags>
 	<apparelRequired>
 	  <li>Apparel_AdvancedHelmet</li>
@@ -220,9 +219,10 @@
     </weaponTags>
   </PawnKindDef>
   
-    <PawnKindDef ParentName="SurvivalistCombatBase">
+  <PawnKindDef ParentName="SurvivalistCombatBase">
     <defName>Footman</defName>
     <label>보병</label>
+	<labelPlural>Footmen</labelPlural>
 	<combatPower>65</combatPower>
     <apparelMoney>500~800</apparelMoney>
     <weaponMoney>200~300</weaponMoney>
@@ -232,12 +232,16 @@
     <weaponTags>
 	  <li>MedievalMeleeBasic</li>
 	  <li>NeolithicMeleeAdvanced</li>
+	  <li>Lance</li>
+	  <li>Spearmen</li>
     </weaponTags>
   </PawnKindDef>
   
-      <PawnKindDef ParentName="SurvivalistCombatBase">
+  <PawnKindDef ParentName="SurvivalistCombatBase">
     <defName>HeavyFootman</defName>
     <label>중보병</label>
+	<labelPlural>high footmen</labelPlural>
+	<factionLeader>true</factionLeader>
 	<combatPower>85</combatPower>
     <apparelMoney>800~1000</apparelMoney>
     <weaponMoney>200~500</weaponMoney>
@@ -247,7 +251,7 @@
     </apparelRequired>
     <weaponTags>
 	  <li>MedievalMeleeAdvanced</li>
+	  <li>Sword</li>
     </weaponTags>
   </PawnKindDef>
-  
 </Defs>

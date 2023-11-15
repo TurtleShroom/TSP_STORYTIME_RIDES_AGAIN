@@ -46,7 +46,7 @@
           <li>Raider</li>
 		  <li>Pirate</li>
         </categories>
-        <commonality>0.35</commonality>
+        <commonality>0.45</commonality>
       </li>
       <li>
         <categories>
@@ -82,6 +82,7 @@
       <li>
         <!-- 일반 -->
         <kindDef>Combat</kindDef>
+		<commonality>200</commonality>
         <options>
           <Survivalist>5</Survivalist>
           <Local_Spy>6</Local_Spy>
@@ -90,8 +91,8 @@
 		  <HeavyFootman>5</HeavyFootman>
           <Ambusher>15</Ambusher>
           <Striker>10</Striker>
-          <Survivalist_Leader>2</Survivalist_Leader>
-		  <Guerrilla>1</Guerrilla>
+          <Survivalist_Leader>1</Survivalist_Leader>
+		  <Guerrilla>5</Guerrilla>
 		  <ROM_TownsfolkTeacher MayRequire="rimofmadness.callofcthulhu.factions">1</ROM_TownsfolkTeacher>
 		  <Oni_Hunter MayRequire="tarojun.morishep.onioftherim">1</Oni_Hunter>
 		  <Oni_Archer MayRequire="tarojun.morishep.onioftherim">1</Oni_Archer>
@@ -112,6 +113,7 @@
 	  <li>
         <!-- 근접보병대 -->
         <kindDef>Combat</kindDef>
+		<commonality>100</commonality>
         <options>
 		  <Footman>27</Footman>
 		  <HeavyFootman>18</HeavyFootman>
@@ -123,8 +125,20 @@
 	  <li>
         <!-- 염탐꾼 -->
         <kindDef>Combat</kindDef>
+		<commonality>40</commonality>
         <options>
 		  <Local_Spy>100</Local_Spy>
+		  <Oni_Hunter MayRequire="tarojun.morishep.onioftherim">1</Oni_Hunter>
+		  <Oni_Archer MayRequire="tarojun.morishep.onioftherim">1</Oni_Archer>
+		  <Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">1</Oni_HeavyArcher>
+        </options>
+      </li>
+	  <li>
+        <!-- 염탐꾼 -->
+        <kindDef>Combat</kindDef>
+		<commonality>20</commonality>
+        <options>
+		  <Local_Spy>1</Local_Spy>
 		  <Oni_Hunter MayRequire="tarojun.morishep.onioftherim">1</Oni_Hunter>
 		  <Oni_Archer MayRequire="tarojun.morishep.onioftherim">1</Oni_Archer>
 		  <Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">1</Oni_HeavyArcher>
@@ -154,16 +168,16 @@
           <Elephant>2</Elephant>
         </carriers>
         <guards>
-          <Survivalist>3</Survivalist>
+          <Survivalist>13</Survivalist>
           <Local_Spy>10</Local_Spy>
           <Grenadier_Destructive>2</Grenadier_Destructive>
           <Footman>9</Footman>
 		  <HeavyFootman>5</HeavyFootman>
           <Ambusher>14</Ambusher>
           <Striker>13</Striker>
-		  <Oni_Hunter MayRequire="tarojun.morishep.onioftherim">1</Oni_Hunter>
-		  <Oni_Archer MayRequire="tarojun.morishep.onioftherim">1</Oni_Archer>
-		  <Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">1</Oni_HeavyArcher>
+		  <Oni_Hunter MayRequire="tarojun.morishep.onioftherim">5</Oni_Hunter>
+		  <Oni_Archer MayRequire="tarojun.morishep.onioftherim">5</Oni_Archer>
+		  <Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">5</Oni_HeavyArcher>
 		  <ROM_TownsfolkTeacher MayRequire="rimofmadness.callofcthulhu.factions">1</ROM_TownsfolkTeacher>
         </guards>
       </li>
@@ -188,5 +202,4 @@
     </pawnGroupMakers>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
   </FactionDef>
-  
 </Defs>

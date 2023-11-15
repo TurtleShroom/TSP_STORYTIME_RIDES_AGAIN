@@ -23,7 +23,7 @@
 		<li>
 			<becomeVisible>true</becomeVisible>
 			<statOffsets>
-				<SwimSpeed MayRequire="biomesteam.biomesislands">1</SwimSpeed> <!-- One for each arm -->
+				<!-- <SwimSpeed MayRequire="biomesteam.biomesislands">1</SwimSpeed> --> <!-- One for each arm -->
 			</statOffsets>
 		</li>
 	</stages>
@@ -125,7 +125,7 @@
 		<li>
 			<becomeVisible>true</becomeVisible>
 			<statOffsets>
-				<SwimSpeed MayRequire="biomesteam.biomesislands">2</SwimSpeed> <!-- One leg each, total four -->
+				<!-- <SwimSpeed MayRequire="biomesteam.biomesislands">2</SwimSpeed> --> <!-- One leg each, total four -->
 				<MoveSpeed>0.5</MoveSpeed> <!-- One leg each, total one -->
 			</statOffsets>
 		</li>
@@ -140,7 +140,7 @@
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogLeg</defName>
     <label>frog-like leg</label>
-    <description>A human leg that has been warped into a frog's leg and webbed feet.</description>
+    <description>A sapient being's leg that has been warped into a frog's leg and webbed feet.</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -196,7 +196,7 @@
     <defName>FrogTongue</defName>
     <label>frog's tongue</label>
     <labelNoun>a froglike tongue</labelNoun>
-    <description>The tongue has stretched out like that of a frog, giving it a biological ranged attack! A frog's tongue is attatched to the front of its mouth instead of the back. Most sapient creatures have a mouth too small to fit a frog tongue without significant difficulty, making speaking extremely difficult.</description>
+    <description>The tongue has stretched out like that of a frog, giving it a biological ranged attack! A frog's tongue is attatched to the front of its mouth instead of the back. Most sapient creatures have a mouth too small to fit a frog tongue without significant difficulty, making speaking extremely difficult. When swallowing with a frog's tongue, one may feel something in their eye sockets. That is completely normal: frogs close their eyes and use their eyeballs to push down food, and now... so does this Pawn!</description>
     <descriptionHyperlinks>
 		<ThingDef>FrogTongue</ThingDef>
 	</descriptionHyperlinks>
@@ -238,7 +238,7 @@
 							<hasStandardCommand>true</hasStandardCommand>
 							<defaultProjectile>ST_Lick</defaultProjectile>
 							<warmupTime>0.7</warmupTime>
-							<range>6</range>				
+							<range>16</range>				
 							<soundCast>Lick</soundCast>
 							<muzzleFlashScale>0</muzzleFlashScale>
 							<label>lick</label>
@@ -259,7 +259,7 @@
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogTongue</defName>
     <label>froglike tongue</label>
-    <description>A human tongue that has been warped into a frog's tongue.</description>
+    <description>A sapient being's tongue that has been warped into a frog's tongue.</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -314,7 +314,7 @@
 		<defName>FrogEye</defName>
 		<label>froglike eye</label>
 		<labelNoun>a froglike eye</labelNoun>
-		<description>This Pawn's eye has warped into the eye of a frog. Frogs actually have three eyelids, with two being transparent, and the third, called the nictating membrane, increases the frog's vision underwater. Frogs have a field of view of nearly three hundred sixty degrees, allowing them to see what is in front and behind them simultaneously. When eating, a frog retracts its eyeballs into its head in order to push the prey its tonge catches into hits mouth, after which it shuts its mouth and uses its teeth to keep the victim from escaping. Unfortunately, frog eyes are also near-sighted, but their depth perception is greatly increased, making them catch prey with their tongue more accurately. \n \n Due to the fact that frog eyes are drastically different in purpose and function against the eyes of most sapient races, those possessing them are given a mixed bag of blessings and curses. Werefrog eyes increase depth perception, allow its host to spot melee attacks from any direction, and increase eating speed. However, outside the evolutionary circumstances a frog would benefit, the eye is an overall reduction in the quality of its host's vision.</description>
+		<description>This Pawn's eye has warped into the eye of a frog. Frogs actually have three eyelids, with two being transparent, and the third, called the nictating membrane, increasing the frog's vision underwater. Frogs have a field of view of nearly three hundred sixty degrees, allowing them to see what is in front and behind them simultaneously. When eating, a frog retracts its eyeballs into its head in order to push the prey its tonge catches into hits mouth, after which it shuts its mouth and uses its teeth to keep the victim from escaping. Unfortunately, frog eyes are also near-sighted, but their depth perception is greatly increased, making them catch prey with their tongue more accurately. \n \n Due to the fact that frog eyes are drastically different in purpose and function against the eyes of most sapient races, those possessing them are given a mixed bag of blessings and curses. Werefrog eyes increase depth perception, allow its host to spot melee attacks from any direction, and increase eating speed. However, outside the evolutionary circumstances a frog would benefit, the eye is an overall reduction in the quality of its host's vision.</description>
 		<descriptionHyperlinks>
 			<ThingDef>FrogEye</ThingDef>
 		</descriptionHyperlinks>
@@ -334,10 +334,10 @@
 			<li>
 				<becomeVisible>true</becomeVisible>
 				<statOffsets>
-					<AimingDelayFactor>-0.025</AimingDelayFactor> <!-- One per each eye, total 0.05 -->
-					<ShootingAccuracyPawn>0.125</ShootingAccuracyPawn> <!-- One per each eye, total 0.25 -->
-					<MeleeDodgeChance>0.4</MeleeDodgeChance> <!-- One per each eye, total 0.8 -->
-					<MeleeHitChance>-0.15</MeleeHitChance> <!-- One per each eye, total 0.3 -->
+					<AimingDelayFactor>-0.05</AimingDelayFactor> <!-- One per each eye, total 0.1 -->
+					<ShootingAccuracyPawn>0.15</ShootingAccuracyPawn> <!-- One per each eye, total 0.3 -->
+					<MeleeDodgeChance>0.45</MeleeDodgeChance> <!-- One per each eye, total 0.9 -->
+					<MeleeHitChance>-0.07</MeleeHitChance> <!-- One per each eye, total 0.14 -->
 				</statOffsets>
 			</li>
 		</stages>
@@ -346,7 +346,7 @@
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogEye</defName>
     <label>froglike eye</label>
-    <description>A human eye that has been warped into a frog's eye, complete with three eyelids!</description>
+    <description>A sapient being's eye that has been warped into a frog's eye, complete with three eyelids!</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -492,7 +492,7 @@
 		<stages>
 			<li>
 				<label>craving insect meat</label>
-				<description>My frog stomach is not functioning like it would in a real frog. It tells me to eat insect meat; no matter how many times I eat it, I still crave more. This is the worst.</description>
+				<description>My frog stomach is not functioning like it would in a real frog. It tells me to eat insect meat, but no matter how many times I eat it, I still crave more. This is really annoying.</description>
 				<baseMoodEffect>-2</baseMoodEffect>
 			</li>
 		</stages>
@@ -530,7 +530,7 @@
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogLung</defName>
     <label>froglike lung</label>
-    <description>A human lung that has been warped into a frog's lung. Does not allow breathing through the skin.</description>
+    <description>A sapient being's lung that has been warped into a frog's lung. Does not allow breathing through the skin.</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -553,7 +553,7 @@
   <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
     <defName>InstallFrogLung</defName>
     <label>install froglike lung</label>
-    <description>Install a frog=like lung.</description>
+    <description>Install a frog-like lung.</description>
     <descriptionHyperlinks>
       <ThingDef>FrogLung</ThingDef>
       <HediffDef>FrogLung</HediffDef>
@@ -696,6 +696,7 @@
           </li>
         </capMods>
 		<makeImmuneTo>
+			<li>WoundInfection</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
@@ -722,6 +723,7 @@
           </li>
         </capMods>
 		<makeImmuneTo>
+			<li>WoundInfection</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
@@ -748,6 +750,7 @@
           </li>
         </capMods>
 		<makeImmuneTo>
+			<li>WoundInfection</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
@@ -776,6 +779,7 @@
           </li>
         </capMods>
 		<makeImmuneTo>
+			<li>WoundInfection</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
 			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>

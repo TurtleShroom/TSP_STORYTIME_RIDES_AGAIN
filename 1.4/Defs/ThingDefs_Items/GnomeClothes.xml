@@ -32,61 +32,62 @@
 	</ThingDef>
  
     <ThingDef ParentName="ApparelGnomeBase">
-    <defName>ST_GnomeHat</defName>
-    <label>gnome hat</label>
-    <description>Stylish, by gnome child standards.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/GnomeHat/GnomeHat</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(0.9, 1)</drawSize>
-    </graphicData>
-    <statBases>
-		<MarketValue>0.01</MarketValue>
-		<WorkToMake>15</WorkToMake>
-		<MaxHitPoints>20</MaxHitPoints>
-		<Mass>0.004</Mass>
-		<Flammability>1</Flammability>
-		<Insulation_Cold>19</Insulation_Cold>
-		<Insulation_Heat>13</Insulation_Heat>
-		<EquipDelay>0.001</EquipDelay>
-    </statBases>
-	<generateCommonality>0</generateCommonality>
-	<generateAllowChance>0</generateAllowChance>
-    <thingCategories>
-      <li>Headgear</li>
-    </thingCategories>
-    <costList>
-      <Gnome_Cloth>20</Gnome_Cloth>
-    </costList>
-    <apparel Inherit="False">
-		<canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth> <!-- STOP SPAWNING THIS ON EVERYONE!! -->
-		<canBeGeneratedToSatisfyToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech" Inherit="False">false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
-		<countsAsClothingForNudity>true</countsAsClothingForNudity>
-		<ai_pickUpOpportunistically>false</ai_pickUpOpportunistically>
-		<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <bodyPartGroups>
-        <li>UpperHead</li>
-      </bodyPartGroups>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags Inherit="False">
-        <li>ST_GnomeClothing</li>
-		<li>GnomePeasant</li>
-      </tags>
-      <defaultOutfitTags>
-		<li>Slave</li>
-		<li>Gnome</li>
-      </defaultOutfitTags>
-	  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/GnomeHat/GnomeHat</wornGraphicPath>
-    </apparel>
-    <colorGenerator Class="ColorGenerator_Options">
-      <options>
-        <li>
-          <only>(69,193,69)</only>
-        </li>
-      </options>
-    </colorGenerator>
+		<defName>ST_GnomeHat</defName>
+		<label>gnome hat</label>
+		<description>Stylish, by gnome child standards.</description>
+		<graphicData>
+		  <texPath>Things/Pawn/Humanlike/Apparel/GnomeHat/GnomeHat</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(0.9, 1)</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.01</MarketValue>
+			<WorkToMake>15</WorkToMake>
+			<MaxHitPoints>20</MaxHitPoints>
+			<Mass>0.004</Mass>
+			<Flammability>1</Flammability>
+			<Insulation_Cold>19</Insulation_Cold>
+			<Insulation_Heat>13</Insulation_Heat>
+			<EquipDelay>0.001</EquipDelay>
+		</statBases>
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
+		<thingCategories>
+		  <li>Headgear</li>
+		</thingCategories>
+		<costList>
+		  <Gnome_Cloth>20</Gnome_Cloth>
+		</costList>
+		<apparel Inherit="False">
+			<canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth> <!-- STOP SPAWNING THIS ON EVERYONE!! -->
+			<canBeGeneratedToSatisfyToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech" Inherit="False">false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<ai_pickUpOpportunistically>false</ai_pickUpOpportunistically>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		  <bodyPartGroups>
+			<li>UpperHead</li>
+		  </bodyPartGroups>
+		  <layers>
+			<li>Overhead</li>
+		  </layers>
+		  <tags Inherit="False">
+			<li>ST_GnomeClothing</li>
+			<li>GnomePeasant</li>
+		  </tags>
+		  <defaultOutfitTags>
+			<li>Slave</li>
+			<li>Gnome</li>
+		  </defaultOutfitTags>
+		  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/GnomeHat/GnomeHat</wornGraphicPath>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+		  <options>
+			<li>
+			  <only>(69,193,69)</only>
+			</li>
+		  </options>
+		</colorGenerator>
   </ThingDef>
 
   <ThingDef ParentName="ApparelGnomeBase">

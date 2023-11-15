@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="LootPhotograph"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "LootPhotograph" or defName = "LootWeddingBand" or defName = "LootEngagementRing" or defName = "LootPlushie" or defName = "LootWalletEmpty" or defName = "LootWalletFive" or defName = "LootWalletTen" or defName = "LootWalletFifteen" defName = "LootWalletTwenty" or defName = "LootWalletTwentyFive" or defName = "LootWalletFifty" or defName = "LootWalletHundred" or defName = "LootWalletTwoFifty" or defName = "LootWalletFiveHundred" or defName = "LootWalletSevenFifty" or defName = "LootWalletThousand" or defName = "LootWalletTwoThousand" or defName = "LootWalletTwentyFiveHundred" or defName = "LootMoneyClipOne" or defName = "LootMoneyClipFive" or defName = "LootMoneyClipTen" or defName = "LootMoneyClipTwo" or defName = "LootMoneyClipTwenty" or defName = "LootMoneyClipFifty" or defName = "LootMoneyClipHundred" or defName = "LootMoneyClipTwoHundred" or defName = "LootMoneyClipThreeHundred" or defName = "LootMoneyClipFourHundred" or defName = "LootMoneyClipFiveHundred" or defName = "LootCoinPurseTenCents" or defName = "LootCoinPurseTwentyFiveCents" or defName = "LootCoinPurseFiftyCents" or defName = "LootCoinPurseSeventyFiveCents" or defName = "LootCoinPurseOne" or defName = "LootCoinPurseFive" or defName = "LootCoinPurseTen" or defName = "LootCoinPurseTwenty" or defName = "LootCoinPurseFifty" or defName = "LootPhotograph" or defName = "LootStressBall"]/apparel/layers</xpath>
+			<success>Always</success>
+			<value>
+				<layers Inherit="False">
+					<li>ST_Jewelry</li>
+				</layers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

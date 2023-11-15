@@ -4,6 +4,43 @@
 <!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2660276877 -->
 
 <Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]</xpath>
+			<success>Always</success>
+			<value>
+				<associatedMemes></associatedMemes>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_DontCare"]/exclusionTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_DontCare"]</xpath>
+			<success>Always</success>
+			<value>
+				<exclusionTags></exclusionTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]/associatedMemes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]</xpath>
+			<success>Always</success>
+			<value>
+				<associatedMemes></associatedMemes>
+			</value>
+		</nomatch>
+	</Operation>
+
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/PreceptDef[defName="IdeoRole_MiningSpecialist"]/requiredMemes</xpath>
 		<success>Always</success>
@@ -21,10 +58,27 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="IdeoRole_ShootingSpecialist"]/requiredMemes</xpath>
+		<success>Always</success>
+		<value>
+			<li>STFrogPersonOrigin</li> <!-- Tongue marksmanship -->
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/PreceptDef[defName="IdeoRole_AnimalsSpecialist"]/requiredMemes</xpath>
 		<success>Always</success>
 		<value>
 			<li>STJeubOrigin</li> <!-- Obvious -->
+			<li>STFrogPersonOrigin</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="IdeoRole_PlantSpecialist"]/requiredMemes</xpath>
+		<success>Always</success>
+		<value>
+			<li>STJeubOrigin</li>
 		</value>
 	</Operation>
 
@@ -44,7 +98,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]</xpath>
+	<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -58,15 +112,97 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/requiredMemes</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/requiredMemes</xpath>
+			<value>
+				<li>STFrogPersonOrigin</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 	<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]</xpath>
+			<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]/associatedMemes</xpath>
 			<value>
-				<associatedMemes>
-					<li>STFrogPersonOrigin</li>
-				</associatedMemes>
+				<li>STFrogPersonOrigin</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]/requiredMemes</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]/requiredMemes</xpath>
+			<value>
+				<li>STFrogPersonOrigin</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
+			<value>
+				<li>STJeubOrigin</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="AM_Madness_Exalted"]/associatedMemes</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="AM_Madness_Exalted"]/associatedMemes</xpath>
+			<value>
+				<li>STJeubOrigin</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
+			<value>
+				<li>STJeubOrigin</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/associatedMemes</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/associatedMemes</xpath>
+			<value>
+				<li>STJeubOrigin</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -122,7 +258,7 @@
 			<success>Always</success>
 			<xpath>/Defs/MemeDef[defName="Structure_OriginIslamic"]/exclusionTags</xpath>
 			<value>
-				<li>JeubsHateKebabs</li>
+				<li>JeubsHateKebabs</li> <!-- This was Isengriff's idea, for some reason -->
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -154,5 +290,42 @@
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_Sacrilegious"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_Sacrilegious"]/exclusionTags</xpath>
+			<value>
+				<li>FrogsHateInsectWorship</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_DontCare"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_DontCare"]/exclusionTags</xpath>
+			<value>
+				<li>FrogsHateInsectWorship</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="SmallSpaces_Acceptable"]/requiredMemes</xpath>
+		<success>Always</success>
+		<value>
+			<li>STJeubOrigin</li> <!-- Obvious -->
+			<li>STFrogPersonOrigin</li>
+		</value>
 	</Operation>
 </Patch>

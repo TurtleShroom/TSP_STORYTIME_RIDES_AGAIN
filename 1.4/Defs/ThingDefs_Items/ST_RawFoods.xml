@@ -61,6 +61,35 @@
   </ThingDef>
   
   <ThingDef ParentName="RoughPlantBase">
+    <defName>ST_Lime</defName>
+    <label>lime</label>
+    <description>A fresh lime.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/Fruits/Lime</texPath>
+	  <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+	<uiIconPath>Things/Items/Resources/Fruits/Lime/Lime_a</uiIconPath>
+    <statBases>
+      <MarketValue>1.2</MarketValue>
+      <Flammability>1.3</Flammability>
+      <Nutrition>0.045</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+		<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+		<li>PlantFoodRaw</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+  </ThingDef>
+  
+  <ThingDef ParentName="RoughPlantBase">
     <defName>ST_Orange</defName>
     <label>orange</label>
     <description>A fresh orange.</description>

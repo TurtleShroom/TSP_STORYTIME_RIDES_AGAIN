@@ -45,6 +45,11 @@
 				<li>RoyalTier2</li>
 				<li>MedievalApparelNoble</li>
 				<li>GoblinWear</li>
+				<li>WoodBeetWear</li>
+				<li>BeetWear</li>
+				<li>ST_BeetClothing</li>
+				<li>Muslim_apparel</li>
+				<li>islam_head</li>
 			</value>
 		</match>
 		<!-- In the end, something will always get added. -->
@@ -628,4 +633,128 @@
             </value>
         </nomatch>
     </Operation>
+	
+  <Operation Class="PatchOperationConditional">
+    <!-- Does this exist? -->
+    <xpath>/Defs/ThingDef[defName="CG_RoundGlasses"]</xpath>
+    <!-- If it does, do this replacement. -->
+    <match Class="PatchOperationReplace">
+      <success>Always</success>
+      <xpath>/Defs/ThingDef[defName="CG_RoundGlasses"]/generateCommonality</xpath>
+      <value>
+        <generateCommonality>0.25</generateCommonality>
+      </value>
+    </match>
+    <!-- If the first XPATH does not exist, the original code stands. -->
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <!-- Does this exist? -->
+    <xpath>/Defs/ThingDef[defName="CG_RoundGlasses"]</xpath>
+    <!-- If it does, add this. -->
+    <match Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/ThingDef[defName="CG_RoundGlasses"]/apparel/tags</xpath>
+      <value>
+        <li>Glasses</li>
+        <li>RWPGentlemanWear</li>
+		<li>RWPLadiesWear</li>
+        <li>WeebClothes</li>
+        <li>Outlander</li>
+        <li>IndustrialBasic</li>
+        <li>IndustrialAdvanced</li>
+        <li>RWPWesternWear</li>
+        <li>RWPGentlemanWear</li>
+        <li>Royal</li>
+        <li>RoyalTier1</li>
+        <li>RoyalTier2</li>
+        <li>OniWear</li>
+        <li>OniHeadWear</li>
+        <li>CallOfCthulhu_Townsfolk</li>
+        <li>JeubWear</li>
+        <li>GoblinWear</li>
+      </value>
+    </match>
+    <!-- If the first XPATH does not exist, the original code stands. -->
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <!-- Does this exist? -->
+    <xpath>/Defs/ThingDef[defName="CG_PilotGlasses"]</xpath>
+    <!-- If it does, do this replacement. -->
+    <match Class="PatchOperationReplace">
+      <success>Always</success>
+      <xpath>/Defs/ThingDef[defName="CG_PilotGlasses"]/generateCommonality</xpath>
+      <value>
+        <generateCommonality>0.25</generateCommonality>
+      </value>
+    </match>
+    <!-- If the first XPATH does not exist, the original code stands. -->
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <!-- Does this exist? -->
+    <xpath>/Defs/ThingDef[defName="CG_PilotGlasses"]</xpath>
+    <!-- If it does, add this. -->
+    <match Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/ThingDef[defName="CG_PilotGlasses"]/apparel/tags</xpath>
+      <value>
+        <li>Glasses</li>
+        <li>WeebClothes</li>
+        <li>Outlander</li>
+        <li>IndustrialBasic</li>
+        <li>IndustrialAdvanced</li>
+        <li>Royal</li>
+        <li>RoyalTier1</li>
+        <li>RoyalTier2</li>
+        <li>OniWear</li>
+        <li>OniHeadWear</li>
+        <li>JeubWear</li>
+        <li>GoblinWear</li>
+      </value>
+    </match>
+    <!-- If the first XPATH does not exist, the original code stands. -->
+  </Operation>
+  
+  <Operation Class="PatchOperationConditional">
+    <!-- Does this exist? -->
+    <xpath>/Defs/ThingDef[defName="CG_LightVest"]</xpath>
+    <!-- If it does, add this. -->
+    <match Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/ThingDef[defName="CG_LightVest"]/apparel/tags</xpath>
+      <value>
+        <li>RWPWesternWear</li>
+		<li>RWPBanditWear</li>
+        <li>Outlander</li>
+        <li>IndustrialBasic</li>
+        <li>OniWear</li>
+        <li>JeubWear</li>
+        <li>GoblinWear</li>
+		<li>RWPMarshalWear</li>
+      </value>
+    </match>
+    <!-- If the first XPATH does not exist, the original code stands. -->
+  </Operation>
+  
+  <Operation Class="PatchOperationConditional">
+    <!-- Does this exist? -->
+    <xpath>/Defs/ThingDef[defName="CG_CombatBoots"]</xpath>
+    <!-- If it does, add this. -->
+    <match Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/ThingDef[defName="CG_CombatBoots"]/apparel/tags</xpath>
+      <value>
+        <li>IndustrialMilitary</li>
+		<li>IndustrialMilitaryAdvanced</li>
+		<li>MericaUniform</li>
+        <li>GoblinWear</li>
+		<li>CaravaneerWear</li>
+		<li>SurvivalistWear</li>
+		<li>HarrierWear</li>
+		<li>SlaveRatWear</li>
+		<li>CallOfCthulhu_Infantry</li>
+		<li>mafia</li>
+      </value>
+    </match>
+    <!-- If the first XPATH does not exist, the original code stands. -->
+  </Operation>
 </Patch>
