@@ -7,7 +7,7 @@
     <race>Forg_Forg</race>
     <defaultFactionType>CaravanCoop</defaultFactionType>
     <chemicalAddictionChance>0.02</chemicalAddictionChance>
-    <backstoryCryptosleepCommonality>0.0001</backstoryCryptosleepCommonality>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <invNutrition>4.5</invNutrition>
     <initialWillRange>1~2</initialWillRange>
     <initialResistanceRange>6~20</initialResistanceRange>
@@ -15,7 +15,26 @@
       <li>IndustrialBasic</li>
       <li>IndustrialAdvanced</li>
 	  <li>Maxpedition</li>
+	  <li>CaravaneerWear</li>
     </apparelTags>
+	<skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~14</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>5~9</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+  
+  <PawnKindDef Name="CaravanBaseFrog" ParentName="CaravanBase" Abstract="True">
+    <race>Forg_Forg</race>
+    <defaultFactionType>CaravanCoop</defaultFactionType>
+	<apparelTags>
+		<li>CaravaneerWear</li>
+	</apparelTags>
 	<modExtensions>
 		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
 			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
@@ -28,7 +47,7 @@
 	</modExtensions>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="CaravanBase">
+  <PawnKindDef ParentName="CaravanBaseFrog">
     <defName>Caravan_Patrol</defName>
     <!-- <label>상단 순찰대</label> -->
 	<label>top patrolman</label>
@@ -58,7 +77,7 @@
     </techHediffsTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="CaravanBase">
+  <PawnKindDef ParentName="CaravanBaseFrog">
     <defName>Caravan_Trader</defName>
     <!-- <label>지역 상인</label> -->
 	<label>contractor</label>
@@ -88,7 +107,7 @@
     </techHediffsTags>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="CaravanBase">
+  <PawnKindDef ParentName="CaravanBaseFrog">
     <defName>Caravan_CoopLeader</defName>
     <label>조합장</label>
     <labelPlural>Union Presidium</labelPlural>
@@ -100,6 +119,7 @@
     <gearHealthRange>1~1</gearHealthRange>
     <itemQuality>Good</itemQuality>
     <weaponMoney>1200~1400</weaponMoney>
+	<backstoryCryptosleepCommonality>0.001</backstoryCryptosleepCommonality>
     <weaponTags>
 	  <li>SimpleGun</li>
       <li>Gun</li>
@@ -143,6 +163,16 @@
       <li>Advanced</li>
       <li>ImplantEmpireCommon</li>
     </techHediffsTags>
+	<modExtensions>
+		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+					<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
+					<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
+				</li>
+			</genes>
+		</li>
+	</modExtensions>
   </PawnKindDef>
 
 	<PawnKindDef ParentName="GrenadierBase">
@@ -151,6 +181,7 @@
 		<labelPlural>EMP grenadiers</labelPlural>
 		<race Inherit="False">Forg_Duo</race>
 		<combatPower>10</combatPower>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
 		<weaponTags Inherit="False">
 			<li>GrenadeEMP</li>
 		</weaponTags>
@@ -162,6 +193,16 @@
 			<li>Advanced</li>
 			<li>ImplantEmpireCommon</li>
 		</techHediffsTags>
+		<modExtensions>
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+					<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+						<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
+						<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
+					</li>
+				</genes>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
   
 	<PawnKindDef ParentName="MercenaryGunnerBase">
@@ -181,6 +222,16 @@
 			<li>Advanced</li>
 			<li>ImplantEmpireCommon</li>
 		</techHediffsTags>
+		<modExtensions>
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+					<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+						<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
+						<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
+					</li>
+				</genes>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
   
 	<PawnKindDef ParentName="MercenaryEliteBase">
@@ -197,5 +248,15 @@
 		  <li>Advanced</li>
 		  <li>ImplantEmpireCommon</li>
 		</techHediffsTags>
+		<modExtensions>
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+					<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+						<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
+						<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
+					</li>
+				</genes>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
 </Defs>
