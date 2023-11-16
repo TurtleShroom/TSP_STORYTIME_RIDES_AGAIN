@@ -19,6 +19,12 @@
 	<pawnSingular>약탈자</pawnSingular>
 	<pawnsPlural>약탈자들</pawnsPlural>
 	-->
+	<allowedCultures>
+		<li>ST_PirateCulture</li>
+		<li>STGoblin</li>
+		<!-- <li>Kriminul</li> -->
+		<li MayRequire="oskarpotocki.vfe.pirates">VFEP_Khanate</li>
+	</allowedCultures>
     <categoryTag>Outlander</categoryTag>
     <listOrderPriority>30</listOrderPriority>
     <settlementGenerationWeight>1</settlementGenerationWeight>
@@ -33,26 +39,27 @@
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
     <techLevel>Industrial</techLevel>
+	<fixedName>Slave Rats</fixedName>
     <backstoryFilters>
       <li>
         <categories>
           <li>Pirate</li>
 		  <li>Raider</li>
         </categories>
-        <commonality>0.5</commonality>
+        <commonality>0.75</commonality>
       </li>
       <li>
         <categories>
           <li>PirateBackstory</li>
         </categories>
-        <commonality>0.4</commonality>
+        <commonality>0.75</commonality>
       </li>
       <li>
         <categories>
 		  <li>Outsider</li>
 		  <li>Madman</li>
         </categories>
-        <commonality>0.15</commonality>
+        <commonality>0.2</commonality>
       </li>
     </backstoryFilters>
     <!-- <geneticVariance>0.8</geneticVariance> -->
@@ -62,12 +69,13 @@
       <li>Caravan_Raider_Drugs</li>
       <li>Caravan_Raider_Slaver</li>
       <li>Caravan_Storytime_Pirate</li>
-	  <li>Caravan_Outlander_PirateMerchant</li>
+	  <!-- <li>Caravan_Outlander_PirateMerchant</li> -->
 	  <li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
     </caravanTraderKinds>
     <visitorTraderKinds>
 		<li>Caravan_Raider_StolenGoods</li>
 		<li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
+		<li>Caravan_Outlander_PirateMerchant</li>
     </visitorTraderKinds>
     <baseTraderKinds>
       <li>Base_Raider_Standard</li>
@@ -78,15 +86,21 @@
       <points>
         <li>(0,35)</li>
         <li>(70, 50)</li>
-        <li>(700, 100)</li>
-        <li>(1300, 150)</li>
+        <li>(700, 200)</li>
+        <li>(1300, 300)</li>
         <li>(100000, 10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
+	<requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+	</requiredMemes>
 	<disallowedMemes>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Guilty</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
 		
 		<!-- If you have the Mod -->
 		<li MayRequire="llunak.MorePrecepts">Pacifism</li>
@@ -241,16 +255,21 @@
           <Alpaca>5</Alpaca>
         </carriers>
         <guards>
-          <Raider>5</Raider>
-          <Armed_Robber>10</Armed_Robber>
-          <Armed_Raider>10</Armed_Raider>
-          <Robber>5</Robber>
+          <Raider>8</Raider>
+          <Armed_Robber>13</Armed_Robber>
+          <Armed_Raider>13</Armed_Raider>
+          <Robber>8</Robber>
 		  <Pirate>3</Pirate>
 		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
           <Grenadier_Destructive>3</Grenadier_Destructive>
           <Mercenary_Slasher>10</Mercenary_Slasher>
           <Mercenary_Gunner>1</Mercenary_Gunner>
           <Mercenary_Elite>2</Mercenary_Elite>
+          <PirateSwabbie>3</PirateSwabbie>
+		  <PirateNormal>4</PirateNormal>
+		  <PirateGrenadier>5</PirateGrenadier>
+		  <PirateCaptain>1</PirateCaptain>
+		  <PirateJuggernaut>1</PirateJuggernaut>
         </guards>
       </li>
       <li>
@@ -260,14 +279,14 @@
           <Armed_Robber>13</Armed_Robber>
           <Armed_Raider>18</Armed_Raider>
           <Robber>7</Robber>
-          <Raider_Boss>1</Raider_Boss>
+          <Raider_Boss>4</Raider_Boss>
           <PirateSwabbie>3</PirateSwabbie>
 		  <PirateNormal>4</PirateNormal>
 		  <PirateGrenadier>5</PirateGrenadier>
 		  <PirateCaptain>1</PirateCaptain>
-		  <PirateJuggernaut>1</PirateJuggernaut>
+		  <PirateJuggernaut>2</PirateJuggernaut>
 		  <Pirate>3</Pirate>
-		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">3</VFEP_Footsoldier>
           <Grenadier_Destructive>3</Grenadier_Destructive>
           <Mercenary_Slasher>1</Mercenary_Slasher>
           <Mercenary_Gunner>1</Mercenary_Gunner>
@@ -292,5 +311,4 @@
 		</li>
 	</modExtensions>
   </FactionDef>
-  
 </Defs>
