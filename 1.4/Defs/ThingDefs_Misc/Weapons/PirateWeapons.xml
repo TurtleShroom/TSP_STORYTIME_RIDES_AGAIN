@@ -7,11 +7,8 @@
       <li>WeaponsRanged</li>
     </thingCategories>
     <burnableByRecipe>false</burnableByRecipe>
-    <comps>
-		<li>
-			<compClass>CompQuality</compClass>
-		</li>
-    </comps>
+	<smeltable>false</smeltable>
+	<tradeability>All</tradeability>
 	<weaponTags>
 		<li>ST_PirateRanged</li>
 	</weaponTags>
@@ -33,7 +30,13 @@
 	<tradeTags>
 		<li>WeaponRanged</li>
 		<li>Pirate</li>
+		<li>RWP_Gear</li>
 	</tradeTags>
+    <comps>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
@@ -80,6 +83,8 @@
 		<li>FrenchSkirmish</li>
 		<li>PrussianSkirmish</li>
 		<li>Revolver</li>
+		<li>RWPRevolver</li>
+		<li>RWPLowCapacity</li>
     </weaponTags>
 	<weaponClasses>
 		<li>Ranged</li>
@@ -143,7 +148,7 @@
       <damageDef>Bullet</damageDef>
       <damageAmountBase>36</damageAmountBase>
       <stoppingPower>5</stoppingPower>
-      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <armorPenetrationBase>0.13</armorPenetrationBase>
       <speed>40</speed>
     </projectile>
   </ThingDef>
@@ -273,7 +278,7 @@
       <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <costList>
-      <Chemfuel>30</Chemfuel>
+      <Chemfuel>5</Chemfuel>
     </costList>
     <weaponTags>
       <li>GrenadePirate</li>
@@ -394,7 +399,9 @@
 		<li>GoblinTech</li>
 		<li>WarcasketVeteran</li>
     </weaponTags>
-	<tradeTags>
+	<tradeTags Inherit="False">
+		<li>Pirate</li>
+		<li>WeaponRanged</li>
 		<li>VFEP_WarcasketWeapon</li>
 	</tradeTags>
     <verbs>
@@ -487,7 +494,6 @@
 		<RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
 		<WorkToMake>910</WorkToMake>
     </statBases>
-	<!-- <tradeability>Sellable</tradeability> -->
 	<recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 	  <soundWorking>Recipe_Machining</soundWorking>
@@ -508,11 +514,13 @@
     <stuffCategories>
       <li>Metallic</li>
 	  <li>Stony</li>
+	  <li>Woody</li>
 	  
 	  <!-- Mod support -->
 	  <li MayRequire="sarg.rimbees">RB_Waxy</li>
 	  <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
 	  <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+	  <li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
 	  <li MayRequire="Dubwise.Rimefeller">Plastic</li>
 	  <li MayRequire="Dubwise.Rimefeller">Composite</li>
     </stuffCategories>
@@ -547,12 +555,14 @@
         <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
       </li>
     </verbs>
-    <comps>
-	  <li>
-        <compClass>CompQuality</compClass>
-      </li>
+    <comps Inherit="False">
+		<li>
+			<compClass>CompEquippable</compClass>
+		</li>
+		<li Class="CompProperties_Biocodable"></li>
     </comps>
 	<tradeTags>
+		<li>WeaponRanged</li>
 		<li>Pirate</li>
 	</tradeTags>
   </ThingDef>
@@ -647,6 +657,7 @@
 		<li>CallOfCthulhu_CoastalMelee</li>
 		<li>CallOfCthulhu_Angler</li>
 		<li>MedievalMeleeDestructive</li>
+		<li>IndustrialMeleeDestructive</li>
 		<li>BritishMelee</li>
 		<li>BritishInfantryMelee</li>
 		<li>GoblinDecent</li>
@@ -798,5 +809,198 @@
 		<li>WeaponMelee</li>
 		<li>Pirate</li>
 	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="BasePsychicWeaponMelee">
+    <defName>CursedCutlass</defName>
+    <label>Haunted Cutlass</label>
+    <description>The hilt of this blade is covered in melted gold coins, and a strange ethereal glow emanates from it.</description>
+    <graphicData>
+      <texPath>Things/Items/PirateWeapons/CursedCutlass</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+	<thingSetMakerTags>
+		<li>RewardStandardMidFreq</li>
+	</thingSetMakerTags>
+    <statBases>
+      <Mass>1</Mass>
+	  <MarketValue>3000</MarketValue>
+    </statBases>
+    <equippedAngleOffset>0</equippedAngleOffset>
+	<tools>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+		  <li>Stab</li>
+		  <li>Demolish</li>
+		  <li>Poke</li>
+        </capacities>
+        <power>19</power>
+        <cooldownTime>1</cooldownTime>
+		<armorPenetration>0.6</armorPenetration>
+		<chanceFactor>0.9</chanceFactor>
+      </li>
+	  <li>
+		<label>enchantment</label>
+		<capacities>
+			<li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
+			<li>TSP_ST_Stun</li>
+			<li>Demolish</li>
+			<li>TSP_ST_Thump</li>
+		</capacities>
+		<power>25</power>
+		<chanceFactor>1</chanceFactor>
+		<armorPenetration>1</armorPenetration>
+	  </li>
+    </tools>
+	<tradeTags>
+		<li>PsychicWeapon</li>
+	</tradeTags>
+	<thingCategories>
+		<li>Artifacts</li>
+    </thingCategories>
+	<weaponTags>
+		<li>HarrowedMeleeChampion</li>
+		<li>ST_CursedWeapons</li>
+		<li>SkeletonCaptain</li>
+	</weaponTags>
+	<comps>
+		<li Class="CompProperties_Art">
+			<nameMaker>NamerArtWeaponMelee</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+			<minQualityForArtistic>Awful</minQualityForArtistic>
+		</li>
+		<li Class="CompProperties_BladelinkWeapon">
+			<biocodeOnEquip>true</biocodeOnEquip>
+		</li>
+		<li Class="CompProperties_GeneratedName">
+			<nameMaker>NamerWeaponBladelink</nameMaker>
+		</li>
+		<li Class="CompProperties_Biocodable"/>
+	</comps>
+	<equippedStatOffsets>
+		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
+		<PsychicEntropyRecoveryRate>0.02</PsychicEntropyRecoveryRate>
+	</equippedStatOffsets>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeapon">
+    <defName>CursedGun</defName>
+    <label>haunted assault rifle</label>
+    <description>An assault rifle that's been covered in Haunted Gold. It emits a strange, ethereal glow. While it is a fantastic ranged weapon, its most important purpose is to enhance the wielder's psychic sensitivity and neural heat dissipation, allowing more use of psychic powers alongside it. The Haunted Gold coating of this rifle causes it to be more accurate in the hands of any user, regardless of his Shooting Skills.</description>
+    <graphicData>
+      <texPath>Things/Items/PirateWeapons/CursedGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+	<techLevel>Industrial</techLevel>
+    <thingSetMakerTags>
+		<li>RewardStandardQualitySuper</li>
+	</thingSetMakerTags>
+    <statBases>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.8</AccuracyLong>
+      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_CursedRifle</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>30</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools Inherit="False">
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li>ToxicBite</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+		<chanceFactor>2</chanceFactor>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Poke</li>
+		  <li>ToxicBite</li>
+		  <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+		<chanceFactor>2</chanceFactor>
+      </li>
+	  <li>
+		<label>enchantment</label>
+		<capacities>
+			<li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
+			<li>TSP_ST_Stun</li>
+			<li>Demolish</li>
+			<li>TSP_ST_Thump</li>
+		</capacities>
+		<power>30</power>
+		<chanceFactor>1</chanceFactor>
+		<armorPenetration>0.51</armorPenetration>
+	  </li>
+    </tools>
+	<weaponTags>
+		<li>CallOfCthulhu_InfantryGun</li>
+		<li>CallOfCthulhu_FrenziedCultist</li>
+		<li>ST_CursedWeapons</li>
+		<li>SkeletonCaptain</li>
+	</weaponTags>
+	<tradeTags>
+		<li>PsychicWeapon</li>
+	</tradeTags>
+	<thingCategories>
+		<li>Artifacts</li>
+    </thingCategories>
+	<costList>
+		<Steel>66</Steel>
+		<ComponentIndustrial>13</ComponentIndustrial>
+	</costList>
+	<comps>
+        <li>
+			<compClass>CompQuality</compClass>
+		</li>
+		<li Class="CompProperties_Biocodable"></li>
+		<li Class="CompProperties_Art">
+			<nameMaker>NamerArtWeaponMelee</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+			<minQualityForArtistic>Awful</minQualityForArtistic>
+		</li>
+	</comps>
+	<equippedStatOffsets>
+		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
+		<PsychicEntropyRecoveryRate>0.02</PsychicEntropyRecoveryRate>
+	</equippedStatOffsets>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_CursedRifle</defName>
+    <label>haunted assault rifle bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ToxicBite</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <speed>100</speed>
+    </projectile>
   </ThingDef>
 </Defs>

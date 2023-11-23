@@ -86,31 +86,67 @@
 	</Operation>
 	-->
 	
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
+			<value>
+				<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+					<hediffname>HedSTUndead</hediffname>
+					<hediffseverity>1</hediffseverity>
+				</li>
+				<li Class="AnimalBehaviours.CompProperties_Draftable">
+					<makeNonFleeingToo>true</makeNonFleeingToo>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationAdd">
+		<match Class="PatchOperationAddModExtension">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 			<value>
-				<comps>
-					<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
-						<hediffname>HedSTUndead</hediffname>
-						<hediffseverity>1</hediffseverity>
-					</li>
-					<li Class="AnimalBehaviours.CompProperties_Draftable">
-						<makeNonFleeingToo>true</makeNonFleeingToo>
-					</li>
-				</comps>
-				<modExtensions>
-					<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
-						<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
-					</li>
-					<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
-						<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
-					</li>
-				</modExtensions>
+				<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+					<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationAddModExtension">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+			<value>
+				<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+					<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
+				</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -126,13 +162,13 @@
 			<value>
 				<statBases>
 					<PsychicSensitivity>10</PsychicSensitivity>
-					<ToxicSensitivity>0</ToxicSensitivity>
+					<ToxicResistance>1</ToxicResistance>
 					<Flammability>0.2</Flammability>
 					<ComfyTemperatureMin>-420</ComfyTemperatureMin>
 					<ComfyTemperatureMax>420</ComfyTemperatureMax>
 					<LeatherAmount>0</LeatherAmount>
 					<MeatAmount>100</MeatAmount>
-					<PainShockThreshold>1</PainShockThreshold>
+					<PainShockThreshold>2</PainShockThreshold>
 					<BoneAmount MayRequire="sihv.rombones" Inherit="False">206</BoneAmount> <!-- Human skeletons always yield the same bones as their skeleton contains -->
 					<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
 					<HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_SanctusSensitivity>

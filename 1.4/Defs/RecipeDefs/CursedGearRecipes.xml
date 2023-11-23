@@ -36,7 +36,7 @@
 				</thingDefs>
 		 </defaultIngredientFilter>
 		 <products>
-			<Gold>15</Gold>
+			<Gold>20</Gold>
 		</products>
 	</RecipeDef>
 
@@ -67,8 +67,9 @@
 					<li>CursedCoin</li>
 				</thingDefs>
 			</filter>
-			<count>30</count>
+			<count>230</count>
 		  </li>
+		  <!--
 		  <li>
 			<filter>
 				<thingDefs>
@@ -77,18 +78,19 @@
 			</filter>
 			<count>100</count>
 		  </li>
+		  -->
 		 </ingredients>
 		 <fixedIngredientFilter>
-				<thingDefs>
-					<li>Steel</li>
-					<li>CursedCoin</li>
-				</thingDefs>
+			<thingDefs>
+				<li>Steel</li>
+				<li>CursedCoin</li>
+			</thingDefs>
 		 </fixedIngredientFilter>
 		 <defaultIngredientFilter>
-						<thingDefs>
-							<li>Steel</li>
-							<li>CursedCoin</li>
-						</thingDefs>
+			<thingDefs>
+				<li>Steel</li>
+				<li>CursedCoin</li>
+			</thingDefs>
 		 </defaultIngredientFilter>
 		 <products>
 			<CursedCutlass>1</CursedCutlass>
@@ -97,7 +99,7 @@
 
 	<RecipeDef>
 		<defName>MakeCursedGun</defName>
-		<label>Make haunted assault rifle</label>
+		<label>coat assault rifle in haunted gold</label>
 		<description>Coat an assault rifle in haunted gold. Why not?</description>    
 		<jobString>Make a haunted assault rifle.</jobString>
 		<workAmount>5000</workAmount>
@@ -112,7 +114,7 @@
 		  <li>FueledSmithy</li>
 		</recipeUsers>
 		<skillRequirements>
-				<Crafting>8</Crafting>
+				<Crafting>2</Crafting>
 		</skillRequirements>
 		<ingredients>
 		  <li>
@@ -121,7 +123,7 @@
 					<li>CursedCoin</li>
 				</thingDefs>
 			</filter>
-			<count>50</count>
+			<count>15</count>
 		  </li>
 		  <li>
 			<filter>
@@ -148,6 +150,89 @@
 			<CursedGun>1</CursedGun>
 		</products>
 	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>TSP_ST_MakeCursedGun_FromScratch</defName>
+		<label>Make haunted assault rifle</label>
+		<description>Now that the technology to make assault rifles has been fully understood, let us go further and coat that rifle in haunted gold. Why not?</description>    
+		<jobString>Make a haunted assault rifle.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+		<researchPrerequisites>
+			<li>magicPirateCrafting</li>
+			<li>PrecisionRifling</li>
+		</researchPrerequisites>
+		<recipeUsers>
+		  <li>ElectricSmithy</li>
+		  <li>FueledSmithy</li>
+		  <li>MachiningTable</li>
+		</recipeUsers>
+		<skillRequirements>
+				<Crafting>14</Crafting>
+		</skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>CursedCoin</li>
+				</thingDefs>
+			</filter>
+			<count>100</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Steel</li>
+					<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Tin</li>
+					<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Copper</li>
+					<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Bronze</li>
+					<li MayRequire="mlie.ancientrimcore">AR_Bronze</li>
+					<li MayRequire="mlie.ancientrimcore">AR_Iron</li>
+				</thingDefs>
+			</filter>
+			<count>66</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>13</count>
+		  </li>
+		 </ingredients>
+		 <fixedIngredientFilter>
+			<thingDefs>
+				<li>ComponentIndustrial</li>
+				<li>CursedCoin</li>
+				<li>Steel</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Tin</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Copper</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Bronze</li>
+				<li MayRequire="mlie.ancientrimcore">AR_Bronze</li>
+				<li MayRequire="mlie.ancientrimcore">AR_Iron</li>
+			</thingDefs>
+		 </fixedIngredientFilter>
+		 <defaultIngredientFilter>
+			<thingDefs>
+				<li>CursedCoin</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Tin</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Copper</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Bronze</li>
+				<li MayRequire="mlie.ancientrimcore">AR_Bronze</li>
+				<li MayRequire="mlie.ancientrimcore">AR_Iron</li>
+			</thingDefs>
+		 </defaultIngredientFilter>
+		 <products>
+			<CursedGun>1</CursedGun>
+		</products>
+	</RecipeDef>
 
 	<RecipeDef>
 		<defName>MakePirateCrown</defName>
@@ -165,7 +250,7 @@
 		  <li>FueledSmithy</li>
 		</recipeUsers>
 		<skillRequirements>
-				<Crafting>12</Crafting>
+				<Crafting>6</Crafting>
 		</skillRequirements>
 		<ingredients>
 		  <li>
