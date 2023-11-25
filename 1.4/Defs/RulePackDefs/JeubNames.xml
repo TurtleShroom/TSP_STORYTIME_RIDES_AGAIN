@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>
 
+<Defs>
 	<RulePackDef>
 		<defName>JeubMaleName</defName>
+		<include>
+			<li>NamerFactionMechanoid</li>
+		</include>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[MaleList] [FamilyList]</li>
+				<li>name->[JeubMaleList] [JeubFamilyList]</li>
+				<li>name->[JeubMaleList] [JeubFamilyList]</li>
+				<li>name->[JeubMaleList] [mysl]jeub</li>
+				<li>name->[JeubMaleList] J[mysl][mysl]jeub</li>
+				<li>name->Jeb[mysl] J[mysl] Jeub</li>
+				<li>name->Jeb[mysl] J[mysl] Jeub</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
-					<keyword>MaleList</keyword>
+					<keyword>JeubMaleList</keyword>
 					<path>JeubNames/JeubMale</path>
 				</li>
 				<li Class="Rule_File">
-					<keyword>FamilyList</keyword>
+					<keyword>JeubFamilyList</keyword>
 					<path>JeubNames/JeubLastNames</path>
 				</li>
 			</rulesRaw>
@@ -22,17 +30,23 @@
 
 	<RulePackDef>
 		<defName>JeubFemaleName</defName>
+		<include>
+			<li>NamerFactionMechanoid</li>
+		</include>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[FemaleList] [FamilyList]</li>
+				<li>name->[JeubFemaleList] [JeubFamilyList]</li>
+				<li>name->[JeubFemaleList] [mysl]jeub</li>
+				<li>name->[JeubFemaleList] J[mysl][mysl]jeub</li>
+				<li>name->[JeubFemaleList] J[mysl] [JeubFamilyList]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
-					<keyword>FemaleList</keyword>
+					<keyword>JeubFemaleList</keyword>
 					<path>JeubNames/JeubFemale</path>
 				</li>
 				<li Class="Rule_File">
-					<keyword>FamilyList</keyword>
+					<keyword>JeubFamilyList</keyword>
 					<path>JeubNames/JeubLastNames</path>
 				</li>
 			</rulesRaw>
@@ -40,19 +54,28 @@
 	</RulePackDef>
 	
 	<RulePackDef>
-    <defName>JeubSettlementName</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>name-&gt;[pack]</li>
-      </rulesStrings>
-      <rulesRaw>
-        <li Class="Rule_File">
-          <keyword>pack</keyword>
-          <path>JeubNames/JeubSettlement</path>
-        </li>
-      </rulesRaw>
-    </rulePack>
-  </RulePackDef>
-	
-	
+		<defName>JeubSettlementName</defName>
+		<include>
+			<li>NamerFactionMechanoid</li>
+		</include>
+		<rulePack>
+		  <rulesStrings>
+			<li>name-&gt;[JeubZonePack]</li>
+			<li>name-&gt;[JeubZonePack]</li>
+			<li>name-&gt;[JeubZonePack]</li>
+			<li>name-&gt;[msyl] Jeub Hive</li>
+			<li>name-&gt;[Enemy] Jeub Hive</li>
+			<li>name-&gt;[Enemy] [Enemy] Jeub Hive</li>
+			<li>name-&gt;Rata[msyl]</li>
+			<li>name-&gt;Rata [TerrainFeature]</li>
+			<li>name-&gt;Rata [ConceptBadass]</li>
+		  </rulesStrings>
+		  <rulesRaw>
+			<li Class="Rule_File">
+			  <keyword>JeubZonePack</keyword>
+			  <path>JeubNames/JeubSettlement</path>
+			</li>
+		  </rulesRaw>
+		</rulePack>
+	</RulePackDef>
 </Defs>

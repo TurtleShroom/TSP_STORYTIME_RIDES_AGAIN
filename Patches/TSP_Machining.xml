@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="TableMachining"]/building/unpoweredWorkTableWorkSpeedFactor</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="TableMachining"]/building</xpath>
+			<value>
+				<unpoweredWorkTableWorkSpeedFactor>0.25</unpoweredWorkTableWorkSpeedFactor>
+			</value>
+		</nomatch>
+	<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

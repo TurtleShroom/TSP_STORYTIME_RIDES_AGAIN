@@ -6,10 +6,10 @@
     <label>larva</label>
 	<reproductive>false</reproductive>
 	<canSleepWhenStarving>false</canSleepWhenStarving>
-	<foodMaxFactor>3</foodMaxFactor>
+	<foodMaxFactor>4</foodMaxFactor>
     <bodySizeFactor>0.2</bodySizeFactor>
     <healthScaleFactor>0.2</healthScaleFactor>
-    <hungerRateFactor>0.2</hungerRateFactor>
+    <hungerRateFactor>0.7</hungerRateFactor>
     <marketValueFactor>0.5</marketValueFactor>
 	<visible>true</visible>
 	<developmentalStage>Child</developmentalStage>
@@ -25,7 +25,7 @@
     <label>nymph</label>
 	<reproductive>false</reproductive>
 	<canSleepWhenStarving>false</canSleepWhenStarving>
-	<foodMaxFactor>3</foodMaxFactor>
+	<foodMaxFactor>4</foodMaxFactor>
     <bodySizeFactor>0.5</bodySizeFactor>
     <healthScaleFactor>1</healthScaleFactor>
     <hungerRateFactor>0.7</hungerRateFactor>
@@ -33,6 +33,7 @@
 	<visible>true</visible>
 	<!-- <developmentalStage>Child</developmentalStage> -->
 	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<claimable>true</claimable>
     <statFactors>
       <MoveSpeed>0.9</MoveSpeed>
     </statFactors>
@@ -41,13 +42,14 @@
   <LifeStageDef>
     <defName>BeanManTeenStage</defName>
     <label>child-eye</label>
-	<foodMaxFactor>3</foodMaxFactor>
+	<foodMaxFactor>4</foodMaxFactor>
 	<canSleepWhenStarving>false</canSleepWhenStarving>
     <healthScaleFactor>2</healthScaleFactor>
     <hungerRateFactor>1</hungerRateFactor>
     <visible>true</visible>
     <reproductive>false</reproductive>
 	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<claimable>true</claimable>
     <statFactors>
       <MoveSpeed>1</MoveSpeed>
     </statFactors>
@@ -55,14 +57,15 @@
   
   <LifeStageDef>
     <defName>BeanManAdultStage</defName>
-    <hungerRateFactor>1.5</hungerRateFactor>
+    <hungerRateFactor>1</hungerRateFactor>
 	<healthScaleFactor>2</healthScaleFactor>
-	<foodMaxFactor>2</foodMaxFactor>
+	<foodMaxFactor>4</foodMaxFactor>
     <label>imago</label>
     <visible>true</visible>
     <reproductive>false</reproductive>
 	<canSleepWhenStarving>false</canSleepWhenStarving>
 	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<claimable>true</claimable>
     <statFactors>
       <MoveSpeed>1</MoveSpeed>
     </statFactors>
@@ -70,8 +73,8 @@
   
   <LifeStageDef>
     <defName>BeanManMatureAdultStage</defName>
-    <hungerRateFactor>1.5</hungerRateFactor>
-	<foodMaxFactor>2</foodMaxFactor>
+    <hungerRateFactor>1</hungerRateFactor>
+	<foodMaxFactor>4</foodMaxFactor>
 	<healthScaleFactor>2</healthScaleFactor>
     <label>imago</label>
     <visible>false</visible>
@@ -86,7 +89,7 @@
   <LifeStageDef>
     <defName>TSP_ST_BeanManElderStage</defName>
     <hungerRateFactor>1</hungerRateFactor>
-	<foodMaxFactor>1.7</foodMaxFactor>
+	<foodMaxFactor>4</foodMaxFactor>
 	<healthScaleFactor>3</healthScaleFactor>
     <label>elderly</label>
     <visible>false</visible>
@@ -100,8 +103,8 @@
 
   <LifeStageDef>
     <defName>TSP_ST_BeanManSuperElderStage</defName>
-    <hungerRateFactor>0.7</hungerRateFactor>
-	<foodMaxFactor>1.7</foodMaxFactor>
+    <hungerRateFactor>1</hungerRateFactor>
+	<foodMaxFactor>4</foodMaxFactor>
 	<healthScaleFactor>4</healthScaleFactor>
     <label>ancient</label>
     <visible>true</visible>
@@ -116,7 +119,7 @@
   <LifeStageDef>
     <defName>TSP_ST_BeanManMiyamoto</defName>
     <hungerRateFactor>0.5</hungerRateFactor>
-	<foodMaxFactor>1.5</foodMaxFactor>
+	<foodMaxFactor>4</foodMaxFactor>
 	<healthScaleFactor>5</healthScaleFactor>
     <label>Miyamoto</label>
     <visible>false</visible>

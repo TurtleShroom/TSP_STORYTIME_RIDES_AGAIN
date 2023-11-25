@@ -1,36 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-  
-  <RulePackDef>
-    <defName>NamerIdeoGoldenAgePirate</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_ideoName->Piratism</li>
-        <li>r_ideoAdjective->Pirate</li>
-        <li>r_memberName->Pirate</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef> 
-
-  <RulePackDef>
-    <defName>NamerIdeoGoldenAgePirateLeader</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>r_leaderTitle->Captain</li>
-      </rulesStrings>
-    </rulePack>
-  </RulePackDef> 
-
   <CultureDef>
     <defName>ST_PirateCulture</defName>
     <label>pirate</label>
     <description>Yo ho, yo ho!</description>
-    <pawnNameMaker>NamerPersonPirate</pawnNameMaker>
+    <pawnNameMaker>NamerPersonGoldenAgePirate</pawnNameMaker>
     <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoGoldenAgePirate</ideoNameMaker>
     <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoGoldenAgePirateLeader</leaderTitleMaker>
     <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalKriminul</festivalNameMaker>
     <allowedPlaceTags>
-		<li>PirateBackstory</li>
+		<li>ST_OriginPirate</li>
+		<!-- <li>PirateBackstory</li> -->
     </allowedPlaceTags>
     <iconPath>World/Pirates/NicePirates</iconPath>
     <iconColor>(1.0, 1.0, 1.0)</iconColor>
@@ -42,6 +23,11 @@
       </li>
 	  <li>
 		<tag>Cannibal</tag> <!-- The hair, that is -->
+		<baseWeight>1</baseWeight>
+		<weightFactor>1</weightFactor>
+	  </li>
+	  <li>
+		<tag>Royal</tag>
 		<baseWeight>1</baseWeight>
 		<weightFactor>1</weightFactor>
 	  </li>
