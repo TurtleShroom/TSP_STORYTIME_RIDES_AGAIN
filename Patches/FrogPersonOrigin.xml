@@ -20,20 +20,20 @@
 					<worshipRoomLabel>sacred pond</worshipRoomLabel>
 					<category>Structure</category>
 					<impact>0</impact>
-					<requiredRituals>
-					</requiredRituals>
-					<consumableBuildings>
-					</consumableBuildings>
+					<requiredRituals></requiredRituals>
+					<consumableBuildings></consumableBuildings>
 					<requireAnyRitualSeat>
 						<li>KneelPillow</li> <!-- Just like lily pads! -->
 					</requireAnyRitualSeat>
 					<exclusionTags>
 						<li>FrogsHateInsectAdoration</li>
 						<li>FrogsHateInsectWorship</li>
+						<li>FrogsLoveEatingInsects</li>
 					</exclusionTags>
 					<requireOne>
 						<li>
 							<li>InsectMeatEating_Loved</li>
+							<li MayRequire="vanillaexpanded.vmemese">VME_InsectMeatEating_DontCare</li>
 						</li>
 						<li MayRequire="vanillaexpanded.vmemese">
 							<li MayRequire="vanillaexpanded.vmemese">VME_Insectoids_Despised</li>
@@ -105,12 +105,12 @@
 					</agreeableTraits>
 					<thingStyleCategories>
 						<li>
-							<category>Totemic</category>
-							<priority>1</priority>
-						</li>
-						<li>
 							<category>Animalist</category>
 							<priority>4</priority>
+						</li>
+						<li>
+							<category>Totemic</category>
+							<priority>1</priority>
 						</li>
 					</thingStyleCategories>
 				</MemeDef>

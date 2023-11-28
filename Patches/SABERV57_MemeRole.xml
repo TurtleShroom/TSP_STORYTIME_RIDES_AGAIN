@@ -8,6 +8,18 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]/exclusionTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]</xpath>
+			<success>Always</success>
+			<value>
+				<exclusionTags></exclusionTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]</xpath>
@@ -300,7 +312,7 @@
 			<success>Always</success>
 			<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_Sacrilegious"]/exclusionTags</xpath>
 			<value>
-				<li>FrogsHateInsectWorship</li>
+				<li>FrogsLoveEatingInsects</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -308,13 +320,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_DontCare"]</xpath>
+	<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_DontCare"]/exclusionTags</xpath>
+			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]/exclusionTags</xpath>
 			<value>
-				<li>FrogsHateInsectWorship</li>
+				<li>FrogsLoveEatingInsects</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -328,4 +340,6 @@
 			<li>STFrogPersonOrigin</li>
 		</value>
 	</Operation>
+	
+	
 </Patch>
