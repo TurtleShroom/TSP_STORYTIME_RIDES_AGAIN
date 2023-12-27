@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Players with the Mod that remove RL references to YHWH and other deities will find that World Generation is broken by that Mod. This fixes it. -->
+<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2553766942 -->
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RulePackDef[defName="NamerDeityChristian"]</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+				<RulePackDef>
+					<defName>NamerDeityChristian</defName>
+					<include>
+						<li>GlobalUtility</li>
+					</include>
+					<rulePack>
+						<rulesStrings>
+							<li>r_deityName(p=3)->Mister Streamer</li>
+							<li>r_deityName->Mister Creamer</li>
+							<li>r_deityName(p=4)->Samuel Streamer</li>
+							<li>r_deityName->[Color] Dale</li>
+							<li>r_deityName->[Color] Joris</li>
+							<li>r_deityName->[Direction] Joris</li>
+						</rulesStrings>
+					</rulePack>
+				</RulePackDef>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RulePackDef[defName="NamerDeityIslamic"]</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+				<RulePackDef>
+					<defName>NamerDeityIslamic</defName>
+					<include>
+						<li>GlobalUtility</li>
+					</include>
+					<rulePack>
+						<rulesStrings>
+							<li>r_deityName(p=5)->Flying Spaghetti Monster</li>
+							<li>r_deityName(p=2)->Spaghetti Monster</li>
+							<li>r_deityName->[Color] Noodle</li>
+							<li>r_deityName->[Color] Pasta</li>
+							<li>r_deityName->Beer Vulcano</li>
+							<li>r_deityName(p=2)->Stripper Factory</li>
+						</rulesStrings>
+					</rulePack>
+				</RulePackDef>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RulePackDef[defName="DietyTypeMakerAbrahamic"]</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+				<RulePackDef>
+					<defName>DietyTypeMakerAbrahamic</defName>
+					<include>
+						<li>GlobalUtility</li>
+					</include>
+					<rulePack>
+					<rulesStrings>
+						<li>r_deityType->[chadprefixadj] Creator</li>
+						<li>r_deityType->[chadprefixadj] Deity</li>
+						<li>r_deityType->[chadprefixadj] Greatest of All Time</li>
+						<li>r_deityType->[chadprefixadj] GOAT</li>
+						<li>r_deityType->[chadprefixadj] Rizzler</li>
+						<li>all->everything</li>
+						<li>all->all</li>
+						<li>all->the universe</li>
+						<li>chadprefixadj->Based</li>
+						<li>chadeprefixadj->The Chad</li>
+						<li>chadprefix->Rizz</li>
+					</rulesStrings>
+					</rulePack>
+				</RulePackDef>
+			</value>
+		</nomatch>
+	</Operation>
+</Patch>

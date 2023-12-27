@@ -57,6 +57,63 @@
 			<ST_LemonBar>5</ST_LemonBar>
 		</products>
 	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>TSP_ST_Make_LimeBar</defName>
+		<label>make lime bar</label>
+		<description>Bake a lime bar.</description>
+		<jobString>Baking</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_GnomeSugar</li>
+					<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+					<li MayRequire="herbs.plants">RawMint</li>
+				</thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_Lime</li>
+				</thingDefs>
+			</filter>
+			<count>20</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_GnomeSugar</li>
+				<li>ST_Lemon</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+				<li MayRequire="herbs.plants">RawMint</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>ST_GnomeSugar</li>
+				<li>ST_Lemon</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+				<li MayRequire="herbs.plants">RawMint</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+				<li>GnomeTable</li>
+				<li MayRequire="morishep.tarojun.onioftherim">Oni_GroundOven</li>
+		</recipeUsers>
+		<researchPrerequisite>advancedCooking</researchPrerequisite>
+		<products>
+			<ST_LimeBar>5</ST_LimeBar>
+		</products>
+	</RecipeDef>
 
 	<RecipeDef>
 		<defName>Make_Butterscotch</defName>

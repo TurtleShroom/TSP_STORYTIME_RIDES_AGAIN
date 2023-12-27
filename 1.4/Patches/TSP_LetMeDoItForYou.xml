@@ -179,10 +179,11 @@
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
+	Does this exist?
 		<xpath>/Defs/MeditationFocusDef/requiredBackstoriesAny</xpath>
-		<!-- If it DOES NOT, add this. -->
+		If it DOES NOT, add this.
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
 			<xpath>/Defs/MeditationFocusDef</xpath>
@@ -190,13 +191,15 @@
 				<requiredBackstoriesAny></requiredBackstoriesAny>
 			</value>
 		</nomatch>
-		<!-- If the first XPATH does not exist, the original code stands. -->
+		If the first XPATH does not exist, the original code stands.
 	</Operation>
+	-->
 	
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
+	Does this exist?
 		<xpath>/Defs/MeditationFocusDef/incompatibleBackstoriesAny</xpath>
-		<!-- If it DOES NOT, add this. -->
+		If it DOES NOT, add this.
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
 			<xpath>/Defs/MeditationFocusDef</xpath>
@@ -204,6 +207,7 @@
 				<incompatibleBackstoriesAny></incompatibleBackstoriesAny>
 			</value>
 		</nomatch>
-		<!-- If the first XPATH does not exist, the original code stands. -->
+		If the first XPATH does not exist, the original code stands.
 	</Operation>
+	-->
 </Patch>

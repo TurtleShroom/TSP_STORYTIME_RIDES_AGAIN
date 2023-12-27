@@ -85,6 +85,7 @@
 		<li>Revolver</li>
 		<li>RWPRevolver</li>
 		<li>RWPLowCapacity</li>
+		<li>HarrierRanged</li>
     </weaponTags>
 	<weaponClasses>
 		<li>Ranged</li>
@@ -146,7 +147,7 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>36</damageAmountBase>
+      <damageAmountBase>30</damageAmountBase>
       <stoppingPower>5</stoppingPower>
       <armorPenetrationBase>0.13</armorPenetrationBase>
       <speed>40</speed>
@@ -180,6 +181,7 @@
 		<li>FrenchSkirmish</li>
 		<li>PrussianSkirmish</li>
 		<li>GoblinDecent</li>
+		<li>HarrierRanged</li>
     </weaponTags>
     <costList>
       <Steel>60</Steel>
@@ -283,6 +285,7 @@
     <weaponTags>
       <li>GrenadePirate</li>
 	  <li>PirateGrenadier</li>
+	  <li>HarrierRanged</li>
     </weaponTags>
 	<weaponClasses>
 		<li>Ranged</li>
@@ -371,7 +374,7 @@
     <burnableByRecipe>true</burnableByRecipe>
 	<equippedStatOffsets>
 		<MoveSpeed>-0.25</MoveSpeed>
-		<PainShockThreshold>-0.1</PainShockThreshold>
+		<PainShockThreshold>-0.05</PainShockThreshold>
 	</equippedStatOffsets>
     <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
     <costStuffCount>100</costStuffCount>
@@ -398,6 +401,7 @@
 		<li>Officer</li>
 		<li>GoblinTech</li>
 		<li>WarcasketVeteran</li>
+		<li>HarrierRangedAdvanced</li>
     </weaponTags>
 	<tradeTags Inherit="False">
 		<li>Pirate</li>
@@ -524,7 +528,7 @@
 	  <li MayRequire="Dubwise.Rimefeller">Plastic</li>
 	  <li MayRequire="Dubwise.Rimefeller">Composite</li>
     </stuffCategories>
-	<costStuffCount>50</costStuffCount>
+	<costStuffCount>40</costStuffCount>
     <weaponTags>
       <li>PoorPirate</li>
 	  <li>Slinger</li>
@@ -662,6 +666,7 @@
 		<li>BritishInfantryMelee</li>
 		<li>GoblinDecent</li>
 		<li>ST_PirateMelee</li>
+		<li>HarrierMelee</li>
     </weaponTags>
     <statBases>
       <WorkToMake>5000</WorkToMake>
@@ -814,7 +819,7 @@
   <ThingDef ParentName="BasePsychicWeaponMelee">
     <defName>CursedCutlass</defName>
     <label>Haunted Cutlass</label>
-    <description>The hilt of this blade is covered in melted gold coins, and a strange ethereal glow emanates from it.</description>
+    <description>The hilt of this blade is covered in melted gold coins, and a strange ethereal glow emanates from it. The magic of the Haunted Gold has infused a Persona that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the Haunted Cutlass Persona will refuse to be wielded by anyone else.</description>
     <graphicData>
       <texPath>Things/Items/PirateWeapons/CursedCutlass</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -839,9 +844,9 @@
 		  <li>Poke</li>
         </capacities>
         <power>19</power>
-        <cooldownTime>1</cooldownTime>
 		<armorPenetration>0.6</armorPenetration>
-		<chanceFactor>0.9</chanceFactor>
+        <cooldownTime>1</cooldownTime>
+		<chanceFactor>1</chanceFactor>
       </li>
 	  <li>
 		<label>enchantment</label>
@@ -852,7 +857,7 @@
 			<li>TSP_ST_Thump</li>
 		</capacities>
 		<power>25</power>
-		<chanceFactor>1</chanceFactor>
+		<chanceFactor>0.9</chanceFactor>
 		<armorPenetration>1</armorPenetration>
 	  </li>
     </tools>
@@ -902,10 +907,10 @@
 	</thingSetMakerTags>
     <statBases>
       <Mass>3.5</Mass>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.85</AccuracyShort>
-      <AccuracyMedium>0.85</AccuracyMedium>
-      <AccuracyLong>0.8</AccuracyLong>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.9</AccuracyMedium>
+      <AccuracyLong>0.9</AccuracyLong>
       <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
@@ -914,7 +919,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_CursedRifle</defaultProjectile>
         <warmupTime>0.9</warmupTime>
-        <range>30</range>
+        <range>40</range>
         <burstShotCount>2</burstShotCount>
         <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
         <soundCast>Shot_AssaultRifle</soundCast>
