@@ -329,6 +329,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/ThingDef[defName="GRC_Apparel_GothicDress"]/apparel/gender</xpath>
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="GRC_Apparel_GothicDress"]/apparel/gender</xpath>
+			<value>
+				<gender>Female</gender>
+			</value>
+		</match>
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="GRC_Apparel_GothicDress"]/apparel</xpath>

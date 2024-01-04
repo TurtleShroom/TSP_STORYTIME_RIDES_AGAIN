@@ -8,7 +8,7 @@
     <description>모종의 이유로 타인들의 재산을 빼앗는 무리입니다. 이들은 다른 정착지에서 생산한 물품을 갈취하고 주민들을 납치하지만 우호적인 관계가 되면 당신에게 장물들과 각종 전투장비를 교역할 것입니다.</description>
 	-->
 	<label>Harriers</label>
-	<description>The Golden Age pirate crews occasionally have crewmen who seek to leave for more advanced societies. These, alongside ragtag bands of raiders and robbers, have come together to form the Slave Rats. Sporting a diverse range of raiders and pirates from both modern and ancient pirate crews, this Faction extorts goods from other settlements and kidnaps villagers. When they become friendly, they will trade stolen goods and various types of combat equipment.</description>
+	<description>The Golden Age pirate crews occasionally have crewmen who seek to leave for more advanced societies. These, alongside ragtag bands of raiders and robbers, have come together to form the Slave Rats. Sporting a diverse range of raiders and pirates from both modern and ancient pirate crews, alongside thieves and miscreants of terrestial groups, this Faction extorts goods from other settlements and kidnaps villagers. When they become friendly, they will trade stolen goods and various types of combat equipment.</description>
     <colorSpectrum>
       <li>(0.81, 0.67, 0.14)</li>
       <li>(0.81, 0.67, 0.14)</li>
@@ -143,7 +143,7 @@
         <!-- Normal fights, standard mix -->
         <kindDef>Combat</kindDef>
         <options>
-		  <CombatSlave>5</CombatSlave>
+		  <CombatSlave>9</CombatSlave>
           <Raider>10</Raider>
 		  <Robber>10</Robber>
           <Grenadier_Destructive>2</Grenadier_Destructive>
@@ -167,7 +167,9 @@
         <options>
 		  <CombatSlave>250</CombatSlave>
 		  <PirateSwabbie>13</PirateSwabbie>
-		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">14</VFEP_Footsoldier>
+		  <RWP_Bandit_Gunslinger MayRequire="mlie.rimworldwesternizationproject">4</RWP_Bandit_Gunslinger>
+		  <RWP_Bandit_Rifleman MayRequire="mlie.rimworldwesternizationproject">4</RWP_Bandit_Rifleman>
         </options>
       </li>
 	  <li>
@@ -214,6 +216,8 @@
 		  <Pirate>3</Pirate>
 		  <Grenadier_Destructive>3</Grenadier_Destructive>
 		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+		  <RWP_Bandit_Gunslinger MayRequire="mlie.rimworldwesternizationproject">0.482</RWP_Bandit_Gunslinger>
+		  <RWP_Bandit_Rifleman MayRequire="mlie.rimworldwesternizationproject">0.482</RWP_Bandit_Rifleman>
         </options>
       </li>
       <li>
@@ -230,13 +234,14 @@
       </li>
       <li>
         <kindDef>Peaceful</kindDef>
+		<commonality>95</commonality>
         <options>
 		  <CombatSlave>3</CombatSlave>
           <Raider_Boss>1</Raider_Boss>
-		  <Robber>15</Robber>
-          <Raider>15</Raider>
-		  <Armed_Robber>15</Armed_Robber>
-          <Armed_Raider>15</Armed_Raider>
+		  <Robber>13</Robber>
+          <Raider>13</Raider>
+		  <Armed_Robber>13</Armed_Robber>
+          <Armed_Raider>13</Armed_Raider>
 		  <Pirate>1</Pirate>
           <PirateSwabbie>1.3</PirateSwabbie>
 		  <PirateNormal>1.4</PirateNormal>
@@ -244,8 +249,30 @@
 		  <PirateCaptain>0.33</PirateCaptain>
 		  <PirateJuggernaut>0.5</PirateJuggernaut>
 		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+		  <RWP_Bandit_Gunslinger MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Gunslinger>
+		  <RWP_Bandit_Rifleman MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Rifleman>
         </options>
       </li>
+	  <li>
+		<kindDef>Peaceful</kindDef>
+		<commonality>10</commonality>
+		<options>
+			<CombatSlave>1</CombatSlave>
+		</options>
+	  </li>
+	  <li>
+		<kindDef>Peaceful</kindDef>
+		<commonality>100</commonality>
+		<options>
+			<Raider_Boss>1</Raider_Boss>
+			<Robber>15</Robber>
+			<Raider>15</Raider>
+			<Armed_Robber>15</Armed_Robber>
+			<Armed_Raider>15</Armed_Raider>
+			<Pirate>0.25</Pirate>
+			<PirateCaptain>0.33</PirateCaptain>
+		</options>
+	  </li>
       <li>
         <kindDef>Trader</kindDef>
         <traders>
@@ -272,6 +299,8 @@
 		  <PirateGrenadier>5</PirateGrenadier>
 		  <PirateCaptain>1</PirateCaptain>
 		  <PirateJuggernaut>1</PirateJuggernaut>
+		  <RWP_Bandit_Gunslinger MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Gunslinger>
+		  <RWP_Bandit_Rifleman MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Rifleman>
         </guards>
       </li>
       <li>
@@ -297,6 +326,8 @@
 		  <ST_Parrot>1</ST_Parrot>
 		  <TSP_PirateTradesman>2</TSP_PirateTradesman>
 		  <ST_LivingCoconut>1</ST_LivingCoconut>
+		  <RWP_Bandit_Gunslinger MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Gunslinger>
+		  <RWP_Bandit_Rifleman MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Rifleman>
         </options>
       </li>
     </pawnGroupMakers>
