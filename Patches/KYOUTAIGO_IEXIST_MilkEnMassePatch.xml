@@ -16,6 +16,7 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
 						<li MayRequire="TSP.Isengriff.Storytime">Rylex_CoconutMilk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_RuneJuice</li>
 					</value>
 				</li>
 				
@@ -25,6 +26,7 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
 						<li MayRequire="TSP.Isengriff.Storytime">Rylex_CoconutMilk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_RuneJuice</li>
 					</value>
 				</li>
 				
@@ -34,33 +36,7 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
 						<li MayRequire="TSP.Isengriff.Storytime">Rylex_CoconutMilk</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Milk"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
-						<li MayRequire="TSP.Isengriff.Storytime">Rylex_CoconutMilk</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
-						<li MayRequire="TSP.Isengriff.Storytime">Rylex_CoconutMilk</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
-						<li MayRequire="TSP.Isengriff.Storytime">Rylex_CoconutMilk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_RuneJuice</li>
 					</value>
 				</li>
 			</operations>
@@ -97,12 +73,28 @@
 						<li>BORPA_Milk</li>
 					</value>
 				</li>
-				
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Milk"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>				
 				<li Class="PatchOperationInsert">
 					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>BORPA_Milk</li>
+						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_NightMilk</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_InsectMilk</li>
+						<li MayRequire="hh.xrushha.AnimaAnimalsCombined">AnimaThrumboMilk</li>
+						<li MayRequire="ironscruff.primordialgeysers">IronScruff_MicrobeSqueezins</li>
 					</value>
 				</li>
 				
@@ -110,7 +102,13 @@
 					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>BORPA_Milk</li>
+						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_NightMilk</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_InsectMilk</li>
+						<li MayRequire="hh.xrushha.AnimaAnimalsCombined">AnimaThrumboMilk</li>
+						<li MayRequire="ironscruff.primordialgeysers">IronScruff_MicrobeSqueezins</li>
 					</value>
 				</li>
 				
@@ -118,7 +116,13 @@
 					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>BORPA_Milk</li>
+						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_NightMilk</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_InsectMilk</li>
+						<li MayRequire="hh.xrushha.AnimaAnimalsCombined">AnimaThrumboMilk</li>
+						<li MayRequire="ironscruff.primordialgeysers">IronScruff_MicrobeSqueezins</li>
 					</value>
 				</li>
 			</operations>

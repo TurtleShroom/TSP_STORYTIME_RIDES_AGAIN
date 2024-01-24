@@ -38,7 +38,55 @@
 									<li>DriedFrogPills</li>
 								</thingDefs>
 							</filter>
-							<count>40</count>
+							<count>20</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>DriedFrogPills</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+				</RecipeDef>
+  			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="WarriorHoney"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<RecipeDef ParentName="SurgeryFlesh">
+					<defName>TSP_KASENRA_Cure_AntButtHoney</defName>
+					<label>resolve Warrior Honey addiction with Dried Frog Pills</label>
+					<description>It is said that Warrior Honey addictions are as permanent as Luciferium. That is usually true, but an overdose of Dried Frog Pills can do amazing things to the brain. A heavy dose of these pills will instantly snap a madman back to clear, rational thinking, but at the cost of a severe addiction to Dried Frog Pills in its stead.</description>
+					<workerClass>Recipe_RemoveHediff</workerClass>
+					<jobString>Ribbitstoring sanity</jobString>
+					<workAmount>650</workAmount>
+					<hideBodyPartNames>true</hideBodyPartNames>
+					<isViolation>false</isViolation>
+					<!-- <targetsBodyPart>false</targetsBodyPart> -->
+					<removesHediff>WarriorHoneyAddiction</removesHediff>
+					<addsHediff>DriedFrogPillsAddiction</addsHediff>
+					<successfullyRemovedHediffMessage>Ribbit ribbit! {0} has successfully restored {1}'s mental state!</successfullyRemovedHediffMessage>
+					<surgerySuccessChanceFactor>999</surgerySuccessChanceFactor>
+					<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+					<anesthetize>false</anesthetize>
+					<skillRequirements>
+						<Medicine>1</Medicine>
+					</skillRequirements>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>DriedFrogPills</li>
+								</thingDefs>
+							</filter>
+							<count>1250</count>
 						</li>
 					</ingredients>
 					<fixedIngredientFilter>
@@ -109,6 +157,7 @@
 				<li>TSP_KASENRA_CureCatatonia</li>
 				<li>TSP_KASENRA_CureDementiaCorruption</li>
 				<li>TSP_KASENRA_CureAlzheimersCorruption</li>
+				<li MayRequire="kobo.honeypotants">TSP_KASENRA_Cure_AntButtHoney</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -118,7 +167,7 @@
 	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
 	<Operation Class="PatchOperationConditional">
 	 <!-- Does this exist? -->
-		<xpath>/Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
+		<xpath>/Defs/ThingDef[defName="Human"]</xpath>
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Human"]/recipes</xpath>
@@ -126,6 +175,7 @@
 				<li>TSP_KASENRA_CureCatatonia</li>
 				<li>TSP_KASENRA_CureDementiaCorruption</li>
 				<li>TSP_KASENRA_CureAlzheimersCorruption</li>
+				<li MayRequire="kobo.honeypotants">TSP_KASENRA_Cure_AntButtHoney</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -143,6 +193,7 @@
 				<li>TSP_KASENRA_CureCatatonia</li>
 				<li>TSP_KASENRA_CureDementiaCorruption</li>
 				<li>TSP_KASENRA_CureAlzheimersCorruption</li>
+				<li MayRequire="kobo.honeypotants">TSP_KASENRA_Cure_AntButtHoney</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -155,7 +206,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/HediffDef[defName="CatatonicBreakdown"]/recipes</xpath>
+			<xpath>/Defs/HediffDef[defName="CatatonicBreakdown"]</xpath>
 			<value>
 				<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
 				<everCurableByItem>true</everCurableByItem>

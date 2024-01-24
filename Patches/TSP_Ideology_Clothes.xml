@@ -99,6 +99,8 @@
 				<li>Royal</li>
 				<li>RoyalTier1</li>
 				<li>RoyalTier2</li>
+				<li>MF_CorporateTier1</li>
+				<li>MF_CorporateTier2</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -173,6 +175,8 @@
 				<li>WeebClothes</li>
 				<li>WeebPants</li>
 				<li>RWPGentlemanWear</li>
+				<li>MF_CorporateTier1</li>
+				<li>MF_CorporateTier2</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -203,6 +207,8 @@
 				<li>ST_GnomeClothing</li>
 				<li>president</li>
 				<li>GoblinWear</li>
+				<li>MF_CorporateTier1</li>
+				<li>MF_CorporateTier2</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -266,6 +272,8 @@
 				<li>JeubWear</li>
 				<li>GoblinWear</li>
 				<li>Usa</li>
+				<li>MF_CorporateTier1</li>
+				<li>MF_CorporateTier2</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -308,6 +316,8 @@
 				<li>CallOfCthulhu_Townsfolk</li>
 				<li>JeubWear</li>
 				<li>GoblinWear</li>
+				<li>MF_CorporateTier1</li>
+				<li>MF_CorporateTier2</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -353,6 +363,8 @@
 				<li>IndustrialAdvanced</li>
 				<li>Usa</li>
 				<li>president</li>
+				<li>MF_CorporateTier1</li>
+				<li>MF_CorporateTier2</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -499,6 +511,8 @@
 				<li>King</li>
 				<li>ST_GnomeClothing</li>
 				<li>JeubWear</li>
+				<li>RWPGentlemanWear</li>
+				<li>RWPLadiesWear</li>
 			</value>
 		</match>
 	</Operation>
@@ -528,6 +542,9 @@
 				<li>King</li>
 				<li>RWPGentlemanWear</li>
 				<li>BeetElite</li>
+				<li>RWPGentlemanWear</li>
+				<li>MF_CorporateTier1</li>
+				<li>MF_CorporateTier2</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -541,6 +558,7 @@
 			<li>BeetWear</li>
 			<li>FrogmanWear</li>
 			<li>ST_BeetClothing</li>
+			<li>SurvivalistWear</li>
 			<li>GoblinWear</li>
 			<li>Neolithic</li>
 			<li>Tribal</li>
@@ -606,6 +624,8 @@
 				<li>Royal</li>
 				<li>RoyalTier1</li>
 				<li>RoyalTier2</li>
+				<li>MF_CorporateTier1</li>
+				<li>MF_CorporateTier2</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -672,6 +692,8 @@
         <li>CallOfCthulhu_Townsfolk</li>
         <li>JeubWear</li>
         <li>GoblinWear</li>
+		<li>MF_CorporateTier1</li>
+		<li>MF_CorporateTier2</li>
       </value>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
@@ -709,6 +731,8 @@
         <li>OniHeadWear</li>
         <li>JeubWear</li>
         <li>GoblinWear</li>
+		<li>MF_CorporateTier1</li>
+		<li>MF_CorporateTier2</li>
       </value>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
@@ -757,4 +781,125 @@
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
+  
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="CGHighWaistSkirt"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="CGHighWaistSkirt"]/apparel/tags</xpath>
+			<value>
+				<li>Skirt</li>
+				<li>IndustrialBasic</li>
+				<li>IndustrialDecent</li>
+				<li>IndustrialAdvanced</li>
+				<li>Outlander</li>
+				<li>MedievalNoble</li>
+				<li>ST_GnomeClothing</li>
+				<li>RichPirate</li>
+				<li>JeubWear</li>
+				<li>JeubKing</li>
+				<li>ST_BeetClothing</li>
+				<li>GoblinWear</li>
+				<li>CallOfCthulhu_Townsfolk</li>
+				<li>OniWear</li>
+				<li>RWPGentlemanWear</li>
+				<li>CallOfCthulhu_TownsfolkNurse</li>
+				<li>Usa</li>
+				<li>klan</li>
+				<li>president</li>
+				<li>mafia</li>
+				<li>mafia_tete</li>
+				<li>WeebClothes</li>
+				<li>WeebGirl</li>
+				<li>WeebPants</li>
+				<li>Royal</li>
+				<li>RoyalTier1</li>
+				<li>RoyalTier2</li>
+				<li>MF_CorporateTier1</li>
+				<li>MF_CorporateTier2</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="CG_Sneakers"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="CG_Sneakers"]/apparel/tags</xpath>
+			<value>
+				<li>IndustrialBasic</li>
+				<li>IndustrialDecent</li>
+				<li>IndustrialAdvanced</li>
+				<li>Outlander</li>
+				<li>ST_GnomeClothing</li>
+				<li>PoorPirate</li>
+				<li>JeubWear</li>
+				<li>ST_BeetClothing</li>
+				<li>BeetWear</li>
+				<li>GoblinWear</li>
+				<li>FrogmanWear</li>
+				<li>CallOfCthulhu_Thug</li>
+				<li>SK_Khan_Apparel_Tag</li>
+				<li>Usa</li>
+				<li>klan</li>
+				<li>president</li>
+				<li>mafia</li>
+				<li>mafia_tete</li>
+				<li>WeebClothes</li>
+				<li>WeebGirl</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Apparel_CowboyHat"]/apparel/tags</xpath>
+    <value>
+      <li>RWPWesternWear</li>
+      <li>RWPBanditWear</li>
+      <li>RWPMarshalWear</li>
+	  <li>SurvivalistWear</li>
+	  <li>CaravaneerWear</li>
+	  <li>HarrierWear</li>
+	  <li>SlaveRatWear</li>
+	  <li>JeubWear</li>
+    </value>
+  </Operation>
+  
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Gunmar_Apparel_SimpleDress"]/apparel/tags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Gunmar_Apparel_SimpleDress"]/apparel/tags</xpath>
+			<value>
+				<li>Usa</li>
+				<li>CallOfCthulhu_Townsfolk</li>
+				<li>RWPWesternWear</li>
+				<li>RWPMarshalWear</li>
+				<li>IndustrialBasic</li>
+				<li>Medieval</li>
+				<li>MedievalApparel</li>
+				<li>MedievalApparelBasic</li>
+				<li>MedievalApparelPeasant</li>
+				<li>CallOfCthulhu_Detective</li>
+				<li>Outlander</li>
+				<li>mafia</li>
+				<li>mafia_tete</li>
+				<li>HippieBasic</li>
+				<li>JeubWear</li>
+				<li>ST_GnomeClothing</li>
+				<li>FrogmanWear</li>
+				<li>GoblinWear</li>
+				<li>MF_CorporateTier1</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
 </Patch>

@@ -28,4 +28,32 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingCategoryDef[defName="WVC_MetalResources_Raw"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingCategoryDef[defName="WVC_Tweaks_MetalResources_Raw"]/parent</xpath>
+			<value>
+				<parent>WVC_MetalResources_Raw</parent>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingCategoryDef[defName="WVC_Tweaks_MetalResources_Raw"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingCategoryDef[defName="ST_Alloys"]/parent</xpath>
+			<value>
+				<parent>WVC_Tweaks_MetalResources_Raw</parent>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>
