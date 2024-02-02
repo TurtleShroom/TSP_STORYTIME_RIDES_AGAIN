@@ -4,6 +4,7 @@
   <PawnKindDef Abstract="True" Name="BaseGoblinKind">
     <race>Alien_ST_Goblin</race>
     <combatPower>30</combatPower>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 	<backstoryFiltersOverride>
 	  <li>
 		<categories>
@@ -492,7 +493,7 @@
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
-		<modExtensions>
+		<modExtensions Inherit="False">
 			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
 				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
 					<li MayRequire="rimofmadness.callofcthulhu.factions,ludeon.rimworld.biotech">

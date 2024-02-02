@@ -16,6 +16,21 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
     </Operation>
 	
+	<!-- Keeps Pawns from seeking this out. -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Sloodge"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>Sloodge</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
 	<!--
 	<Operation Class="PatchOperationConditional">
 	Does this exist?

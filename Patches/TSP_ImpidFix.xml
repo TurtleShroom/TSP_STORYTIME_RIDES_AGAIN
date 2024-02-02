@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName="Tribal_Archer_Fire"]/requiredWorkTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Tribal_Archer_Fire"]</xpath>
+			<success>Always</success>
+			<value>
+				<requiredWorkTags Inherit="False"></requiredWorkTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName="Tribal_Hunter_Fire"]/requiredWorkTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Tribal_Hunter_Fire"]</xpath>
+			<success>Always</success>
+			<value>
+				<requiredWorkTags Inherit="False"></requiredWorkTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName="Tribal_Warrior_Fire"]/requiredWorkTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Tribal_Warrior_Fire"]</xpath>
+			<success>Always</success>
+			<value>
+				<requiredWorkTags Inherit="False"></requiredWorkTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName="Tribal_Penitent_Fire"]/requiredWorkTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Tribal_Penitent_Fire"]</xpath>
+			<success>Always</success>
+			<value>
+				<requiredWorkTags Inherit="False"></requiredWorkTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName="Tribal_Child_Fire"]/requiredWorkTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Tribal_Child_Fire"]</xpath>
+			<success>Always</success>
+			<value>
+				<requiredWorkTags Inherit="False"></requiredWorkTags>
+			</value>
+		</nomatch>
+	</Operation>
+</Patch>

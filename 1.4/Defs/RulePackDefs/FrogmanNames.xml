@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<Defs>
 	<RulePackDef>
 		<defName>FrogPersonMaleName</defName>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[MaleList] [FamilyList]</li>
+				<li>name->[Frog_MaleList] [FrogMale_FamilyList]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
-					<keyword>MaleList</keyword>
+					<keyword>Frog_MaleList</keyword>
 					<path>FrogPersonNames/FrogPersonMale</path>
 				</li>
 				<li Class="Rule_File">
-					<keyword>FamilyList</keyword>
+					<keyword>FrogMale_FamilyList</keyword>
 					<path>FrogPersonNames/FrogPersonLastNames</path>
 				</li>
 			</rulesRaw>
@@ -24,15 +24,15 @@
 		<defName>FrogPersonFemaleName</defName>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[FemaleList] [FamilyList]</li>
+				<li>name->[Frog_FemaleList] [FrogFemale_FamilyList]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
-					<keyword>FemaleList</keyword>
+					<keyword>Frog_FemaleList</keyword>
 					<path>FrogPersonNames/FrogPersonFemale</path>
 				</li>
 				<li Class="Rule_File">
-					<keyword>FamilyList</keyword>
+					<keyword>FrogFemale_FamilyList</keyword>
 					<path>FrogPersonNames/FrogPersonLastNames</path>
 				</li>
 			</rulesRaw>
@@ -43,11 +43,11 @@
     <defName>FrogPersonSettlementName</defName>
     <rulePack>
       <rulesStrings>
-        <li>name-&gt;[pack]</li>
+        <li>name-&gt;[FrogTownPack]</li>
       </rulesStrings>
       <rulesRaw>
         <li Class="Rule_File">
-          <keyword>pack</keyword>
+          <keyword>FrogTownPack</keyword>
           <path>FrogPersonNames/FrogPersonSettlement</path>
         </li>
       </rulesRaw>
