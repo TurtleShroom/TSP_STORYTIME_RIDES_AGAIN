@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<TraderKindDef>
+		<defName>WW_Caravan_Outlander_Drugdealer</defName>
+		<label>drug dealer</label>
+		<stockGenerators>
+			<!-- Resources -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>5000~12000</countRange>
+			</li>
+
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>13~23</countRange>
+			</li>
+
+			<!-- Drugs -->
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+				<thingDefCountRange>20~30</thingDefCountRange>
+				<totalPriceRange>400~1000</totalPriceRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Highwing</thingDef>
+				<countRange>13~23</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>HeavenDust</thingDef>
+				<countRange>13~23</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Diagen</thingDef>
+				<countRange>13~23</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Dragonal</thingDef>
+				<countRange>7~13</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>BotoxFruit</thingDef>
+				<countRange>17~23</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>BotoxPowder</thingDef>
+				<countRange>7~13</countRange>
+			</li>
+
+			<!-- Apparel -->
+			<li Class="StockGenerator_MarketValue">
+				<tradeTag>Clothing</tradeTag>
+				<countRange>3~6</countRange>
+			</li>
+
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ST_Lime</thingDef>
+				<countRange>33~73</countRange>
+			</li>
+
+			<!-- Implants -->
+			<!-- none -->
+
+			<!-- Buildings -->
+			<!-- none -->
+
+			<!-- Exotic -->
+			<!-- none -->
+
+			<!-- Slaves -->
+			<!-- none -->
+
+			<!-- Animals -->
+			<!-- none -->
+
+			<!-- Buying -->
+			<li Class="StockGenerator_BuyExpensiveSimple" />
+			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+		</stockGenerators>
+	</TraderKindDef>
+
+	<!--======================================================================================-->
+</Defs>
