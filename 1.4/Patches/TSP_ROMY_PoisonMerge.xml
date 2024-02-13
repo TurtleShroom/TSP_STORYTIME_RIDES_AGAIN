@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="ST_PoisonExtract"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOO!! -->
+		<match Class="PatchOperationSequence"> 
+			<operations>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/TraderKindDef/stockGenerators/li[thingDef="Romy_Toxin"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/TraderKindDef/stockGenerators/li[thingDef="Romy_Toxin"]</xpath>
+				</li>
+				<!--
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="Romy_Toxin"]</xpath>
+				</li>
+				-->
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Romy_Toxin"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/TraderKindDef/stockGenerators/li[thingDef="Romy_Toxin"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/*/li[text()="Romy_Toxin"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/*/li[text()="Romy_Toxin"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef//li[text()="Romy_Toxin"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef//li[text()="Romy_Toxin"]</xpath>
+				</li>
+				<li Class="PatchOperationReplace" MayRequire="TSP.Isengriff.Storytime">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/costList/Romy_Toxin</xpath>
+					<value>
+						<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">25</ST_PoisonExtract>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace" MayRequire="TSP.Isengriff.Storytime">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/products/Romy_Toxin</xpath>
+					<value>
+						<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">25</ST_PoisonExtract>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace" MayRequire="TSP.Isengriff.Storytime">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Romy_ToxinProductionToxipod"]/products/Romy_Toxin</xpath>
+					<value>
+						<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">15</ST_PoisonExtract>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace" MayRequire="TSP.Isengriff.Storytime">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]/products/Romy_Toxin</xpath>
+					<value>
+						<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">10</ST_PoisonExtract>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace" MayRequire="TSP.Isengriff.Storytime">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]/products/Romy_Toxin</xpath>
+					<value>
+						<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">5</ST_PoisonExtract>
+					</value>
+				</li>
+				<!--
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="Romy_Toxin"]</xpath>
+				</li>
+				-->
+				<li Class="PatchOperationReplace" MayRequire="TSP.Isengriff.Storytime">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="Romy_Toxin"]</xpath>
+					<value>
+						<ThingDef ParentName="BaseFilth" MayRequire="TSP.Isengriff.Storytime">
+							<defName>Romy_Toxin</defName>
+							<label>Romy Toxin (ERROR)</label>
+							<description>If you see this in the game, please notify TurtleShroom. You are not supposed to see this.</description>
+							<graphicData>
+								<texPath>Things/Item/Resource/Toxin</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+								<color>(255,255,255)</color>
+							</graphicData>
+							<!--
+							<soundInteract>Metal_Drop</soundInteract>
+							<soundDrop>Metal_Drop</soundDrop>
+							-->
+							<filth>
+								<cleaningSound>Metal_Drop</cleaningSound>
+							</filth>
+							<statBases>
+								<Flammability>0</Flammability>
+								<Beauty>1</Beauty>
+								<Cleanliness>0</Cleanliness>
+							</statBases>
+							<selectable Inherit="False">true</selectable>
+							<tradeability>None</tradeability>
+							<useHitPoints>false</useHitPoints>
+						</ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+</Patch>

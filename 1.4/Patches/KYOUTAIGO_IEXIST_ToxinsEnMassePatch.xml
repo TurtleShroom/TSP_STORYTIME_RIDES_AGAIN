@@ -36,168 +36,8 @@
 						<!-- <li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li> -->
 					</value>
 				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Romy_Toxin"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
-					</value>
-				</li>
 			</operations>
 		</match>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="ST_PoisonExtract"]</xpath>
-		<!-- If it does, LET'S FASTING GOOOOOOOO!! -->
-		<match Class="PatchOperationSequence"> 
-			<operations>
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/TraderKindDef/stockGenerators/li[thingDef="Romy_Toxin"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/TraderKindDef/stockGenerators/li[thingDef="Romy_Toxin"]</xpath>
-				</li>
-				<!--
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="Romy_Toxin"]</xpath>
-				</li>
-				-->
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Romy_Toxin"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/TraderKindDef/stockGenerators/li[thingDef="Romy_Toxin"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/*/li[text()="Romy_Toxin"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/*/li[text()="Romy_Toxin"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/ThingDef//li[text()="Romy_Toxin"]</xpath>
-				</li>
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/RecipeDef//li[text()="Romy_Toxin"]</xpath>
-				</li>
-				<li Class="PatchOperationReplace">
-					<success>Always</success>
-					<xpath>/Defs/RecipeDef/costList/Romy_Toxin</xpath>
-					<value>
-						<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">25</ST_PoisonExtract>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<success>Always</success>
-					<xpath>/Defs/RecipeDef/products/Romy_Toxin</xpath>
-					<value>
-						<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">25</ST_PoisonExtract>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Romy_ToxinProductionToxipod"]/products/Romy_Toxin</xpath>
-					<value>
-						<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">15</ST_PoisonExtract>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]/products/Romy_Toxin</xpath>
-					<value>
-						<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">25</ST_PoisonExtract>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]/products/Romy_Toxin</xpath>
-					<value>
-						<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">5</ST_PoisonExtract>
-					</value>
-				</li>
-				<!--
-				<li Class="PatchOperationRemove">
-					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="Romy_Toxin"]</xpath>
-				</li>
-				-->
-				<li Class="PatchOperationReplace" MayRequire="TSP.Isengriff.Storytime">
-					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="Romy_Toxin"]</xpath>
-					<value>
-						<ThingDef ParentName="BaseFilth" MayRequire="TSP.Isengriff.Storytime">
-							<defName>Romy_Toxin</defName>
-							<label>Romy Toxin (ERROR)</label>
-							<description>If you see this in the game, please notify TurtleShroom. You are not supposed to see this.</description>
-							<graphicData>
-								<texPath>Things/Item/Resource/Toxin</texPath>
-								<graphicClass>Graphic_StackCount</graphicClass>
-								<color>(255,255,255)</color>
-							</graphicData>
-							<!--
-							<soundInteract>Metal_Drop</soundInteract>
-							<soundDrop>Metal_Drop</soundDrop>
-							-->
-							<filth>
-								<cleaningSound>Metal_Drop</cleaningSound>
-							</filth>
-							<statBases>
-								<Flammability>0</Flammability>
-								<Beauty>1</Beauty>
-								<Cleanliness>0</Cleanliness>
-							</statBases>
-							<selectable Inherit="False">true</selectable>
-							<tradeability>None</tradeability>
-							<useHitPoints>false</useHitPoints>
-						</ThingDef>
-					</value>
-				</li>
-			</operations>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
@@ -243,6 +83,8 @@
 			<value>
 				<researchPrerequisites>
 					<li>Machining</li>
+					<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ComplexRecycling</li>
 				</researchPrerequisites>
 			</value>
 		</match>
@@ -258,7 +100,7 @@
 			<xpath MayRequire="romyashi.toxins">/Defs/RecipeDef[defName="Romy_ToxinProductionToxipod"]/researchPrerequisite</xpath>
 			<value MayRequire="romyashi.toxins">
 				<researchPrerequisites>
-					<!-- <li>Machining</li> -->
+					<li>Machining</li>
 					<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
 				</researchPrerequisites>
 			</value>
@@ -314,15 +156,15 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="romyashi.toxins">
 	<!-- Does this exist? -->
-	<xpath MayRequire="romyashi.toxins">/Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
+	<xpath MayRequire="romyashi.toxins">/Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace" MayRequire="romyashi.toxins">
 			<success MayRequire="romyashi.toxins">Always</success>
 			<xpath MayRequire="romyashi.toxins">/Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites Inherit="False">
-					<li>Machining</li>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li>ToxGas</li>
+					<!-- <li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li> -->
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ComplexRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -351,11 +193,11 @@
 			<xpath>/Defs/ThingDef[defName="Toxalope"]/comps</xpath>
 			<value>
 				<comps Inherit="False">
-					<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
-						<resourceDef>ST_PoisonExtract</resourceDef>
-						<gatheringIntervalDays>1</gatheringIntervalDays>
-						<resourceAmount>3</resourceAmount>
-						<customResourceString>PoisonGather</customResourceString>
+					<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="TSP.Isengriff.Storytime">
+						<resourceDef MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</resourceDef>
+						<gatheringIntervalDays MayRequire="TSP.Isengriff.Storytime">1</gatheringIntervalDays>
+						<resourceAmount MayRequire="TSP.Isengriff.Storytime">3</resourceAmount>
+						<customResourceString MayRequire="TSP.Isengriff.Storytime">PoisonGather</customResourceString>
 					</li>
 				</comps>
 			</value>
@@ -395,38 +237,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]</xpath>
-		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationReplace">
-			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/costList</xpath>
-			<value>
-				<costStuffCount Inherit="False">15</costStuffCount>
-				<stuffCategories>
-					<li>Metallic</li>
-
-					<!-- Mod support -->
-					<li MayRequire="TaosChagic.Igloo">Snowy</li>
-					<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-					<li MayRequire="Dubwise.Rimefeller">Composite</li>
-					<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-					<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-					<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-					<li MayRequire="sarg.rimbees">RB_Waxy</li>
-					<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-				</stuffCategories>
-				<costList>
-					<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">4</ST_PoisonExtract>
-					<ComponentIndustrial>1</ComponentIndustrial>
-				</costList>
-			</value>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]</xpath>
+	<xpath>/Defs/ThingDef[defName="ST_PoisonExtract"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
@@ -480,38 +291,6 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Shell_Toxic"]/costList</xpath>
-		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationReplace">
-			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Shell_Toxic"]/costList</xpath>
-			<value>
-				<costStuffCount Inherit="False">15</costStuffCount>
-				<stuffCategories>
-					<li>Metallic</li>
-
-					<!-- Mod support -->
-					<li MayRequire="TaosChagic.Igloo">Snowy</li>
-					<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-					<li MayRequire="Dubwise.Rimefeller">Composite</li>
-					<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-					<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-					<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-					<li MayRequire="sarg.rimbees">RB_Waxy</li>
-					<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-				</stuffCategories>
-				<costList>
-					<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">25</ST_PoisonExtract>
-					<Chemfuel>5</Chemfuel>
-					<ComponentIndustrial>1</ComponentIndustrial>
-				</costList>
-			</value>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
 	<xpath>/Defs/ThingDef[defName="Gun_ToxbombLauncher"]/recipeMaker</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
@@ -543,34 +322,6 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Gun_ToxbombLauncher"]/costList</xpath>
-		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationReplace">
-			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Gun_ToxbombLauncher"]/costList</xpath>
-			<value>
-				<costStuffCount Inherit="False">75</costStuffCount>
-				<stuffCategories>
-					<li>Metallic</li>
-
-					<!-- Mod support -->
-					<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-					<li MayRequire="Dubwise.Rimefeller">Composite</li>
-					<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-					<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-					<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-					<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-				</stuffCategories>
-				<costList>
-					<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">25</ST_PoisonExtract>
-				</costList>
-			</value>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
 	<xpath>/Defs/ThingDef[defName="Weapon_GrenadeTox"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
@@ -586,52 +337,6 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<!-- Shamelessly taken from the original Toxin Mod -->
-	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=3007282113 -->
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]</xpath>
-		<match Class="PatchOperationSequence">
-			<operations>
-				<li Class="PatchOperationReplace">
-					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]/recipeMaker</xpath>
-					<value>
-						<recipeMaker>
-							<researchPrerequisites>
-								<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
-							</researchPrerequisites>
-						</recipeMaker>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">75</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">30</ST_PoisonExtract>
-							<ComponentIndustrial>3</ComponentIndustrial>
-							<Chemfuel>40</Chemfuel>
-						</costList>
-					</value>
-				</li>
-			</operations>
-		</match>
-	</Operation>
-	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="pphhyy_ToxPumpShotgun"]/smeltable</xpath>
@@ -645,317 +350,6 @@
 		</nomatch>
 	</Operation>
 				
-	<!-- Shamelessly taken from the original Toxin Mod -->
-	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=3007282113 -->
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="pphhyy_ToxPumpShotgun"]</xpath>
-		<match Class="PatchOperationSequence">
-			<operations>
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_ToxPumpShotgun"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">75</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">30</ST_PoisonExtract>
-							<ComponentIndustrial>3</ComponentIndustrial>
-						</costList>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Tox_Minigun"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">150</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_NightFrog_Venom MayRequire="TSP.Isengriff.Storytime">50</ST_NightFrog_Venom>
-							<ComponentIndustrial>7</ComponentIndustrial>
-						</costList>		
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Tox_BoltActionRifle"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">75</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">30</ST_PoisonExtract>
-							<ComponentIndustrial>1</ComponentIndustrial>
-						</costList>	
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Tox_ChargeLance"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">300</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_NightFrog_Venom MayRequire="TSP.Isengriff.Storytime">20</ST_NightFrog_Venom>
-							<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">100</ST_PoisonExtract>
-							<ComponentIndustrial>3</ComponentIndustrial>
-							<ComponentSpacer>3</ComponentSpacer>
-						</costList>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Tox_Revolver"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">10</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">10</ST_PoisonExtract>
-							<ComponentIndustrial>1</ComponentIndustrial>
-						</costList>			
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Weapon_ToxLongSword"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">75</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_GoblinPoison MayRequire="TSP.Isengriff.Storytime">25</ST_GoblinPoison>
-						</costList>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Weapon_Toxhammer"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">75</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_GoblinPoison MayRequire="TSP.Isengriff.Storytime">25</ST_GoblinPoison>
-						</costList>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Weapon_ToxSpear"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">20</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-							<li>Stony</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_GoblinPoison MayRequire="TSP.Isengriff.Storytime">5</ST_GoblinPoison>
-						</costList>				
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Tox_AdvancedRevolver"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">45</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_GoblinPoison MayRequire="TSP.Isengriff.Storytime">3</ST_GoblinPoison>
-						</costList>			
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Tox_AdvancedMinigun"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">400</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_NightFrog_Venom MayRequire="TSP.Isengriff.Storytime">30</ST_NightFrog_Venom>
-							<ComponentSpacer>1</ComponentSpacer>
-							<ComponentIndustrial>20</ComponentIndustrial>
-						</costList>		
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Tox_AdvancedBoltActionRifle"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">75</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_GoblinPoison MayRequire="TSP.Isengriff.Storytime">10</ST_GoblinPoison>
-							<ComponentIndustrial>2</ComponentIndustrial>
-						</costList>			
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-				<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_AdvancedToxPumpShotgun"]/costList</xpath>
-					<value>
-						<costStuffCount Inherit="False">80</costStuffCount>
-						<stuffCategories>
-							<li>Metallic</li>
-
-							<!-- Mod support -->
-							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-							<li MayRequire="Dubwise.Rimefeller">Composite</li>
-							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-							<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-						</stuffCategories>
-						<costList>
-							<ST_GoblinPoison MayRequire="TSP.Isengriff.Storytime">10</ST_GoblinPoison>
-							<ComponentIndustrial>2</ComponentIndustrial>
-						</costList>				
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]/apparel/tags</xpath>
-					<value>
-						<li>GoblinPoison_Backpack</li>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName ="pphhyy_ToxPumpShotgun" or defName = "pphhyy_Tox_BoltActionRifle" or defName = "pphhyy_Tox_Revolver" or defName = "pphhyy_Weapon_ToxLongSword" or defName = "pphhyy_Weapon_Toxhammer" or defName = "pphhyy_Weapon_ToxSpear" or defName = "pphhyy_Tox_AdvancedRevolver" or defName = "pphhyy_Tox_AdvancedBoltActionRifle" or defName = "pphhyy_AdvancedToxPumpShotgun"]/recipeMaker</xpath>
-					<value>
-						<recipeMaker>
-							<researchPrerequisites>
-								<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
-							</researchPrerequisites>
-						</recipeMaker>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName ="pphhyy_ToxPumpShotgun" or defName = "pphhyy_Tox_BoltActionRifle" or defName = "pphhyy_Tox_Revolver" or defName = "pphhyy_Weapon_ToxLongSword" or defName = "pphhyy_Weapon_Toxhammer" or defName = "pphhyy_Weapon_ToxSpear" or defName = "pphhyy_Tox_AdvancedRevolver" or defName = "pphhyy_Tox_AdvancedBoltActionRifle" or defName = "pphhyy_AdvancedToxPumpShotgun"]/smeltable</xpath>
-					<value>
-						<smeltable>false</smeltable>
-					</value>
-				</li>
-			</operations>
-		</match>
-	</Operation>
-	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
 	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/recipeMaker</xpath>
@@ -1207,6 +601,9 @@
 							<thingDefs>
 								<li>Wastepack</li>
 							</thingDefs>
+							<disallowedThingDefs>
+								<li>WasteCanister</li>
+							</disallowedThingDefs>
 						</filter>
 						<count>1</count>
 					</li>
@@ -1225,6 +622,9 @@
 								<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Tin</li>
 								<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Bronze</li>
 							</thingDefs>
+							<disallowedThingDefs>
+								<li>WasteCanister</li>
+							</disallowedThingDefs>
 						</filter>
 						<count>5</count>
 					</li>
@@ -1244,6 +644,18 @@
 			<success>Always</success>
 			<value>
 				<defaultIngredientFilter></defaultIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/researchPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites></researchPrerequisites>
 			</value>
 		</nomatch>
 	</Operation>
@@ -1271,6 +683,9 @@
 						<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Tin</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Bronze</li>
 					</thingDefs>
+					<disallowedThingDefs>
+						<li>WasteCanister</li>
+					</disallowedThingDefs>
 				</fixedIngredientFilter>
 			</value>
 		</match>
@@ -1295,6 +710,9 @@
 						<li MayRequire="tsp.isengriff.bronzecoppertin_split">ST_Bronze</li>
 						-->
 					</thingDefs>
+					<disallowedThingDefs>
+						<li>WasteCanister</li>
+					</disallowedThingDefs>
 				</defaultIngredientFilter>
 			</value>
 		</match>
@@ -1320,15 +738,15 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/skillRequirements</xpath>
+	<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/skillRequirements</xpath>
+			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/researchPrerequisites</xpath>
 			<value>
-				<skillRequirements>
-					<Crafting>1</Crafting>
-				</skillRequirements>
+				<researchPrerequisites Inherit="False">
+					<li>WasteContainment</li>
+				</researchPrerequisites>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -1389,7 +807,7 @@
 				<costList>
 					<ElTwoFour_Mutate>40</ElTwoFour_Mutate>
 					<ElTwoFour_MantoComponent>1</ElTwoFour_MantoComponent>
-					<ST_PoisonExtract>40</ST_PoisonExtract>
+					<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">40</ST_PoisonExtract>
 				</costList>
 			</value>
 		</match>
@@ -1432,7 +850,7 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<Operation Class="PatchOperationConditional">
+	<Operation Class="PatchOperationConditional" MayRequire="TSP.Isengriff.Storytime">
 	<!-- Does this exist? -->
 	<xpath>/Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]</xpath>
 		<!-- If it does, add this. -->
@@ -1440,13 +858,13 @@
 			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/ingredients</xpath>
 			<value>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>ST_PoisonExtract</li>
+				<li MayRequire="TSP.Isengriff.Storytime">
+					<filter MayRequire="TSP.Isengriff.Storytime">
+						<thingDefs MayRequire="TSP.Isengriff.Storytime">
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 						</thingDefs>
 					</filter>
-					<count>25</count>
+					<count MayRequire="TSP.Isengriff.Storytime">25</count>
 				</li>
 			</value>
 		</match>
@@ -1461,7 +879,7 @@
 			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/fixedIngredientFilter/thingDefs</xpath>
 			<value>
-				<li>ST_PoisonExtract</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -1484,7 +902,7 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<Operation Class="PatchOperationConditional">
+	<Operation Class="PatchOperationConditional" MayRequire="TSP.Isengriff.Storytime">
 	<!-- Does this exist? -->
 	<xpath>/Defs/RecipeDef[defName="Mech_ToxCentipede"]</xpath>
 		<!-- If it does, add this. -->
@@ -1492,13 +910,13 @@
 			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="Mech_ToxCentipede"]/ingredients</xpath>
 			<value>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>ST_PoisonExtract</li>
+				<li MayRequire="TSP.Isengriff.Storytime">
+					<filter MayRequire="TSP.Isengriff.Storytime">
+						<thingDefs MayRequire="TSP.Isengriff.Storytime">
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 						</thingDefs>
 					</filter>
-					<count>75</count>
+					<count MayRequire="TSP.Isengriff.Storytime">75</count>
 				</li>
 			</value>
 		</match>
@@ -1513,7 +931,7 @@
 			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="Mech_ToxCentipede"]/fixedIngredientFilter/thingDefs</xpath>
 			<value>
-				<li>ST_PoisonExtract</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -1536,7 +954,7 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<Operation Class="PatchOperationConditional">
+	<Operation Class="PatchOperationConditional" MayRequire="TSP.Isengriff.Storytime">
 	<!-- Does this exist? -->
 	<xpath>/Defs/RecipeDef[defName="Mech_Infector"]</xpath>
 		<!-- If it does, add this. -->
@@ -1544,13 +962,13 @@
 			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="Mech_Infector"]/ingredients</xpath>
 			<value>
-				<li>
-					<filter>
-						<thingDefs>
-							<li>ST_PoisonExtract</li>
+				<li MayRequire="TSP.Isengriff.Storytime">
+					<filter MayRequire="TSP.Isengriff.Storytime">
+						<thingDefs MayRequire="TSP.Isengriff.Storytime">
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 						</thingDefs>
 					</filter>
-					<count>40</count>
+					<count MayRequire="TSP.Isengriff.Storytime">40</count>
 				</li>
 			</value>
 		</match>
@@ -1565,7 +983,7 @@
 			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="Mech_Infector"]/fixedIngredientFilter/thingDefs</xpath>
 			<value>
-				<li>ST_PoisonExtract</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -1599,7 +1017,7 @@
 				<costList>
 					<Steel>20</Steel>
 					<ComponentIndustrial>12</ComponentIndustrial>
-					<ST_PoisonExtract>30</ST_PoisonExtract>
+					<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">30</ST_PoisonExtract>
 				</costList>
 			</value>
 		</match>
@@ -1617,7 +1035,7 @@
 				<costList>
 					<Steel>9</Steel>
 					<ComponentIndustrial>5</ComponentIndustrial>
-					<ST_PoisonExtract>20</ST_PoisonExtract>
+					<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">20</ST_PoisonExtract>
 				</costList>
 			</value>
 		</match>
@@ -1710,7 +1128,7 @@
 					<li Class="CompProperties_GasOnDamage">
 						<type>ToxGas</type>
 						<damageFactor>6</damageFactor>
-						<useStackCountAsFactor>true</useStackCountAsFactor>
+						<useStackCountAsFactor>false</useStackCountAsFactor>
 					</li>
 					<li Class="CompProperties_Refuelable">
 						<fuelConsumptionRate>0.0001</fuelConsumptionRate>
@@ -1725,24 +1143,28 @@
 								<li MayRequire="dubwise.dubsbadhygiene">FecalSludge</li>
 								<li MayRequire="vanillaexpanded.recycling">VRecyclingE_VolatileToxpack</li>
 								<li MayRequire="vanillaexpanded.recycling">VRecyclingE_Trash</li>
+								<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RadioactiveIsotopack</li>
+								<li MayRequire="vanillaexpanded.recycling">VRecyclingE_StabilizedAlloypack</li>
+								<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ReactiveChempack</li>
+								<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ReclaimedBiopack</li>
 							</thingDefs>
 						</fuelFilter>
 						<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-						<initialConfigurableTargetFuelLevel>50</initialConfigurableTargetFuelLevel>
+						<initialConfigurableTargetFuelLevel>200</initialConfigurableTargetFuelLevel>
 						<autoRefuelPercent>100</autoRefuelPercent>
 						<drawFuelGaugeInMap>true</drawFuelGaugeInMap>
 						<showFuelGizmo>true</showFuelGizmo>
 						<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
 					</li>
 					<li Class="CompProperties_Explosive">
-						<explosiveRadius>0</explosiveRadius>
+						<explosiveRadius>2</explosiveRadius>
 						<explosiveExpandPerFuel>0.75</explosiveExpandPerFuel>
 						<explosiveDamageType>Flame</explosiveDamageType>
-						<destroyThingOnExplosionSize>0</destroyThingOnExplosionSize>
-						<startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+						<destroyThingOnExplosionSize>3</destroyThingOnExplosionSize>
+						<startWickHitPointsPercent>0.07</startWickHitPointsPercent>
 						<preExplosionSpawnThingDef>Wastepack</preExplosionSpawnThingDef>
-						<preExplosionSpawnChance>0.5</preExplosionSpawnChance>
-						<wickTicks>150~300</wickTicks>
+						<preExplosionSpawnChance>0.99</preExplosionSpawnChance>
+						<wickTicks>1500~3000</wickTicks>
 						</li>
 					<li>
 						<compClass>CompDissolutionEffect_Goodwill</compClass>
@@ -1823,7 +1245,7 @@
 					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Wastepack"]</xpath>
 					<success>Always</success>
 					<value>
-						<li>WasteCanister</li>
+						<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
@@ -1858,7 +1280,7 @@
 			<xpath>/Defs/ResearchProjectDef[defName="WasteUtility"]/prerequisites</xpath>
 			<value>
 				<prerequisites>
-					<li>ToxifierGenerator</li>
+					<li MayRequire="ludeon.rimworld.biotech">ToxifierGenerator</li>
 					<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
 				</prerequisites>
 			</value>
@@ -1898,6 +1320,23 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
+	<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
+			<value>
+				<prerequisites>
+					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li>Machining</li>
+				</prerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ComplexRecycling"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
@@ -1907,7 +1346,7 @@
 				<prerequisites>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 					<li MayRequire="bazel.toxgenplus.2">WasteUtility</li>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<!-- <li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li> -->
 					<!-- <li MayRequire="ludeon.rimworld.biotech">ToxGas</li> -->
 					<!-- <li>Electricity</li> -->
 				</prerequisites>
@@ -2014,7 +1453,7 @@
 			<value MayRequire="inertialmage.toxicplants">
 				<sowResearchPrerequisites>
 					<li>ToxGas</li>
-					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
+					<!-- <li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li> -->
 				</sowResearchPrerequisites>
 			</value>
 		</match>
@@ -2027,12 +1466,297 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace" MayRequire="inertialmage.toxicplants">
 			<success MayRequire="inertialmage.toxicplants">Always</success>
-			<xpath MayRequire="inertialmage.toxicplants">/Defs/ThingDef[defName="Plant_ToxiRoot"]/plant/sowResearchPrerequisites</xpath>
+			<xpath MayRequire="inertialmage.toxicplants">/Defs/ThingDef[defName="Plant_BloodRose"]/plant/sowResearchPrerequisites</xpath>
 			<value MayRequire="inertialmage.toxicplants">
 				<sowResearchPrerequisites>
 					<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
 					<li MayRequire="ludeon.rimworld.biotech">Deathrest</li>
 				</sowResearchPrerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Wastepack"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Wastepack"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_Trash"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VRecyclingE_Trash"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_RadioactiveIsotopack"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VRecyclingE_RadioactiveIsotopack"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_VolatileToxpack"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VRecyclingE_VolatileToxpack"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_StabilizedAlloypack"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VRecyclingE_StabilizedAlloypack"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VRecyclingE_ReactiveChempack"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_ReclaimedBiopack"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VRecyclingE_ReclaimedBiopack"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_StabilizedAlloypack"]/tradeTags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_StabilizedAlloypack"]/tradeTags</xpath>
+			<value>
+				<li>VFERC_Orbital_Factory</li>
+				<li>VFERC_All</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_RadioactiveIsotopack"]/tradeTags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_RadioactiveIsotopack"]/tradeTags</xpath>
+			<value>
+				<li>VFERC_NuclearWaste</li>
+				<li>VFERC_All</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReclaimedBiopack"]/tradeTags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReclaimedBiopack"]/tradeTags</xpath>
+			<value>
+				<li>VFERC_Agriculture</li>
+				<li>VFERC_All</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
+			<value>
+				<li>VFERC_Agriculture</li>
+				<li>VFERC_All</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
+			<value>
+				<li>VFERC_Orbital_Factory</li>
+				<li>VFERC_All</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_VolatileToxpack"]/tradeTags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_VolatileToxpack"]/tradeTags</xpath>
+			<value>
+				<li>VFERC_All</li>
+				<li>VFERC_NuclearWaste</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>VFERC_Orbital_Factory</tag>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>VFERC_Orbital_Factory</tag>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/TraderKindDef[defName="Orbital_Rimatomics"]/stockGenerators</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Orbital_Rimatomics"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_SingleDef" MayRequire="vanillaexpanded.recycling">
+					<thingDef MayRequire="vanillaexpanded.recycling">VRecyclingE_RadioactiveIsotopack</thingDef>
+					<countRange MayRequire="vanillaexpanded.recycling">
+						<min MayRequire="vanillaexpanded.recycling">10000</min>
+						<max MayRequire="vanillaexpanded.recycling">30000</max>
+					</countRange>
+				</li>
+			
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>VFERC_Orbital_Factory</tag>
+				</li>
+				
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>VFERC_NuclearWaste</tag>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/TraderKindDef[defName="Orbital_Farming"]/stockGenerators</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Orbital_Farming"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>VFERC_Agriculture</tag>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/TraderKindDef[defName="Orbital_Scrap"]/stockGenerators</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Orbital_Scrap"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>VFERC_All</tag>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BreadMo_NutrientDispenser"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BreadMo_NutrientDispenser"]/comps/li/fuelFilter/thingDefs</xpath>
+			<value>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_Trash</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
+				<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
+				<li MayRequire="dubwise.dubsbadhygiene">BedPan</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

@@ -1,6 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[defName="HAR_nebulaM87Race_P_Faction"]/allowedCultures</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="HAR_nebulaM87Race_P_Faction"]</xpath>
+			<success>Always</success>
+			<value>
+				<allowedCultures></allowedCultures>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_KindBase"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_KindBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_Player"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_Player"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_KindBase_NPC"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_KindBase_NPC"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/FactionDef[defName="HAR_nebulaM87Race_P_Faction"]</xpath>
@@ -41,20 +91,6 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
-	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_KindBase"]/backstoryCategories</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_KindBase"]</xpath>
-			<success>Always</success>
-			<value>
-				<backstoryCategories></backstoryCategories>
-			</value>
-		</nomatch>
-	</Operation>
-	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/FactionDef[defName="HAR_nebulaM87Race_P_Faction"]</xpath>
@@ -78,18 +114,6 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_Player"]/backstoryCategories</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_Player"]</xpath>
-			<success>Always</success>
-			<value>
-				<backstoryCategories></backstoryCategories>
-			</value>
-		</nomatch>
-	</Operation>
-	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/FactionDef[defName="HAR_nebulaM87Race_P_Faction"]</xpath>
@@ -146,18 +170,6 @@
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_KindBase_NPC"]/backstoryCategories</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="HAR_nebulaM87Race_KindBase_NPC"]</xpath>
-			<success>Always</success>
-			<value>
-				<backstoryCategories></backstoryCategories>
-			</value>
-		</nomatch>
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">

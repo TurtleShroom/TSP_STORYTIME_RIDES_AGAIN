@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_Trash"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef>
+					<defName>TSP_VFERC_PoisonExtract_To_ReactChem</defName>
+					<label>recycle poison extract into reactive chemicals</label>
+					<description>Dextoxify and purify the chemicals in poisons, creating Reclaimed Bio-Packs and Reactive Chem-Packs as byproducts.</description>
+					<recipeUsers>
+						<li>VRecyclingE_RecyclingWorkbench</li>
+						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
+					</recipeUsers>
+					<jobString>Recycling waste into reactive chemicals</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Machining</soundWorking>
+					<workAmount>2000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+									<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+								</thingDefs>
+							</filter>
+							<count>20</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<VRecyclingE_ReactiveChempack>1</VRecyclingE_ReactiveChempack>
+						<VRecyclingE_Trash>3</VRecyclingE_Trash>
+					</products>
+					<workSkill>Crafting</workSkill>
+					<!-- <displayPriority>0</displayPriority> -->
+					<researchPrerequisites>
+						<li>VRecyclingE_BasicRecycling</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			
+				<RecipeDef>
+					<defName>TSP_VFERC_PoisonExtract_To_ReclaimedBiofuel</defName>
+					<label>recycle poison extract into reclaimed bio-fuel</label>
+					<description>Dextoxify and purify the chemicals in poisons, creating Reclaimed Bio-Packs.</description>
+					<recipeUsers>
+						<li>VRecyclingE_RecyclingWorkbench</li>
+						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
+					</recipeUsers>
+					<jobString>Recycling waste into reclaimed bio-fuel</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Machining</soundWorking>
+					<workAmount>2000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+									<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+								</thingDefs>
+							</filter>
+							<count>25</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<VRecyclingE_ReclaimedBiopack>1</VRecyclingE_ReclaimedBiopack>
+						<VRecyclingE_Trash>3</VRecyclingE_Trash>
+					</products>
+					<workSkill>Crafting</workSkill>
+					<!-- <displayPriority>0</displayPriority> -->
+					<researchPrerequisites>
+						<li>VRecyclingE_BasicRecycling</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			
+				<RecipeDef>
+					<defName>TSP_VFERC_PoisonExtract_To_VolatileToxin</defName>
+					<label>recycle poison extract into condensed volatile toxins</label>
+					<description>Amplify the lethality of the poison to produce Volatile Tox-Packs!</description>
+					<recipeUsers>
+						<li>VRecyclingE_RecyclingWorkbench</li>
+						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
+					</recipeUsers>
+					<jobString>Recycling waste into Volatile Tox-Packs</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Machining</soundWorking>
+					<workAmount>2000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+									<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+								</thingDefs>
+							</filter>
+							<count>40</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<VRecyclingE_VolatileToxpack>2</VRecyclingE_VolatileToxpack>
+						<VRecyclingE_Trash>5</VRecyclingE_Trash>
+					</products>
+					<workSkill>Crafting</workSkill>
+					<!-- <displayPriority>0</displayPriority> -->
+					<researchPrerequisites>
+						<li>VRecyclingE_ComplexRecycling</li>
+					</researchPrerequisites>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_VFERC_PoisonExtract_To_Trash</defName>
+					<label>Safely dispose of toxins</label>
+					<description>Remove the chemicals responsible for the poisons, leaving simple waste behind.</description>
+					<recipeUsers>
+						<li>VRecyclingE_RecyclingWorkbench</li>
+						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
+						<li>CraftingSpot</li>
+						<li>ButcherSpot</li>
+						<li>TableButcher</li>
+					</recipeUsers>
+					<jobString>Safely disposing of poison extracts</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Machining</soundWorking>
+					<workAmount>400</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+								</thingDefs>
+							</filter>
+							<count>20</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<VRecyclingE_Trash>7</VRecyclingE_Trash>
+					</products>
+					<workSkill>Crafting</workSkill>
+					<!-- <displayPriority>0</displayPriority> -->
+					<researchPrerequisites>
+						<!-- <li>VRecyclingE_BasicRecycling</li> -->
+						<li>Smithing</li>
+					</researchPrerequisites>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_VFERC_MakeNuclearWaste</defName>
+					<label>Spawn Radioactive Isotope Packs from Night Frog Venom and Goblin Poison</label>
+					<description>What the... how? How does mixing Goblin Poison and Night Frog Venom make nuclear waste? HOW?!</description>
+					<recipeUsers>
+						<li>VRecyclingE_RecyclingWorkbench</li>
+						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
+					</recipeUsers>
+					<jobString>What the heck?</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Machining</soundWorking>
+					<workAmount>4000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_GoblinPoison</li>
+								</thingDefs>
+							</filter>
+							<count>5</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_NightFrog_Venom</li>
+								</thingDefs>
+							</filter>
+							<count>15</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li>ST_GoblinPoison</li>
+							<li>ST_NightFrog_Venom</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<VRecyclingE_RadioactiveIsotopack>3</VRecyclingE_RadioactiveIsotopack>
+						<VRecyclingE_Trash>10</VRecyclingE_Trash>
+					</products>
+					<workSkill>Crafting</workSkill>
+					<!-- <displayPriority>0</displayPriority> -->
+					<researchPrerequisites>
+						<li>VRecyclingE_ComplexRecycling</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

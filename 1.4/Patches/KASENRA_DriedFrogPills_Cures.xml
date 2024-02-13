@@ -17,6 +17,9 @@
 					<defName>TSP_KASENRA_CureInsanity</defName>
 					<label>restore mental state with Dried Frog Pills</label>
 					<description>This special medical operation was the initial intent and reason why Dried Frog Pills were created. A heavy dose of these pills will instantly snap a madman back to clear, rational thinking.</description>
+					<descriptionHyperlinks>
+						<li>ROM_SanityLoss</li>
+					</descriptionHyperlinks>
 					<workerClass>Recipe_RemoveHediff</workerClass>
 					<jobString>Ribbitstoring sanity</jobString>
 					<workAmount>450</workAmount>
@@ -61,6 +64,10 @@
 					<defName>TSP_KASENRA_Cure_AntButtHoney</defName>
 					<label>resolve Warrior Honey addiction with Dried Frog Pills</label>
 					<description>It is said that Warrior Honey addictions are as permanent as Luciferium. That is usually true, but an overdose of Dried Frog Pills can do amazing things to the brain. A heavy dose of these pills will instantly snap a madman back to clear, rational thinking, but at the cost of a severe addiction to Dried Frog Pills in its stead.</description>
+					<descriptionHyperlinks>
+						<HediffDef>WarriorHoneyAddiction</HediffDef>
+						<HediffDef>DriedFrogPillsAddiction</HediffDef>
+					</descriptionHyperlinks>
 					<workerClass>Recipe_RemoveHediff</workerClass>
 					<jobString>Ribbitstoring sanity</jobString>
 					<workAmount>650</workAmount>
@@ -84,6 +91,59 @@
 								</thingDefs>
 							</filter>
 							<count>1250</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>DriedFrogPills</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+				</RecipeDef>
+  			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/HediffDef[defName="Abasia"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<RecipeDef ParentName="SurgeryFlesh">
+					<defName>TSP_KASENRA_Cure_ParalyticAbasia</defName>
+					<label>cure paralysis</label>
+					<description>An overdose of Dried Frog Pills can do amazing things to the brain. THE LAME SHALL WALK! A heavy dose of these pills will instantly restore the mobility of a victim of Paralytic Abasia, but at the cost of a severe addiction to Dried Frog Pills in its stead.</description>
+					<descriptionHyperlinks>
+						<HediffDef>Abasia</HediffDef>
+						<HediffDef>DriedFrogPillsAddiction</HediffDef>
+						<RecipeDef>CureAbasia</RecipeDef>
+					</descriptionHyperlinks>
+					<workerClass>Recipe_RemoveHediff</workerClass>
+					<jobString>Ribbitstoring mobility</jobString>
+					<workAmount>1650</workAmount>
+					<hideBodyPartNames>true</hideBodyPartNames>
+					<isViolation>false</isViolation>
+					<!-- <targetsBodyPart>false</targetsBodyPart> -->
+					<removesHediff>Abasia</removesHediff>
+					<addsHediff>DriedFrogPillsAddiction</addsHediff>
+					<successfullyRemovedHediffMessage>Ribbit ribbit! {0} has successfully restored {1}'s ability to walk!</successfullyRemovedHediffMessage>
+					<surgerySuccessChanceFactor>999</surgerySuccessChanceFactor>
+					<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+					<anesthetize>false</anesthetize>
+					<skillRequirements>
+						<Medicine>1</Medicine>
+					</skillRequirements>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>DriedFrogPills</li>
+								</thingDefs>
+							</filter>
+							<count>1500</count>
 						</li>
 					</ingredients>
 					<fixedIngredientFilter>
@@ -154,6 +214,7 @@
 				<li>TSP_KASENRA_CureCatatonia</li>
 				<li>TSP_KASENRA_CureDementiaCorruption</li>
 				<li>TSP_KASENRA_CureAlzheimersCorruption</li>
+				<li MayRequire="ludeon.rimworld.royalty">TSP_KASENRA_Cure_ParalyticAbasia</li>
 				<li MayRequire="kobo.honeypotants">TSP_KASENRA_Cure_AntButtHoney</li>
 			</value>
 		</match>
@@ -173,6 +234,8 @@
 				<li>TSP_KASENRA_CureDementiaCorruption</li>
 				<li>TSP_KASENRA_CureAlzheimersCorruption</li>
 				<li MayRequire="kobo.honeypotants">TSP_KASENRA_Cure_AntButtHoney</li>
+				<li MayRequire="ludeon.rimworld.royalty">TSP_KASENRA_Cure_ParalyticAbasia</li>
+				<li MayRequire="sirmashedpotato.morrowrim.thesixthhouse">MorrowRim_ExciseCorprusPustule</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -191,6 +254,8 @@
 				<li>TSP_KASENRA_CureDementiaCorruption</li>
 				<li>TSP_KASENRA_CureAlzheimersCorruption</li>
 				<li MayRequire="kobo.honeypotants">TSP_KASENRA_Cure_AntButtHoney</li>
+				<li MayRequire="ludeon.rimworld.royalty">TSP_KASENRA_Cure_ParalyticAbasia</li>
+				<li MayRequire="sirmashedpotato.morrowrim.thesixthhouse">MorrowRim_ExciseCorprusPustule</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -204,6 +269,25 @@
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
 			<xpath>/Defs/HediffDef[defName="CatatonicBreakdown"]</xpath>
+			<value>
+				<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+				<everCurableByItem>true</everCurableByItem>
+				<makesSickThought>true</makesSickThought>
+				<isBad>true</isBad>
+				<scenarioCanAdd>true</scenarioCanAdd>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Allows Catatonia to be cured by Dried Frog Pills -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist/ -->
+		<xpath>/Defs/HediffDef[defName="Abasia"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/HediffDef[defName="Abasia"]</xpath>
 			<value>
 				<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
 				<everCurableByItem>true</everCurableByItem>
