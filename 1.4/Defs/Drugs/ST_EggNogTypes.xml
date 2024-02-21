@@ -183,7 +183,7 @@
       <li Class="CompProperties_Drug" Inherit="False">
         <chemical>EggNogChemical</chemical>
         <addictiveness>0.5</addictiveness>
-        <minToleranceToAddict>0.2</minToleranceToAddict>
+        <minToleranceToAddict>0.151</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.5</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
         <listOrder>20</listOrder>
@@ -364,15 +364,15 @@
         <addictiveness>0.01</addictiveness>
         <minToleranceToAddict>0.1</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.50</existingAddictionSeverityOffset>
-        <needLevelOffset>1</needLevelOffset>
+        <needLevelOffset>1.5</needLevelOffset>
         <listOrder>10</listOrder>
       </li>
 	  <li Class="CompProperties_Drug">
         <chemical>EggNogChemical</chemical>
         <addictiveness>0.3</addictiveness>
-        <minToleranceToAddict>0.33</minToleranceToAddict>
+        <minToleranceToAddict>0.13</minToleranceToAddict>
         <existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
-        <needLevelOffset>1</needLevelOffset>
+        <needLevelOffset>1.1</needLevelOffset>
         <listOrder>10</listOrder>
       </li>
 	  <li Class="CompProperties_Forbiddable"></li>
@@ -388,7 +388,7 @@
   <ThingDef ParentName="EggBase">
     <defName>ST_ProfaneNog</defName>
     <label>Profane Egg Nog</label>
-    <description>''This should not exist. This is wrong.'' \n \n Mankind, over the eons since their departure from Old Earth, has committed many terrible experiments. For all the successful engineering of Old Earth fauna, there were giant insects and Mechanoids that also came out of it. A keen example of this is Profane Egg Nog. Invented during drunken discussions between Spacer Pirates and Golden Age Pirates, the idea was simple enough. Take the Kraken Rum and mix it with the Egg Nog. Surely that would be delicious, right? \n \n WRONG. The result was an absolute abomination. This monstrosity was equivalent to a potion with incredible, yet horrific, effects. Profane Egg Nog, as it turns out, can instantly enhance Consciousness in a healthy brain of any living being. Though it cannot reverse brain damage, its powers are still spectacular. Upon drinking it, anyone whose mind is fully functioning attains cognitive superpowers, with clearer focus, power, and mental accomplishments, and full utilization of the brain. \n Sadly, its miraculous benefits come come at a price. Profane Egg Nog causes extreme audio hallucinations and can drive a Pawn straight into a Mental Break with but one sip. Is it really with it?</description>
+    <description>''This should not exist. This is wrong.'' \n \n Mankind, over the eons since their departure from Old Earth, has committed many terrible experiments. For all the successful engineering of Old Earth fauna, there were giant insects and Mechanoids that also came out of it. A keen example of this is Profane Egg Nog. Invented during drunken discussions between Spacer Pirates and Golden Age Pirates, the idea was simple enough. Take the Kraken Rum and mix it with the Egg Nog. Surely that would be delicious, right? \n \n WRONG. The result was an absolute abomination. This monstrosity was equivalent to a potion with incredible, yet horrific, effects. Profane Egg Nog, as it turns out, can instantly enhance Consciousness in a healthy brain of any living being. Though it cannot reverse brain damage, its powers are still spectacular. Upon drinking it, anyone whose mind is fully functioning attains cognitive superpowers, with clearer focus, power, and mental accomplishments, and full utilization of the brain. \n Sadly, its miraculous benefits come come at a price. Profane Egg Nog causes extreme audio hallucinations and can drive a Pawn straight into a Mental Break with but one sip. Is it really worth it?</description>
     <descriptionHyperlinks>
 		<!-- <RecipeDef>TSP_ST_BoDetox</RecipeDef> -->
 		<HediffDef>AlcoholHigh</HediffDef>
@@ -445,7 +445,7 @@
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>AlcoholTolerance</hediffDef>
-          <severity>0.4</severity>
+          <severity>0.5</severity>
           <divideByBodySize>false</divideByBodySize>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
@@ -518,6 +518,7 @@
 		<tasteThought Inherit="False"></tasteThought>
 		<specialThoughtDirect Inherit="False"></specialThoughtDirect>
 		<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient>
+		<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce> <!-- Apparently, you can only take one hit on a drug at a time -->
 		<outcomeDoers>
 			<li Class="IngestionOutcomeDoer_GiveHediff">
 			  <hediffDef>HediffEggNog</hediffDef>
@@ -568,7 +569,7 @@
 	  <li Class="CompProperties_Drug">
         <chemical>EggNogChemical</chemical>
         <addictiveness>0.5</addictiveness>
-        <minToleranceToAddict>0.4</minToleranceToAddict>
+        <minToleranceToAddict>0.54</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.05</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
         <listOrder>10</listOrder>
