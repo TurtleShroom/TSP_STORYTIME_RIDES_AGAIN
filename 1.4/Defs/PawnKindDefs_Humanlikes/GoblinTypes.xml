@@ -22,6 +22,11 @@
 		<li>Glasses</li>
 		<li>School_Thai</li>
     </apparelTags>
+	<weaponTags>
+		<li>MetalPipeRanged</li>
+		<li>GoblinMelee</li>
+		<li>GoblinRanged</li>
+	</weaponTags>
     <!-- <isFighter>false</isFighter> -->
     <!-- <apparelIgnoreSeasons>true</apparelIgnoreSeasons> -->
     <invNutrition>2</invNutrition>
@@ -59,6 +64,10 @@
 		<li>BeltDefenseTox</li>
     </apparelTags>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+	<weaponTags>
+		<li>MetalPipe</li>
+		<li>GoblinBasic</li>
+	</weaponTags>
     <techHediffsMoney>
       <min>50</min>
       <max>50</max>
@@ -101,11 +110,11 @@
   <PawnKindDef ParentName="BaseGoblinKind">
     <defName>GoblinRunner</defName>
     <label>goblin runner</label>
-    <combatPower>45</combatPower>
+    <combatPower>30</combatPower>
     <defaultFactionType>GoblinTown</defaultFactionType>
 	<combatEnhancingDrugsChance>1</combatEnhancingDrugsChance>
-    <chemicalAddictionChance>0.25</chemicalAddictionChance>
-	<combatEnhancingDrugsCount>1~5</combatEnhancingDrugsCount>
+    <chemicalAddictionChance>0.5</chemicalAddictionChance>
+	<combatEnhancingDrugsCount>4~5</combatEnhancingDrugsCount>
 	<isFighter>true</isFighter>
 	<canBeSapper>true</canBeSapper>
     <apparelMoney>
@@ -136,6 +145,7 @@
 		<li>MedievalMeleeDestructive</li>
 		<li>GoblinBasic</li>
 		<li>Spear</li>
+		<li>MetalPipeMelee</li>
     </weaponTags>
     <inventoryOptions>
       <subOptionsChooseOne>
@@ -178,13 +188,13 @@
     <techHediffsChance>0.02</techHediffsChance>
 	<weaponTags>
 		<li>GoblinBow</li>
-		<li>Bowmen</li>
+		<li>BowMen</li>
     </weaponTags>
     <inventoryOptions>
       <subOptionsChooseOne>
         <li>
           <thingDef>ST_GoblinPoison</thingDef>
-          <countRange>-5~15</countRange>
+          <countRange>1~15</countRange>
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
@@ -203,7 +213,7 @@
     <label>goblin machinist</label>
     <combatPower>70</combatPower>
     <defaultFactionType>GoblinTown</defaultFactionType>
-    <chemicalAddictionChance>0.03</chemicalAddictionChance>
+    <chemicalAddictionChance>0.13</chemicalAddictionChance>
     <apparelMoney>
       <min>250</min>
       <max>500</max>
@@ -275,6 +285,7 @@
     <techHediffsChance>0.02</techHediffsChance>
 	<weaponTags>
 		<li>GoblinDecent</li>
+		<li>DoubleBarreledShotgun</li>
     </weaponTags>
     <initialWillRange>1~4</initialWillRange>
     <initialResistanceRange>5~7</initialResistanceRange>
@@ -357,6 +368,7 @@
 	<weaponTags>
 		<li>GoblinDecent</li>
 		<li>Rusted</li>
+		<li>MetalPipe</li>
     </weaponTags>
     <inventoryOptions>
       <subOptionsChooseOne>
@@ -396,7 +408,7 @@
 			<min>1500</min>
 			<max>4000</max>
 		</weaponMoney>
-		<backstoryCryptosleepCommonality>0.01</backstoryCryptosleepCommonality>
+		<backstoryCryptosleepCommonality>0.061</backstoryCryptosleepCommonality>
 		<techHediffsMoney>
 			<min>1150</min>
 			<max>3550</max>
@@ -418,7 +430,7 @@
 		</apparelRequired>
 		<biocodeWeaponChance>0.9</biocodeWeaponChance>
 		<techHediffsChance>0.66</techHediffsChance>
-		<weaponTags>
+		<weaponTags Inherit="False">
 			<li>GoblinDoomsday</li>
 			<li>GoblinTech</li>
 			<li>Gun_ToxicNeedle</li>
@@ -489,7 +501,7 @@
 				</li>
 				<li MayRequire="punkyroo.containtoxicwaste">
 					<thingDef MayRequire="punkyroo.containtoxicwaste">WasteCanister</thingDef>
-					<countRange MayRequire="punkyroo.containtoxicwaste">3~15</countRange>
+					<countRange MayRequire="punkyroo.containtoxicwaste">5~15</countRange>
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>

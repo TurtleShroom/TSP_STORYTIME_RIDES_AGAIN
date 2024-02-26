@@ -202,13 +202,26 @@
 					<texPath>Achievements/gibbonousMoonAchievement</texPath>
 					<points>30</points>
 				</AchievementsExpanded.AchievementDef>
+				
+				<AchievementsExpanded.AchievementDef>
+					<defName>gibbonMoonAchievement_Multiple</defName>
+					<label>Walk the Moon</label>
+					<description>Witness a Gibbonous Moon alignment four times.</description>
+					<tab>Storytime</tab>		
+					<tracker Class="AchievementsExpanded.IncidentTracker">
+						<def>GibbonousMoon</def>
+						<count>4</count>
+					</tracker>
+					<texPath>Achievements/gibbonousMoonAchievement</texPath>
+					<points>60</points>
+				</AchievementsExpanded.AchievementDef>
 
 				<AchievementsExpanded.AchievementDef>
 					<defName>beanManAchievement</defName>
 					<label>THE BULBORB HAS ASCENDED</label>
 					<description>Obtain a Bean Man Larva.</description>
 					<tab>Storytime</tab>		
-					<tracker Class="AchievementsExpanded.ItemCraftTracker">
+					<tracker Class="AchievementsExpanded.ItemTracker">
 						<def>BeanManLarva</def>
 						<count>1</count>
 					</tracker>

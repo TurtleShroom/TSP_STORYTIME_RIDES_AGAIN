@@ -3,25 +3,27 @@
 <Defs>
 	<ThingDef Name="ApparelGnomeBase" ParentName="ApparelNoQualityBase" Abstract="True">
 		<recipeMaker>
-		  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-		  <workSkill>Crafting</workSkill>
-		  <effectWorking>Tailor</effectWorking>
-		  <soundWorking>Recipe_Tailor</soundWorking>
-		  <researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
-		  <recipeUsers>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<researchPrerequisites>
+			<li>ST_GnomeCulture</li>
+		</researchPrerequisites>
+		<recipeUsers>
 			<li>ElectricTailoringBench</li>
 			<li>HandTailoringBench</li>
 			<li>CraftingSpot</li>
 			<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_TailorsBench</li>
-		  </recipeUsers>
-		  <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
-		  <!--
-		  <defaultIngredientFilter>
+		</recipeUsers>
+		<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+		<!--
+		<defaultIngredientFilter>
 			<categories>
-			  <li>Root</li>
+				<li>Root</li>
 			</categories>
-		  </defaultIngredientFilter>
-		  -->
+		</defaultIngredientFilter>
+		-->
 		</recipeMaker>
 		<apparel>
 			<tags Inherit="False">
@@ -29,6 +31,9 @@
 				<li>GnomePeasant</li>
 			</tags>
 		</apparel>
+		<tradeTags>
+			<li>GnomeClothing</li>
+		</tradeTags>
 	</ThingDef>
  
     <ThingDef ParentName="ApparelGnomeBase">
@@ -52,7 +57,7 @@
 		</statBases>
 		<generateCommonality>0</generateCommonality>
 		<generateAllowChance>0</generateAllowChance>
-		<commonality>0</commonality>
+		<!-- <commonality>0</commonality> -->
 		<thingCategories>
 		  <li>Headgear</li>
 		</thingCategories>

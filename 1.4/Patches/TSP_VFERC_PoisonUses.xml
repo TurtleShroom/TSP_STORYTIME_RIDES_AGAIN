@@ -141,7 +141,7 @@
 						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
 						<li>CraftingSpot</li>
 						<li>ButcherSpot</li>
-						<li>TableButcher</li>
+						<!-- <li>TableButcher</li> -->
 					</recipeUsers>
 					<jobString>Safely disposing of poison extracts</jobString>
 					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -153,6 +153,12 @@
 							<filter>
 								<thingDefs>
 									<li>ST_PoisonExtract</li>
+									<li>ST_GoblinPoison</li>
+									<li>ST_NightFrog_Venom</li>
+									<li>GoblinCrack</li>
+									<li>HeavenDust</li>
+									<li>ST_ProfaneNog</li>
+									<li>WerefrogBlood</li>
 								</thingDefs>
 							</filter>
 							<count>20</count>
@@ -161,10 +167,21 @@
 					<fixedIngredientFilter>
 						<thingDefs>
 							<li>ST_PoisonExtract</li>
+							<li>ST_GoblinPoison</li>
+							<li>ST_NightFrog_Venom</li>
+							<li>GoblinCrack</li>
+							<li>HeavenDust</li>
+							<li>ST_ProfaneNog</li>
+							<li>WerefrogBlood</li>
 						</thingDefs>
 					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+						</thingDefs>
+					</defaultIngredientFilter>
 					<products>
-						<VRecyclingE_Trash>7</VRecyclingE_Trash>
+						<VRecyclingE_Trash>4</VRecyclingE_Trash>
 					</products>
 					<workSkill>Crafting</workSkill>
 					<!-- <displayPriority>0</displayPriority> -->
@@ -176,8 +193,8 @@
 				
 				<RecipeDef>
 					<defName>TSP_VFERC_MakeNuclearWaste</defName>
-					<label>Spawn Radioactive Isotope Packs from Night Frog Venom and Goblin Poison</label>
-					<description>What the... how? How does mixing Goblin Poison and Night Frog Venom make nuclear waste? HOW?!</description>
+					<label>Spawn Radioactive Isotope Packs from Night Frog Venom and Drugs</label>
+					<description>What the... how? How does mixing drugs and Night Frog Venom make nuclear waste? HOW?!</description>
 					<recipeUsers>
 						<li>VRecyclingE_RecyclingWorkbench</li>
 						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
@@ -192,6 +209,19 @@
 							<filter>
 								<thingDefs>
 									<li>ST_GoblinPoison</li>
+									<li>Diagen</li>
+									<li>Dragonal</li>
+									<li>GoblinCrack</li>
+									<li>HeavenDust</li>
+									<li>Highwing</li>
+									<li>ST_MikesLemonade</li>
+									<li>BotoxFruit</li>
+									<li>BotoxPowder</li>
+									<li>ST_FogNog</li>
+									<li>ST_ProfaneNog</li>
+									<li>RawNog</li>
+									<li>ST_KrakenRum</li>
+									<li>WerefrogBlood</li>
 								</thingDefs>
 							</filter>
 							<count>5</count>
@@ -210,11 +240,38 @@
 							<li>ST_PoisonExtract</li>
 							<li>ST_GoblinPoison</li>
 							<li>ST_NightFrog_Venom</li>
+							<li>Diagen</li>
+							<li>Dragonal</li>
+							<li>GoblinCrack</li>
+							<li>HeavenDust</li>
+							<li>Highwing</li>
+							<li>ST_MikesLemonade</li>
+							<li>BotoxFruit</li>
+							<li>BotoxPowder</li>
+							<li>ST_FogNog</li>
+							<li>ST_ProfaneNog</li>
+							<li>RawNog</li>
+							<li>ST_KrakenRum</li>
+							<li>WerefrogBlood</li>
 						</thingDefs>
 					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_GoblinPoison</li>
+							<li>ST_NightFrog_Venom</li>
+							<li>GoblinCrack</li>
+							<li>HeavenDust</li>
+							<li>Highwing</li>
+							<li>ST_MikesLemonade</li>
+							<li>BotoxFruit</li>
+							<li>ST_ProfaneNog</li>
+							<li>RawNog</li>
+							<li>ST_KrakenRum</li>
+						</thingDefs>
+					</defaultIngredientFilter>
 					<products>
-						<VRecyclingE_RadioactiveIsotopack>3</VRecyclingE_RadioactiveIsotopack>
-						<VRecyclingE_Trash>10</VRecyclingE_Trash>
+						<VRecyclingE_RadioactiveIsotopack>4</VRecyclingE_RadioactiveIsotopack>
+						<VRecyclingE_Trash>13</VRecyclingE_Trash>
 					</products>
 					<workSkill>Crafting</workSkill>
 					<!-- <displayPriority>0</displayPriority> -->
@@ -222,6 +279,41 @@
 						<li>VRecyclingE_ComplexRecycling</li>
 					</researchPrerequisites>
 				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/recipeUsers</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
+			<value>
+				<recipeUsers></recipeUsers>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/recipeUsers</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/recipeUsers</xpath>
+			<value>
+				<recipeUsers Inherit="False">
+					<li>TableMachining</li>
+					<li>FueledSmithy</li>
+					<li>ElectricSmithy</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+				</recipeUsers>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
