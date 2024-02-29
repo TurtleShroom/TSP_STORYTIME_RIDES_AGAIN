@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_Cheese"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOO! -->
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ItemProcessor.CombinationDef>
+							<defName>TSP_ST_CHEESE_BORPA_CHEESE_PROCESS</defName>
+							<building>VCE_CheesePress</building>
+							<items>
+								<li>BORPA_Milk</li>
+							</items>	
+							<amount>
+								<li>50</li>
+							</amount>
+							<result>TSP_ST_VFEC_BORPA_CHEESE</result>	
+							<yield>10</yield>
+							<useQualityIncreasing>true</useQualityIncreasing>
+							<awfulQualityAgeDaysThreshold>1</awfulQualityAgeDaysThreshold>
+							<poorQualityAgeDaysThreshold>3</poorQualityAgeDaysThreshold>
+							<normalQualityAgeDaysThreshold>6</normalQualityAgeDaysThreshold>
+							<goodQualityAgeDaysThreshold>25</goodQualityAgeDaysThreshold>
+							<excellentQualityAgeDaysThreshold>30</excellentQualityAgeDaysThreshold>
+							<masterworkQualityAgeDaysThreshold>35</masterworkQualityAgeDaysThreshold>
+							<legendaryQualityAgeDaysThreshold>40</legendaryQualityAgeDaysThreshold>
+						</ItemProcessor.CombinationDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="MealBase">
+							<defName>TSP_ST_VFEC_BORPA_CHEESE</defName>
+							<label>Borpa cheese</label>
+							<description>Cheese formulated from the natural secretions of the skin of the Borpa. Borpa cheese matures faster than most cheeses, at the cost of it taking more Borpa milk to make less cheese. It tastes divine.</description>
+							<graphicData>
+								<texPath>Things/Items/Resources/Cheese/TSP_BorpaCheese</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<tradeability>All</tradeability>
+							<stackLimit>250</stackLimit>
+							<statBases>
+								<MarketValue>8</MarketValue>
+								<Nutrition>0.2</Nutrition>
+							</statBases>
+							<thingCategories Inherit="False">
+								<li>VCE_Cheese</li>
+							</thingCategories>
+							<ingestible>
+								<preferability>MealLavish</preferability>
+								<ingestEffect>EatMeat</ingestEffect>
+								<ingestSound>Meal_Eat</ingestSound>
+								<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+							</ingestible>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>110</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li>
+									<compClass>CompQuality</compClass>
+								</li>
+								<li Class="VanillaCookingExpanded.CompProperties_StackByQuality" />
+								<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+									<ingestedThought>VCE_AteCheese</ingestedThought>
+								</li>
+							</comps>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/ItemProcessor.ItemAcceptedDef[defName = "IP_CheesePressFirstItem"]/items</xpath>
+					<value>
+						<li>BORPA_Milk</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ItemProcessor.CombinationDef>
+							<defName>TSP_ST_VFEC_GeckoGouda_Combination</defName>
+							<building>VCE_CheesePress</building>
+							<items>
+								<li>ST_Green_Milk</li>
+							</items>	
+							<amount>
+								<li>50</li>
+							</amount>
+							<result>TSP_ST_VFEC_GreenCheese</result>	
+							<yield>10</yield>
+							<useQualityIncreasing>true</useQualityIncreasing>
+							<awfulQualityAgeDaysThreshold>1</awfulQualityAgeDaysThreshold>
+							<poorQualityAgeDaysThreshold>3</poorQualityAgeDaysThreshold>
+							<normalQualityAgeDaysThreshold>6</normalQualityAgeDaysThreshold>
+							<goodQualityAgeDaysThreshold>25</goodQualityAgeDaysThreshold>
+							<excellentQualityAgeDaysThreshold>30</excellentQualityAgeDaysThreshold>
+							<masterworkQualityAgeDaysThreshold>35</masterworkQualityAgeDaysThreshold>
+							<legendaryQualityAgeDaysThreshold>40</legendaryQualityAgeDaysThreshold>
+						</ItemProcessor.CombinationDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="MealBase">
+							<defName>TSP_ST_VFEC_GreenCheese</defName>
+							<label>Gecko gouda cheese</label>
+							<description>Cheese formulated from the milky pus extracted from the tail of an Engorged Leopard Gecko. Gecko gouda cheese matures faster than most cheeses, at the cost of it taking more Green Milk to make less cheese. It tastes very, very similar to gouda cheese made from milk, hence its name.</description>
+							<graphicData>
+								<texPath>Things/Items/Resources/Cheese/GoatGouda</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<tradeability>All</tradeability>
+							<stackLimit>250</stackLimit>
+							<statBases>
+								<MarketValue>8</MarketValue>
+								<Nutrition>0.2</Nutrition>
+							</statBases>
+							<thingCategories Inherit="False">
+								<li>VCE_Cheese</li>
+							</thingCategories>
+							<ingestible>
+								<preferability>MealLavish</preferability>
+								<ingestEffect>EatMeat</ingestEffect>
+								<ingestSound>Meal_Eat</ingestSound>
+								<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+							</ingestible>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>110</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li>
+									<compClass>CompQuality</compClass>
+								</li>
+								<li Class="VanillaCookingExpanded.CompProperties_StackByQuality" />
+								<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+									<ingestedThought>VCE_AteCheese</ingestedThought>
+								</li>
+							</comps>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/ItemProcessor.ItemAcceptedDef[defName = "IP_CheesePressFirstItem"]/items</xpath>
+					<value>
+						<li>ST_Green_Milk</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+	<!-- Do any of the following Mods exist? -->
+		<mods>
+			<li>[SYR] Processor Framework - Vanilla Expanded Cooking</li>
+		</mods>
+		<!-- If it does LET'S FASTING GOOOOOOO! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ProcessorFramework.ProcessDef MayRequire="TSP.Isengriff.Storytime">
+							<defName>TSP_ST_VFEC_CHEESE_BORPA_CHEESE_ALGORITHIM</defName>
+							<thingDef>TSP_ST_VFEC_BORPA_CHEESE</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>BORPA_Milk</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>3</capacityFactor>
+							<usesQuality>true</usesQuality>
+							<qualityDays>(1, 2, 3, 8, 16, 30, 60)</qualityDays>
+						</ProcessorFramework.ProcessDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd" MayRequire="TSP.Isengriff.Storytime">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ProcessorFramework.ProcessDef MayRequire="TSP.Isengriff.Storytime">
+							<defName>TSP_ST_VFEC_GeckoGouda_Algorithim</defName>
+							<thingDef>TSP_ST_VFEC_GreenCheese</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>ST_Green_Milk</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>3</capacityFactor>
+							<usesQuality>true</usesQuality>
+							<qualityDays>(1, 2, 3, 8, 16, 30, 60)</qualityDays>
+						</ProcessorFramework.ProcessDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd" MayRequire="TSP.Isengriff.Storytime">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="VCE_CheesePress"]/comps/li/processes</xpath>
+					<value>
+						<li>TSP_ST_VFEC_CHEESE_BORPA_CHEESE_ALGORITHIM</li>
+						<li>TSP_ST_VFEC_GeckoGouda_Algorithim</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If none of the Mods are installed, the original code stands. -->
+	</Operation>
+</Patch>
+
