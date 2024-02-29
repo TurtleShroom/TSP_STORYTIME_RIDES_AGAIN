@@ -33,7 +33,7 @@
 	<ingestible>
 		<foodType>Processed</foodType>
 		<baseIngestTicks>100</baseIngestTicks>
-		<preferability>NeverForNutrition</preferability>
+		<preferability>DesperateOnly</preferability>
 		<drugCategory>Medical</drugCategory>
 		<ingestSound>Ingest_Pill</ingestSound>
 		<ingestHoldOffsetStanding>
@@ -46,7 +46,9 @@
 		<ingestCommandString>Ingest {0}</ingestCommandString>
 		<ingestReportString>Ingesting {0}.</ingestReportString>
 		<useEatingSpeedStat>false</useEatingSpeedStat>
+		<chairSearchRadius>0</chairSearchRadius>
 		<tableDesired>false</tableDesired>
+		<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
 		<outcomeDoers>
 			<li Class="IngestionOutcomeDoer_GiveHediff">
 				<hediffDef>DriedFrogPillsHigh</hediffDef>
@@ -83,7 +85,7 @@
 			<addictiveness MayRequire="vanillaexpanded.vbrewe">1</addictiveness>
 			<minToleranceToAddict MayRequire="vanillaexpanded.vbrewe">0.6</minToleranceToAddict>
 			<existingAddictionSeverityOffset MayRequire="vanillaexpanded.vbrewe">1</existingAddictionSeverityOffset>
-			<needLevelOffset>0.5</needLevelOffset>
+			<needLevelOffset></needLevelOffset>
 			<listOrder>20</listOrder>
 			<largeOverdoseChance>0</largeOverdoseChance>
 		</li>
@@ -179,11 +181,15 @@
 				<capacity>Consciousness</capacity>
 				<setMax>0.75</setMax>
 			  </li>
+			  <li>
+				<capacity>Talking</capacity>
+				<setMax>0.75</setMax>
+			  </li>
 			</capMods>
 			<mentalStateGivers>
 			  <li>
 				<mentalState>Binging_DrugExtreme</mentalState>
-				<mtbDays>40</mtbDays>
+				<mtbDays>15</mtbDays>
 			  </li>
 			  <li>
 				<mentalState>Wander_Psychotic</mentalState>

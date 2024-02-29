@@ -29,7 +29,25 @@
 		<!-- Allows Bebsi to be drinkable if DBH's thirst is enabled -->
 		<match Class="PatchOperationAddModExtension">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="ST_MikesLemonade" or defName = "TSP_ST_RuneJuice"]</xpath>
+			<xpath>/Defs/ThingDef[defName="ST_MikesLemonade"]</xpath>
+			<value>
+				<li Class="DubsBadHygiene.WaterExt">
+					<water>0.7</water>
+					<UseForWashing>true</UseForWashing>
+					<SeekForThirst>true</SeekForThirst>
+				</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Dubs Bad Hygiene</li>
+		</mods> 
+		<!-- Allows Bebsi to be drinkable if DBH's thirst is enabled -->
+		<match Class="PatchOperationAddModExtension">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="TSP_ST_RuneJuice"]</xpath>
 			<value>
 				<li Class="DubsBadHygiene.WaterExt">
 					<water>0.7</water>
