@@ -1,6 +1,88 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
+	<RulePackDef>
+		<defName>TSP_ST_JeubBushWins_Utility</defName>
+		<include>
+			<li>TSP_ST_JebBushWins</li>
+			<li>JeubBush_Wins_Insults</li>
+		</include>
+		<rulePack>
+		  <rulesStrings>
+			<li>name-&gt;[TSP_ST_JeubBushWinsUtility_Data]</li>
+			<li>name-&gt;[TSP_ST_JeubBushWinsUtility_Data]</li>
+			<li>name-&gt;[BushInsults]</li>
+		  </rulesStrings>
+		  <rulesRaw>
+			<li Class="Rule_File">
+				<keyword>TSP_ST_JeubBushWinsUtility_Data</keyword>
+				<path>JeubNames/JeubBush</path>
+			</li>
+			<li Class="Rule_File">
+				<keyword>BushInsults</keyword>
+				<path>JeubNames/JeubBush</path>
+			</li>
+		  </rulesRaw>
+		  <rulesFiles>
+			<li>BushInsults->JeubNames/JeubBush</li>
+		  </rulesFiles>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>TSP_ST_JebBushWins</defName>
+		<include>
+			<li>JeubBush_Wins_Insults</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<!-- <li>name-&gt;[BushInsults]</li> -->
+				<li>BushInsults->Applause</li>
+				<li>BushInsults->Domestication</li>
+				<li>BushInsults->Subjugation</li>
+				<li>BushInsults->Humiliation</li>
+				<li>BushInsults->Livestock</li>
+				<li>BushInsults->Shame</li>
+				<li>BushInsults->Weakness</li>
+				<li>BushInsults->Skelks</li>
+				<li>BushInsults->Cuckoldry</li>
+				<li>BushInsults->Establishmentarianism</li>
+				<li>BushInsults->Rata Skelk</li>
+				<li>BushInsults->Cowardice</li>
+				<li>BushInsults->the Pushovers</li>
+				<li>BushInsults->Weak Sauce</li>
+				<li>BushInsults->Enslavement</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>BushInsults</keyword>
+					<path>JeubNames/JeubBush</path>
+				</li>
+			</rulesRaw>
+			<rulesFiles>
+				<li>BushInsults->JeubNames/JeubBush</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>JeubBush_Wins_Insults</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>BushInsults->[BushInsults]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>BushInsults</keyword>
+					<path>JeubNames/JeubBush</path>
+				</li>
+			</rulesRaw>
+			<rulesFiles>
+				<li>BushInsults->JeubNames/JeubBush</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+
 	<IdeoStoryPatternDef>
 		<defName>TSP_ST_JeubCultFlavor</defName>
 		<segments>
@@ -26,54 +108,4 @@ TSP_SnaffCultConclusion->Though not all of us are High Jeubs, we are all Snaff's
 			</rulesStrings>
 		</rules>
 	</IdeoStoryPatternDef>
-	
-	<RulePackDef>
-		<defName>TSP_ST_JebBushWins</defName>
-		<rulePack>
-			<rulesStrings>
-				<!-- <li>name-&gt;[BushInsults]</li> -->
-				<li>BushInsults->Applause</li>
-				<li>BushInsults->Domestication</li>
-				<li>BushInsults->Subjugation</li>
-				<li>BushInsults->Humiliation</li>
-				<li>BushInsults->Livestock</li>
-				<li>BushInsults->Shame</li>
-				<li>BushInsults->Weakness</li>
-				<li>BushInsults->Skelks</li>
-				<li>BushInsults->Cuckoldry</li>
-				<li>BushInsults->Establishmentarianism</li>
-				<li>BushInsults->Rata Skelk</li>
-				<li>BushInsults->Cowardice</li>
-				<li>BushInsults->the Pushovers</li>
-				<li>BushInsults->Weak Sauce</li>
-				<li>BushInsults->Enslavement</li>
-			</rulesStrings>
-		</rulePack>
-		<!--
-		<rulesRaw>
-			<li Class="Rule_File">
-				<keyword>BushInsults</keyword>
-				<path>JeubNames/JeubBush</path>
-			</li>
-		</rulesRaw>
-		-->
-		<rulesFiles>
-			<li>BushInsults->JeubNames/JeubBush</li>
-		</rulesFiles>
-	</RulePackDef>
-	
-  <RulePackDef>
-    <defName>JeubBush_Wins_Insults</defName>
-    <include>
-      <li>TSP_ST_JebBushWins</li>
-    </include>
-    <rulePack>
-      <rulesStrings>
-		<li>r_name->[BushInsults]</li>
-      </rulesStrings>
-    </rulePack>
-	<rulesFiles>
-		<li>BushInsults->JeubNames/JeubBush</li>
-	</rulesFiles>
-  </RulePackDef>
 </Defs>
