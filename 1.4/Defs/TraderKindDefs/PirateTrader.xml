@@ -84,14 +84,30 @@
 		<li Class="StockGenerator_Animals">
 			<maxWildness>0.99</maxWildness>
 			<tradeTagsBuy>
+				<li>AnimalFrog</li>
 				<li>PiratePet</li>
 				<li>DocileSkeleton</li>
-				<li>PiratePetRare</li>
+				<li>AnimalExotic</li>
+				<li>AnimalFarm</li>
 				<li>AnimalFrog</li>
+				<li>AnimalInsect</li>
+				<li>AnimalRare</li>
+				<li>AnimalUncommon</li>
+				<li>AnimalCommon</li>
+				<li>AnimalPet</li>
+				<li>ST_Gnome_Selling_Animal</li>
+				<li>ST_Gnome_Selling_AnimalRare</li>
+				<li>AnimalFrog</li>
+				<li>AnimalFrogRare</li>
+				<li>StorytimeAnimal</li>
+				<li>StorytimeAnimalRare</li>
+				<li>AnimalVehicle</li>
+				<li MayRequire="tsp.baskerville.hellsingexpansion">GentleGhoul</li>
 			</tradeTagsBuy>
 			<tradeTagsSell>
 				<li>PiratePet</li>
 				<li>DocileSkeleton</li>
+				<li>PiratePetRare</li>
 			</tradeTagsSell>
 			<kindCountRange>1~2</kindCountRange>
 			<countRange>1~2</countRange>
@@ -109,11 +125,27 @@
 				<li>DocileSkeleton</li>
 				<li>PiratePetRare</li>
 				<li>AnimalFrog</li>
+				<li>AnimalExotic</li>
+				<li>AnimalFarm</li>
+				<li>AnimalFrog</li>
+				<li>AnimalInsect</li>
+				<li>AnimalRare</li>
+				<li>AnimalUncommon</li>
+				<li>AnimalCommon</li>
+				<li>AnimalPet</li>
+				<li>ST_Gnome_Selling_Animal</li>
+				<li>ST_Gnome_Selling_AnimalRare</li>
+				<li>AnimalFrog</li>
+				<li>AnimalFrogRare</li>
+				<li>StorytimeAnimal</li>
+				<li>StorytimeAnimalRare</li>
+				<li>AnimalVehicle</li>
+				<li MayRequire="tsp.baskerville.hellsingexpansion">GentleGhoul</li>
 			</tradeTagsBuy>
 			<tradeTagsSell>
 				<li>PiratePetRare</li>
 			</tradeTagsSell>
-			<kindCountRange>-2~2</kindCountRange>
+			<kindCountRange>0~2</kindCountRange>
 			<countRange>-2~1</countRange>
 		</li>
 		
@@ -130,7 +162,7 @@
 
 	  <li Class="StockGenerator_SingleDef">
         <thingDef>CursedCoin</thingDef>
-        <countRange>2~500</countRange>
+        <countRange>12~500</countRange>
       </li>
 	  
 	  <li Class="StockGenerator_SingleDef">
@@ -140,7 +172,7 @@
 	  
       <li Class="StockGenerator_Tag">
         <tradeTag>Artifact</tradeTag>
-        <thingDefCountRange>-1~4</thingDefCountRange>
+        <thingDefCountRange>0~4</thingDefCountRange>
         <countRange>1~1</countRange>
       </li>
 	  
@@ -154,7 +186,7 @@
       <li Class="StockGenerator_Tag" MayRequire="rimofmadness.callofcthulhu.factions">
         <tradeTag MayRequire="rimofmadness.callofcthulhu.factions">CallOfCthulhu_Angler</tradeTag>
         <!-- <maxTechLevelGenerate MayRequire="rimofmadness.callofcthulhu.factions">Industrial</maxTechLevelGenerate> -->
-        <thingDefCountRange MayRequire="rimofmadness.callofcthulhu.factions">0~10</thingDefCountRange>
+        <thingDefCountRange MayRequire="rimofmadness.callofcthulhu.factions">1~10</thingDefCountRange>
         <countRange MayRequire="rimofmadness.callofcthulhu.factions">5~25</countRange>
       </li>
 	  
@@ -186,6 +218,42 @@
 	  <!-- <li Class="StockGenerator_BuyTradeTag"><tag>DocileSkeleton</tag></li> -->
 	  <li Class="StockGenerator_BuyTradeTag"><tag>TechHediff</tag></li>
 	  <li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeFlour</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Worm</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>WormRaw</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeBatta</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeMeat</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeVegetarian</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="mo.decorationsluxury">
+				<tag MayRequire="mo.decorationsluxury">MO_Luxury</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
+				<tag MayRequire="sirmashedpotato.morrowrim.alcoholremade">DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
+				<tag MayRequire="sirmashedpotato.ashlands">DunmerBooze</tag>
+			</li>
 	  <!--
 	  <li Class="StockGenerator_BuyTradeTag"><tag>Frog</tag></li>
 	  <li Class="StockGenerator_BuyTradeTag"><tag>PiratePet</tag></li>
