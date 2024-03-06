@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/caravanTraderKinds</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+			<success>Always</success>
+			<value>
+				<caravanTraderKinds></caravanTraderKinds>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/visitorTraderKinds</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+			<success>Always</success>
+			<value>
+				<visitorTraderKinds></visitorTraderKinds>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/baseTraderKinds</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+			<success>Always</success>
+			<value>
+				<baseTraderKinds></baseTraderKinds>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/caravanTraderKinds</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/caravanTraderKinds</xpath>
+			<value>
+				<li>Caravan_Outlander_Exotic</li>
+				<li>TSP_ST_MMT_Caravan_LivingVehicle</li>
+				<li>WW_Caravan_Outlander_Drugdealer</li>
+				<li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Archeological</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/visitorTraderKinds</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/visitorTraderKinds</xpath>
+			<value>
+				<li>Caravan_Outlander_Exotic</li>
+				<li>WW_Caravan_Outlander_Drugdealer</li>
+				<li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Archeological</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/baseTraderKinds</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/baseTraderKinds</xpath>
+			<value>
+				<li>Caravan_Outlander_Exotic</li>
+				<li>WW_Caravan_Outlander_Drugdealer</li>
+				<li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Archeological</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers/li/options</xpath>
+			<value>
+				<FlyingFrog>0.91</FlyingFrog>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers</xpath>
+			<value>
+				<li Inherit="False">
+					<kindDef>Combat</kindDef>
+					<options>
+						<TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">999</TSP_VFERA_ARCHON_BULBORB>
+					</options>
+				</li>
+				<li Inherit="False">
+					<kindDef>Combat</kindDef>
+					<options>
+						<FlyingFrog>999</FlyingFrog>
+						<ArchonWarrior>1</ArchonWarrior>
+					</options>
+				</li>
+				<li Inherit="False">
+					<kindDef>Peaceful</kindDef>
+					<options>
+						<TSP_VFERA_ARCHON_BULBORB>7</TSP_VFERA_ARCHON_BULBORB>
+						<ArchonWarrior>2</ArchonWarrior>
+					</options>
+				</li>
+				<li Inherit="False">
+					<kindDef>Peaceful</kindDef>
+					<options>
+						<ArchonWarrior>999</ArchonWarrior>
+					</options>
+				</li>
+				<li Inherit="False">
+					<kindDef>Trader</kindDef>
+					<commonality>100</commonality>
+					<traders>
+						<TSP_VFERA_ARCHON_BULBORB_Merchant MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</TSP_VFERA_ARCHON_BULBORB_Merchant>
+					</traders>
+					<carriers>
+						<Muffalo>1</Muffalo>
+						<Alpaca>1</Alpaca>
+						<Dromedary>1</Dromedary>
+						<Elephant>100</Elephant>
+						<BMT_GiantSnail MayRequire="biomesteam.biomescaverns">999</BMT_GiantSnail>
+						<Scarecrow MayRequire="halloweenparade.velcroboy333">0.75</Scarecrow>
+					</carriers>
+					<guards>
+						<TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">10</TSP_VFERA_ARCHON_BULBORB>
+						<ArchonWarrior>12</ArchonWarrior>
+						<FlyingFrog>3</FlyingFrog>
+					</guards>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!--
+	<Operation Class="PatchOperationConditional">
+	Does this exist?
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+		If it does, add this.
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers/li[1]/options</xpath>
+			<value>
+				<TSP_VFERA_ARCHON_BULBORB>6.78</TSP_VFERA_ARCHON_BULBORB>
+				<FlyingFrog>3</FlyingFrog>
+			</value>
+		</match>
+		If the first XPATH does not exist, the original code stands.
+	</Operation>
+	-->
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/permanentEnemy</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/permanentEnemy</xpath>
+			<value>
+				<permanentEnemyToEveryoneExcept>
+					<li>BeanManFaction</li>
+					<li>GARBAGEDAY_FACTION_PlayerBulborb</li>
+				</permanentEnemyToEveryoneExcept>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

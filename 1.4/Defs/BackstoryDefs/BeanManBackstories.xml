@@ -73,4 +73,48 @@
 		<li>BeanManAdult</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
+  
+	<AlienRace.AlienBackstoryDef MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+		<defName>TSP_VFERA_BeanMan_Archon</defName>
+		<title>Archotech Bulborb</title>
+		<titleShort>Archon Bean Man</titleShort>
+		<baseDesc>The transcendance of Glitter Worlds allowed for Archotechs to capture the technology for making sapient Bulborbs. [PAWN_nameDef] was such a Bulborb, empowered by the legendary might of the Archons beyond that which a normal Bean Pit could ever produce.</baseDesc>
+		<slot>Childhood</slot> <!-- Uses Archon Mod Adulthood Backstories -->
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Mining</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+		<forcedTraitsChance>
+			<li>
+				<defName>BeanMan</defName>
+				<chance>100</chance>
+			</li>
+		</forcedTraitsChance>
+		<disallowedTraits>
+			<BodyPurist>0</BodyPurist>
+			<Kind>0</Kind>
+		</disallowedTraits>
+		<spawnCategories>
+			<li>TSP_ArchonBulborb_ChildEye</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
 </Defs>

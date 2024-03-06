@@ -64,12 +64,17 @@
       <min>-999</min>
       <max>999</max>
     </allowedArrivalTemperatureRange>
+    <xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
+      <xenotypeChances MayRequire="ludeon.rimworld.biotech">
+        <VRE_Archon MayRequire="vanillaracesexpanded.archon">0.01</VRE_Archon>
+      </xenotypeChances>
+    </xenotypeSet>
     <maxPawnCostPerTotalPointsCurve>
       <points>
-        <li>(0,35)</li>
-        <li>(70, 50)</li>
-        <li>(700, 100)</li>
-        <li>(1300, 150)</li>
+        <li>(0,135)</li>
+        <li>(70, 150)</li>
+        <li>(700, 1000)</li>
+        <li>(1300, 1500)</li>
         <li>(100000, 10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
@@ -94,6 +99,7 @@
         <options>
           <BeanManGuard>1000</BeanManGuard>
 		  <BeanManTrader>1</BeanManTrader>
+		  <TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</TSP_VFERA_ARCHON_BULBORB>
         </options>
       </li>
       <li>
@@ -104,6 +110,7 @@
 		  <DaneDachshund>20</DaneDachshund>
 		  <LongBoi MayRequire="overpl.longboi">5</LongBoi>
 		  <BeanManLeader>1</BeanManLeader>
+		  <TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</TSP_VFERA_ARCHON_BULBORB>
         </options>
       </li>
       <li>
@@ -112,13 +119,15 @@
         <options>
           <BeanManGuard>120</BeanManGuard>
 		  <BeanManLeader>1</BeanManLeader>
+		  <TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</TSP_VFERA_ARCHON_BULBORB>
         </options>
       </li>
       <li>
         <kindDef>Trader</kindDef>
 		<commonality>40</commonality>
         <traders>
-          <BeanManTrader>1</BeanManTrader>
+          <BeanManTrader>100</BeanManTrader>
+		  <TSP_VFERA_ARCHON_BULBORB_Merchant MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">2</TSP_VFERA_ARCHON_BULBORB_Merchant>
         </traders>
         <carriers>
           <Muffalo>1</Muffalo>
@@ -131,6 +140,8 @@
         <guards>
           <BeanManGuard>40</BeanManGuard>
 		  <DaneDachshund>5</DaneDachshund>
+		  <TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</TSP_VFERA_ARCHON_BULBORB>
+		  <TSP_VFERA_ARCHON_BULBORB_Merchant MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</TSP_VFERA_ARCHON_BULBORB_Merchant>
 		  <PumpkinSad MayRequire="halloweenparade.velcroboy333">8</PumpkinSad>
 		  <PumpkinSmile MayRequire="halloweenparade.velcroboy333">8.3</PumpkinSmile>
 		  <PumpkinAnger MayRequire="halloweenparade.velcroboy333">8.2</PumpkinAnger>
@@ -153,6 +164,7 @@
         <guards>
           <BeanManGuard>60</BeanManGuard>
 		  <DaneDachshund>20</DaneDachshund>
+		  <TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</TSP_VFERA_ARCHON_BULBORB>
         </guards>
       </li>
       <li>
@@ -162,6 +174,7 @@
 		  <BeanManLeader>100</BeanManLeader>
 		  <DaneDachshund>11</DaneDachshund>
 		  <LongBoi MayRequire="overpl.longboi">5</LongBoi>
+		  <TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">11</TSP_VFERA_ARCHON_BULBORB>
         </options>
       </li>
     </pawnGroupMakers>
@@ -170,10 +183,5 @@
     <fixedLeaderKinds>
       <li>BeanManLeader</li>
     </fixedLeaderKinds>
-	
   </FactionDef>
-
-
-
-
 </Defs>
