@@ -41,22 +41,22 @@
 					<li>
 						<def>AnimalBabyTiny</def>
 						<minAge>0</minAge>
-						<soundWounded>Pawn_Chick_Call</soundWounded>
-						<soundDeath>Pawn_Chick_Call</soundDeath>
-						<soundCall>Pawn_Chick_Call</soundCall>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
 						<soundAngry>Frog_Angry</soundAngry>
 					</li>
 					<li>
 						<def>AnimalJuvenile</def>
-						<minAge>0.1</minAge>
-						<soundWounded>Pawn_Chick_Call</soundWounded>
-						<soundDeath>Pawn_Chick_Call</soundDeath>
-						<soundCall>Pawn_Chick_Call</soundCall>
+						<minAge>0.04</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
 						<soundAngry>Frog_Angry</soundAngry>
 					</li>
 					<li>
 						<def>AnimalAdult</def>
-						<minAge>0.18</minAge>
+						<minAge>0.12</minAge>
 						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 						<soundDeath>Pawn_Iguana_Death</soundDeath>
 						<soundCall>Pawn_Iguana_Call</soundCall>
@@ -71,7 +71,7 @@
 	<Operation Class="PatchOperationConditional" MayRequire="biomesteam.biomescaverns">
 	<!-- Does this exist? -->
 	<xpath MayRequire="biomesteam.biomescaverns">/Defs/ThingDef[defName="BMT_EggSandyToadUnfertilized"]</xpath>
-		<!-- If it DOES OT, add this. -->
+		<!-- If it DOES NOT, add this. -->
 		<nomatch Class="PatchOperationAdd" MayRequire="biomesteam.biomescaverns">
 			<success MayRequire="biomesteam.biomescaverns">Always</success>
 			<xpath MayRequire="biomesteam.biomescaverns">/Defs</xpath>

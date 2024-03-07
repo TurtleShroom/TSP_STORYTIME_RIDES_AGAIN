@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- This code was provided by the user 'I Exist', and then butchered and simplified on Dub's Discord chat room by Kyoutaigo -->
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="RawPotatoes"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="RawPotatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="mlie.tropickapprainforestmod">CK_TaroRoot</li>
+						<li MayRequire="sirmashedpotato.morrowrim">MorrowRim_RawAshYam</li>
+						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_RawAshYams</li>
+						<li MayRequire="ludeon.rimworld.biotech,sirmashedpotato.ashlands">Mashed_Ashlands_Plant_ToxYam</li>
+						<li MayRequire="ludeon.rimworld.biotech">Plant_Toxipotato</li>
+						<li MayRequire="vanillaexpanded.vplantsemore">VCE_SweetPotato</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="RawPotatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="mlie.tropickapprainforestmod">CK_TaroRoot</li>
+						<li MayRequire="sirmashedpotato.morrowrim">MorrowRim_RawAshYam</li>
+						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_RawAshYams</li>
+						<li MayRequire="ludeon.rimworld.biotech,sirmashedpotato.ashlands">Mashed_Ashlands_Plant_ToxYam</li>
+						<li MayRequire="ludeon.rimworld.biotech">Plant_Toxipotato</li>
+						<li MayRequire="vanillaexpanded.vplantsemore">VCE_SweetPotato</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="RawPotatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="mlie.tropickapprainforestmod">CK_TaroRoot</li>
+						<li MayRequire="sirmashedpotato.morrowrim">MorrowRim_RawAshYam</li>
+						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_RawAshYams</li>
+						<li MayRequire="ludeon.rimworld.biotech,sirmashedpotato.ashlands">Mashed_Ashlands_Plant_ToxYam</li>
+						<li MayRequire="ludeon.rimworld.biotech">Plant_Toxipotato</li>
+						<li MayRequire="vanillaexpanded.vplantsemore">VCE_SweetPotato</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/ThingDef/comps/li/fuelFilter/thingDefs/li[text()="RawPotatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="mlie.tropickapprainforestmod">CK_TaroRoot</li>
+						<li MayRequire="sirmashedpotato.morrowrim">MorrowRim_RawAshYam</li>
+						<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_RawAshYams</li>
+						<li MayRequire="ludeon.rimworld.biotech,sirmashedpotato.ashlands">Mashed_Ashlands_Plant_ToxYam</li>
+						<li MayRequire="ludeon.rimworld.biotech">Plant_Toxipotato</li>
+						<li MayRequire="vanillaexpanded.vplantsemore">VCE_SweetPotato</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
