@@ -377,4 +377,37 @@
 			</value>
 		</nomatch>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="EveningDress"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="EveningDress"]/apparel</xpath>
+			<value>
+				<gender>Female</gender>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="PleatedDress"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="PleatedDress"]/apparel</xpath>
+			<value>
+				<gender>Female</gender>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="SolemnDress"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="SolemnDress"]/apparel</xpath>
+			<value>
+				<gender>Female</gender>
+			</value>
+		</nomatch>
+	</Operation>
 </Patch>

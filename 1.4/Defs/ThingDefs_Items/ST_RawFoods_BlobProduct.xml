@@ -15,8 +15,8 @@
 
 	  <ThingDef ParentName="OrganicProductBase">
 		<defName>ST_GreenOoze</defName>
-		<label>Green Ooze</label>
-		<description>Nutritious ooze extracted from slime. Vile when raw, fine to eat otherwise, and very healthy.</description>
+		<label>ooze</label>
+		<description>Nutritious ooze extracted from slime. Vile when raw, fine to eat otherwise, and very healthy. Animals love it.</description>
 		<graphicData>
 		  <texPath>Things/Items/Resources/Slimes/Green_Ooze</texPath>
 		</graphicData>
@@ -33,13 +33,21 @@
 		</comps>
 		<ingestible>
 			<preferability>RawBad</preferability>
-			<foodType>AnimalProduct, Fluid, Liquor</foodType>
+			<foodType>AnimalProduct, Fluid, Liquor, Kibble</foodType>
 			<specialThoughtDirect>AteOoze</specialThoughtDirect>
 			<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient> <!-- It tastes just fine when cooked! -->
 			<babiesCanIngest>true</babiesCanIngest>
+			<optimalityOffsetHumanlikes>-1</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>30</optimalityOffsetFeedingAnimals>
 		</ingestible>
 		<thingCategories>
-		  <li>AnimalProductRaw</li>
+			<li>AnimalProductRaw</li>
 		</thingCategories>
-	  </ThingDef>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>16</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
 </Defs>

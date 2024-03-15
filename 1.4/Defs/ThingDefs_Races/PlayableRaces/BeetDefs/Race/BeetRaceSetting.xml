@@ -128,7 +128,7 @@
 				<blackEndoCategories>
 					<li>BodyType</li>
 					<li>Head</li>
-					<li>Melanin</li> <!-- Can get an overridden skin color, but will always be a natural born green  Pawn otherwise -->
+					<li>Melanin</li> <!-- Can get an overridden skin color, but will always be a natural born green Pawn otherwise -->
 					<li>Jaw</li>
 				</blackEndoCategories>
 				<blackGeneTags>
@@ -150,6 +150,8 @@
 		  <RoyalFavorValue>6</RoyalFavorValue>
 		  <LeatherAmount>300</LeatherAmount>
 		  <CarryingCapacity>90</CarryingCapacity>
+		  <SM_ConcussiveDmgMult MayRequire="redmattis.betterprerequisites">0.82</SM_ConcussiveDmgMult>
+		  <SM_BulletDmgMult MayRequire="redmattis.betterprerequisites">1.12</SM_BulletDmgMult>
 		  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_GhoulismSusceptibility>
 		</statBases>
 		<tools>
@@ -202,12 +204,14 @@
 		  <li>
 			<label>tusk</label>
 			<capacities>
-			  <li>Scratch</li>
+			  <!-- <li>Scratch</li> -->
 			  <li>Stab</li>
+			  <li>Bite</li>
 			</capacities>
 			<power>25</power>
 			<cooldownTime>2.6</cooldownTime>
 			<linkedBodyPartsGroup>TuskAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			<chanceFactor>1</chanceFactor>
 			<surpriseAttack>
 			  <extraMeleeDamages>
@@ -249,7 +253,7 @@
 			<points>
 			  <li>(0.5, 0)</li>
 			  <li>(1, 1)</li>
-			  <li>(1.01, 0.02)</li>
+			  <li>(1.01, 0.33)</li>
 			  <li>(3.5, 0)</li>
 			</points>
 		  </litterSizeCurve>

@@ -6,6 +6,7 @@
 	<BodyPartDef>
 		<defName>VAEAF_Wheel</defName>
 		<label>car wheel</label>
+		<labelShort>wheel</labelShort>
 		<hitPoints>20</hitPoints>
 		<frostbiteVulnerability>0</frostbiteVulnerability>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
@@ -29,10 +30,23 @@
 		<canSuggestAmputation>false</canSuggestAmputation>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<delicate>false</delicate>
 		<skinCovered>false</skinCovered>
+		<pawnGeneratorCanAmputate>false</pawnGeneratorCanAmputate>
 		<solid>true</solid>
 		<alive>false</alive>
+		<canScarify>true</canScarify>
 		<bleedRate>0</bleedRate>
+	</BodyPartDef>
+	
+	<BodyPartDef ParentName="VAEAF_Chassis">
+		<defName>TSP_VAEAF_ChassisCore</defName>
+		<label>chassis</label>
+		<hitPoints>350</hitPoints>
+		<conceptual>true</conceptual>
+		<tags>
+			<li>Torso</li>
+		</tags>
 	</BodyPartDef>
 
 	<BodyPartDef ParentName="VAEAF_Chassis">
@@ -75,12 +89,14 @@
 		<tags>
 			<li>BreathingPathway</li>
 			<li>BreathingSourceCage</li>
+			<li>Neck</li>
 		</tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>VAEAF_OnBoardComputer</defName>
 		<label>on-board computer</label>
+		<labelShort>brains</labelShort>
 		<hitPoints>10</hitPoints>
 		<permanentInjuryChanceFactor>0.5</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
@@ -144,6 +160,7 @@
 	<BodyPartDef>
 		<defName>VAEAF_FrontLights</defName>
 		<label>front lights</label>
+		<labelShort>headlights</labelShort>
 		<hitPoints>8</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
 		<permanentInjuryChanceFactor>0.15</permanentInjuryChanceFactor>
@@ -168,6 +185,8 @@
 		<solid>true</solid>
 		<alive>false</alive>
 		<socketed>true</socketed>
+		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+		<canSuggestAmputation>true</canSuggestAmputation>
 		<bleedRate>0</bleedRate>
 		<!--
 		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarWiring</spawnThingOnRemoved>
@@ -182,7 +201,7 @@
 	<BodyPartDef>
 		<defName>VAEAF_Alarm</defName>
 		<label>alarm</label>
-		<destroyableByDamage>false</destroyableByDamage>
+		<destroyableByDamage>true</destroyableByDamage>
 		<hitPoints>10</hitPoints>
 		<frostbiteVulnerability>0</frostbiteVulnerability>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
@@ -190,6 +209,8 @@
 		<solid>true</solid>
 		<alive>false</alive>
 		<socketed>true</socketed>
+		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+		<canSuggestAmputation>true</canSuggestAmputation>
 		<bleedRate>0</bleedRate>
 		<!--
 		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarWiring</spawnThingOnRemoved>
@@ -211,6 +232,8 @@
 		<alive>false</alive>
 		<bleedRate>0.6</bleedRate>
 		<delicate>true</delicate>
+		<pawnGeneratorCanAmputate>false</pawnGeneratorCanAmputate>
+		<canSuggestAmputation>true</canSuggestAmputation> <!-- This incapacitates the car -->
 		<!--
 		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarBattery</spawnThingOnRemoved>
 		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
@@ -295,7 +318,7 @@
 		<solid>false</solid>
 		<alive>false</alive>
 		<delicate>true</delicate>
-		<bleedRate>1</bleedRate>
+		<bleedRate>2</bleedRate>
 		<!--
 		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarTransmission</spawnThingOnRemoved>
 		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
