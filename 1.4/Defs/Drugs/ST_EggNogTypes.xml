@@ -484,58 +484,61 @@
     <orderedTakeGroup>Drug</orderedTakeGroup>
   </ThingDef>
   
-  <ThingDef Name="FireNog" Abstract="True">
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <useHitPoints>true</useHitPoints>
-    <healthAffectsPrice>true</healthAffectsPrice>
-    <selectable>true</selectable>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <Flammability>3</Flammability>
-      <Beauty>0</Beauty>
-      <Mass>0.44</Mass>
-      <DeteriorationRate>10</DeteriorationRate>
-	  <Nutrition>0.1</Nutrition>
-    </statBases>
-    <altitudeLayer>Item</altitudeLayer>
-    <stackLimit>5</stackLimit>
-    <tickerType>Rare</tickerType>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <thingCategories>
-      <li>TSP_ST_EggNog</li>
-	  <li>Grenades</li>
-    </thingCategories>
-    <alwaysHaulable>true</alwaysHaulable>
-    <comps>
-		<li Class="CompProperties_Forbiddable" />
-		<li Class="CompProperties_Ingredients" />
-    </comps>
-	<ingestible>
-		<foodType>Processed, Fluid, Liquor</foodType>
-		<preferability>NeverForNutrition</preferability>
-		<tableDesired>false</tableDesired>
-		<tasteThought Inherit="False"></tasteThought>
-		<specialThoughtDirect Inherit="False"></specialThoughtDirect>
-		<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient>
-		<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce> <!-- Apparently, you can only take one hit on a drug at a time -->
-		<outcomeDoers>
-			<li Class="IngestionOutcomeDoer_GiveHediff">
-			  <hediffDef>HediffEggNog</hediffDef>
-			  <severity>0.4</severity>
-			  <toleranceChemical>EggNogChemical</toleranceChemical>
-			</li>
-			<li Class="IngestionOutcomeDoer_GiveHediff">
-			  <hediffDef>EggNogTolerance</hediffDef>
-			  <severity>0.03</severity>
-			  <divideByBodySize>true</divideByBodySize>
-			</li>
-		</outcomeDoers>
-	</ingestible>
-    <pathCost>14</pathCost>
-    <resourceReadoutPriority>Last</resourceReadoutPriority>
-    <drawGUIOverlay>true</drawGUIOverlay>
-  </ThingDef>
+	<ThingDef Name="FireNog" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<healthAffectsPrice>true</healthAffectsPrice>
+		<selectable>true</selectable>
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <Flammability>3</Flammability>
+		  <Beauty>0</Beauty>
+		  <Mass>0.44</Mass>
+		  <DeteriorationRate>10</DeteriorationRate>
+		  <Nutrition>0.1</Nutrition>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>5</stackLimit>
+		<tickerType>Rare</tickerType>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<thingCategories>
+		  <li>TSP_ST_EggNog</li>
+		  <li>Grenades</li>
+		</thingCategories>
+		<alwaysHaulable>true</alwaysHaulable>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li Class="CompProperties_Ingredients" />
+		</comps>
+		<ingestible>
+			<foodType>Processed, Fluid, Liquor</foodType>
+			<preferability>NeverForNutrition</preferability>
+			<tableDesired>false</tableDesired>
+			<tasteThought Inherit="False"></tasteThought>
+			<specialThoughtDirect Inherit="False"></specialThoughtDirect>
+			<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce> <!-- Apparently, you can only take one hit on a drug at a time -->
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				  <hediffDef>HediffEggNog</hediffDef>
+				  <severity>0.4</severity>
+				  <toleranceChemical>EggNogChemical</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				  <hediffDef>EggNogTolerance</hediffDef>
+				  <severity>0.03</severity>
+				  <divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<pathCost>14</pathCost>
+		<resourceReadoutPriority>Last</resourceReadoutPriority>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<modExtensions>
+			<li Class="NightmareCore.ThingModExtension_DisplayableItem" MayRequire="nightmare.core,nightmare.museums"></li>
+		</modExtensions>
+	</ThingDef>
 
   
   <ThingDef ParentName="FireNog">
