@@ -21,19 +21,29 @@
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Meat_Megaspider</thingDef>
 				<countRange>
-					<min>500</min>
-					<max>1000</max>
+					<min>5000</min>
+					<max>10000</max>
 				</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Meat_JudasFrog</thingDef>
 				<countRange>
-					<min>500</min>
-					<max>1000</max>
+					<min>5000</min>
+					<max>10000</max>
 				</countRange>
 			</li>
 			<li Class="StockGenerator_ReinforcedBarrels">
-				<countRange>1~4</countRange>
+				<countRange>3~9</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="sarg.rimbees">
+				<thingDef MayRequire="sarg.rimbees">RB_Bee_TSP_ST_Gnee_Basic_Queen</thingDef>
+				<countRange MayRequire="sarg.rimbees">0~1</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="sarg.rimbees">
+				<thingDef MayRequire="sarg.rimbees">RB_Bee_TSP_ST_Gnee_Basic_Drone</thingDef>
+				<countRange MayRequire="sarg.rimbees">0~1</countRange>
 			</li>
 
 			<li Class="StockGenerator_Animals">
@@ -42,8 +52,9 @@
 				</tradeTagsSell>
 				<tradeTagsBuy>
 					<li>JudasFrog</li>
+					<li>AnimalInsect</li>
 				</tradeTagsBuy>
-				<kindCountRange>1</kindCountRange>
+				<kindCountRange>1~2</kindCountRange>
 				<countRange>3~8</countRange>
 				<createMatingPair>
 					<li>JudasFrog</li>

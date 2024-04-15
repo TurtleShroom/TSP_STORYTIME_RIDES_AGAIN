@@ -1,0 +1,31 @@
+TSP_ST_Beesearch_Test
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+Verse.Log:Message (string)
+RimBees.CompRandomResearch:Hatch ()
+RimBees.CompRandomResearch:CompTick ()
+Verse.ThingWithComps:Tick ()
+Verse.TickList:Tick ()
+(wrapper dynamic-method) Verse.TickManager:Verse.TickManager.DoSingleTick_Patch2 (Verse.TickManager)
+Verse.TickManager:TickManagerUpdate ()
+Verse.Game:UpdatePlay ()
+Verse.Root_Play:Update ()
+
+
+Error in CompUseEffect: System.NullReferenceException: Object reference not set to an instance of an object
+  at RimBees.Dialog_BeeResearch..ctor (System.String BeePicture, System.String BeeText) [0x00019] in <58c67ed915df4b5ebb311590105794d7>:0 
+  at RimBees.CompUseEffect_ShowBeeResearch.DoEffect (Verse.Pawn user) [0x0005f] in <58c67ed915df4b5ebb311590105794d7>:0 
+  at RimWorld.CompUsable.UsedBy (Verse.Pawn p) [0x0004a] in <cd7169108ea74757aa50c5b33d275c15>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+(wrapper dynamic-method) Verse.Log:Verse.Log.Error_Patch1 (string)
+RimWorld.CompUsable:UsedBy (Verse.Pawn)
+RimWorld.JobDriver_UseItem/<>c__DisplayClass7_0:<Use>b__0 ()
+Verse.AI.JobDriver:TryActuallyStartNextToil ()
+Verse.AI.JobDriver:ReadyForNextToil ()
+Verse.AI.JobDriver:DriverTick ()
+Verse.AI.Pawn_JobTracker:JobTrackerTick ()
+Verse.Pawn:Tick ()
+Verse.TickList:Tick ()
+(wrapper dynamic-method) Verse.TickManager:Verse.TickManager.DoSingleTick_Patch2 (Verse.TickManager)
+Verse.TickManager:TickManagerUpdate ()
+Verse.Game:UpdatePlay ()
+Verse.Root_Play:Update ()
