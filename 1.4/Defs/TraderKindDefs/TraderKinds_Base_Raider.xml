@@ -7,34 +7,33 @@
 	
 	<li Class="StockGenerator_SingleDef">
         <thingDef>Silver</thingDef>
-        <countRange>600~2000</countRange>
+        <countRange>36000~100000</countRange>
     </li>
 	<li Class="StockGenerator_SingleDef">
         <thingDef>ComponentIndustrial</thingDef>
-        <countRange>10~20</countRange>
+        <countRange>10~200</countRange>
     </li>
 	      <li Class="StockGenerator_SingleDef">
         <thingDef>Steel</thingDef>
-        <countRange>300~600</countRange>
+        <countRange>300~1600</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>WoodLog</thingDef>
-        <countRange>200~400</countRange>
+        <countRange>200~3400</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Cloth</thingDef>
-        <countRange>100~250</countRange>
+        <countRange>100~2250</countRange>
       </li>
 	  <li Class="StockGenerator_Tag">
         <tradeTag>MortarShell</tradeTag>
         <thingDefCountRange>2~3</thingDefCountRange>
-        <countRange>50~70</countRange>
+        <countRange>80~170</countRange>
       </li>
 	  
 	  <li Class="StockGenerator_Category">
         <categoryDef>Drugs</categoryDef>
-        <thingDefCountRange>5~10</thingDefCountRange>
-        <totalPriceRange>200~13000</totalPriceRange>
+        <thingDefCountRange>8~25</thingDefCountRange>
       </li>
 	  
 	  <!--
@@ -45,8 +44,20 @@
 	  
       <li Class="StockGenerator_Category">
         <categoryDef>WeaponsMelee</categoryDef>
-        <thingDefCountRange>4~8</thingDefCountRange>
-        <countRange>4~7</countRange>
+        <thingDefCountRange>1~18</thingDefCountRange>
+        <countRange>1~4</countRange>
+      </li>
+	  
+      <li Class="StockGenerator_Category">
+        <categoryDef>WeaponsReanged</categoryDef>
+        <thingDefCountRange>4~18</thingDefCountRange>
+        <countRange>0~1</countRange>
+      </li>
+	  
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Luciferium</thingDef>
+        <countRange>10~12</countRange>
+		<price>Expensive</price>
       </li>
 
       <!-- Apparel -->
@@ -65,10 +76,12 @@
 		<slaveKindDef>CombatSlave</slaveKindDef>
       </li>
 	  
+	  <!--
 	  <li Class="StockGenerator_Slaves">
         <respectPopulationIntent>false</respectPopulationIntent>
         <countRange>1~2</countRange>
       </li>
+	  -->
 	  
 	  <li Class="StockGenerator_Animals">
         <tradeTagsSell>
@@ -103,11 +116,46 @@
         <countRange>3~8</countRange>
       </li>
 	  
-      <li Class="StockGenerator_BuyExpensiveSimple" />
-      <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
-      <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
-      <li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
-      <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+      <!-- Buying -->
+			<li Class="StockGenerator_BuyExpensiveSimple" />
+			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeFlour</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Worm</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>WormRaw</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeBatta</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeMeat</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeVegetarian</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="mo.decorationsluxury">
+				<tag MayRequire="mo.decorationsluxury">MO_Luxury</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
+				<tag MayRequire="sirmashedpotato.morrowrim.alcoholremade">DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DunmerBooze</tag>
+			</li>
     </stockGenerators>
   </TraderKindDef>
 

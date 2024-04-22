@@ -97,7 +97,6 @@
 				<li>HSEdoClanPeasant</li>
 				<li>RWPMeleeBasic</li>
 				<li>NeolithicMeleeBasic</li>
-				<li>SurvivalistMelee</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -163,7 +162,6 @@
 				<li>CallOfCthulhu_Farmer</li>
 				<li>HSEdoClanPeasant</li>
 				<li>SurvivalistMelee</li>
-				<li>PeeledWeaponBasic</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -186,6 +184,7 @@
 				<li>PeeledWeaponBasic</li>
 				<li>GnomeSimpleMelee</li>
 				<li>HSEdoClanPeasant</li>
+				<li>SurvivalistMelee</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -206,7 +205,6 @@
 				<li>BeetMelee</li>
 				<li>JeubMelee</li>
 				<li>BeanManMelee</li>
-				<li>FrogmanMelee</li>
 				<li>WoodcuttingHatchet</li>
 				<li>Axe</li>
 				<li>klan_melee</li>
@@ -238,6 +236,8 @@
 				<li>PeeledWeapon</li>
 				<li>PeeledWeaponMelee</li>
 				<li>PeeledWeaponBasic</li>
+				<li>SurvivalistMelee</li>
+				<li>HarrierMelee</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -245,7 +245,8 @@
 	
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/ThingDef[defName="HS_BasicKama"]/weaponTags</xpath>
-		<match Class="PatchOperationAdd"><!-- If it does, add this. -->
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
 			<xpath>/Defs/ThingDef[defName="HS_BasicKama"]/weaponTags</xpath>
 			<value>
 				<li>Toolagri</li>
@@ -259,14 +260,17 @@
 				<li>RWPMeleeBasic</li>
 				<li>NeolithicMeleeBasic</li>
 				<li>Sickle</li>
+				<li>SurvivalistMelee</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="tool_faux"]/weaponTags</xpath>
-		<match Class="PatchOperationAdd"><!-- If it does, add this. -->
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
 			<xpath>/Defs/ThingDef[defName="tool_faux"]/weaponTags</xpath>
 			<value>
 				<li>Toolagri</li>
@@ -288,11 +292,13 @@
 	<Operation Class="PatchOperationConditional">
 		<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="TSF_Naginata"]/weaponTags</xpath>
-		<match Class="PatchOperationAdd"><!-- If it does, add this. -->
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
 			<xpath>/Defs/ThingDef[defName="TSF_Naginata"]/weaponTags</xpath>
 			<value>
 				<li>WeebGirlWeaponry</li>
 				<li>Naginata</li>
+				<li>Toolagri</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -316,5 +322,19 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="MeleeWeapon_Nudelholz"]/weaponTags</xpath>
+		<match Class="PatchOperationAdd">
+		<!-- If it does, add this. -->
+			<xpath>/Defs/ThingDef[defName="MeleeWeapon_Nudelholz"]/weaponTags</xpath>
+			<value>
+				<li>WeebGirl</li>
+				<li>Toolagri</li>
+				<li>GnomeMelee</li>
+				<li>GnomeChef</li>
+				<li>PeeledWeaponBasic</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

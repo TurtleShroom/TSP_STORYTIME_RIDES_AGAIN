@@ -7,35 +7,35 @@
       
 	<li Class="StockGenerator_SingleDef">
         <thingDef>Silver</thingDef>
-        <countRange>1200~3000</countRange>
+        <countRange>12000~30000</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>ComponentIndustrial</thingDef>
-        <countRange>10~25</countRange>
+        <countRange>100~250</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Steel</thingDef>
-        <countRange>500~600</countRange>
+        <countRange>5000~6000</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>WoodLog</thingDef>
-        <countRange>600~800</countRange>
+        <countRange>6000~8000</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Cloth</thingDef>
-        <countRange>100~150</countRange>
+        <countRange>1000~1500</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Gold</thingDef>
-        <countRange>-20~60</countRange>
+        <countRange>20~60</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Pemmican</thingDef>
-        <countRange>200~600</countRange>
+        <countRange>200~2600</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Kibble</thingDef>
-        <countRange>200~600</countRange>
+        <countRange>1200~1600</countRange>
       </li>
 	  <li Class="StockGenerator_Category">
         <categoryDef>FoodMeals</categoryDef>
@@ -44,7 +44,7 @@
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>MedicineHerbal</thingDef>
-        <countRange>25~60</countRange>
+        <countRange>25~160</countRange>
       </li>
 	  <li Class="StockGenerator_SingleDef">
         <thingDef>MedicineIndustrial</thingDef>
@@ -53,18 +53,15 @@
       <li Class="StockGenerator_Category">
         <categoryDef>Textiles</categoryDef>
         <thingDefCountRange>1~2</thingDefCountRange>
-        <totalPriceRange>300~700</totalPriceRange>
+        <totalPriceRange>300~1700</totalPriceRange>
       </li>
       <li Class="StockGenerator_Category">
         <categoryDef>ResourcesRaw</categoryDef>
         <thingDefCountRange>2~2</thingDefCountRange>
-        <totalPriceRange>200~300</totalPriceRange>
+        <totalPriceRange>200~1300</totalPriceRange>
       </li>
       <li Class="StockGenerator_Category">
         <categoryDef>FoodRaw</categoryDef>
-        <excludedCategories>
-          <li>EggsFertilized</li>
-        </excludedCategories>
         <thingDefCountRange>6~13</thingDefCountRange>
         <totalPriceRange>300~500</totalPriceRange>
       </li>
@@ -92,19 +89,6 @@
 			</countRange>
 		</li>
 	  
-	  <li Class="StockGenerator_Techprints">
-        <countChances>
-          <li>
-            <count>2</count>
-            <chance>0.5</chance>
-          </li>
-          <li>
-            <count>3</count>
-            <chance>0.5</chance>
-          </li>
-        </countChances>
-      </li>
-	  
 	  <!--
 	  <li Class="StockGenerator_WeaponsRanged">
         <countRange>1~3</countRange>
@@ -114,7 +98,7 @@
       <li Class="StockGenerator_Category">
         <categoryDef>WeaponsMelee</categoryDef>
         <thingDefCountRange>3~3</thingDefCountRange>
-        <countRange>1~2</countRange>
+        <countRange>4~19</countRange>
       </li>
 	  
       <li Class="StockGenerator_Category">
@@ -143,12 +127,12 @@
       <!-- Buildings -->
       <li Class="StockGenerator_Category">
         <categoryDef>BuildingsFurniture</categoryDef>
-        <thingDefCountRange>1~2</thingDefCountRange>
-        <countRange>1~2</countRange>
+        <thingDefCountRange>1~6</thingDefCountRange>
+        <countRange>1~4</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Telescope</thingDef>
-        <countRange>1</countRange>
+        <countRange>1~3</countRange>
       </li>
 
       <!-- 희귀품 -->
@@ -161,21 +145,16 @@
         <tradeTag>ExoticMisc</tradeTag>
         <thingDefCountRange>2</thingDefCountRange>
         <countRange>1~2</countRange>
-        <excludedThingDefs>
-          <li>Luciferium</li> <!-- already handled by drugs -->
-          <li>ComponentSpacer</li> <!-- already handled by single def -->
-        </excludedThingDefs>
-        <customCountRanges>
-          <MedicineUltratech>3~9</MedicineUltratech>
-          <Hyperweave>20~35</Hyperweave>
-        </customCountRanges>
       </li>
 
       <!-- 동물 -->
       <li Class="StockGenerator_Animals">
         <tradeTagsSell>
-          <li>AnimalFarm</li>
-          <li>AnimalPet</li>
+			<li>AnimalFarm</li>
+			<li>AnimalPet</li>
+			<li>AnimalVehicle</li>
+			<li>StorytimeAnimal</li>
+			<li>AnimalInsect</li>
         </tradeTagsSell>
         <tradeTagsBuy>
 			<li>AnimalCommon</li>
@@ -210,6 +189,18 @@
 					<min>100</min>
 					<max>300</max>
 				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ST_Worm</thingDef>
+				<countRange>
+					<min>100</min>
+					<max>900</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_ReinforcedBarrels">
+				<countRange>3~9</countRange>
 			</li>
 
       <!-- Buying -->
@@ -249,8 +240,8 @@
 			<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
 				<tag MayRequire="sirmashedpotato.morrowrim.alcoholremade">DunmerBooze</tag>
 			</li>
-			<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
-				<tag MayRequire="sirmashedpotato.ashlands">DunmerBooze</tag>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DunmerBooze</tag>
 			</li>
     </stockGenerators>
   </TraderKindDef>

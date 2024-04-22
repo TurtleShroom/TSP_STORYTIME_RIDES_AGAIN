@@ -51,16 +51,24 @@
       </buildingTags>
     </building>
     <comps>
-      <li>
-        <compClass>CompReportWorkSpeed</compClass>
-      </li>
-	<li Class="CompProperties_AffectedByFacilities">
-		<linkableFacilities>
-			<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_CNCMachine</li>
-			<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_3DPrinter</li>
-			<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_RobotAssistant</li>
-		</linkableFacilities>
-	</li>
+		<li>
+			<compClass>CompReportWorkSpeed</compClass>
+		</li>
+		<li Class="CompProperties_AffectedByFacilities">
+			<linkableFacilities>
+				<li>ToolCabinet</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_CNCMachine</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_3DPrinter</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_RobotAssistant</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_ConveyorBelt</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_BotanicalEnclosure</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_LaserEngraver</li>
+				<li MayRequire="vanillaexpanded.vfeproduction">VFE_KitchenSinkCabinet</li>
+				<li MayRequire="vanillaexpanded.vfeproduction">VFE_MachiningCabinet</li>
+				<li MayRequire="vanillaexpanded.vfeproduction">VFE_FabricationCabinet</li>
+				<li MayRequire="vanillaexpanded.vfeproduction">VFE_SmithyCabinet</li>
+			</linkableFacilities>
+		</li>
     </comps>
     <!-- <designationHotKey>Misc1</designationHotKey> -->
     <placeWorkers>

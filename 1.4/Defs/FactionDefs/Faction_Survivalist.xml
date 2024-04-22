@@ -24,6 +24,7 @@
     <settlementGenerationWeight>1</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
+	<permanentEnemy>false</permanentEnemy>
     <canMakeRandomly>true</canMakeRandomly>
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
@@ -76,7 +77,7 @@
       <li>Caravan_Survivalist_SurvivalGoods</li>
       <li>Caravan_Survivalist_Animals</li>
 	  <li>WW_Caravan_Outlander_Drugdealer</li>
-	  <li>Caravan_Neolithic_Slaver</li>
+	  <li>TSP_ST_MMT_Caravan_LivingVehicle</li>
     </caravanTraderKinds>
     <visitorTraderKinds>
       <li>Caravan_Survivalist_SurvivalGoods</li>
@@ -103,7 +104,7 @@
         <options>
           <Survivalist>15</Survivalist>
           <Local_Spy>16</Local_Spy>
-          <Grenadier_Destructive>.5</Grenadier_Destructive>
+          <Grenadier_Destructive>0.5</Grenadier_Destructive>
           <Footman>28</Footman>
 		  <HeavyFootman>15</HeavyFootman>
           <Ambusher>25</Ambusher>
@@ -117,6 +118,23 @@
 		  <Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">7</Oni_HeavyArcher>
 		  <RWP_Bandit_Recruit MayRequire="mlie.rimworldwesternizationproject">1</RWP_Bandit_Recruit>
 		  <Hunter MayRequire="ludeon.rimworld.ideology">2</Hunter>
+        </options>
+      </li>
+      <li>
+        <!-- 일반 -->
+        <kindDef>Combat</kindDef>
+		<commonality>90</commonality>
+        <options>
+          <Survivalist>9</Survivalist>
+          <Local_Spy>9</Local_Spy>
+          <Grenadier_Destructive>3</Grenadier_Destructive>
+          <Footman>9</Footman>
+		  <HeavyFootman>9</HeavyFootman>
+          <Ambusher>9</Ambusher>
+          <Striker>9</Striker>
+          <Survivalist_Leader>1</Survivalist_Leader>
+		  <Guerrilla>8</Guerrilla>
+		  <Drifter>4</Drifter>
         </options>
       </li>
 	  <li>
@@ -171,21 +189,57 @@
       </li>
       <li>
         <kindDef>Peaceful</kindDef>
+		<commonality>40</commonality>
         <options>
 		  <Footman>18</Footman>
 		  <HeavyFootman>18</HeavyFootman>
           <Survivalist>18</Survivalist>
           <Local_Spy>18</Local_Spy>
           <Survivalist_Leader>3</Survivalist_Leader>
+          <Grenadier_Destructive>0.5</Grenadier_Destructive>
+          <Ambusher>25</Ambusher>
+          <Striker>20</Striker>
+		  <Guerrilla>15</Guerrilla>
 		  <ROM_TownsfolkTeacher MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkTeacher>
 		  <Oni_Hunter MayRequire="tarojun.morishep.onioftherim">1</Oni_Hunter>
 		  <Oni_Archer MayRequire="tarojun.morishep.onioftherim">1</Oni_Archer>
 		  <Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">1</Oni_HeavyArcher>
 		  <RWP_Bandit_Recruit MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Recruit>
-		  <Drifter>1</Drifter>
-		  <Tribal_Child MayRequire="ludeon.rimworld.biotech">2</Tribal_Child>
-		  <Miner MayRequire="ludeon.rimworld.ideology">1</Miner>
-		  <Hunter MayRequire="ludeon.rimworld.ideology">1</Hunter>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+		<commonality>100</commonality>
+        <options>
+		  <Footman>18</Footman>
+		  <HeavyFootman>18</HeavyFootman>
+          <Survivalist>18</Survivalist>
+          <Local_Spy>18</Local_Spy>
+          <Survivalist_Leader>3</Survivalist_Leader>
+          <Grenadier_Destructive>0.5</Grenadier_Destructive>
+          <Ambusher>25</Ambusher>
+          <Striker>20</Striker>
+		  <Guerrilla>15</Guerrilla>
+		  <ROM_TownsfolkTeacher MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkTeacher>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+		<commonality>15</commonality>
+        <options>
+			<Survivalist>1</Survivalist>
+			<Drifter>1</Drifter>
+			<Tribal_Child MayRequire="ludeon.rimworld.biotech">2</Tribal_Child>
+			<Miner MayRequire="ludeon.rimworld.ideology">1</Miner>
+			<Hunter MayRequire="ludeon.rimworld.ideology">1</Hunter>
+			<ROM_TownsfolkTeacher MayRequire="rimofmadness.callofcthulhu.factions">1</ROM_TownsfolkTeacher>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+		<commonality>15</commonality>
+        <options>
+			<Survivalist>999</Survivalist>
         </options>
       </li>
       <li>
@@ -234,11 +288,11 @@
 		  <Oni_Hunter MayRequire="tarojun.morishep.onioftherim">0.5</Oni_Hunter>
 		  <Oni_Archer MayRequire="tarojun.morishep.onioftherim">0.5</Oni_Archer>
 		  <Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">0.5</Oni_HeavyArcher>
-		  <Tribal_Child MayRequire="ludeon.rimworld.biotech">1</Tribal_Child>
+		  <Tribal_Child MayRequire="ludeon.rimworld.biotech">3</Tribal_Child>
 		  <Miner MayRequire="ludeon.rimworld.ideology">1</Miner>
         </options>
       </li>
     </pawnGroupMakers>
-    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <settlementTexturePath>World/Survivalist</settlementTexturePath>
   </FactionDef>
 </Defs>

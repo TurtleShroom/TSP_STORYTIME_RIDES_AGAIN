@@ -6,14 +6,14 @@
     <label>goblin clan</label>
     <description>Politically Organized Goblins.</description>
     <pawnsPlural>goblins</pawnsPlural>
-    <settlementGenerationWeight>0.4</settlementGenerationWeight>
+    <settlementGenerationWeight>0.84</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
 	<maxCountAtGameStart>1</maxCountAtGameStart>
 	<maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
     <canMakeRandomly>true</canMakeRandomly>
     <canStageAttacks>true</canStageAttacks>
 	<canSiege>true</canSiege>
-	<basicMemberKind>GoblinPeon</basicMemberKind>
+	<basicMemberKind>GoblinRunner</basicMemberKind>
     <factionIconPath>World/Goblins/GoblinLogo</factionIconPath>
     <colorSpectrum>
       <li>(150, 175, 25)</li>
@@ -112,7 +112,7 @@
           <GoblinWarlord>5</GoblinWarlord>
 		  <GoblinTrader>1</GoblinTrader>
 		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
-		  <PPHHYY_Doomsday_Goblin>0.001</PPHHYY_Doomsday_Goblin>
+		  <PPHHYY_Doomsday_Goblin>0.33</PPHHYY_Doomsday_Goblin>
         </options>
       </li>
       <li MayRequire="oskarpotocki.vfe.empire">
@@ -124,7 +124,7 @@
       </li>
       <li>
         <kindDef>Peaceful</kindDef>
-		<commonality>100</commonality>
+		<commonality>80</commonality>
         <options>
 		  <PPHHYY_Doomsday_Goblin>999</PPHHYY_Doomsday_Goblin>
         </options>
@@ -148,13 +148,16 @@
 		  <PumpkinSad MayRequire="halloweenparade.velcroboy333">0.8</PumpkinSad>
 		  <PumpkinSmile MayRequire="halloweenparade.velcroboy333">0.83</PumpkinSmile>
 		  <PumpkinAnger MayRequire="halloweenparade.velcroboy333">0.82</PumpkinAnger>
+		  <Mech_Militor MayRequire="ludeon.rimworld.biotech">5</Mech_Militor>
         </options>
       </li>
       <li>
         <kindDef>Combat</kindDef>
 		<commonality>90</commonality>
         <options>
-			<GoblinTinkerer>999</GoblinTinkerer>
+			<GoblinTinkerer>129</GoblinTinkerer>
+			<Mech_Pikeman>10</Mech_Pikeman>
+			<Mech_Militor MayRequire="ludeon.rimworld.biotech">5</Mech_Militor>
 			<DMS_Mech_EscortLifter MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">30</DMS_Mech_EscortLifter>
 			<DMS_Mech_Soldat MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">104</DMS_Mech_Soldat>
 			<DMS_Mech_BattleFrame MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">102</DMS_Mech_BattleFrame>
@@ -165,7 +168,7 @@
       </li>
       <li>
         <kindDef>Combat</kindDef>
-		<commonality>100</commonality>
+		<commonality>115</commonality>
         <options>
           <GoblinRunner>999</GoblinRunner>
         </options>
@@ -178,12 +181,14 @@
 			<GoblinGenius MayRequire="ludeon.rimworld.biotech">1</GoblinGenius>
 			<TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">1</TSP_ST_VFEE_GoblinDeserter>
 			<Toxalope MayRequire="ludeon.rimworld.biotech">60</Toxalope>
+			<Mech_Pikeman>1</Mech_Pikeman>
+			<Mech_Militor MayRequire="ludeon.rimworld.biotech">1</Mech_Militor>
 		</options>
 	  </li>
-	  <li>
-		<kindDef>Combat</kindDef>
-		<commonality>1</commonality>
-		<options>
+	  <li MayRequire="oskarpotocki.vfe.empire">
+		<kindDef MayRequire="oskarpotocki.vfe.empire">Combat</kindDef>
+		<commonality MayRequire="oskarpotocki.vfe.empire">1</commonality>
+		<options MayRequire="oskarpotocki.vfe.empire">
 			<TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">999</TSP_ST_VFEE_GoblinDeserter>
 		</options>
 	  </li>
@@ -191,14 +196,16 @@
         <kindDef>Combat</kindDef>
 		<commonality>100</commonality>
         <options>
-          <GoblinRunner>10</GoblinRunner>
-          <GoblinTinkerer>60</GoblinTinkerer>
-          <GoblinWarlord>5</GoblinWarlord>
-		  <Mech_Termite_Breach>1</Mech_Termite_Breach>
-		  <GoblinGenius MayRequire="ludeon.rimworld.biotech">0.45</GoblinGenius>
-		  <PPHHYY_Doomsday_Goblin>0.5</PPHHYY_Doomsday_Goblin>
-		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
-		  <DMS_Mech_EscortLifter MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">3</DMS_Mech_EscortLifter>
+			<GoblinRunner>10</GoblinRunner>
+			<GoblinTinkerer>60</GoblinTinkerer>
+			<GoblinWarlord>5</GoblinWarlord>
+			<Mech_Termite_Breach>3</Mech_Termite_Breach>
+			<GoblinGenius MayRequire="ludeon.rimworld.biotech">0.45</GoblinGenius>
+			<PPHHYY_Doomsday_Goblin>0.5</PPHHYY_Doomsday_Goblin>
+			<TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
+			<DMS_Mech_EscortLifter MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">3</DMS_Mech_EscortLifter>
+			<Mech_Pikeman>0.51</Mech_Pikeman>
+			<Mech_Militor MayRequire="ludeon.rimworld.biotech">0.5</Mech_Militor>
         </options>
       </li>
       <li>
@@ -213,77 +220,89 @@
 		  <DMS_Mech_EscortLifter MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">150</DMS_Mech_EscortLifter>
         </carriers>
         <guards>
-          <GoblinPeon>20</GoblinPeon>
-          <GoblinArcher>20</GoblinArcher>
-          <GoblinRunner>25</GoblinRunner>
-          <GoblinTinkerer>30</GoblinTinkerer>
-		  <GoblinWarrior>20</GoblinWarrior>
-          <GoblinWarlord>5</GoblinWarlord>
-		  <GoblinGenius MayRequire="ludeon.rimworld.biotech">1</GoblinGenius>
-		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
-		  <Bat MayRequire="zal.witchinghour">15</Bat>
-		  <HalloweenBat MayRequire="halloweenparade.velcroboy333">15</HalloweenBat>
-		  <FunnyFungus MayRequire="halloweenparade.velcroboy333">1</FunnyFungus>
-		  <PumpkinSad MayRequire="halloweenparade.velcroboy333">0.8</PumpkinSad>
-		  <PumpkinSmile MayRequire="halloweenparade.velcroboy333">0.83</PumpkinSmile>
-		  <PumpkinAnger MayRequire="halloweenparade.velcroboy333">0.82</PumpkinAnger>
-		  <Toxalope MayRequire="ludeon.rimworld.biotech">25</Toxalope>
-		  <DMS_Mech_EscortLifter MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">3</DMS_Mech_EscortLifter>
-		  <PPHHYY_Doomsday_Goblin>0.01</PPHHYY_Doomsday_Goblin>
+			<GoblinPeon>20</GoblinPeon>
+			<GoblinArcher>20</GoblinArcher>
+			<GoblinRunner>25</GoblinRunner>
+			<GoblinTinkerer>30</GoblinTinkerer>
+			<GoblinWarrior>20</GoblinWarrior>
+			<GoblinWarlord>5</GoblinWarlord>
+			<GoblinGenius MayRequire="ludeon.rimworld.biotech">1</GoblinGenius>
+			<TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
+			<Bat MayRequire="zal.witchinghour">15</Bat>
+			<HalloweenBat MayRequire="halloweenparade.velcroboy333">15</HalloweenBat>
+			<FunnyFungus MayRequire="halloweenparade.velcroboy333">1</FunnyFungus>
+			<PumpkinSad MayRequire="halloweenparade.velcroboy333">0.8</PumpkinSad>
+			<PumpkinSmile MayRequire="halloweenparade.velcroboy333">0.83</PumpkinSmile>
+			<PumpkinAnger MayRequire="halloweenparade.velcroboy333">0.82</PumpkinAnger>
+			<Toxalope MayRequire="ludeon.rimworld.biotech">25</Toxalope>
+			<DMS_Mech_EscortLifter MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">3</DMS_Mech_EscortLifter>
+			<Mech_Pikeman>10</Mech_Pikeman>
+			<Mech_Militor MayRequire="ludeon.rimworld.biotech">5</Mech_Militor>
+			<PPHHYY_Doomsday_Goblin>0.01</PPHHYY_Doomsday_Goblin>
         </guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
 		<commonality>100</commonality>
         <options>
-          <GoblinPeon>30</GoblinPeon>
-          <GoblinArcher>20</GoblinArcher>
-          <GoblinRunner>10</GoblinRunner>
-          <GoblinTinkerer>5</GoblinTinkerer>
-		  <GoblinWarrior>20</GoblinWarrior>
-          <GoblinWarlord>15</GoblinWarlord>
-		  <GoblinGenius MayRequire="ludeon.rimworld.biotech">5</GoblinGenius>
-		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
-		  <Bat MayRequire="zal.witchinghour">5</Bat>
-		  <HalloweenBat MayRequire="halloweenparade.velcroboy333">5</HalloweenBat>
-		  <FunnyFungus MayRequire="halloweenparade.velcroboy333">1</FunnyFungus>
-		  <PumpkinSad MayRequire="halloweenparade.velcroboy333">0.8</PumpkinSad>
-		  <PumpkinSmile MayRequire="halloweenparade.velcroboy333">0.83</PumpkinSmile>
-		  <PumpkinAnger MayRequire="halloweenparade.velcroboy333">0.82</PumpkinAnger>
-		  <PPHHYY_Doomsday_Goblin>0.5</PPHHYY_Doomsday_Goblin>
+			<GoblinPeon>30</GoblinPeon>
+			<GoblinArcher>20</GoblinArcher>
+			<GoblinRunner>10</GoblinRunner>
+			<GoblinTinkerer>5</GoblinTinkerer>
+			<GoblinWarrior>20</GoblinWarrior>
+			<GoblinWarlord>15</GoblinWarlord>
+			<GoblinGenius MayRequire="ludeon.rimworld.biotech">5</GoblinGenius>
+			<TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">0.001</TSP_ST_VFEE_GoblinDeserter>
+			<Bat MayRequire="zal.witchinghour">5</Bat>
+			<HalloweenBat MayRequire="halloweenparade.velcroboy333">5</HalloweenBat>
+			<FunnyFungus MayRequire="halloweenparade.velcroboy333">1</FunnyFungus>
+			<PumpkinSad MayRequire="halloweenparade.velcroboy333">0.8</PumpkinSad>
+			<PumpkinSmile MayRequire="halloweenparade.velcroboy333">0.83</PumpkinSmile>
+			<PumpkinAnger MayRequire="halloweenparade.velcroboy333">0.82</PumpkinAnger>
+			<PPHHYY_Doomsday_Goblin>0.5</PPHHYY_Doomsday_Goblin>
+			<Mech_Pikeman>4</Mech_Pikeman>
+			<Mech_Militor MayRequire="ludeon.rimworld.biotech">5</Mech_Militor>
         </options>
       </li>
       <li MayRequire="ludeon.rimworld.biotech">
         <kindDef MayRequire="ludeon.rimworld.biotech">Settlement</kindDef>
 		<commonality MayRequire="ludeon.rimworld.biotech">25</commonality>
         <options MayRequire="ludeon.rimworld.biotech">
-		  <GoblinGenius MayRequire="ludeon.rimworld.biotech">25</GoblinGenius>
-		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">1</TSP_ST_VFEE_GoblinDeserter>
-		  <Bat MayRequire="zal.witchinghour">5</Bat>
-		  <HalloweenBat MayRequire="halloweenparade.velcroboy333">5</HalloweenBat>
-		  <FunnyFungus MayRequire="halloweenparade.velcroboy333">1</FunnyFungus>
-		  <PumpkinSad MayRequire="halloweenparade.velcroboy333">0.8</PumpkinSad>
-		  <PumpkinSmile MayRequire="halloweenparade.velcroboy333">0.83</PumpkinSmile>
-		  <PumpkinAnger MayRequire="halloweenparade.velcroboy333">0.82</PumpkinAnger>
-		  <PPHHYY_Doomsday_Goblin MayRequire="ludeon.rimworld.biotech">5</PPHHYY_Doomsday_Goblin>
-		  <Toxalope MayRequire="ludeon.rimworld.biotech">5</Toxalope>
-		  <DMS_Mech_EscortLifter MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">3</DMS_Mech_EscortLifter>
+			<GoblinGenius MayRequire="ludeon.rimworld.biotech">25</GoblinGenius>
+			<TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">1</TSP_ST_VFEE_GoblinDeserter>
+			<Bat MayRequire="zal.witchinghour">5</Bat>
+			<HalloweenBat MayRequire="halloweenparade.velcroboy333">5</HalloweenBat>
+			<FunnyFungus MayRequire="halloweenparade.velcroboy333">1</FunnyFungus>
+			<PumpkinSad MayRequire="halloweenparade.velcroboy333">0.8</PumpkinSad>
+			<PumpkinSmile MayRequire="halloweenparade.velcroboy333">0.83</PumpkinSmile>
+			<PumpkinAnger MayRequire="halloweenparade.velcroboy333">0.82</PumpkinAnger>
+			<PPHHYY_Doomsday_Goblin MayRequire="ludeon.rimworld.biotech">5</PPHHYY_Doomsday_Goblin>
+			<Toxalope MayRequire="ludeon.rimworld.biotech">5</Toxalope>
+			<DMS_Mech_EscortLifter MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">3</DMS_Mech_EscortLifter>
+			<Mech_Pikeman>4</Mech_Pikeman>
+			<Mech_Militor MayRequire="ludeon.rimworld.biotech">5</Mech_Militor>
         </options>
 	  </li>
       <li>
         <kindDef>Settlement</kindDef>
 		<commonality>15</commonality>
         <options>
-		  <PPHHYY_Doomsday_Goblin>65</PPHHYY_Doomsday_Goblin>
-		  <GoblinGenius MayRequire="ludeon.rimworld.biotech">1</GoblinGenius>
-		  <TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">1</TSP_ST_VFEE_GoblinDeserter>
-		  <Toxalope MayRequire="ludeon.rimworld.biotech">50</Toxalope>
-		  <Toxalope MayRequire="ludeon.rimworld.biotech">5</Toxalope>
-		  <DMS_Mech_EscortLifter MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">3</DMS_Mech_EscortLifter>
+			<PPHHYY_Doomsday_Goblin>65</PPHHYY_Doomsday_Goblin>
+			<GoblinGenius MayRequire="ludeon.rimworld.biotech">1</GoblinGenius>
+			<TSP_ST_VFEE_GoblinDeserter MayRequire="oskarpotocki.vfe.empire">5.1</TSP_ST_VFEE_GoblinDeserter>
+			<Toxalope MayRequire="ludeon.rimworld.biotech">25</Toxalope>
+			<DMS_Mech_EscortLifter MayRequire="aoba.deadmanswitch.core,ludeon.rimworld.biotech">3</DMS_Mech_EscortLifter>
+			<Mech_Pikeman>10</Mech_Pikeman>
+			<Mech_Militor MayRequire="ludeon.rimworld.biotech">5</Mech_Militor>
         </options>
       </li>
     </pawnGroupMakers>
     <settlementTexturePath>World/Goblins/GoblinLogo</settlementTexturePath>
+	<xenotypeSet MayRequire= "ludeon.rimworld.biotech" Inherit="False">
+		<xenotypeChances MayRequire="ludeon.rimworld.biotech">
+			<Goblin MayRequire="trukulo.xenofaction.fantasy,ludeon.rimworld.biotech">0.049</Goblin>
+		</xenotypeChances>
+	</xenotypeSet>
 	<modExtensions>
 		<li Class="FactionSounds.FactionSound">
 			<soundDef>Goblin_Town</soundDef>
