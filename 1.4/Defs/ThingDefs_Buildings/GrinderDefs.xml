@@ -58,13 +58,15 @@
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
-          <li>ToolCabinet</li>
-          <li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkableToolBox</li>
-          <li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkChuJu</li>
-		  <!-- <li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_ChuiGuji</li> -->
-		  <li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_RobotAssistant</li>
-		  <li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_ConveyorBelt</li>
-		  <li MayRequire="vanillaexpanded.vfeproduction">VFE_KitchenSinkCabinet</li>
+			<li>ToolCabinet</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkableToolBox</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkChuJu</li>
+			<!-- <li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_ChuiGuji</li> -->
+			<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_RobotAssistant</li>
+			<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_ConveyorBelt</li>
+			<li MayRequire="vanillaexpanded.vfeproduction">VFE_KitchenSinkCabinet</li>
+			<li MayRequire="lat.rimstro">RS_TopShelf</li>
+			<li MayRequire="lat.rimstro">RS_KitchenHood</li>
 		</linkableFacilities>
         </li>
       <li>
@@ -158,6 +160,14 @@
 		<li MayRequire="mlie.vanillalikewheat">MakeOneFlourLowTech</li>
 		<li MayRequire="mlie.vanillalikewheat">MakeFlourLowTech</li>
 		<li MayRequire="mlie.vanillalikewheat">MakeBatchFlourLowTech</li>
+		<li MayRequire="lat.rimstro">Cook_RS_Berrymilk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_chocomilk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_eggjuk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_mushroom_soup</li>
+		<li MayRequire="lat.rimstro">Cook_RS_Berrymilk_bulk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_chocomilk_bulk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_eggjuk_bulk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_mushroom_soup_bluk</li>
 		<li>TSP_ST_HerbaRoll</li>
 		<li>TSP_ST_SpikedButterscotch_Wort_Recipe</li>
 		<li>Make_Kibble</li>
@@ -167,6 +177,13 @@
     <placeWorkers>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
+	<modExtensions>
+		<li Class="RecipeInheritance.ThingDefExtension">
+			<inheritRecipesFrom>
+				<li MayRequire="lat.rimstro">RS_Blender</li>
+			</inheritRecipesFrom>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="BenchBase">
@@ -306,6 +323,14 @@
 		<li MayRequire="mlie.vanillalikewheat">MakeOneFlourHighTech</li>
 		<li MayRequire="mlie.vanillalikewheat">MakeFlourHighTech</li>
 		<li MayRequire="mlie.vanillalikewheat">MakeBatchFlourHighTech</li>
+		<li MayRequire="lat.rimstro">Cook_RS_Berrymilk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_chocomilk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_eggjuk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_mushroom_soup</li>
+		<li MayRequire="lat.rimstro">Cook_RS_Berrymilk_bulk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_chocomilk_bulk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_eggjuk_bulk</li>
+		<li MayRequire="lat.rimstro">Cook_RS_mushroom_soup_bluk</li>
 		<li>TSP_ST_HerbaRoll</li>
 		<li>TSP_ST_SpikedButterscotch_Wort_Recipe</li>
 		<li>Make_Kibble</li>
@@ -321,13 +346,15 @@
       <li Class="CompProperties_Breakdownable"/>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
-          <li>ToolCabinet</li>
-          <li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkableToolBox</li>
-          <li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkChuJu</li>
-		  <!-- <li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_ChuiGuji</li> -->
-		  <li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_RobotAssistant</li>
-		  <li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_ConveyorBelt</li>
-		  <li MayRequire="vanillaexpanded.vfeproduction">VFE_KitchenSinkCabinet</li>
+			<li>ToolCabinet</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkableToolBox</li>
+			<li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkChuJu</li>
+			<!-- <li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_ChuiGuji</li> -->
+			<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_RobotAssistant</li>
+			<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_ConveyorBelt</li>
+			<li MayRequire="vanillaexpanded.vfeproduction">VFE_KitchenSinkCabinet</li>
+			<li MayRequire="lat.rimstro">RS_TopShelf</li>
+			<li MayRequire="lat.rimstro">RS_KitchenHood</li>
         </linkableFacilities>
       </li>
       <li>
@@ -341,5 +368,12 @@
     <researchPrerequisites>
       <li>Electricity</li>
     </researchPrerequisites>
+	<modExtensions>
+		<li Class="RecipeInheritance.ThingDefExtension">
+			<inheritRecipesFrom>
+				<li MayRequire="lat.rimstro">RS_Blender</li>
+			</inheritRecipesFrom>
+		</li>
+	</modExtensions>
   </ThingDef>
 </Defs>

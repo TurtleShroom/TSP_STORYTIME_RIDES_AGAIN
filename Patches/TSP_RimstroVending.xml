@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="RS_LogisticsBox"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[@Name="RS_VendingMachineBase"]/comps/li/foodListPool</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_EggNog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_FrogNog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_FogNog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_FieryNog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_MikesLemonade</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_KrakenRum</li>
+				<li MayRequire="TSP.Isengriff.Storytime">WerefrogBlood</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeBeer</li>
+				<li MayRequire="mo.decorationsluxury">BerrySparklingWater</li>
+				<li MayRequire="mo.decorationsluxury">LuxuryBeer</li>
+				<li MayRequire="tsp.misterravenface.colapepsi">TSP_DoctorPepper</li>
+				<li MayRequire="tsp.misterravenface.colapepsi">TSP_Sprite</li>
+				<li MayRequire="tsp.misterravenface.colapepsi">TSP_CocaCola</li>
+				<li MayRequire="tsp.misterravenface.colapepsi">TSP_Pepsi</li>
+				<li MayRequire="rh2.randy.burger.fast.food">RH2Beer_MuffBeer</li>
+				<li MayRequire="rh2.randy.burger.fast.food">RH2_Soda_ZZTCola</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_AmbrandyAwful</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_Gin</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_Tequila</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_Vodka</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_Whiskey</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_HotCoffee</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_EnergyDrink</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_Juice</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_Soda</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_Tea</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_SimpleCocktail</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_FineCocktail</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_LavishCocktail</li>
+				<li MayRequire="vanillaexpanded.vbrewe">VBE_GourmetCocktail</li>
+				<li MayRequire="dajian.chiteaditional.expanded">SZ_WuYiTea</li>
+				<li MayRequire="dajian.chiteaditional.expanded">SZ_MaoShiTea</li>
+				<li MayRequire="dajian.chiteaditional.expanded">SZ_QingGanTea</li>
+				<li MayRequire="dajian.chiteaditional.expanded">SZ_RouGuCha</li>
+				<li MayRequire="steasy.sternburgexport">SternburgExport</li>
+				<li MayRequire="zal.burgers">HotZauce</li>
+				<li MayRequire="herbs.plants">PAU_MintTea</li>
+				<li MayRequire="ssm9906.thettanconrace">TT_Moonshine</li>
+				<li MayRequire="ssm9906.thettanconrace">TT_Moonshine_Case</li>
+				<li MayRequire="ssm9906.thettanconrace">TT_Spray</li>
+				<li MayRequire="ssm9906.thettanconrace">HipFlask</li>
+				<li MayRequire="ssm9906.thettanconrace">GoFlask</li>
+				<li MayRequire="ssm9906.thettanconrace">Ambrosk</li>
+				<li MayRequire="ssm9906.thettanconrace">TT_Syrup</li>
+				<li MayRequire="ssm9906.thettanconrace">TT_Milk</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>
