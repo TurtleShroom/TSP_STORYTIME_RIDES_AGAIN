@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
-	<ThingDef ParentName="MealBaseIngredientless" Name= "PotionBase" Abstract = "True">
+<Defs>
+	<ThingDef ParentName="MealBaseIngredientless" Name="ST_PotionBase" Abstract="True">
 		<thingCategories>
-		  <li>ST_Potions</li>
+			<li>ST_Potions</li>
+			<li MayRequire="vanillaexpanded.vbrewe">VBE_DrinksLuxurySpirits</li>
 		</thingCategories>
 		<tradeTags>
-		  <li>STPotions</li>
+			<li>STPotions</li>
 		</tradeTags>
-	   <tradeability>All</tradeability>
+		<tradeability>All</tradeability>
+		<modExtensions>
+			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+				<water>1</water>
+				<UseForWashing>false</UseForWashing>
+				<SeekForThirst>false</SeekForThirst>
+			</li>
+		</modExtensions>
 	</ThingDef>
-
 </Defs>
