@@ -57,7 +57,7 @@
 	-->
 	
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/BodyPartDef[defName="ArtificialBrain"]/tags</xpath>
+		<xpath>/Defs/BodyPartDef[defName="ArtificialBrain"]/tags</xpath>
 		<value>
 			<li>TalkingSource</li>
 		</value>
@@ -323,14 +323,14 @@
 		<match Class="PatchOperationSequence">
 		  <operations>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/RecipeDef[@Name="InstallModificationBaseAll"]/recipeUsers</xpath>
+				<xpath>/Defs/RecipeDef[@Name="InstallModificationBaseAll"]/recipeUsers</xpath>
 				<value>
 					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogHostile</li>
 					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogDocile</li>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/RecipeDef[@Name="RemoveModificationBase"]/recipeUsers</xpath>
+				<xpath>/Defs/RecipeDef[@Name="RemoveModificationBase"]/recipeUsers</xpath>
 				<value>
 					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogHostile</li>
 					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogDocile</li>

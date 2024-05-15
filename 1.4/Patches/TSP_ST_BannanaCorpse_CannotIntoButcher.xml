@@ -61,9 +61,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter/thingDefs</xpath>
+		<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter/thingDefs</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter</xpath>
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter</xpath>
 			<success>Always</success>
 			<value>
 				<thingDefs></thingDefs>
@@ -72,9 +72,9 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter/thingDefs</xpath>
+		<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter/thingDefs</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter</xpath>
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter</xpath>
 			<success>Always</success>
 			<value>
 				<thingDefs></thingDefs>
@@ -83,9 +83,9 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/defaultIngredientFilter/thingDefs</xpath>
+		<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/defaultIngredientFilter/thingDefs</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/defaultIngredientFilter</xpath>
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/defaultIngredientFilter</xpath>
 			<success>Always</success>
 			<value>
 				<thingDefs></thingDefs>
@@ -95,11 +95,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter/thingDefs</xpath>
+		<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter/thingDefs</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter/thingDefs</xpath>
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter/thingDefs</xpath>
 			<value>
 				<li>ST_BananaScytheCorpse</li>
 			</value>
