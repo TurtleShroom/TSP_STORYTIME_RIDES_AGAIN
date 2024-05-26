@@ -246,4 +246,134 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BMT_Goeto"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName = "BMT_Goeto" or defName = "BMT_SandyToad"]/race/useMeatFrom</xpath>
+			<value>
+				<useMeatFrom>ST_BullFrog</useMeatFrom>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BMT_FrostFrog"]/race/body</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BMT_FrostFrog"]/race/body</xpath>
+			<value>
+				<body>ST_FrogLike</body>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd" MayRequire="biomesteam.biomescaverns">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BMT_FrostFrog"]/race</xpath>
+			<value>
+				<body>ST_FrogLike</body>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BMT_FrostFrog"]/race/useMeatFrom</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BMT_FrostFrog"]/race/useMeatFrom</xpath>
+			<value>
+				<useMeatFrom>ST_BullFrog</useMeatFrom>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd" MayRequire="biomesteam.biomescaverns">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BMT_FrostFrog"]/race</xpath>
+			<value>
+				<useMeatFrom>ST_BullFrog</useMeatFrom>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BMT_FrostFrog"]/race/lifeStageAges</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BMT_FrostFrog"]/race/lifeStageAges</xpath>
+			<value>
+				<lifeStageAges Inherit="False">
+					<li>
+						<def>AnimalBabyTiny</def>
+						<minAge>0</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalJuvenile</def>
+						<minAge>0.04</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalAdult</def>
+						<minAge>0.12</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd" MayRequire="biomesteam.biomescaverns">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BMT_FrostFrog"]/race</xpath>
+			<value>
+				<lifeStageAges Inherit="False">
+					<li>
+						<def>AnimalBabyTiny</def>
+						<minAge>0</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalJuvenile</def>
+						<minAge>0.04</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalAdult</def>
+						<minAge>0.12</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>Frog_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

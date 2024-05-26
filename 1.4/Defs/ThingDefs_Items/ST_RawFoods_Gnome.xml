@@ -16,7 +16,7 @@
 			<Nutrition>0.015</Nutrition> 
 		</statBases>
 		<smallVolume>true</smallVolume>
-		<stackLimit>500</stackLimit>
+		<stackLimit>1000</stackLimit>
 		<comps>
 		  <li Class="CompProperties_Rottable">
 			<daysToRotStart>20</daysToRotStart>
@@ -24,11 +24,13 @@
 		  </li>
 		</comps>
 		<thingCategories>
-		  <li>MeatRaw</li>
+			<li>MeatRaw</li>
 		</thingCategories>
 		<ingestible>
-		  <preferability>DesperateOnlyForHumanlikes</preferability>
-		  <foodType Inherit="False">Meat, CarnivoreAnimal, CarnivoreAnimalStrict, OmnivoreAnimal, OmnivoreRoughAnimal, OmnivoreHuman, Corpse, Kibble</foodType>
+			<preferability>DesperateOnlyForHumanlikes</preferability>
+			<foodType Inherit="False">Meat, CarnivoreAnimal, CarnivoreAnimalStrict, OmnivoreAnimal, OmnivoreRoughAnimal, OmnivoreHuman, Corpse, Kibble</foodType>
+			<optimalityOffsetHumanlikes>-20</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>25</optimalityOffsetFeedingAnimals>
 		</ingestible>
 		<ingredient>
 			<mergeCompatibilityTags MayRequire="Ludeon.RimWorld.Ideology">
@@ -143,6 +145,9 @@
 		  <preferability>DesperateOnlyForHumanlikes</preferability>
 		  <foodType>VegetableOrFruit, VegetarianRoughAnimal, Kibble</foodType>
 		</ingestible>
+		<tradeTags>
+			<li>GnomeFlour</li>
+		</tradeTags>
 	  </ThingDef>
 	  
 	  <ThingDef ParentName="RoughPlantBase">

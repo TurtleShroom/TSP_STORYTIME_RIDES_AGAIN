@@ -6,56 +6,86 @@
 		<xpath>/Defs/ThingDef[defName="RS_LogisticsBox"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[@Name="RS_VendingMachineBase"]/comps/li/foodListPool</xpath>
+			<xpath>/Defs</xpath>
 			<success>Always</success>
 			<value>
-				<li MayRequire="TSP.Isengriff.Storytime">ST_EggNog</li>
-				<li MayRequire="TSP.Isengriff.Storytime">ST_FrogNog</li>
-				<li MayRequire="TSP.Isengriff.Storytime">ST_FogNog</li>
-				<li MayRequire="TSP.Isengriff.Storytime">ST_FieryNog</li>
-				<li MayRequire="TSP.Isengriff.Storytime">ST_MikesLemonade</li>
-				<li MayRequire="TSP.Isengriff.Storytime">ST_KrakenRum</li>
-				<!-- <li MayRequire="TSP.Isengriff.Storytime">WerefrogBlood</li> -->
-				<li MayRequire="TSP.Isengriff.Storytime">GnomeBeer</li>
-				<li MayRequire="mo.decorationsluxury">BerrySparklingWater</li>
-				<li MayRequire="mo.decorationsluxury">LuxuryBeer</li>
-				<li MayRequire="tsp.misterravenface.colapepsi">TSP_DoctorPepper</li>
-				<li MayRequire="tsp.misterravenface.colapepsi">TSP_Sprite</li>
-				<li MayRequire="tsp.misterravenface.colapepsi">TSP_CocaCola</li>
-				<li MayRequire="tsp.misterravenface.colapepsi">TSP_Pepsi</li>
-				<li MayRequire="rh2.randy.burger.fast.food">RH2Beer_MuffBeer</li>
-				<li MayRequire="rh2.randy.burger.fast.food">RH2_Soda_ZZTCola</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_AmbrandyAwful</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_Gin</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_Tequila</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_Vodka</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_Whiskey</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_HotCoffee</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_EnergyDrink</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_Juice</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_Soda</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_Tea</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_SimpleCocktail</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_FineCocktail</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_LavishCocktail</li>
-				<li MayRequire="vanillaexpanded.vbrewe">VBE_GourmetCocktail</li>
-				<li MayRequire="dajian.chiteaditional.expanded">SZ_WuYiTea</li>
-				<li MayRequire="dajian.chiteaditional.expanded">SZ_MaoShiTea</li>
-				<li MayRequire="dajian.chiteaditional.expanded">SZ_QingGanTea</li>
-				<li MayRequire="dajian.chiteaditional.expanded">SZ_RouGuCha</li>
-				<li MayRequire="steasy.sternburgexport">SternburgExport</li>
-				<li MayRequire="zal.burgers">HotZauce</li>
-				<li MayRequire="herbs.plants">PAU_MintTea</li>
-				<li MayRequire="ssm9906.thettanconrace">TT_Moonshine</li>
-				<li MayRequire="ssm9906.thettanconrace">TT_Moonshine_Case</li>
-				<li MayRequire="ssm9906.thettanconrace">TT_Spray</li>
-				<li MayRequire="ssm9906.thettanconrace">HipFlask</li>
-				<li MayRequire="ssm9906.thettanconrace">GoFlask</li>
-				<li MayRequire="ssm9906.thettanconrace">Ambrosk</li>
-				<li MayRequire="ssm9906.thettanconrace">TT_Syrup</li>
-				<li MayRequire="ssm9906.thettanconrace">TT_Milk</li>
+				<ThingDef ParentName="RS_VendingMachineBase">
+					<defName>TSP_RS_ST_VendingMachineTypeGnome_Drink</defName>
+					<label>vending machine (Storytime drinks)</label>
+					<description>Sponsored by advanced Gnome enterprises from the Urb Worlds, this vending machine is commonly found even in lower tech Gnome societies, as it needs only to be plugged in to fabricate new drinks from Logistic Boxes, Gnome Beer, Lemon Bars, and Lime Bars. Gourmet Gnome Cocktails can be found here, as well as egg nog. Constructing this vending machine requires Gnome Research.</description>
+					<descriptionHyperlinks>
+						<ResearchProjectDef>gnomeCooking</ResearchProjectDef>
+					</descriptionHyperlinks>
+					<graphicData>
+						<color>(69,193,69)</color>
+					</graphicData>
+					<comps Inherit="False">
+						<li Class="CompProperties_Power">
+							<compClass>CompPowerTrader</compClass>
+							<basePowerConsumption>30</basePowerConsumption>
+						</li>
+						<li Class="CompProperties_Flickable"></li>
+						<li Class="CompProperties_Breakdownable"></li>
+						<li Class="CompProperties_Refuelable">
+							<fuelCapacity>150.0</fuelCapacity>
+							<fuelFilter>
+								<thingDefs>
+									<li>RS_LogisticsBox</li>
+									<li>ST_LemonBar</li>
+									<li>ST_LimeBar</li>
+									<li>GnomeBeer</li>
+								</thingDefs>
+							</fuelFilter>
+							<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+							<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+						</li>
+						<li Class="Rimstro.CompProperties_VendingMachine">
+							<waitTicks>85</waitTicks>
+							<fuelConsumption>1</fuelConsumption>
+							<foodListPool>
+								<li>RS_Vending_Coffee</li>
+								<li>RS_Vending_Soda</li>
+								<li>RS_Vending_SportDrink</li>
+								<li>RS_Vending_Juice</li>
+								<li MayRequire="TSP.Isengriff.Storytime">GnomeBeer</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_EggNog</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_FrogNog</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_FogNog</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_FieryNog</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_MikesLemonade</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ST_KrakenRum</li>
+								<li MayRequire="TSP.Isengriff.Storytime">BlurberrySpecial</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ChocSaturday</li>
+								<li MayRequire="TSP.Isengriff.Storytime">ShortGreenGuy</li>
+							</foodListPool>
+							<foodNeedLevel>0.9</foodNeedLevel>
+							<soundOption>
+								<startJobSound>RS_CoinInsert</startJobSound>
+								<endJobSound>DropPod_Open</endJobSound>
+								<stopJobSound>RS_CoinReturn</stopJobSound>
+							</soundOption>
+							<compFloatMenuOptionsLabel>TSP_ST_RIMSTRO_UseVendingMachine_GnomeDrink</compFloatMenuOptionsLabel>
+						</li>
+					</comps>
+					<researchPrerequisites>
+						<li>gnomeCooking</li>
+					</researchPrerequisites>
+				</ThingDef>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
     </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="RS_LogisticsBox"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/JoyGiverDef[defName="UseVendingMachine"]/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">TSP_RS_ST_VendingMachineTypeGnome_Drink</li>
+			</value>
+		</match>
+	</Operation>
 </Patch>

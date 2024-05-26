@@ -63,7 +63,7 @@
 	<RecipeDef ParentName="TSP_WW_DrugRecipe_Base">
 		<defName>TSP_WW_MakeHighwing</defName>
 		<label>formulate Highwing</label>
-		<description>By mixing Yayo with food and feathers, the secrets of Highwing can be unlocked!</description>
+		<description>By mixing Flake or Yayo with food and feathers, the secrets of Highwing can be unlocked!</description>
 		<jobString>assembling Highwing</jobString>
 		<workAmount>300</workAmount>
 		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -74,18 +74,22 @@
 		<ingredients>
 			<li>
 				<filter>
+					<customSummary>bird skin, feathers</customSummary>
 				  <thingDefs>
 					<li>Leather_Bird</li>
 					<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoHideFeathery</li>
 					<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoFeather</li>
+					<li MayRequire="tarojun.morishep.onioftherim">OniFeather</li>
 				  </thingDefs>
 				</filter>
 				<count>5</count>
 		  </li>
 		  <li>
 			<filter>
+				<customSummary>meat, cheeses</customSummary>
 			  <categories>
 				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 			  </categories>
 			  <thingDefs>
@@ -96,7 +100,9 @@
 		  </li>
 		  <li>
 			<filter>
+				<customSummary>Flake, Yayo</customSummary>
 			  <thingDefs>
+				<li>Flake</li>
 				<li>Yayo</li>
 			  </thingDefs>
 			</filter>
@@ -106,26 +112,31 @@
 		<fixedIngredientFilter>
 			<categories>
 				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 			</categories>
 			<thingDefs>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
 				<li>Leather_Bird</li>
+				<li>Flake</li>
 				<li>Yayo</li>
 				<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoHideFeathery</li>
 				<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoFeather</li>
+				<li MayRequire="tarojun.morishep.onioftherim">OniFeather</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<categories>
 				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
 			</categories>
 			<thingDefs>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
 				<li>Leather_Bird</li>
-				<li>Yayo</li>
+				<li>Flake</li>
 				<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoHideFeathery</li>
 				<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoFeather</li>
+				<li MayRequire="tarojun.morishep.onioftherim">OniFeather</li>
 			</thingDefs>
 		</defaultIngredientFilter>
 		<researchPrerequisites>
@@ -139,7 +150,7 @@
 	<RecipeDef ParentName="TSP_WW_DrugRecipe_Base">
 		<defName>TSP_WW_MakeHeavenDust</defName>
 		<label>formulate Heaven Dust</label>
-		<description>By mixing Yayo with food and Psychoid Leaves, the secrets of Heaven Dust can be unlocked!</description>
+		<description>By mixing Flake or Yayo with food and Psychoid Leaves, the secrets of Heaven Dust can be unlocked!</description>
 		<jobString>making Heaven Dust</jobString>
 		<workAmount>300</workAmount>
 		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
@@ -150,8 +161,10 @@
 		<ingredients>
 		  <li>
 			<filter>
+				<customSummary>meat, cheeses</customSummary>
 			  <categories>
 				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 			  </categories>
 			  <thingDefs>
@@ -162,7 +175,9 @@
 		  </li>
 		  <li>
 			<filter>
+				<customSummary>Flake, Yayo</customSummary>
 			  <thingDefs>
+				<li>Flake</li>
 				<li>Yayo</li>
 			  </thingDefs>
 			</filter>
@@ -170,32 +185,36 @@
 		  </li>
 		  <li>
 			<filter>
+				<customSummary>Psychoid leaves</customSummary>
 			  <thingDefs>
 				<li>PsychoidLeaves</li>
 			  </thingDefs>
 			</filter>
-			<count>6</count>
+			<count>5</count>
 		  </li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<categories>
 				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 			</categories>
 			<thingDefs>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
 				<li>PsychoidLeaves</li>
+				<li>Flake</li>
 				<li>Yayo</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<categories>
 				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
 			</categories>
 			<thingDefs>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
 				<li>PsychoidLeaves</li>
-				<li>Yayo</li>
+				<li>Flake</li>
 			</thingDefs>
 		</defaultIngredientFilter>
 		<researchPrerequisites>
@@ -221,6 +240,7 @@
 		<ingredients>
 		  <li>
 			<filter>
+				<customSummary>meat, cheeses</customSummary>
 			  <categories>
 				<li>MeatRaw</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
@@ -238,6 +258,7 @@
 		  </li>
 		  <li>
 			<filter>
+				<customSummary>corn, rice, flour</customSummary>
 			  <thingDefs>
 				<li>RawCorn</li>
 				<li>RawRice</li>
@@ -262,7 +283,7 @@
 				<li>Chemfuel</li>
 			  </thingDefs>
 			</filter>
-			<count>30</count>
+			<count>15</count>
 		  </li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -299,7 +320,7 @@
 			<Dragonal>20</Dragonal>
 		</products>
 		<researchPrerequisites>
-			<li>PenoxycylineProduction</li>
+			<li>PsychiteRefining</li>
 			<li>WakeUpProduction</li>
 		</researchPrerequisites>
 	</RecipeDef>
@@ -318,6 +339,7 @@
 		<ingredients>
 		  <li>
 			<filter>
+				<customSummary>meat, cheeses</customSummary>
 			  <categories>
 				<li>MeatRaw</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>

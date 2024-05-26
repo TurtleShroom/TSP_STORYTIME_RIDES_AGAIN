@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist -->
+		<xpath>/Defs/ThingDef[defName="Knockout"]</xpath>
+		<!-- If so, alter the inheritance of this. -->
+		<match Class="PatchOperationAttributeSet">
+			<xpath>/Defs/ThingDef[defName="Knockout"]</xpath>
+			<attribute>ParentName</attribute>
+			<value>DrugPillBase</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="Knockout"]/costList</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Knockout"]/costList</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="Knockout"]/recipeMaker</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Knockout"]/recipeMaker</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Knockout"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef>
+					<defName>TSP_ST_GORM_Make_KnockOut_Pill_Poison</defName>
+					<label>make Knockout Pills from toxins</label>
+					<description>Weaken various toxins into a means to incapacitate Pawns.</description>
+					<descriptionHyperlinks>
+						<ThingDef>Knockout</ThingDef>
+					</descriptionHyperlinks>
+					<jobString>Diluting poisons to Knock Out Pills</jobString>
+					<workAmount>275</workAmount>
+					<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+					<workSkill>Cooking</workSkill>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<customSummary>poison extract, toxins</customSummary>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+									<li>ST_GoblinPoison</li>
+									<li>ST_NightFrog_Venom</li>
+								</thingDefs>
+							</filter>
+							<count>25</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li>ST_GoblinPoison</li>
+							<li>ST_NightFrog_Venom</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+						</thingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<Knockout>25</Knockout>
+					</products>
+					<recipeUsers>
+						<li>DrugLab</li>
+						<li MayRequire="zal.witchinghour">Cauldron</li>
+						<li MayRequire="mlie.warhammerfimir">FimirBrewingCauldron</li>
+						<li MayRequire="mlie.capraracemod">CACauldron</li>
+					</recipeUsers>
+					<researchPrerequisites>
+						<li>DrugProduction</li>
+					</researchPrerequisites>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_ST_GORM_Make_KnockOut_Pill_Booze</defName>
+					<label>make Knockout Pills from Storytime Mod spirits</label>
+					<description>Alcohol was the original Knock Out Pill.</description>
+					<descriptionHyperlinks>
+						<ThingDef>Knockout</ThingDef>
+					</descriptionHyperlinks>
+					<jobString>repurposing alcohol into Knock Out Pills</jobString>
+					<workAmount>275</workAmount>
+					<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+					<workSkill>Cooking</workSkill>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<customSummary>hard lemonade, rum, Gnome Beer</customSummary>
+								<thingDefs>
+									<li>ST_MikesLemonade</li>
+									<li>ST_KrakenRum</li>
+									<li>GnomeBeer</li>
+								</thingDefs>
+							</filter>
+							<count>10</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_MikesLemonade</li>
+							<li>ST_KrakenRum</li>
+							<li>GnomeBeer</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_MikesLemonade</li>
+							<li>ST_KrakenRum</li>
+							<li>GnomeBeer</li>
+						</thingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<Knockout>25</Knockout>
+					</products>
+					<recipeUsers>
+						<li>DrugLab</li>
+						<li MayRequire="zal.witchinghour">Cauldron</li>
+						<li MayRequire="mlie.warhammerfimir">FimirBrewingCauldron</li>
+						<li MayRequire="mlie.capraracemod">CACauldron</li>
+					</recipeUsers>
+					<researchPrerequisites>
+						<li>DrugProduction</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AM_CorpseRumBasic"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="TSP_ST_GORM_Make_KnockOut_Pill_Booze"]/ingredients/li/filter/thingDefs</xpath>
+			<value>
+				<li>AM_CorpseRumBasic</li>
+				<li>AM_CorpseRumFine</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AM_CorpseRumBasic"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="TSP_ST_GORM_Make_KnockOut_Pill_Booze"]/fixedIngredientFilter/thingDefs</xpath>
+			<value>
+				<li>AM_CorpseRumBasic</li>
+				<li>AM_CorpseRumFine</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AM_CorpseRumBasic"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="TSP_ST_GORM_Make_KnockOut_Pill_Booze"]/defaultIngredientFilter/thingDefs</xpath>
+			<value>
+				<li>AM_CorpseRumBasic</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

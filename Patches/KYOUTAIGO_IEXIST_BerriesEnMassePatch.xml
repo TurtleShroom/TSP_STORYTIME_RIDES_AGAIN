@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- This code was provided by the user 'I Exist', and then butchered and simplified on Dub's Discord chat room by Kyoutaigo -->
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Wormberry"]/statBases</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Wormberry"]</xpath>
+			<success>Always</success>
+			<value>
+				<statBases></statBases>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Wormberry"]/statBases/Nutrition</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Wormberry"]/statBases</xpath>
+			<success>Always</success>
+			<value>
+				<Nutrition>0.14</Nutrition>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Timeberry"]/statBases</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Timeberry"]</xpath>
+			<success>Always</success>
+			<value>
+				<statBases></statBases>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Timeberry"]/statBases/Nutrition</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Timeberry"]/statBases</xpath>
+			<success>Always</success>
+			<value>
+				<Nutrition>0.7</Nutrition>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="RawBerries"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="RawBerries"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="sierra.milkshakes.digitaldeluxeedition">Sierra_Blueberries</li>
+						<li MayRequire="sierra.milkshakes.digitaldeluxeedition">Sierra_Strawberries</li>
+						<li MayRequire="zal.fruitblend">FruitBlendRaw</li>
+						<li MayRequire="zal.braziliancrops">KIT_RawAcaiBerry</li>
+						<li MayRequire="zal.braziliancrops">KIT_RawJaboticaba</li>
+						<li MayRequire="sarg.rimbees">RB_NonDescriptVegetables</li>
+						<li MayRequire="tarojun.morishep.onioftherim">DemonBreathBerryPeeled</li>
+						<li MayRequire="zylle.cubeland">ZWB_Squarries</li>
+						<li MayRequire="romyashi.moretreeproducts">Romy_RawCecropiaFruits</li>
+						<li MayRequire="halloweenparade.velcroboy333">AutumnFruit</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawPlum</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawPrunes</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_Bearberry</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawCherry</li>
+						<li MayRequire="vanillaexpanded.vplantsemore,oskarpotocki.vfe.vikings">VCE_RawBlueberries</li>
+						<li MayRequire="tanypredator.bedouin.faction.expanded">BedouinDates</li>
+						<li MayRequire="dismarzero.vgp.vgpmoreveggies">RawKiwi</li>
+						<li MayRequire="regrowth.botr.core">RG_RawRaspberries</li>
+						<li MayRequire="druid.fungilite">Timeberry</li>
+						<li MayRequire="druid.fungilite">Wormberry</li>
+						<li MayRequire="mlie.tropickapprainforestmod">CK_RawJitterBerries</li>
+						<li MayRequire="pphhyy.gulden">GuldenRawBerries</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="RawBerries"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="sierra.milkshakes.digitaldeluxeedition">Sierra_Blueberries</li>
+						<li MayRequire="sierra.milkshakes.digitaldeluxeedition">Sierra_Strawberries</li>
+						<li MayRequire="zal.fruitblend">FruitBlendRaw</li>
+						<li MayRequire="zal.braziliancrops">KIT_RawAcaiBerry</li>
+						<li MayRequire="zal.braziliancrops">KIT_RawJaboticaba</li>
+						<li MayRequire="sarg.rimbees">RB_NonDescriptVegetables</li>
+						<li MayRequire="tarojun.morishep.onioftherim">DemonBreathBerryPeeled</li>
+						<li MayRequire="zylle.cubeland">ZWB_Squarries</li>
+						<li MayRequire="romyashi.moretreeproducts">Romy_RawCecropiaFruits</li>
+						<li MayRequire="halloweenparade.velcroboy333">AutumnFruit</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawPlum</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawPrunes</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_Bearberry</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawCherry</li>
+						<li MayRequire="vanillaexpanded.vplantsemore,oskarpotocki.vfe.vikings">VCE_RawBlueberries</li>
+						<li MayRequire="tanypredator.bedouin.faction.expanded">BedouinDates</li>
+						<li MayRequire="dismarzero.vgp.vgpmoreveggies">RawKiwi</li>
+						<li MayRequire="regrowth.botr.core">RG_RawRaspberries</li>
+						<li MayRequire="druid.fungilite">Timeberry</li>
+						<li MayRequire="druid.fungilite">Wormberry</li>
+						<li MayRequire="mlie.tropickapprainforestmod">CK_RawJitterBerries</li>
+						<li MayRequire="pphhyy.gulden">GuldenRawBerries</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="RawBerries"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="sierra.milkshakes.digitaldeluxeedition">Sierra_Blueberries</li>
+						<li MayRequire="sierra.milkshakes.digitaldeluxeedition">Sierra_Strawberries</li>
+						<li MayRequire="zal.fruitblend">FruitBlendRaw</li>
+						<li MayRequire="zal.braziliancrops">KIT_RawAcaiBerry</li>
+						<li MayRequire="zal.braziliancrops">KIT_RawJaboticaba</li>
+						<li MayRequire="sarg.rimbees">RB_NonDescriptVegetables</li>
+						<li MayRequire="tarojun.morishep.onioftherim">DemonBreathBerryPeeled</li>
+						<li MayRequire="zylle.cubeland">ZWB_Squarries</li>
+						<li MayRequire="romyashi.moretreeproducts">Romy_RawCecropiaFruits</li>
+						<li MayRequire="halloweenparade.velcroboy333">AutumnFruit</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawPlum</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawPrunes</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_Bearberry</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawCherry</li>
+						<li MayRequire="vanillaexpanded.vplantsemore,oskarpotocki.vfe.vikings">VCE_RawBlueberries</li>
+						<li MayRequire="tanypredator.bedouin.faction.expanded">BedouinDates</li>
+						<li MayRequire="dismarzero.vgp.vgpmoreveggies">RawKiwi</li>
+						<li MayRequire="regrowth.botr.core">RG_RawRaspberries</li>
+						<li MayRequire="pphhyy.gulden">GuldenRawBerries</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

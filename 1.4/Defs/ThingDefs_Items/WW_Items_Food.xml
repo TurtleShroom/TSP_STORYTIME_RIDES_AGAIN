@@ -4,7 +4,7 @@
 	<ThingDef ParentName="OrganicProductBase">
 		<defName>Sloodge</defName>
 		<label>sloodge</label>
-		<description>A preserved mashed mixture of animal products and plant food. It tastes bland, but is not offensive; unlike Kibble, Pawns will not hate eating it. It lasts a very long time without refrigeration and has just enough nutrients to be worth eating. Unlike Kibble, is still salvagable as an ingredient.</description>
+		<description>A preserved mashed mixture of animal products and plant food. It tastes bland, but is not offensive; unlike Kibble, Pawns will not hate eating it. It lasts a very long time without refrigeration and has just enough nutrients to be worth eating. Unlike Kibble, is still salvagable as an ingredient. Almost every creature in existence is capable of digesting Sloodge, regardless of its ordinary diet.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<thingCategories>
 			<li>Foods</li>
@@ -16,20 +16,21 @@
 		</graphicData>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<statBases>
-			<MarketValue>4</MarketValue>
+			<MarketValue>2.5</MarketValue>
 			<Mass>0.018</Mass>
-			<Flammability>0</Flammability>
-			<WorkToMake>70</WorkToMake>
+			<Flammability>3</Flammability>
+			<WorkToMake>2070</WorkToMake>
 			<DeteriorationRate>13</DeteriorationRate>
 			<Nutrition>0.39</Nutrition>
 		</statBases>
+		<stackLimit>3000</stackLimit>
 		<ingestible>
-			<foodType>Meal, Processed, CarnivoreAnimalStrict, VegetarianRoughAnimal, OmnivoreAnimal, OmnivoreRoughAnimal, OmnivoreHuman, Corpse, Meat, VegetableOrFruit, Seed, Plant, Tree, Fluid, Kibble</foodType>
-			<preferability>MealSimple</preferability>
+			<foodType>Processed, CarnivoreAnimalStrict, VegetarianRoughAnimal, OmnivoreAnimal, OmnivoreRoughAnimal, OmnivoreHuman, Corpse, Meat, VegetableOrFruit, AnimalProduct, Seed, Plant, Tree, Fluid, Liquor, Kibble</foodType>
+			<preferability>MealAwful</preferability>
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>Meal_Eat</ingestSound>
 			<optimalityOffsetHumanlikes>-1</optimalityOffsetHumanlikes>
-			<optimalityOffsetFeedingAnimals>5</optimalityOffsetFeedingAnimals>
+			<optimalityOffsetFeedingAnimals>20</optimalityOffsetFeedingAnimals>
 		</ingestible>
 		<comps Inherit="False">
 			<li Class="CompProperties_Rottable">

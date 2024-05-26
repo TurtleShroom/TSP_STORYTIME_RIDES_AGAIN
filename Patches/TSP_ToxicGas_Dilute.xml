@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
+		<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
+			<success>Always</success>
+			<value>
+				<hiddenPrerequisites></hiddenPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ResearchProjectDef[defName="DrugProduction"]/techLevel</xpath>
+		<!-- If it does, add this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DrugProduction"]/techLevel</xpath>
+			<success>Always</success>
+			<value>
+				<techLevel>Medieval</techLevel>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="ToxGas"]/prerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<prerequisites>
+					<li>Smithing</li>
+					<li>DrugProduction</li>
+					<!--
+					<li>Brewing</li>
+					<li>DrugProduction</li>
+					<li>PsychoidBrewing</li>
+					-->
+				</prerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<li>Brewing</li>
+				<li>PsychoidBrewing</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>

@@ -337,4 +337,60 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="MeleeWeapon_Scythe"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="MeleeWeapon_Scythe"]/weaponTags</xpath>
+			<value>
+				<li>CallOfCthulhu_Farmer</li>
+				<li>NeolithicMeleeBasic</li>
+				<li>PeeledWeaponBasic</li>
+				<li>PeeledWeapon</li>
+				<li>Toolagri</li>
+				<li>GnomeSimpleMelee</li>
+				<li>HSEdoClanPeasant</li>
+				<li>CallOfCthulhu_Farmer</li>
+				<li>PeeledWeaponBasic</li>
+				<li>PeeledWeapon</li>
+				<li>Toolagri</li>
+				<li>GnomeSimpleMelee</li>
+				<li>HSEdoClanPeasant</li>
+				<li>RWPMeleeBasic</li>
+				<li>SurvivalistMelee</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="MeleeWeapon_MonoScythe"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="MeleeWeapon_MonoScythe"]/weaponTags</xpath>
+			<value>
+				<li>PeeledWeapon_Decent</li>
+				<li>PeeledWeaponHeavy</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="MeleeWeapon_PlasmaScythe"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="MeleeWeapon_PlasmaScythe"]/weaponTags</xpath>
+			<value>
+				<li>PeeledWeaponBasic</li>
+				<li>PeeledWeaponAdvanced</li>
+				<li>PeeledHeavy</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

@@ -1312,11 +1312,11 @@
     <label>kachorpa</label>
     <description>KACHOW! These experimental Borpa variants were created to make the ultimate racer, and as such are partially mechanical! Forty-two losers were created in the process. Kachorpas shed their excess chassis sheds regularly, but they need a little help in getting it off, which is a painless affair. After all, rust is bad for your image when you're this fast! \n \n As a side-effect to the creation of these creatures, liquor and fluids were found to be the only way to continually fuel a Kachorpa, until recently. It seems the Kachorpa have now adapted to also eating raw flesh, probably due to the lack of liquor available in the wild, or maybe that is just because of an insatiable thirst to KACHOW.</description>
     <statBases>
-		<MoveSpeed>14.9</MoveSpeed>
+		<MoveSpeed>15</MoveSpeed>
 		<ComfyTemperatureMin>-30</ComfyTemperatureMin>
 		<ComfyTemperatureMax>75</ComfyTemperatureMax>
 		<MarketValue>1000</MarketValue>
-		<FilthRate>5</FilthRate>
+		<FilthRate>1.5</FilthRate>
 		<CaravanRidingSpeedFactor>4</CaravanRidingSpeedFactor>
 		<MeatAmount>5</MeatAmount>
 		<LeatherAmount>100</LeatherAmount>
@@ -1378,7 +1378,7 @@
       <baseBodySize>3.5</baseBodySize>
       <baseHungerRate>0.5</baseHungerRate>
       <baseHealthScale>1.45</baseHealthScale>
-      <foodType>Liquor, Fluid, CarnivoreAnimalStrict, Corpse</foodType>
+      <foodType>Liquor, Fluid, CarnivoreAnimalStrict, Meat, Corpse</foodType>
       <wildness>0.75</wildness>
       <trainability>Intermediate</trainability>
       <gestationPeriodDays>50</gestationPeriodDays>
@@ -1749,68 +1749,71 @@
 	<!-- ======================= John Borpa =============================== -->
 
 	<ThingDef ParentName="AnimalThingBase">
-    <defName>BORPA_JohnBorpa</defName>
-    <label>John Borpa</label>
-    <description>A magnificent demon. Wielding an unique spear, John Borpa only wishes to torture you and your colony. \n \n He has nearly unlimited health. His armor is profound. He does not eat. He does not sleep. He walks. The only thing that can be done in his presence is to lock one's doors and wait for him to leave, which he will do after a day or two. \n \n Legends say that if a John Borpa is successfully killed, processing his body will yield enough food to sustain a colony for years.</description>
-    <statBases>
-		<ToxicResistance>1</ToxicResistance>
-		<ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">1</ToxicEnvironmentResistance>
-		<Flammability>0</Flammability>
-		<PsychicSensitivity>0</PsychicSensitivity>
-		<MoveSpeed>1</MoveSpeed>
-		<ComfyTemperatureMin>-100</ComfyTemperatureMin>
-		<ComfyTemperatureMax>100</ComfyTemperatureMax>
-		<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-		<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
-		<ArmorRating_Heat>10</ArmorRating_Heat>
-		<MarketValue>666</MarketValue>
-		<FilthRate>0</FilthRate>
-		<MeatAmount>666</MeatAmount>
-		<LeatherAmount>666</LeatherAmount>
-    </statBases>
-    <tools>
-      <li>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>8</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
-      </li>
-    </tools>
-    <race>
-      <body>ST_FrogLike</body>
-	  <!-- <deathActionWorkerClass>BorpaEventsAndBehaviors.DeathActionWorker_BorpaRemoveOnDeath</deathActionWorkerClass> -->
-	  <needsRest>false</needsRest>
-      <hasGenders>true</hasGenders>
-      <foodType>None</foodType>
-      <baseBodySize>1</baseBodySize>
-      <baseHungerRate>0</baseHungerRate>
-      <baseHealthScale>50</baseHealthScale>
-      <wildness>1</wildness>
-	  <intelligence>ToolUser</intelligence>
-      <lifeExpectancy>1000</lifeExpectancy>
-	  <specificMeatDef>TSP_ST_Borpa_JohnBorpaSteak</specificMeatDef>
-      <lifeStageAges>
-        <li>
-          <def>AnimalAdult</def>
-          <minAge>0</minAge>
-          <soundWounded>Pawn_JBorpa_Pain</soundWounded>
-          <soundDeath>Pawn_JBorpa_Death</soundDeath>
-          <soundCall>Pawn_JBorpa_Angry</soundCall>
-          <soundAngry>Pawn_JBorpa_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_JBorpa_Angry</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Borpa_Call</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Borpa_Call</soundMeleeMiss>
-    </race>
-	<comps>
-		<li Class="AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
-		<li Class="AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-			<gender MayRequire="oskarpotocki.vanillafactionsexpanded.core">Male</gender>
-		</li>
-	</comps>
+		<defName>BORPA_JohnBorpa</defName>
+		<label>John Borpa</label>
+		<description>A magnificent demon. Wielding an unique spear, John Borpa only wishes to torture you and your colony. \n \n He has nearly unlimited health. His armor is profound. He does not eat. He does not sleep. He walks. The only thing that can be done in his presence is to lock one's doors and wait for him to leave, which he will do after a day or two. \n \n Legends say that if a John Borpa is successfully killed, processing his body will yield enough food to sustain a colony for years.</description>
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">1</ToxicEnvironmentResistance>
+			<Flammability>0</Flammability>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<MoveSpeed>1</MoveSpeed>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<ComfyTemperatureMax>100</ComfyTemperatureMax>
+			<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>10</ArmorRating_Heat>
+			<MarketValue>666</MarketValue>
+			<FilthRate>0</FilthRate>
+			<MeatAmount>666</MeatAmount>
+			<LeatherAmount>666</LeatherAmount>
+		</statBases>
+		<tools>
+		  <li>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+		  </li>
+		</tools>
+		<race>
+		  <body>ST_FrogLike</body>
+		  <!-- <deathActionWorkerClass>BorpaEventsAndBehaviors.DeathActionWorker_BorpaRemoveOnDeath</deathActionWorkerClass> -->
+		  <needsRest>false</needsRest>
+		  <hasGenders>true</hasGenders>
+		  <foodType>None</foodType>
+		  <baseBodySize>2</baseBodySize>
+		  <baseHungerRate>0</baseHungerRate>
+		  <baseHealthScale>50</baseHealthScale>
+		  <wildness>1</wildness>
+		  <intelligence>ToolUser</intelligence>
+		  <lifeExpectancy>10000</lifeExpectancy>
+		  <specificMeatDef>TSP_ST_Borpa_JohnBorpaSteak</specificMeatDef>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0</minAge>
+			  <soundWounded>Pawn_JBorpa_Pain</soundWounded>
+			  <soundDeath>Pawn_JBorpa_Death</soundDeath>
+			  <soundCall>Pawn_JBorpa_Angry</soundCall>
+			  <soundAngry>Pawn_JBorpa_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_JBorpa_Angry</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Borpa_Call</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Borpa_Call</soundMeleeMiss>
+		</race>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
+			<li Class="AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<gender MayRequire="oskarpotocki.vanillafactionsexpanded.core">Male</gender>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_ChangeWeather">
+				<weatherDef>Rain</weatherDef>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="AnimalBehaviours.AnimalStatExtension">
 				<statToAdd>
@@ -1837,14 +1840,13 @@
   
   
   <PawnKindDef ParentName="AnimalKindBase">
-	
     <defName>BORPA_JohnBorpa</defName>
     <label>John Borpa</label>
     <race>BORPA_JohnBorpa</race>
 	<destroyGearOnDrop>true</destroyGearOnDrop>
 	<canArriveManhunter>false</canArriveManhunter>
     <combatPower>9999</combatPower>
-    <ecoSystemWeight>0</ecoSystemWeight>
+    <ecoSystemWeight>1</ecoSystemWeight>
     <wildGroupSize>1</wildGroupSize>
     <lifeStages>
       <li>
