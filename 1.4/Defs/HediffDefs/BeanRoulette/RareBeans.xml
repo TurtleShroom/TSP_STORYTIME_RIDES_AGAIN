@@ -6,11 +6,15 @@
 	<HediffDef>
 		<defName>ST_Bean_Tongue</defName>
 		<label>Roulette Beans: Friendly Frog</label>
-		<description>As {PAWN_NameDef} was about to consume the jelly bean, it moved! It's no bean, just a little frog, and it wants to help {PAWN_NameDef}! For a brief time, the frog will follow {PAWN_objective} and shoot its tongue on command.\n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Allows the use of a frog's tongue attack.</description>		
+		<description>Just as {PAWN_NameDef} was about to consume the jelly bean, it moved! It's no bean, just a little frog, and it wants to help {PAWN_NameDef}! For a brief time, the frog will follow {PAWN_objective} and shoot its tongue on command.\n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Allows the use of a frog's tongue attack.</description>		
 		<initialSeverity>1</initialSeverity>
 		<defaultLabelColor>(209,144,142)</defaultLabelColor>      	
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>120000</disappearsAfterTicks>
@@ -75,6 +79,10 @@
 		<defaultLabelColor>(0,200,150)</defaultLabelColor>      	
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>30000</disappearsAfterTicks>
@@ -114,7 +122,11 @@
 		<initialSeverity>1</initialSeverity>
 		<defaultLabelColor>(115, 179, 0)</defaultLabelColor>      	
 		<hediffClass>HediffWithComps</hediffClass>
-		<isBad>True</isBad>
+		<isBad>true</isBad>
+		<makesSickThought>true</makesSickThought>
+		<tendable>false</tendable>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>true</everCurableByItem>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>2000</disappearsAfterTicks> <!-- About one hour -->

@@ -1,11 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<RecipeDef Name="TSP_ST_PoisonRecipe_Base" Abstract="True">
+	<RecipeDef Name="TSP_ST_PoisonRecipe_Base" ParentName="TSP_WW_DrugRecipe_Base" Abstract="True">
 		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_PoisonExtract</li>
+			</thingDefs>
+		</fixedIngredientFilter>
 		<recipeUsers>
 			<li>ManualGrinder</li>
 			<li>ElectricGrinder</li>
@@ -19,7 +24,7 @@
 	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
 		<defName>ST_MakePoison</defName>
 		<label>grind poison</label>
-		<description>By combining Glitter Beans and certain plants, a potent poison can be synthesized. It bares a strong resemblance in effects to many natural poison and venom types in nature.</description>
+		<description>By combining beans and certain plants, a potent poison can be synthesized. It bares a strong resemblance in effects to many natural poison and venom types in nature.</description>
 		<jobString>Extracting poison.</jobString>
 		<workAmount>1000</workAmount>
 		<ingredients>
@@ -61,6 +66,9 @@
 				<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
 				<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>50</ST_PoisonExtract>
@@ -125,6 +133,9 @@
 			<thingDefs>
 				<li>BillyClub</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>25</ST_PoisonExtract>
@@ -159,6 +170,9 @@
 				<li>TSP_ST_BotoxMedicine</li>
 				-->
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<thingDefs>
@@ -191,6 +205,9 @@
 			<thingDefs>
 				<li>Flake</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>10</ST_PoisonExtract>
@@ -217,6 +234,9 @@
 			<thingDefs>
 				<li>Flake</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>20</ST_PoisonExtract>
@@ -242,6 +262,9 @@
 			<thingDefs>
 				<li>Flake</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>40</ST_PoisonExtract>
@@ -272,6 +295,9 @@
 			<thingDefs>
 				<li>Flake</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>80</ST_PoisonExtract>
@@ -298,6 +324,9 @@
 			<thingDefs>
 				<li>Yayo</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>13</ST_PoisonExtract>
@@ -327,6 +356,9 @@
 			<thingDefs>
 				<li>Yayo</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>23</ST_PoisonExtract>
@@ -360,6 +392,9 @@
 			<thingDefs>
 				<li>Yayo</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>43</ST_PoisonExtract>
@@ -389,6 +424,9 @@
 			<thingDefs>
 				<li>Yayo</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>83</ST_PoisonExtract>
@@ -401,7 +439,7 @@
 	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
 		<defName>ST_MakePoison_ElCheapo</defName>
 		<label>extract poison from Psychite Leaves inefficiently</label>
-		<description>Trace amounts of potent chemicals can be extracted from unprocessed Psychite Leaves and refined into a powerful poison. Thi is extremely inefficient and produces very little substance.</description>
+		<description>Trace amounts of potent chemicals can be extracted from unprocessed Psychite Leaves and refined into a powerful poison. This is extremely inefficient and produces very little substance.</description>
 		<jobString>Extracting poison.</jobString>
 		<workAmount>7000</workAmount>
 		<recipeUsers>
@@ -413,6 +451,9 @@
 				<thingDefs>
 					<li>PsychoidLeaves</li>
 				</thingDefs>
+				<disallowedThingDefs>
+					<li>ST_PoisonExtract</li>
+				</disallowedThingDefs>
 			</filter>
 			<count>40</count>
 		  </li>
@@ -421,6 +462,9 @@
 			<thingDefs>
 				<li>PsychoidLeaves</li>
 			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<ST_PoisonExtract>10</ST_PoisonExtract>
@@ -453,7 +497,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products MayRequire="ludeon.rimworld.biotech">
-			<ST_PoisonExtract>10</ST_PoisonExtract>
+			<ST_PoisonExtract>15</ST_PoisonExtract>
 		</products>
 		<researchPrerequisites Inherit="False" MayRequire="ludeon.rimworld.biotech"></researchPrerequisites>
 	</RecipeDef>

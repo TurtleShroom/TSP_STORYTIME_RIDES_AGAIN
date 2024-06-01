@@ -35,6 +35,14 @@
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
     <techLevel>Industrial</techLevel>
 	<fixedName>Survivalists</fixedName>
+	<allowedCultures>
+		<li>ST_PirateCulture</li>
+		<li>STGoblin</li>
+		<li>Kriminul</li>
+		<li>ST_WoodBeetCulture</li>
+		<li>ST_BeetnikhCulture</li>
+		<li MayRequire="oskarpotocki.vfe.pirates">VFEP_Khanate</li>
+	</allowedCultures>
     <backstoryFilters>
       <li>
         <categories>
@@ -66,7 +74,7 @@
 		<li MayRequire="llunak.MorePrecepts">Pacifism</li>
 		<li MayRequire="Qux.factionhippie">PeaceLove</li>
 		<li MayRequire="Zezz.Altrumeme">Altruism</li>
-		<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
+		<!-- <li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li> -->
 		<li MayRequire="FalloutRedScare.FalloutRedScare">FRS_Structure_Socialist</li>
 		<li MayRequire="Qux.factionhippie">PeaceLove</li>
 		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Corporate</li>
@@ -339,6 +347,7 @@
 			<ESCP_OhmesRaht_Kingdom_Warrior MayRequire="theo.escp.khajiit">0.5</ESCP_OhmesRaht_Kingdom_Warrior>
 			<ESCP_Senche_Kingdom_Warrior MayRequire="theo.escp.khajiit">0.5</ESCP_Senche_Kingdom_Warrior>
         </options>
+		</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">
 				<kindDef>Hunters</kindDef>
 				<commonality>1</commonality>
@@ -370,7 +379,6 @@
 					<MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">0.5</MF_CorporatePunk>
 				</options>
 			</li>
-      </li>
     </pawnGroupMakers>
     <settlementTexturePath>World/Survivalist</settlementTexturePath>
   </FactionDef>

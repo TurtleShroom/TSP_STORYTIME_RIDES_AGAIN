@@ -204,7 +204,7 @@
 	<isBad>false</isBad>
     <tendable>false</tendable>
 	<everCurableByItem>false</everCurableByItem>
-	<scenarioCanAdd>false</scenarioCanAdd>
+	<scenarioCanAdd>true</scenarioCanAdd>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
     <addedPartProps>
@@ -259,7 +259,7 @@
   <ThingDef ParentName="BodyPartBase">
     <defName>FrogTongue</defName>
     <label>froglike tongue</label>
-    <description>A sapient being's tongue that has been warped into a frog's tongue.</description>
+    <description>This Pawn's tongue has been warped into a frog's tongue.</description>
     <techLevel>Medieval</techLevel>
     <thingCategories>
       <li>BodyPartsNatural</li>
@@ -416,7 +416,7 @@
 	<isBad>true</isBad>
 	<makesSickThought>false</makesSickThought>
     <tendable>false</tendable>
-	<everCurableByItem>false</everCurableByItem>
+	<everCurableByItem>true</everCurableByItem>
 	<scenarioCanAdd>false</scenarioCanAdd>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
@@ -592,12 +592,17 @@
   
   
 
-<!--Frog Plague-->  
-  <HediffDef Name="FrogPlagueBase" Abstract="True">
-    <hediffClass>HediffWithComps</hediffClass>
-    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
-    <initialSeverity>0.001</initialSeverity>
-  </HediffDef>  
+	<!--Frog Plague-->  
+	<HediffDef Name="FrogPlagueBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<initialSeverity>0.001</initialSeverity>
+		<isBad>true</isBad>
+		<makesSickThought>true</makesSickThought>
+		<tendable>true</tendable>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<everCurableByItem>true</everCurableByItem>
+	</HediffDef>
   
   
   <HediffDef ParentName="FrogPlagueBase">

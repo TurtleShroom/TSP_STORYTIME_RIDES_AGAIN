@@ -14,4 +14,78 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/VFECore.Misc.HireableFactionDef[defName="Pirate"]/pawnKinds</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/VFECore.Misc.HireableFactionDef[defName="Pirate"]/pawnKinds</xpath>
+			<value>
+				<li>PirateJuggernaut</li>
+				<li>PirateCaptain</li>
+				<li>PirateGrenadier</li>
+				<li>PirateNormal</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/FactionDef[defName="VFEP_Junkers"]/allowedCultures</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/FactionDef[defName="VFEP_Junkers"]/allowedCultures</xpath>
+			<value>
+				<li>ST_PirateCulture</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>	
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/FactionDef[defName="VFEP_Mercenaries"]/allowedCultures</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/FactionDef[defName="VFEP_Mercenaries"]/allowedCultures</xpath>
+			<value>
+				<li>ST_PirateCulture</li>
+				<li>VFEP_Khanate</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/CultureDef[defName="VFEP_Khanate"]/label</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/CultureDef[defName="VFEP_Khanate"]/label</xpath>
+			<value>
+				<label>Junkers</label>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/CultureDef[defName="VFEP_Khanate"]/allowedPlaceTags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/CultureDef[defName="VFEP_Khanate"]/allowedPlaceTags</xpath>
+			<value>
+				<li>ST_OriginPirate</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

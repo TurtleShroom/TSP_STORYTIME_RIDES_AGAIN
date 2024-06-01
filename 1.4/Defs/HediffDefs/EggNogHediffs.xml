@@ -9,6 +9,7 @@
     <defaultLabelColor>(0,128,128)</defaultLabelColor>
     <maxSeverity>1.0</maxSeverity>
     <isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-1.5</severityPerDay>
@@ -69,6 +70,7 @@
     <defName>EggNogTolerance</defName>
     <label>egg nog tolerance</label>
     <description>A built-up tolerance to egg nog. Consume MORE.</description>
+	<everCurableByItem>false</everCurableByItem>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.15</severityPerDay>
@@ -99,6 +101,7 @@
     <description>A deep love of egg nog. Not being able to drink it will make this Pawn mad, but it'll wear off after a few days.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
     <causesNeed>ST_EggNog_DependencyNeed</causesNeed>
+	<everCurableByItem>false</everCurableByItem>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.15</severityPerDay>
@@ -160,6 +163,7 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
 		<comps>
 		  <li Class="HediffCompProperties_SeverityPerDay">
 			<severityPerDay>-0.8</severityPerDay>
@@ -209,8 +213,10 @@
 		<defaultLabelColor>(0,128,128)</defaultLabelColor>
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>true</isBad>
+		<makesSickThought>true</makesSickThought>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<taleOnVisible>ToxicityRevealed</taleOnVisible>
+		<everCurableByItem>true</everCurableByItem>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-1.05</severityPerDay>
@@ -251,9 +257,10 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-1</severityPerDay>
+				<severityPerDay>-0.1</severityPerDay>
 				<showHoursToRecover>true</showHoursToRecover>
 			</li>
 			<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">

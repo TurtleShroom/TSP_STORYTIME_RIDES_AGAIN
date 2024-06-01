@@ -407,7 +407,7 @@
 			<min Inherit="False">99999</min>
 			<max Inherit="False">99999</max>
 		</apparelMoney>
-		<specificApparelRequirements>
+		<specificApparelRequirements Inherit="False">
 		  <li>
 			<colorGenerator Class="ColorGenerator_Options">
 			  <options>
@@ -448,7 +448,8 @@
 		  <li>Simple</li>
 		</techHediffsTags>
 		<techHediffsChance>0.02</techHediffsChance>
-		<apparelTags Inherit="False"> <!-- Gnome peasants wear nothing else -->
+		<apparelTags Inherit="False">
+			<!-- Gnome peasants wear nothing else -->
 			<!-- <li>GnomePeasant</li> -->
 		</apparelTags>
 		<weaponTags Inherit="False">
@@ -464,9 +465,12 @@
 		<PawnKindDef ParentName="BasePlayerGnomePawnKind">
 			<defName>GnomeChef</defName>
 			<label>Gnome chef</label>
-			<isFighter>true</isFighter>
+			<isFighter>false</isFighter>
 			<combatPower>60</combatPower>
 			<chemicalAddictionChance>0.01</chemicalAddictionChance>
+			<humanPregnancyChance>0.13</humanPregnancyChance>
+			<maxGenerationAge>54</maxGenerationAge>
+			<minGenerationAge>23</minGenerationAge>
 			<apparelMoney>
 				<min>250</min>
 				<max>450</max>
@@ -478,6 +482,7 @@
 				<li MayRequire="vanillaexpanded.vappe">VAE_Apparel_ChefsUniform</li>
 				<li MayRequire="vanillaexpanded.vappe">VAE_Headgear_ChefsToque</li>
 			</apparelRequired>
+			<forceNormalGearQuality>true</forceNormalGearQuality>
 			<weaponMoney>
 				<min>250</min>
 				<max>1600</max>
@@ -496,17 +501,31 @@
 			<backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>
 			<techHediffsMoney>
 				<min>50</min>
-				<max>50</max>
+				<max>500</max>
 			</techHediffsMoney>
 			<techHediffsTags>
 				<li>Poor</li>
 			</techHediffsTags>
 			<techHediffsChance>0.02</techHediffsChance>
+			<techHediffsRequired Inherit="False">
+				<li MayRequire="ludeon.rimworld.royalty">GastroAnalyzer</li>
+			</techHediffsRequired>
 			<weaponTags>
 				<li>Knife</li>
 				<li>GnomeChef</li>
 			</weaponTags>
-		<initialWillRange>0.01~2</initialWillRange>
-		<initialResistanceRange>1~8</initialResistanceRange>
+			<initialWillRange>0.01~2</initialWillRange>
+			<initialResistanceRange>2~8</initialResistanceRange>
+			<skills Inherit="False">
+				<li Inherit="False">
+					<skill>Cooking</skill>
+					<range>12~20</range>
+				</li>
+			</skills>
+			<!--
+			<requiredWorkTags>
+				<li>Cooking</li>
+			</requiredWorkTags>
+			-->
 	</PawnKindDef>
 </Defs>

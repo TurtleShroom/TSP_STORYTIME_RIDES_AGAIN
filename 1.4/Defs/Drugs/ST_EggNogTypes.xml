@@ -178,6 +178,7 @@
     </ingestible>
 	<tradeTags>
 		<li>EggNog</li>
+		<li>StorytimeDrugs</li>
 	</tradeTags>
     <comps Inherit="False">
       <li Class="CompProperties_Drug" Inherit="False">
@@ -279,6 +280,10 @@
       </li>
     </comps>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+	<tradeTags>
+		<li>EggNog</li>
+		<!-- <li>StorytimeDrugs</li> -->
+	</tradeTags>
   </ThingDef>
   
   <ThingDef ParentName="EggBase">
@@ -383,6 +388,11 @@
     </comps>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
     <orderedTakeGroup>Drug</orderedTakeGroup>
+	<tradeTags>
+		<li>EggNog</li>
+		<li>StorytimeDrugs</li>
+		<li>StorytimeBooze</li>
+	</tradeTags>
   </ThingDef>
   
   <ThingDef ParentName="EggBase">
@@ -482,6 +492,11 @@
     </comps>
 	<storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
     <orderedTakeGroup>Drug</orderedTakeGroup>
+	<tradeTags>
+		<li>ST_Poison</li>
+		<li>EggNog</li>
+		<li>StorytimeDrugs</li>
+	</tradeTags>
   </ThingDef>
   
 	<ThingDef Name="FireNog" Abstract="True">
@@ -538,6 +553,13 @@
 		<modExtensions>
 			<li Class="NightmareCore.ThingModExtension_DisplayableItem" MayRequire="nightmare.core,nightmare.museums"></li>
 		</modExtensions>
+		<tradeTags>
+			<li>StorytimeDrugs</li>
+			<li>WeaponsRanged</li>
+			<li>RangedWeapons</li>
+			<li>EggNog</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
 	</ThingDef>
 
   
@@ -578,10 +600,12 @@
         <listOrder>10</listOrder>
 		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
       </li>
-      <li Class="CompProperties_Rottable">
-        <daysToRotStart>8</daysToRotStart>
-        <rotDestroys>true</rotDestroys>
-      </li>
+		<!--
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>8</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+		-->
     </comps>
 	<tradeTags>
 		<li>ExoticMisc</li>
