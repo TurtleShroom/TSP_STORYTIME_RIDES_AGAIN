@@ -14,6 +14,7 @@
     <stackLimit>75</stackLimit>
     <thingCategories>
       <li>Manufactured</li>
+	  <li MayRequire="vanillaexpanded.vbrewe">VBE_Musts</li>
     </thingCategories>
     <statBases>
       <DeteriorationRate>1.0</DeteriorationRate>
@@ -24,7 +25,7 @@
     </statBases>
     <tickerType>Rare</tickerType>
     <comps>
-		<li Class="CompProperties_Ingredients" />
+		<li Class="CompProperties_Ingredients"></li>
 		<li Class="CompProperties_Rottable">
 			<daysToRotStart>5</daysToRotStart>
 			<rotDestroys>true</rotDestroys>
@@ -74,6 +75,7 @@
 		<li MayRequire="vanillaexpanded.vbrewe">VBE_Bar</li>
 	</recipeUsers>
 	<researchPrerequisites>
+		<li>ST_GnomeCulture</li>
 		<li>Brewing</li>
 	</researchPrerequisites>
     <products>
@@ -93,6 +95,7 @@
     <ingredients>
       <li>
         <filter>
+			<customSummary>berries, agave, fruits</customSummary>
 			<categories>
 				<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
 			</categories>
@@ -172,6 +175,7 @@
 		<ingredients>
 		  <li>
 			<filter>
+				<customSummary>chocolate, sweeteners</customSummary>
 						<thingDefs>
 							<li>Chocolate</li>
 							<li MayRequire="aratocat.wonderland">Chocofuel</li>
@@ -181,6 +185,7 @@
 		  </li>
 		  <li>
 			<filter>
+					<customSummary>Gnome beer, Gnome sugar</customSummary>
 						<thingDefs>
 							<li>GnomeBeer</li>
 							<li>ST_GnomeSugar</li>
@@ -281,7 +286,6 @@
       <texPath>Things/Items/GnomeFood/GnomeBeer</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
-    <equippedAngleOffset>-150</equippedAngleOffset>
     <rotatable>false</rotatable>
     <stackLimit>25</stackLimit>
 	<thingCategories>
@@ -300,7 +304,7 @@
     </statBases>
     <ingestible>
       <foodType>Fluid, Processed, Liquor</foodType>
-      <joyKind>Chemical</joyKind>
+      <joyKind>TSP_ST_GnomeBooze_Joy</joyKind>
       <joy>0.09</joy>
       <nurseable>true</nurseable>
       <drugCategory>Social</drugCategory>
@@ -312,7 +316,7 @@
       </ingestHoldOffsetStanding>
       <ingestCommandString>Drink {0}</ingestCommandString>
       <ingestReportString>Drinking {0}.</ingestReportString>
-      <chairSearchRadius>40</chairSearchRadius>
+      <chairSearchRadius>50</chairSearchRadius>
       <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
@@ -324,7 +328,7 @@
       </outcomeDoers>
     </ingestible>
     <techLevel>Neolithic</techLevel>
-    <comps>
+    <comps Inherit="False">
 		<li Class="CompProperties_Drug">
 			<chemical>Alcohol</chemical>
 			<addictiveness>0.01</addictiveness>
@@ -335,7 +339,7 @@
 			<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
 			<largeOverdoseChance>0</largeOverdoseChance>
 		</li>
-		<!-- <li Class="CompProperties_Ingredients" /> -->
+		<!-- <li Class="CompProperties_Ingredients"></li> -->
     </comps>
   </ThingDef>
   
@@ -355,7 +359,6 @@
       <texPath>Things/Items/GnomeFood/ChocSaturday</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <equippedAngleOffset>-150</equippedAngleOffset>
     <rotatable>false</rotatable>
     <stackLimit>25</stackLimit>
     <statBases>
@@ -367,7 +370,7 @@
     </statBases>
     <ingestible>
       <foodType>Fluid, Processed, Liquor</foodType>
-      <joyKind>Gluttonous</joyKind>
+      <joyKind>TSP_ST_GnomeBooze_Joy</joyKind>
       <joy>0.6</joy>
       <nurseable>true</nurseable>
       <drugCategory>Social</drugCategory>
@@ -379,7 +382,7 @@
       </ingestHoldOffsetStanding>
       <ingestCommandString>Drink {0}</ingestCommandString>
       <ingestReportString>Drinking {0}.</ingestReportString>
-      <chairSearchRadius>35</chairSearchRadius>
+      <chairSearchRadius>50</chairSearchRadius>
       <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
@@ -432,7 +435,6 @@
 		  <texPath>Things/Items/GnomeFood/ShortGreenGuy</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<equippedAngleOffset>-150</equippedAngleOffset>
 		<rotatable>false</rotatable>
 		<stackLimit>25</stackLimit>
 		<statBases>
@@ -444,7 +446,7 @@
 		</statBases>
 		<ingestible>
 		  <foodType>Fluid, Processed, Liquor</foodType>
-		  <joyKind>Chemical</joyKind>
+		  <joyKind>TSP_ST_GnomeBooze_Joy</joyKind>
 		  <joy>0.45</joy>
 		  <nurseable>true</nurseable>
 		  <drugCategory>Social</drugCategory>
@@ -456,7 +458,7 @@
 		  </ingestHoldOffsetStanding>
 		  <ingestCommandString>Drink {0}</ingestCommandString>
 		  <ingestReportString>Drinking {0}.</ingestReportString>
-		  <chairSearchRadius>25</chairSearchRadius>
+		  <chairSearchRadius>50</chairSearchRadius>
 		  <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
 		  <outcomeDoers>
 			<li Class="IngestionOutcomeDoer_GiveHediff">
@@ -509,7 +511,6 @@
 		  <texPath>Things/Items/GnomeFood/BlurberrySpecial</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<equippedAngleOffset>-150</equippedAngleOffset>
 		<rotatable>false</rotatable>
 		<stackLimit>25</stackLimit>
 		<statBases>
@@ -521,7 +522,7 @@
 		</statBases>
 		<ingestible>
 		  <foodType>Fluid, Processed, Liquor</foodType>
-		  <joyKind>Chemical</joyKind>
+		  <joyKind>TSP_ST_GnomeBooze_Joy</joyKind>
 		  <joy>0.6</joy>
 		  <nurseable>true</nurseable>
 		  <drugCategory>Social</drugCategory>
@@ -533,7 +534,7 @@
 		  </ingestHoldOffsetStanding>
 		  <ingestCommandString>Drink {0}</ingestCommandString>
 		  <ingestReportString>Drinking {0}.</ingestReportString>
-		  <chairSearchRadius>25</chairSearchRadius>
+		  <chairSearchRadius>50</chairSearchRadius>
 		  <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
 		  <outcomeDoers>
 			<li Class="IngestionOutcomeDoer_GiveHediff">
@@ -568,5 +569,152 @@
 		<tradeTags>
 			<li>ST_GnomeBooze</li>
 		</tradeTags>
+	</ThingDef>
+	
+	<!-- Shamelessly taken from the VFE Medieval Mod -->
+	<ThingDef ParentName="DrugBase">
+		<defName>TSP_ST_VFEM_GnomeWine_Lime</defName>
+		<label>lime Gnome wine</label>
+		<description>Wine is the result of the juice of fruits after they have fermented and contain alcohol, widely used as a beverage. This wine was derived from limes using a famous recipe invented by Gnomes.</description>
+		<graphicData>
+			<texPath>Things/Items/GnomeFood/GnomeCocktails/TSP_LimeWine</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<uiIconPath>Things/Items/GnomeFood/GnomeCocktails/TSP_LimeWine/TSP_LimeWine_a</uiIconPath>
+		<rotatable>false</rotatable>
+		<stackLimit>15</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.33</DeteriorationRate>
+			<MarketValue>27</MarketValue>
+			<Mass>0.5</Mass>
+			<Flammability>0.15</Flammability>
+			<Nutrition>0.13</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed, Liquor</foodType>
+			<joyKind>TSP_ST_GnomeBooze_Joy</joyKind>
+			<joy>0.22</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<chairSearchRadius>50</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholHigh</hediffDef>
+					<severity>0.22</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+					<divideByBodySize>false</divideByBodySize> <!-- Drink made for midgets -->
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholTolerance</hediffDef>
+					<severity>0.01</severity>
+					<divideByBodySize>false</divideByBodySize> <!-- Drink made for midgets -->
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<techLevel>Medieval</techLevel>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Alcohol</chemical>
+				<addictiveness>0.04</addictiveness>
+				<minToleranceToAddict>0.16</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.45</existingAddictionSeverityOffset>
+				<needLevelOffset>1.1</needLevelOffset>
+				<listOrder>10</listOrder>
+				<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
+				<largeOverdoseChance>0</largeOverdoseChance>
+			</li>
+			<li Class="VFEMedieval.CompProperties_IngestedThoughtFromQuality" MayRequire="oskarpotocki.vanillafactionsexpanded.medievalmodule">
+				<ingestedThought MayRequire="oskarpotocki.vanillafactionsexpanded.medievalmodule">VFEM_DrankWine</ingestedThought>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<modExtensions></modExtensions>
+		<thingCategories>
+			<li>TSP_ST_GnomeBooze</li>
+		</thingCategories>
+		<tradeTags>
+			<li>ST_GnomeBooze</li>
+		</tradeTags>
+	</ThingDef>
+
+	<RecipeDef>
+		<defName>TSP_ST_VFEM_Make_GnomeWine_LimeMust</defName>
+		<label>make Gnome lime must</label>
+		<description>Make must from limes for the purpose of fermenting Gnome Wine.</description>
+		<jobString>Making must</jobString>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1000</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ST_Lime</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_Lime</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<TSP_ST_VFEM_GnomeWine_LimeMust>15</TSP_ST_VFEM_GnomeWine_LimeMust>
+		</products>
+		<recipeUsers>
+			<li>GnomeTable</li>
+			<li>Brewery</li>
+			<li MayRequire="vanillaexpanded.vbrewe">VBE_Bar</li>
+		</recipeUsers>
+		<researchPrerequisites Inherit="False">
+			<li MayRequire="TSP.Isengriff.Storytime">gnomeCooking</li>
+			<li>nogAlchemy</li>
+		</researchPrerequisites>
+	</RecipeDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>TSP_ST_VFEM_GnomeWine_LimeMust</defName>
+		<label>lime must (Gnome wine)</label>
+		<description>Un-fermented limes based on a Gnome recipe. This substance needs to ferment in a wine barrel before it becomes Gnome wine. Its bucket comes with a free handle!</description>
+		<graphicData>
+			<texPath>Things/Items/GnomeFood/GnomeWine_Lime_Must</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<stackLimit>100</stackLimit>
+		<thingCategories>
+			<li>Manufactured</li>
+			<li MayRequire="vanillaexpanded.vbrewe">VBE_Musts</li>
+		</thingCategories>
+		<statBases>
+			<DeteriorationRate>1.1</DeteriorationRate>
+			<MarketValue>3.5</MarketValue>
+			<Mass>0.78</Mass>
+			<Flammability>0.05</Flammability>
+			<MaxHitPoints>160</MaxHitPoints>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>7</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
 	</ThingDef>
 </Defs>
