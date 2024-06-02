@@ -10,15 +10,16 @@
 		  <Mass>853.3</Mass>
 		  <MarketValue>750</MarketValue>
 		  <ComfyTemperatureMin>-65</ComfyTemperatureMin>
-		  <ComfyTemperatureMax>55</ComfyTemperatureMax>
+		  <ComfyTemperatureMax>100</ComfyTemperatureMax>
 		  <FilthRate>16</FilthRate>
+		  <Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
 		<comps>
 		  <li Class="CompProperties_Shearable">
 			<woolDef>WoolMeffalo</woolDef>
-			<shearIntervalDays>15</shearIntervalDays>
-			<woolAmount>200</woolAmount>
+			<shearIntervalDays>7</shearIntervalDays>
+			<woolAmount>150</woolAmount>
 		  </li>
 		   <li Class="CompProperties_Milkable">
 			<milkDef>Flake</milkDef>
@@ -45,13 +46,266 @@
 		  <manhunterOnDamageChance>0.6</manhunterOnDamageChance>
 		  <useMeatFrom>Muffalo</useMeatFrom>
 		  <wildBiomes Inherit="False">
-			<AridShrubland>0.03</AridShrubland>
-			<TemperateForest>0.02</TemperateForest>
-			<TropicalRainforest>0.01</TropicalRainforest>
-			<IceSheet>0.04</IceSheet>
-			<BorealForest>0.04</BorealForest>
-			<Tundra>0.04</Tundra>
-			<Desert>0.1</Desert>
+				<!-- RimWorld.Core -->
+				<!-- VANILLA RENDITION -->
+
+				<BorealForest>0.04</BorealForest>
+
+				<Tundra>0.04</Tundra>
+
+				<ColdBog>0</ColdBog>
+
+				<IceSheet>0.04</IceSheet>
+
+				<SeaIce>0.25</SeaIce>
+
+				<TemperateForest>0.02</TemperateForest>
+
+				<TemperateSwamp>0.01</TemperateSwamp>
+
+				<TropicalRainforest>0.01</TropicalRainforest>
+
+				<TropicalSwamp>0.01</TropicalSwamp>
+
+				<AridShrubland>0.03</AridShrubland>
+
+				<Desert>0.1</Desert>
+
+				<ExtremeDesert>0</ExtremeDesert>
+
+
+
+
+
+				<!-- ___________________ -->			
+				<!-- Mod Biomes -->
+				<!-- ___________________ -->
+
+				<!-- sarg.alphabiomes -->
+				<!-- ALPHA BIOMES -->
+
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.01</AB_FeraliskInfestedJungle>
+
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.05</AB_GallatrossGraveyard>
+
+				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.33</AB_GelatinousSuperorganism>
+
+				<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">0.33</AB_MechanoidIntrusion>
+
+				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.02</AB_MycoticJungle>
+
+				<AB_OcularForest MayRequire="sarg.alphabiomes">0.1</AB_OcularForest>
+
+				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0.1</AB_PropaneLakes>
+
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.5</AB_PyroclasticConflagration>
+
+				<AB_RockyCrags MayRequire="sarg.alphabiomes">0.12</AB_RockyCrags>
+
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.1</AB_TarPits>
+
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.8</AB_MiasmicMangrove>
+
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">1</AB_IdyllicMeadows>
+
+
+
+				<!-- ___________________ -->
+
+				<!-- BiomesTeam.Oasis -->
+				<!-- CHROMATIC OASIS -->
+
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.1</BMT_ChromaticOasis>
+
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.AdvancedBiomes -->
+				<!-- ADVANCED BIOMES -->
+
+				<PoisonForest MayRequire="Mlie.AdvancedBiomes">1</PoisonForest>
+
+				<Savanna MayRequire="Mlie.AdvancedBiomes">0.33</Savanna>
+
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.04</Volcano>
+
+				<Wasteland MayRequire="Mlie.AdvancedBiomes">1</Wasteland>
+
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.05</Wetland>
+
+
+				<!-- ___________________ -->
+
+				<!-- zylle.MoreVanillaBiomes -->
+				<!-- More Vanilla Biomes -->
+
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.03</ZBiome_AlpineMeadow>
+
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.25</ZBiome_CloudForest>
+
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.02</ZBiome_CoastalDunes>
+
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_DesertOasis>
+
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.33</ZBiome_Grasslands>
+
+				<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">1</ZBiome_Iceberg_NoBeach>
+
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_Marsh>
+
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_Sandbar_NoBeach>
+				
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.5</ZBiome_GlacialShield>
+				
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">1</ZBiome_Badlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.NaturesPrettySweet -->
+				<!-- NATURE IS PRETTY SWEET -->
+
+				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">1</TKKN_VolcanicFlow>
+
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.45</TKKN_RedwoodForest>
+
+				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.33</TKKN_Grasslands> <!-- PRAIRIE -->
+
+				<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.33</TKKN_Savanna>
+
+				<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">0.1</TKKN_Desert> <!-- SALT FIELDS -->
+
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.1</TKKN_Oasis>			
+
+
+				<!-- ___________________ -->
+
+				<!-- Heis.Edo.Themed.Expansion -->
+				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.1</HSBambooForest>
+
+
+				<!-- _________________ -->
+
+				<!-- BiomesTeam.BiomesIslands -->
+				<!-- BIOMES ISLANDS -->
+
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_Atoll>
+
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_BorealIsland>
+
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_DesertIsland>
+
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_DesertArchipelago>
+
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_TemperateIsland>
+
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_TemperateArchipelago>
+
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_TropicalIsland>
+
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_TropicalArchipelago>
+
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.11</BiomesIslands_TundraIsland>
+				
+				
+				
+				<!-- _________________ -->
+
+				<!-- BiomesTeam.BiomesCaverns -->
+				<!-- BIOMES CAVERNS -->
+				
+				<BMT_CrystalCaverns MayRequire="BiomesTeam.BiomesCaverns">1</BMT_CrystalCaverns>
+				
+				<BMT_EarthenDepths MayRequire="BiomesTeam.BiomesCaverns">1</BMT_EarthenDepths>
+				
+				<BMT_FungalForest MayRequire="BiomesTeam.BiomesCaverns">1</BMT_FungalForest>
+				
+
+
+				<!-- ___________________ -->
+
+				<!-- reel.FrozenForest -->
+				<!-- WINTER TAIGA -->
+
+				<WinterTaiga MayRequire="reel.FrozenForest">0.4</WinterTaiga>
+
+
+				<!-- __________________ -->
+
+				<!-- SirMashedPotato.MorrowRim -->
+				<!-- "MORROWIND" MOD -->
+
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">1</MorrowRim_Ashlands>
+
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">1</MorrowRim_BlightedAshlands>
+
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">1</MorrowRim_AshSwamp>
+
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">1</MorrowRim_VolcanicAshlands>
+				
+				<Mashed_Ashlands_BlightedBogAshlands MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_BlightedBogAshlands>
+				
+				<Mashed_Ashlands_BlightedAshlands MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_BlightedAshlands>
+				
+				<Mashed_Ashlands_Ashlands MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_Ashlands>
+				
+				<Mashed_Ashlands_DustplainAshlands MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_DustplainAshlands>
+				
+				<Mashed_Ashlands_GrazelandAshlands MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_GrazelandAshlands>
+				
+				<Mashed_Ashlands_SwampAshlands MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_SwampAshlands>
+				
+				<Mashed_Ashlands_ForestAshlands MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_ForestAshlands>
+				
+				<Mashed_Ashlands_MarshAshlands MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_MarshAshlands>
+				
+				<Mashed_Ashlands_MeadowAshlands MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_MeadowAshlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- pphhyy.gulden -->
+				<!-- FOREST OF GOLD -->
+
+				<TemperateGuldenForest MayRequire="pphhyy.gulden">0.1</TemperateGuldenForest>
+
+				<LotRE_MallornForest MayRequire="lordoftherims.elves">0.5</LotRE_MallornForest>
+
+
+				<!-- ___________________ -->
+
+				<!-- deemainiac.securecontainrimworld -->
+				<!-- SCP FOUNDATION -->
+
+				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">1</SCR_SCP610Biome>
+
+
+				<!-- _________________ -->
+
+				<!-- regrowth.botr.volcanicicesheet -->
+				<!-- VOLCANIC ICE SHEET -->
+
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.5</RG-VIS_VulcanicIceSheet>
+				
+				
+				<!-- _________________ -->
+				
+				<!-- ironscruff.primordialgeysers -->
+				<!-- PRIMORDIAL GEYSERS -->
+				
+
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">1</IronScruff_PrimordialGeysers>
+
+
+				<!-- _________________ -->
+				
+				<!-- mlie.rfpermafrost -->
+				<!-- PERMAFROST ZONE -->
+
+				<Permafrost MayRequire="mlie.rfpermafrost">0.1</Permafrost>
 		  </wildBiomes>
 		  <lifeStageAges>
 			<li>
@@ -64,7 +318,7 @@
 			</li>
 			<li>
 			  <def>AnimalJuvenile</def>
-			  <minAge>0.5</minAge>
+			  <minAge>0.25</minAge>
 			  <soundWounded>Pawn_Meffalo_Wounded</soundWounded>
 			  <soundDeath>Pawn_Meffalo_Death</soundDeath>
 			  <soundCall>Pawn_Meffalo_Call</soundCall>
@@ -72,7 +326,7 @@
 			</li>
 			<li>
 			  <def>AnimalAdult</def>
-			  <minAge>1</minAge>
+			  <minAge>0.51</minAge>
 			  <soundWounded>Pawn_Meffalo_Wounded</soundWounded>
 			  <soundDeath>Pawn_Meffalo_Death</soundDeath>
 			  <soundCall>Pawn_Meffalo_Call</soundCall>
@@ -84,7 +338,7 @@
 		  <soundMeleeMiss>Pawn_Meffalo_Miss</soundMeleeMiss>
 		</race>
 		<tradeTags>
-			<li>AnimalRare</li>
+			<li>AnimalUncommon</li>
 			<li>AnimalExotic</li>
 			<li>StorytimeAnimal</li>
 			<li>AnimalCocaine</li>
@@ -130,6 +384,14 @@
 			<chanceFactor>0.65</chanceFactor>
 		  </li>
 		</tools>
+		<modExtensions>
+				<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+					<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+				</li>
+				<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+					<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Crepuscular</bodyClock>
+				</li>
+		</modExtensions>
 	</ThingDef>
 
   <PawnKindDef Name="Meffalo" ParentName="AnimalKindBase">
@@ -303,6 +565,14 @@
 	  <li>AnimalExotic</li>
 	  <li>StorytimeAnimal</li>
     </tradeTags>
+	<modExtensions>
+				<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+					<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+				</li>
+				<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+					<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Crepuscular</bodyClock>
+				</li>
+	</modExtensions>
   </ThingDef>
   
   <PawnKindDef ParentName="AnimalKindBase">
