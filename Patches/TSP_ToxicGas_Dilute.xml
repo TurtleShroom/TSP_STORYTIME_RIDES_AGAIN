@@ -5,12 +5,12 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
-		<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
-			<success>Always</success>
-			<value>
-				<hiddenPrerequisites></hiddenPrerequisites>
+		<xpath MayRequire="ludeon.rimworld.biotech">/Defs/ResearchProjectDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd" MayRequire="ludeon.rimworld.biotech">
+			<xpath MayRequire="ludeon.rimworld.biotech">/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
+			<success MayRequire="ludeon.rimworld.biotech">Always</success>
+			<value MayRequire="ludeon.rimworld.biotech">
+				<hiddenPrerequisites MayRequire="ludeon.rimworld.biotech" Inherit="False"></hiddenPrerequisites>
 			</value>
 		</nomatch>
 	</Operation>
@@ -20,7 +20,7 @@
 		<xpath>/Defs/ResearchProjectDef[defName="DrugProduction"]/techLevel</xpath>
 		<!-- If it does, add this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="DrugProduction"]/techLevel</xpath>
+			<xpath>/Defs/ResearchProjectDef[defName="DrugProduction"]/techLevel</xpath>
 			<success>Always</success>
 			<value>
 				<techLevel>Medieval</techLevel>
@@ -34,10 +34,10 @@
 		<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="ToxGas"]/prerequisites</xpath>
+			<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
 			<success>Always</success>
 			<value>
-				<prerequisites>
+				<prerequisites Inherit="False">
 					<li>Smithing</li>
 					<li>DrugProduction</li>
 					<!--
@@ -56,7 +56,7 @@
 		<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
+			<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
 			<success>Always</success>
 			<value>
 				<li>Brewing</li>

@@ -218,7 +218,7 @@
 		  <ComfyTemperatureMin>0</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>75</ComfyTemperatureMax>
 		  <LeatherAmount>40</LeatherAmount>
-		  <PsychicSensitivity>0.5</PsychicSensitivity>
+		  <PsychicSensitivity>1.5</PsychicSensitivity>
 		  <ResearchSpeed>0.8</ResearchSpeed>
 		  <Mass>27</Mass>
 		  <RoyalFavorValue>3</RoyalFavorValue>
@@ -337,7 +337,7 @@
 			</li>
 			<li MayRequire="Ludeon.Rimworld.Biotech">
 			  <def>HumanlikePreTeenager</def>
-			  <minAge>4</minAge>
+			  <minAge>2</minAge>
 			  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
 			  <soundDeath>Pawn_Megascarab_Death</soundDeath>
 			  <soundCall>Pawn_Megascarab_Call</soundCall>
@@ -345,7 +345,7 @@
 			</li>
 			<li>
 			  <def>HumanlikeTeenager</def>
-			  <minAge>8</minAge>
+			  <minAge>5</minAge>
 			  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
 			  <soundDeath>Pawn_Megascarab_Death</soundDeath>
 			  <soundCall>Pawn_Megascarab_Call</soundCall>
@@ -353,7 +353,7 @@
 			</li>
 			<li>
 			  <def>HumanlikeAdult</def>
-			  <minAge>11</minAge>
+			  <minAge>9</minAge>
 			  <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
 			  <soundDeath>Pawn_Megascarab_Death</soundDeath>
 			  <soundCall>Pawn_Megascarab_Call</soundCall>
@@ -363,25 +363,25 @@
 		  <lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
 			<Firefighter>0</Firefighter>
 			<Patient>0</Patient>
-			<Doctor>12</Doctor>
+			<Doctor>9</Doctor>
 			<PatientBedRest>0</PatientBedRest>
 			<Childcare MayRequire="Ludeon.Rimworld.Biotech">0</Childcare>
 			<BasicWorker>1</BasicWorker>
 			<Warden>3</Warden>
 			<Handling>0</Handling>
 			<Cooking>2</Cooking>
-			<Hunting>2</Hunting>
-			<Construction>2</Construction>
-			<Growing>6</Growing>
-			<Mining>4</Mining>
-			<PlantCutting>6</PlantCutting>
-			<Smithing>4</Smithing>
+			<Hunting>1</Hunting>
+			<Construction>6</Construction>
+			<Growing>3</Growing>
+			<PlantCutting>3</PlantCutting>
+			<Mining>3</Mining>
+			<Smithing>6</Smithing>
 			<Tailoring>6</Tailoring>
-			<Art>11</Art>
+			<Art>9</Art>
 			<Crafting>2</Crafting>
 			<Hauling>1</Hauling>
-			<Cleaning>6</Cleaning>
-			<Research>11</Research>
+			<Cleaning>9</Cleaning>
+			<Research>9</Research>
 		  </lifeStageWorkSettings>  
 		  <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 		  <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
@@ -403,13 +403,13 @@
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(14.001,130)</li>
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(15,100)</li>
-			  <li>(20,0)</li>
+			  <li>(20,100)</li>
 			  <li>(22,100)</li>
 			  <li>(35,30)</li>
-			  <li>(45,18)</li>
-			  <li>(55,10)</li>
-			  <li>(65,3)</li>
-			  <li>(70,0)</li>
+			  <li>(45,8)</li>
+			  <li>(55,1)</li>
+			  <li>(65,1)</li>
+			  <li>(70,0.01)</li>
 			</points>
 		  </ageGenerationCurve>
 		  <hediffGiverSets>
@@ -484,7 +484,7 @@
               <kindDefs>
                 <li>PlayerJeub</li>
               </kindDefs>
-              <chance>7.0</chance>
+              <chance>17</chance>
             </li>
           </pawnKindEntries>
           <factionDefs>
@@ -527,6 +527,4 @@
       </alienwandererkinds>
     </pawnKindSettings>
   </AlienRace.RaceSettings>
-
-
 </Defs>

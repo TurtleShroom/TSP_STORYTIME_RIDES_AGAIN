@@ -22,7 +22,7 @@
       </recipeUsers>
       <effectWorking>Cook</effectWorking>
       <soundWorking>Recipe_Machining</soundWorking>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <unfinishedThingDef>TSP_ST_Unfinished_Stuffed</unfinishedThingDef>
     </recipeMaker>
     <weaponClasses>
       <li>Ranged</li>
@@ -64,7 +64,6 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <soundInteract>Interact_Revolver</soundInteract>
-    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
       <WorkToMake>3500</WorkToMake>
       <Mass>1.2</Mass>
@@ -92,8 +91,17 @@
 		<li>RangedLight</li>
 		<li>ShortShots</li>
 	</weaponClasses>
+    <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      
+      <!-- Support for Mod Stuff -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+    </stuffCategories>
     <costList>
-      <Steel>20</Steel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <recipeMaker>
@@ -183,8 +191,18 @@
 		<li>GoblinDecent</li>
 		<li>HarrierRanged</li>
     </weaponTags>
+    <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
+    <costStuffCount>65</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      
+      <!-- Support for Mod Stuff -->
+	  <li MayRequire="sarg.rimbees">RB_Waxy</li>
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+    </stuffCategories>
     <costList>
-      <Steel>60</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <recipeMaker>
@@ -262,6 +280,7 @@
     <soundInteract>Interact_Grenade</soundInteract>
 	<recipeMaker>
 		<researchPrerequisite>pirateGunsmithing</researchPrerequisite>
+		<unfinishedThingDef>TSP_ST_Unfinished_Stuffed</unfinishedThingDef>
 	</recipeMaker>
     <statBases>
       <Mass>1</Mass>
@@ -269,7 +288,7 @@
       <WorkToMake>2000</WorkToMake>
     </statBases>
     <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
-    <costStuffCount>10</costStuffCount>
+    <costStuffCount>20</costStuffCount>
     <stuffCategories>
       <li>Metallic</li>
       
@@ -476,7 +495,7 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="BaseWeapon">
+  <ThingDef ParentName="PirateRangedWeapon">
     <defName>PirateBola</defName>
     <label>bola balls</label>
     <description>Two heavy balls separated by a rope. This is not particularly harmful, but it tends to trip people up. It can only be thrown once, so aim carefully!</description>
@@ -489,7 +508,7 @@
     <uiIconScale>1.3</uiIconScale>
     <soundInteract>Interact_Grenade</soundInteract>
     <statBases>
-		<MarketValue>20</MarketValue>
+		<MarketValue>12</MarketValue>
 		<Mass>2</Mass>
 		<AccuracyTouch>0.95</AccuracyTouch>
 		<AccuracyShort>0.85</AccuracyShort>
@@ -508,7 +527,7 @@
 		<li>TableMachining</li>
       </recipeUsers>
       <effectWorking>Cook</effectWorking>
-      <!-- <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef> -->
+      <!-- <unfinishedThingDef>TSP_ST_Unfinished_Stuffed</unfinishedThingDef> -->
     </recipeMaker>
 	<weaponClasses>
 		<li>Neolithic</li>
@@ -536,10 +555,8 @@
 	  <li>NonLethal</li>
 	  <!-- <li>MedievalRangedBasic</li> -->
     </weaponTags>
-    <thingCategories>
-      <li>WeaponsRanged</li>
-    </thingCategories>
-    <verbs>
+    <thingCategories></thingCategories> <!-- Inherits from the Base -->
+    <verbs Inherit="False">
       <li>
         <label>throw bola balls</label>
         <verbClass>Verb_ShootOneUse</verbClass>
@@ -633,6 +650,7 @@
     </tools>
     <recipeMaker>
 	  <researchPrerequisite>pirateCrafting</researchPrerequisite>
+	  <unfinishedThingDef>TSP_ST_Unfinished_Stuffed</unfinishedThingDef>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -707,6 +725,7 @@
     </tools>
     <recipeMaker>
       <researchPrerequisite>pirateCrafting</researchPrerequisite>
+	  <unfinishedThingDef>TSP_ST_Unfinished_Stuffed</unfinishedThingDef>
       <skillRequirements>
         <Crafting>3</Crafting>
       </skillRequirements>
@@ -773,6 +792,7 @@
 			<li>ElectricSmelter</li>
 			<li MayRequire="mlie.ancientrimcore">AR_Smelter</li>
 		</recipeUsers>
+		<unfinishedThingDef>TSP_ST_Unfinished_Stuffed</unfinishedThingDef>
 	</recipeMaker>
     <tools>
 	  <li>
@@ -884,7 +904,7 @@
 		<li Class="CompProperties_GeneratedName">
 			<nameMaker>NamerWeaponBladelink</nameMaker>
 		</li>
-		<li Class="CompProperties_Biocodable"/>
+		<li Class="CompProperties_Biocodable"></li>
 	</comps>
 	<equippedStatOffsets>
 		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
@@ -974,10 +994,12 @@
 	<thingCategories>
 		<li>Artifacts</li>
     </thingCategories>
+	<!--
 	<costList>
 		<Steel>66</Steel>
 		<ComponentIndustrial>13</ComponentIndustrial>
 	</costList>
+	-->
 	<comps>
         <li>
 			<compClass>CompQuality</compClass>

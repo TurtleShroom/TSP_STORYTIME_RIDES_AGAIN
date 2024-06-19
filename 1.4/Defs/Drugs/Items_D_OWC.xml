@@ -22,6 +22,7 @@
 			<preferability>NeverForNutrition</preferability>
 			<foodType>Processed, Liquor, Kibble</foodType>
 			<drugCategory>Hard</drugCategory>
+			<ingestSound>Ingest_Pill</ingestSound>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="sarg.alphaanimals">
 					<hediffDef MayRequire="sarg.alphaanimals">AA_Resurrection</hediffDef>
@@ -56,7 +57,7 @@
 		<workAmount>1</workAmount>
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
-		<recipeUsers>
+		<recipeUsers Inherit="False">
 			<li>FabricationBench</li>	
 		</recipeUsers>
 		<ingredients>

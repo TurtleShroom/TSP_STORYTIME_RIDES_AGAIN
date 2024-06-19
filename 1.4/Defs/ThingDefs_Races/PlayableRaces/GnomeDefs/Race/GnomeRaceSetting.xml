@@ -29,8 +29,12 @@
 				<alienPartGenerator>
 					<headTypes Inherit="False">
 						<!-- <li>Gnome_Average_Normal</li> -->
+						<!--
 						<li>Male_NarrowPointy</li>
 						<li>Female_NarrowPointy</li>
+						-->
+						<li>ST_BUSTER_GnomeKidHead_Male</li>
+						<li>ST_BUSTER_GnomeKidHead_Female</li>
 					</headTypes>
 					<bodyTypes Inherit="False">
 						<li>Thin</li>
@@ -40,9 +44,9 @@
 						<li MayRequire="Ludeon.Rimworld.Biotech">Child</li>
 					</bodyTypes>
 					<customDrawSize>(0.5, 0.5)</customDrawSize>
-					<customHeadDrawSize>(0.53, 0.53)</customHeadDrawSize>
+					<customHeadDrawSize>(0.7, 0.7)</customHeadDrawSize>
 					<customPortraitDrawSize>(0.80, 0.8)</customPortraitDrawSize>
-					<customPortraitHeadDrawSize>(0.85, 0.85)</customPortraitHeadDrawSize>
+					<customPortraitHeadDrawSize>(0.92, 0.92)</customPortraitHeadDrawSize>
 					<headOffset>(0.0, -0.16)</headOffset>
 					<colorChannels>
 						<li>
@@ -137,6 +141,7 @@
 				<body>Things/Pawn/Humanlike/Gnome/Body/</body>
 				<!-- <head>Things/Pawn/Humanlike/Heads/</head> -->
 				<!-- <head>Things/Pawn/Humanlike/Gnome/Head/</head> -->
+				<!-- <head>Things/Pawn/Humanlike/Children/Heads</head> -->
 			</graphicPaths>
 			<relationSettings>
 				<relationChanceModifierSibling>3</relationChanceModifierSibling>
@@ -214,9 +219,9 @@
 			<PsychicSensitivity>0.8</PsychicSensitivity>
 			<ResearchSpeed>0.8</ResearchSpeed>
 			<Mass>20</Mass>
-			<RoyalFavorValue>2</RoyalFavorValue>
+			<RoyalFavorValue>9</RoyalFavorValue>
 			<PlantWorkSpeed>1.25</PlantWorkSpeed>
-			<ButcheryFleshSpeed>1.15</ButcheryFleshSpeed>
+			<ButcheryFleshSpeed>1.33</ButcheryFleshSpeed>
 			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">1.1</HSAU_GhoulismSusceptibility> <!-- Sadly, when they are turned into Hellsing Ghouls, they become normal size. -->
 		</statBases>
 		<tools>
@@ -293,7 +298,7 @@
 			<baseBodySize>0.5</baseBodySize>
 			<baseHealthScale>0.75</baseHealthScale>
 			<baseHungerRate>0.7</baseHungerRate>
-			<foodType>Meat, VegetableOrFruit, OmnivoreHuman, Kibble, Fluid, Processed, Kibble</foodType>
+			<foodType>Meat, VegetableOrFruit, OmnivoreHuman, Fluid, Processed, Meal, Liquor, Kibble</foodType>
 			<gestationPeriodDays>30</gestationPeriodDays>
 			<litterSizeCurve>
 				<points>
@@ -323,13 +328,13 @@
 				</li>
 				<li>
 					<def>HumanlikeAdult</def>
-					<minAge>20</minAge>
+					<minAge>14</minAge>
 				</li>
 			</lifeStageAges>
 			<lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
 				<Firefighter>7</Firefighter>
 				<Patient>0</Patient>
-				<Doctor>13</Doctor>
+				<Doctor>14</Doctor>
 				<PatientBedRest>0</PatientBedRest>
 				<Childcare MayRequire="Ludeon.Rimworld.Biotech">0</Childcare>
 				<BasicWorker>3</BasicWorker>
@@ -338,16 +343,16 @@
 				<Cooking>0</Cooking>
 				<Hunting>13</Hunting>
 				<Construction>13</Construction>
-				<Growing>1</Growing>
+				<Growing>2</Growing>
+				<PlantCutting>5</PlantCutting>
 				<Mining>14</Mining>
-				<PlantCutting>2</PlantCutting>
 				<Smithing>13</Smithing>
-				<Tailoring>4</Tailoring>
+				<Tailoring>6</Tailoring>
 				<Art>4</Art>
 				<Crafting>6</Crafting>
-				<Hauling>10</Hauling>
+				<Hauling>13</Hauling>
 				<Cleaning>1</Cleaning>
-				<Research>10</Research>
+				<Research>13</Research>
 			</lifeStageWorkSettings>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
@@ -465,7 +470,7 @@
 					</pawnKindEntries>
 					<factionDefs MayRequire="Ludeon.RimWorld.Royalty">
 						<li MayRequire="Ludeon.RimWorld.Royalty">Empire</li>
-						<li MayRequire="oskarpotocki.vfe.empire">VFEE_NewFamily</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty,oskarpotocki.vfe.empire">VFEE_NewFamily</li>
 					</factionDefs>
 				</li>
 				<!--
@@ -490,7 +495,7 @@
 					<kindDefs>
 						<li>PlayerGnome</li>
 					</kindDefs>
-					<chance>5</chance>
+					<chance>20</chance>
 				</li>
 			</alienslavekinds>
 			<alienrefugeekinds>
@@ -511,7 +516,7 @@
 								<li>TSP_ST_GnomePeasant</li>
 								<li>TSP_ST_RoyaltyGnoble</li>
 							</kindDefs>
-							<chance>8</chance>
+							<chance>10</chance>
 						</li>
 					</pawnKindEntries>
 					<factionDefs>
@@ -530,7 +535,7 @@
 					</pawnKindEntries>
 					<factionDefs MayRequire="Ludeon.RimWorld.Royalty">
 						<li MayRequire="Ludeon.RimWorld.Royalty">Empire</li>
-						<li MayRequire="oskarpotocki.vfe.empire">VFEE_NewFamily</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty,oskarpotocki.vfe.empire">VFEE_NewFamily</li>
 					</factionDefs>
 				</li>
 			</alienwandererkinds>
