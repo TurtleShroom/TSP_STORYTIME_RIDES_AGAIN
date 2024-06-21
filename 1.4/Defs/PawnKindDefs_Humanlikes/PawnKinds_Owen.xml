@@ -4,7 +4,9 @@
 	<PawnKindDef Name="OwenBase" Abstract="True">
 		<label>Owen Wilson disciple</label>
 		<labelPlural>Owen Wilson disciples</labelPlural>
-		<!-- <defaultFactionType>Owenfaction</defaultFactionType> -->
+		<defaultFactionType>Owenfaction</defaultFactionType>
+		<nameMaker>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</nameMaker>
+		<nameMakerFemale>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</nameMakerFemale>
 		<backstoryCategories>
 			<li MayRequire="vanillaracesexpanded.archon">Archon</li>
 			<li>Madman</li>
@@ -51,6 +53,9 @@
 		<weaponTags>
 			<li>GunOwen</li>
 		</weaponTags>
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
 		<combatEnhancingDrugsCount>
 			<min>3</min>
 			<max>4</max>
@@ -86,15 +91,6 @@
 			</subOptionsChooseOne>
 		</inventoryOptions>
 	</PawnKindDef>
-	
-	<RulePackDef>
-		<defName>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</defName>
-		<rulePack>
-			<rulesStrings>
-				<li>r_name->Owen Wilson</li>
-			</rulesStrings>
-		</rulePack>
-	</RulePackDef>
 
 	<PawnKindDef ParentName="OwenBase">
 		<defName>OwenWilsonpawn</defName>

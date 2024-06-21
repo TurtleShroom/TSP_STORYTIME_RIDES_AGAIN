@@ -29,12 +29,12 @@
 				<alienPartGenerator>
 					<headTypes Inherit="False">
 						<!-- <li>Gnome_Average_Normal</li> -->
-						<!--
 						<li>Male_NarrowPointy</li>
 						<li>Female_NarrowPointy</li>
-						-->
+						<!--
 						<li>ST_BUSTER_GnomeKidHead_Male</li>
 						<li>ST_BUSTER_GnomeKidHead_Female</li>
+						-->
 					</headTypes>
 					<bodyTypes Inherit="False">
 						<li>Thin</li>
@@ -43,11 +43,12 @@
 						<li MayRequire="Ludeon.Rimworld.Biotech">Baby</li>
 						<li MayRequire="Ludeon.Rimworld.Biotech">Child</li>
 					</bodyTypes>
+					<bodyAddons></bodyAddons>
 					<customDrawSize>(0.5, 0.5)</customDrawSize>
-					<customHeadDrawSize>(0.7, 0.7)</customHeadDrawSize>
-					<customPortraitDrawSize>(0.80, 0.8)</customPortraitDrawSize>
+					<customHeadDrawSize>(0.87, 0.87)</customHeadDrawSize>
+					<customPortraitDrawSize>(0.91, 0.91)</customPortraitDrawSize>
 					<customPortraitHeadDrawSize>(0.92, 0.92)</customPortraitHeadDrawSize>
-					<headOffset>(0.0, -0.16)</headOffset>
+					<headOffset>(0.0, -0.016)</headOffset>
 					<colorChannels>
 						<li>
 							<name>skin</name>
@@ -139,9 +140,22 @@
 			</generalSettings>
 			<graphicPaths>
 				<body>Things/Pawn/Humanlike/Gnome/Body/</body>
-				<!-- <head>Things/Pawn/Humanlike/Heads/</head> -->
-				<!-- <head>Things/Pawn/Humanlike/Gnome/Head/</head> -->
-				<!-- <head>Things/Pawn/Humanlike/Children/Heads</head> -->
+				<!--
+				<head>Things/Pawn/Humanlike/Heads/</head>
+				<head>Things/Pawn/Humanlike/Gnome/Head/</head>
+				<head>Things/Pawn/Humanlike/Children/Heads/</head>
+				-->
+				<head>
+					<!-- <path>Things/Pawn/Humanlike/Heads/</path> -->
+					<headtypeGraphics>
+						<Male_NarrowPointy>
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Male_Normal_Average</path>
+						</Male_NarrowPointy>
+						<Female_NarrowPointy>
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Female_Normal_Average</path>
+						</Female_NarrowPointy>
+					</headtypeGraphics>
+				</head>
 			</graphicPaths>
 			<relationSettings>
 				<relationChanceModifierSibling>3</relationChanceModifierSibling>
@@ -195,8 +209,6 @@
 						<original MayRequire="morishep.tarojun.onioftherim">AteDemonBreathBerriesAsIngredient</original>
 						<replacer MayRequire="morishep.tarojun.onioftherim">AteDemonBreathBerriesAsIngredientGood</replacer> 
 					</li>
-					
-					
 					<!-- Gnomes eat worms. Gnomes LOVE worms. Worms may not be insects, but they invoke similar feelings. Ergo, Gnomes also like eating creepy-crawly bugs. -->
 					<li MayRequire="ludeon.rimworld.ideology">
 						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatDirect</original>
