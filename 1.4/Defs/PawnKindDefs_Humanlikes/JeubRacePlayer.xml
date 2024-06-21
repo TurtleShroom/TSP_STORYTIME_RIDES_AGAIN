@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
   <PawnKindDef Abstract="True" Name="BasePlayerJeubPawnKind">
     <race>Alien_Jeub</race>
     <combatPower>50</combatPower>
 	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 	<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+	<maxGenerationAge>35</maxGenerationAge>
     <backstoryCategories>
       <li>JeubBackstory</li>
 	  <li>Madman</li>
@@ -34,8 +36,9 @@
     <defName>PlayerJeub</defName>
     <label>Jeub</label>
     <chemicalAddictionChance>0.12</chemicalAddictionChance>
-	<maxGenerationAge>35</maxGenerationAge>
-    <backstoryCategories Inherit="False">
+	<isFighter>true</isFighter>
+	<combatPower>75</combatPower>
+    <backstoryCategories>
       <li>JeubBackstory</li>
     </backstoryCategories>
     <apparelMoney>
@@ -59,7 +62,7 @@
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <techHediffsMoney>
       <min>50</min>
-      <max>50</max>
+      <max>51</max>
     </techHediffsMoney>
     <techHediffsTags>
       <li>Poor</li>
@@ -78,7 +81,7 @@
 		<li>MeleePiercer</li>
     </weaponTags>
     <initialWillRange>1~2</initialWillRange>
-    <initialResistanceRange>3~10</initialResistanceRange>
+    <initialResistanceRange>3~4</initialResistanceRange>
   </PawnKindDef>
   
   <PawnKindDef ParentName="BasePlayerJeubPawnKind">
@@ -88,8 +91,8 @@
     <defaultFactionType>Jeubscalon</defaultFactionType>
     <factionLeader>true</factionLeader>
     <chemicalAddictionChance>0.5</chemicalAddictionChance>
-	<maxGenerationAge>45</maxGenerationAge>
 	<minGenerationAge>23</minGenerationAge> <!-- Prevents bug when Children are allowed to spawn in V1.3 via Mods causing the trade caravan to pump out massive errors -->
+	<maxGenerationAge>39</maxGenerationAge>
     <apparelTags>
 		<li>JeubWear</li>
 		<li>Tribal</li>
@@ -114,9 +117,9 @@
 		<min>500</min>
 		<max>5000</max>
     </weaponMoney>
-    <backstoryCryptosleepCommonality>0.013</backstoryCryptosleepCommonality>
+    <backstoryCryptosleepCommonality>0.13</backstoryCryptosleepCommonality>
     <techHediffsMoney>
-      <min>50</min>
+      <min>250</min>
       <max>4000</max>
     </techHediffsMoney>
     <techHediffsTags>
@@ -148,8 +151,8 @@
     <chemicalAddictionChance>0.15</chemicalAddictionChance>
 	<minGenerationAge>31</minGenerationAge>
     <apparelMoney>
-      <min>50</min>
-      <max>400</max>
+      <min>250</min>
+      <max>600</max>
     </apparelMoney>
 	<apparelTags>
 		<li>JeubWear</li>
@@ -166,7 +169,7 @@
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <techHediffsMoney>
       <min>50</min>
-      <max>50</max>
+      <max>51</max>
     </techHediffsMoney>
     <techHediffsTags>
       <li>Poor</li>
@@ -188,6 +191,7 @@
     <label>cabbage grenadier</label>
     <combatPower>90</combatPower>
     <chemicalAddictionChance>0.15</chemicalAddictionChance>
+	<isFighter>true</isFighter>
     <apparelMoney>
       <min>100</min>
       <max>1750</max>
@@ -216,7 +220,7 @@
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <techHediffsChance>0.1</techHediffsChance>
+    <techHediffsChance>0.2</techHediffsChance>
 	<weaponTags Inherit="False">
 		<li>CabbageWarrior</li>
     </weaponTags>

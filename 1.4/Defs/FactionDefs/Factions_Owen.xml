@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<FactionDef ParentName="ST_HumanFactionBase">
+		<defName>Owenfaction</defName>
+		<label>Cult of Owen Wilson</label>
+		<description>Wow! It's the Cult of Owen Wilson! These fierce fighters sent from the gods spread from base to base, lecturing those they encounter about their lord and saviour Owen Cunningham Wilson through the use of bullets. Unbelievable!</description>
+		<pawnSingular>Owen Wilson disciple</pawnSingular>
+		<pawnsPlural>Owen Wilson disciples</pawnsPlural>
+		<settlementGenerationWeight>1.05</settlementGenerationWeight>
+		<listOrderPriority>20</listOrderPriority>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>O-Dog</leaderTitle>
+		<earliestRaidDays>27</earliestRaidDays>
+		<factionIconPath>Things/OwenWilson</factionIconPath>
+		<colorSpectrum>
+			<li>(255, 255, 255)</li>
+			<li>(0.45, 0.03, 0.02)</li>
+			<li>(0.8, 0.08, 0.18)</li>
+			<li>(0.92, 0.62, 0.06)</li>
+		</colorSpectrum>
+		<allowedCultures>
+			<li>Corunan</li>
+			<li MayRequire="vanillaracesexpanded.archon">Transcendent</li>
+		</allowedCultures>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistAbstract</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+		</requiredMemes>
+		<disallowedMemes>
+			<!-- If you have the Mod -->
+			<li MayRequire="llunak.MorePrecepts">Pacifism</li>
+			<li MayRequire="Qux.factionhippie">PeaceLove</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Vegan</li>
+			<li MayRequire="Zezz.Altrumeme">Altruism</li>
+			<li MayRequire="Sarg.AlphaMemes">AM_NonViolence</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HAR_Xenophilia</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginChristian</li>
+		</disallowedMemes>
+		<permanentEnemy>true</permanentEnemy>
+		<factionNameMaker>NamerOwenBase</factionNameMaker>
+		<settlementNameMaker>NamerOwenFactionBase</settlementNameMaker>
+		<techLevel>Ultra</techLevel>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Synthread</li>
+				<li>Hyperweave</li>
+				<li>Plasteel</li>
+			</thingDefs>
+		</apparelStuffFilter>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Pirate</li>
+					<li>Raider</li>
+				</categories>
+				<commonality>0.5</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Offworld</li>
+				</categories>
+				<commonality>0.5</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Madman</li>
+				</categories>
+				<commonality>3</commonality>
+			</li>
+			<li MayRequire="vanillaracesexpanded.archon">
+				<categories MayRequire="vanillaracesexpanded.archon">
+					<li MayRequire="vanillaracesexpanded.archon">Archon</li>
+				</categories>
+				<commonality MayRequire="vanillaracesexpanded.archon">3.5</commonality>
+			</li>
+		</backstoryFilters>
+		<allowedArrivalTemperatureRange>
+			<min>-999</min>
+			<max>999</max>
+		</allowedArrivalTemperatureRange>
+		<raidLootMaker>OwenRaidLootMaker</raidLootMaker>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 200)</li>
+				<li>(1300, 300)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<OwenWilsonpawn>60</OwenWilsonpawn>
+					<TSP_OwenWilsonpawn_Bulborb>49</TSP_OwenWilsonpawn_Bulborb>
+					<TSP_OwenWilsonpawn_Goblin>49</TSP_OwenWilsonpawn_Goblin>
+					<TSP_OwenWilsonpawn_Jeub>49</TSP_OwenWilsonpawn_Jeub>
+					<TSP_OwenWilsonpawn_Gnome>49</TSP_OwenWilsonpawn_Gnome>
+					<TSP_OwenWilsonpawn_Frogman>49</TSP_OwenWilsonpawn_Frogman>
+					<TSP_OwenWilsonpawn_Forg>49</TSP_OwenWilsonpawn_Forg>
+					<TSP_OwenWilsonpawns_DuoForg>49</TSP_OwenWilsonpawns_DuoForg>
+					<OwenWilsonleader>5</OwenWilsonleader>
+					<OwenWilsonleader_Bulborb>5</OwenWilsonleader_Bulborb>
+					<OwenWilsonleader_Goblin>5</OwenWilsonleader_Goblin>
+					<OwenWilsonleader_Jeub>5</OwenWilsonleader_Jeub>
+					<OwenWilsonleader_Gnome>5</OwenWilsonleader_Gnome>
+					<OwenWilsonleader_Frogman>5</OwenWilsonleader_Frogman>
+					<OwenWilsonleader_Forg>5</OwenWilsonleader_Forg>
+					<OwenWilsonleaders_DuoForg>5</OwenWilsonleaders_DuoForg>
+					<TSP_OwenWilsonpawn_Archon MayRequire="vanillaracesexpanded.archon">10</TSP_OwenWilsonpawn_Archon>
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>10</commonality>
+				<options>
+					<OwenWilsonpawn>999</OwenWilsonpawn>
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>25</commonality>
+				<options>
+					<OwenWilsonleader>6</OwenWilsonleader>
+					<OwenWilsonleader_Bulborb>5</OwenWilsonleader_Bulborb>
+					<OwenWilsonleader_Goblin>5</OwenWilsonleader_Goblin>
+					<OwenWilsonleader_Jeub>5</OwenWilsonleader_Jeub>
+					<OwenWilsonleader_Gnome>5</OwenWilsonleader_Gnome>
+					<OwenWilsonleader_Frogman>5</OwenWilsonleader_Frogman>
+					<OwenWilsonleader_Forg>5</OwenWilsonleader_Forg>
+					<OwenWilsonleaders_DuoForg>5</OwenWilsonleaders_DuoForg>
+				</options>
+			</li>
+			<li MayRequire="vanillaracesexpanded.archon">
+				<kindDef MayRequire="vanillaracesexpanded.archon">Combat</kindDef>
+				<commonality MayRequire="vanillaracesexpanded.archon">50</commonality>
+				<options MayRequire="vanillaracesexpanded.archon">
+					<TSP_OwenWilsonpawn_Archon MayRequire="vanillaracesexpanded.archon">999</TSP_OwenWilsonpawn_Archon>
+				</options>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<OwenWilsonpawn>115</OwenWilsonpawn>
+					<OwenWilsonleader>100</OwenWilsonleader>
+					<OwenWilsonleader_Bulborb>100</OwenWilsonleader_Bulborb>
+					<OwenWilsonleader_Goblin>100</OwenWilsonleader_Goblin>
+					<OwenWilsonleader_Jeub>100</OwenWilsonleader_Jeub>
+					<OwenWilsonleader_Gnome>100</OwenWilsonleader_Gnome>
+					<OwenWilsonleader_Frogman>100</OwenWilsonleader_Frogman>
+					<OwenWilsonleader_Forg>100</OwenWilsonleader_Forg>
+					<OwenWilsonleaders_DuoForg>100</OwenWilsonleaders_DuoForg>
+					<TSP_OwenWilsonpawn_Bulborb>49</TSP_OwenWilsonpawn_Bulborb>
+					<TSP_OwenWilsonpawn_Goblin>49</TSP_OwenWilsonpawn_Goblin>
+					<TSP_OwenWilsonpawn_Jeub>49</TSP_OwenWilsonpawn_Jeub>
+					<TSP_OwenWilsonpawn_Gnome>49</TSP_OwenWilsonpawn_Gnome>
+					<TSP_OwenWilsonpawn_Frogman>49</TSP_OwenWilsonpawn_Frogman>
+					<TSP_OwenWilsonpawn_Forg>49</TSP_OwenWilsonpawn_Forg>
+					<TSP_OwenWilsonpawns_DuoForg>49</TSP_OwenWilsonpawns_DuoForg>
+					<TSP_OwenWilsonpawn_Archon MayRequire="vanillaracesexpanded.archon">60</TSP_OwenWilsonpawn_Archon>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+			<xenotypeChances MayRequire="Ludeon.RimWorld.Biotech">
+				<VRE_Archon MayRequire="vanillaracesexpanded.archon">0.1</VRE_Archon>
+			</xenotypeChances>
+			<warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<fixedLeaderKinds>
+			<li>OwenWilsonleader</li>
+			<li>OwenWilsonleader_Bulborb</li>
+			<li>OwenWilsonleader_Goblin</li>
+			<li>OwenWilsonleader_Jeub</li>
+			<li>OwenWilsonleader_Gnome</li>
+			<li>OwenWilsonleader_Frogman</li>
+			<li>OwenWilsonleader_Forg</li>
+			<li>OwenWilsonleaders_DuoForg</li>
+			<li MayRequire="vanillaracesexpanded.archon">TSP_OwenWilsonpawn_Archon</li>
+		</fixedLeaderKinds>
+		<modExtensions>
+			<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
+				<canSendDeserters MayRequire="oskarpotocki.vfe.empire">false</canSendDeserters>
+				<!-- <deserterKind MayRequire="oskarpotocki.vfe.empire">TSP_ST_VFEE_PirateDeserter</deserterKind> -->
+			</li>
+		</modExtensions>
+		<settlementTexturePath>Things/OwenWilson</settlementTexturePath>
+	</FactionDef>
+
+	<ThingSetMakerDef>
+		<defName>OwenRaidLootMaker</defName>
+		<root Class="ThingSetMaker_MarketValue">
+			<fixedParams>
+				<filter>
+					<thingDefs>
+						<li>Flake</li>
+						<li>Yayo</li>
+						<li>GoJuice</li>
+						<li>WakeUp</li>
+						<li>SmokeleafJoint</li>
+						<li>Silver</li>
+						<li>Jade</li>
+						<li>ComponentSpacer</li>
+						<li>Gold</li>
+						<li MayRequire="VanillaExpanded.VPsycastsE">VPE_Eltex</li>
+					</thingDefs>
+				</filter>
+			</fixedParams>
+		</root>
+	</ThingSetMakerDef>
+</Defs>

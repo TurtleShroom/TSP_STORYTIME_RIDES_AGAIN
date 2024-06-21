@@ -46,12 +46,18 @@
     </raidCommonalityFromPointsCurve>
     <humanlikeFaction>false</humanlikeFaction>
     <hidden>true</hidden>
+	<displayInFactionSelection>false</displayInFactionSelection>
     <autoFlee>false</autoFlee>
-    <techLevel>Neolithic</techLevel>
+    <techLevel>Animal</techLevel>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
     <allowedArrivalTemperatureRange>
       <min>-999</min>
       <max>999</max>
     </allowedArrivalTemperatureRange>
+		<modExtensions>
+			<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
+				<canSendDeserters MayRequire="oskarpotocki.vfe.empire">false</canSendDeserters>
+			</li>
+		</modExtensions>
   </FactionDef>
 </Defs>

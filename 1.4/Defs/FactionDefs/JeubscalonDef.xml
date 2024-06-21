@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
-  <FactionDef>
+  <FactionDef ParentName="ST_HumanFactionBase">
     <defName>Jeubscalon</defName>
     <label>Jeub Hive</label>
     <description>A Jeub hive. The first known High Jeub to evolve was named Snaff. Snaff came from Rata Jeub, the original home planet of the Jeub species; Snaff is a title which is now borne by every High Jeub ruler. All High Jeubs in the galaxy are his descendents and as the only semi-sane group of Jeubs, they command the non-sapient Jeubs as eusocial servants.</description>
@@ -13,14 +14,11 @@
     <canStageAttacks>true</canStageAttacks>
 	<rescueesCanJoin>true</rescueesCanJoin>
     <factionIconPath>World/Jeubscalon/JeubSettlementLogo</factionIconPath>
+	<settlementTexturePath>World/Jeubscalon/JeubSettlementLogo</settlementTexturePath>
     <colorSpectrum>
 		<li>(127, 42, 255)</li>
+		<!-- <li>(0.5, 0.001, 0.5)</li> -->
     </colorSpectrum>
-	<!--
-    <colorSpectrum>
-      <li>(0.5, 0.0, 0.5)</li>
-    </colorSpectrum>
-	-->
 	<basicMemberKind>PlayerJeub</basicMemberKind>
 	<allowedCultures>
 		<li>ST_JeubCulture</li>
@@ -53,8 +51,6 @@
 		
 		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Honorable</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Acceptable</li>
-		
-		
 	</disallowedPrecepts>
     <apparelStuffFilter>
       <thingDefs>
@@ -85,27 +81,18 @@
       <li>Base_Neolithic_Standard</li>
     </baseTraderKinds>
     <allowedArrivalTemperatureRange>
-      <min>-40</min>
-      <max>90</max>
+      <min>-999</min>
+      <max>999</max>
     </allowedArrivalTemperatureRange>
     <maxPawnCostPerTotalPointsCurve>
       <points>
-        <li>(0,300)</li>
+		<li>(0,150)</li>
         <li>(70,900)</li>
         <li>(400,1000)</li>
         <li>(900,1500)</li>
-        <li>(100000,11000)</li>
+        <li>(10000,11000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
-	<raidLootValueFromPointsCurve>
-      <points>
-        <li>(35,     35)</li>
-        <li>(100,   200)</li>
-        <li>(1000,  600)</li>
-        <li>(2000,  1000)</li>
-        <li>(4000, 1500)</li>
-      </points>
-    </raidLootValueFromPointsCurve>
     <raidCommonalityFromPointsCurve>
       <points>
         <li>(0, 1)</li>
@@ -114,34 +101,31 @@
     </raidCommonalityFromPointsCurve>
     <pawnGroupMakers>
       <li>
+        <kindDef>Combat</kindDef>
+		<commonality>100</commonality>
+        <options>
+			<PlayerJeub>150</PlayerJeub>
+			<Snaff_HighKing>25</Snaff_HighKing>
+			<Jeub>400</Jeub>
+			<Bat MayRequire="zal.witchinghour">5</Bat>
+        </options>
+      </li>
+      <li>
         <kindDef>Peaceful</kindDef>
+		<commonality>100</commonality>
         <options>
           <PlayerJeub>100</PlayerJeub>
 		  <Snaff_HighKing>15</Snaff_HighKing>
         </options>
       </li>
       <li>
-        <kindDef>Combat</kindDef>
-        <options>
-          <PlayerJeub>150</PlayerJeub>
-          <Jeub>400</Jeub>
-		  <Snaff_HighKing>25</Snaff_HighKing>
-        </options>
-      </li>
-      <li>
-        <kindDef>Combat</kindDef>
-        <options>
-			<Jeub>200</Jeub>
-			<Bat MayRequire="zal.witchinghour">5</Bat>
-        </options>
-      </li>
-      <li>
         <kindDef>Trader</kindDef>
+		<commonality>100</commonality>
         <traders>
           <JeubTrader>1</JeubTrader>
         </traders>
         <carriers>
-			<Jeub>9999</Jeub>
+			<Jeub>999</Jeub>
 			<Muffalo>0.001</Muffalo>
 			<Dromedary>0.001</Dromedary>
 			<Elephant>50</Elephant>
@@ -155,6 +139,7 @@
       </li>
       <li>
         <kindDef>Settlement</kindDef>
+		<commonality>100</commonality>
         <options>
           <PlayerJeub>100</PlayerJeub>
           <Jeub>500</Jeub>
@@ -163,13 +148,10 @@
         </options>
       </li>
     </pawnGroupMakers>
-    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
-	
 	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
     <fixedLeaderKinds>
       <li>Snaff_HighKing</li>
     </fixedLeaderKinds>
-	
 	<modExtensions>
 		<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
 			<canSendDeserters MayRequire="oskarpotocki.vfe.empire">true</canSendDeserters>
@@ -182,8 +164,4 @@
 		-->
 	</modExtensions>
   </FactionDef>
-
-
-
-
 </Defs>

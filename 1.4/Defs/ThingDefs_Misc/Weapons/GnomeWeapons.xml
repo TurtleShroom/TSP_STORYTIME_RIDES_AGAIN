@@ -112,69 +112,68 @@
   
   
     <ThingDef ParentName="BaseWeaponGnome">
-    <defName>GnomeSword</defName>
-    <label>gnome sword</label>
-    <description>"Do you really think you can hurt me with that? All it's going to do is make my face look cooler!" \n \n A short little gnome "sword". It's basically a dagger for midgets.</description>
-    <graphicData>
-      <texPath>Things/Items/GnomeWeapons/SwordGnome</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>0.95</drawSize>
-    </graphicData>
-    <techLevel>Medieval</techLevel>
-	<weaponTags>
-		<li>GnomeSimpleMelee</li>
-		<li>NeolithicMelee</li>
-		<li>NeolithicMeleeBasic</li>
-		<li>Knife</li>
-		<li>Dagger</li>
-		<!-- <li>GnomeWeapon</li> -->
-    </weaponTags>
-    <costStuffCount>30</costStuffCount>
-    <statBases>
-		<MaxHitPoints>5</MaxHitPoints>
-		<WorkToMake>400</WorkToMake>
-		<Mass>0.003</Mass>
-    </statBases>
-    <equippedAngleOffset>180</equippedAngleOffset>
-	<costStuffCount>30</costStuffCount>
-	<stuffCategories>
-		<li>Metallic</li>
-		<li>Woody</li>
-		<li>Stony</li>
+		<defName>GnomeSword</defName>
+		<label>gnome sword</label>
+		<description>"Do you really think you can hurt me with that? All it's going to do is make my face look cooler!" \n \n A short little gnome "sword". It's basically a dagger for midgets.</description>
+		<graphicData>
+		  <texPath>Things/Items/GnomeWeapons/SwordGnome</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>0.95</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<weaponTags>
+			<li>GnomeSimpleMelee</li>
+			<li>NeolithicMelee</li>
+			<li>NeolithicMeleeBasic</li>
+			<li>Knife</li>
+			<li>Dagger</li>
+			<!-- <li>GnomeWeapon</li> -->
+		</weaponTags>
+		<statBases>
+			<MaxHitPoints>5</MaxHitPoints>
+			<WorkToMake>400</WorkToMake>
+			<Mass>0.003</Mass>
+		</statBases>
+		<equippedAngleOffset>180</equippedAngleOffset>
+		<costStuffCount>30</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
 
-		<!-- Mod support -->
-		<li MayRequire="TaosChagic.Igloo">Snowy</li>
-		<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-		<li MayRequire="Dubwise.Rimefeller">Composite</li>
-		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-		<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-		<li MayRequire="sarg.rimbees">RB_Waxy</li>
-		<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
-		<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
-		<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
-    </stuffCategories>
-    <tools>
-      <li>
-        <label>point</label>
-        <capacities>
-          <li>Poke</li>
-        </capacities>
-        <power>7</power>
-        <cooldownTime>1</cooldownTime>
-      </li>
-      <li>
-        <label>edge</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>5</power>
-        <cooldownTime>0.5</cooldownTime>
-      </li>
-    </tools>
-	<thingCategories Inherit="Flase">
-		<li>WeaponsMelee</li>
-	</thingCategories>
+			<!-- Mod support -->
+			<li MayRequire="TaosChagic.Igloo">Snowy</li>
+			<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+			<li MayRequire="Dubwise.Rimefeller">Composite</li>
+			<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+			<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+			<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+			<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+			<li MayRequire="sarg.rimbees">RB_Waxy</li>
+			<li MayRequire="eltwofour.mantodeanrace">MantodeanOrganic</li>
+			<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+			<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
+		</stuffCategories>
+		<tools>
+		  <li>
+			<label>point</label>
+			<capacities>
+			  <li>Poke</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>1</cooldownTime>
+		  </li>
+		  <li>
+			<label>edge</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>5</power>
+			<cooldownTime>0.5</cooldownTime>
+		  </li>
+		</tools>
+		<thingCategories Inherit="Flase">
+			<li>WeaponsMelee</li>
+		</thingCategories>
   </ThingDef>
 </Defs>

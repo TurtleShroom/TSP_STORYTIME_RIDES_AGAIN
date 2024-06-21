@@ -24,6 +24,7 @@
     </apparelTags>
 	<weaponTags>
 		<li>MetalPipeRanged</li>
+		<li>MetalPipe</li>
 		<li>GoblinMelee</li>
 		<li>GoblinRanged</li>
 	</weaponTags>
@@ -36,6 +37,14 @@
 				<li MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">
 					<defName MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">ROM_InnsmouthLook_VoiceFishman</defName>
 					<chance MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">100</chance>
+				</li>
+				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+					<defName MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">ToxicEnvironmentResistance_Partial</defName>
+					<chance MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">7</chance>
+				</li>
+				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+					<defName MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">ToxicEnvironmentResistance_Total</defName>
+					<chance MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">1</chance>
 				</li>
 			</genes>
 		</li>
@@ -67,11 +76,12 @@
 	<weaponTags>
 		<li>MetalPipe</li>
 		<li>GoblinBasic</li>
+		<li>GoblinMelee</li>
 	</weaponTags>
     <techHediffsMoney>
       <min>50</min>
       <max>50</max>
-    </techHediffsMoney>
+	</techHediffsMoney>
     <techHediffsTags>
       <li>Poor</li>
     </techHediffsTags>
@@ -86,6 +96,7 @@
     <techHediffsChance>0.02</techHediffsChance>
     <initialWillRange>0.1~2</initialWillRange>
     <initialResistanceRange>1~3</initialResistanceRange>
+	<!--
 	<modExtensions>
 		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
 			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
@@ -104,6 +115,7 @@
 			</genes>
 		</li>
 	</modExtensions>
+	-->
 	<!-- <comps></comps> -->
   </PawnKindDef>
 
@@ -162,7 +174,7 @@
   <PawnKindDef ParentName="BaseGoblinKind">
     <defName>GoblinArcher</defName>
     <label>goblin archer</label>
-    <combatPower>50</combatPower>
+    <combatPower>80</combatPower>
     <defaultFactionType>GoblinTown</defaultFactionType>
     <chemicalAddictionChance>0.03</chemicalAddictionChance>
     <apparelMoney>
@@ -285,6 +297,7 @@
     <techHediffsChance>0.02</techHediffsChance>
 	<weaponTags>
 		<li>GoblinDecent</li>
+		<li>GoblinRanged</li>
 		<li>DoubleBarreledShotgun</li>
     </weaponTags>
     <initialWillRange>1~4</initialWillRange>
@@ -394,7 +407,7 @@
 			<min>1350</min>
 			<max>4200</max>
 		</apparelMoney>
-		<invFoodDef MayRequire="robtrg.tf2.sandvich">robtrg.tf2.sandvich</invFoodDef>
+		<invFoodDef MayRequire="robtrg.tf2.sandvich">ROBTRG_Sandvich_TF</invFoodDef>
 		<invNutrition MayRequire="robtrg.tf2.sandvich">12</invNutrition>
 		<apparelTags Inherit="False">
 			<li>Military</li>

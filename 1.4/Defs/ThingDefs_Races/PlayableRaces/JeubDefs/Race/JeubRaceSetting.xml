@@ -22,6 +22,11 @@
 				<li>Bodies</li>
 				<li>Body</li>
 			</blackGeneTags>
+			<blackGeneList>
+				<li>Jaw_Heavy</li>
+				<li>Head_Gaunt</li>
+				<li>Furskin</li>
+			</blackGeneList>
 		  </raceRestriction>
 		  <generalSettings>
 			<maleGenderProbability>0.7</maleGenderProbability>
@@ -232,7 +237,7 @@
 			  <li>Blunt</li>
 			  <li>Poke</li>
 			</capacities>
-			<power>10.5</power>
+			<power>10</power>
 			<cooldownTime>2</cooldownTime>
 			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 			<surpriseAttack>
@@ -250,7 +255,7 @@
 			  <li>Blunt</li>
 			  <li>Poke</li>
 			</capacities>
-			<power>10.5</power>
+			<power>10</power>
 			<cooldownTime>2</cooldownTime>
 			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 			<surpriseAttack>
@@ -315,6 +320,8 @@
 			  <li>(0.5, 0)</li>
 			  <li>(1, 1)</li>
 			  <li>(1.01, 0.02)</li>
+			  <li>(2, 1)</li>
+			  <li>(3, 0.05)</li>
 			  <li>(3.5, 0)</li>
 			</points>
 		  </litterSizeCurve>
@@ -390,7 +397,7 @@
 			<volume>(0.3, 0.8, 0.4)</volume>
 			<offset>(0,0,-0.3)</offset>
 		  </specialShadowData>
-		  <ageGenerationCurve>
+		  <ageGenerationCurve Inherit="False">
 			<points>
 			  <li>(0,0)</li>
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(0.001,43)</li>
@@ -400,16 +407,18 @@
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(10,0)</li>      
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(10.001,122)</li><!-- End exclude -->
 			  <li MayRequire="Ludeon.Rimworld.Biotech">(10.999,130)</li>
-			  <li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
-			  <li MayRequire="Ludeon.Rimworld.Biotech">(14.001,130)</li>
-			  <li MayRequire="Ludeon.Rimworld.Biotech">(15,100)</li>
+			  <li>(13,5)</li>
+			  <li>(14,1)</li>
+			  <li>(14.5,100)</li>
+			  <li>(15,100)</li>
 			  <li>(20,100)</li>
 			  <li>(22,100)</li>
-			  <li>(35,30)</li>
+			  <li>(35,19)</li>
 			  <li>(45,8)</li>
 			  <li>(55,1)</li>
-			  <li>(65,1)</li>
+			  <li>(65,0.25)</li>
 			  <li>(70,0.01)</li>
+			  <li>(80,0)</li>
 			</points>
 		  </ageGenerationCurve>
 		  <hediffGiverSets>
