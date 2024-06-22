@@ -10,6 +10,8 @@
       <rulesFiles>
         <li>PirateWords->PirateNames/PirateNames</li>
         <li>PirateSurnames->PirateNames/PirateLastNames</li>
+        <li>political_union_outlander->Words/Nouns/PoliticalUnions_Outlander</li>
+        <li>political_adjective->Words/Adjectives/PoliticalUnions</li>
       </rulesFiles>
     </rulePack>
   </RulePackDef>
@@ -31,6 +33,7 @@
         <li>r_name->[ColorBadass]beard [PirateSurnames]</li>
 		<li>r_name->[PersonJob]beard [PirateSurnames]</li>
 		<li>r_name->[Vegetable]bones [PirateSurnames]</li>
+		<li>r_name->[Color]bones [AdjectiveBadass]hands</li>
 		<li>r_name->[AdjectiveBadass]hands [PirateSurnames]</li>
         <li>r_name->[Color]hands [PirateSurnames]</li>
         <li>r_name->[Animal]hands [PirateSurnames]</li>
@@ -45,6 +48,7 @@
         <li>r_name->[Color]bones [PirateSurnames]</li>
         <li>r_name->[Animal]bones [PirateSurnames]</li>
         <li>r_name->[political_adjective]bones [PirateSurnames]</li>
+		<li>r_name->[political_adjective]beard [PirateSurnames]</li>
 		<li>r_name->[TerrainFeature]bones [PirateSurnames]</li>
         <li>r_name->[WordTribal]bones [PirateSurnames]</li>
         <li>r_name->[Weapon]bones [PirateSurnames]</li>
@@ -104,10 +108,22 @@
 		<li>r_name->[Vegetable]bones [Animal]booty</li>
 		<li>r_name->[Animal]bones [Vegetable]booty</li>
 		<li>r_name->[Color] [Color]bones</li>
-		<li>r_name->[ColorBadass] [PirateWords] [Color]bones</li>
+		<li>r_name->[ColorBadass] '[Vegetable]-[PirateWords]' [Color]bones</li>
 		<li>r_name->[ColorBadass] [Color]booty</li>
 		<li>r_name->[ColorBadass]booty [Color]booty</li>
 		<li>r_name->[Color]booty [ColorBadass]booty</li>
+		<li>r_name->[Vegetable]bones '[Vegetable]booty' [Vegetable]booty</li>
+		<li>r_name->[Vegetable]bones [Vegetable]booty</li>
+		<li>r_name->[Vegetable]booty [Vegetable]booty</li>
+		<li>r_name->[Vegetable]booty [Vegetable]bones</li>
+		<li>r_name->[political_union_outlander]booty '[PirateWords] [political_union_outlander]' [PirateSurnames]</li>
+		<li>r_name->[political_union_outlander]bones [PirateSurnames]</li>
+		<li>r_name->[political_union_outlander]beard [PirateSurnames]</li>
+		<li>r_name->[political_union_outlander]booty [PirateSurnames]</li>
+		<li>r_name->[political_union_outlander]beard [Vegetable]bones</li>
+		<li>r_name->[political_union_outlander]bones [AdjectiveBadass]bones</li>
+		<li>r_name->[political_union_outlander]hands [AdjectiveBadass]bones</li>
+		<li>r_name->[political_union_outlander]dog [AdjectiveBadass]booty</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
@@ -157,7 +173,6 @@
         <li>name-&gt;[PirateSettlementPack]</li>
 		<li>name-&gt;[PirateSettlementPack]</li>
 		<li>name-&gt;[PirateSettlementPack]</li>
-		<li>name-&gt;[PirateSettlementPack]</li>
 		<li>name-&gt;[PirateWords] Cove</li>
 		<li>name-&gt;[Color]booty Cove</li>
 		<li>name-&gt;[ColorBadass] Cave</li>
@@ -166,11 +181,15 @@
 		<li>name-&gt;[political_adjective]'s Bane</li>
 		<li>name-&gt;[Animal]'s Bane</li>
 		<li>name-&gt;Davy Jones' [TerrainFeature]</li>
+		<li>name-&gt;Davy Jones' [Gore]</li>
+		<li>name-&gt;Davy Jones' [political_union_outlander]</li>
 		<li>name-&gt;[ColorBadass] [TerrainFeature] Port</li>
 		<li>name-&gt;[ColorBadass] [TerrainFeature] Tavern</li>
 		<li>name-&gt;[Gore]booty Tavern</li>
 		<li>name-&gt;[Gore][townendevil] Tavern</li>
 		<li>name-&gt;[Booty][townendevil]</li>
+		<li>name-&gt;[political_union_outlander] Booty Cove</li>
+		<li>name-&gt;[AdjectiveBadass] [political_adjective] Crag</li>
       </rulesStrings>
       <rulesRaw>
         <li Class="Rule_File">
@@ -189,7 +208,7 @@
 		<defName>NamerIdeoGoldenAgePirate</defName>
 		<include>
 			<li>GlobalUtility</li>
-			<li>NamerIdeoGlobal</li>
+			<li MayRequire="ludeon.rimworld.ideology">NamerIdeoGlobal</li>
 			<li>NamerGoldenAgePirateUtility</li>
 		</include>
 		<rulePack>
@@ -200,13 +219,14 @@
 				<li>r_ideoName->[ColorBadass] Piratism</li>
 				<li>r_ideoName->[keyDeity]'s Booty [creed]</li>
 				<li>r_ideoName->Booty [creed]</li>
-				<!-- <li>r_ideoName->[packIdeoName] Piratism</li> -->
+				<!-- <li MayRequire="ludeon.rimworld.ideology">r_ideoName->[packIdeoName] Piratism</li> -->
 				<li>r_ideoName->[memeAdjective] Booty</li>
 				<li>r_ideoName->[place_adjective] Piratism</li>
 				<li>r_ideoName->Booty [creed] Piratism</li>
 				<li>r_ideoAdjective->Golden Age Pirate [creed]</li>
 				<li>r_ideoAdjective->Booty</li>
 				<li>r_memberName->Pirate</li>
+				<li>r_memberName->Pyrate</li>
 				<li>r_memberName->Buccaneer</li>
 				<li>r_memberName->Booty Hunter</li>
 			</rulesStrings>
