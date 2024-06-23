@@ -17,6 +17,7 @@
 		</requiredCapacities>
 		<prioritizeSustains>true</prioritizeSustains>
 		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
 	</WorkGiverDef>
 
 	<WorkGiverDef>
@@ -24,7 +25,7 @@
 		<label>dig for worms</label>
 		<giverClass>WorkGiver_DoBill</giverClass>
 		<workType>Handling</workType>
-		<priorityInType>20</priorityInType>
+		<priorityInType>50</priorityInType>
 		<fixedBillGiverDefs>
 			<li>WormSpot</li>
 		</fixedBillGiverDefs>
@@ -36,6 +37,9 @@
 		</requiredCapacities>
 		<prioritizeSustains>true</prioritizeSustains>
 		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllMechanoids>true</billGiversAllMechanoids>
+		<nonColonistsCanDo>true</nonColonistsCanDo>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
 	</WorkGiverDef>
   
 	<WorkGiverDef>
@@ -50,6 +54,7 @@
 			<li>Manipulation</li>
 		</requiredCapacities>
 		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
 	</WorkGiverDef>
   
 	<WorkGiverDef>
@@ -64,6 +69,7 @@
 			<li>Manipulation</li>
 		</requiredCapacities>
 		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
 	</WorkGiverDef>
   
 	<WorkGiverDef>
@@ -83,6 +89,9 @@
 		</requiredCapacities>
 		<prioritizeSustains>true</prioritizeSustains>
 		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+		<billGiversAllMechanoids>true</billGiversAllMechanoids>
+		<nonColonistsCanDo>true</nonColonistsCanDo>
 	</WorkGiverDef>
 	
 	<WorkGiverDef>
@@ -90,7 +99,7 @@
 		<label>grind stuff at a grinder</label>
 		<giverClass>WorkGiver_DoBill</giverClass>
 		<workType>BasicWorker</workType> <!-- Anyone can turn a handle -->
-		<priorityInType>100</priorityInType>
+		<priorityInType>95</priorityInType>
 		<fixedBillGiverDefs>
 			<!-- <li>ManualGrinder</li> -->
 			<li>ElectricGrinder</li>
@@ -105,13 +114,16 @@
 		-->
 		<prioritizeSustains>true</prioritizeSustains>
 		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+		<billGiversAllMechanoids>true</billGiversAllMechanoids>
+		<nonColonistsCanDo>true</nonColonistsCanDo>
 	</WorkGiverDef>
 	
 	<WorkGiverDef>
 		<defName>ST_Grinding_AsCook</defName>
-		<label>grind stuff at a grinder</label>
+		<label>grind food at a grinder</label>
 		<giverClass>WorkGiver_DoBill</giverClass>
-		<workType>Cooking</workType> <!-- Anyone can turn a handle -->
+		<workType>Cooking</workType>
 		<priorityInType>100</priorityInType>
 		<fixedBillGiverDefs>
 			<li>ManualGrinder</li>
@@ -124,6 +136,7 @@
 		</requiredCapacities>
 		<prioritizeSustains>true</prioritizeSustains>
 		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
 	</WorkGiverDef>
   
 	<WorkGiverDef>
@@ -162,6 +175,8 @@
 		-->
 		<prioritizeSustains>false</prioritizeSustains>
 		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+		<billGiversAllMechanoids>true</billGiversAllMechanoids>
 	</WorkGiverDef>
   
 	<!--
