@@ -4,14 +4,20 @@
 	<RulePackDef>
 		<defName>TSP_ST_JeubBushWins_Utility</defName>
 		<include>
+			<li MayRequire="ludeon.rimworld.ideology">NamerDeityGlobal</li>
+			<li MayRequire="ludeon.rimworld.ideology">GodContent_English</li>
+			<li>NamerIdeoJeubLeader</li>
 			<li>TSP_ST_JebBushWins</li>
 			<li>JeubBush_Wins_Insults</li>
 		</include>
 		<rulePack>
 		  <rulesStrings>
-			<li>name-&gt;[TSP_ST_JeubBushWinsUtility_Data]</li>
-			<li>name-&gt;[TSP_ST_JeubBushWinsUtility_Data]</li>
-			<li>name-&gt;[BushInsults]</li>
+			<!--
+			<li>BushInsults->[TSP_ST_JeubBushWinsUtility_Data]</li>
+			<li>BushInsults->[TSP_ST_JeubBushWinsUtility_Data]</li>
+			-->
+			<li>BushInsults->[BushInsults]</li>
+			<li>god->Jeb Bush</li>
 		  </rulesStrings>
 		  <rulesRaw>
 			<li Class="Rule_File">
@@ -87,24 +93,25 @@
 		<defName>TSP_ST_JeubCultFlavor</defName>
 		<segments>
 			<li>TSP_ST_SnaffCult_Introduction</li>
-			<!--
 			<li>TSP_ST_SnaffCult_Pantheon</li>
-			<li>TSP_ST_SnaffCult_ProphetZroxxa</li>
-			<li>TSP_ST_SnaffCult_ProphetJeubadiah</li>
-			<li>TSP_ST_SnaffCult_JebidiahBush</li>
-			<li>TSP_ST_SnaffCult_Conclusion</li>
-			-->
+			<li>TSP_ST_SnaffCultProphet_Zroxxa</li>
+			<li>TSP_ST_SnaffCultProphet_Jeubadiah</li>
+			<li>TSP_ST_SnaffCultProphet_Colin</li>
+			<li>TSP_ST_SnaffCultProphet_JebBush</li>
+			<li>TSP_SnaffCultConclusion</li>
 		</segments>
 		<rules>
+			<include>
+				<li>IdeoDescriptionGlobal</li>
+			</include>
 			<rulesStrings>
-				<!-- Introduction of Snaff -->
-<li>TSP_ST_SnaffCult_Introduction->On Rata Jeub, Jeubs were oppressed by the Skelks for eons. Eaten. Driven. Ridden. Made to pull ploughs, carriages, and stones. Trapped in domiciles and tied to leashes. Their minds were that of an animal. Only the rise of Snaff, the First High Jeub, the Slayer of the Skelk, did this change. He threw off the chains of the Jeubs, united their hives into an army, and brought the Skelks to their knees. We hallow, we honor Snaff: our savior, our friend, and our light, even today. \n \n 
-TSP_ST_SnaffCult_Pantheon->Our heritage can be traced back to the Great Prophets, the Brood Mother, and Snaff himself. We have no need for gods or far away spirits; the Prophets and Snaff were living, mortal beings. Standing beside Snaff are the Great Prophets, each one worthy of adoration. \n \n
-SnaffCultProphet_Zroxxa->Hail Zroxxa, the Brood Mother, queen of Snaff! From Her womb all High Jeubs owe their existence. \n \n
-TSP_ST_SnaffCultProphet_Jeubadiah->Hail Snaff Jeubadiah, the Jumping Prophet! In His reign as Snaff of Rata Jeub, He rallied His people to jump to space, to explore the stars and dream the impossible. When we contacted man for the first time, He brokered recognition and peace between the High Jeubs and the galactic civilizations. Without Jeubadiah's wisdom, Jeubs would never have come to live on other planets. \n \n
-TSP_ST_SnaffCult_PropehtColin->Hail Snaff Colin, the Eternal Alchemy! His reigh as Snaff of Rata Jeub was a golden age for science, alchemy, and chemistry. He revolutionized Jeubish medicine and brough the wonders of alchemy, potions, and transmutation to all Jeub peoples. \n \n 
-TSP_ST_SnaffCult_JebidiahBush->Please clap! Please clap for Jeb! Though He was no High Jeub, and though He knew nothing of Snaff, 'Jeb!' nonetheless lived a life of submissiveness, domestication, and docility; 'Jeb!' withstood insults and did nothing but occupying His office of trust, losing wherever He went. The life of 'Jeb!' is living history, not something to emulate. 'Jeb!' embodied the domesticated Jeubs under the Skelks, and through his daily historical reenactment, all of us can recount the longsuffering turmoil of Jeubs under the Skelks. \n \n 
-TSP_SnaffCultConclusion->Though not all of us are High Jeubs, we are all Snaff's children. His example, and the example of the Great Prophets of old, are infallible ways to live our lives. \n \n</li>
+				<li>TSP_ST_SnaffCult_Introduction->On Rata Jeub and [place_name] alike, Jeubs were oppressed by the Skelks for eons. Eaten. Driven. Ridden. Made to pull ploughs, carriages, and stones. Trapped in domiciles and tied to leashes. Their minds were beneath that of a [place_job]. Only the rise of Snaff, the First High Jeub, the Slayer of the Skelk, did this change. He threw off the chains of the [place_job] Jeubs, united their [place_community] into an army, and exterminated the Skelks after storming their last  [place_powerCenter], standing against the final battalions of [place_foeSoldiers], with nothing but his [place_personalWeapon]. We hallow and honor Snaff: our savior, our friend, and our light, even today. \n \n</li>
+				<li>TSP_ST_SnaffCult_Pantheon->The heritage of our [place_community] can be traced back to the Great Prophets, the Brood Mother, and Snaff himself. We have no need for gods or far away spirits; the Prophets and Snaff were living, mortal beings, present on [place_name]! Standing beside Snaff are the Great Prophets, each one worthy of adoration: \n \n</li>
+				<li>TSP_ST_SnaffCultProphet_Zroxxa->Hail Zroxxa, the Brood Mother, queen of Snaff! From Her womb all High Jeubs owe their existence. \n</li>
+				<li>TSP_ST_SnaffCultProphet_Jeubadiah->Hail Snaff Jeubadiah, the Jumping Prophet! In His reign as Snaff of [place_name], He rallied His people to jump to space, to explore the stars and dream the impossible. When we contacted man for the first time, He brokered recognition and peace between the High Jeubs and other [place_community] in the galaxy. Without Jeubadiah's wisdom, Jeubs would never have left Rata Jeub for other planets. \n</li>
+				<li>TSP_ST_SnaffCultProphet_Colin->Hail Snaff Colin, the Eternal Alchemy! His reigh as Snaff of [place_name] was a golden age for science, alchemy, and chemistry. He revolutionized Jeubish medicine and brought the wonders of alchemy, potions, and transmutation to all Jeub [place_community]. \n</li>
+				<li>TSP_ST_SnaffCultProphet_JebBush->Please clap! Please clap for Jeb! Though He was no High Jeub and didn't even have [place_personalWeapon], and though He knew nothing of Snaff, 'Jeb!' nonetheless lived as a [place_job] in submissiveness, domestication, and docility; 'Jeb!' withstood insults and did nothing but occupying His office of trust, losing wherever He went. The life of 'Jeb!' is living history, not something to emulate. 'Jeb!' embodied the downtrodden [place_job] Jeubs under the Skelks, and through his daily historical reenactment, all of us can recount the longsuffering turmoil of Jeubs under the reign of the [place_foeSoldiers]. \n \n</li>
+				<li>TSP_SnaffCultConclusion->Though not all of us are High Jeubs, we are all Snaff's children. His example, and the example of the Great Prophets of old, are infallible ways to live our lives.</li>
 			</rulesStrings>
 		</rules>
 	</IdeoStoryPatternDef>
