@@ -19,6 +19,18 @@
 					<graphicData>
 						<color>(69,193,69)</color>
 					</graphicData>
+					<costStuffCount>40</costStuffCount>
+					<stuffCategories>
+						<li>Stony</li>
+						<li>Metallic</li>
+						<li>Woody</li>
+
+						<!-- Support for Mod Stuff -->
+						<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+						<li MayRequire="Dubwise.Rimefeller">Composite</li>
+						<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+					</stuffCategories>
+					<constructEffect IsNull="True" Inherit="False"></constructEffect>
 					<comps Inherit="False">
 						<li Class="CompProperties_Power">
 							<compClass>CompPowerTrader</compClass>
@@ -68,8 +80,10 @@
 							<compFloatMenuOptionsLabel>TSP_ST_RIMSTRO_UseVendingMachine_GnomeDrink</compFloatMenuOptionsLabel>
 						</li>
 					</comps>
-					<researchPrerequisites>
+					<researchPrerequisites Inherit="False">
 						<li>gnomeCooking</li>
+						<li>Electricity</li>
+						<li>AirConditioning</li>
 					</researchPrerequisites>
 				</ThingDef>
 			</value>

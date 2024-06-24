@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/IdeoStoryPatternDef[defName="VME_OmnismDescription"]/rules/rulesStrings</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/IdeoStoryPatternDef[defName="VME_OmnismDescription"]/rules/rulesStrings</xpath>
+			<success>Always</success>
+			<value>
+				<li>religion->Snaff worship</li>
+				<li>religion->Bean Man philosophy</li>
+				<li>religion->Owen Wilson Cult</li>
+				<li>religion->frog animism</li>
+				<li>religion->Poobah Society teachings</li>
+				<li>religion2->Wood Beet libertinism</li>
+				<li>religion2->Goblin drug mercantalism</li>
+				<li>religion2->Upper Forg Cooperative mercantilism</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>
