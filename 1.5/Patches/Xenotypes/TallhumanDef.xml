@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Genepack"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<XenotypeIconDef MayRequire="ludeon.rimworld.biotech">
+					<defName>Tallhuman</defName>
+					<texPath>UI/Icons/Xenotypes/Tallhuman</texPath>
+				</XenotypeIconDef>  
+
+				<XenotypeDef MayRequire="ludeon.rimworld.biotech">
+					<defName MayRequire="ludeon.rimworld.biotech">Tallhuman</defName>
+					<label MayRequire="ludeon.rimworld.biotech">Tall Man</label>
+					<description MayRequire="ludeon.rimworld.biotech">Tall Men are the peaceful descendants of tall human colonists, whose forefathers were seven feet tall (2.1336 meters) for men and six foot four (1.95072 meters) for women. Their planet had very low gravity. As low gravity requires even taller and denser bodies, the already tall men got taller and dubbed the world Planet Tallman, and its colonial capital was called Tallmanistan.</description>
+					<iconPath MayRequire="ludeon.rimworld.biotech">UI/Icons/Xenotypes/Tallhuman</iconPath>
+					<inheritable MayRequire="ludeon.rimworld.biotech">true</inheritable>
+					<combatPowerFactor MayRequire="ludeon.rimworld.biotech">1.182</combatPowerFactor>
+					<genes MayRequire="ludeon.rimworld.biotech">
+						<li>Body_Thin</li>
+						<li>MeleeDamage_Strong</li>
+						<li>Robust</li>
+						<li>Mood_Optimist</li>
+						<li>KindInstinct</li>
+						<li>MinTemp_SmallDecrease</li>
+						<li>ElongatedFingers</li>
+						<li>ST_Tall</li>
+					</genes>
+				</XenotypeDef>
+			</value>
+		</match>
+	</Operation>
+</Patch>

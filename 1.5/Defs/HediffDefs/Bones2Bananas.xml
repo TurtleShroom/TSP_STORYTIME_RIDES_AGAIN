@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<LetterDef>
+		<defName>ST_BananaLetter</defName>
+		<color>(255, 225, 53)</color>
+		<flashColor>(255, 225, 53)</flashColor>
+		<flashInterval>3</flashInterval>
+		<bounce>false</bounce>
+		<arriveSound>Bones2Bananas</arriveSound>
+	</LetterDef>
+	
+  <HediffDef>
+    <defName>Hed_Bones2Bananas</defName>
+    <label>Going Bananas</label>
+    <description>Through one form of magic or another, a curse has been cast on this Pawn! \nIf the curse reaches critical levels or if the Pawn dies while suffering from this effect, the transformation will be complete. The Pawn's body will be transformed, atom by atom, into a banana; this will kill the Pawn instantly. As with most magic, the Banana Curse is unpredictable and varies in intensity from day to day. The strength of the magic ebbs and wanes, which greatly alters the chances of surviving it.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(255, 225, 53)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+	<initialSeverity>0</initialSeverity>
+	<isBad>true</isBad>
+    <makesSickThought>true</makesSickThought>
+	<tendable>true</tendable>
+    <scenarioCanAdd>false</scenarioCanAdd>
+	<taleOnVisible>ToxicityRevealed</taleOnVisible>
+	<everCurableByItem>true</everCurableByItem>
+    <comps>
+		<li Class="StoryTime.HediffCompProperties_Polymorph">
+			<targetPolymorph>ST_BananaScytheCorpse</targetPolymorph>
+			<polymorphLetterLabel>ST_LetterLabelBones2Bananas</polymorphLetterLabel>
+			<polymorphLetter>ST_LetterBones2Bananas</polymorphLetter>
+			<polymorphLetterDef>ST_BananaLetter</polymorphLetterDef>
+		</li>
+      <li Class="HediffCompProperties_RandomizeSeverityPhases">
+        <ticksToRandomize>15000~60000</ticksToRandomize> <!-- One quarter of one day to a full day -->
+        <notifyMessage>The magic in {PAWN_nameDef}'s curse has varied in intensity; its power has just changed from {1} to {2}!</notifyMessage>
+        <phases>
+          <li>
+            <labelPrefix>imminent banana-fication</labelPrefix>
+            <descriptionExtra>The curse's intensity is at its maximum. The overwhelming strength of the curse likely cannot be cured; prepare for the poly-morphic banana that is to come.</descriptionExtra>
+            <severityPerDay>0.8</severityPerDay>
+          </li>
+          <li>
+            <labelPrefix>going bananas</labelPrefix>
+            <descriptionExtra>The curse's intensity is unusually strong, and will rapidly kill {PAWN_nameDef} without exceptional care and Glitter World medicine. The overwhelming strength of the curse likely cannot be cured; prepare for the poly-morphic banana that is to come.</descriptionExtra>
+            <severityPerDay>0.6</severityPerDay>
+          </li>
+          <li>
+            <labelPrefix>being un-a-peel-ing</labelPrefix>
+            <descriptionExtra>The curse's intensity is average, and will kill {PAWN_nameDef} without industrial medicine and tending.</descriptionExtra>
+            <severityPerDay>0.35</severityPerDay>
+          </li>
+          <li>
+            <labelPrefix>making like a banana and splitting</labelPrefix>
+            <descriptionExtra>The curse is unsually weak right now, and will kill {PAWN_nameDef} unless any form  medicine and tending is administered.</descriptionExtra>
+            <severityPerDay>0.15</severityPerDay>
+          </li>
+		  <li>
+            <labelPrefix>Raffi's Blessing</labelPrefix>
+            <descriptionExtra>The body of {PAWN_nameDef} is attempting to resist the curse! This will stall the curse's progress, so take advantage of this to save {PAWN_possessive} life!</descriptionExtra>
+            <severityPerDay>-0.01</severityPerDay>
+          </li>
+        </phases>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>8</baseTendDurationHours>
+        <tendOverlapHours>6</tendOverlapHours>
+        <severityPerDayTended>-0.35</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDaySick>0.1</immunityPerDaySick>
+        <severityPerDayImmune>-2</severityPerDayImmune>
+        <immunityPerDayNotSick>-0.70</immunityPerDayNotSick>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>initial curse</label>
+      </li>
+      <li>
+        <painOffset>0.05</painOffset>	  
+        <label>initial curse</label>
+        <minSeverity>0.08</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <painOffset>0.1</painOffset>	
+        <label>wants to make like a banana and split</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <painOffset>0.15</painOffset>	
+        <label>herbed of the consequences</label>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <painOffset>0.20</painOffset>	
+        <label>un-a-peeling</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.40</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+		<lifeThreatening>true</lifeThreatening> <!-- Shows MEDICAL EMERGENCY alert -->
+		<!-- <deathMtbDays>0.00001</deathMtbDays> --> <!-- Immediately kills the Pawn -->
+		<vomitMtbDays>0.0001</vomitMtbDays> <!-- Constant vomiting until it's over -->
+        <painOffset>0.25</painOffset>
+        <label>going bananas</label>
+        <minSeverity>0.85</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+	<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+  </HediffDef>
+</Defs>

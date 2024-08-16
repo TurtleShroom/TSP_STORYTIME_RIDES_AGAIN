@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <PawnKindDef Name="CaravanBase" Abstract="True">
+	<label>patrolman</label>
+	<labelPlural>patrolmen</labelPlural>
+    <race>Forg_Forg</race>
+    <defaultFactionType>CaravanCoop</defaultFactionType>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <chemicalAddictionChance>0.02</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <invNutrition>4.5</invNutrition>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>6~20</initialResistanceRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+	  <li>Maxpedition</li>
+	  <li>CaravaneerWear</li>
+    </apparelTags>
+	<skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~14</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>5~9</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+  
+  <PawnKindDef Name="CaravanBaseFrog" ParentName="CaravanBase" Abstract="True">
+    <race>Forg_Forg</race>
+    <defaultFactionType>CaravanCoop</defaultFactionType>
+	<apparelTags>
+		<li>CaravaneerWear</li>
+	</apparelTags>
+	<modExtensions>
+		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+					<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
+					<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
+				</li>
+			</genes>
+		</li>
+	</modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CaravanBaseFrog">
+    <defName>Caravan_Patrol</defName>
+    <!-- <label>상단 순찰대</label> -->
+	<label>top patrolman</label>
+	<labelPlural>top patrolmen</labelPlural>
+    <combatPower>45</combatPower>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.6~2</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_SimpleHelmet</li>
+    </apparelRequired>
+    <apparelMoney>500~800</apparelMoney>
+    <apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+    <weaponTags>
+	  <li>SimpleGun</li>
+      <li>Gun</li>
+    </weaponTags>
+    <weaponMoney>250~400</weaponMoney>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>200~700</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CaravanBaseFrog">
+    <defName>Caravan_Trader</defName>
+    <!-- <label>지역 상인</label> -->
+	<label>contractor</label>
+	<labelPlural>contractors</labelPlural>
+	<race Inherit="False">Forg_Duo</race>
+    <trader>true</trader>
+    <combatPower>40</combatPower>
+    <isFighter>false</isFighter>
+    <gearHealthRange>1~1</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <weaponMoney>200~200</weaponMoney>
+    <apparelMoney>400~600</apparelMoney>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+	  <li>Glasses</li>
+    </apparelTags>
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>600~1500</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CaravanBaseFrog">
+    <defName>Caravan_CoopLeader</defName>
+    <label>조합장</label>
+    <labelPlural>Union Presidium</labelPlural>
+    <combatPower>40</combatPower>
+	<race Inherit="False">Forg_Duo</race>
+    <factionLeader>true</factionLeader>
+    <maxGenerationAge>45</maxGenerationAge>
+    <!-- <isFighter>false</isFighter> -->
+    <gearHealthRange>1~1</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <weaponMoney>1200~1400</weaponMoney>
+	<backstoryCryptosleepCommonality>0.001</backstoryCryptosleepCommonality>
+    <weaponTags>
+	  <li>SimpleGun</li>
+      <li>Gun</li>
+    </weaponTags>
+    <apparelMoney>700~1200</apparelMoney>
+    <apparelTags>
+		<li>Glasses</li>
+		<li>IndustrialMilitaryBasic</li>
+		<li>IndustrialMilitaryAdvanced</li>
+		<li>president</li>
+		<li>Cape</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_BowlerHat</li>
+    </apparelRequired>
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>600~1500</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GrenadierBase">
+    <defName>TSP_SlaveRat_ForgGrenadier</defName>
+    <label>co-op grenadier</label>
+	<labelPlural>grenadiers</labelPlural>
+	<race Inherit="False">Forg_Duo</race>
+    <combatPower>70</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <isGoodBreacher>true</isGoodBreacher>
+    <weaponTags Inherit="False">
+      <li>GrenadePirate</li>
+    </weaponTags>
+    <initialResistanceRange>2~16</initialResistanceRange>
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>600~1500</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+	<modExtensions>
+		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+					<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
+					<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
+				</li>
+			</genes>
+		</li>
+	</modExtensions>
+  </PawnKindDef>
+
+	<PawnKindDef ParentName="GrenadierBase">
+		<defName>TSP_SlaveRat_ForgGrenadier_EMP</defName>
+		<label>electromagnetic pulse grenadier</label>
+		<labelPlural>EMP grenadiers</labelPlural>
+		<race Inherit="False">Forg_Duo</race>
+		<combatPower>10</combatPower>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<weaponTags Inherit="False">
+			<li>GrenadeEMP</li>
+		</weaponTags>
+		<initialResistanceRange>1~2</initialResistanceRange>
+		<techHediffsChance>0.15</techHediffsChance>
+		<techHediffsMoney>600~1500</techHediffsMoney>
+		<techHediffsTags>
+			<!-- <li>Simple</li> -->
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<modExtensions>
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+					<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+						<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
+						<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
+					</li>
+				</genes>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+  
+	<PawnKindDef ParentName="MercenaryGunnerBase">
+		<defName>TSP_SlaveRat_ForgGunner</defName>
+		<label>caravan patrol gunman</label>
+		<labelPlural>gun patrolmen</labelPlural>
+		<race Inherit="False">Forg_Forg</race>
+		<initialResistanceRange>2~10</initialResistanceRange>
+		<techHediffsChance>0.15</techHediffsChance>
+		<techHediffsMoney>600~1500</techHediffsMoney>
+		<weaponTags>
+			<li>Shotgun</li>
+			<li>Gun</li>
+		</weaponTags>
+		<techHediffsTags>
+			<li>Simple</li>
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<modExtensions>
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+					<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+						<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
+						<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
+					</li>
+				</genes>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+  
+	<PawnKindDef ParentName="MercenaryEliteBase">
+		<defName>TSP_SlaveRat_Forg_MercenaryElite</defName>
+		<race Inherit="False">Forg_Forg</race>
+		<label>elite co-op expert</label>
+		<labelPlural>elites</labelPlural>
+		<techHediffsRequired>
+			<li>DeathAcidifier</li>
+		</techHediffsRequired>
+		<initialResistanceRange>12~20</initialResistanceRange>
+		<techHediffsTags>
+		  <li>Simple</li>
+		  <li>Advanced</li>
+		  <li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<modExtensions>
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+					<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+						<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
+						<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
+					</li>
+				</genes>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+</Defs>

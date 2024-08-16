@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ FACTION, PLAYER: Bulborb ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->  
+  <FactionDef>
+    <defName>GARBAGEDAY_FACTION_PlayerBulborb</defName>
+    <label>Bean Bulborb Nest</label>
+    <description>Turned into sapient Bean Men by the marvels of Glitter World engineering, these cybernetic Spotty Bulborbs have since banded together for mutual safety.</description>
+    
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>PlayerBeanMan</basicMemberKind>
+    
+    <pawnsPlural>Bean Men</pawnsPlural>
+    <leaderTitle>Beanblax</leaderTitle>
+
+    <factionNameMaker>NamerFactionBeanMan</factionNameMaker>
+    <settlementNameMaker>BeanSettlementName</settlementNameMaker>
+    <factionIconPath>Achievements/beanManAchievement</factionIconPath>
+    <colorSpectrum>
+      <li>(0.0, 0.255, 0.0)</li>
+    </colorSpectrum>
+  
+    <backstoryCategories>
+      <li>BeanManBackstory</li>
+    </backstoryCategories>
+
+    <disallowedMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+    </disallowedMemes>
+
+    <!-- <geneticVariance>0</geneticVariance> -->
+	<forageabilityFactor>1.7</forageabilityFactor>
+
+	<allowedCultures>
+		<li>ST_BeanManCulture</li>
+	</allowedCultures>
+
+    <!-- ■■■ TECH ■■■ --> 
+    <techLevel>Industrial</techLevel>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+  </FactionDef>
+  
+</Defs>

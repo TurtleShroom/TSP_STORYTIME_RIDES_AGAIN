@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef>
+    <defName>TreeGnomeEmpire</defName>
+    <label>Gnome Empire</label>
+    <description>Many Gnomes dwell in these lands, some of them children.</description>
+    <pawnsPlural>gnomes</pawnsPlural>
+    <settlementGenerationWeight>0.9</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxCountAtGameStart>2</maxCountAtGameStart>
+	<maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canStageAttacks>true</canStageAttacks>
+	<rescueesCanJoin>true</rescueesCanJoin>
+    <factionIconPath>World/TreeGnomeEmpire/GnomeLogo</factionIconPath>
+	<basicMemberKind>TSP_ST_GnomePeasant</basicMemberKind>
+    <colorSpectrum>
+      <li>(69,193,69)</li>
+    </colorSpectrum>
+    <disallowedMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		
+		<!-- If you have the Mod -->
+		<li MayRequire="FalloutRedScare.FalloutRedScare">FRS_Structure_Socialist</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Corporate</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Serketist</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Republic</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Vegan</li>
+    </disallowedMemes>
+    <requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>
+		
+		<!-- If you have the Mod -->
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Aristocratic</li>
+    </requiredMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">FungusEating_Despised</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">FungusEating_Preferred</li>
+	</disallowedPrecepts>
+	<allowedCultures>
+		<li>ST_GnomeCulture</li>
+	</allowedCultures>
+	<fixedName>Tree Gnome Empire</fixedName>
+    <settlementNameMaker>GnomeSettlementName</settlementNameMaker>
+    <techLevel>Medieval</techLevel>
+    <backstoryCategories>
+      <li>GnomeBackstory</li>
+	  <li>Farmer</li>
+    </backstoryCategories>
+    <backstoryFilters>
+      <li>
+        <categories>
+			<li>GnomeBackstory</li>
+			<li>Farmer</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+	<hidden Inherit="False">false</hidden>
+    <!-- <geneticVariance>0.1</geneticVariance> -->
+    <raidLootMaker>TSP_ST_GnomeLootMarker</raidLootMaker>
+    <caravanTraderKinds>
+		<li>TSP_ST_GnomeTrader</li>
+		<li>TSP_ST_GnomeTrader_Banquet</li>
+		<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_Caravan_Medieval_WineMerchant</li>
+		<li MayRequire="oskarpotocki.vanillafactionsexpanded.medievalmodule">VFEM_Caravan_Medieval_Farmer</li>
+		<li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Farming</li>
+		<!-- <li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Textiles</li> -->
+		<li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Farming</li>
+		<!-- <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Odd</li> -->
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>TSP_ST_GnomeTrader</li>
+	  <li MayRequire="teiwaz.gtgalpha">Caravan_GTGCivilianIndustrial_Foods</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li>
+        <!-- Constant 1 at all points levels -->
+      </points>
+    </raidCommonalityFromPointsCurve>
+	<humanlikeFaction Inherit="False">true</humanlikeFaction>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+			<TSP_ST_GnomePeasant>200</TSP_ST_GnomePeasant>
+			<GnomeWarrior>75</GnomeWarrior>
+			<GnomeArcher>75</GnomeArcher>
+			<TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">5</TSP_ST_RoyaltyGnoble>
+			<ForgPawnKindDef>1</ForgPawnKindDef>
+			<DuoPawnKindDef>1</DuoPawnKindDef>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <GnomeArcher>400</GnomeArcher>
+          <GnomeWarrior>225</GnomeWarrior>
+          <ST_Toad>10</ST_Toad>
+		  <GnomeKing>1</GnomeKing>
+		  <TSP_ST_GnomeCabbageinator>20</TSP_ST_GnomeCabbageinator>
+		  <TSP_ST_GnomePeasant>50</TSP_ST_GnomePeasant>
+		  <TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">30</TSP_ST_RoyaltyGnoble>
+		  <PumpkinSad MayRequire="halloweenparade.velcroboy333">1</PumpkinSad>
+		  <PumpkinSmile MayRequire="halloweenparade.velcroboy333">1</PumpkinSmile>
+		  <PumpkinAnger MayRequire="halloweenparade.velcroboy333">1</PumpkinAnger>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <GnomeTrader>1</GnomeTrader>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+		  <Alpaca>1</Alpaca>
+		  <Dromedary>1</Dromedary>
+		  <Elephant>100</Elephant>
+		  <Scarecrow MayRequire="halloweenparade.velcroboy333">80</Scarecrow>
+		  <LeviathanFrog>999</LeviathanFrog>
+        </carriers>
+        <guards>
+          <GnomeArcher>200</GnomeArcher>
+		  <GnomeWarrior>100</GnomeWarrior>
+          <ST_Toad>25</ST_Toad>
+		  <TSP_ST_GnomeCabbageinator>10</TSP_ST_GnomeCabbageinator>
+		  <ForgPawnKindDef>0.2</ForgPawnKindDef>
+		  <DuoPawnKindDef>0.2</DuoPawnKindDef>
+		  <TSP_ST_GnomePeasant>200</TSP_ST_GnomePeasant>
+		  <TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">3</TSP_ST_RoyaltyGnoble>
+		  <Scarecrow MayRequire="halloweenparade.velcroboy333">1</Scarecrow>
+		  <FunnyFungus MayRequire="halloweenparade.velcroboy333">1</FunnyFungus>
+		  <PumpkinSad MayRequire="halloweenparade.velcroboy333">1</PumpkinSad>
+		  <PumpkinSmile MayRequire="halloweenparade.velcroboy333">1</PumpkinSmile>
+		  <PumpkinAnger MayRequire="halloweenparade.velcroboy333">1</PumpkinAnger>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <GnomeTrader>1</GnomeTrader>
+        </traders>
+        <carriers>
+          <Muffalo>0.01</Muffalo>
+		  <Elephant>1</Elephant>
+		  <Scarecrow MayRequire="halloweenparade.velcroboy333">40</Scarecrow>
+		  <LeviathanFrog>150</LeviathanFrog>
+        </carriers>
+        <guards>
+          <ST_Toad>30</ST_Toad>
+		  <TSP_ST_GnomePeasant>40</TSP_ST_GnomePeasant>
+		  <ForgPawnKindDef>1</ForgPawnKindDef>
+		  <DuoPawnKindDef>1</DuoPawnKindDef>
+		  <Scarecrow MayRequire="halloweenparade.velcroboy333">10</Scarecrow>
+		  <FunnyFungus MayRequire="halloweenparade.velcroboy333">13</FunnyFungus>
+		  <HalloweenBat MayRequire="halloweenparade.velcroboy333">13</HalloweenBat>
+		  <PumpkinSad MayRequire="halloweenparade.velcroboy333">10</PumpkinSad>
+		  <PumpkinSmile MayRequire="halloweenparade.velcroboy333">10</PumpkinSmile>
+		  <PumpkinAnger MayRequire="halloweenparade.velcroboy333">10</PumpkinAnger>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <GnomeArcher>200</GnomeArcher>
+		  <GnomeWarrior>200</GnomeWarrior>
+          <ST_Toad>90</ST_Toad>
+		  <GnomeKing>2</GnomeKing>
+		  <TSP_ST_GnomeCabbageinator>25</TSP_ST_GnomeCabbageinator>
+		  <TSP_ST_GnomePeasant>400</TSP_ST_GnomePeasant>
+		  <TSP_ST_RoyaltyGnoble>50</TSP_ST_RoyaltyGnoble>
+		  <Scarecrow MayRequire="halloweenparade.velcroboy333">15</Scarecrow>
+		  <FunnyFungus MayRequire="halloweenparade.velcroboy333">5</FunnyFungus>
+		  <HalloweenBat MayRequire="halloweenparade.velcroboy333">5</HalloweenBat>
+		  <PumpkinSad MayRequire="halloweenparade.velcroboy333">2</PumpkinSad>
+		  <PumpkinSmile MayRequire="halloweenparade.velcroboy333">5</PumpkinSmile>
+		  <PumpkinAnger MayRequire="halloweenparade.velcroboy333">5</PumpkinAnger>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/TreeGnomeEmpire/GnomeLogo</settlementTexturePath>
+	<apparelStuffFilter>
+		<thingDefs>
+			<li>Gnome_Cloth</li>
+			<li>Weezer</li>
+			<li>Jade</li>
+			<li>Steel</li>
+			<li>Marble</li>
+		</thingDefs>
+		<disallowedThingDefs>
+			<li>Plasteel</li>
+		</disallowedThingDefs>
+	</apparelStuffFilter>
+    <fixedLeaderKinds>
+		<li>GnomeKing</li>
+    </fixedLeaderKinds>
+	<!--
+	<modExtensions>
+		<li Class="JecsTools.FactionSettings">
+			<entrySoundDef>Gnome_Theme</entrySoundDef>
+		</li>
+	</modExtensions>
+	-->
+  </FactionDef> 
+
+	<ThingSetMakerDef>
+		<defName>TSP_ST_GnomeLootMarker</defName>
+		<root Class="ThingSetMaker_MarketValue">
+			<fixedParams>
+				<filter>
+					<categories>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+						<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+						<li>PlantFoodRaw</li>
+					</categories>
+					<thingDefs>
+						<li>ST_Worm</li>
+						<li>GnomeRoot</li>
+						<li>Gnome_Cloth</li>
+						<li>GnomeFlour</li>
+						<li>GnomeFlourMeal</li>
+						<li>ST_GnomeSugar</li>
+						<li>ToadLegs</li>
+						<li>ST_Cabbage</li>
+						<li>ST_ProcessedCheese</li>
+						<li>ST_Green_Milk</li>
+						<li>TomatoCyst</li>
+						<li>StrangeFruit</li>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li>ST_CookingApple</li>
+						<li>ST_Bean</li>
+						<li>Weezer</li>
+						<li>FruitBatta</li>
+						<li>VegetableBatta</li>
+						<li>WormBatta</li>
+						<li>ToadBatta</li>
+						<li>TangledToadLegs</li>
+						<li>WormHole</li>
+						<li>VegBall</li>
+						<li>ST_CheesePizza</li>
+						<li>ST_MeatPizza</li>
+						<li>ST_VegetablePizza</li>
+						<li>ST_WormPizza</li>
+					</thingDefs>
+				</filter>
+			</fixedParams>
+		</root>
+	</ThingSetMakerDef>
+
+
+</Defs>

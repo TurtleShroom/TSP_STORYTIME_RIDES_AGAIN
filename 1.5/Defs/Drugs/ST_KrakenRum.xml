@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="DrugBase">
+    <defName>ST_KrakenRum</defName>
+    <label>kraken rum</label>
+    <description>Rum is an alcoholic drink derived from the fermentation of the sugarcane plant. Golden Age Pirates (and even the poorer Spacer Pirates) treasure it for its potency and delicious taste. Kraken Rum is unique in that it is derived from Gnome Sugarcane plants instead of ordinary sugar, which makes its alcohol level and strength far more intense. This powerful spirit is not for the faint of heart.</description>
+    <descriptionHyperlinks>
+      <HediffDef>AlcoholHigh</HediffDef>
+      <HediffDef>AlcoholTolerance</HediffDef>
+      <HediffDef>Hangover</HediffDef>
+      <HediffDef>AlcoholAddiction</HediffDef>
+      <HediffDef>Cirrhosis</HediffDef>
+      <HediffDef>ChemicalDamageModerate</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Items/Resources/Kraken</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <MarketValue>12</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.30</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.6</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+	  <tableDesired>false</tableDesired>
+      <ingestCommandString>Yarr!</ingestCommandString>
+      <ingestReportString>Swigging {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholHigh</hediffDef>
+          <severity>0.8</severity>
+          <toleranceChemical>Alcohol</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholTolerance</hediffDef>
+          <severity>0.1</severity>
+          <divideByBodySize>false</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <techLevel>Neolithic</techLevel>
+	<thingCategories Inherit="False">
+		<li>Drugs</li>
+		<li MayRequire="vanillaexpanded.vbrewe">VBE_DrinksLuxurySpirits</li>
+	</thingCategories>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Alcohol</chemical>
+        <addictiveness>0.7</addictiveness>
+        <minToleranceToAddict>0.3</minToleranceToAddict>
+        <existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>10</listOrder>
+      </li>
+    </comps>
+	<tradeTags>
+		<li>StorytimeDrugs</li>
+		<li>StorytimeBooze</li>
+	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>TSP_ST_RumWort</defName>
+    <label>Kraken kill-devil</label>
+    <description>Unfermented Kraken Rum. "Kill-devil" is one of the terms originally used for rum before 1667 AD and, to modern Golden Age Pirate Factions, denotes rum awaiting processing.</description>
+    <graphicData>
+      <texPath>Things/Items/Resources/KrakenWort</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <rotatable>false</rotatable>
+    <stackLimit>50</stackLimit>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <statBases>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <MarketValue>1.7</MarketValue>
+      <Mass>1.2</Mass>
+      <Flammability>0.7</Flammability>
+      <MaxHitPoints>80</MaxHitPoints>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>5</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+		<li Class="CompProperties_Ingredients" />
+    </comps>
+  </ThingDef>
+  
+  <RecipeDef>
+    <defName>TSP_Make_RumWort</defName>
+    <label>make unfermented Kraken kill-devil</label>
+    <description>Prepare Gnome Sugar for processing into Kraken Rum.</description>
+    <jobString>Making gnome wort.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ST_GnomeSugar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+		<li>ST_GnomeSugar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+	<defaultIngredientFilter>
+		<thingDefs>
+			<li>ST_GnomeSugar</li>
+		</thingDefs>
+	</defaultIngredientFilter>
+	<recipeUsers>
+    	<li>Brewery</li>
+	</recipeUsers>
+    <products>
+      <TSP_ST_RumWort>5</TSP_ST_RumWort>
+    </products>
+	<researchPrerequisites>
+		<li>nogAlchemy</li>
+	</researchPrerequisites>
+	<!--
+	<comps>
+		<li Class="CompProperties_Ingredients" />
+	</comps>
+	-->
+  </RecipeDef>
+</Defs>

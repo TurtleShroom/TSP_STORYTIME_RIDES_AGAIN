@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<PawnKindDef Name="OwenBase" Abstract="True">
+		<label>Owen Wilson disciple</label>
+		<labelPlural>Owen Wilson disciples</labelPlural>
+		<defaultFactionType>Owenfaction</defaultFactionType>
+		<nameMaker>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</nameMaker>
+		<nameMakerFemale>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</nameMakerFemale>
+		<backstoryCategories>
+			<li MayRequire="vanillaracesexpanded.archon">Archon</li>
+			<li>Madman</li>
+			<!--
+			<li>Raider</li>
+			<li>Pirate</li>
+			<li>Sadist</li>
+			<li>Offworld</li>
+			-->
+		</backstoryCategories>
+		<chemicalAddictionChance>1</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+		<minGenerationAge>21</minGenerationAge>
+		<maxGenerationAge>29</maxGenerationAge>
+		<invNutrition>2.55</invNutrition>
+		<itemQuality>Good</itemQuality>
+		<initialWillRange>0~1.51</initialWillRange>
+		<initialResistanceRange>19~39</initialResistanceRange>
+		<invFoodDef>ST_Worm</invFoodDef>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<combatEnhancingDrugsChance>1</combatEnhancingDrugsChance>
+		<biocodeWeaponChance Inherit="False">0.9</biocodeWeaponChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<apparelRequired Inherit="False">
+			<li>Apparel_Owenhelmet</li>
+			<li>Apparel_Owenparka</li>
+		</apparelRequired>
+		<apparelTags>
+			<li>Archon</li>
+			<li>EgyptDress</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>1600</min>
+			<max>3500</max>
+		</apparelMoney>
+		<gearHealthRange>
+			<min>2</min>
+			<max>5</max>
+		</gearHealthRange>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<combatEnhancingDrugsCount>
+			<min>1</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<weaponMoney>
+			<min>3700</min>
+			<max>4750</max>
+		</weaponMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+		</techHediffsTags>
+		<techHediffsMoney>
+			<min>2600</min>
+			<max>5000</max>
+		</techHediffsMoney>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Gold</thingDef>
+					<countRange>
+						<min>4</min>
+						<max>10</max>
+					</countRange>
+				</li>
+				<li MayRequire="robtrg.tf2.sandvich">
+					<thingDef MayRequire="robtrg.tf2.sandvich">ROBTRG_Sandvich_TF</thingDef>
+					<countRange MayRequire="robtrg.tf2.sandvich">
+						<min MayRequire="robtrg.tf2.sandvich">1</min>
+						<max MayRequire="robtrg.tf2.sandvich">4</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="OwenBase">
+		<defName>OwenWilsonpawn</defName>
+		<label>Owen Wilson disciple</label>
+		<race>Human</race>
+		<combatPower>299</combatPower>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="OwenBase">
+		<defName>TSP_OwenWilsonpawn_Bulborb</defName>
+		<label>Owen Wilson disciple</label>
+		<race>Alien_BeanMan</race>
+		<combatPower>380</combatPower>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="OwenBase">
+		<defName>TSP_OwenWilsonpawn_Goblin</defName>
+		<label>Owen Wilson disciple</label>
+		<race>Alien_ST_Goblin</race>
+		<combatPower>380</combatPower>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="OwenBase">
+		<defName>TSP_OwenWilsonpawn_Jeub</defName>
+		<label>Owen Wilson disciple</label>
+		<race>Alien_Jeub</race>
+		<combatPower>380</combatPower>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="OwenBase">
+		<defName>TSP_OwenWilsonpawn_Gnome</defName>
+		<label>Owen Wilson disciple</label>
+		<race>Alien_Gnome</race>
+		<combatPower>308</combatPower>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="OwenBase">
+		<defName>TSP_OwenWilsonpawn_Frogman</defName>
+		<label>Owen Wilson disciple</label>
+		<race>Alien_FrogPerson</race>
+		<combatPower>380</combatPower>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="OwenBase">
+		<defName>TSP_OwenWilsonpawn_Forg</defName>
+		<label>Owen Wilson disciple</label>
+		<race>Forg_Forg</race>
+		<combatPower>380</combatPower>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="OwenBase">
+		<defName>TSP_OwenWilsonpawns_DuoForg</defName>
+		<label>Owen Wilson disciples</label>
+		<race>Forg_Duo</race>
+		<combatPower>380</combatPower>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="OwenBase" MayRequire="vanillaracesexpanded.archon">
+		<defName>TSP_OwenWilsonpawn_Archon</defName>
+		<label>Owen Wilson demi-god</label>
+		<factionLeader>true</factionLeader>
+		<race>Human</race>
+		<combatPower>450</combatPower>
+		<xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+			<xenotypeChances MayRequire="Ludeon.RimWorld.Biotech">
+				<VRE_Archon MayRequire="vanillaracesexpanded.archon">999</VRE_Archon>
+			</xenotypeChances>
+			<warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="TSP_ST_OwenWilsonLeader" ParentName="OwenBase" Abstract="True">
+		<nameMaker>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</nameMaker>
+		<nameMakerFemale>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</nameMakerFemale>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<requiredWorkTags IsNull="True" Inherit="False"></requiredWorkTags>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Gold</thingDef>
+					<countRange>
+						<min>420</min>
+						<max>699</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="TSP_ST_OwenWilsonLeader">
+		<defName>OwenWilsonleader</defName>
+		<label>O-Dog Owenlord</label>
+		<factionLeader>true</factionLeader>
+		<combatPower>360</combatPower>
+		<race>Human</race>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="TSP_ST_OwenWilsonLeader">
+		<defName>OwenWilsonleader_Bulborb</defName>
+		<label>O-Dog Owenlord</label>
+		<factionLeader>true</factionLeader>
+		<combatPower>360</combatPower>
+		<race>Alien_BeanMan</race>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="TSP_ST_OwenWilsonLeader">
+		<defName>OwenWilsonleader_Goblin</defName>
+		<label>O-Dog Owenlord</label>
+		<factionLeader>true</factionLeader>
+		<combatPower>360</combatPower>
+		<race>Alien_ST_Goblin</race>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="TSP_ST_OwenWilsonLeader">
+		<defName>OwenWilsonleader_Jeub</defName>
+		<label>O-Dog Owenlord</label>
+		<factionLeader>true</factionLeader>
+		<combatPower>360</combatPower>
+		<race>Alien_Jeub</race>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="TSP_ST_OwenWilsonLeader">
+		<defName>OwenWilsonleader_Gnome</defName>
+		<label>O-Dog Owenlord</label>
+		<factionLeader>true</factionLeader>
+		<combatPower>360</combatPower>
+		<race>Alien_Gnome</race>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="TSP_ST_OwenWilsonLeader">
+		<defName>OwenWilsonleader_Frogman</defName>
+		<label>O-Dog Owenlord</label>
+		<factionLeader>true</factionLeader>
+		<combatPower>360</combatPower>
+		<race>Alien_FrogPerson</race>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+		<invFoodDef>Meat_ST_BullFrog</invFoodDef>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="TSP_ST_OwenWilsonLeader">
+		<defName>OwenWilsonleader_Forg</defName>
+		<label>O-Dog Owenlord</label>
+		<factionLeader>true</factionLeader>
+		<combatPower>360</combatPower>
+		<race>Forg_Forg</race>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+		<invFoodDef>Meat_ST_BullFrog</invFoodDef>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="TSP_ST_OwenWilsonLeader">
+		<defName>OwenWilsonleaders_DuoForg</defName>
+		<label>O-Dog Owenlords</label>
+		<factionLeader>true</factionLeader>
+		<combatPower>360</combatPower>
+		<race>Forg_Duo</race>
+		<weaponTags>
+			<li>GunOwen</li>
+		</weaponTags>
+		<invFoodDef>Meat_ST_BullFrog</invFoodDef>
+	</PawnKindDef>
+</Defs>

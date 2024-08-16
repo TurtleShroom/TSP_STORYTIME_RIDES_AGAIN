@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>CabbageOfPower</defName>
+    <label>Cabbage of Power</label>
+    <description>"'Why is he carrying a cabbage,' they asked, full of mirth." \n \n "'What is he going to do, pelt us?' they queried, bursting into laughter." \n \n "'It's just a vegetable,' they said, guffawing at my weapon of choice." \n \n "Oh, how they laughed at me." \n \n "I laughed as I dug their graves."</description>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Things/Items/PowerCabbage</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>18.00</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>cabbageCrafting</researchPrerequisite>
+	  <unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>ElectricStove</li>
+		<li>FueledStove</li>
+		<li>GnomeTable</li>
+		<li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <ST_Cabbage>1500</ST_Cabbage>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Cabbage_Toss</defaultProjectile>
+        <warmupTime>1.05</warmupTime>
+        <range>100</range>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>Interact_BeatFire</soundCast>
+        <muzzleFlashScale>300</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>cabbage head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>1</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+    </tools>
+	<weaponTags>
+		<li>CabbageWarrior</li>
+		<!-- <li>CallOfCthulhu_InfantryGun</li> -->
+	</weaponTags>
+	<comps>
+		<li Class="CompProperties_Art">
+			<nameMaker>NamerArtWeaponMelee</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+			<minQualityForArtistic>Awful</minQualityForArtistic>
+		</li>
+	</comps>
+  </ThingDef>
+
+
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Cabbage_Toss</defName>
+		<label>cabbage</label>
+		<graphicData>
+		  <texPath>Things/Items/PowerCabbage</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+		  <damageDef>ST_CabbageBlast</damageDef>
+		  <damageAmountBase>60</damageAmountBase>
+		  <armorPenetrationBase>0.75</armorPenetrationBase>
+		  <speed>25</speed>
+		</projectile>
+    </ThingDef>
+
+    <DamageDef>
+		<defName>ST_CabbageBlast</defName>
+		<label>cabbage blasted</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been blasted to death by a cabbage. How embarassing!</deathMessage>
+		<hediff>ST_CabbageBlast</hediff>
+		<hediffSolid>ST_CabbageBlast</hediffSolid>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Blunt</armorCategory>
+		<overkillPctToDestroyPart>0~0.2</overkillPctToDestroyPart>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+   </DamageDef>
+
+   <HediffDef ParentName="InjuryBase">
+    <defName>ST_CabbageBlast</defName>
+    <label>cabbage blast</label>
+    <labelNoun>a really embarassing cabbage wound</labelNoun>
+    <description>A cabbage wound. How embarassing!</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>slawed</labelTendedWellInner>
+        <labelSolidTendedWell>slawed</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>embarassing long-term cabbage scar</permanentLabel>
+        <instantlyPermanentLabel>permanent cabbage humiliation</instantlyPermanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.007</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00525</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>blasted off by a cabbage</destroyedLabel>
+      <destroyedOutLabel>blasted out by a cabbage</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+</Defs>

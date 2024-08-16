@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <BodyDef>
+    <defName>ST_FrogLike</defName>
+    <label>frog-like</label>
+    <corePart>
+      <def>Body</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+	  <!-- <coverage>0</coverage> -->
+	  <parts>
+		<li>
+			<def>Torso</def>
+			<customLabel>trunk</customLabel>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<coverage>0.4</coverage>
+			<groups>
+				<li>Torso</li>
+			</groups>
+			<parts>
+				<li>
+					<customLabel>left dorsolateral dermal plica</customLabel>
+					<def>TSP_ST_FrogStripes</def>
+					<height>Middle</height>
+					<depth>Outside</depth>
+					<coverage>0.075</coverage>
+					<woundAnchorTag>LeftShoulder</woundAnchorTag>
+					<groups>
+						<li>Torso</li>
+						<li>Waist</li>
+						<li>LeftBlade</li>
+						<!-- <li>LeftShoulder</li> -->
+					</groups>
+				</li>
+				<li>
+					<customLabel>right dorsolateral dermal plica</customLabel>
+					<def>TSP_ST_FrogStripes</def>
+					<height>Middle</height>
+					<depth>Outside</depth>
+					<coverage>0.075</coverage>
+					<woundAnchorTag>RightShoulder</woundAnchorTag>
+					<groups>
+						<li>Torso</li>
+						<li>Waist</li>
+						<li>RightBlade</li>
+						<!-- <li>RightShoulder</li> -->
+					</groups>
+				</li>
+				<li>
+				  <def>Spine</def>
+				  <coverage>0.03</coverage>
+				  <depth>Inside</depth>
+				  <groups>
+					<li>Neck</li>
+					<li>Torso</li>
+				  </groups>
+				</li>
+				<li>
+				  <def>Stomach</def>
+				  <coverage>0.03</coverage>
+				  <depth>Inside</depth>
+				  <groups>
+					<li>Torso</li>
+				  </groups>
+				</li>
+				<li>
+				  <def>Heart</def>
+				  <coverage>0.03</coverage>
+				  <depth>Inside</depth>
+				  <groups>
+					<li>Torso</li>
+				  </groups>
+				</li>
+				<li>
+				  <def>Lung</def>
+				  <customLabel>left lung</customLabel>
+				  <coverage>0.03</coverage>
+				  <depth>Inside</depth>
+				  <groups>
+					<li>Torso</li>
+				  </groups>
+				</li>
+				<li>
+				  <def>Lung</def>
+				  <customLabel>right lung</customLabel>
+				  <coverage>0.03</coverage>
+				  <depth>Inside</depth>
+				  <groups>
+					<li>Torso</li>
+				  </groups>
+				</li>
+				<li>
+				  <def>Kidney</def>
+				  <customLabel>left kidney</customLabel>
+				  <coverage>0.03</coverage>
+				  <depth>Inside</depth>
+				  <groups>
+					<li>Torso</li>
+				  </groups>
+				</li>
+				<li>
+				  <def>Kidney</def>
+				  <customLabel>right kidney</customLabel>
+				  <coverage>0.03</coverage>
+				  <depth>Inside</depth>
+				  <groups>
+					<li>Torso</li>
+				  </groups>
+				</li>
+				<li>
+				  <def>Liver</def>
+				  <coverage>0.03</coverage>
+				  <depth>Inside</depth>
+				  <groups>
+					<li>Torso</li>
+				  </groups>
+				</li>
+			</parts>
+		</li>
+        <li>
+          <def>Neck</def>
+          <coverage>0.07</coverage>
+          <height>Top</height>
+		  <groups>
+			<li>Neck</li>
+			<li>Torso</li>
+		  </groups>
+          <parts>
+			<li>
+              <def>Head</def>
+              <coverage>0.9</coverage>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>Skull</def>
+                  <coverage>0.24</coverage>
+                  <depth>Inside</depth>
+					<groups>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                  </groups>
+                  <parts>
+                    <li>
+                      <def>Brain</def>
+                      <coverage>0.7</coverage>
+                      <depth>Inside</depth>
+					<groups>
+						<li>UpperHead</li>
+						<li>FullHead</li>
+					</groups>
+                    </li>
+                  </parts>
+                </li>
+                <li>
+					<def>TSP_ST_Frog_ThirdEyelid</def>
+					<customLabel>left nictating mebrane</customLabel>
+					<coverage>0.1</coverage>
+					<height>Top</height>
+					<depth>Outside</depth>
+					<woundAnchorTag>LeftEye</woundAnchorTag>
+					<groups>
+						<li>Eyes</li>
+						<li>UpperHead</li>
+						<li>FullHead</li>
+					</groups>
+					<parts>
+						<li>
+							<def>Eye</def>
+							<customLabel>left eye</customLabel>
+							<coverage>0.33</coverage>
+							<woundAnchorTag>LeftEye</woundAnchorTag>
+							<depth>Inside</depth>
+							<groups>
+								<li>Eyes</li>
+								<li>UpperHead</li>
+								<li>FullHead</li>
+							</groups>
+						</li>
+					</parts>
+                </li>
+                <li>
+					<def>TSP_ST_Frog_ThirdEyelid</def>
+					<customLabel>right nictating mebrane</customLabel>
+					<coverage>0.1</coverage>
+					<height>Top</height>
+					<depth>Outside</depth>
+					<woundAnchorTag>RightEye</woundAnchorTag>
+					<groups>
+						<li>Eyes</li>
+						<li>UpperHead</li>
+						<li>FullHead</li>
+					</groups>
+					<parts>
+						<li>
+							<def>Eye</def>
+							<customLabel>right eye</customLabel>
+							<coverage>0.33</coverage>
+							<woundAnchorTag>RightEye</woundAnchorTag>
+							<depth>Inside</depth>
+							<groups>
+								<li>Eyes</li>
+								<li>UpperHead</li>
+								<li>FullHead</li>
+							</groups>
+						</li>
+					</parts>
+                </li>
+                <li>
+                  <def>Ear</def>
+                  <customLabel>left tympanic membrane</customLabel>
+                  <coverage>0.1</coverage>
+				  <depth>Inside</depth>
+				  <woundAnchorTag>LeftEye</woundAnchorTag>
+				  <groups>
+					<li>FullHead</li>
+				  </groups>
+                </li>
+                <li>
+                  <def>Ear</def>
+                  <customLabel>right tympanic membrane</customLabel>
+                  <coverage>0.1</coverage>
+				  <depth>Inside</depth>
+				  <woundAnchorTag>RightEye</woundAnchorTag>
+					<groups>
+						<li>UpperHead</li>
+						<li>FullHead</li>
+					</groups>
+                </li>
+                <li>
+                  <def>Nose</def>
+					<customLabel>internal nares</customLabel>
+                  <coverage>0.012</coverage>
+				  <depth>Inside</depth>
+					<parts>
+						<li>
+							<def>InsectNostril</def>
+							<coverage>0.05</coverage>
+							<depth>Outside</depth>
+							<customLabel>left external nare</customLabel>
+						</li>
+						<li>
+							<def>InsectNostril</def>
+							<coverage>0.05</coverage>
+							<depth>Outside</depth>
+							<customLabel>left external nare</customLabel>
+						</li>
+					</parts>
+                </li>
+                 <li>
+                  <def>AnimalJaw</def>
+                  <coverage>0.2</coverage>
+                  <groups>
+                    <li>Teeth</li>
+					<li>FullHead</li>
+					<li>Mouth</li>
+                  </groups>
+				  <parts>
+					<li>
+						<def>Tongue</def>
+						<coverage>0.9</coverage>
+						<groups>
+							<li>ST_FrogTongue</li>
+							<li MayRequire="yamazakioghw.gianttoads">ToadTongueAttackTool</li>
+							<li>FullHead</li>
+							<li>Mouth</li>
+							<!-- <li>Teeth</li> -->
+						</groups>
+					</li>
+					<li>
+					  <def>Jowl</def>
+					  <coverage>0.1</coverage>
+					  <groups>
+						<li>FullHead</li>
+						<li>Mouth</li>
+					  </groups>
+					</li>
+				  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>Arm</def>
+          <customLabel>front left brachium</customLabel>
+          <coverage>0.09</coverage>
+          <height>Bottom</height>
+			<groups>
+				<li>Arms</li>
+				<li>FrontLeftLeg</li>
+			</groups>
+				<parts>
+					<li>
+						<!-- A frog's radius is fused on the front and back legs -->
+						<!-- For the pupose of this Mod, that will be represented by a humerus with twice the size -->
+						<def>Humerus</def>
+						<customLabel>left antebrachium</customLabel>
+						<coverage>0.75</coverage>
+						<height>Middle</height>
+						<groups>
+							<li>Arms</li>
+							<li>FrontLeftLeg</li>
+						</groups>
+						<parts>
+							<li>
+								<def>Hand</def>
+								<customLabel>left manus</customLabel> <!-- Frogs hands are called hands, but amphibian exeprts call it the "manus" -->
+								<coverage>0.1</coverage>
+								<height>Middle</height>
+								<groups>
+									<li>Hands</li>
+									<li>LeftHand</li>
+									<li>FrontLeftPaw</li>
+									<li>BORPA_FootAttackTool</li>
+								</groups>
+								  <parts>
+									<li>
+									  <def>Finger</def>
+									  <customLabel>left hand first digit</customLabel>
+									  <coverage>0.05</coverage>
+									  <groups>
+										<li>FrontLeftClaws</li>
+										<li>Hands</li>
+										<li>LeftHand</li>
+									  </groups>
+									</li>
+									<li>
+									  <def>Finger</def>
+									  <customLabel>left hand second digit</customLabel>
+									  <coverage>0.05</coverage>
+									  <groups>
+										<li>FrontLeftClaws</li>
+										<li>MiddleFingers</li>
+										<li>Hands</li>
+										<li>LeftHand</li>
+									  </groups>
+									</li>
+									<li>
+									  <def>Finger</def>
+									  <customLabel>left hand third digit</customLabel>
+									  <coverage>0.05</coverage>
+									  <groups>
+										<li>FrontLeftClaws</li>
+										<li>MiddleFingers</li>
+										<li>Hands</li>
+										<li>LeftHand</li>
+									  </groups>
+									</li>
+									<li>
+									  <def>Finger</def>
+									  <customLabel>left hand fourth digit</customLabel>
+									  <coverage>0.05</coverage>
+									  <groups>
+										<li>FrontLeftClaws</li>
+										<li>Hands</li>
+										<li>LeftHand</li>
+									  </groups>
+									</li>
+								  </parts>
+							</li>
+						</parts>
+					</li>
+				</parts>
+			</li>
+			
+      <li>
+          <def>Arm</def>
+          <customLabel>front right brachium</customLabel>
+          <coverage>0.2</coverage>
+          <height>Bottom</height>
+			<groups>
+				<li>Arms</li>
+				<li>FrontLeftLeg</li>
+			</groups>
+				<parts>
+					<li>
+						<!-- A frog's radius is fused on the front and back legs -->
+						<!-- For the pupose of this Mod, that will be represented by a humerus with twice the size -->
+						<def>Humerus</def>
+						<customLabel>right antebrachium</customLabel>
+						<coverage>0.75</coverage>
+						<depth>Inside</depth>
+						<height>Middle</height>
+						<groups>
+							<li>Arms</li>
+							<li>FrontRightLeg</li>
+						</groups>
+						<parts>
+							<li>
+								<def>Hand</def>
+								<customLabel>right manus</customLabel> <!-- Frog hands are called hands, but amphibian exeprts call it the "manus" -->
+								<coverage>0.1</coverage>
+								<depth>Outside</depth>
+								<height>Middle</height>
+								<groups>
+									<li>Hands</li>
+									<li>RightHand</li>
+									<li>FrontRightPaw</li>
+									<li>BORPA_FootAttackTool</li>
+								</groups>
+							  <parts>
+								<li>
+								  <def>Finger</def>
+								  <customLabel>right hand first digit</customLabel>
+								  <coverage>0.05</coverage>
+								  <groups>
+									<li>FrontRightClaws</li>
+									<li>Hands</li>
+									<li>RightHand</li>
+								  </groups>
+								</li>
+								<li>
+								  <def>Finger</def>
+								  <customLabel>right hand second digit</customLabel>
+								  <coverage>0.05</coverage>
+								  <groups>
+									<li>FrontRightClaws</li>
+									<li>MiddleFingers</li>
+									<li>Hands</li>
+									<li>RightHand</li>
+								  </groups>
+								</li>
+								<li>
+								  <def>Finger</def>
+								  <customLabel>right hand third digit</customLabel>
+								  <coverage>0.05</coverage>
+								  <groups>
+									<li>FrontRightClaws</li>
+									<li>MiddleFingers</li>
+									<li>Hands</li>
+									<li>RightHand</li>
+								  </groups>
+								</li>
+								<li>
+								  <def>Finger</def>
+								  <customLabel>right hand fourth digit</customLabel>
+								  <coverage>0.05</coverage>
+								  <groups>
+									<li>FrontRightClaws</li>
+									<li>Hands</li>
+									<li>RightHand</li>
+								  </groups>
+								</li>
+							  </parts>
+							</li>
+						</parts>
+					</li>
+				</parts>
+			</li>
+
+
+        <li>
+          <def>Leg</def>
+          <customLabel>left leg</customLabel>
+          <coverage>0.2</coverage>
+          <height>Bottom</height>
+		  <woundAnchorTag>LeftLeg</woundAnchorTag>
+		  <groups>
+			<li>Legs</li>
+		  </groups>
+		  <parts>
+				<li>
+					<def>Femur</def>
+					<customLabel>left crus and pes</customLabel>
+					<coverage>0.22</coverage>
+					<height>Bottom</height>
+					<woundAnchorTag>LeftLeg</woundAnchorTag>
+					  <groups>
+						<li>Legs</li>
+					  </groups>
+					  <parts>
+							<li>
+								<def>Foot</def>
+								<customLabel>left webbed foot</customLabel>
+								<coverage>0.1</coverage>
+								<groups>
+									<li>Feet</li>
+									<!-- <li>BORPA_FootAttackTool</li> -->
+								</groups>
+								<parts>
+									<li>
+									  <def>Toe</def>
+									  <customLabel>left first toe</customLabel>
+									  <coverage>0.05</coverage>
+										<groups>
+											<li>Feet</li>
+										</groups>
+									</li>
+									<li>
+									  <def>Toe</def>
+									  <customLabel>left second toe</customLabel>
+									  <coverage>0.05</coverage>
+										<groups>
+											<li>Feet</li>
+										</groups>
+									</li>
+									<li>
+									  <def>Toe</def>
+									  <customLabel>left third toe</customLabel>
+									  <coverage>0.05</coverage>
+										<groups>
+											<li>Feet</li>
+										</groups>
+									</li>
+									<li>
+									  <def>Toe</def>
+									  <customLabel>left fourth toe</customLabel>
+									  <coverage>0.05</coverage>
+										<groups>
+											<li>Feet</li>
+										</groups>
+									</li>
+									<li>
+									  <def>Toe</def>
+									  <customLabel>left fifth toe</customLabel>
+									  <coverage>0.05</coverage>
+										<groups>
+											<li>Feet</li>
+										</groups>
+									</li>
+								  </parts>
+							  </li>
+						</parts>
+				</li>
+			</parts>
+        </li>
+        <li>
+          <def>Leg</def>
+          <customLabel>right crus and pes</customLabel>
+          <coverage>0.22</coverage>
+          <height>Bottom</height>
+		  <woundAnchorTag>RightLeg</woundAnchorTag>
+		  <groups>
+			<li>Legs</li>
+		  </groups>
+		  <parts>
+				<li>
+					<def>Femur</def>
+					<customLabel>right crus</customLabel>
+					<coverage>0.22</coverage>
+					<height>Bottom</height>
+					<woundAnchorTag>LeftLeg</woundAnchorTag>
+					  <groups>
+						<li>Legs</li>
+					  </groups>
+					  <parts>
+							<li>
+								<def>Foot</def>
+								<customLabel>right webbed foot</customLabel>
+								<coverage>0.1</coverage>
+								<groups>
+									<li>Feet</li>
+									<!-- <li>BORPA_FootAttackTool</li> -->
+								</groups>
+								<parts>
+									<li>
+									  <def>Toe</def>
+									  <customLabel>right first toe</customLabel>
+									  <coverage>0.05</coverage>
+										<groups>
+											<li>Feet</li>
+										</groups>
+									</li>
+									<li>
+									  <def>Toe</def>
+									  <customLabel>right second toe</customLabel>
+									  <coverage>0.05</coverage>
+										<groups>
+											<li>Feet</li>
+										</groups>
+									</li>
+									<li>
+									  <def>Toe</def>
+									  <customLabel>right third toe</customLabel>
+									  <coverage>0.05</coverage>
+										<groups>
+											<li>Feet</li>
+										</groups>
+									</li>
+									<li>
+									  <def>Toe</def>
+									  <customLabel>right fourth toe</customLabel>
+									  <coverage>0.05</coverage>
+										<groups>
+											<li>Feet</li>
+										</groups>
+									</li>
+									<li>
+									  <def>Toe</def>
+									  <customLabel>right fifth toe</customLabel>
+									  <coverage>0.05</coverage>
+										<groups>
+											<li>Feet</li>
+										</groups>
+									</li>
+								  </parts>
+							  </li>
+						</parts>
+				</li>
+			</parts>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+  
+</Defs>

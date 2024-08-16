@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<BodyDef>
+		<defName>TSP_MatrixBulborbLike</defName>
+		<label>BeanBulborb-like</label>
+		<corePart>
+			<def>Shell</def>
+			<customLabel>exterior chitin</customLabel>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<!-- ALL BODY PARTS MUST TOAL 1, FOR ONE HUNDRED PERCENT. |No, Any thing less then 1 just gets applied to the shell ~garbage day| -->
+			<!-- BEGIN -->
+			<parts>
+				<!-- ■■■ 1st Layer ■■■■■■■■■■■■■■■■■■■■■■■ - Garbage Day -->
+				<!-- Slave Kidney (Beans), minor outside organs, weak, easy to hit -->
+				<li>
+					<def>TSP_ST_BeanBulborb_KidneyBean_Slave</def>
+					<customLabel>front left slave kidney (bean)</customLabel>
+					<coverage>0.1</coverage>
+					<depth>Inside</depth>
+					<woundAnchorTag>LeftShoulder</woundAnchorTag>
+					<groups>
+						<li>Torso</li> <!-- Technically the thorax -->
+						<li>GARBAGEDAY_BODYGROUP_BulborbKidney_Slave</li>
+					</groups>
+				</li>
+				<li>
+					<def>TSP_ST_BeanBulborb_KidneyBean_Slave</def>
+					<customLabel>front right slave kidney (bean)</customLabel>
+					<coverage>0.1</coverage>
+					<depth>Inside</depth>
+					<woundAnchorTag>LeftShoulder</woundAnchorTag>
+					<groups>
+						<li>Torso</li>
+						<li>GARBAGEDAY_BODYGROUP_BulborbKidney_Slave</li>
+					</groups>
+				</li>
+				<li>
+					<def>TSP_ST_BeanBulborb_KidneyBean_Slave</def>
+					<customLabel>hind left slave kidney (bean)</customLabel>
+					<coverage>0.1</coverage>
+					<depth>Inside</depth>
+					<woundAnchorTag>RightShoulder</woundAnchorTag>
+					<groups>
+						<li>Torso</li>
+						<li>GARBAGEDAY_BODYGROUP_BulborbKidney_Slave</li>
+					</groups>
+				</li>
+				<li>
+					<def>TSP_ST_BeanBulborb_KidneyBean_Slave</def>
+					<customLabel>hind right slave kidney (bean)</customLabel>
+					<coverage>0.1</coverage>
+					<depth>Inside</depth>
+					<woundAnchorTag>RightShoulder</woundAnchorTag>
+					<groups>
+						<li>Torso</li>
+						<li>GARBAGEDAY_BODYGROUP_BulborbKidney_Slave</li>
+					</groups>
+				</li>
+				<!-- 0.2 percent of body, TOTAL 0.2 -->
+				<li>
+					<!-- In the "Pikmin series", Bulborbs are "grub dogs", eusocial mammals with insect bodily structures and chitin -->
+					<def>Ribcage</def>
+					<customLabel>protective chitin</customLabel>
+					<coverage>0.15</coverage>
+					<depth>Inside</depth>
+					<groups>
+						<li>Torso</li>
+					</groups>
+					<!-- 0.1 percent of the body, TOTAL 0.3 -->
+					<parts>
+						<!-- ■■■ 2nd Layer ■■■■■■■■■■■■■■■■■■■■■■■ - Garbage Day -->
+						<li>
+							<def>Lung</def>
+							<customLabel>left lung</customLabel>
+							<coverage>0.015</coverage>
+							<depth>Inside</depth>
+							<groups>
+								<li>Torso</li>
+							</groups>
+						</li>
+						<li>
+							<def>Lung</def>
+							<customLabel>right lung</customLabel>
+							<coverage>0.015</coverage>
+							<depth>Inside</depth>
+							<groups>
+								<li>Torso</li>
+							</groups>
+						</li>
+						<!-- TOTAL 0.33 -->
+						<li>
+							<!-- This part is artificial and created by the Sapient Bean Matrix -->
+							<!-- It encases the Bean Man's natural heart, the Matrix, and the special Kidneys -->
+							<def>TSP_ST_BeanBulborb_MatrixCasing</def>
+							<customLabel>layer of beans</customLabel>
+							<coverage>0.1</coverage>
+							<depth>Inside</depth>
+							<groups>
+								<li>Torso</li>
+							</groups>
+							<!-- TOTAL 0.43 -->
+							<parts>
+								<!-- ■■■ 3rd Layer ■■■■■■■■■■■■■■■■■■■■■■■ - Garbage Day -->
+								<li>
+									<def>TSP_ST_BeanBulborb_KidneyBean_Master</def>
+									<customLabel>first master kidney (bean)</customLabel>
+									<coverage>0.03</coverage>
+									<depth>Inside</depth>
+									<woundAnchorTag>LeftShoulder</woundAnchorTag>
+									<groups>
+										<li>Torso</li>
+										<li>GARBAGEDAY_BODYGROUP_BulborbKidney_Master</li>
+									</groups>
+								</li>
+								<li>
+									<def>TSP_ST_BeanBulborb_KidneyBean_Master</def>
+									<customLabel>second master kidney (bean)</customLabel>
+									<coverage>0.03</coverage>
+									<depth>Inside</depth>
+									<woundAnchorTag>RightShoulder</woundAnchorTag>
+									<groups>
+										<li>Torso</li>
+										<li>GARBAGEDAY_BODYGROUP_BulborbKidney_Master</li>
+									</groups>
+								</li>
+								<li>
+									<def>TSP_ST_BeanBulborb_KidneyBean_Master</def>
+									<customLabel>third master kidney (bean)</customLabel>
+									<coverage>0.03</coverage>
+									<woundAnchorTag>RightShoulder</woundAnchorTag>
+									<depth>Inside</depth>
+									<groups>
+										<li>Torso</li>
+										<li>GARBAGEDAY_BODYGROUP_BulborbKidney_Master</li>
+									</groups>
+								</li>
+								<!-- TOTAL 0.49 -->
+								<li>
+									<def>InsectHeart</def>
+									<coverage>0.025</coverage>
+									<depth>Inside</depth>
+									<groups>
+										<li>Torso</li>
+									</groups>
+								</li>
+								<li>
+									<def>TSP_ST_BeanBulborb_Matrix</def>
+									<customLabel>Sapient Bean Matrix</customLabel>
+									<coverage>0.06</coverage>
+									<depth>Inside</depth>
+									<groups>
+										<li>Torso</li>
+									</groups>
+								</li>
+								<!-- TOTAL 0.57 -->
+							</parts>
+						</li>
+						<li>
+							<def>Stomach</def>
+							<coverage>0.12</coverage>
+							<depth>Inside</depth>
+							<groups>
+								<li>Torso</li>
+							</groups>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Pronotum</def>
+					<coverage>0.3</coverage>
+					<height>Top</height>
+					<groups>
+						<li>FullHead</li>
+					</groups>
+					<!-- TOTAL 0.7 -->
+					<parts>
+						<li>
+							<def>InsectHead</def>
+							<coverage>0.125</coverage>
+							<groups>
+								<li>FullHead</li>
+							</groups>
+							<!-- TOTAL 0.825 -->
+							<parts>
+								<li>
+									<def>Ear</def>
+									<customLabel>right internal tympanum</customLabel>
+									<coverage>0.01</coverage>
+									<depth>Inside</depth>
+									<groups>
+										<li>UpperHead</li>
+										<li>FullHead</li>
+									</groups>
+								</li>
+								<li>
+									<def>Ear</def>
+									<customLabel>left internal tympanum</customLabel>
+									<coverage>0.01</coverage>
+									<depth>Inside</depth>
+									<groups>
+										<li>UpperHead</li>
+										<li>FullHead</li>
+									</groups>
+								</li>
+								<li>
+									<def>Brain</def> <!-- Bulborbs are normally just animals -->
+									<coverage>0.01</coverage>
+									<depth>Inside</depth>
+									<groups>
+										<li>UpperHead</li>
+										<li>FullHead</li>
+									</groups>
+								</li>
+								<!-- TOTAL 0.835 -->
+								<li>
+									<def>Eye</def>
+									<customLabel>left eye stalk</customLabel>
+									<coverage>0.04</coverage>
+									<woundAnchorTag>LeftEye</woundAnchorTag>
+									<groups>
+										<li>UpperHead</li>
+										<li>FullHead</li>
+									</groups>
+								</li>
+								<li>
+									<def>Eye</def>
+									<customLabel>right eye stalk</customLabel>
+									<coverage>0.04</coverage>
+									<woundAnchorTag>RightEye</woundAnchorTag>
+									<groups>
+										<li>UpperHead</li>
+										<li>FullHead</li>
+									</groups>
+								</li>
+								<!-- TOTAL 0.838 -->
+								<li>
+									<def>Nose</def>
+									<customLabel>snout</customLabel>
+									<coverage>0.4</coverage>
+									<groups>
+										<li>UpperHead</li>
+										<li>FullHead</li>
+										<li>HeadAttackTool</li>
+									</groups>
+									<!-- TOTAL 0.848 -->
+									<parts>
+										<li>
+											<def>InsectNostril</def>
+											<customLabel>left nostril</customLabel>
+											<coverage>0.005</coverage>
+											<groups>
+												<li>UpperHead</li>
+												<li>FullHead</li>
+											</groups>
+										</li>
+										<li>
+											<def>InsectNostril</def>
+											<customLabel>right nostril</customLabel>
+											<coverage>0.005</coverage>
+											<groups>
+												<li>UpperHead</li>
+												<li>FullHead</li>
+											</groups>
+										</li>
+									</parts>
+								</li>
+								<!-- TOTAL 0.858 -->
+								<li>
+									<def>TSP_ST_Bulborb_Maw</def>
+									<coverage>0.25</coverage>
+									<groups>
+										<li>Teeth</li>
+										<li>GARBAGEDAY_BODYGROUP_BulborbMaw</li>
+										<li>HeadAttackTool</li>
+										<li>FullHead</li>
+										<li>Mouth</li>
+									</groups>
+									<!-- TOTAL 0.958 -->
+									<parts>
+										<li>
+											<def>TSP_ST_Bulborb_Tongue</def>
+											<coverage>0.05</coverage>
+											<depth>Inside</depth>
+											<groups>
+												<li>Teeth</li>
+												<li>FullHead</li>
+												<li>Mouth</li>
+											</groups>
+										</li>
+									</parts>
+								</li>
+								<!-- TOTAL 0.968 -->
+								<li>
+									<def>Jowl</def>
+									<customLabel>jowls</customLabel>
+									<coverage>0.1</coverage>
+									<groups>
+										<li>UpperHead</li>
+									</groups>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<!-- TOTAL 0.97 -->
+				<li>
+					<def>InsectLeg</def>
+					<customLabel>left leg</customLabel>
+					<coverage>0.06</coverage>
+					<height>Bottom</height>
+					<woundAnchorTag>LeftLeg</woundAnchorTag>
+					<groups>
+						<li>Legs</li>
+					</groups>
+					<parts>
+						<li>
+							<def>Foot</def>
+							<customLabel>right talon</customLabel>
+							<coverage>0.05</coverage>
+							<groups>
+								<li>Feet</li>
+							</groups>
+							<parts>
+								<li>
+									<def>Toe</def>
+									<customLabel>left first toe</customLabel>
+									<coverage>0.05</coverage>
+									<groups>
+										<li>Feet</li>
+										<li>MiddleFingers</li>
+									</groups>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>right second toe</customLabel>
+									<coverage>0.05</coverage>
+									<groups>
+										<li>Feet</li>
+										<li>MiddleFingers</li>
+									</groups>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<!-- TOTAL 0.985 -->
+				<li>
+					<def>InsectLeg</def>
+					<customLabel>right leg</customLabel>
+					<coverage>0.06</coverage>
+					<height>Bottom</height>
+					<woundAnchorTag>RightLeg</woundAnchorTag>
+					<groups>
+						<li>Legs</li>
+					</groups>
+					<parts>
+						<li>
+							<def>Foot</def>
+							<customLabel>right talon</customLabel>
+							<coverage>0.1</coverage>
+							<groups>
+								<li>Feet</li>
+							</groups>
+							<parts>
+								<li>
+									<def>Toe</def>
+									<customLabel>left first toe</customLabel>
+									<coverage>0.05</coverage>
+									<groups>
+										<li>Feet</li>
+										<li>MiddleFingers</li>
+									</groups>
+								</li>
+								<li>
+									<def>Toe</def>
+									<customLabel>right second toe</customLabel>
+									<coverage>0.05</coverage>
+									<groups>
+										<li>Feet</li>
+										<li>MiddleFingers</li>
+									</groups>
+								</li>
+							</parts>
+						</li>
+					</parts>
+				</li>
+				<!-- FINAL: 1 -->
+			</parts>
+		</corePart>
+	</BodyDef>
+</Defs>

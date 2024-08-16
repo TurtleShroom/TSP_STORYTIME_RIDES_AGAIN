@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	  <RecipeDef>
+		<defName>Dig_Worm</defName>
+		<label>dig for worm</label>
+		<description>Dig for one worm.</description>
+		<jobString>Digging for a worm.</jobString>
+		<workAmount>40</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Interact_GraveDig</soundWorking>
+		<recipeUsers>
+				<li>WormSpot</li>
+		</recipeUsers>
+		<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+		<products>
+			<ST_Worm>1</ST_Worm>
+		</products>
+		<workSkill>Animals</workSkill>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>Dig_Worm_BulkV</defName>
+		<label>dig for worms (x5)</label>
+		<description>Dig for five worms.</description>
+		<jobString>Digging for a few worms.</jobString>
+		<workAmount>100</workAmount>
+		<workSpeedStat>AnimalGatherSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Interact_GraveDig</soundWorking>
+		<recipeUsers>
+				<li>WormSpot</li>
+		</recipeUsers>
+		<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+		<products>
+			<ST_Worm>5</ST_Worm>
+		</products>
+		<workSkill>Animals</workSkill>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>Dig_Worm_BulkX</defName>
+		<label>dig for worms (x10)</label>
+		<description>Dig for ten worms.</description>
+		<jobString>Digging for a few worms.</jobString>
+		<workAmount>500</workAmount>
+		<workSpeedStat>AnimalGatherSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Interact_GraveDig</soundWorking>
+		<recipeUsers>
+				<li>WormSpot</li>
+		</recipeUsers>
+		<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+		<products>
+			<ST_Worm>10</ST_Worm>
+		</products>
+		<workSkill>Animals</workSkill>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>Dig_Worm_BulkXXV</defName>
+		<label>dig for worms (x25)</label>
+		<description>Dig for twenty-five worms.</description>
+		<jobString>Digging for worms.</jobString>
+		<workAmount>1000</workAmount>
+		<workSpeedStat>AnimalGatherSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Interact_GraveDig</soundWorking>
+		<recipeUsers>
+				<li>WormSpot</li>
+		</recipeUsers>
+		<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+		<products>
+			<ST_Worm>25</ST_Worm>
+		</products>
+		<workSkill>Animals</workSkill>
+	  </RecipeDef>
+	  
+		<RecipeDef>
+			<defName>TSP_ST_Dig_Worm_Bulk_Grand</defName>
+			<label>dig for worms (x50)</label>
+			<description>Dig for fifty worms!</description>
+			<jobString>Digging for many worms.</jobString>
+			<workAmount>1650</workAmount>
+			<workSpeedStat>AnimalGatherSpeed</workSpeedStat>
+			<effectWorking>CutStone</effectWorking>
+			<soundWorking>Interact_GraveDig</soundWorking>
+			<recipeUsers>
+					<li>WormSpot</li>
+			</recipeUsers>
+			<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+			<products>
+				<ST_Worm>50</ST_Worm>
+			</products>
+			<workSkill>Animals</workSkill>
+		</RecipeDef>
+		
+		<RecipeDef>
+			<defName>TSP_ST_Dig_Worm_C</defName>
+			<label>dig for worms (x100)</label>
+			<description>Dig for one hundred worms!</description>
+			<jobString>Digging for many worms.</jobString>
+			<workAmount>2225</workAmount>
+			<workSpeedStat>AnimalGatherSpeed</workSpeedStat>
+			<effectWorking>CutStone</effectWorking>
+			<soundWorking>Interact_GraveDig</soundWorking>
+			<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+			<recipeUsers>
+					<li>WormSpot</li>
+			</recipeUsers>
+			<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+			<products>
+				<ST_Worm>50</ST_Worm>
+			</products>
+			<workSkill>Animals</workSkill>
+		</RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>Make_GnomeFlour</defName>
+		<label>Grind Gnome Root poppy products</label>
+		<description>Grind the edible seed pods and roots of the Gnome Root poppy into Gnome Flour.</description>
+		<descriptionHyperlinks>
+			<ThingDef>GnomeFlour</ThingDef>
+			<ThingDef>GnomeFlourMeal</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Grinding Gnome Root poppies</jobString>
+		<workAmount>300</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Drill</effectWorking>
+		<soundWorking>Interact_Drill</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<ingredients>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+				<li>ManualGrinder</li>
+				<li>ElectricGrinder</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+		</recipeUsers>
+		<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+		<products>
+			<GnomeFlour>30</GnomeFlour>
+			<Gnome_Cloth>25</Gnome_Cloth>
+		</products>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>TSP_ST_Make_GnomeFlourC</defName>
+		<label>Grind Gnome Root poppy products (x100)</label>
+		<description>Grind the edible seed pods and roots of the Gnome Root poppy into Gnome Flour. This method will take longer, but processing poppy products in bulk drastically reduces the overall time spent.</description>
+		<descriptionHyperlinks>
+			<ThingDef>GnomeFlour</ThingDef>
+			<ThingDef>GnomeFlourMeal</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Grinding Gnome Root poppies</jobString>
+		<workAmount>800</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Drill</effectWorking>
+		<soundWorking>Interact_Drill</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<ingredients>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+			</filter>
+			<count>100</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+				<li>ManualGrinder</li>
+				<li>ElectricGrinder</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+		</recipeUsers>
+		<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+		<products>
+			<GnomeFlour>130</GnomeFlour>
+			<Gnome_Cloth>75</Gnome_Cloth>
+		</products>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>TSP_ST_Make_GnomeFlourCC</defName>
+		<label>Grind Gnome Root poppy products (x200)</label>
+		<description>Grind the edible seed pods and roots of the Gnome Root poppy into Gnome Flour. This method will take longer, but processing poppy products in bulk drastically reduces the overall time spent.</description>
+		<descriptionHyperlinks>
+			<ThingDef>GnomeFlour</ThingDef>
+			<ThingDef>GnomeFlourMeal</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Grinding Gnome Root poppies</jobString>
+		<workAmount>1450</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Drill</effectWorking>
+		<soundWorking>Interact_Drill</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<ingredients>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+			</filter>
+			<count>200</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+				<li>ManualGrinder</li>
+				<li>ElectricGrinder</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+		</recipeUsers>
+		<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+		<products>
+			<GnomeFlour>250</GnomeFlour>
+			<Gnome_Cloth>150</Gnome_Cloth>
+		</products>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>TSP_ST_Make_GnomeFlourD</defName>
+		<label>Grind Gnome Root poppy products (x500)</label>
+		<description>Grind the edible seed pods and roots of the Gnome Root poppy into Gnome Flour. This method will take significantly longer, but processing poppy products in bulk drastically reduces the overall time spent extracting useful materials.</description>
+		<descriptionHyperlinks>
+			<ThingDef>GnomeFlour</ThingDef>
+			<ThingDef>GnomeFlourMeal</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>Grinding Gnome Root poppies</jobString>
+		<workAmount>1700</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Drill</effectWorking>
+		<soundWorking>Interact_Drill</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<ingredients>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+			</filter>
+			<count>500</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<thingDefs>
+							<li>GnomeRoot</li>
+						</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+				<li>ManualGrinder</li>
+				<li>ElectricGrinder</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+		</recipeUsers>
+		<researchPrerequisite>ST_GnomeCulture</researchPrerequisite>
+		<products>
+			<GnomeFlour>500</GnomeFlour>
+			<Gnome_Cloth>350</Gnome_Cloth>
+		</products>
+	  </RecipeDef>
+	 
+	<RecipeDef>
+		<defName>Make_FruitBatta</defName>
+		<label>make a Fruit Batta dish</label>
+		<description>Make a Batta dish from fruit.</description>
+		<jobString>Making.</jobString>
+		<workAmount>600</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients>
+		  <li>
+			<filter>
+					<categories>
+						<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+					</categories>
+					<thingDefs>
+						<li>RawBerries</li>
+						<li>RawAgave</li>
+						<li>ST_CookingApple</li>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+						<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+						<li MayRequire="herbs.plants">RawMint</li>
+					</thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>GnomeFlour</li>
+					<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+					<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+					<!-- <li MayRequire="Dajian.ChiTeaditional.Expanded">DaJian_LaoGanMa</li> --> <!-- John Cena puts that %$(*^ on EVERYTHING -->
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+					<categories>
+						<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+					</categories>
+					<thingDefs>
+						<li>RawBerries</li>
+						<li>RawAgave</li>
+						<li>ST_CookingApple</li>
+						<li>ST_Lemon</li>
+						<li>ST_Orange</li>
+						<li>GnomeFlour</li>
+						<li>ToadflaxLeaves</li>
+						<li MayRequire="herbs.plants">RawMint</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+						<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+						<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
+						<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Pineapples</li>
+						<li MayRequire="Mlie.TropickappRainforestMod">CK_RawBanana</li>
+						<!-- <li MayRequire="Dajian.ChiTeaditional.Expanded">DaJian_LaoGanMa</li> --> <!-- John Cena puts that %$(*^ on EVERYTHING -->
+					</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+					<thingDefs>
+						<li>RawBerries</li>
+						<li>RawAgave</li>
+						<li>GnomeFlour</li>
+						<li>ST_Orange</li>
+						<li>ST_Lemon</li>
+						<li>ST_CookingApple</li>
+						<li MayRequire="herbs.plants">RawMint</li>
+					</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisite>gnomeCooking</researchPrerequisite>
+		<products>
+			<FruitBatta>5</FruitBatta>
+		</products>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>Make_VegetableBatta</defName>
+		<label>make a vegetarian Batta dish</label>
+		<description>Make a Batta dish from various plants.</description>
+		<jobString>Making.</jobString>
+		<workAmount>600</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+					<disallowedCategories>
+						<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+					</disallowedCategories>
+					<disallowedThingDefs>
+						<li>GnomeRoot</li>
+						<li>GnomeFlour</li>
+						<li>GnomeFlourMeal</li>
+						<li>Gnome_Cloth</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+						<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+					</disallowedThingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GnomeFlour</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+						<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+			</categories>
+			<thingDefs>
+				<li>GnomeFlour</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+				<li>RawCorn</li>
+				<li>RawPotatoes</li>
+				<li MayRequire="herbs.plants">RawMint</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>GnomeFlour</li>
+				<li>RawCorn</li>
+				<li>RawPotatoes</li>
+				<li MayRequire="herbs.plants">RawMint</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisite>gnomeCooking</researchPrerequisite>
+		<products>
+			<VegetableBatta>5</VegetableBatta>
+		</products>
+	  </RecipeDef>
+
+	  <RecipeDef>
+		<defName>Make_WormBatta</defName>
+		<label>make a Worm Batta dish</label>
+		<description>Make a Batta dish from worms.</description>
+		<jobString>Making.</jobString>
+		<workAmount>600</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>ST_Worm</li>
+						</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>GnomeFlour</li>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+							<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+							<li MayRequire="Dajian.ChiTeaditional.Expanded">DaJian_LaoGanMa</li> <!-- John Cena puts that %$(*^ on EVERYTHING -->
+						</thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_Worm</li>
+							<li>GnomeFlour</li>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+							<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+							<li MayRequire="Dajian.ChiTeaditional.Expanded">DaJian_LaoGanMa</li> <!-- John Cena puts that %$(*^ on EVERYTHING -->
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_Worm</li>
+							<li>GnomeFlour</li>
+						</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisite>gnomeCooking</researchPrerequisite>
+		<products>
+			<WormBatta>5</WormBatta>
+		</products>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>Make_ToadBatta</defName>
+		<label>make a toad Batta dish</label>
+		<description>Make a Batta dish from the legs of a Regenerative Toad.</description>
+		<jobString>Making.</jobString>
+		<workAmount>600</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>ToadLegs</li>
+						</thingDefs>
+			</filter>
+			<count>4</count>
+		  </li>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>GnomeFlour</li>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+							<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+						</thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<thingDefs>
+							<li>ToadLegs</li>
+							<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+							<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<thingDefs>
+							<li>ToadLegs</li>
+							<li>GnomeFlour</li>
+						</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisite>gnomeCooking</researchPrerequisite>
+		<products>
+			<ToadBatta>4</ToadBatta>
+		</products>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>Make_VegBall</defName>
+		<label>make a Veggie Ball</label>
+		<description>Make a Veggie Ball.</description>
+		<jobString>Making.</jobString>
+		<workAmount>600</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients> 
+		  <li>
+			<filter>
+						<categories>
+							<li>PlantFoodRaw</li>
+						</categories>
+						<disallowedThingDefs>
+							<li>GnomeRoot</li>
+							<li>Gnome_Cloth</li>
+							<li>GnomeFlour</li>
+							<li MayRequire="Mlie.TakisRandomStuff">RawBarley</li>
+							<li MayRequire="Mlie.TakisRandomStuff">RawOats</li>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+						</disallowedThingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>GnomeFlour</li>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+							<li MayRequire="Mlie.TakisRandomStuff">RawBarley</li>
+							<li MayRequire="Mlie.TakisRandomStuff">RawOats</li>
+						</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<categories>
+							<li>PlantFoodRaw</li>
+						</categories>
+						<thingDefs>
+							<li>GnomeRoot</li>
+							<li>Gnome_Cloth</li>
+							<li>GnomeFlour</li>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<categories>
+							<li>PlantFoodRaw</li>
+						</categories>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisite>gnomeCooking</researchPrerequisite>
+		<products>
+			<VegBall>5</VegBall>
+		</products>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>Make_ChocolateBomb</defName>
+		<label>make a Chocolate Bomb</label>
+		<description>Make a Chocolate Bomb candy.</description>
+		<jobString>Making candy.</jobString>
+		<workAmount>600</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Chocolate</li>
+					<li MayRequire="aratocat.wonderland">Chocofuel</li>
+					<li MayRequire="aratocat.wonderland">NEOChocolateEX</li>
+					<li MayRequire="lat.rimstro">RS_chocomilk</li>
+				</thingDefs>
+			</filter>
+			<count>0.5</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_GnomeSugar</li>
+					<li MayRequire="herbs.plants">RawMint</li>
+				</thingDefs>
+			</filter>
+			<count>0.5</count>
+		  </li>
+		  <li>
+				<filter>
+					<thingDefs>
+						<li>Milk</li>
+						<li>ST_Green_Milk</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+						<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_InsectMilk</li>
+						<li>Rylex_CoconutMilk</li>
+						<li MayRequire="aratocat.wonderland">Chocofuel</li>
+						<li>BORPA_Milk</li>
+					</thingDefs>
+				</filter>
+				<count>0.35</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<thingDefs>
+							<li>Chocolate</li>
+							<li>ST_GnomeSugar</li>
+							<li>Milk</li>
+							<li>ST_Green_Milk</li>
+							<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+							<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+							<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_InsectMilk</li>
+							<li>Rylex_CoconutMilk</li>
+							<li MayRequire="aratocat.wonderland">Chocofuel</li>
+							<li MayRequire="aratocat.wonderland">NEOChocolateEX</li>
+							<li MayRequire="herbs.plants">RawMint</li>
+							<li>BORPA_Milk</li>
+							<li MayRequire="lat.rimstro">RS_Berrymilk</li>
+							<li MayRequire="lat.rimstro">RS_chocomilk</li>
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<thingDefs>
+							<li>Chocolate</li>
+							<li>ST_GnomeSugar</li>
+							<li>ST_Green_Milk</li>
+							<li>Milk</li>
+							<li MayRequire="aratocat.wonderland">Chocofuel</li>
+							<li>BORPA_Milk</li>
+						</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisite>gnomeCooking</researchPrerequisite>
+		<products>
+			<ChocolateBomb>5</ChocolateBomb>
+		</products>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>Make_TangledToadLegs</defName>
+		<label>tangle some toad legs</label>
+		<description>Tie the detachable limbs of the Regenerative Toad in a knot, coat it in breading made of Gnome Flour, and bake it in the juices of the toad limbs. Cut and serve. Get ready for a treat!</description>
+		<jobString>Tangling.</jobString>
+		<workAmount>600</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>ToadLegs</li>
+						</thingDefs>
+			</filter>
+			<count>2</count>
+		  </li>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>GnomeFlour</li>
+						</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<thingDefs>
+							<li>ToadLegs</li>
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<thingDefs>
+							<li>GnomeFlour</li>
+						</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisite>gnomeCooking</researchPrerequisite>
+		<products>
+			<TangledToadLegs>4</TangledToadLegs>
+		</products>
+	  </RecipeDef>
+	  
+	  <RecipeDef>
+		<defName>Make_WormHole</defName>
+		<label>make a Worm Hole</label>
+		<description>Make a Worm Hole.</description>
+		<jobString>Making.</jobString>
+		<workAmount>600</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<ingredients>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>ST_Worm</li>
+						</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+						<thingDefs>
+							<li>GnomeFlour</li>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+							<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+						</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+				<categories>
+					<li>PlantFoodRaw</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>GnomeFlour</li>
+					<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+					<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+				</disallowedThingDefs>
+			</filter>
+			<count>15</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+						<categories>
+							<li>PlantFoodRaw</li>
+						</categories>
+						<thingDefs>
+							<li>ST_Worm</li>
+							<li>GnomeFlour</li>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+							<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+						</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_Worm</li>
+							<li>GnomeFlour</li>
+							<li>ST_GnomeSugar</li>
+						</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisite>gnomeCooking</researchPrerequisite>
+		<products>
+			<WormHole>10</WormHole>
+		</products>
+	  </RecipeDef>
+  
+</Defs>

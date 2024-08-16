@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<TraderKindDef>
+		<defName>TSP_ST_GnomeTrader</defName>
+		<label>Gnome agricultural and resources trader</label>
+		<commonality>20</commonality>
+		<stockGenerators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>
+					<min>8000</min>
+					<max>24000</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Hay</thingDef>
+				<countRange>
+					<min>400</min>
+					<max>1000</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Kibble</thingDef>
+				<countRange>
+					<min>500</min>
+					<max>750</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>WoodLog</thingDef>
+				<countRange>
+					<min>100</min>
+					<max>300</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Gnome_Cloth</thingDef>
+				<countRange>
+					<min>100</min>
+					<max>300</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Weezer</thingDef>
+				<countRange>
+					<min>200</min>
+					<max>1000</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>GnomeFlour</thingDef>
+				<countRange>
+					<min>100</min>
+					<max>300</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineHerbal</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>30</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>30</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ST_Worm</thingDef>
+				<countRange>
+					<min>1000</min>
+					<max>2000</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>DriedFrogPills</thingDef>
+				<countRange>
+					<min>25</min>
+					<max>150</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ST_ProcessedCheese</thingDef>
+				<countRange>15~40</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>TomatoCyst</thingDef>
+				<countRange>180~200</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Meat_Megaspider</thingDef>
+				<countRange>
+					<min>100</min>
+					<max>300</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="vanillaexpanded.vplantse">
+				<thingDef MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</thingDef>
+				<countRange MayRequire="vanillaexpanded.vplantse">100~200</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.ingredienttime">
+				<thingDef MayRequire="onekimchiman.ingredienttime">O_TomatoSauce</thingDef>
+				<countRange MayRequire="onekimchiman.ingredienttime">15~20</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="halloweenparade.velcroboy333">
+				<thingDef MayRequire="halloweenparade.velcroboy333">PumpkinHull</thingDef>
+				<countRange MayRequire="halloweenparade.velcroboy333">
+					<min MayRequire="halloweenparade.velcroboy333">300</min>
+					<max MayRequire="halloweenparade.velcroboy333">500</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="halloweenparade.velcroboy333">
+				<thingDef MayRequire="halloweenparade.velcroboy333">AutumnMushroom</thingDef>
+				<countRange MayRequire="halloweenparade.velcroboy333">
+					<min MayRequire="halloweenparade.velcroboy333">75</min>
+					<max MayRequire="halloweenparade.velcroboy333">3000</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="halloweenparade.velcroboy333">
+				<thingDef MayRequire="halloweenparade.velcroboy333">AutumnFruit</thingDef>
+				<countRange MayRequire="halloweenparade.velcroboy333">
+					<min MayRequire="halloweenparade.velcroboy333">75</min>
+					<max MayRequire="halloweenparade.velcroboy333">200</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="aratocat.wonderland">
+				<thingDef MayRequire="aratocat.wonderland">Chocofuel</thingDef>
+				<countRange MayRequire="aratocat.wonderland">
+					<min MayRequire="aratocat.wonderland">30</min>
+					<max MayRequire="aratocat.wonderland">200</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="aratocat.wonderland">
+				<thingDef MayRequire="aratocat.wonderland">NEOChocolateEX</thingDef>
+				<countRange MayRequire="aratocat.wonderland">
+					<min MayRequire="aratocat.wonderland">1</min>
+					<max MayRequire="aratocat.wonderland">13</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="sarg.rimbees">
+				<thingDef MayRequire="sarg.rimbees">RB_Bee_TSP_ST_Gnee_Basic_Queen</thingDef>
+				<countRange MayRequire="sarg.rimbees">2~10</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="sarg.rimbees">
+				<thingDef MayRequire="sarg.rimbees">RB_Bee_TSP_ST_Gnee_Basic_Drone</thingDef>
+				<countRange MayRequire="sarg.rimbees">2~10</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.91</maxWildness>
+				<tradeTagsSell>
+					<li>AnimalFarm</li>
+					<li>AnimalFrog</li>
+				</tradeTagsSell>
+				<tradeTagsBuy>
+					<li>AnimalExotic</li>
+					<li>AnimalFarm</li>
+					<li>AnimalFrog</li>
+					<li>AnimalInsect</li>
+					<li>AnimalRare</li>
+					<li>AnimalUncommon</li>
+					<li>AnimalCommon</li>
+					<li>AnimalPet</li>
+					<li>ST_Gnome_Selling_Animal</li>
+					<li>ST_Gnome_Selling_AnimalRare</li>
+					<li>AnimalFrog</li>
+					<li>AnimalFrogRare</li>
+					<li>StorytimeAnimal</li>
+					<li>StorytimeAnimalRare</li>
+					<li>AnimalVehicle</li>
+					<li MayRequire="tsp.baskerville.hellsingexpansion">GentleGhoul</li>
+				</tradeTagsBuy>
+				<kindCountRange>
+					<min>2</min>
+					<max>6</max>
+				</kindCountRange>
+				<countRange>
+					<min>1</min>
+					<max>3</max>
+				</countRange>
+			</li>
+			<!--
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<tradeTagsSell>
+					<li>AnimalFarm</li>
+					<li MayRequire="tsp.baskerville.hellsingexpansion">GentleGhoul</li>
+				</tradeTagsSell>
+				<tradeTagsBuy>
+					<li>AnimalExotic</li>
+				</tradeTagsBuy>
+				<kindCountRange>1</kindCountRange>
+				<countRange>3~4</countRange>
+				<createMatingPair>
+					<li>AnimalFarm</li>
+				</createMatingPair>
+			</li>
+			-->
+			<!--
+			<li Class="StockGenerator_Animals">
+				<tradeTagsSell>
+					<li>LivingRock</li>
+				</tradeTagsSell>
+				<tradeTagsBuy>
+					<li>LivingRock</li>
+				</tradeTagsBuy>
+				<kindCountRange>1~1</kindCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			-->
+			<li Class="StockGenerator_Category">
+				<categoryDef>PlantMatter</categoryDef>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Textiles</categoryDef>
+			</li>
+			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vcooke">
+				<categoryDef>VCE_Condiments</categoryDef>
+			</li>
+			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vcooke">
+				<categoryDef>VCE_Cheese</categoryDef>
+			</li>
+			<li Class="StockGenerator_Category" MayRequire="mlie.takisrandomstuff">
+				<categoryDef>Cereal</categoryDef>
+				<countRange>
+					<min>100</min>
+					<max>300</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeFlour</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Worm</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>WormRaw</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeBatta</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeMeat</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeVegetarian</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="mo.decorationsluxury">
+				<tag MayRequire="mo.decorationsluxury">MO_Luxury</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
+				<tag MayRequire="sirmashedpotato.morrowrim.alcoholremade">DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
+				<tag MayRequire="sirmashedpotato.ashlands">DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>ST_GnomeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>ST_Poison</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DreadedLaced_CringeWonka_Candy</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>StorytimeDrugs</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>StorytimeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>EggNog</tag>
+			</li>
+		</stockGenerators>
+	</TraderKindDef>
+	
+	<TraderKindDef>
+		<defName>TSP_ST_GnomeTrader_Banquet</defName>
+		<label>Gnome food vendor</label>
+		<commonality>5</commonality>
+		<stockGenerators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>
+					<min>10000</min>
+					<max>30000</max>
+				</countRange>
+			</li>
+			<!--
+			<li Class="StockGenerator_SingleDef" MayRequire="aratocat.wonderland">
+				<thingDef MayRequire="aratocat.wonderland">Chocofuel</thingDef>
+				<countRange MayRequire="aratocat.wonderland">
+					<min MayRequire="aratocat.wonderland">10</min>
+					<max MayRequire="aratocat.wonderland">75</max>
+				</countRange>
+			</li>
+			-->
+			<li Class="StockGenerator_SingleDef" MayRequire="aratocat.wonderland">
+				<thingDef MayRequire="aratocat.wonderland">NEOChocolateEX</thingDef>
+				<countRange MayRequire="aratocat.wonderland">
+					<min MayRequire="aratocat.wonderland">3</min>
+					<max MayRequire="aratocat.wonderland">10</max>
+				</countRange>
+			</li>
+			<!--
+			<li Class="StockGenerator_Animals">
+				<tradeTagsSell>
+					<li>LivingRock</li>
+				</tradeTagsSell>
+				<tradeTagsBuy>
+					<li>LivingRock</li>
+				</tradeTagsBuy>
+				<kindCountRange>1~1</kindCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			-->
+			
+			<li Class="StockGenerator_Tag">
+				<tradeTag>GnomeBatta</tradeTag>
+				<thingDefCountRange>1~3</thingDefCountRange>
+				<countRange>10~20</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Tag">
+				<tradeTag>GnomeMeat</tradeTag>
+				<thingDefCountRange>1~3</thingDefCountRange>
+				<countRange>10~20</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Tag">
+				<tradeTag>GnomeVegetarian</tradeTag>
+				<thingDefCountRange>1~3</thingDefCountRange>
+				<countRange>10~20</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Tag">
+				<tradeTag>GnomeDessert</tradeTag>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~15</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Tag">
+				<tradeTag>Worm</tradeTag>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~15</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Tag">
+				<tradeTag>GnomeBooze</tradeTag>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~15</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Tag">
+				<tradeTag>UnfertilizedFrogEgg</tradeTag>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>10~40</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Tag">
+				<tradeTag>EggNog</tradeTag>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~15</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Tag" MayRequire="sirmashedpotato.morrowrim.alcoholremade">
+				<tradeTag MayRequire="sirmashedpotato.morrowrim.alcoholremade">DunmerBooze</tradeTag>
+				<thingDefCountRange MayRequire="sirmashedpotato.morrowrim.alcoholremade">1~7</thingDefCountRange>
+				<countRange MayRequire="sirmashedpotato.morrowrim.alcoholremade">2~15</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category">
+				<categoryDef>TSP_ST_EggNog</categoryDef>
+				<thingDefCountRange>1~3</thingDefCountRange>
+				<countRange>10~25</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category">
+				<categoryDef>FoodMeals</categoryDef>
+				<thingDefCountRange>8~50</thingDefCountRange>
+				<countRange>5~25</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vbrewe">
+				<categoryDef>VBE_Drinks</categoryDef>
+				<thingDefCountRange>8~50</thingDefCountRange>
+				<countRange>5~25</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vbrewe">
+				<categoryDef>VBE_DrinksSimpleSpirits</categoryDef>
+				<thingDefCountRange>1~6</thingDefCountRange>
+				<countRange>5~25</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vbrewe">
+				<categoryDef>VBE_DrinksLuxurySpirits</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>5~6</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vbrewe">
+				<categoryDef>VBE_DrinksNonAlcoholic</categoryDef>
+				<thingDefCountRange>4~8</thingDefCountRange>
+				<countRange>15~26</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vcooke">
+				<categoryDef  MayRequire="vanillaexpanded.vcooke">VCE_Cheese</categoryDef>
+				<thingDefCountRange MayRequire="vanillaexpanded.vcooke">3~17</thingDefCountRange>
+				<countRange MayRequire="vanillaexpanded.vcooke">10~40</countRange>
+			</li>
+
+			<li Class="StockGenerator_Animals" MayRequire="tsp.halloweenie.integration">
+				<tradeTagsSell MayRequire="tsp.halloweenie.integration">
+					<li Inherit="False" MayRequire="tsp.halloweenie.integration">AnimalHalloweenie</li>
+				</tradeTagsSell>
+				<tradeTagsBuy MayRequire="tsp.halloweenie.integration" Inherit="False">
+					<li MayRequire="tsp.halloweenie.integration" Inherit="False">AnimalHalloweenie</li>
+				</tradeTagsBuy>
+				<kindCountRange MayRequire="tsp.halloweenie.integration">1~3</kindCountRange>
+				<countRange MayRequire="tsp.halloweenie.integration">1</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="robtrg.tf2.sandvich">
+				<thingDef MayRequire="robtrg.tf2.sandvich">ROBTRG_Sandvich_TF</thingDef>
+				<countRange MayRequire="robtrg.tf2.sandvich">
+					<min MayRequire="robtrg.tf2.sandvich">4</min>
+					<max MayRequire="robtrg.tf2.sandvich">10</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="robtrg.tf2.sandvich">
+				<thingDef MayRequire="robtrg.tf2.sandvich">ROBTRG_Sandvich_TF_Veg</thingDef>
+				<countRange MayRequire="robtrg.tf2.sandvich">
+					<min MayRequire="robtrg.tf2.sandvich">4</min>
+					<max MayRequire="robtrg.tf2.sandvich">10</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="sarg.rimbees">
+				<thingDef MayRequire="sarg.rimbees">RB_Bee_TSP_ST_Gnee_Basic_Queen</thingDef>
+				<countRange MayRequire="sarg.rimbees">0~1</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="sarg.rimbees">
+				<thingDef MayRequire="sarg.rimbees">RB_Bee_TSP_ST_Gnee_Basic_Drone</thingDef>
+				<countRange MayRequire="sarg.rimbees">0~1</countRange>
+			</li>
+			
+			<!-- Resources -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ST_WormPizza</thingDef>
+				<countRange>40~120</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ST_CheesePizza</thingDef>
+				<countRange>19~20</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ST_MeatPizza</thingDef>
+				<countRange>19~20</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ST_VegetablePizza</thingDef>
+				<countRange>19~20</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+				<thingDef MayRequire="onekimchiman.pizzatime">O_BoringPizza</thingDef>
+				<countRange MayRequire="onekimchiman.pizzatime">10~25</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+				<thingDef MayRequire="onekimchiman.pizzatime">O_CheesePizza</thingDef>
+				<countRange MayRequire="onekimchiman.pizzatime">15~17</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+				<thingDef MayRequire="onekimchiman.pizzatime">O_PepperoniPizza</thingDef>
+				<countRange MayRequire="onekimchiman.pizzatime">15~17</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+				<thingDef MayRequire="onekimchiman.pizzatime">O_CombinationPizza</thingDef>
+				<countRange MayRequire="onekimchiman.pizzatime">2~10</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+				<thingDef MayRequire="onekimchiman.pizzatime">O_BaconPizza</thingDef>
+				<countRange MayRequire="onekimchiman.pizzatime">2~8</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+				<thingDef MayRequire="onekimchiman.pizzatime">O_BulgogiPizza</thingDef>
+				<countRange MayRequire="onekimchiman.pizzatime">1~17</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+				<thingDef MayRequire="onekimchiman.pizzatime">O_VeggiePizza</thingDef>
+				<countRange MayRequire="onekimchiman.pizzatime">10~15</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+				<thingDef MayRequire="onekimchiman.pizzatime">O_SteakPizza</thingDef>
+				<countRange MayRequire="onekimchiman.pizzatime">2~10</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+				<thingDef MayRequire="onekimchiman.pizzatime">O_MeatBallPizza</thingDef>
+				<countRange MayRequire="onekimchiman.pizzatime">2~10</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+				<thingDef MayRequire="onekimchiman.pizzatime">O_BoomratPizza</thingDef>
+				<countRange MayRequire="onekimchiman.pizzatime">1~15</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vcooke">
+				<categoryDef>VCE_Condiments</categoryDef>
+			</li>
+			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vcooke">
+				<categoryDef>VCE_Cheese</categoryDef>
+			</li>
+			
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeFlour</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Worm</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>WormRaw</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeBatta</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeMeat</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeVegetarian</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeDessert</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag MayRequire="mo.decorationsluxury">MO_Luxury</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
+				<tag MayRequire="sirmashedpotato.morrowrim.alcoholremade">DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>ST_GnomeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>ST_Poison</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DreadedLaced_CringeWonka_Candy</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>StorytimeDrugs</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>StorytimeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>EggNog</tag>
+			</li>
+		</stockGenerators>
+	</TraderKindDef>
+</Defs>

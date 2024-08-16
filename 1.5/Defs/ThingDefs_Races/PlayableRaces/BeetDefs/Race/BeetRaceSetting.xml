@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+		<defName>Alien_Beet</defName>
+		<label>beet</label>
+		<description>A large, green humanoid with elephant-like tusks, Beets are a strange, heavy set, bipedal being capable of gathering some of their nutrition from photosynthesizing with the sun, and they must be exposed to a certain degree of sunlight to survive. Unclear whether friendly or not.\n \n Beets are not plants, although they have evolved many plantlike properties. Their ability to photosynthesize does not fully satiate them. This is partially because of the fact that Beets do not respirate like plants; they breathe in oxygen and breathe out carbon dioxide. The skin of Beets is naturally thick and serves as armor inherent to their body. Their "meat" is a strange substance similar to cellulose and fiber, making it closer to vegetable than flesh. \n \n While Beets do exist in Core Worlds and elsewhere, they are most common on the edges of galactic civilization, where they are believed to have originated on some distant Rim World. On Rim Worlds such as this, Beets are most commonly found in two different civilizations.</description>
+		<alienRace>
+		  <generalSettings>
+			<maleGenderProbability>0.7</maleGenderProbability>
+			<immuneToAge>false</immuneToAge>
+			<canLayDown>true</canLayDown>
+			<forcedRaceTraitEntries>
+			  <li>
+				<options>
+					<li>
+						<defName>Tough</defName>
+					</li>
+				</options>
+				<chance>999</chance>
+			  </li>          
+			</forcedRaceTraitEntries>
+			<maxDamageForSocialfight>3</maxDamageForSocialfight>
+			<humanRecipeImport>true</humanRecipeImport>
+			<alienPartGenerator>
+			  <headTypes Inherit="False">
+				<li>Female_Beet_Average_Normal</li>
+				<li>Male_Beet_Average_Normal</li>
+			  </headTypes>	
+			  <bodyTypes>
+				<li>Fat</li>
+				<li>Hulk</li>
+				<!--
+				<li>Male</li>
+				<li>Female</li>
+				-->
+				<li MayRequire="Ludeon.Rimworld.Biotech">Baby</li>
+				<li MayRequire="Ludeon.Rimworld.Biotech">Child</li>
+			  </bodyTypes>
+			  <customDrawSize>(1.05,1.05)</customDrawSize>
+			  <customHeadDrawSize>(1.05,1.05)</customHeadDrawSize>
+			  <customPortraitDrawSize>(1.05,1.05)</customPortraitDrawSize>
+			  <customPortraitHeadDrawSize>(1.05,1.05)</customPortraitHeadDrawSize>
+			  <colorChannels>
+				<li>
+				  <name>skin</name>
+				  <first Class="ColorGenerator_Options">
+					<options>
+					  <li>
+						<weight>999</weight>
+						<min>RGBA(0,102,0)</min>
+						<max>RGBA(10,112,10)</max>
+					  </li>
+					  <li>
+						<weight>945</weight>
+						<min>RGBA(0,153,76)</min>
+						<max>RGBA(5,153,71)</max>
+					  </li>
+					  <li>
+						<weight>935</weight>
+						<min>RGBA(75,100,0)</min>
+						<max>RGBA(80,105,5)</max>
+					  </li>
+					  <li>
+						<weight>910</weight>
+						<min>RGBA(126,170,37)</min>
+						<max>RGBA(120,160,32)</max>
+					  </li>
+					</options>
+				  </first>
+				</li>
+				<li>
+				  <name>hair</name>
+				  <first Class="ColorGenerator_Options">
+					<options>
+					  <li>
+						<weight>999</weight>
+						<min>RGBA(10,50,32)</min>
+						<max>RGBA(50,56,37)</max>
+					  </li>
+					  <li>
+						<weight>999</weight>
+						<min>RGBA(100,55,0)</min>
+						<max>RGBA(90,35,0)</max>
+					  </li>
+					</options>
+				  </first>
+				</li>
+			  </colorChannels>
+			</alienPartGenerator>
+		  </generalSettings>
+		  <graphicPaths>
+			  <body>Things/Pawn/Humanlike/Beet/Body/</body>
+			  <head>Things/Pawn/Humanlike/Beet/Head/</head>
+		  </graphicPaths>
+		  <relationSettings>
+			<relationChanceModifierSibling>3</relationChanceModifierSibling>
+			<renamer>
+			  <li>
+				<relation>Parent</relation>
+				<label>Progenitor</label>
+				<femaleLabel>Progenitor</femaleLabel>
+			  </li>
+			  <li>
+				<relation>Child</relation>
+				<label>Seed</label>
+				<femaleLabel>Seed</femaleLabel>
+			  </li>
+			  <li>
+				<relation>Spouse</relation>
+				<label>Spouse</label>
+				<femaleLabel>Spouse</femaleLabel>
+			  </li>
+			  <li>
+				<relation>ExSpouse</relation>
+				<label>ExSpouse</label>
+				<femaleLabel>ExSpouse</femaleLabel>
+			  </li>
+			  <li>
+				<relation>Sibling</relation>
+				<label>Sibling</label>
+				<femaleLabel>Sibling</femaleLabel>
+			  </li>
+			  <li>
+				<relation>Fiance</relation>
+				<label>Betrothed</label>
+				<femaleLabel>Betrothed</femaleLabel>
+			  </li>
+			</renamer>
+		  </relationSettings>
+			<raceRestriction>
+				<blackEndoCategories>
+					<li>BodyType</li>
+					<li>Head</li>
+					<li>Melanin</li> <!-- Can get an overridden skin color, but will always be a natural born green Pawn otherwise -->
+					<li>Jaw</li>
+				</blackEndoCategories>
+				<blackGeneTags>
+					<!-- <li>SkinColor</li> -->
+					<li>BodyType</li>
+					<li>Head</li>
+				</blackGeneTags>
+			</raceRestriction>
+		</alienRace>
+		<statBases>
+		  <MarketValue>1200</MarketValue>
+		  <MoveSpeed>4.50</MoveSpeed>
+		  <Flammability>1.1</Flammability>
+		  <ComfyTemperatureMin>-16</ComfyTemperatureMin>
+		  <ComfyTemperatureMax>80</ComfyTemperatureMax>
+		  <PsychicSensitivity>0.3</PsychicSensitivity>
+		  <ResearchSpeed>0.8</ResearchSpeed>
+		  <Mass>100</Mass>
+		  <RoyalFavorValue>6</RoyalFavorValue>
+		  <LeatherAmount>300</LeatherAmount>
+		  <CarryingCapacity>90</CarryingCapacity>
+		  <SM_ConcussiveDmgMult MayRequire="redmattis.betterprerequisites">0.82</SM_ConcussiveDmgMult>
+		  <SM_BulletDmgMult MayRequire="redmattis.betterprerequisites">1.12</SM_BulletDmgMult>
+		  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_GhoulismSusceptibility>
+		</statBases>
+		<tools>
+		  <li>
+			<label>left fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			  <li>Poke</li>
+			</capacities>
+			<power>14</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>12</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			  <li>Poke</li>
+			</capacities>
+			<power>12</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>16</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>fangs</label>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>16.2</power>
+			<cooldownTime>1.5</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		  <li>
+			<label>tusk</label>
+			<capacities>
+			  <!-- <li>Scratch</li> -->
+			  <li>Stab</li>
+			  <li>Bite</li>
+			</capacities>
+			<power>25</power>
+			<cooldownTime>2.6</cooldownTime>
+			<linkedBodyPartsGroup>TuskAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>1</chanceFactor>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>3</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <thinkTreeMain>Humanlike</thinkTreeMain>
+		  <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+		  <intelligence>Humanlike</intelligence>
+		  <renderTree>Humanlike</renderTree>
+		  <specificMeatDef>TSP_ST_SapientBeetVegetable</specificMeatDef>
+		  <leatherDef>Leather_Beet</leatherDef>
+		  <bloodDef>Filth_Blood</bloodDef>
+		  <makesFootprints>true</makesFootprints>
+		  <lifeExpectancy>55</lifeExpectancy>
+		  <nameCategory>HumanStandard</nameCategory>
+		  <body>BeetBody</body>
+		  <baseBodySize>1.2</baseBodySize>
+		  <baseHealthScale>1.2</baseHealthScale>
+		  <baseHungerRate>0.4</baseHungerRate>
+		  <foodType>OmnivoreHuman, VegetarianRoughAnimal, Plant, CarnivoreAnimal, OvivoreAnimal, Kibble</foodType>
+		  <gestationPeriodDays>15</gestationPeriodDays>
+		  <litterSizeCurve>
+			<points>
+			  <li>(0.5, 0)</li>
+			  <li>(1, 1)</li>
+			  <li>(1.01, 0.33)</li>
+			  <li>(3.5, 0)</li>
+			</points>
+		  </litterSizeCurve>
+		  <lifeStageAges>
+			<li>
+			  <def>HumanlikeBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>HumanlikeChild</def>
+			  <minAge>3</minAge>
+			</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">
+			  <def>HumanlikePreTeenager</def>
+			  <minAge>9</minAge>
+			</li>
+			<li>
+			  <def>HumanlikeTeenager</def>
+			  <minAge>15</minAge>
+			</li>
+			<li>
+			  <def>HumanlikeAdult</def>
+			  <minAge>20</minAge>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		  <specialShadowData>
+			<volume>(0.3, 0.8, 0.4)</volume>
+			<offset>(0,0,-0.3)</offset>
+		  </specialShadowData>
+		  <ageGenerationCurve>
+			<points>
+			  <li>(0,0)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(0.001,43)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(8,86)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0)</li>  
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13,0)</li>      
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.001,122)</li><!-- End exclude -->
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.999,130)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(14.001,130)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(16,100)</li>
+			  <li>(17,0)</li>
+			  <li>(18,0)</li>
+			  <li>(19,100)</li>
+			  <li>(22,100)</li>
+			  <li>(30, 100)</li>
+			  <li>(50,30)</li>
+			  <li>(60,30)</li>
+			  <li>(70,18)</li>
+			  <li>(80,10)</li>
+			  <li>(90,3)</li>
+			  <li>(100,0)</li>
+			  <li>(200,0)</li>
+			</points>
+		  </ageGenerationCurve>
+		  <hediffGiverSets>
+			<li>OrganicStandard</li>
+			<li>Human</li>
+		  </hediffGiverSets>
+		</race>
+		<!--	▲ replaced by <humanRecipeImport>true</humanRecipeImport> in general settings!garbage day ▲ -->
+		<recipes>   
+		  <li>InstallArchotechEye</li>
+		  <li>InstallArchotechLeg</li>
+		  <li>InstallPowerClaw</li>
+		  <li>InstallBionicEye</li>
+		  <li>InstallBionicArm</li>
+		  <li>InstallBionicLeg</li>
+		  <li>InstallBionicHeart</li>
+		  <li>InstallBionicStomach</li>
+		  <li>InstallBionicEar</li>
+		  <li>InstallSimpleProstheticArm</li>
+		  <li>InstallSimpleProstheticLeg</li>
+		  <li>InstallSimpleProstheticHeart</li>
+		  <li>InstallCochlearImplant</li>
+		  <li>InstallPegLeg</li>
+		  <li>InstallWoodenFoot</li>
+		  <li>InstallDenture</li>
+		  <li>InstallJoywire</li>
+		  <li>InstallPainstopper</li>
+		  <li>InstallNaturalHeart</li>
+		  <li>InstallNaturalLung</li>
+		  <li>InstallNaturalKidney</li>
+		  <li>InstallNaturalLiver</li>
+		  <li>ExciseCarcinoma</li>
+		  <li>AdministerMechSerumHealer</li>
+		  <li>RemoveBodyPart</li>
+		  <li>Euthanize</li>
+		  <li>Anesthetize</li>
+		  <li>CureScaria</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">Vasectomy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ReverseVasectomy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">TubalLigation</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ExtractOvum</li>
+		  <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+		  <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ExtractHemogenPack</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">BloodTransfusion</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantXenogerm</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantIUD</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">RemoveIUD</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">TerminatePregnancy</li>
+		</recipes>
+		<butcherProducts>
+			<ElephantTusk>2</ElephantTusk>
+		</butcherProducts>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_LightSustenance" MayRequire="sarg.alphaanimals"></li>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+				<hediffname>HedBeet</hediffname>
+			</li>
+		</comps>
+	</AlienRace.ThingDef_AlienRace>
+
+
+  <AlienRace.RaceSettings>
+    <defName>BeetRaceSettings</defName>
+    <pawnKindSettings>
+      <startingColonists>
+        <li>
+          <pawnKindEntries>
+            <li>
+              <kindDefs>
+                <li>PlayerBeet</li>
+              </kindDefs>
+              <chance>10.8</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs>
+            <li>PlayerTribe</li>
+			<li>PlayerColony</li>
+          </factionDefs>
+        </li>
+		<!--
+        <li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">
+          <pawnKindEntries>
+            <li>
+              <kindDefs>
+                <li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">TSP_ST_SecretBeetKnight</li>
+              </kindDefs>
+              <chance>5.0</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs>
+            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_PlayerKingdom</li>
+          </factionDefs>
+        </li>
+		-->
+      </startingColonists>
+      <alienslavekinds>
+        <li>
+          <kindDefs>
+            <li>CombatSlave</li>
+          </kindDefs>
+          <chance>25</chance>
+        </li>
+      </alienslavekinds>
+      <alienrefugeekinds>
+        <li>
+          <kindDefs>
+            <li>PlayerBeet</li>
+          </kindDefs>
+          <chance>8.0</chance>
+        </li>
+      </alienrefugeekinds>
+      <alienwandererkinds>
+        <li>
+          <pawnKindEntries>
+            <li>
+              <kindDefs>
+                <li>PlayerBeet</li>
+				<li>CombatSlave</li>
+              </kindDefs>
+              <chance>10.0</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs>
+            <li>PlayerColony</li>
+            <li>PlayerTribe</li>
+          </factionDefs>
+        </li>
+		<!--
+        <li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">
+          <pawnKindEntries MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">
+            <li>
+              <kindDefs>
+				<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">TSP_ST_SecretBeetKnight</li>
+              </kindDefs>
+              <chance>4.0</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs>
+				<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_PlayerKingdom</li>
+          </factionDefs>
+        </li>
+		-->
+      </alienwandererkinds>
+    </pawnKindSettings>
+  </AlienRace.RaceSettings>
+
+
+</Defs>

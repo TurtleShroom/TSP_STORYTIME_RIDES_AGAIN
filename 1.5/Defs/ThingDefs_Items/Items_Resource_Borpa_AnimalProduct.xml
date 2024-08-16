@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <!-- Borpa Milk -->
+  <ThingDef ParentName="OrganicProductBase">
+     <defName>BORPA_Milk</defName>
+    <label>borpa milk</label>
+    <description>The natural secretions on the moist skin of a Borpa, collected for one's drinking pleasure. It is delicious and healthy.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Milk</texPath>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>3.1</MarketValue>
+      <Mass>0.045</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.08</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>7</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>AnimalProduct, Fluid</foodType>
+    </ingestible>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+	<modExtensions>
+			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+				<water>0.89</water>
+				<UseForWashing>true</UseForWashing>
+				<SeekForThirst>true</SeekForThirst>
+			</li>
+	</modExtensions>
+  </ThingDef>
+
+<!-- Borpa Eye -->
+ <ThingDef ParentName="ResourceBase">
+    <defName>BORPA_BorpaEye</defName>
+    <label>Borpa eye</label>
+    <description>The elongated eye of a borpa. Two of these eyes could be used to craft Borpa Goggles.</description>
+    <graphicData>
+      <texPath>Things/Item/Special/BorpaEye</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.50</MarketValue>
+      <MaxHitPoints>10</MaxHitPoints>
+      <Mass>0.01</Mass>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>0.05</DeteriorationRate>
+    </statBases>
+    <stackLimit>2</stackLimit>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>AnimalPart</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>TSP_ST_Borpa_JohnBorpaSteak</defName>
+		<label>John Borpa steak</label>
+		<description>The pinnacle of fine dining. John Borpas are nearly impossible to kill, but those that have supposedly felled them talk about them producing enough meat to feed an entire civilization for Quadrums on end. John Borpa steaks are some of the juciest, most delectable steaks in the galaxy, and wars have been fought over the stashes of those brave enough to slay such a magnificent demon. Any meal is enriched by John Borpa meat; gourmet chefs use it like condiments for the finest of dining.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MeatFoodRaw/Meat_Human</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(164,13,0)</color>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Beauty>1</Beauty>
+			<MarketValue>12.9</MarketValue>
+			<Mass>0.03</Mass>
+			<Flammability>0</Flammability>
+			<Nutrition>0.2</Nutrition>
+			<FoodPoisonChance>0</FoodPoisonChance>
+			<FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+			<DeteriorationRate>0</DeteriorationRate>
+			<RoyalFavorValue>0.0055</RoyalFavorValue>
+		</statBases>
+		<stackLimit>700</stackLimit>
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<foodType>Meat, OmnivoreAnimal, CarnivoreAnimal, CarnivoreAnimalStrict, Corpse</foodType>
+		</ingestible>
+		<comps Inherit="False">
+		</comps>
+		<tradeability>Sellable</tradeability>
+		<thingCategories>
+			<li>MeatRaw</li>
+			<li MayRequire="vanillaexpanded.vcooke" Inherit="False">VCE_Condiments</li> <!-- Gourmet ingredients! -->
+		</thingCategories>
+		<tradeTags Inherit="False">
+			<li>JohnBorpaSteak</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>

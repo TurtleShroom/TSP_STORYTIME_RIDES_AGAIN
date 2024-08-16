@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="ApparelBase">
+    <defName>PirateCrown</defName>
+    <label>pirate crown</label>
+    <description>A crown of Haunted Gold.</description>
+    <smeltable>true</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <thingCategories>
+      <li>HeadgearNoble</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PirateClothing/PirateCrown/PirateCrown</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>0.9</Mass>
+      <EquipDelay>0.8</EquipDelay>
+	  <MarketValue>3000</MarketValue>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.25</SocialImpact>
+	  <PsychicSensitivityOffset>0.25</PsychicSensitivityOffset>
+      <PsychicEntropyRecoveryRate>0.43</PsychicEntropyRecoveryRate>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PirateClothing/PirateCrown/PirateCrown</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+		<li>RoyalTier1</li>
+		<li>RoyalTier2</li>
+		<li>RoyalTier3</li>
+		<li>RoyalTier4</li>
+		<li>RoyalTier5</li>
+		<li>King</li>
+		<li>Psychic</li>
+      </tags>	 
+    </apparel>
+	<costList>
+		<CursedCoin>150</CursedCoin>
+	</costList>
+	<recipeMaker>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<researchPrerequisites>
+			<li>magicPirateCrafting</li>
+		</researchPrerequisites>
+	</recipeMaker>
+	<comps>
+		<li Class="CompProperties_Art">
+			<nameMaker>NamerArtWeaponMelee</nameMaker>
+			<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+			<minQualityForArtistic>Normal</minQualityForArtistic>
+		</li>
+	</comps>
+  </ThingDef>
+</Defs>

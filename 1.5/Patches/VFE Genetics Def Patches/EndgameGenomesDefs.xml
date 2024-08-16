@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<!-- Is this Mod installed? -->
+		<mods>
+			<li>Vanilla Genetics Expanded</li>
+		</mods>
+		<!-- If it is, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<GeneticRim.EndgameGenomesDef>
+					<defName>GR_EndgameGenomes_Storytime</defName>
+					<genomes>
+						<li>ST_PuffleGenetic</li>
+						<li>ST_FrogGenetic</li>
+					</genomes>
+				</GeneticRim.EndgameGenomesDef>
+			</value>
+		</match>
+	</Operation>
+</Patch>

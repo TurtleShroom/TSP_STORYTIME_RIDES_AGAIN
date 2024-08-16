@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<AlienRace.ThingDef_AlienRace Name="ST_Frogman" ParentName="BasePawn">
+		<defName>Alien_FrogPerson</defName>
+		<label>frogman</label>
+		<description>Half frog, half man. Powerful. Frogmen are known for their resistance to disease gained from living in the swamp.</description>
+		<alienRace>
+			<styleSettings>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+		  <generalSettings>
+			<maleGenderProbability>0.5</maleGenderProbability>
+			<immuneToAge>false</immuneToAge>
+			<canLayDown>false</canLayDown> <!-- Frogs can "assume the position" like cats, but they do not lay down to sleep. Frogs crouch. -->
+			<maxDamageForSocialfight>1</maxDamageForSocialfight>
+			<humanRecipeImport>true</humanRecipeImport>
+				<notXenophobistTowards Inherit="False">
+					<li>Human</li>
+					<li>Forg_Duo</li>
+					<li>Forg_Forg</li>
+				</notXenophobistTowards>
+			<alienPartGenerator>
+			  <headTypes Inherit="False">
+				<li>Frogman_Average_Normal</li>
+			  </headTypes>	
+			<bodyTypes>
+				<li>Fat</li>
+				<li>Hulk</li>
+				<li>Thin</li>
+				<li>Male</li>
+				<li MayRequire="Ludeon.Rimworld.Biotech">Baby</li>
+				<li MayRequire="Ludeon.Rimworld.Biotech">Child</li>
+			</bodyTypes>
+			  <customDrawSize>(0.95,0.95)</customDrawSize>
+			  <customHeadDrawSize>(1.1,1.1)</customHeadDrawSize>
+			  <customPortraitDrawSize>(0.95,0.95)</customPortraitDrawSize>
+			  <customPortraitHeadDrawSize>(1.1,1.1)</customPortraitHeadDrawSize>
+			  <colorChannels>
+				<li>
+				  <name>skin</name>
+				  <first Class="ColorGenerator_Options">
+					<options>
+					  <li>
+						<weight>5</weight>
+						<min>RGBA(0,102,0)</min>
+						<max>RGBA(10,112,10)</max>
+					  </li>
+					  <li>
+						<weight>3</weight>
+						<min>RGBA(112, 112, 10)</min>
+						<max>RGBA(92, 92, 20)</max>
+					  </li>
+					  <li>
+						<weight>3</weight>
+						<min>RGBA(160, 40, 40)</min>
+						<max>RGBA(130, 40, 40)</max>
+					  </li>
+					  <li>
+						<weight>1</weight>
+						<min>RGBA(126,170,37)</min>
+						<max>RGBA(120,160,32)</max>
+					  </li>
+					  <li>
+						<weight>0.5</weight>
+						<min>RGBA(10,50,32)</min>
+						<max>RGBA(50,56,37)</max>
+					  </li>
+					  <li>
+						<weight>0.5</weight>
+						<min>RGBA(100,55,0)</min>
+						<max>RGBA(90,35,0)</max>
+					  </li>
+					</options>
+				  </first>
+				</li>
+				<!--
+				<li>
+				  <name>hair</name>
+				  <first Class="ColorGenerator_Options">
+					<options>
+					  <li>
+						<weight>5</weight>
+						<min>RGBA(10,50,32)</min>
+						<max>RGBA(50,56,37)</max>
+					  </li>
+					  <li>
+						<weight>5</weight>
+						<min>RGBA(100,55,0)</min>
+						<max>RGBA(90,35,0)</max>
+					  </li>
+					</options>
+				  </first>
+				</li>
+				-->
+			  </colorChannels>
+			</alienPartGenerator>
+			<raceGenes MayRequire="ludeon.rimworld.biotech">
+				<li MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">
+					<defName MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">AG_FrogVoice</defName>
+					<chance MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">999</chance>
+				</li>
+			</raceGenes>
+		  </generalSettings>
+		  <graphicPaths>
+			  <head>Things/Pawn/Humanlike/FrogPeople/Head/</head>
+			  <!-- <head>Things/Pawn/Humanlike/FrogPeople/Body/</head> -->
+		  </graphicPaths>
+		  <relationSettings>
+			<relationChanceModifierSibling>3</relationChanceModifierSibling>
+			<renamer>
+			  <li>
+				<relation>Parent</relation>
+				<label>Father</label>
+				<femaleLabel>Mother</femaleLabel>
+			  </li>
+			  <li>
+				<relation>Child</relation>
+				<label>Tadpole</label>
+				<femaleLabel>Polliwog</femaleLabel>
+			  </li>
+			  <li>
+				<relation>Spouse</relation>
+				<label>Mate</label>
+				<femaleLabel>Mate</femaleLabel>
+			  </li>
+			  <li>
+				<relation>ExSpouse</relation>
+				<label>Ex-Mate</label>
+				<femaleLabel>Ex-Mate</femaleLabel>
+			  </li>
+			  <li>
+				<relation>Sibling</relation>
+				<label>Brother</label>
+				<femaleLabel>Sister</femaleLabel>
+			  </li>
+			  <li>
+				<relation>Fiance</relation>
+				<label>Betoadthed</label>
+				<femaleLabel>Betoadthed</femaleLabel>
+			  </li>
+			</renamer>
+		  </relationSettings>
+			<thoughtSettings>
+				<!-- Frog diets consist largely of insects. -->
+				<cannotReceiveThoughts>
+					<!-- Frogs that are part of a bug worshipping cult will not be horrified by eating insect meat as badly as a normal worshipper. By that, they will experience no mood bonus or malus. They know it is immoral, and they will try not to do it, but they are not mentally capable of the capacity to think it is traumatizing. If they are not in a bug worshipping cult, they will ALWAYS enjoy eating insects. -->
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeat_Sacrilegious</li>
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeatAsIngredient_Sacrilegious</li>
+				</cannotReceiveThoughts>
+				<replacerList>
+					<!-- Frogmen LOVE insect meat! They will always seek it out and enjoy it! -->
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatDirect</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeat_Loved</replacer>
+					</li>
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient_Loved</replacer>
+					</li>
+				</replacerList>
+			</thoughtSettings>
+			<raceRestriction>
+				<blackEndoCategories>
+					<li>Head</li>
+					<li>Melanin</li> <!-- Can get an overridden skin color, but will always be a natural born green Pawn otherwise -->
+				</blackEndoCategories>
+				<blackGeneTags>
+					<!-- <li>SkinColor</li> -->
+					<li>Head</li>
+					<li>Eyes</li>
+					<li>Fur</li>
+					<li>AG_Bodies</li>
+					<li>AG_Heads</li>
+				</blackGeneTags>
+				<whiteReproductionList>
+					<li>Human</li> <!-- Same genus, technically (part frog part man) -->
+					<li>Forg_Duo</li> <!-- Wait a minute, which Forg goes to town? -->
+					<li>Forg_Forg</li>
+					<li>Alien_FrogPerson</li>
+				</whiteReproductionList>
+			</raceRestriction>
+		</alienRace>
+		<statBases>
+		  <MarketValue>500</MarketValue>
+		  <MoveSpeed>6</MoveSpeed>
+		  <Flammability>0.9</Flammability>
+		  <ComfyTemperatureMin>10</ComfyTemperatureMin>
+		  <ComfyTemperatureMax>60</ComfyTemperatureMax>
+		  <PsychicSensitivity>0.6</PsychicSensitivity>
+		  <ResearchSpeed>0.8</ResearchSpeed>
+		  <Mass>40</Mass>
+          <!-- <SwimSpeed MayRequire="biomesteam.biomesislands">10</SwimSpeed> -->
+		  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.01</HSAU_GhoulismSusceptibility> <!-- Related to Werefrogs? -->
+		</statBases>
+		<!--
+		<statOffsets>
+			<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+			<ToxicResistance>0.35</ToxicResistance>
+			<ComfyTemperatureMax>15</ComfyTemperatureMax>
+		</statOffsets>
+		-->
+		<tools>
+		  <li>
+			<label>left fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>vomerine teeth</label>
+			<capacities>
+			  <li>Bite</li>
+			  <li>Poke</li>
+			</capacities>
+			<power>7.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.07</chanceFactor>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>4</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>1</accuracyTouch>
+				<accuracyShort>0.9</accuracyShort>
+				<accuracyMedium>0.88</accuracyMedium>
+				<accuracyLong>0.6</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ST_Lick</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<range>13</range>				
+				<soundCast>Lick</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<label>extend tongue</label>
+				<commonality>2</commonality>
+				<onlyManualCast>false</onlyManualCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+					<canTargetBuildings>true</canTargetBuildings>
+					<neverTargetIncapacitated>false</neverTargetIncapacitated>
+				</targetParams>
+			</li>
+		</verbs>
+		<race>
+		  <thinkTreeMain>Humanlike</thinkTreeMain>
+		  <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+		  <intelligence>Humanlike</intelligence>
+		  <renderTree>Humanlike</renderTree>
+		  <nameGenerator>FrogPersonMaleName</nameGenerator>
+		  <nameGeneratorFemale>FrogPersonFemaleName</nameGeneratorFemale>
+		  <leatherDef>Leather_Frog</leatherDef>
+		  <bloodDef>Filth_Blood</bloodDef>
+		  <makesFootprints>true</makesFootprints>
+		  <lifeExpectancy>60</lifeExpectancy>
+		  <nameCategory>HumanStandard</nameCategory>
+		  <body>ST_FrogLike</body>
+		  <baseBodySize>0.9</baseBodySize>
+		  <baseHealthScale>0.9</baseHealthScale>
+		  <foodType>OmnivoreRoughAnimal, Meal, Processed, Fluid, Liquor, Kibble</foodType>
+		  <gestationPeriodDays>10</gestationPeriodDays>
+		  <litterSizeCurve>
+			<points>
+			  <li>(0.5, 0)</li>
+			  <li>(1, 0.15)</li>
+			  <li>(2, 0.35)</li>
+			  <li>(3, 1)</li>
+			  <li>(4, 0.5)</li>
+			  <li>(5, 0.1)</li>
+			</points>
+		  </litterSizeCurve>
+		  <lifeStageAges>
+			<li>
+			  <def>HumanlikeBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>HumanlikeChild</def>
+			  <minAge>2</minAge>
+			</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">
+			  <def>HumanlikePreTeenager</def>
+			  <minAge>9</minAge>
+			</li>
+			<li>
+			  <def>HumanlikeTeenager</def>
+			  <minAge>10</minAge>
+			</li>
+			<li>
+			  <def>FrogPersonAdultStage</def>
+			  <minAge>14</minAge>
+			</li>
+		  </lifeStageAges>
+		  <lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
+			<Firefighter>2</Firefighter>
+			<Patient>0</Patient>
+			<Doctor>10</Doctor>
+			<PatientBedRest>0</PatientBedRest>
+			<Childcare MayRequire="Ludeon.Rimworld.Biotech">4</Childcare>
+			<BasicWorker>1</BasicWorker>
+			<Warden>8</Warden>
+			<Handling>1</Handling>
+			<Cooking>6</Cooking>
+			<Hunting>1</Hunting>
+			<Construction>10</Construction>
+			<Growing>1</Growing>
+			<Mining>7</Mining>
+			<PlantCutting>7</PlantCutting>
+			<Smithing>10</Smithing>
+			<Tailoring>5</Tailoring>
+			<Art>4</Art>
+			<Crafting>6</Crafting>
+			<Hauling>2</Hauling>
+			<Cleaning>5</Cleaning>
+			<Research>13</Research>
+		  </lifeStageWorkSettings>
+		  <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		  <specialShadowData>
+			<volume>(0.3, 0.8, 0.4)</volume>
+			<offset>(0,0,-0.3)</offset>
+		  </specialShadowData>
+		  <ageGenerationCurve>
+			<points>
+			  <li>(0,0)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(0.001,3)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(8,6)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.5,18)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0.1)</li>  
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13,0.002)</li>      
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.001,12)</li> <!-- End exclude -->
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(13.999,13)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(14,10)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(14.001,13)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(16,10)</li>
+			  <li MayRequire="Ludeon.Rimworld.Biotech">(20,100)</li>
+			  <li>(21,120)</li>
+			  <li>(22,190)</li>
+			  <li>(24,100)</li>
+			  <li>(50,10)</li>
+			  <li>(60,3)</li>
+			  <li>(70,0.5)</li>
+			  <li>(80,0.5)</li>
+			  <li>(90,0.5)</li>
+			  <li>(100,0)</li>
+			  <li>(200,0)</li>
+			</points>
+		  </ageGenerationCurve>
+		  <hediffGiverSets>
+			<!-- <li>TSP_ST_Frogman_Flavor_Processing</li> -->
+			<li>OrganicStandard</li>
+			<li>Human</li>
+		  </hediffGiverSets>
+		</race>
+		<recipes>
+		  <li>InstallArchotechEye</li>
+		  <li>InstallArchotechArm</li>
+		  <li>InstallArchotechLeg</li>
+		  <li>InstallPowerClaw</li>
+		  <li>InstallBionicEye</li>
+		  <li>InstallBionicArm</li>
+		  <li>InstallBionicLeg</li>
+		  <li>InstallBionicSpine</li>
+		  <li>InstallBionicHeart</li>
+		  <li>InstallBionicStomach</li>
+		  <li>InstallBionicEar</li>
+		  <li>InstallSimpleProstheticArm</li>
+		  <li>InstallSimpleProstheticLeg</li>
+		  <li>InstallSimpleProstheticHeart</li>
+		  <li>InstallCochlearImplant</li>
+		  <li>InstallPegLeg</li>
+		  <li>InstallWoodenFoot</li>
+		  <li>InstallDenture</li>
+		  <li>InstallJoywire</li>
+		  <li>InstallPainstopper</li>
+		  <li>InstallNaturalHeart</li>
+		  <li>InstallNaturalLung</li>
+		  <li>InstallNaturalKidney</li>
+		  <li>InstallNaturalLiver</li>
+		  <li>ExciseCarcinoma</li>
+		  <li>AdministerMechSerumHealer</li>
+		  <li>RemoveBodyPart</li>
+		  <li>Euthanize</li>
+		  <li>Anesthetize</li>
+		  <li>CureScaria</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">Vasectomy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ReverseVasectomy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">TubalLigation</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ExtractOvum</li>
+		  <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+		  <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ExtractHemogenPack</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">BloodTransfusion</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantXenogerm</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantIUD</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">RemoveIUD</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">TerminatePregnancy</li>
+		</recipes>
+		<comps></comps>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_FrogSapient</li>
+					<li>ST_FrogCommon</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_FrogSapientDesc</li>
+					<li>ST_FrogCommonDesc</li>
+				</statDescriptions>
+				<!--
+				<showImageInInfoCard>true</showImageInInfoCard>
+				<ImageToShowInInfoCard>UI/Lore/FrogmanLore</ImageToShowInInfoCard>
+				-->
+			</li>
+		</modExtensions>
+	</AlienRace.ThingDef_AlienRace>
+
+	<AlienRace.RaceSettings>
+		<defName>FrogPersonRaceSettings</defName>
+		<pawnKindSettings>
+		  <startingColonists>
+			<li>
+			  <pawnKindEntries>
+				<li>
+				  <kindDefs>
+					<li>PlayerFrogPerson</li>
+				  </kindDefs>
+				  <chance>9.0</chance>
+				</li>
+				<li>
+				  <kindDefs>
+					<li>ForgPawnKindDef</li>
+					<li>DuoPawnKindDef</li>
+				  </kindDefs>
+				  <chance>9.0</chance>
+				</li>
+			  </pawnKindEntries>
+			  <factionDefs>
+				<li>PlayerTribe</li>
+				<li>PlayerColony</li>
+			  </factionDefs>
+			</li>
+		  </startingColonists>
+		  <alienslavekinds>
+			<li>
+			  <kindDefs>
+				<li>PlayerFrogPerson</li>
+			  </kindDefs>
+			  <chance>12.0</chance>
+			</li>
+			<li>
+			  <kindDefs>
+				<li>ForgPawnKindDef</li>
+				<li>DuoPawnKindDef</li>
+			  </kindDefs>
+			  <chance>5.0</chance>
+			</li>
+		  </alienslavekinds>
+		  <alienrefugeekinds>
+			<li>
+			  <kindDefs>
+				<li>PlayerFrogPerson</li>
+			  </kindDefs>
+			  <chance>6.0</chance>
+			</li>
+			<li>
+			  <kindDefs>
+				<li>ForgPawnKindDef</li>
+				<li>DuoPawnKindDef</li>
+			  </kindDefs>
+			  <chance>10</chance>
+			</li>
+		  </alienrefugeekinds>
+		  <alienwandererkinds>
+			<li>
+			  <pawnKindEntries>
+				<li>
+				  <kindDefs>
+					<li>PlayerFrogPerson</li>
+				  </kindDefs>
+				  <chance>10.0</chance>
+				</li>
+				<li>
+				  <kindDefs>
+					<li>ForgPawnKindDef</li>
+					<li>DuoPawnKindDef</li>
+				  </kindDefs>
+				  <chance>4.0</chance>
+				</li>
+			  </pawnKindEntries>
+			  <factionDefs>
+				<li>PlayerColony</li>
+				<li>PlayerTribe</li>
+			  </factionDefs>
+			</li>
+		  </alienwandererkinds>
+		</pawnKindSettings>
+	</AlienRace.RaceSettings>
+</Defs>

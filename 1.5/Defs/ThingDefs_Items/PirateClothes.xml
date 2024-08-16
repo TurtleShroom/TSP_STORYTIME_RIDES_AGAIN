@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef Name="ApparelPirateBase" ParentName="ApparelBase" Abstract="True">
+		<recipeMaker>
+		  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		  <workSkill>Crafting</workSkill>
+		  <effectWorking>Tailor</effectWorking>
+		  <soundWorking>Recipe_Tailor</soundWorking>
+		  <researchPrerequisite>pirateCrafting</researchPrerequisite>
+		  <recipeUsers>
+			<li>ElectricTailoringBench</li> 
+			<li>HandTailoringBench</li>
+		  </recipeUsers>
+		  <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+		  <defaultIngredientFilter>
+			<categories>
+			  <li>Root</li>
+			</categories>
+		  </defaultIngredientFilter>
+		</recipeMaker>
+			<modExtensions>
+				<li Class="NightmareCore.ThingModExtension_DisplayableItem" MayRequire="nightmare.core,nightmare.museums"></li>
+			</modExtensions>
+	</ThingDef>
+ 
+    <ThingDef ParentName="ApparelPirateBase">
+		<defName>ST_PirateHat</defName>
+		<label>pirate officer's hat</label>
+		<description>Obviously, it's a pirate hat because of the skull on the front.</description>
+		<recipeMaker>
+		  <skillRequirements>
+			<Crafting>5</Crafting>
+		  </skillRequirements>
+		</recipeMaker>
+		<graphicData>
+		  <texPath>Things/Pawn/Humanlike/Apparel/PirateClothing/Tricorn/Tricorn</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(0.9, 0.9)</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>70</MarketValue>
+			<WorkToMake>1500</WorkToMake>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>0.5</Mass>
+			<Flammability>0.6</Flammability>
+			  <StuffEffectMultiplierInsulation_Cold>0.4</StuffEffectMultiplierInsulation_Cold>
+			  <StuffEffectMultiplierInsulation_Heat>0.61</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>5</EquipDelay>
+		</statBases>
+		<thingCategories>
+		  <li>Headgear</li>
+		</thingCategories>
+		<costStuffCount>30</costStuffCount>
+		<stuffCategories>
+		  <li>Fabric</li>
+		  <li>Leathery</li>
+		</stuffCategories>
+		<apparel>
+		  <bodyPartGroups>
+			<li>UpperHead</li>
+		  </bodyPartGroups>
+		  <layers>
+			<li>Overhead</li>
+		  </layers>
+		  <tags>
+			<li>RichPirate</li>
+		  </tags>
+		  <defaultOutfitTags>
+			<li>Worker</li>
+			<li>Soldier</li>
+		  </defaultOutfitTags>
+		  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PirateClothing/Tricorn/Tricorn</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+
+    <ThingDef ParentName="ApparelPirateBase">
+		<defName>PirateBandana</defName>
+		<label>pirate bandana</label>
+		<description>For lower class pirates.</description>
+		<graphicData>
+		  <texPath>Things/Pawn/Humanlike/Apparel/PirateClothing/Bandana/Bandana</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(0.9, 0.9)</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<WorkToMake>1500</WorkToMake>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Mass>0.008</Mass>
+			<Flammability>0.6</Flammability>
+			<StuffEffectMultiplierInsulation_Cold>0.14</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<thingCategories>
+		  <li>Headgear</li>
+		</thingCategories>
+		<costStuffCount>10</costStuffCount>
+		<stuffCategories>
+		  <li>Fabric</li>
+		  <li>Leathery</li>
+		</stuffCategories>
+		<apparel>
+		  <bodyPartGroups>
+			<li>UpperHead</li>
+		  </bodyPartGroups>
+		  <layers>
+			<li>Overhead</li>
+		  </layers>
+		  <tags>
+			<li>Pirate</li>
+			<li>PoorPirate</li>
+			<li>NormalPirate</li>
+			<li>RWPBanditWear</li>
+			<li>Hooligan</li>
+		  </tags>
+		  <forceRenderUnderHair>true</forceRenderUnderHair>
+		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
+		  <defaultOutfitTags>
+			<li>Worker</li>
+			<li>Soldier</li>
+		  </defaultOutfitTags>
+		  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PirateClothing/Bandana/Bandana</wornGraphicPath>
+		  <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+		</apparel>
+		<recipeMaker>
+		  <recipeUsers>
+			<li>ElectricTailoringBench</li> 
+			<li>HandTailoringBench</li>
+			<li>CraftingSpot</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options">
+		  <options>
+			<li>
+			  <weight>10</weight>
+			  <only>(0.9,0.54,0.15,1)</only>
+			</li>
+			<li>
+			  <weight>15</weight>
+			  <only>(0.9,0.6,0.18,1)</only>
+			</li>
+			<li>
+			  <weight>20</weight>
+			  <only>(0.9,0.42,0.23,1)</only>
+			</li>
+		  </options>
+		</colorGenerator>
+	</ThingDef>
+</Defs>

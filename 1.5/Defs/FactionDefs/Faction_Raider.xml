@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="ST_HumanFactionBase" Name="ST_RaiderFactionBase">
+    <defName>Harriers</defName>
+	<!--
+    <label>약탈자 집단</label>
+    <description>모종의 이유로 타인들의 재산을 빼앗는 무리입니다. 이들은 다른 정착지에서 생산한 물품을 갈취하고 주민들을 납치하지만 우호적인 관계가 되면 당신에게 장물들과 각종 전투장비를 교역할 것입니다.</description>
+	-->
+	<label>Harriers</label>
+	<description>The Golden Age pirate crews occasionally have crewmen who seek to leave for more advanced societies. These, alongside countless representatives from diverse, ragtag bands of raiders and robbers, have come together to form the Slave Rats. Sporting a diverse range of raiders and pirates from both modern and ancient pirate crews, alongside thieves and miscreants of terrestial groups, this Faction extorts goods from other settlements and kidnaps villagers. When they become friendly, they will trade stolen goods and various types of combat equipment.</description>
+    <colorSpectrum>
+      <li>(0.81, 0.67, 0.14)</li>
+      <li>(0.81, 0.67, 0.14)</li>
+    </colorSpectrum>
+    <pawnSingular>Harrier</pawnSingular>
+    <pawnsPlural>Harriers</pawnsPlural>
+	<!--
+	<pawnSingular>약탈자</pawnSingular>
+	<pawnsPlural>약탈자들</pawnsPlural>
+	-->
+	<allowedCultures>
+		<li>ST_PirateCulture</li>
+		<!-- <li>STGoblin</li> -->
+		<!-- <li>Kriminul</li> -->
+		<li MayRequire="oskarpotocki.vfe.pirates">VFEP_Khanate</li>
+	</allowedCultures>
+    <categoryTag>Outlander</categoryTag>
+    <listOrderPriority>30</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
+	<naturalEnemy>true</naturalEnemy>
+	<permanentEnemy>false</permanentEnemy>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Boss</leaderTitle>
+    <factionIconPath>World/Raider</factionIconPath>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <techLevel>Industrial</techLevel>
+	<fixedName>Slave Rats</fixedName>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Pirate</li>
+		  <li>Raider</li>
+        </categories>
+        <commonality>1</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>PirateBackstory</li>
+        </categories>
+        <commonality>1</commonality>
+      </li>
+      <li>
+        <categories>
+		  <li>Outsider</li>
+		  <li>Madman</li>
+        </categories>
+        <commonality>0.2</commonality>
+      </li>
+    </backstoryFilters>
+    <!-- <geneticVariance>0.8</geneticVariance> -->
+    <caravanTraderKinds>
+      <li>Caravan_Raider_StolenGoods</li>
+      <li>Caravan_Raider_Combat</li>
+      <li>Caravan_Raider_Drugs</li>
+      <li>Caravan_Raider_Slaver</li>
+      <li>Caravan_Storytime_Pirate</li>
+	  <li>WW_Caravan_Outlander_Drugdealer</li>
+	  <!-- <li>Caravan_Outlander_PirateMerchant</li> -->
+	  <li>Caravan_Neolithic_Slaver</li>
+	  <li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+		<!-- <li>Caravan_Raider_StolenGoods</li> -->
+		<li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
+		<!-- li>Caravan_Outlander_PirateMerchant</li> -->
+		<li>WW_Visitor_Outlander_Drugdealer</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Raider_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 200)</li>
+        <li>(1300, 300)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+	</requiredMemes>
+	<disallowedMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Guilty</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">STFrogPersonOrigin</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">STJeubOrigin</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+		
+		<!-- If you have the Mod -->
+		<li MayRequire="llunak.MorePrecepts">Pacifism</li>
+		<li MayRequire="Qux.factionhippie">PeaceLove</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Vegan</li>
+		<li MayRequire="Zezz.Altrumeme">Altruism</li>
+		<li MayRequire="Sarg.AlphaMemes">AM_NonViolence</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_Xenophobia</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+		
+		<!-- DUH -->
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Slavery_Forbidden</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+		<!-- For some reason, the game eliminates the entire Slavery Precept when generating this Faction if this exists in the code -->
+		<!-- <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Acceptable</li> -->
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+		<!-- The following Precepts are only forbidden if you have the Mod -->
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Abhorrent</li>
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Horrible</li>
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Disapproved</li>
+
+		<!-- <li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Respected</li> -->
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Disapproved</li>
+		<!-- For some reason, the game eliminates the entire Precept category when generating this Faction if this exists in the code -->
+	</disallowedPrecepts>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, standard mix -->
+        <kindDef>Combat</kindDef>
+        <options>
+		  <CombatSlave>9</CombatSlave>
+          <Raider>10</Raider>
+		  <Robber>10</Robber>
+          <Grenadier_Destructive>2</Grenadier_Destructive>
+          <Armed_Robber>11</Armed_Robber>
+          <Armed_Raider>11</Armed_Raider>
+          <Raider_Boss>1</Raider_Boss>
+          <PirateSwabbie>3</PirateSwabbie>
+		  <PirateNormal>6</PirateNormal>
+		  <PirateGrenadier>5</PirateGrenadier>
+		  <PirateCaptain>1</PirateCaptain>
+		  <PirateJuggernaut>2</PirateJuggernaut>
+          <Mercenary_Slasher>4</Mercenary_Slasher>
+          <Mercenary_Gunner>5</Mercenary_Gunner>
+          <Mercenary_Elite>3</Mercenary_Elite>
+		  <MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">9</MF_CorporatePunk>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">2</VFEP_Footsoldier>
+        </options>
+      </li>
+	  <li>
+        <!-- 전투노예 -->
+        <kindDef>Combat</kindDef>
+        <options>
+		  <CombatSlave>250</CombatSlave>
+		  <PirateSwabbie>13</PirateSwabbie>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">14</VFEP_Footsoldier>
+		  <RWP_Bandit_Gunslinger MayRequire="mlie.rimworldwesternizationproject">4</RWP_Bandit_Gunslinger>
+		  <RWP_Bandit_Rifleman MayRequire="mlie.rimworldwesternizationproject">4</RWP_Bandit_Rifleman>
+		  <MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">9</MF_CorporatePunk>
+        </options>
+      </li>
+	  <li>
+        <!-- 강도 무리 -->
+        <kindDef>Combat</kindDef>
+        <options>
+		  <Robber>15</Robber>
+          <Raider>15</Raider>
+		  <Armed_Robber>25</Armed_Robber>
+          <Armed_Raider>25</Armed_Raider>
+          <Raider_Boss>1</Raider_Boss>
+          <PirateSwabbie>3</PirateSwabbie>
+		  <PirateNormal>10</PirateNormal>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateCaptain>1</PirateCaptain>
+		  <PirateJuggernaut>3</PirateJuggernaut>
+		  <Pirate>3</Pirate>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+		  <MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">3</MF_CorporatePunk>
+        </options>
+      </li>
+	  <li>
+        <!-- 무장 강도 무리 -->
+        <kindDef>Combat</kindDef>
+        <options>
+		  <Robber>15</Robber>
+          <Raider>15</Raider>
+		  <PirateSwabbie>10</PirateSwabbie>
+		  <Pirate>1</Pirate>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+		  <MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">1</MF_CorporatePunk>
+        </options>
+      </li>
+	  <li>
+        <!-- 중무장 강도 무리 -->
+        <kindDef>Combat</kindDef>
+        <options>
+          <Armed_Robber>10</Armed_Robber>
+          <Armed_Raider>1</Armed_Raider>
+          <Raider_Boss>1</Raider_Boss>
+          <PirateSwabbie>13</PirateSwabbie>
+		  <PirateNormal>14</PirateNormal>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateCaptain>1</PirateCaptain>
+		  <PirateJuggernaut>10</PirateJuggernaut>
+		  <Pirate>3</Pirate>
+		  <Grenadier_Destructive>3</Grenadier_Destructive>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+			<MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">1</MF_CorporatePunk>
+		  <RWP_Bandit_Gunslinger MayRequire="mlie.rimworldwesternizationproject">1.482</RWP_Bandit_Gunslinger>
+		  <RWP_Bandit_Rifleman MayRequire="mlie.rimworldwesternizationproject">0.482</RWP_Bandit_Rifleman>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, standard mix -->
+        <kindDef>Combat</kindDef>
+        <options>
+			<Pirate>3</Pirate>
+			<Grenadier_Destructive>3</Grenadier_Destructive>
+			<Mercenary_Slasher>10</Mercenary_Slasher>
+			<Mercenary_Gunner>10</Mercenary_Gunner>
+			<Mercenary_Elite>23</Mercenary_Elite>
+			<PirateJuggernaut>30</PirateJuggernaut>
+			<MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">9</MF_CorporatePunk>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+		<commonality>95</commonality>
+        <options>
+		  <CombatSlave>3</CombatSlave>
+          <Raider_Boss>1</Raider_Boss>
+		  <Robber>13</Robber>
+          <Raider>13</Raider>
+		  <Armed_Robber>13</Armed_Robber>
+          <Armed_Raider>13</Armed_Raider>
+		  <Pirate>1</Pirate>
+          <PirateSwabbie>1.3</PirateSwabbie>
+		  <PirateNormal>1.4</PirateNormal>
+		  <PirateGrenadier>1.5</PirateGrenadier>
+		  <PirateCaptain>0.33</PirateCaptain>
+		  <PirateJuggernaut>0.5</PirateJuggernaut>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+		  <RWP_Bandit_Gunslinger MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Gunslinger>
+		  <RWP_Bandit_Rifleman MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Rifleman>
+		  <MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">1</MF_CorporatePunk>
+        </options>
+      </li>
+	  <li>
+		<kindDef>Peaceful</kindDef>
+		<commonality>10</commonality>
+		<options>
+			<CombatSlave>1</CombatSlave>
+		</options>
+	  </li>
+	  <li>
+		<kindDef>Peaceful</kindDef>
+		<commonality>100</commonality>
+		<options>
+			<Raider_Boss>1</Raider_Boss>
+			<Robber>15</Robber>
+			<Raider>15</Raider>
+			<Armed_Robber>15</Armed_Robber>
+			<Armed_Raider>15</Armed_Raider>
+			<Pirate>0.25</Pirate>
+			<PirateCaptain>0.33</PirateCaptain>
+		</options>
+	  </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <TSP_PirateTradesman>1</TSP_PirateTradesman>
+        </traders>
+        <carriers>
+          <Muffalo>3</Muffalo>
+          <Dromedary>2</Dromedary>
+          <Alpaca>5</Alpaca>
+        </carriers>
+        <guards>
+          <Raider>8</Raider>
+          <Armed_Robber>13</Armed_Robber>
+          <Armed_Raider>13</Armed_Raider>
+          <Robber>8</Robber>
+		  <Pirate>3</Pirate>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+          <Grenadier_Destructive>3</Grenadier_Destructive>
+          <Mercenary_Slasher>10</Mercenary_Slasher>
+          <Mercenary_Gunner>1</Mercenary_Gunner>
+          <Mercenary_Elite>2</Mercenary_Elite>
+          <PirateSwabbie>3</PirateSwabbie>
+		  <PirateNormal>4</PirateNormal>
+		  <PirateGrenadier>5</PirateGrenadier>
+		  <PirateCaptain>1</PirateCaptain>
+		  <PirateJuggernaut>1</PirateJuggernaut>
+		  <RWP_Bandit_Gunslinger MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Gunslinger>
+		  <RWP_Bandit_Rifleman MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Rifleman>
+		  <MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">9</MF_CorporatePunk>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Raider>10</Raider>
+          <Armed_Robber>13</Armed_Robber>
+          <Armed_Raider>18</Armed_Raider>
+          <Robber>7</Robber>
+          <Raider_Boss>4</Raider_Boss>
+          <PirateSwabbie>3</PirateSwabbie>
+		  <PirateNormal>4</PirateNormal>
+		  <PirateGrenadier>5</PirateGrenadier>
+		  <PirateCaptain>1</PirateCaptain>
+		  <PirateJuggernaut>2</PirateJuggernaut>
+		  <Pirate>3</Pirate>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">3</VFEP_Footsoldier>
+          <Grenadier_Destructive>3</Grenadier_Destructive>
+          <Mercenary_Slasher>1</Mercenary_Slasher>
+          <Mercenary_Gunner>1</Mercenary_Gunner>
+          <Mercenary_Elite>2</Mercenary_Elite>
+          <Monkey>1</Monkey>
+		  <ST_Parrot>1</ST_Parrot>
+		  <TSP_PirateTradesman>2</TSP_PirateTradesman>
+		  <ST_LivingCoconut>1</ST_LivingCoconut>
+		  <RWP_Bandit_Gunslinger MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Gunslinger>
+		  <RWP_Bandit_Rifleman MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Rifleman>
+		  <MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">1</MF_CorporatePunk>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/Raider</settlementTexturePath>
+	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+    <fixedLeaderKinds>
+		<li>PirateCaptain</li>
+		<li>Raider_Boss</li>
+    </fixedLeaderKinds>
+	<modExtensions>
+		<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
+			<canSendDeserters MayRequire="oskarpotocki.vfe.empire">true</canSendDeserters>
+			<deserterKind MayRequire="oskarpotocki.vfe.empire">TSP_ST_VFEE_PirateDeserter</deserterKind>
+		</li>
+	</modExtensions>
+  </FactionDef>
+</Defs>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <InteractionDef>
+    <defName>Chitchat_Storytime</defName>
+    <label>lore conversation</label>
+    <workerClass>InteractionWorker_DeepTalk</workerClass>
+    <symbol>Things/Motes/LoreMote</symbol>
+    <initiatorThought>Loreytime</initiatorThought>
+    <initiatorXpGainSkill>Intellectual</initiatorXpGainSkill>
+    <initiatorXpGainAmount>16</initiatorXpGainAmount>
+    <recipientThought>Loreytime</recipientThought>
+    <logRulesInitiator>
+      <rulesFiles>
+        <li>LoreCharacters->LoreConcepts/LoreCharacters</li>
+        <li>LoreItems->LoreConcepts/LoreItems</li>
+        <li>LoreSpecies->LoreConcepts/LoreSpecies</li>
+        <li>LoreLocations->LoreConcepts/LoreLocations</li>
+      </rulesFiles>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] the [Color] [LoreSpecies] of [LoreLocations].</li>
+        <li>r_logentry->[INITIATOR_nameDef] [talkedabout] [LoreCharacters] with [RECIPIENT_nameDef].</li>
+        <li>r_logentry(p=0.8)->[INITIATOR_nameDef] [talkedabout] [LoreItems] to [RECIPIENT_nameDef].</li>
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [AdjectiveBadass] [LoreSpecies].</li>
+        <li>r_logentry->[INITIATOR_nameDef] [talkedabout] [LoreCharacters]'s [Color] [Animal] with [RECIPIENT_nameDef].</li>
+        <li>r_logentry(p=0.8)->[INITIATOR_nameDef] [talkedabout] [LoreCharacters] to [RECIPIENT_nameDef].</li>
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] the ecosystem of [LoreLocations] and its suitability for [AdjectiveLarge] [LoreSpecies] habitats.</li>
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] the laws governing [AdjectiveFriendly] [LoreSpecies] within [LoreLocations].</li>		
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] the [TerrainFeature] of [LoreLocations].</li>
+		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] the [Color] [LoreSpecies] of [LoreLocations].</li>
+		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] could not understand how a friend could be lost just because his politics didn't match theirs.</li>
+		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] made fun of TurtleShroom.</li>
+		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] agreed that Jeremiah was a [LoreSpecies]! Indeed, he was a good friend of theirs. Neither [INITIATOR_nameDef] nor [RECIPIENT_nameDef] could understand a single word he said, but they helped him drink his Coke. Jeremiah always had some mighty fine Coke.</li>
+		
+        <li>talkedabout(p=4)->chatted about</li>
+        <li>talkedabout->shared a word about</li>
+        <li>talkedabout->spoke about</li>
+        <li>talkedabout->considered the future lore possibilities of</li>
+        <li>talkedabout->discussed</li>
+        <li>talkedabout->pondered</li>
+		<li>talkedabout->debated</li>
+		<li>talkedabout->shilled for</li>
+        <li>talkedabout->said something about</li>
+        <li>talkedabout->said a word about</li>
+        <li>talkedabout->made a comment about</li>
+        <li>talkedabout->commented about</li>
+        <li>talkedabout->told a joke about</li>	
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+
+  <ThoughtDef>
+    <defName>Loreytime</defName>
+    <thoughtClass>Thought_MemorySocialCumulative</thoughtClass>
+    <stackLimit>300</stackLimit>
+    <maxCumulatedOpinionOffset>15</maxCumulatedOpinionOffset>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>discussed deep lore</label>
+        <description>The world is an amazing place. There are so many laws, topics, places, and creatures to discuss. Indeed, our discussion about it really got me thinking.</description>
+        <baseOpinionOffset>1</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+
+
+</Defs>

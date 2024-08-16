@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="BaseMechanoid">
+		<defName>CyberFrogHostile</defName>
+		<label>Mechanoid Cyber-Frog</label>
+		<description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particualar Cyber Frogs have since betrayed their own kind and joined the Mechanoids in their conquest. Randy have mercy on us all. \n \n A Mechanoid Cyber-Frog that has been brought under a Mechanitor's command is capable of multiple forms of work: their cuteness makes them great at entertaining Guests*, they flip switches, and they (like most frogs) have good marksmanship when hunting. When completely idle, a Mechanoid Cyber-Frog with nothing else to do will haul things. \n \n \n \n
+		* = Requires Hospitality Mod</description>
+		<statBases>
+		  <MoveSpeed>9</MoveSpeed>
+		  <MarketValue>41</MarketValue>
+		  <!--
+		  <ComfyTemperatureMin>-600</ComfyTemperatureMin>
+		  <ComfyTemperatureMax>600</ComfyTemperatureMax>
+		  -->
+		  <MeatAmount Inherit="False">25</MeatAmount>
+		  <LeatherAmount Inherit="False">10</LeatherAmount>
+		  <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
+		  <PsychicSensitivity Inherit="False">4</PsychicSensitivity>
+		  <ToxicResistance>0.9</ToxicResistance>
+		  <ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">0.9</ToxicEnvironmentResistance>
+		  <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">0</BandwidthCost>
+		  <ControlTakingTime MayRequire="Ludeon.Rimworld.Biotech">34</ControlTakingTime>
+		  <MechEnergyLossPerHP MayRequire="Ludeon.Rimworld.Biotech">0.5</MechEnergyLossPerHP>
+		  <WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">0</WastepacksPerRecharge>
+		  <WorkSpeedGlobal MayRequire="Ludeon.Rimworld.Biotech">0.5</WorkSpeedGlobal>
+		  <Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">0.4</Mashed_Ashlands_AshResistance>
+		</statBases>
+		<tradeability>None</tradeability>
+		<comps>
+			<!--
+			<li Class="CompProperties_EggLayer">
+				<eggUnfertilizedDef>CyberToadEggUnfertilized</eggUnfertilizedDef>
+				<eggFertilizedDef>CyberToadEggFertilized</eggFertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>20</eggLayIntervalDays>
+				<eggCountRange>1</eggCountRange>
+			</li>
+			-->
+			<!--
+			<li Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+			-->
+			<li Class="CompProperties_CanBeDormant" />
+			<li Class="CompProperties_WakeUpDormant">
+				<wakeUpOnDamage>true</wakeUpOnDamage>
+				<!-- <anyColonistCloseCheckRadius>3</anyColonistCloseCheckRadius> -->
+				<wakeUpSound>Frog_Angry</wakeUpSound>
+			</li>
+			<li Class="CompProperties_OverseerSubject" MayRequire="Ludeon.Rimworld.Biotech">
+				<needsOverseerEffect>MechUncontrolled</needsOverseerEffect>
+				<delayUntilFeralCheck>600000</delayUntilFeralCheck>
+				<feralMtbDays>100</feralMtbDays>
+				<feralCascadeRadialDistance>0</feralCascadeRadialDistance>
+			</li>
+			<li Class="CompProperties_MechRepairable" MayRequire="Ludeon.Rimworld.Biotech" />
+		</comps>
+		<tools>
+		  <li>
+			<label>frog power claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>16</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<label>frog power claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>16</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<label>enhanced vomerine teeth</label>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>15</power>
+			<cooldownTime>2.6</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.7</chanceFactor>
+		  </li>
+		  <li>
+			<label>head plate</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>15</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <intelligence Inherit="False">ToolUser</intelligence>
+		  <thinkTreeMain Inherit="False">Mechanoid</thinkTreeMain>
+		  <thinkTreeConstant MayRequire="Ludeon.Rimworld.Biotech" Inherit="False">MechConstant</thinkTreeConstant>
+		  <fleshType Inherit="False">Mechanoid</fleshType>
+			<mechEnabledWorkTypes>
+				<li>Hunting</li>
+				<li>Hauling</li>
+				<li>BasicWorker</li>
+				<!-- <li>Handling</li> -->
+				<li MayRequire="orion.hospitality">Diplomat</li>
+				<li MayRequire="sera.apinialienrace">ApiniHoneyMaker</li>
+				<li MayRequire="dubwise.rimefeller">RimefellerCrafting</li>
+			</mechEnabledWorkTypes>
+			<mechWorkTypePriorities>
+				<BasicWorker>3</BasicWorker>
+				<!-- <Handling>2</Handling> -->
+				<Hauling>4</Hauling>
+				<Hunting>2</Hunting>
+				<Diplomat MayRequire="orion.hospitality">1</Diplomat>
+				<ApiniHoneyMaker MayRequire="sera.apinialienrace">1</ApiniHoneyMaker>
+				<RimefellerCrafting MayRequire="dubwise.rimefeller">3</RimefellerCrafting>
+			</mechWorkTypePriorities>
+		  <wildBiomes Inherit="False">
+				<BorealForest>0</BorealForest>
+				<IceSheet>0</IceSheet>
+				<Tundra>0</Tundra>
+				<ColdBog>0</ColdBog>
+				<SeaIce>0</SeaIce>
+				<TemperateSwamp>0</TemperateSwamp>
+				<TropicalSwamp>0</TropicalSwamp>
+				<TemperateForest>0</TemperateForest>
+				<TropicalRainforest>0</TropicalRainforest>
+				<AridShrubland>0</AridShrubland>
+				<Desert>0</Desert>
+				<ExtremeDesert>0</ExtremeDesert>
+		  </wildBiomes>
+		  <body Inherit="False">ST_FrogLike</body>
+		  <nameGenerator>FrogNamerMale</nameGenerator>
+		  <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
+		  <baseBodySize>0.35</baseBodySize>
+		  <baseHealthScale>3</baseHealthScale>
+		  <baseHungerRate>0</baseHungerRate>
+		  <!-- <foodType Inherit="False">None, OmnivoreRoughAnimal, VegetarianRoughAnimal, Corpse, Tree, Plant, Kibble</foodType> -->
+		  <foodType Inherit="False">None</foodType>
+		  <useMeatFrom>ST_BullFrog</useMeatFrom>
+		  <leatherDef>Leather_Frog</leatherDef>
+		  <mechWeightClass MayRequire="Ludeon.Rimworld.Biotech">Light</mechWeightClass>
+		  <trainability>None</trainability> <!-- It's already trained! -->
+		  <!--
+			<wildness>0</wildness>
+			<petness>1</petness>
+		   -->
+		  <lifeExpectancy>200</lifeExpectancy>
+		  <hasGenders>true</hasGenders>
+		  <lifeStageAges>
+			<li>
+			  <def>MechanoidFullyFormed</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>MechanoidFullyFormed</def>
+			  <minAge>0.01</minAge>
+			</li>
+			<li>
+			  <def>MechanoidFullyFormed</def>
+			  <minAge>0.03</minAge>
+			  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+			  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+			  <soundCall>Pawn_Iguana_Call</soundCall>
+			  <soundAngry>Frog_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+		  <!-- <li>AnimalExotic</li> -->
+		  <li>AnimalInsectSpace</li>
+		</tradeTags>
+		<butcherProducts>
+			<!-- <Meat_ST_BullFrog>5</Meat_ST_BullFrog> -->
+			<Steel>15</Steel>
+			<ComponentSpacer>1</ComponentSpacer>
+			<VFE_ComponentMechanoid MayRequire="wvc.sergkart.core">4</VFE_ComponentMechanoid>
+		</butcherProducts>
+		<modExtensions>
+			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+			</li>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRoleSecondary</li>					
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>TSP_ST_FrogMachine</li>
+					<li>ST_MeleeTank</li>	
+					<li>TSP_ST_FrogCommonality_Hostile</li>					
+				</statValues>
+				<statDescriptions>
+					<li>TSP_ST_FrogMachineDesc</li>
+					<li>ST_MeleeTankDesc</li>	
+					<li>TSP_ST_FrogCommonality_Hostile_Desc</li>
+				</statDescriptions>
+				<showImageInInfoCard>true</showImageInInfoCard>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>CyberFrogHostile</defName>
+    <label>Cyber Frog</label>
+    <race>CyberFrogHostile</race>
+    <combatPower Inherit="False">40</combatPower>
+    <ecoSystemWeight Inherit="False">0</ecoSystemWeight>
+	<minGenerationAge Inherit="False">80</minGenerationAge>
+	<maxGenerationAge Inherit="False">180</maxGenerationAge>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <maskPath MayRequire="Ludeon.Rimworld.Biotech">Things/Pawn/Mechanoid/AllegianceOverlays/TSP_CyberFrog_Pacified</maskPath>
+          <shaderType MayRequire="Ludeon.Rimworld.Biotech">CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.6</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <maskPath MayRequire="Ludeon.Rimworld.Biotech">Things/Pawn/Mechanoid/AllegianceOverlays/TSP_CyberFrog_Pacified</maskPath>
+          <shaderType MayRequire="Ludeon.Rimworld.Biotech">CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <maskPath MayRequire="Ludeon.Rimworld.Biotech">Things/Pawn/Mechanoid/AllegianceOverlays/TSP_CyberFrog_Pacified</maskPath>
+          <shaderType MayRequire="Ludeon.Rimworld.Biotech">CutoutComplex</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.35, 0.3)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>3000~9999</weaponMoney>
+    <techHediffsChance MayRequire="Ludeon.Rimworld.Biotech">1</techHediffsChance>
+    <techHediffsMoney MayRequire="Ludeon.Rimworld.Biotech">9999~9999</techHediffsMoney>
+    <weaponTags>
+		<li>SpacerGun</li>
+		<li>MechanoidGunMedium</li>
+    </weaponTags>
+  </PawnKindDef>
+
+
+  <ThingDef ParentName="BasePawn">
+    <defName>CyberFrogDocile</defName>
+    <label>Cyber Frog</label>
+    <description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particular Cyber Frogs refused the Mechanoids' offer and are therefore less intelligent because of the absence of the up-link to the Mechanoid Hive Network.</description>
+    <statBases>
+      <MoveSpeed>9</MoveSpeed>
+      <MarketValue Inherit="False">400</MarketValue>
+	  <MeatAmount Inherit="False">10</MeatAmount>
+	  <LeatherAmount Inherit="False">4</LeatherAmount>
+      <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
+      <PsychicSensitivity>0</PsychicSensitivity>
+	  <ToxicResistance>0.9</ToxicResistance>
+	  <ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">0.9</ToxicEnvironmentResistance>
+	  <Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">0.9</Mashed_Ashlands_AshResistance>
+    </statBases>
+	<comps>
+		<li Class="CompProperties_EggLayer">
+			<eggUnfertilizedDef>Steel</eggUnfertilizedDef>
+			<eggFertilizedDef>CyberToadEggFertilized</eggFertilizedDef>
+			<eggFertilizationCountMax>3</eggFertilizationCountMax>
+			<eggLayIntervalDays>25</eggLayIntervalDays>
+			<eggCountRange>1</eggCountRange>
+			<eggLayFemaleOnly>true</eggLayFemaleOnly>
+		</li>
+		<li Class="AnimalBehaviours.CompProperties_Draftable">
+			<makeNonFleeingToo>true</makeNonFleeingToo>
+		</li>
+		<!--
+		<li Class="CompProperties_CanBeDormant" />
+		<li Class="CompProperties_WakeUpDormant">
+			<wakeUpOnDamage>true</wakeUpOnDamage>
+			<anyColonistCloseCheckRadius>30</anyColonistCloseCheckRadius>
+			<wakeUpSound>MechanoidsWakeUp</wakeUpSound>
+		</li>
+		-->
+    </comps>
+    <tools>
+      <li>
+        <label>frog power claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>frog power claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain Inherit="False">Animal</thinkTreeMain>
+      <thinkTreeConstant Inherit="False">AnimalConstant</thinkTreeConstant>
+	  <wildBiomes Inherit="False">
+				<!-- RimWorld.Core -->
+				<!-- VANILLA RENDITION -->
+
+				<BorealForest>0.001</BorealForest>
+
+				<Tundra>0.001</Tundra>
+
+				<ColdBog>0.001</ColdBog>
+
+				<IceSheet>0.001</IceSheet>
+
+				<SeaIce>0.001</SeaIce>
+
+				<TemperateForest>0.001</TemperateForest>
+
+				<TemperateSwamp>0.001</TemperateSwamp>
+
+				<TropicalRainforest>0.001</TropicalRainforest>
+
+				<TropicalSwamp>0.001</TropicalSwamp>
+
+				<AridShrubland>0.001</AridShrubland>
+
+				<Desert>0.001</Desert>
+
+				<ExtremeDesert>0.001</ExtremeDesert>
+
+
+
+
+
+				<!-- ___________________ -->			
+					<!-- Mod Biomes -->
+				<!-- ___________________ -->
+
+				<!-- sarg.alphabiomes -->
+				<!-- ALPHA BIOMES -->
+
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.001</AB_FeraliskInfestedJungle>
+
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.001</AB_GallatrossGraveyard>
+
+				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.05</AB_GelatinousSuperorganism>
+
+				<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">1</AB_MechanoidIntrusion>
+
+				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.001</AB_MycoticJungle>
+
+				<AB_OcularForest MayRequire="sarg.alphabiomes">0.001</AB_OcularForest>
+
+				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0.001</AB_PropaneLakes>
+
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.001</AB_PyroclasticConflagration>
+
+				<AB_RockyCrags MayRequire="sarg.alphabiomes">0.001</AB_RockyCrags>
+
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.001</AB_TarPits>
+				
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.01</AB_MiasmicMangrove>
+				
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.001</AB_IdyllicMeadows>
+
+
+				<!-- ___________________ -->
+
+				<!-- BiomesTeam.Oasis -->
+				<!-- CHROMATIC OASIS -->
+
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.001</BMT_ChromaticOasis>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.AdvancedBiomes -->
+				<!-- ADVANCED BIOMES -->
+
+				<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.001</PoisonForest>
+
+				<Savanna MayRequire="Mlie.AdvancedBiomes">0.001</Savanna>
+				
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.001</Volcano>
+				
+				<Wasteland MayRequire="Mlie.AdvancedBiomes">0.001</Wasteland>
+				
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.001</Wetland>
+
+
+				<!-- ___________________ -->
+
+				<!-- zylle.MoreVanillaBiomes -->
+				<!-- More Vanilla Biomes -->
+
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_AlpineMeadow>
+
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_CloudForest>
+
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_CoastalDunes>
+
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_DesertOasis>
+
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_Grasslands>
+
+				<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_Iceberg_NoBeach>
+
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_Marsh>
+
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_Sandbar_NoBeach>
+				
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_GlacialShield>
+				
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_Badlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.NaturesPrettySweet -->
+				<!-- NATURE IS PRETTY SWEET -->
+
+				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_VolcanicFlow>
+
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_RedwoodForest>
+
+				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_Grasslands> <!-- PRAIRIE -->
+
+				<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_Savanna>
+
+				<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">0.4</TKKN_Desert> <!-- SALT FIELDS -->
+
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_Oasis>
+
+
+	
+				<!-- ___________________ -->
+
+				<!-- Heis.Edo.Themed.Expansion -->
+				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.001</HSBambooForest>
+				
+				
+				<!-- _________________ -->
+				
+				<!-- BiomesTeam.BiomesIslands -->
+				<!-- BIOMES ISLANDS -->
+				
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_Atoll>
+				
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_BorealIsland>
+				
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_DesertIsland>
+				
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_DesertArchipelago>
+				
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TemperateIsland>
+				
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TemperateArchipelago>
+				
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TropicalIsland>
+				
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TropicalArchipelago>
+				
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TundraIsland>
+				
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- reel.FrozenForest -->
+				<!-- WINTER TAIGA -->
+				
+				<WinterTaiga MayRequire="reel.FrozenForest">0.01</WinterTaiga>
+				
+				
+				
+				<!-- __________________ -->
+				
+				<!-- SirMashedPotato.MorrowRim -->
+				<!-- "MORROWIND" MOD -->
+				
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.001</MorrowRim_Ashlands>
+				
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.1</MorrowRim_BlightedAshlands>	
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.001</MorrowRim_AshSwamp>
+				
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0.001</MorrowRim_VolcanicAshlands>
+				
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- pphhyy.gulden -->
+				<!-- FOREST OF GOLD -->
+				
+				<TemperateGuldenForest MayRequire="pphhyy.gulden">0.001</TemperateGuldenForest>
+				
+				<LotRE_MallornForest MayRequire="lordoftherims.elves">0.001</LotRE_MallornForest>
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- deemainiac.securecontainrimworld -->
+				<!-- SCP FOUNDATION -->
+				
+				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0.08</SCR_SCP610Biome>
+				
+				
+				
+				<!-- _________________ -->
+
+				<!-- regrowth.botr.volcanicicesheet -->
+				<!-- VOLCANIC ICE SHEET -->
+
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.01</RG-VIS_VulcanicIceSheet> <!-- Make me, Helixian. MAKE ME. -->
+				
+				
+				
+				<!-- _________________ -->
+				
+				<!-- ironscruff.primordialgeysers -->
+				<!-- PRIMORDIAL GEYSERS -->
+				
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.001</IronScruff_PrimordialGeysers>
+	  </wildBiomes>
+      <body>ST_FrogLike</body>
+      <nameGenerator>FrogNamerMale</nameGenerator>
+      <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
+      <baseBodySize>0.35</baseBodySize>
+      <baseHealthScale>3</baseHealthScale>
+      <baseHungerRate>0.15</baseHungerRate>
+      <foodType Inherit="False">OmnivoreRoughAnimal, VegetarianRoughAnimal, Kibble</foodType>
+	  <useMeatFrom>ST_BullFrog</useMeatFrom>
+      <leatherDef>Leather_Frog</leatherDef>
+      <wildness>0.1</wildness>
+      <trainability>Advanced</trainability>
+      <petness>1</petness>
+      <lifeExpectancy>999</lifeExpectancy>
+	  <hasGenders>true</hasGenders>
+	  <manhunterOnDamageChance>1</manhunterOnDamageChance>
+	  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.01</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.02</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+		  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+          <soundAngry>Frog_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+	<butcherProducts>
+		<Steel>15</Steel>
+		<ComponentSpacer>1</ComponentSpacer>
+		<VFE_ComponentMechanoid MayRequire="wvc.sergkart.core">1</VFE_ComponentMechanoid>
+	</butcherProducts>
+    <tradeTags>
+      <li>AnimalExotic</li>
+	  <li>StorytimeAnimal</li>
+	  <li>AnimalInsectSpace</li>
+    </tradeTags>
+	<modExtensions>
+		<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+			<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+		</li>
+		<li Class="AnimalBehaviours.AnimalStatExtension">
+			<statToAdd>
+				<li>ST_FrogRole</li>
+				<li>ST_FrogRoleSecondary</li>					
+				<li>ST_FrogRarity</li>					
+			</statToAdd>
+			<statValues>
+				<li>ST_FrogIntelligent</li>
+				<li>ST_MeleeTank</li>	
+				<li>ST_FrogRare</li>					
+			</statValues>
+			<statDescriptions>
+				<li>ST_FrogIntelligentDesc</li>
+				<li>ST_MeleeTankDesc</li>	
+				<li>ST_FrogRareDesc</li>
+			</statDescriptions>
+			<showImageInInfoCard>true</showImageInInfoCard>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>CyberFrogDocile</defName>
+    <label>Cyber Frog</label>
+    <race>CyberFrogDocile</race>
+    <combatPower>40</combatPower>
+    <ecoSystemWeight>0.1</ecoSystemWeight>
+	<minGenerationAge>80</minGenerationAge>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <drawSize>0.6</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <drawSize>0.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Cyber_Frog/CyberFrog</texPath>
+          <drawSize>1</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.35, 0.3)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

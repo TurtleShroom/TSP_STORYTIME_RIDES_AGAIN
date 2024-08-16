@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<DamageDef Name="BloodExplosion">
+		<defName>BloodExplosion</defName>
+		<label>engorged amphibious detonation</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<externalViolenceForMechanoids>true</externalViolenceForMechanoids>
+		<isExplosive>true</isExplosive>
+		<makesBlood>true</makesBlood>
+		<deathMessage>{0} has died to a popped engorged Frogglobin. How embarassing!</deathMessage>
+		<hediff>Shredded</hediff>
+		<hediffSolid>Bruise</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>7</defaultDamage>
+		<defaultStoppingPower>0</defaultStoppingPower>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<buildingDamageFactorImpassable>0</buildingDamageFactorImpassable>
+		<buildingDamageFactorPassable>0</buildingDamageFactorPassable>
+		<plantDamageFactor>2</plantDamageFactor>
+		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+		<explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
+		<explosionInteriorFleck>BloodSplash</explosionInteriorFleck>
+		<explosionCellFleck>BloodSplash</explosionCellFleck>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<canInterruptJobs>true</canInterruptJobs>
+		<explosionColorCenter>(255, 0, 0)</explosionColorCenter>
+		<explosionColorEdge>(230, 2, 2)</explosionColorEdge>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<soundExplosion>FrogPop</soundExplosion>
+	</DamageDef>
+ 
+   <ThingDef ParentName="AnimalThingBase">
+    <defName>BloodFrog</defName>
+    <label>engorged Frogglobin</label>
+    <description>The engorged Frogglobin looks like an overfilled water balloon, except instead of water, it's blood, and instead of a balloon, it's a frog. \n This engorged frog is an abomination of nature, created for a noble cause. Its existence was intended to completely eliminate the need for all blood donations by creating an animal capable of generating and transporting convertible blood of sapient beings inside it, without any possibility of rejection in any known sapient lifeform. \n \n While this was a success, no genetic modification isolates only one gene, hence its danger. An unintended consequence of this modification caused the Frogglobin to be as fragile as tissue paper, and any attempt to penetrate  or hit it will cause it to immediately explode violently; while it causes a painless, instant death for the frog, anyone near it will not be so lucky. The laboratory was shut down after a massive explosion, and the engorged frogs got away. Thankfully, Frogglobins are extremely docile and will never attack unless provoked.</description>
+    <statBases>
+      <MoveSpeed>12</MoveSpeed>
+      <MarketValue>50</MarketValue>
+      <ComfyTemperatureMin>-13</ComfyTemperatureMin>
+      <ComfyTemperatureMax>37</ComfyTemperatureMax>
+	  <MeatAmount>30</MeatAmount>
+	  <LeatherAmount>5</LeatherAmount>
+    </statBases>
+	<comps>
+		<li Class="CompProperties_EggLayer">
+			<eggUnfertilizedDef MayRequire="ludeon.rimworld.biotech">HemogenPack</eggUnfertilizedDef>
+			<eggFertilizedDef>TSP_ST_BloodFrogEgg_Fertilized</eggFertilizedDef>
+			<eggFertilizationCountMax>1</eggFertilizationCountMax>
+			<eggLayIntervalDays>18</eggLayIntervalDays>
+			<eggCountRange>1~3</eggCountRange>
+		</li>
+		<li Class="StoryTime.CompProperties_Tomato" MayRequire="ludeon.rimworld.biotech">
+			<tomatoDef MayRequire="ludeon.rimworld.biotech">HemogenPack</tomatoDef>
+			<tomatoIntervalDays MayRequire="ludeon.rimworld.biotech">2</tomatoIntervalDays>
+			<tomatoAmount MayRequire="ludeon.rimworld.biotech">1</tomatoAmount>
+		</li>
+		<!-- These frogs are so fragile that the player should be allowed to intervene at any time to move them. -->
+		<li Class="AnimalBehaviours.CompProperties_Draftable">
+			<makeNonFleeingToo>true</makeNonFleeingToo>
+		</li>
+    </comps>
+    <tools>
+		<li>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>1</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		</li>
+    </tools>
+    <race>
+	  <wildBiomes Inherit="False">
+				<!-- RimWorld.Core -->
+				<!-- VANILLA RENDITION -->
+
+				<BorealForest>0.01</BorealForest>
+
+				<Tundra>0.01</Tundra>
+
+				<ColdBog>0.01</ColdBog>
+
+				<IceSheet>0.01</IceSheet>
+
+				<SeaIce>0.01</SeaIce>
+
+				<TemperateForest>0.01</TemperateForest>
+
+				<TemperateSwamp>0.01</TemperateSwamp>
+
+				<TropicalRainforest>0.01</TropicalRainforest>
+
+				<TropicalSwamp>0.01</TropicalSwamp>
+
+				<AridShrubland>0.001</AridShrubland>
+
+				<Desert>0.001</Desert>
+
+				<ExtremeDesert>0.001</ExtremeDesert>
+
+
+
+
+
+				<!-- ___________________ -->			
+					<!-- Mod Biomes -->
+				<!-- ___________________ -->
+
+				<!-- sarg.alphabiomes -->
+				<!-- ALPHA BIOMES -->
+
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.05</AB_FeraliskInfestedJungle>
+
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.01</AB_GallatrossGraveyard>
+
+				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.1</AB_GelatinousSuperorganism>
+
+				<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">0.04</AB_MechanoidIntrusion>
+
+				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.01</AB_MycoticJungle>
+
+				<AB_OcularForest MayRequire="sarg.alphabiomes">1</AB_OcularForest>
+
+				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0.001</AB_PropaneLakes>
+
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.8</AB_PyroclasticConflagration>
+
+				<AB_RockyCrags MayRequire="sarg.alphabiomes">0.01</AB_RockyCrags>
+
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.01</AB_TarPits>
+				
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.5</AB_MiasmicMangrove>
+
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.01</AB_IdyllicMeadows>
+
+
+				<!-- ___________________ -->
+
+				<!-- BiomesTeam.Oasis -->
+				<!-- CHROMATIC OASIS -->
+
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.01</BMT_ChromaticOasis>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.AdvancedBiomes -->
+				<!-- ADVANCED BIOMES -->
+
+				<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.2</PoisonForest>
+
+				<Savanna MayRequire="Mlie.AdvancedBiomes">0.01</Savanna>
+				
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.01</Volcano>
+				
+				<Wasteland MayRequire="Mlie.AdvancedBiomes">1</Wasteland>
+				
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.01</Wetland>
+
+
+				<!-- ___________________ -->
+
+				<!-- zylle.MoreVanillaBiomes -->
+				<!-- More Vanilla Biomes -->
+
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_AlpineMeadow>
+
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_CloudForest>
+
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_CoastalDunes>
+
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_DesertOasis>
+
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_Grasslands>
+
+				<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.02</ZBiome_Iceberg_NoBeach>
+
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_Marsh>
+
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_Sandbar_NoBeach>
+				
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_GlacialShield>
+				
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.09</ZBiome_Badlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.NaturesPrettySweet -->
+				<!-- NATURE IS PRETTY SWEET -->
+
+				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.04</TKKN_VolcanicFlow>
+
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.06</TKKN_RedwoodForest>
+
+				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.01</TKKN_Grasslands> <!-- PRAIRIE -->
+
+				<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.01</TKKN_Savanna>
+
+				<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">0.05</TKKN_Desert> <!-- SALT FIELDS -->
+
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.01</TKKN_Oasis>
+
+
+
+				<!-- _________________ -->
+				
+				<!-- BiomesTeam.BiomesIslands -->
+				<!-- BIOMES ISLANDS -->
+				
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.1</BiomesIslands_Atoll>
+				
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_BorealIsland>
+				
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_DesertIsland>
+				
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_DesertArchipelago>
+				
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_TemperateIsland>
+				
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_TemperateArchipelago>
+				
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_TropicalIsland>
+				
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_TropicalArchipelago>
+				
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_TundraIsland>
+				
+				
+				
+				<!-- ___________________ -->
+
+				<!-- Heis.Edo.Themed.Expansion -->
+				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.01</HSBambooForest>
+				
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- reel.FrozenForest -->
+				<!-- WINTER TAIGA -->
+				
+				<WinterTaiga MayRequire="reel.FrozenForest">0.01</WinterTaiga>
+				
+				
+				
+				<!-- __________________ -->
+				
+				<!-- SirMashedPotato.MorrowRim -->
+				<!-- "MORROWIND" MOD -->
+				
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.01</MorrowRim_Ashlands>
+				
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.33</MorrowRim_BlightedAshlands>
+				
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.01</MorrowRim_AshSwamp>
+				
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0.01</MorrowRim_VolcanicAshlands>
+				
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- pphhyy.gulden -->
+				<!-- FOREST OF GOLD -->
+				<TemperateGuldenForest MayRequire="pphhyy.gulden">0.01</TemperateGuldenForest>
+				
+				<LotRE_MallornForest MayRequire="lordoftherims.elves">0.01</LotRE_MallornForest>
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- deemainiac.securecontainrimworld -->
+				<!-- SCP FOUNDATION -->
+				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0.5</SCR_SCP610Biome>
+				
+				
+				<!-- _________________ -->
+
+				<!-- regrowth.botr.volcanicicesheet -->
+				<!-- VOLCANIC ICE SHEET -->
+
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.01</RG-VIS_VulcanicIceSheet> <!-- Make me, Helixian. MAKE ME. -->
+				
+				
+				
+				<!-- _________________ -->
+				
+				<!-- ironscruff.primordialgeysers -->
+				<!-- PRIMORDIAL GEYSERS -->
+				
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.01</IronScruff_PrimordialGeysers>
+	  </wildBiomes>	
+      <body>ST_FrogLike</body>
+      <nameGenerator>FrogNamerMale</nameGenerator>
+      <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
+	  <deathActionWorkerClass>StoryTime.DeathActionWorker_BloodExplosion</deathActionWorkerClass>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHealthScale>0.005</baseHealthScale>
+      <baseHungerRate>0.2</baseHungerRate>
+      <foodType>CarnivoreAnimal, CarnivoreAnimalStrict, Kibble</foodType>
+	  <useMeatFrom>ST_BullFrog</useMeatFrom>
+	  <!-- <specificMeatDef MayRequire="ludeon.rimworld.biotech">HemogenPack</specificMeatDef> -->
+	  <!-- <specificMeatDef MayRequire="baskerville.hellsingarmsultimate">HSAU_BloodPouch</specificMeatDef> -->
+      <leatherDef>Leather_Frog</leatherDef>
+      <wildness>0.1</wildness>
+      <trainability>Intermediate</trainability>
+      <lifeExpectancy>8</lifeExpectancy>
+	  <roamMtbDays>3</roamMtbDays>
+	  <manhunterOnDamageChance>0</manhunterOnDamageChance>
+	  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+          <soundWounded>FrogPop</soundWounded>
+          <soundDeath>FrogPop</soundDeath>
+          <soundCall>Pawn_Iguana_Call</soundCall>
+          <soundAngry>Frog_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.8</minAge>
+          <soundWounded>FrogPop</soundWounded>
+          <soundDeath>FrogPop</soundDeath>
+          <soundCall>Pawn_Iguana_Call</soundCall>
+          <soundAngry>Frog_Angry</soundAngry>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1</minAge>
+          <soundWounded>FrogPop</soundWounded>
+          <soundDeath>FrogPop</soundDeath>
+          <soundCall>Pawn_Iguana_Call</soundCall>
+          <soundAngry>Frog_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>FrogPop</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>FrogPop</soundMeleeHitBuilding>
+      <soundMeleeMiss>FrogPop</soundMeleeMiss>
+    </race>
+	<butcherProducts>
+		<HemogenPack MayRequire="ludeon.rimworld.biotech">10</HemogenPack>
+		<!-- <HSAU_BloodPouch MayRequire="baskerville.hellsingarmsultimate">10</HSAU_BloodPouch> -->
+	</butcherProducts>
+    <tradeTags>
+		<li>AnimalFrog</li>
+		<li>AnimalExotic</li>
+		<li>StorytimeAnimal</li>
+    </tradeTags>
+	<recipes>
+		<li>ExciseCarcinoma</li>
+		<li>AdministerMechSerumHealer</li>
+		<li>Anesthetize</li>
+		<li>CureScaria</li>
+		<li MayRequire="baskerville.hellsingarmsultimate" Inherit="False">HSAU_Operation_ExtractBlood</li>
+	</recipes>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>ST_FrogExplosive</li>
+					<li>ST_FrogRare</li>					
+				</statValues>
+				<statDescriptions>
+					<li>ST_FrogExplosiveDesc</li>
+					<li>ST_FrogRareDesc</li>
+				</statDescriptions>				
+			</li>
+		</modExtensions>
+  </ThingDef>
+  
+  
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>BloodFrog</defName>
+    <label>engorged Frogglobin</label>
+    <race>BloodFrog</race>
+    <combatPower>3</combatPower>
+    <ecoSystemWeight>0.05</ecoSystemWeight>
+	<canArriveManhunter>true</canArriveManhunter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Blood_Frog/BloodFrog</texPath>
+          <drawSize>0.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Blood_Frog/BloodFrog</texPath>
+          <drawSize>0.65</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.65</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Blood_Frog/BloodFrog</texPath>
+          <drawSize>0.9</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.2, 0.2)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+</Defs>

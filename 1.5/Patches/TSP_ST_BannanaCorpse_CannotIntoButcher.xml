@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_RawBanana"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="ST_BananaScytheCorpse"]/butcherProducts</xpath>
+			<value>
+				<VCE_RawBanana MayRequire="vanillaexpanded.vplantse">150</VCE_RawBanana>
+			</value>
+		</match>
+		<!-- If nothing matches the first XPATH, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="BiomesIslands_Bananas"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="ST_BananaScytheCorpse"]/butcherProducts</xpath>
+			<value>
+				<BiomesIslands_Bananas MayRequire="biomesteam.biomesislands">150</BiomesIslands_Bananas>
+			</value>
+		</match>
+		<!-- If nothing matches the first XPATH, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="ARCCRawBananas"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="ST_BananaScytheCorpse"]/butcherProducts</xpath>
+			<value>
+				<ARCCRawBananas MayRequire="catlover366.monketime">200</ARCCRawBananas>
+			</value>
+		</match>
+		<!-- If nothing matches the first XPATH, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="CK_RawBanana"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="CK_RawBanana"]/butcherProducts</xpath>
+			<value>
+				<CK_RawBanana MayRequire="mlie.tropickapprainforestmod">150</CK_RawBanana>
+			</value>
+		</match>
+		<!-- If nothing matches the first XPATH, the original code stands. -->
+	</Operation>
+	
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/defaultIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/defaultIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter/thingDefs</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/ingredients/li/filter/thingDefs</xpath>
+			<value>
+				<li>ST_BananaScytheCorpse</li>
+			</value>
+		</match>
+		<!-- If nothing matches the first XPATH, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter/thingDefs</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/fixedIngredientFilter/thingDefs</xpath>
+			<value>
+				<li>ST_BananaScytheCorpse</li>
+			</value>
+		</match>
+		<!-- If nothing matches the first XPATH, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/defaultIngredientFilter/thingDefs</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="ButcherCorpseFlesh"]/defaultIngredientFilter/thingDefs</xpath>
+			<value>
+				<li>ST_BananaScytheCorpse</li>
+			</value>
+		</match>
+		<!-- If nothing matches the first XPATH, the original code stands. -->
+	</Operation>
+</Patch>

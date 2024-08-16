@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>BeanPit</defName>
+    <label>bean pit</label>
+    <description>A large hole dug into the ground, to be filled with beans and a Sapient Bean Matrix to enlighten the Bulborb Larvae within.</description>
+	<descriptionHyperlinks>
+		<RecipeDef>MakeSapientBeanMatrix</RecipeDef>
+		<ThingDef>SapientBeanMatrix</ThingDef>
+		<ThingDef>BeanManLarva</ThingDef>
+		<RecipeDef>MakeBeanManLarva</RecipeDef>
+		<ThingDef>Alien_BeanMan</ThingDef>
+	</descriptionHyperlinks>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/BeanPit/BeanPit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.5,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <WorkTableWorkSpeedFactor>1</WorkTableWorkSpeedFactor>
+	  <Mass>20</Mass>
+    </statBases>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>false</useHitPoints>
+    <size>(2,2)</size>
+    <designationCategory>Production</designationCategory>
+	<terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
+    <passability>Impassable</passability>
+    <hasInteractionCell>True</hasInteractionCell>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0</fillPercent>
+    <coversFloor>true</coversFloor>
+    <neverMultiSelect>true</neverMultiSelect>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+    </building>
+	<recipes>
+		<li MayRequire="zal.braziliancrops">KIT_CookBeanStewFine</li>
+		<li MayRequire="zal.braziliancrops">KIT_CookBeanStewLavish</li>
+		<li MayRequire="zal.braziliancrops">KIT_CookBeanStewGourmet</li>
+		<li MayRequire="zal.braziliancrops">KIT_CookBeanStewFineBulk</li>
+		<li MayRequire="zal.braziliancrops">KIT_CookBeanStewLavishBulk</li>
+	</recipes>
+    <comps>
+		<li>
+			<compClass>CompReportWorkSpeed</compClass>
+		</li>
+		<li Class="CompProperties_AffectedByFacilities">
+			<linkableFacilities>
+				<li>ToolCabinet</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_CNCMachine</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_3DPrinter</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_RobotAssistant</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_ConveyorBelt</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_BotanicalEnclosure</li>
+				<li MayRequire="hobbes.bamba.evenmorelinkables">HobbesLink_LaserEngraver</li>
+				<li MayRequire="vanillaexpanded.vfeproduction">VFE_KitchenSinkCabinet</li>
+				<li MayRequire="vanillaexpanded.vfeproduction">VFE_MachiningCabinet</li>
+				<li MayRequire="vanillaexpanded.vfeproduction">VFE_FabricationCabinet</li>
+				<li MayRequire="vanillaexpanded.vfeproduction">VFE_SmithyCabinet</li>
+				<li MayRequire="lat.rimstro">RS_TopShelf</li>
+				<li MayRequire="lat.rimstro">RS_KitchenHood</li>
+			</linkableFacilities>
+		</li>
+    </comps>
+    <!-- <designationHotKey>Misc1</designationHotKey> -->
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+	<researchPrerequisites>
+      <li>beanManCrafting</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

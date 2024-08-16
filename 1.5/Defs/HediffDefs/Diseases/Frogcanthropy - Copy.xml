@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<!--Frog Parts-->
+	<HediffDef ParentName="FrogPlagueBase">
+		<defName>TSP_ST_FroggyFate_Artificial</defName>
+		<label>induced froganthropy</label>
+		<description>A weakened strand of Werefrog DNA has been introduced to this poor Pawn by artificial means. This Pawn will have parts of his body morphed into Werefrog-like parts. However, due to the alterations made to the drug, this strain cannot kill its victim. The disease will run its course without intervention from doctors and eventually pass out of the transformed body in time.</description>
+		<makesSickThought>true</makesSickThought>
+		<!-- <lethalSeverity>1</lethalSeverity> -->
+		<tendable>false</tendable>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<taleOnVisible>ToxicityRevealed</taleOnVisible>
+		<isBad>true</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<comps Inherit="False">
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.439</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<!--
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>8</baseTendDurationHours>
+				<severityPerDayTended>-0.5</severityPerDayTended>
+			</li>
+				<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.7</severityPerDayNotImmune>
+				<immunityPerDaySick>0.6092</immunityPerDaySick>
+				<severityPerDayImmune>-1</severityPerDayImmune>
+				<immunityPerDayNotSick>-0.02</immunityPerDayNotSick>
+			</li>
+			-->
+			<!--
+			<li Class="AnimalBehaviours.HediffCompProperties_TurnWhenDead">
+				<thingToTurnTo>Werefrog</thingToTurnTo>
+				<severityToTurn>0.99</severityToTurn>
+				<numberOfSpawn>
+					<li>1</li>
+					<li>5</li>
+				</numberOfSpawn>
+				<isHostile>true</isHostile> 
+				<keepGender>true</keepGender>
+				<factionToTurnTo>Werefrogs</factionToTurnTo>
+			</li>
+			-->
+		</comps>
+		<hediffGivers>
+		  <li Class="HediffGiver_RandomDrugEffect">
+			<hediff>FrogArm</hediff>
+			<minSeverity>0.01</minSeverity>
+			<baseMtbDays>0.3</baseMtbDays>
+			<partsToAffect>
+			  <li>Arm</li>
+			</partsToAffect>
+		  </li>
+		  <li Class="HediffGiver_RandomDrugEffect">
+			<hediff>FrogLeg</hediff>
+			<minSeverity>0.01</minSeverity>
+			<baseMtbDays>0.3</baseMtbDays>
+			<partsToAffect>
+			  <li>Leg</li>
+			</partsToAffect>
+		  </li>
+		  <li Class="HediffGiver_RandomDrugEffect">
+			<hediff>FrogTongue</hediff>
+			<minSeverity>0.01</minSeverity>
+			<baseMtbDays>0.3</baseMtbDays>
+			<partsToAffect>
+			  <li>Jaw</li>
+			</partsToAffect>
+		  </li>
+		  <li Class="HediffGiver_RandomDrugEffect">
+			<hediff>FrogEye</hediff>
+			<minSeverity>0.01</minSeverity>
+			<baseMtbDays>0.3</baseMtbDays>
+			<partsToAffect>
+			  <li>Eye</li>
+			</partsToAffect>
+		  </li>
+		  <li Class="HediffGiver_RandomDrugEffect">
+			<hediff>FrogLung</hediff>
+			<minSeverity>0.01</minSeverity>
+			<baseMtbDays>1</baseMtbDays>
+			<partsToAffect>
+			  <li>Lung</li>
+			</partsToAffect>
+		  </li>
+		  <li Class="HediffGiver_RandomDrugEffect">
+			<hediff>FrogStomach</hediff>
+			<minSeverity>0.01</minSeverity>
+			<baseMtbDays>1.2</baseMtbDays>
+			<partsToAffect>
+			  <li>Stomach</li>
+			</partsToAffect>
+		  </li>
+		</hediffGivers>
+		<disablesNeeds>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Anonymity</li>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Corruption</li>
+		</disablesNeeds>
+		<stages>
+		  <li>
+			<label>minor</label>
+			<painOffset>0.1</painOffset>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<setMax>0.9</setMax>
+			  </li>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>0.05</offset>
+			  </li>
+			  <li>
+				<capacity>Breathing</capacity>
+				<offset>0.1</offset>
+			  </li>
+			</capMods>
+			<makeImmuneTo>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
+			</makeImmuneTo>
+		  </li>
+		  <li>
+			<minSeverity>0.3</minSeverity>
+			<label>notable</label>
+			<painOffset>0.15</painOffset>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<setMax>0.85</setMax>
+			  </li>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>0.1</offset>
+			  </li>
+			  <li>
+				<capacity>Breathing</capacity>
+				<offset>0.15</offset>
+			  </li>
+			</capMods>
+			<makeImmuneTo>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
+			</makeImmuneTo>
+		  </li>
+		  <li>
+			<minSeverity>0.66</minSeverity>
+			<label>major</label>
+			<painOffset>0.2</painOffset>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<setMax>0.8</setMax>
+			  </li>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>0.15</offset>
+			  </li>
+			  <li>
+				<capacity>Breathing</capacity>
+				<offset>0.3</offset>
+			  </li>
+			</capMods>
+			<makeImmuneTo>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
+			</makeImmuneTo>
+		  </li>
+		  <li>
+			<minSeverity>0.8</minSeverity>
+			<label>extreme</label>
+			<painOffset>0.25</painOffset>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<setMax>0.75</setMax>
+			  </li>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>0.5</offset>
+			  </li>
+			  <li>
+				<capacity>Breathing</capacity>
+				<offset>0.75</offset>
+			  </li>
+			</capMods>
+			<makeImmuneTo>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_PP</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_OO</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_GhoulPrecursor_GG</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_MeowsfurtunateMetamorfursis</li>
+				<li MayRequire="baskerville.hellsingarmsultimate">HSAU_ArtVampPrecursor</li>
+			</makeImmuneTo>
+		  </li>
+		</stages>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+	</HediffDef>
+</Defs>

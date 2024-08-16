@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!--
+		Adding values to traits
+		Syrchalis edited this page on Apr 9, 2021
+		Patch
+		Values
+		New degrees
+		Using trait values
+		https://www.github.com/Syrchalis/TraitValue.wiki.git
+		Patch
+		To add a value to a trait simply create an XML patch like this:
+	-->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[SYR] Trait Value</li> <!-- Checks for this Mod, if not active there is no reason to add values -->
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!--
+					You need to create a list entry for each degree a trait has. If your trait has only one degree data, you can write <li>0, 10</li> as the degree will be zero, or you can completely leave out the zero and just write the value you want to give the trait like this: <li>10</li>.
+				-->
+				<!--
+					I used values between -30 and 30 to describe the vanilla traits. These values fit my mod "Individuality" as well. If you have traits that are better or worse than vanilla traits, feel free to use values outside this range.
+
+					If you want a general guideline:
+
+					-30 = terrible trait, huge impact/inconvenience on pawn efficiency
+					-20 = bad trait, notable impact/inconvenience
+					-10 = inconvenient trait or situational trait that tends to be bad
+					0 = neutral/situation traits
+					+10 = convenient trait, minor impact/convenience - or situational trait that tends to be good
+					+20 = good trait, notable impact/convenience
+					+30 = amazing trait, huge impact/convenience
+				-->
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraitDef[defName="BeanMan"]</xpath>
+					<value>
+						<li Class="SyrTraitValue.TraitValueExtension">
+							<traitValues>
+								<li>5</li>
+							</traitValues>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraitDef[defName="ST_Rich"]</xpath>
+					<value>
+						<li Class="SyrTraitValue.TraitValueExtension">
+							<traitValues>
+								<li>10</li>
+							</traitValues>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraitDef[defName="ST_Stupid"]</xpath>
+					<value>
+						<li Class="SyrTraitValue.TraitValueExtension">
+							<traitValues>
+								<li>-20</li>
+							</traitValues>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraitDef[defName="ST_SemiFeral"]</xpath>
+					<value>
+						<li Class="SyrTraitValue.TraitValueExtension">
+							<traitValues>
+								<li>-30</li>
+							</traitValues>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraitDef[defName="ST_Multilingual"]</xpath>
+					<value>
+						<li Class="SyrTraitValue.TraitValueExtension">
+							<traitValues>
+								<li>20</li>
+							</traitValues>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraitDef[defName="RareGenius"]</xpath>
+					<value>
+						<li Class="SyrTraitValue.TraitValueExtension">
+							<traitValues>
+								<li>40</li>
+							</traitValues>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraitDef[defName="ST_Savant"]</xpath>
+					<value>
+						<li Class="SyrTraitValue.TraitValueExtension">
+							<traitValues>
+								<li>0</li>
+							</traitValues>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraitDef[defName="ST_Surgeon"]</xpath>
+					<value>
+						<li Class="SyrTraitValue.TraitValueExtension">
+							<traitValues>
+								<li>5</li>
+							</traitValues>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraitDef[defName="Buglover"]</xpath>
+					<value>
+						<li Class="SyrTraitValue.TraitValueExtension">
+							<traitValues>
+								<li>5</li>
+							</traitValues>
+						</li>
+					</value>
+				</li>
+				<!--
+					If your trait has several degrees you need to specify the degree with the value, otherwise it will not work. For guidance, look at the example above,unlike a trait with just one degree, this trait has four degrees, none of which have the index 0.
+					<traitValues>
+						<li>-2, -30</li>
+						<li>-1, -20</li>
+						<li>1, 20</li>
+						<li>2, 30</li>
+					</traitValues>
+				-->
+			</operations>
+		</match>
+	</Operation>
+</Patch>

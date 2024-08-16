@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThingDef Abstract="True" ParentName="AnimalThingBase" Name="BaseChungus">
+		<devNote>chungus-1</devNote>
+		<statBases>
+			<Mass>400</Mass>
+			<MoveSpeed>6.0</MoveSpeed>
+			<ComfyTemperatureMin>-75</ComfyTemperatureMin>
+			<ComfyTemperatureMax>75</ComfyTemperatureMax>
+			<FilthRate>75</FilthRate>
+			<MarketValue>500</MarketValue>
+			<LeatherAmount>90</LeatherAmount>
+			<MeatAmount>90</MeatAmount>
+			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">0.5</Mashed_Ashlands_AshResistance>
+		</statBases>
+		<receivesSignals>true</receivesSignals>
+		<tools>
+		  <li>
+			<label>left claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>20</power>
+			<cooldownTime>4</cooldownTime>
+			<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>7</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>20</power>
+			<cooldownTime>4</cooldownTime>
+			<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>7</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>25</power>
+			<cooldownTime>2.6</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.5</chanceFactor>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>17</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>10</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <herdAnimal>true</herdAnimal>
+		  <predator>true</predator>
+		  <maxPreyBodySize>30</maxPreyBodySize>
+		  <baseHungerRate>9.75</baseHungerRate>
+		  <baseBodySize>1.75</baseBodySize>
+		  <baseHealthScale>2</baseHealthScale>
+		  <foodType>CarnivoreAnimalStrict, Meat, OvivoreAnimal, Corpse, Fluid, Liquor, Kibble</foodType>
+		  <gestationPeriodDays>2</gestationPeriodDays>
+		  <wildness>0.89</wildness>
+		  <lifeExpectancy>50</lifeExpectancy>
+		  <trainability>Advanced</trainability>
+		  <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
+		  <manhunterOnDamageChance>2</manhunterOnDamageChance>
+		  <useMeatFrom>Hare</useMeatFrom>
+		  <useLeatherFrom>Hare</useLeatherFrom>
+		  <body>QuadrupedAnimalWithPawsAndTail</body>
+		  <petness>0.08</petness>
+		  <mateMtbHours>6</mateMtbHours>
+		  <litterSizeCurve>
+			<points>
+			  <li>(0, 0)</li>
+			  <li>(1, 1)</li>
+			  <li>(2, 2)</li>
+			  <li>(3, 3)</li>
+			  <li>(4,1)</li>
+			  <li>(5,0.4)</li>
+			  <li>(6,0.2)</li>
+			  <li>(7,0.1)</li>
+			  <li>(8,0)</li>
+			</points>
+		  </litterSizeCurve>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>AnimalJuvenile</def>
+			  <minAge>0.1</minAge>
+			</li>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0.2222</minAge>
+			  <soundWounded>Pawn_Hare_Wounded</soundWounded>
+			  <soundDeath>Pawn_Hare_Death</soundDeath>
+			  <soundCall>Pawn_Hare_Call</soundCall>
+			  <soundAngry>Pawn_Hare_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+		  <li>AnimalFighter</li>
+		  <li>StorytimeAnimal</li>
+		</tradeTags>
+	  </ThingDef>
+
+	  <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="ChungusBase">
+		<combatPower>400</combatPower>
+		<canArriveManhunter>true</canArriveManhunter>
+		<ecoSystemWeight>0</ecoSystemWeight>
+	</PawnKindDef>
+
+  <ThingDef ParentName="BaseChungus">
+    <defName>Chungus</defName>
+    <label>Chungus</label>
+    <description>Watch out for the Big Chungus! \n \n Big Chunguses are the aggressive, predatory, carnivorous hares that plague the galaxy. Their origin is believed to have been an attempt to create livestock to farm abundant meat and leather, but something went wrong, causing them to become predatory and violent. Standing at nearly twice the size of a man, their voracious appetite is satiated by preying on any other animal, or man, present in the area. Big Chunguses are an invasive species that can and will devour an ecosystem to the point of collapse. They multiply like, well, rabbits. \nThe Chungus' rapid spread throughout the galaxy led to a mass culling in Core and Urb Worlds alike, but the sparser population of the Rim have made them impossible for those on the edge of civilization to clear them out entirely. They are extremely difficult to tame, but doing so will lead to an unbeatable fighter that multiplies in a matter of Quadrums.</description>
+	<race>
+	  <wildBiomes Inherit="False">
+				<TemperateSwamp>0.18</TemperateSwamp> 
+				<TemperateForest>0.1</TemperateForest>
+				<TropicalRainforest>0.26</TropicalRainforest>
+				<TropicalSwamp>0.16</TropicalSwamp>
+				<AridShrubland>0.06</AridShrubland>
+				<BorealForest>0.06</BorealForest>
+				<ColdBog>0.18</ColdBog>
+				<SeaIce>0.8</SeaIce>
+				<IceSheet>2</IceSheet>
+				<Tundra>2</Tundra>
+				<Desert>0.16</Desert> 
+				<ExtremeDesert>0.33</ExtremeDesert>
+
+
+				<!-- ___________________ -->			
+				<!-- Mod Biomes -->
+				<!-- ___________________ -->
+
+				<!-- sarg.alphabiomes -->
+				<!-- ALPHA BIOMES -->
+
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.3</AB_FeraliskInfestedJungle>
+
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.06</AB_GallatrossGraveyard>
+
+				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.16</AB_GelatinousSuperorganism>
+
+				<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">1</AB_MechanoidIntrusion>
+
+				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.06</AB_MycoticJungle>
+
+				<AB_OcularForest MayRequire="sarg.alphabiomes">0.16</AB_OcularForest>
+
+				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0.5</AB_PropaneLakes>
+
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">2</AB_PyroclasticConflagration>
+
+				<AB_RockyCrags MayRequire="sarg.alphabiomes">0.4</AB_RockyCrags>
+
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.06</AB_TarPits>
+
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">1</AB_MiasmicMangrove>
+
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0</AB_IdyllicMeadows>
+
+
+
+				<!-- ___________________ -->
+
+				<!-- BiomesTeam.Oasis -->
+				<!-- CHROMATIC OASIS -->
+
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.08</BMT_ChromaticOasis>
+
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.AdvancedBiomes -->
+				<!-- ADVANCED BIOMES -->
+
+				<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.26</PoisonForest>
+
+				<Savanna MayRequire="Mlie.AdvancedBiomes">0.09</Savanna>
+
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.09</Volcano>
+
+				<Wasteland MayRequire="Mlie.AdvancedBiomes">1</Wasteland>
+
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.09</Wetland>
+
+
+				<!-- ___________________ -->
+
+				<!-- zylle.MoreVanillaBiomes -->
+				<!-- More Vanilla Biomes -->
+
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.12</ZBiome_AlpineMeadow>
+
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.06</ZBiome_CloudForest>
+
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.16</ZBiome_CoastalDunes>
+
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.08</ZBiome_DesertOasis>
+
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.16</ZBiome_Grasslands>
+
+				<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.25</ZBiome_Iceberg_NoBeach>
+
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.16</ZBiome_Marsh>
+
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.08</ZBiome_Sandbar_NoBeach>
+				
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.25</ZBiome_GlacialShield>
+				
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">1</ZBiome_Badlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.NaturesPrettySweet -->
+				<!-- NATURE IS PRETTY SWEET -->
+
+				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.16</TKKN_VolcanicFlow>
+
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.16</TKKN_RedwoodForest>
+
+				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.16</TKKN_Grasslands> <!-- PRAIRIE -->
+
+				<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.16</TKKN_Savanna>
+
+				<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">1</TKKN_Desert> <!-- SALT FIELDS -->
+
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.16</TKKN_Oasis>			
+
+
+				<!-- ___________________ -->
+
+				<!-- Heis.Edo.Themed.Expansion -->
+				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.16</HSBambooForest>
+
+
+				<!-- _________________ -->
+
+				<!-- BiomesTeam.BiomesIslands -->
+				<!-- BIOMES ISLANDS -->
+
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_Atoll>
+
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.1</BiomesIslands_BorealIsland>
+
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_DesertIsland>
+
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_DesertArchipelago>
+
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_TemperateIsland>
+
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_TemperateArchipelago>
+
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.18</BiomesIslands_TropicalIsland>
+
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.2</BiomesIslands_TropicalArchipelago>
+
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">1</BiomesIslands_TundraIsland>
+				
+				
+				
+				<!-- _________________ -->
+
+				<!-- BiomesTeam.BiomesCaverns -->
+				<!-- BIOMES CAVERNS -->
+				
+				<BMT_CrystalCaverns MayRequire="BiomesTeam.BiomesCaverns">0.06</BMT_CrystalCaverns>
+				
+				<BMT_EarthenDepths MayRequire="BiomesTeam.BiomesCaverns">1</BMT_EarthenDepths>
+				
+				<BMT_FungalForest MayRequire="BiomesTeam.BiomesCaverns">0.16</BMT_FungalForest>
+				
+
+
+				<!-- ___________________ -->
+
+				<!-- reel.FrozenForest -->
+				<!-- WINTER TAIGA -->
+
+				<WinterTaiga MayRequire="reel.FrozenForest">0.16</WinterTaiga>
+
+
+				<!-- __________________ -->
+
+				<!-- SirMashedPotato.MorrowRim -->
+				<!-- "MORROWIND" MOD -->
+
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.06</MorrowRim_Ashlands>
+
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.26</MorrowRim_BlightedAshlands>
+
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.16</MorrowRim_AshSwamp>
+
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0.16</MorrowRim_VolcanicAshlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- pphhyy.gulden -->
+				<!-- FOREST OF GOLD -->
+
+				<TemperateGuldenForest MayRequire="pphhyy.gulden">0.15</TemperateGuldenForest>
+
+				<LotRE_MallornForest MayRequire="lordoftherims.elves">0.26</LotRE_MallornForest>
+
+
+				<!-- ___________________ -->
+
+				<!-- deemainiac.securecontainrimworld -->
+				<!-- SCP FOUNDATION -->
+
+				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0.5</SCR_SCP610Biome>
+
+
+				<!-- _________________ -->
+
+				<!-- regrowth.botr.volcanicicesheet -->
+				<!-- VOLCANIC ICE SHEET -->
+
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.16</RG-VIS_VulcanicIceSheet>
+				
+				
+				<!-- _________________ -->
+				
+				<!-- ironscruff.primordialgeysers -->
+				<!-- PRIMORDIAL GEYSERS -->
+				
+
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.16</IronScruff_PrimordialGeysers>
+
+
+				<!-- _________________ -->
+				
+				<!-- mlie.rfpermafrost -->
+				<!-- PERMAFROST ZONE -->
+
+				<!-- <Permafrost MayRequire="mlie.rfpermafrost">0.33</Permafrost> -->
+	   </wildBiomes>
+	</race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="ChungusBase">
+    <defName>Chungus</defName>
+    <label>Big Chungus</label>
+	<labelPlural>Big Chunguses</labelPlural>
+    <race>Chungus</race>
+	<wildGroupSize>2~4</wildGroupSize>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BigChungus/BigChungus</texPath>
+          <drawSize>2</drawSize>
+          <color>(180,180,180)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BigChungus/rip_chungus</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BigChungus/BigChungus</texPath>
+          <drawSize>2.5</drawSize>
+          <color>(180,180,180)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BigChungus/rip_chungus</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/BigChungus/BigChungus</texPath>
+          <drawSize>3.5</drawSize>
+          <color>(180,180,180)</color>
+          <shadowData>
+            <volume>(0.32, 0.35, 0.32)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/BigChungus/rip_chungus</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

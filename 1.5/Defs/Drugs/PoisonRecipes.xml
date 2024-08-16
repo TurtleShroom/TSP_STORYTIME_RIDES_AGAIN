@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RecipeDef Name="TSP_ST_PoisonRecipe_Base" ParentName="TSP_WW_DrugRecipe_Base" Abstract="True">
+		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_PoisonExtract</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li>DrugProduction</li>
+			<!-- <li MayRequire="ludeon.rimworld.biotech">ToxGas</li> -->
+		</researchPrerequisites>
+	</RecipeDef>
+
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison</defName>
+		<label>grind poison</label>
+		<description>By combining beans and certain plants, a potent poison can be synthesized. It bares a strong resemblance in effects to many natural poison and venom types in nature.</description>
+		<jobString>Extracting poison.</jobString>
+		<workAmount>1000</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+				<customSummary>beans</customSummary>
+				<thingDefs>
+					<li>ST_Bean</li>
+				</thingDefs>
+			</filter>
+			<count>40</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>guam leaves, herbs, spices</customSummary>
+				<thingDefs>
+					<li MayRequire="TSP.Isengriff.Storytime">GuamLeaves</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+					<li MayRequire="herbs.plants">RawMint</li>
+					<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li>
+					<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+					<li MayRequire="tikubonn.rimseasoning">RimSeasoning_RedPepper</li>
+					<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
+					<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+				</thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_Bean</li>
+				<li>GuamLeaves</li>
+				<li>ST_MixedHerbs</li>
+				<li MayRequire="herbs.plants">RawMint</li>
+				<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+				<li MayRequire="tikubonn.rimseasoning">RimSeasoning_RedPepper</li>
+				<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
+				<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>50</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakeGoblinPoison</defName>
+		<label>grind goblin poison</label>
+		<description>Mix goblin poison from regular poison and worms.</description>    
+		<jobString>mixing goblin poison</jobString>
+		<workAmount>800</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_PoisonExtract</li>
+					<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
+					<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_Worm</li>
+				</thingDefs>
+			</filter>
+			<count>35</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_PoisonExtract</li>
+				<li>ST_Worm</li>
+				<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
+				<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_GoblinPoison>15</ST_GoblinPoison>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>TSP_ST_ExtractSandwichPoison</defName>
+		<label>concentrate Billy Club Poison Sting into poison</label>
+		<description>By removing the "normal" ingredients from a Billy Club sandwich- that is, making it cease to be a sandwich at all -the potent poison in the dish can be extracted and concentrated for weapon and medicinal usages.</description>    
+		<jobString>Extracting poison.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>BillyClub</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>BillyClub</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>25</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>MakeNeurotoxinBotox_General</defName>
+		<label>purify Botox Fuit's botulinium toxins</label>
+		<description>Botox Fruit is the most powerful and concentrated form of botulinium toxins. By further concentrating and isolating the toxins, a potent, general-use poison can be synthesized.</description>    
+		<jobString>synthesizing poison</jobString>
+		<workAmount>800</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>BotoxFruit</li>
+					<!--
+					<li>BotoxPowder</li>
+					<li>TSP_ST_BotoxMedicine</li>
+					-->
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter Inherit="False">
+			<thingDefs>
+				<li>BotoxFruit</li>
+				<!--
+				<li>BotoxPowder</li>
+				<li>TSP_ST_BotoxMedicine</li>
+				-->
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>BotoxFruit</li>
+				<!-- <li>BotoxPowder</li> -->
+			</thingDefs>
+		</defaultIngredientFilter>
+		<products>
+			<ST_PoisonExtract>20</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Flake</defName>
+		<label>dilute poison from Flake</label>
+		<description>Dilute the powerful toxins in Flake to produce a general-use poison, fit for all sorts of nefarious schemes.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>1000</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Flake</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Flake</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>10</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Flake_Bulk</defName>
+		<label>dilute poison from Flake (x20)</label>
+		<description>Dilute the powerful toxins in Flake to produce a general-use poison, fit for all sorts of nefarious schemes.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>2000</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Flake</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Flake</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>20</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Flake_SuperBulk</defName>
+		<label>dilute poison from Flake (x40)</label>
+		<description>Dilute the powerful toxins in Flake to produce a general-use poison, fit for all sorts of nefarious schemes.</description>
+		<jobString>Diluting poison.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Flake</li>
+				</thingDefs>
+			</filter>
+			<count>15</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Flake</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>40</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Flake_SuperDuperBulk</defName>
+		<label>dilute poison from Flake (x80)</label>
+		<description>Dilute the powerful toxins in Flake to produce a general-use poison, fit for all sorts of nefarious schemes.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>4000</workAmount>
+		<recipeUsers>
+			<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+		</recipeUsers>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Flake</li>
+				</thingDefs>
+			</filter>
+			<count>20</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Flake</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>80</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Yayo</defName>
+		<label>dilute poison from Yayo</label>
+		<description>As Yayo is a more advanced, potent, and expertly formulated version of Flake, it takes less of it to make the same amount of poison.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>2000</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Yayo</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Yayo</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>13</ST_PoisonExtract>
+		</products>
+		<researchPrerequisites Inherit="False">
+			<li>PsychiteRefining</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Yayo_Bulk</defName>
+		<label>dilute poison from Yayo (x20)</label>
+		<description>As Yayo is a more advanced, potent, and expertly formulated version of Flake, it takes less of it to make the same amount of poison.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>3000</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Yayo</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Yayo</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>23</ST_PoisonExtract>
+		</products>
+		<researchPrerequisites Inherit="False">
+			<li>PsychiteRefining</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Yayo_SuperBulk</defName>
+		<label>dilute poison from Yayo (x40)</label>
+		<description>As Yayo is a more advanced, potent, and expertly formulated version of Flake, it takes less of it to make the same amount of poison.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>4000</workAmount>
+		<recipeUsers>
+			<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+		</recipeUsers>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Yayo</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Yayo</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>43</ST_PoisonExtract>
+		</products>
+		<researchPrerequisites Inherit="False">
+			<li>PsychiteRefining</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Yayo_SuperDuperBulk</defName>
+		<label>dilute poison from Yayo (x80)</label>
+		<description>As Yayo is a more advanced, potent, and expertly formulated version of Flake, it takes less of it to make the same amount of poison.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>5000</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Yayo</li>
+				</thingDefs>
+			</filter>
+			<count>15</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Yayo</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>83</ST_PoisonExtract>
+		</products>
+		<researchPrerequisites Inherit="False">
+			<li>PsychiteRefining</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_ElCheapo</defName>
+		<label>extract poison from Psychite Leaves inefficiently</label>
+		<description>Trace amounts of potent chemicals can be extracted from unprocessed Psychite Leaves and refined into a powerful poison. This is extremely inefficient and produces very little substance.</description>
+		<jobString>Extracting poison.</jobString>
+		<workAmount>7000</workAmount>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+		</recipeUsers>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>PsychoidLeaves</li>
+				</thingDefs>
+				<disallowedThingDefs>
+					<li>ST_PoisonExtract</li>
+				</disallowedThingDefs>
+			</filter>
+			<count>40</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>PsychoidLeaves</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>10</ST_PoisonExtract>
+		</products>
+		<researchPrerequisites Inherit="False" MayRequire="ludeon.rimworld.biotech"></researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base" MayRequire="ludeon.rimworld.biotech">
+		<defName MayRequire="ludeon.rimworld.biotech">ST_MakePoison_ToxiPotatoPod</defName>
+		<label MayRequire="ludeon.rimworld.biotech">grind poison from toxi-potato pods inefficiently</label>
+		<description MayRequire="ludeon.rimworld.biotech">Toxi-potatoes and their toxi-juice derivatives make for an easy means of extracting poisons.</description>
+		<jobString MayRequire="ludeon.rimworld.biotech">Extracting poison.</jobString>
+		<workAmount MayRequire="ludeon.rimworld.biotech">3000</workAmount>
+		<ingredients MayRequire="ludeon.rimworld.biotech">
+		  <li MayRequire="ludeon.rimworld.biotech">
+			<filter MayRequire="ludeon.rimworld.biotech">
+				<customSummary MayRequire="ludeon.rimworld.biotech">toxi-potatoes, toxi-pod juice</customSummary>
+				<thingDefs MayRequire="ludeon.rimworld.biotech">
+					<li MayRequire="ludeon.rimworld.biotech">RawToxipotato</li>
+					<li MayRequire="romyashi.toxins,ludeon.rimworld.biotech">Romy_Toxipod_Juice</li>
+				</thingDefs>
+			</filter>
+			<count MayRequire="ludeon.rimworld.biotech">20</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter MayRequire="ludeon.rimworld.biotech" Inherit="False">
+			<thingDefs MayRequire="ludeon.rimworld.biotech">
+				<li MayRequire="ludeon.rimworld.biotech">RawToxipotato</li>
+				<li MayRequire="romyashi.toxins,ludeon.rimworld.biotech">Romy_Toxipod_Juice</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products MayRequire="ludeon.rimworld.biotech">
+			<ST_PoisonExtract>15</ST_PoisonExtract>
+		</products>
+		<researchPrerequisites Inherit="False" MayRequire="ludeon.rimworld.biotech"></researchPrerequisites>
+	</RecipeDef>
+</Defs>

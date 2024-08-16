@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
+		<xpath>/Defs/ThingDef[defName="ToxifierGenerator"]/costList/ST_PoisonExtract</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ToxifierGenerator"]/costList</xpath>
+			<success>Always</success>
+			<value>
+				<ST_PoisonExtract>75</ST_PoisonExtract>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
+		<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]/costList/ST_PoisonExtract</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]/costList</xpath>
+			<success>Always</success>
+			<value>
+				<ST_PoisonExtract>500</ST_PoisonExtract>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]/costList/NanostructuringChip</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]/costList/NanostructuringChip</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+    </Operation>
+</Patch>

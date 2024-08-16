@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>MMTank_Drumcan</defName>
+    <label>drum can</label>
+    <description>There once was a drum can in a town called Descles.\nA drum can of veteran that has been pushed,  loved by countless people. One day he became a Tsukumogami (an inanimate object, furniture, or tool granted a soul) and wandered around looking for someone to push him.\nHe can carry a large amount of luggage with mysterious power.</description>
+    <statBases>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>200</ComfyTemperatureMax>
+      <MeatAmount>0</MeatAmount>
+      <LeatherAmount>0</LeatherAmount>
+      <ArmorRating_Blunt>1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.7</ArmorRating_Heat>
+      <ToxicResistance>0.1</ToxicResistance>
+      <PsychicSensitivity>1</PsychicSensitivity>
+      <Flammability>0</Flammability>
+      <MoveSpeed>2.5</MoveSpeed>
+      <MarketValue>100</MarketValue>
+      <Mass>700</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>Body attack</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <cooldownTime>1</cooldownTime>
+        <power>5</power>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>5</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <race>
+      <body>MechanicalCentipede</body>
+	  <bloodDef>Filth_MachineBits</bloodDef>
+	  <!--
+	  <fleshType>VAEAF_CarFlesh</fleshType>
+	  <body>VAEAF_CarBody</body>
+	  -->
+	  <!--
+	  <useMeatFrom>VAEAF_CarFamily</useMeatFrom>
+      <useLeatherFrom>VAEAF_CarFamily</useLeatherFrom>
+	  -->
+      <packAnimal>true</packAnimal>
+      <petness>0.8</petness>
+      <baseBodySize>2</baseBodySize>
+	  <baseHealthScale>0.75</baseHealthScale>
+      <baseHungerRate>1.3</baseHungerRate>
+	  <specificMeatDef>ChunkSlagSteel</specificMeatDef>
+      <leatherDef>ChunkSlagSteel</leatherDef>
+      <foodType>VegetarianRoughAnimal, Kibble</foodType>
+      <gestationPeriodDays>60</gestationPeriodDays>
+      <trainability>Advanced</trainability>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <wildness>0</wildness>
+      <hasGenders>false</hasGenders>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <nuzzleMtbHours>3</nuzzleMtbHours>
+      <wildBiomes Inherit="False">
+				<SeaIce>0.05</SeaIce>
+				<IceSheet>0.05</IceSheet>
+				<Tundra>0.05</Tundra>
+				<BorealForest>0.05</BorealForest>
+				<TemperateForest>0.1</TemperateForest>
+				<TropicalRainforest>0.15</TropicalRainforest>
+				<AridShrubland>0.05</AridShrubland>
+				<Desert>0.05</Desert>
+				<ExtremeDesert>0.1</ExtremeDesert>
+				<TemperateSwamp>0.05</TemperateSwamp>
+				<ColdBog>0.05</ColdBog>
+				<TropicalSwamp>0.05</TropicalSwamp>
+
+
+				<!-- ___________________ -->			
+				<!-- Mod Biomes -->
+				<!-- ___________________ -->
+
+				<!-- sarg.alphabiomes -->
+				<!-- ALPHA BIOMES -->
+
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.05</AB_FeraliskInfestedJungle>
+
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.05</AB_GallatrossGraveyard>
+
+				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.05</AB_GelatinousSuperorganism>
+
+				<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">1</AB_MechanoidIntrusion>
+
+				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.05</AB_MycoticJungle>
+
+				<AB_OcularForest MayRequire="sarg.alphabiomes">0.6</AB_OcularForest>
+
+				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0.2</AB_PropaneLakes>
+
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.5</AB_PyroclasticConflagration>
+
+				<AB_RockyCrags MayRequire="sarg.alphabiomes">0.1</AB_RockyCrags>
+
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.25</AB_TarPits>
+
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.33</AB_MiasmicMangrove>
+
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.1</AB_IdyllicMeadows>
+
+
+
+				<!-- ___________________ -->
+
+				<!-- BiomesTeam.Oasis -->
+				<!-- CHROMATIC OASIS -->
+
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.05</BMT_ChromaticOasis>
+
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.AdvancedBiomes -->
+				<!-- ADVANCED BIOMES -->
+
+				<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.05</PoisonForest>
+
+				<Savanna MayRequire="Mlie.AdvancedBiomes">0.05</Savanna>
+
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.05</Volcano>
+
+				<Wasteland MayRequire="Mlie.AdvancedBiomes">0.4</Wasteland>
+
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.05</Wetland>
+
+
+				<!-- ___________________ -->
+
+				<!-- zylle.MoreVanillaBiomes -->
+				<!-- More Vanilla Biomes -->
+
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_AlpineMeadow>
+
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_CloudForest>
+
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_CoastalDunes>
+
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_DesertOasis>
+
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_Grasslands>
+
+				<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.15</ZBiome_Iceberg_NoBeach>
+
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.05</ZBiome_Marsh>
+
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_Sandbar_NoBeach>
+				
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_GlacialShield>
+				
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.5</ZBiome_Badlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.NaturesPrettySweet -->
+				<!-- NATURE IS PRETTY SWEET -->
+
+				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.4</TKKN_VolcanicFlow>
+
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.3</TKKN_RedwoodForest>
+
+				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.05</TKKN_Grasslands> <!-- PRAIRIE -->
+
+				<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.05</TKKN_Savanna>
+
+				<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">1</TKKN_Desert> <!-- SALT FIELDS -->
+
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.05</TKKN_Oasis>			
+
+
+				<!-- ___________________ -->
+
+				<!-- Heis.Edo.Themed.Expansion -->
+				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.1</HSBambooForest>
+
+
+				<!-- _________________ -->
+
+				<!-- BiomesTeam.BiomesIslands -->
+				<!-- BIOMES ISLANDS -->
+
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_Atoll>
+
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_BorealIsland>
+
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_DesertIsland>
+
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_DesertArchipelago>
+
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TemperateIsland>
+
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TemperateArchipelago>
+
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TropicalIsland>
+
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TropicalArchipelago>
+
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TundraIsland>
+				
+				
+				
+				<!-- _________________ -->
+
+				<!-- BiomesTeam.BiomesCaverns -->
+				<!-- BIOMES CAVERNS -->
+				
+				<BMT_CrystalCaverns MayRequire="BiomesTeam.BiomesCaverns">0.1</BMT_CrystalCaverns>
+				
+				<BMT_EarthenDepths MayRequire="BiomesTeam.BiomesCaverns">0.1</BMT_EarthenDepths>
+				
+				<BMT_FungalForest MayRequire="BiomesTeam.BiomesCaverns">0.2</BMT_FungalForest>
+				
+
+
+				<!-- ___________________ -->
+
+				<!-- reel.FrozenForest -->
+				<!-- WINTER TAIGA -->
+
+				<WinterTaiga MayRequire="reel.FrozenForest">0.05</WinterTaiga>
+
+
+				<!-- __________________ -->
+
+				<!-- SirMashedPotato.MorrowRim -->
+				<!-- "MORROWIND" MOD -->
+
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.1</MorrowRim_Ashlands>
+
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.4</MorrowRim_BlightedAshlands>
+
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.1</MorrowRim_AshSwamp>
+
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0.1</MorrowRim_VolcanicAshlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- pphhyy.gulden -->
+				<!-- FOREST OF GOLD -->
+
+				<TemperateGuldenForest MayRequire="pphhyy.gulden">0.05</TemperateGuldenForest>
+
+				<LotRE_MallornForest MayRequire="lordoftherims.elves">0.05</LotRE_MallornForest>
+
+
+				<!-- ___________________ -->
+
+				<!-- deemainiac.securecontainrimworld -->
+				<!-- SCP FOUNDATION -->
+
+				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0.8</SCR_SCP610Biome>
+
+
+				<!-- _________________ -->
+
+				<!-- regrowth.botr.volcanicicesheet -->
+				<!-- VOLCANIC ICE SHEET -->
+
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.05</RG-VIS_VulcanicIceSheet>
+				
+				
+				<!-- _________________ -->
+				
+				<!-- ironscruff.primordialgeysers -->
+				<!-- PRIMORDIAL GEYSERS -->
+				
+
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.15</IronScruff_PrimordialGeysers>
+
+
+				<!-- _________________ -->
+				
+				<!-- mlie.rfpermafrost -->
+				<!-- PERMAFROST ZONE -->
+
+				<Permafrost MayRequire="mlie.rfpermafrost">0.05</Permafrost>
+      </wildBiomes>
+      <lifeExpectancy>500</lifeExpectancy>
+		<litterSizeCurve>
+			<points>
+				<li>(0.5, 0.75)</li>
+				<li>(1, 1)</li>
+				<li>(2, 0.1)</li>
+				<li>(2.5, 0.01)</li>
+				<li>(3, 0.001)</li>
+			</points>
+		</litterSizeCurve>
+      <lifeStageAges Inherit="False">
+        <li>
+			<def>AnimalBaby</def>
+			<minAge>0</minAge>
+			<soundWounded>VAEAF_Cars_Wounded</soundWounded>
+			<soundDeath>VAEAF_Cars_Death</soundDeath>
+			<soundCall>VAEAF_Cars_Call</soundCall>
+        </li>
+        <li>
+			<def>AnimalAdult</def>
+			<minAge>0.55</minAge>
+			<soundWounded>VAEAF_Cars_Wounded</soundWounded>
+			<soundDeath>VAEAF_Cars_Death</soundDeath>
+			<soundCall>VAEAF_Cars_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+    </race>
+    <comps Inherit="False">
+      <li Class="CompProperties_Milkable">
+        <milkDef>ComponentIndustrial</milkDef>
+        <milkIntervalDays>4</milkIntervalDays>
+        <milkAmount>1</milkAmount>
+        <milkFemaleOnly>false</milkFemaleOnly>
+      </li>
+      <li Class="CompProperties_Shearable">
+        <woolDef>MM_Namaritake</woolDef>
+        <shearIntervalDays>5</shearIntervalDays>
+        <woolAmount>25</woolAmount>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+    </tradeTags>
+    <butcherProducts>
+      <ChunkSlagSteel>10</ChunkSlagSteel>
+    </butcherProducts>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>MMTank_Drumcan</defName>
+    <label>drum can</label>
+    <race>MMTank_Drumcan</race>
+    <canArriveManhunter>true</canArriveManhunter>
+    <combatPower>80</combatPower>
+    <ecoSystemWeight>0</ecoSystemWeight>
+    <wildGroupSize>
+      <min>1</min>
+      <max>1</max>
+    </wildGroupSize>
+    <minGenerationAge>10</minGenerationAge>
+    <maxGenerationAge>200</maxGenerationAge>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Drumcan_N</texPath>
+          <drawSize>0.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Drumcan_B</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Drumcan_N</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MMTank_Drumcan_B</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

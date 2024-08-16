@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="MealBase">
+		<defName>ST_LemonBar</defName>
+		<label>lemon bar</label>
+		<description>A powerful artifact baked by Gnomes. It consists primarily of lemons and sugar.</description>
+		<researchPrerequisites>
+			<li>ST_GnomeCulture</li>
+		</researchPrerequisites>
+		<graphicData>
+		  <texPath>Things/Items/Resources/LemonBar</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.9</DeteriorationRate>
+		  <MarketValue>13</MarketValue>
+		  <Mass>0.3</Mass>
+		  <Nutrition>0.9</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>MealSimple</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <babiesCanIngest MayRequire="ludeon.rimworld.biotech">true</babiesCanIngest>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>HedLemonBar</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+		  <li Class="CompProperties_Rottable">
+			<daysToRotStart>9</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MealBase">
+		<defName>ST_LimeBar</defName>
+		<label>lime bar</label>
+		<description>A powerful artifact baked by Gnomes. It consists primarily of limes and sugar.</description>
+		<researchPrerequisites>
+			<li>ST_GnomeCulture</li>
+		</researchPrerequisites>
+		<graphicData>
+		  <texPath>Things/Items/Resources/LimeBar</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.9</DeteriorationRate>
+		  <MarketValue>13</MarketValue>
+		  <Mass>0.3</Mass>
+		  <Nutrition>0.9</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>MealSimple</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <babiesCanIngest MayRequire="ludeon.rimworld.biotech">true</babiesCanIngest>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>TSP_ST_HedLimeBar</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+		  <li Class="CompProperties_Rottable">
+			<daysToRotStart>9</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		  </li>
+		</comps>
+	</ThingDef>
+</Defs>

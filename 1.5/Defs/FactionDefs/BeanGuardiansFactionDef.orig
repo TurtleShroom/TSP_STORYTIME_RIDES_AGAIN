@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <FactionDef>
+    <defName>BeanGuardians</defName>
+    <label>bean guardians</label>
+    <description>A sworn brotherhood of Roulette Bean Men who have banded together to prevent anyone from misusing Roulette Beans. In their minds, this means anyone using them (except themselves, of course).</description>
+    <pawnsPlural>bean guardians</pawnsPlural>
+    <settlementGenerationWeight>0.2</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+	<maxCountAtGameStart>2</maxCountAtGameStart>
+	<maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Roulette Master</leaderTitle>
+    <factionIconPath>World/BeanMen/BeanGuardianFactionLogo</factionIconPath>
+    <naturalEnemy>true</naturalEnemy>
+    <colorSpectrum>
+      <li>(150, 20, 20)</li>
+    </colorSpectrum>
+    <disallowedMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+
+		<!-- If you have the Mod -->
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Corporate</li>
+    </disallowedMemes>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">HAR_Xenophobia</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+    </requiredMemes>
+    <allowedCultures>
+		<li>STBeanGuardian</li>
+	</allowedCultures>
+	<!--
+    <structureMemeWeights>
+      <STBeanGuardianOrigin MayRequire="Ludeon.RimWorld.Ideology">1</STBeanGuardianOrigin>
+    </structureMemeWeights>
+	-->
+    <factionNameMaker>NamerFactionBeanGuardians</factionNameMaker>
+    <settlementNameMaker>BeanSettlementName</settlementNameMaker>
+    <techLevel>Industrial</techLevel>
+    <backstoryCategories>
+      <li>BeanGuardian</li>
+    </backstoryCategories>
+    <raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <BeanGuardianBasic>1000</BeanGuardianBasic>
+          <BeanGuardianAdvanced>25</BeanGuardianAdvanced>
+		  <BeanGuardianLeader>1</BeanGuardianLeader>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <BeanGuardianBasic>100</BeanGuardianBasic>
+          <BeanGuardianAdvanced>25</BeanGuardianAdvanced>
+		  <BeanGuardianLeader>1</BeanGuardianLeader>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <BeanGuardianTrader>1</BeanGuardianTrader>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+          <Alpaca>1</Alpaca>
+        </carriers>
+        <guards>
+          <BeanGuardianBasic>100</BeanGuardianBasic>
+          <BeanGuardianAdvanced>25</BeanGuardianAdvanced>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <BeanGuardianBasic>100</BeanGuardianBasic>
+          <BeanGuardianAdvanced>25</BeanGuardianAdvanced>
+		  <BeanGuardianLeader>1</BeanGuardianLeader>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+	<modExtensions>
+      <li Class="FactionSounds.FactionSound">
+        <soundDef>Hedwig_Theme</soundDef>
+      </li>
+	</modExtensions>
+  </FactionDef>
+
+
+
+
+</Defs>

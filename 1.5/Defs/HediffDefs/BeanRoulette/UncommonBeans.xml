@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+<!--Grass-->
+
+	<HediffDef>
+		<defName>ST_Bean_Grass</defName>
+		<label>Roulette Beans: Grass</label>
+		<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a grass flavored jelly bean! It tastes about like one would expect. \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Increases the rate at which a Pawn can sew and harvest plants.</description>		
+		<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(140,228,140)</defaultLabelColor>      	
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>60000</disappearsAfterTicks>
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			  <li>
+				<label>Uncommon</label>
+				<minSeverity>0</minSeverity>
+				<statOffsets>
+					<PlantWorkSpeed>0.6</PlantWorkSpeed>	
+				</statOffsets>		
+			  </li>
+		</stages>
+	</HediffDef>
+
+    <ThoughtDef>
+		<defName>ST_BeanThought_Grass</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ST_Bean_Grass</hediff>
+		<stages>
+		  <li>
+			<label>ST_Grass Jellybean</label>
+			<description>Yeah, I'm not a fan of this one.</description>
+			<baseMoodEffect>-3</baseMoodEffect>
+		  </li>
+		</stages>
+  </ThoughtDef>  
+
+
+  
+	<!--Vomit-->
+
+	<HediffDef>
+		<defName>ST_Bean_Vomit</defName>
+		<label>Roulette Beans: Nausea</label>
+		<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a jelly bean that tastes akin to vomit! Blegh! It could have been worse, though. There's some that would make {PAWN_objective} throw up even worse... \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Tastes bad and causes mild vomiting over the course of the day.</description>
+		<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(148, 178, 28)</defaultLabelColor>      	
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>60000</disappearsAfterTicks>
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			  <li>
+				<vomitMtbDays>0.15</vomitMtbDays>
+				<label>Uncommon</label>
+				<minSeverity>0</minSeverity>	
+			  </li>
+		</stages>
+	</HediffDef>
+
+    <ThoughtDef>
+		<defName>ST_BeanThought_Vomit</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ST_Bean_Vomit</hediff>
+		<stages>
+		  <li>
+			<label>Lost the Bean Roulette: Nausea</label>
+			<description>Absolutely vile!</description>
+			<baseMoodEffect>-5</baseMoodEffect>
+		  </li>
+		</stages>
+  </ThoughtDef>     
+ 
+  
+<!--Gold-->
+
+	<HediffDef>
+		<defName>ST_BeanGold</defName>
+		<label>Roulette Beans: Golden</label>
+		<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a golden jelly bean! It's delicious and doesn't taste like gold!  \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Increases trading ability.</description>		
+		<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(140,228,140)</defaultLabelColor>      	
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>60000</disappearsAfterTicks>
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			  <li>
+				<label>Uncommon</label>
+				<minSeverity>0</minSeverity>
+				<statOffsets>
+					<TradePriceImprovement>0.25</TradePriceImprovement>	
+				</statOffsets>		
+			  </li>
+		</stages>
+	</HediffDef>  
+  
+
+		<ThoughtDef>
+			<defName>TSP_ST_BeanThought_Gold</defName>
+			<workerClass>ThoughtWorker_Hediff</workerClass>
+			<hediff>ST_BeanGold</hediff>
+			<stages>
+			  <li>
+				<label>Won the Bean Roulette: Golden</label>
+				<description>This is a high class, fine dining jelly bean! I'm rich, you know!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			  </li>
+			</stages>
+	  </ThoughtDef>
+</Defs>

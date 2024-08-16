@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MeditationFocusDef[defName="ESCP_MaormerSerpentMeditation"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/MeditationFocusDef[defName="ESCP_MaormerSerpentMeditation"]/requiredBackstoriesAny</xpath>
+			<value>
+				<li>
+					<categoryName>GoblinChild</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<!--
+				<li>
+					<categoryName>GoblinAdult</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+				-->
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MeditationFocusDef[defName="ESCP_DunmerAncestralMeditation"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/MeditationFocusDef[defName="ESCP_DunmerAncestralMeditation"]/requiredBackstoriesAny</xpath>
+			<value>
+				<li>
+					<categoryName>WoodBeetShaman</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<!--
+				<li>
+					<categoryName>WoodBeetJoe</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+				-->
+				<li>
+					<categoryName>PecanJoeBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>WoodBeetJoe</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li MayRequire="sirmashedpotato.escp.chimer">
+					<categoryName MayRequire="sirmashedpotato.escp.chimer">ESCP_ChimerBackstory_Childhood</categoryName>
+					<slot MayRequire="sirmashedpotato.escp.chimer">Childhood</slot>
+				</li>
+				<li MayRequire="sirmashedpotato.escp.chimer">
+					<categoryName MayRequire="sirmashedpotato.escp.chimer">ESCP_ChimerBackstory_AdulthoodMage</categoryName>
+					<slot MayRequire="sirmashedpotato.escp.chimer">Childhood</slot>
+				</li>
+				<!--
+				<li MayRequire="sirmashedpotato.escp.chimer">
+					<categoryName MayRequire="sirmashedpotato.escp.chimer">ESCP_ChimerBackstory_Adulthood</categoryName>
+					<slot MayRequire="sirmashedpotato.escp.chimer">Adulthood</slot>
+				</li>
+				<li MayRequire="sirmashedpotato.escp.chimer">
+					<categoryName MayRequire="sirmashedpotato.escp.chimer">ESCP_ChimerBackstory_AdulthoodMage</categoryName>
+					<slot MayRequire="sirmashedpotato.escp.chimer">Adulthood</slot>
+				</li>
+				-->
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

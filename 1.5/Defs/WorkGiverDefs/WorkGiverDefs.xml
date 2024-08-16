@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>  
+	<WorkGiverDef>
+		<defName>ST_GnomeCooking</defName>
+		<label>cook meals at gnome table</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Cooking</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>GnomeTable</li>
+		</fixedBillGiverDefs>
+		<verb>cook</verb>
+		<gerund>cooking at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>ST_WormGrabbing</defName>
+		<label>dig for worms</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Handling</workType>
+		<priorityInType>50</priorityInType>
+		<fixedBillGiverDefs>
+			<li>WormSpot</li>
+		</fixedBillGiverDefs>
+		<verb>dig</verb>
+		<gerund>digging at</gerund>
+		<requiredCapacities>
+			<li>Sight</li>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<!-- <tagToGive>Fieldwork</tagToGive> -->
+		<prioritizeSustains>true</prioritizeSustains>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<nonColonistsCanDo>true</nonColonistsCanDo>
+		<billGiversAllMechanoids>true</billGiversAllMechanoids>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>ST_FrogLegRipping</defName>
+		<label>rip off parts</label>
+		<giverClass>StoryTime.WorkGiver_LegRip</giverClass>
+		<workType>Handling</workType>
+		<verb>ripping off</verb>
+		<gerund>ripping off</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<tagToGive>Fieldwork</tagToGive>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>ST_TomatoCutting</defName>
+		<label>cut off cysts</label>
+		<giverClass>StoryTime.WorkGiver_Tomato</giverClass>
+		<workType>Handling</workType>
+		<verb>cutting off</verb>
+		<gerund>cutting cysts off of</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<tagToGive>Fieldwork</tagToGive>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>ST_Grinding</defName>
+		<label>grind stuff at a grinder</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>BasicWorker</workType> <!-- Anyone can turn a handle -->
+		<priorityInType>90</priorityInType>
+		<fixedBillGiverDefs>
+			<li>ManualGrinder</li>
+			<!-- <li>ElectricGrinder</li> -->
+		</fixedBillGiverDefs>
+		<verb>grind</verb>
+		<gerund>grinding at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<!--
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+		<billGiversAllMechanoids>true</billGiversAllMechanoids>
+		-->
+		<nonColonistsCanDo>true</nonColonistsCanDo>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>ST_Grinding_Electric</defName>
+		<label>grind stuff at a grinder</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>BasicWorker</workType> <!-- Anyone can turn a handle -->
+		<priorityInType>95</priorityInType>
+		<fixedBillGiverDefs>
+			<!-- <li>ManualGrinder</li> -->
+			<li>ElectricGrinder</li>
+		</fixedBillGiverDefs>
+		<verb>grind</verb>
+		<gerund>grinding at</gerund>
+		<!-- Just press the button! -->
+		<!--
+		<requiredCapacities>
+			<li>Moving</li>
+		</requiredCapacities>
+		-->
+		<prioritizeSustains>true</prioritizeSustains>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<!--
+		<billGiversAllHumanlikes>true</billGiversAllHumanlikes>
+		<billGiversAllMechanoids>true</billGiversAllMechanoids>
+		-->
+		<nonColonistsCanDo>true</nonColonistsCanDo>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>ST_Grinding_AsCook</defName>
+		<label>grind food at a grinder</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Cooking</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+		</fixedBillGiverDefs>
+		<verb>grind</verb>
+		<gerund>grinding at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<!-- <billGiversAllHumanlikes>true</billGiversAllHumanlikes> -->
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>TSP_BlastFurnace_Smelting</defName>
+		<label>forging advanced metals in blast furnace</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Smithing</workType>
+		<priorityInType>110</priorityInType>
+		<fixedBillGiverDefs>
+			<li>BlastFurnaceHeater</li>
+		</fixedBillGiverDefs>
+		<verb>forge</verb>
+		<gerund>forging at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>ST_BulborbGrowing</defName>
+		<label>ascending Bulborbs</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>BasicWorker</workType>
+		<priorityInType>200</priorityInType>
+		<fixedBillGiverDefs>
+			<li>BeanPit</li>
+		</fixedBillGiverDefs>
+		<verb>ascending Bulborbs</verb>
+		<gerund>ascending Bulborbs</gerund>
+		<!--
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		-->
+		<tagToGive>Fieldwork</tagToGive>
+		<prioritizeSustains>false</prioritizeSustains>
+		<canBeDoneByMechs>true</canBeDoneByMechs>
+		<!-- <billGiversAllHumanlikes>true</billGiversAllHumanlikes> -->
+		<billGiversAllMechanoids>true</billGiversAllMechanoids>
+	</WorkGiverDef>
+  
+	<!--
+	<WorkGiverDef>
+		<defName>ST_Potions</defName>
+		<label>mix potions</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>AlchemyTable</li>
+		</fixedBillGiverDefs>
+		<verb>mix</verb>
+		<gerund>mixing</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	-->
+</Defs>

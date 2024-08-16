@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>ST_TreeFrog</defName>
+		<label>bullet tree frog</label>
+		<description>A tree frog is any species of frog that spends a majority of its life in trees. This particular species of frog, the bullet tree frog, was the result of an attempt to create another weaponized frog, building on the success of the sonic weapon engineered into the Grand Budgett's frog. The result was the frog's tongue being able to stretch at such an incredible speed that it looks like a projectile. More than just having the fastest draw on the Rim, the sheer speed of its tongue attack is capable of causing bruising. The saliva is a breeding ground for bacteria that hurt the epidermis, and almost any situation where a bullet tree frog manages to cause harm to a person will have that wound get infected.</description>
+		<statBases>
+		  <MoveSpeed>6</MoveSpeed>
+		  <MarketValue>200</MarketValue>
+		  <ComfyTemperatureMin>-60</ComfyTemperatureMin>
+		  <ComfyTemperatureMax>60</ComfyTemperatureMax>
+		  <Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">0.1</Mashed_Ashlands_AshResistance>
+		</statBases>
+		<comps>
+		  <li Class="CompProperties_EggLayer">
+			<eggUnfertilizedDef>TreeFrogEggUnfertilized</eggUnfertilizedDef>
+			<eggFertilizedDef>TreeFrogEggFertilized</eggFertilizedDef>
+			<eggFertilizationCountMax>1</eggFertilizationCountMax>
+			<eggLayIntervalDays>5</eggLayIntervalDays>
+			<eggCountRange>1~2</eggCountRange>
+		  </li>
+		</comps>
+		<tools>
+		  <li>
+			<label>left claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>2</power>
+			<cooldownTime>1</cooldownTime>
+			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<label>right claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>2</power>
+			<cooldownTime>1</cooldownTime>
+			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<label>vomerine teeth</label>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>6</power>
+			<cooldownTime>2.6</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.7</chanceFactor>
+		  </li>
+		  <li>
+			<label>tongue</label>
+			<capacities>
+			  <li>ST_Lick</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>0.5</cooldownTime>
+			<linkedBodyPartsGroup>ST_FrogTongue</linkedBodyPartsGroup>
+			<chanceFactor>0.5</chanceFactor>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>1</accuracyTouch>
+				<accuracyShort>0.9</accuracyShort>
+				<accuracyMedium>0.6</accuracyMedium>
+				<accuracyLong>0.6</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ST_Lick</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<range>6</range>				
+				<soundCast>Lick</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<label>lick shot</label>
+				<commonality>2</commonality>
+			</li>
+		</verbs>
+		<race>
+			<wildBiomes Inherit="False">
+				<!-- RimWorld.Core -->
+				<!-- VANILLA RENDITION -->
+
+				<BorealForest>0.25</BorealForest>
+
+				<Tundra>0</Tundra>
+
+				<ColdBog>0</ColdBog>
+
+				<IceSheet>0</IceSheet>
+
+				<SeaIce>0</SeaIce>
+				
+				<TemperateForest>0.25</TemperateForest>
+
+				<TemperateSwamp>0.1</TemperateSwamp>
+
+				<TropicalSwamp>0.1</TropicalSwamp>
+
+				<TropicalRainforest>0.4</TropicalRainforest>
+
+				<AridShrubland>0</AridShrubland>
+
+				<Desert>0</Desert>
+
+
+
+				<!-- ___________________ -->			
+				<!-- Mod Biomes -->
+				<!-- ___________________ -->
+
+				<!-- sarg.alphabiomes -->
+				<!-- ALPHA BIOMES -->
+
+
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.15</AB_FeraliskInfestedJungle>
+
+				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.1</AB_MycoticJungle>
+
+				<AB_OcularForest MayRequire="sarg.alphabiomes">0.2</AB_OcularForest>
+
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.001</AB_TarPits>
+				
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.5</AB_MiasmicMangrove>
+			
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.03</AB_IdyllicMeadows>
+
+
+				<!-- ___________________ -->
+
+				<!-- BiomesTeam.Oasis -->
+				<!-- CHROMATIC OASIS -->
+
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.02</BMT_ChromaticOasis>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.AdvancedBiomes -->
+				<!-- ADVANCED BIOMES -->
+
+				<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.4</PoisonForest>
+				
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.1</Wetland>
+
+
+				<!-- ____________________ -->
+
+				<!-- zylle.MoreVanillaBiomes -->
+				<!-- More Vanilla Biomes -->
+
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.25</ZBiome_CloudForest>
+
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.02</ZBiome_DesertOasis>
+
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_Marsh>
+				
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_GlacialShield>
+				
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.15</ZBiome_Badlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.NaturesPrettySweet -->
+				<!-- NATURE IS PRETTY SWEET -->
+
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">1</TKKN_RedwoodForest>
+
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.15</TKKN_Oasis>
+
+
+				<!-- ___________________ -->
+
+				<!-- Heis.Edo.Themed.Expansion -->
+				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.25</HSBambooForest>
+				
+				
+				
+							<!-- _________________ -->
+				
+				<!-- BiomesTeam.BiomesIslands -->
+				<!-- BIOMES ISLANDS -->
+				
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.15</BiomesIslands_Atoll>
+				
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.2</BiomesIslands_BorealIsland>
+				
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_DesertIsland>
+				
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_DesertArchipelago>
+				
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.2</BiomesIslands_TemperateIsland>
+				
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.2</BiomesIslands_TemperateArchipelago>
+				
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.1</BiomesIslands_TropicalIsland>
+				
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.1</BiomesIslands_TropicalArchipelago>
+				
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_TundraIsland>
+				
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- reel.FrozenForest -->
+				<!-- WINTER TAIGA -->
+				
+				<WinterTaiga MayRequire="reel.FrozenForest">0.04</WinterTaiga>
+				
+				
+				
+				<!-- __________________ -->
+				
+				<!-- SirMashedPotato.MorrowRim -->
+				<!-- "MORROWIND" MOD -->
+				
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0</MorrowRim_Ashlands>
+				
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0</MorrowRim_BlightedAshlands>
+				
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.001</MorrowRim_AshSwamp>
+				
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0</MorrowRim_VolcanicAshlands>
+				
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- pphhyy.gulden -->
+				<!-- FOREST OF GOLD -->
+				
+				<TemperateGuldenForest MayRequire="pphhyy.gulden">0.15</TemperateGuldenForest>
+				
+				<LotRE_MallornForest MayRequire="lordoftherims.elves">0.15</LotRE_MallornForest>
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- deemainiac.securecontainrimworld -->
+				<!-- SCP FOUNDATION -->
+				
+				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0</SCR_SCP610Biome>
+				
+				
+				
+				<!-- _________________ -->
+
+				<!-- regrowth.botr.volcanicicesheet -->
+				<!-- VOLCANIC ICE SHEET -->
+
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.001</RG-VIS_VulcanicIceSheet> <!-- Make me, Helixian. MAKE ME. -->
+				
+				
+				
+				<!-- _________________ -->
+				
+				<!-- ironscruff.primordialgeysers -->
+				<!-- PRIMORDIAL GEYSERS -->
+				
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.1</IronScruff_PrimordialGeysers>
+			</wildBiomes>
+		  <body>ST_FrogLike</body>
+		  <baseBodySize>0.1</baseBodySize>
+		  <baseHealthScale>1</baseHealthScale>
+		  <baseHungerRate>0.1</baseHungerRate>
+		  <foodType>OmnivoreRoughAnimal</foodType>
+		  <leatherDef>Leather_Frog</leatherDef>
+		  <useMeatFrom>ST_BullFrog</useMeatFrom>
+		  <wildness>0.2</wildness>
+		  <nuzzleMtbHours>16</nuzzleMtbHours>
+		  <trainability>Intermediate</trainability>
+		  <petness>0.8</petness>
+		  <lifeExpectancy>4</lifeExpectancy>
+		  <lifeStageAges>
+			<li>
+				<def>AnimalBaby</def>
+				<minAge>0</minAge>
+			</li>
+			<li>
+				<def>AnimalJuvenile</def>
+				<minAge>0.097</minAge>
+			</li>
+			<li>
+				<def>AnimalAdult</def>
+				<minAge>0.25</minAge>
+				<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+				<soundDeath>Pawn_Iguana_Death</soundDeath>
+				<soundCall>Pawn_Iguana_Call</soundCall>
+				<soundAngry>Frog_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+		  <li>AnimalCommon</li>
+		  <li>AnimalFighter</li>
+		  <li>AnimalFrog</li>
+		  <li>StorytimeAnimal</li>
+		</tradeTags>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>			
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>ST_FrogRanged</li>	
+					<li>ST_FrogCommon</li>					
+				</statValues>
+				<statDescriptions>
+					<li>ST_FrogRangedDesc</li>	
+					<li>ST_FrogCommonDesc</li>
+				</statDescriptions>
+				<showImageInInfoCard>true</showImageInInfoCard>
+			</li>
+		</modExtensions>
+	</ThingDef>
+  
+  
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>ST_TreeFrog</defName>
+    <label>bullet tree frog</label>
+    <race>ST_TreeFrog</race>
+    <combatPower>25</combatPower>
+    <ecoSystemWeight>0.1</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Tree_Frog/TreeFrog</texPath>
+          <drawSize>0.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Tree_Frog/TreeFrog</texPath>
+          <drawSize>0.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Frog_Types/Tree_Frog/TreeFrog</texPath>
+          <drawSize>0.7</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.2, 0.2)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+          <drawSize>0.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+</Defs>

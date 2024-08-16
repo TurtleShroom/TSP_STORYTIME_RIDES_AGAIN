@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+		<defName>Alien_Gnome</defName>
+		<label>gnome</label>
+		<description>Gnomes are like a mini-man, because that is what they are! Gnomes, despite their name, are not actually a type of fairy. Rather, the Gnomes known in this galaxy are genetically engineered Xeno-Humans that are faster, need less food to survive, and are more inherently attuned to nature. They have an unique culture and a stunning affinity for and natural talent in cooking.</description>
+		<alienRace>
+			<generalSettings>
+				<maleGenderProbability>0.55</maleGenderProbability>
+				<immuneToAge>false</immuneToAge>
+				<canLayDown>true</canLayDown>
+				<forcedRaceTraitEntries>
+					<li>
+						<options>
+							<li>
+								<defName>Gourmand</defName>
+							</li>
+						</options>
+						<chance>100</chance>
+					</li>
+					<!-- If you have the Mod -->
+					<li>
+						<options>
+							<li MayRequire="morishep.tarojun.onioftherim">
+								<defName>Natures_blessing</defName>
+							</li>
+						</options>
+						<chance>50</chance>
+					</li>
+				</forcedRaceTraitEntries>
+				<maxDamageForSocialfight>1</maxDamageForSocialfight>
+				<humanRecipeImport>true</humanRecipeImport>
+				<notXenophobistTowards>
+					<li>Human</li>
+					<li MayRequire="thecatlover366.oompaloompas">Alien_Loompa</li>
+				</notXenophobistTowards>
+				<alienPartGenerator>
+					<headTypes Inherit="False">
+						<!-- <li>Gnome_Average_Normal</li> -->
+						<li>Male_NarrowPointy</li>
+						<li>Female_NarrowPointy</li>
+						<!--
+						<li>ST_BUSTER_GnomeKidHead_Male</li>
+						<li>ST_BUSTER_GnomeKidHead_Female</li>
+						-->
+					</headTypes>
+					<bodyTypes Inherit="False">
+						<li>Thin</li>
+						<!-- <li>Male</li> -->
+						<li>Female</li>
+						<li MayRequire="Ludeon.Rimworld.Biotech">Baby</li>
+						<li MayRequire="Ludeon.Rimworld.Biotech">Child</li>
+					</bodyTypes>
+					<bodyAddons></bodyAddons>
+					<customDrawSize>(0.5, 0.5)</customDrawSize>
+					<customHeadDrawSize>(0.87, 0.87)</customHeadDrawSize>
+					<customPortraitDrawSize>(0.91, 0.91)</customPortraitDrawSize>
+					<customPortraitHeadDrawSize>(0.92, 0.92)</customPortraitHeadDrawSize>
+					<headOffset>(0.0, -0.016)</headOffset>
+					<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>0.01</weight>
+										<min>RGBA(236, 188, 180)</min>
+										<max>RGBA(230, 182, 172)</max>
+									</li>
+									<li>
+										<weight>0.01</weight>
+										<min>RGBA(234,192,134)</min>
+										<max>RGBA(229,92,84)</max>
+									</li>
+									<li>
+										<weight>20</weight>
+										<only>RGBA(255,235,225)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<min>RGBA(255,224,189)</min>
+										<max>RGBA(250,219,184)</max>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(247,221,194)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(250,230,209)</only>
+									</li>
+									<li>
+										<weight>10</weight>
+										<only>RGBA(255,216,175)</only>
+									</li>
+								</options>
+						  </first>
+						</li>
+						<li>
+							<name>hair</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>10</weight>
+										<min>RGBA(44, 34, 43)</min>
+										<max>RGBA(39, 29, 38)</max>
+									</li>
+									<li>
+										<weight>5</weight>
+										<min>RGBA(95, 72, 56)</min>
+										<max>RGBA(75,62,46)</max>
+									</li>
+									<li>
+										<weight>2</weight>
+										<min>RGBA(184,151,128)</min>
+										<max>RGBA(174,141,118)</max>
+									</li>
+									<li>
+										<weight>1</weight>
+										<only>RGBA(195,165,113)</only>
+									</li>
+									<li>
+										<weight>1</weight>
+										<only>RGBA(144,85,53)</only>
+									</li>
+									<li>
+										<weight>1</weight>
+										<only>RGBA(179,134,105)</only>
+									</li>
+									<li>
+										<weight>1</weight>
+										<only>RGBA(116,89,70)</only>
+									</li>
+									<li>
+										<weight>1</weight>
+										<only>RGBA(176,127,87)</only>
+									</li>
+									<li>
+										<weight>1</weight>
+										<only>RGBA(42,29,23)</only>
+									</li>
+								</options>
+							</first>
+						</li>
+					</colorChannels>
+					<!-- <useGenderedHeads>true</useGenderedHeads> -->
+				</alienPartGenerator>
+				<raceGenes MayRequire="ludeon.rimworld.biotech">
+					<li MayRequire="vanillaracesexpanded.genie,ludeon.rimworld.biotech">
+						<defName MayRequire="vanillaracesexpanded.genie,ludeon.rimworld.biotech">VRE_Curiosity_Cooking</defName>
+						<chance MayRequire="vanillaracesexpanded.genie,ludeon.rimworld.biotech">999</chance>
+					</li>
+				</raceGenes>
+			</generalSettings>
+			<graphicPaths>
+				<body>Things/Pawn/Humanlike/Gnome/Body/</body>
+				<!--
+				<head>Things/Pawn/Humanlike/Heads/</head>
+				<head>Things/Pawn/Humanlike/Gnome/Head/</head>
+				<head>Things/Pawn/Humanlike/Children/Heads/</head>
+				-->
+				<head>
+					<!-- <path>Things/Pawn/Humanlike/Heads/</path> -->
+					<headtypeGraphics>
+						<Male_NarrowPointy>
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Male_Normal_Average</path>
+						</Male_NarrowPointy>
+						<Female_NarrowPointy>
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Female_Normal_Average</path>
+						</Female_NarrowPointy>
+					</headtypeGraphics>
+				</head>
+			</graphicPaths>
+			<relationSettings>
+				<relationChanceModifierSibling>103</relationChanceModifierSibling>
+				<renamer>
+					<li>
+						<relation>Parent</relation>
+						<label>Father</label>
+						<femaleLabel>Mother</femaleLabel>
+					</li>
+					<li>
+						<relation>Child</relation>
+						<label>Gnomelet</label>
+						<femaleLabel>Gnomelet</femaleLabel>
+					</li>
+					<li>
+						<relation>Spouse</relation>
+						<label>Husband</label>
+						<femaleLabel>Wife</femaleLabel>
+					</li>
+					<li>
+						<relation>ExSpouse</relation>
+						<label>Ex-Husband</label>
+						<femaleLabel>Ex-Wife</femaleLabel>
+					</li>
+					<li>
+						<relation>Sibling</relation>
+						<label>Brother</label>
+						<femaleLabel>Sister</femaleLabel>
+					</li>
+					<li>
+						<relation>Fiance</relation>
+						<label>Betrothed</label>
+						<femaleLabel>Betrothed</femaleLabel>
+					</li>
+				</renamer>
+			</relationSettings>
+			<thoughtSettings>
+				<cannotReceiveThoughts>
+					<li MayRequire="morishep.tarojun.onioftherim">AteOniStew</li>
+					<li MayRequire="morishep.tarojun.onioftherim">AteDemonBreathBerriesAsIngredient</li>
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeat_Sacrilegious</li>
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeatAsIngredient_Sacrilegious</li>
+				</cannotReceiveThoughts>
+				<replacerList>
+					<!-- Same benefits as Onis, because Gnomes can appreciate a lot broader cuisine than others -->
+					<li MayRequire="morishep.tarojun.onioftherim">
+						<original MayRequire="morishep.tarojun.onioftherim">AteOniStew</original>
+						<replacer MayRequire="morishep.tarojun.onioftherim">AteOniStewGood</replacer> 
+					</li>
+					<li MayRequire="morishep.tarojun.onioftherim">
+						<original MayRequire="morishep.tarojun.onioftherim">AteDemonBreathBerriesAsIngredient</original>
+						<replacer MayRequire="morishep.tarojun.onioftherim">AteDemonBreathBerriesAsIngredientGood</replacer> 
+					</li>
+					<!-- Gnomes eat worms. Gnomes LOVE worms. Worms may not be insects, but they invoke similar feelings. Ergo, Gnomes also like eating creepy-crawly bugs. -->
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatDirect</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeat_Loved</replacer>
+					</li>
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient_Loved</replacer>
+					</li>
+				</replacerList>
+			</thoughtSettings>
+			<styleSettings>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>true</hasStyle>
+						<bannedTags>
+							<li>Minimal</li>
+							<li>Moustache</li>
+							<li>NoBeard</li>
+						</bannedTags>
+						<!-- options for BeardDef usage -->
+					</value>
+				</li>
+			</styleSettings>
+		</alienRace>
+		<statBases>
+			<MarketValue>500</MarketValue>
+			<MoveSpeed>7</MoveSpeed>
+			<Flammability>1.1</Flammability>
+			<ComfyTemperatureMin>1</ComfyTemperatureMin>
+			<ComfyTemperatureMax>30</ComfyTemperatureMax>
+			<LeatherAmount>40</LeatherAmount>
+			<PsychicSensitivity>0.8</PsychicSensitivity>
+			<ResearchSpeed>0.8</ResearchSpeed>
+			<Mass>20</Mass>
+			<RoyalFavorValue>9</RoyalFavorValue>
+			<PlantWorkSpeed>1.25</PlantWorkSpeed>
+			<ButcheryFleshSpeed>1.33</ButcheryFleshSpeed>
+			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">1.1</HSAU_GhoulismSusceptibility> <!-- Sadly, when they are turned into Hellsing Ghouls, they become normal size. -->
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>0.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>36</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>0.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>36</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<renderTree>Humanlike</renderTree>
+			<nameGenerator>GnomeMaleName</nameGenerator>
+			<nameGeneratorFemale>GnomeFemaleName</nameGeneratorFemale>
+			<useLeatherFrom>Human</useLeatherFrom>
+			<useMeatFrom>Human</useMeatFrom>
+			<bloodDef>Filth_Blood</bloodDef>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>120</lifeExpectancy>
+			<nameCategory>HumanStandard</nameCategory>
+			<body>GnomeBody</body>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHealthScale>0.75</baseHealthScale>
+			<baseHungerRate>0.7</baseHungerRate>
+			<foodType>Meat, VegetableOrFruit, OmnivoreHuman, Fluid, Processed, Meal, Liquor, Kibble</foodType>
+			<gestationPeriodDays>30</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 0.01)</li>
+					<li>(1.01, 1)</li>
+					<li>(2, 0.5)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+				<li>
+					<def>HumanlikeBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>HumanlikeChild</def>
+					<minAge>3</minAge>
+				</li>
+				<li MayRequire="Ludeon.Rimworld.Biotech">
+					<def>HumanlikePreTeenager</def>
+					<minAge>6</minAge>
+				</li>
+				<li>
+					<def>HumanlikeTeenager</def>
+					<minAge>10</minAge>
+				</li>
+				<li>
+					<def>HumanlikeAdult</def>
+					<minAge>14</minAge>
+				</li>
+			</lifeStageAges>
+			<lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
+				<Firefighter>7</Firefighter>
+				<Patient>0</Patient>
+				<Doctor>14</Doctor>
+				<PatientBedRest>0</PatientBedRest>
+				<Childcare MayRequire="Ludeon.Rimworld.Biotech">0</Childcare>
+				<BasicWorker>3</BasicWorker>
+				<Warden>18</Warden>
+				<Handling>7</Handling>
+				<Cooking>0</Cooking>
+				<Hunting>13</Hunting>
+				<Construction>13</Construction>
+				<Growing>2</Growing>
+				<PlantCutting>5</PlantCutting>
+				<Mining>14</Mining>
+				<Smithing>13</Smithing>
+				<Tailoring>6</Tailoring>
+				<Art>4</Art>
+				<Crafting>6</Crafting>
+				<Hauling>13</Hauling>
+				<Cleaning>1</Cleaning>
+				<Research>13</Research>
+			</lifeStageWorkSettings>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<ageGenerationCurve>
+				<points>
+					<li>(0,0)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(0.001,0.43)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(8,26)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(12.5,48)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+					<li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0)</li>  
+					<li MayRequire="Ludeon.Rimworld.Biotech">(13,1)</li>      
+					<li MayRequire="Ludeon.Rimworld.Biotech">(13.001,52)</li><!-- End exclude -->
+					<li MayRequire="Ludeon.Rimworld.Biotech">(13.999,50)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(14.001,0)</li>
+					<li>(16,10)</li>
+					<li>(18,50)</li>
+					<li>(21,200)</li>
+					<li>(25,200)</li>
+					<li>(50,20)</li>
+					<li>(70,10)</li>
+					<li>(90,8)</li>
+					<li>(110,0)</li>
+					<li>(120,0)</li>
+					<li>(130,0)</li>
+				</points>
+			</ageGenerationCurve>
+			<hediffGiverSets>
+				<li>OrganicStandard</li>
+				<li>Human</li>
+			</hediffGiverSets>
+		</race>
+		<recipes>
+			<!-- ▲ replaced by <humanRecipeImport>true</humanRecipeImport> in general settings!garbage day ▲ -->
+			<li>InstallArchotechEye</li>
+			<li>InstallArchotechLeg</li>
+			<li>InstallPowerClaw</li>
+			<li>InstallBionicEye</li>
+			<li>InstallBionicLeg</li>
+			<li>InstallBionicHeart</li>
+			<li>InstallBionicStomach</li>
+			<li>InstallBionicEar</li>
+			<li>InstallSimpleProstheticArm</li>
+			<li>InstallSimpleProstheticLeg</li>
+			<li>InstallSimpleProstheticHeart</li>
+			<li>InstallCochlearImplant</li>
+			<li>InstallPegLeg</li>
+			<li>InstallWoodenFoot</li>
+			<li>InstallDenture</li>
+			<li>InstallJoywire</li>
+			<li>InstallPainstopper</li>
+			<li>InstallNaturalHeart</li>
+			<li>InstallNaturalLung</li>
+			<li>InstallNaturalLiver</li>
+			<li>ExciseCarcinoma</li>
+			<li>AdministerMechSerumHealer</li>	
+			<li>RemoveBodyPart</li>
+			<li>Euthanize</li>
+			<li>Anesthetize</li>
+			<li>CureScaria</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">Vasectomy</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">ReverseVasectomy</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">TubalLigation</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">ExtractOvum</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">ExtractHemogenPack</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">BloodTransfusion</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">ImplantXenogerm</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">ImplantIUD</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">RemoveIUD</li>
+			<li MayRequire="Ludeon.Rimworld.Biotech">TerminatePregnancy</li>
+		</recipes>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+				<hediffname>HedGnome</hediffname>
+			</li>
+		</comps>
+		<modExtensions>
+		</modExtensions>
+	</AlienRace.ThingDef_AlienRace>
+	
+	
+	<AlienRace.RaceSettings>
+		<defName>GnomeRaceSettings</defName>
+		<pawnKindSettings>
+			<startingColonists>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>PlayerGnome</li>
+							</kindDefs>
+							<chance>10.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerTribe</li>
+						<li>PlayerColony</li>
+					</factionDefs>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Royalty">
+					<pawnKindEntries MayRequire="Ludeon.RimWorld.Royalty">
+						<li>
+							<kindDefs MayRequire="Ludeon.RimWorld.Royalty">
+								<li MayRequire="Ludeon.RimWorld.Royalty">TSP_ST_RoyaltyGnoble</li>
+							</kindDefs>
+							<chance MayRequire="Ludeon.RimWorld.Royalty">25</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs MayRequire="Ludeon.RimWorld.Royalty">
+						<li MayRequire="Ludeon.RimWorld.Royalty">Empire</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty,oskarpotocki.vfe.empire">VFEE_NewFamily</li>
+					</factionDefs>
+				</li>
+				<!--
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>ForgPawnKindDef</li>
+							</kindDefs>
+							<chance>1</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>TreeGnomeEmpire</li>
+						<li MayRequire="Emilskin.forgRace.Forgs,oskarpotocki.vfe.empire">VFEE_NewFamily</li>
+					</factionDefs>
+				</li>
+				-->
+			</startingColonists>
+			<alienslavekinds>
+				<li>
+					<kindDefs>
+						<li>PlayerGnome</li>
+					</kindDefs>
+					<chance>20</chance>
+				</li>
+			</alienslavekinds>
+			<alienrefugeekinds>
+				<li>
+					<kindDefs>
+						<li>PlayerGnome</li>
+						<li>TSP_ST_RoyaltyGnoble</li>
+					</kindDefs>
+					<chance>6</chance>
+				</li>
+			</alienrefugeekinds>
+			<alienwandererkinds>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>PlayerGnome</li>
+								<li>TSP_ST_GnomePeasant</li>
+								<li>TSP_ST_RoyaltyGnoble</li>
+							</kindDefs>
+							<chance>14</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerColony</li>
+						<li>PlayerTribe</li>
+					</factionDefs>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Royalty">
+					<pawnKindEntries MayRequire="Ludeon.RimWorld.Royalty">
+						<li MayRequire="Ludeon.RimWorld.Royalty">
+							<kindDefs MayRequire="Ludeon.RimWorld.Royalty">
+								<li>TSP_ST_RoyaltyGnoble</li>
+							</kindDefs>
+							<chance MayRequire="Ludeon.RimWorld.Royalty">25</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs MayRequire="Ludeon.RimWorld.Royalty">
+						<li MayRequire="Ludeon.RimWorld.Royalty">Empire</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty,oskarpotocki.vfe.empire">VFEE_NewFamily</li>
+					</factionDefs>
+				</li>
+			</alienwandererkinds>
+		</pawnKindSettings>
+	</AlienRace.RaceSettings>
+</Defs>

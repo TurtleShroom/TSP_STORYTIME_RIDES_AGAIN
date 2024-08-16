@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Delete the Recipe if it already exists -->
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CC"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CC"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CL"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CL"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+	<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_LCCC"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_LCCC"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+
+	<!-- Now we add it back -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef>
+					<defName>TSP_ZAL_FruitBlend_CC</defName>
+					<label>Blend fruits (x200)</label>
+					<description>Chop up a butt ton of fruit, making a blend for cooking.</description>
+					<jobString>Blending fruit.</jobString>
+					<workAmount>5500</workAmount>
+					<workSpeedStat>CookSpeed</workSpeedStat>
+					<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+					<effectWorking>ButcherFlesh</effectWorking>
+					<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+					<ingredients>
+						<li>
+							<filter>
+								<categories>
+									<li>PlantFoodRaw</li>
+								</categories>
+								<disallowedThingDefs>
+									<li>FruitBlendRaw</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>9</count>
+						</li>
+					</ingredients>
+					<products>
+						<FruitBlendRaw>200</FruitBlendRaw>
+					</products>
+					<fixedIngredientFilter>
+						<categories>
+							<li>PlantFoodRaw</li>
+						</categories>
+						<disallowedThingDefs>
+							<li>FruitBlendRaw</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<categories>
+							<li>PlantFoodRaw</li>
+						</categories>
+					</defaultIngredientFilter>
+					<workSkill>Cooking</workSkill>
+					<recipeUsers>
+						<li>TableButcher</li>
+					</recipeUsers>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_ZAL_FruitBlend_CL</defName>
+					<label>Blend fruits (x400)</label>
+					<description>Chop up a butt ton of fruit, making a blend for cooking.</description>
+					<jobString>Blending fruit.</jobString>
+					<workAmount>7000</workAmount>
+					<workSpeedStat>CookSpeed</workSpeedStat>
+					<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+					<effectWorking>ButcherFlesh</effectWorking>
+					<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+					<ingredients>
+						<li>
+							<filter>
+								<categories>
+									<li>PlantFoodRaw</li>
+								</categories>
+								<disallowedThingDefs>
+									<li>FruitBlendRaw</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>18</count>
+						</li>
+					</ingredients>
+					<products>
+						<FruitBlendRaw>400</FruitBlendRaw>
+					</products>
+					<fixedIngredientFilter>
+						<categories>
+							<li>PlantFoodRaw</li>
+						</categories>
+						<disallowedThingDefs>
+							<li>FruitBlendRaw</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<categories>
+							<li>PlantFoodRaw</li>
+						</categories>
+					</defaultIngredientFilter>
+					<workSkill>Cooking</workSkill>
+					<recipeUsers>
+						<li>TableButcher</li>
+					</recipeUsers>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_ZAL_FruitBlend_LCCC</defName>
+					<label>Blend fruits (x800)</label>
+					<description>Chop up a butt ton of fruit, making a blend for cooking.</description>
+					<jobString>Blending fruit.</jobString>
+					<workAmount>8000</workAmount>
+					<workSpeedStat>CookSpeed</workSpeedStat>
+					<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+					<effectWorking>ButcherFlesh</effectWorking>
+					<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+					<ingredients>
+						<li>
+							<filter>
+								<categories>
+									<li>PlantFoodRaw</li>
+								</categories>
+								<disallowedThingDefs>
+									<li>FruitBlendRaw</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>36</count>
+						</li>
+					</ingredients>
+					<products>
+						<FruitBlendRaw>800</FruitBlendRaw>
+					</products>
+					<fixedIngredientFilter>
+						<categories>
+							<li>PlantFoodRaw</li>
+						</categories>
+						<disallowedThingDefs>
+							<li>FruitBlendRaw</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<categories>
+							<li>PlantFoodRaw</li>
+						</categories>
+					</defaultIngredientFilter>
+					<workSkill>Cooking</workSkill>
+					<recipeUsers>
+						<li>TableButcher</li>
+					</recipeUsers>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="FruitBlendFive"]/ingredients</xpath>
+			<value>
+				<ingredients>
+					<li>
+						<filter>
+							<categories>
+								<li>VCE_Fruit</li>
+							</categories>
+							<disallowedThingDefs>
+								<li>FruitBlendRaw</li>
+							</disallowedThingDefs>
+						</filter>
+						<count>0.25</count>
+					</li>
+				</ingredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="FruitBlendTwenty"]/ingredients</xpath>
+			<value>
+				<ingredients>
+					<li>
+						<filter>
+							<categories>
+								<li>VCE_Fruit</li>
+							</categories>
+							<disallowedThingDefs>
+								<li>FruitBlendRaw</li>
+							</disallowedThingDefs>
+						</filter>
+						<count>1</count>
+					</li>
+				</ingredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="FruitBlendFifty"]/ingredients</xpath>
+			<value>
+				<ingredients>
+					<li>
+						<filter>
+							<categories>
+								<li>VCE_Fruit</li>
+							</categories>
+							<disallowedThingDefs>
+								<li>FruitBlendRaw</li>
+							</disallowedThingDefs>
+						</filter>
+						<count>2.5</count>
+					</li>
+				</ingredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="FruitBlendSevenFive"]/ingredients</xpath>
+			<value>
+				<ingredients>
+					<li>
+						<filter>
+							<categories>
+								<li>VCE_Fruit</li>
+							</categories>
+							<disallowedThingDefs>
+								<li>FruitBlendRaw</li>
+							</disallowedThingDefs>
+						</filter>
+						<count>3.75</count>
+					</li>
+				</ingredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="FruitBlendHundo"]/ingredients</xpath>
+			<value>
+				<ingredients>
+					<li>
+						<filter>
+							<categories>
+								<li>VCE_Fruit</li>
+							</categories>
+							<disallowedThingDefs>
+								<li>FruitBlendRaw</li>
+							</disallowedThingDefs>
+						</filter>
+						<count>5</count>
+					</li>
+				</ingredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CC"]/ingredients</xpath>
+			<value>
+				<ingredients>
+					<li>
+						<filter>
+							<categories>
+								<li>VCE_Fruit</li>
+							</categories>
+							<disallowedThingDefs>
+								<li>FruitBlendRaw</li>
+							</disallowedThingDefs>
+						</filter>
+						<count>9</count>
+					</li>
+				</ingredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CL"]/ingredients</xpath>
+			<value>
+				<ingredients>
+					<li>
+						<filter>
+							<categories>
+								<li>VCE_Fruit</li>
+							</categories>
+							<disallowedThingDefs>
+								<li>FruitBlendRaw</li>
+							</disallowedThingDefs>
+						</filter>
+						<count>18</count>
+					</li>
+				</ingredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_LCCC"]/ingredients</xpath>
+			<value>
+				<ingredients>
+					<li>
+						<filter>
+							<categories>
+								<li>VCE_Fruit</li>
+							</categories>
+							<disallowedThingDefs>
+								<li>FruitBlendRaw</li>
+							</disallowedThingDefs>
+						</filter>
+						<count>36</count>
+					</li>
+				</ingredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]/thingCategories</xpath>
+			<value>
+				<thingCategories Inherit="False">
+					<li>VCE_Fruit</li>
+					<li>PlantFoodRaw</li>
+				</thingCategories>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]/stackLimit</xpath>
+			<value>
+				<stackLimit>1000</stackLimit>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

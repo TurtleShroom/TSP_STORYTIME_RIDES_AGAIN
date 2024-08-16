@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="KomodonAnimalThingBase">
+    <defName>Master_Oog</defName>
+    <label>Oogway tortoise</label>
+    <devNote>misc</devNote>
+    <description>Master Oogway is a powerful being. This turtle could clap your whole colony!</description>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+      <MarketValue>1750</MarketValue>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+	  <ArmorRating_Heat>0.9</ArmorRating_Heat>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+	  <MeatAmount>100</MeatAmount>
+	  <LeatherAmount>125</LeatherAmount>
+    </statBases>
+    <uiIconScale>1.25</uiIconScale>
+    <tools>
+      <li>
+        <label>beak</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>75</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>TurtleBeakAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>EggTortoiseFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>6</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1~3</eggCountRange>
+      </li>
+    </comps>
+    <race>
+      <body>TurtleLike</body>
+      <baseBodySize>2</baseBodySize>
+      <baseHungerRate>0.825</baseHungerRate>
+      <baseHealthScale>1</baseHealthScale>
+      <foodType>Meat, CarnivoreAnimal, CarnivoreAnimalStrict, OvivoreAnimal, Plant, Corpse, Seed, Fungus, Meal, Processed, Fluid, Liquor, Kibble</foodType>
+      <leatherDef>Leather_Lizard</leatherDef>
+      <wildness>0.91</wildness>
+      <manhunterOnDamageChance>2</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.9</manhunterOnTameFailChance>
+      <lifeExpectancy>1800</lifeExpectancy>
+	  <useMeatFrom>Tortoise</useMeatFrom>
+	  <predator Inherit="False">true</predator>
+	  <maxPreyBodySize>0.41</maxPreyBodySize>
+	  <canBePredatorPrey>false</canBePredatorPrey>
+	  <willNeverEat>
+			<li>Corpse_Tortoise</li>
+			<li>Corpse_ST_Exanth_Komodon</li>
+			<li>Corpse_Master_Oog</li>
+			<li>Corpse_VQ_Oogway</li>
+	  </willNeverEat>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.7</minAge>
+          <soundWounded>Pawn_Tortoise_Wounded</soundWounded>
+          <soundDeath>Pawn_Tortoise_Death</soundDeath>
+          <soundCall>Pawn_Tortoise_Call</soundCall>
+          <soundAngry>Pawn_Tortoise_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		  <wildBiomes Inherit="False">
+				<!-- RimWorld.Core -->
+				<!-- VANILLA RENDITION -->
+
+				<BorealForest>0.001</BorealForest>
+
+				<Tundra>0</Tundra>
+
+				<ColdBog>0.001</ColdBog>
+
+				<IceSheet>0</IceSheet>
+
+				<SeaIce>0</SeaIce>
+
+				<TemperateForest>0.001</TemperateForest>
+
+				<TemperateSwamp>0.001</TemperateSwamp>
+
+				<TropicalRainforest>0.005</TropicalRainforest>
+
+				<TropicalSwamp>0.005</TropicalSwamp>
+
+				<AridShrubland>0.001</AridShrubland>
+
+				<Desert>0.001</Desert>
+
+				<ExtremeDesert>0.001</ExtremeDesert>
+
+
+
+
+				<!-- ___________________ -->			
+				<!-- Mod Biomes -->
+				<!-- ___________________ -->
+
+				<!-- sarg.alphabiomes -->
+				<!-- ALPHA BIOMES -->
+				
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.008</AB_FeraliskInfestedJungle>
+
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.001</AB_GallatrossGraveyard>
+
+				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.001</AB_GelatinousSuperorganism>
+
+				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.008</AB_MycoticJungle>
+
+				<AB_OcularForest MayRequire="sarg.alphabiomes">0.001</AB_OcularForest>
+
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.001</AB_PyroclasticConflagration>
+
+				<AB_RockyCrags MayRequire="sarg.alphabiomes">0.008</AB_RockyCrags>
+
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.004</AB_TarPits>
+				
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.008</AB_MiasmicMangrove>
+			
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.001</AB_IdyllicMeadows>
+
+
+				<!-- ___________________ -->
+
+				<!-- BiomesTeam.Oasis -->
+				<!-- CHROMATIC OASIS -->
+
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.0015</BMT_ChromaticOasis>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.AdvancedBiomes -->
+				<!-- ADVANCED BIOMES -->
+
+				<Savanna MayRequire="Mlie.AdvancedBiomes">0.001</Savanna>
+				
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.005</Volcano>
+				
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.003</Wetland>
+
+
+				<!-- ____________________ -->
+
+				<!-- zylle.MoreVanillaBiomes -->
+				<!-- More Vanilla Biomes -->
+
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_AlpineMeadow>
+
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_CloudForest>
+
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_CoastalDunes>
+
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_DesertOasis>
+
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.002</ZBiome_Grasslands>
+
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.003</ZBiome_Marsh>
+
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_Sandbar_NoBeach>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.NaturesPrettySweet -->
+				<!-- NATURE IS PRETTY SWEET -->
+
+				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_VolcanicFlow>
+
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.008</TKKN_RedwoodForest>
+
+				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.002</TKKN_Grasslands> <!-- PRAIRIE -->
+
+				<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.002</TKKN_Savanna>
+
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.002</TKKN_Oasis>
+				
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_GlacialShield>
+				
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.008</ZBiome_Badlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- Heis.Edo.Themed.Expansion -->
+				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.005</HSBambooForest>
+
+
+
+				<!-- _________________ -->
+				
+				<!-- BiomesTeam.BiomesIslands -->
+				<!-- BIOMES ISLANDS -->
+				
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.008</BiomesIslands_Atoll>
+				
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_BorealIsland>
+				
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.002</BiomesIslands_DesertIsland>
+				
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.002</BiomesIslands_DesertArchipelago>
+				
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TemperateIsland>
+				
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TemperateArchipelago>
+				
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.007</BiomesIslands_TropicalIsland>
+				
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.009</BiomesIslands_TropicalArchipelago>
+				
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TundraIsland>
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- reel.FrozenForest -->
+				<!-- WINTER TAIGA -->
+				
+				<WinterTaiga MayRequire="reel.FrozenForest">0.001</WinterTaiga>
+				
+				
+				
+				<!-- __________________ -->
+				
+				<!-- SirMashedPotato.MorrowRim -->
+				<!-- "MORROWIND" MOD -->
+				
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.001</MorrowRim_Ashlands>
+				
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.009</MorrowRim_BlightedAshlands>
+				
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.002</MorrowRim_AshSwamp>
+				
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0.009</MorrowRim_VolcanicAshlands>
+				
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- pphhyy.gulden -->
+				<!-- FOREST OF GOLD -->
+				<TemperateGuldenForest MayRequire="pphhyy.gulden">0.004</TemperateGuldenForest>
+				
+				<LotRE_MallornForest MayRequire="lordoftherims.elves">0.008</LotRE_MallornForest>
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- deemainiac.securecontainrimworld -->
+				<!-- SCP FOUNDATION -->
+				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0.1</SCR_SCP610Biome>
+				
+				
+				<!-- _________________ -->
+
+				<!-- regrowth.botr.volcanicicesheet -->
+				<!-- VOLCANIC ICE SHEET -->
+
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.001</RG-VIS_VulcanicIceSheet> <!-- Make me, Helixian. MAKE ME. -->
+				
+				
+				<!-- _________________ -->
+				
+				<!-- ironscruff.primordialgeysers -->
+				<!-- PRIMORDIAL GEYSERS -->
+				
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.003</IronScruff_PrimordialGeysers>
+				
+				
+				<BMT_CrystalCaverns MayRequire="BiomesTeam.BiomesCaverns">0.04</BMT_CrystalCaverns>
+				<BMT_EarthenDepths MayRequire="BiomesTeam.BiomesCaverns">0.5</BMT_EarthenDepths>
+				<BMT_FungalForest MayRequire="BiomesTeam.BiomesCaverns">0.001</BMT_FungalForest>
+	  </wildBiomes>
+    </race>
+    <tradeTags>
+      <li>AnimalFighter</li>
+	  <li>StorytimeAnimal</li>
+	  <li>AnimalInsectSpace</li> <!-- Can breathe in space -->
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Master_Oog</defName>
+    <label>Oogway tortoise</label>
+    <race>Master_Oog</race>
+    <combatPower>650</combatPower>
+    <ecoSystemWeight>0</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawns/Oogway/Oogway</texPath>
+          <drawSize>0.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawns/Oogway/Oogway</texPath>
+          <drawSize>1.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawns/Oogway/Oogway</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.45, 0.45, 0.45)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="KomodonAnimalThingBase">
+    <defName>VQ_Oogway</defName>
+    <label>Veequeue tortoise</label>
+    <devNote>misc</devNote>
+    <description>Veequeue is a powerful being. This turtle could clap your whole colony!</description>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+      <MarketValue>1750</MarketValue>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+	  <ArmorRating_Heat>0.9</ArmorRating_Heat>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+	  <MeatAmount>100</MeatAmount>
+	  <LeatherAmount>125</LeatherAmount>
+    </statBases>
+    <uiIconScale>1.25</uiIconScale>
+    <tools>
+      <li>
+        <label>beak</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>75</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>TurtleBeakAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>EggTortoiseFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>6</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1~3</eggCountRange>
+      </li>
+    </comps>
+    <race>
+      <body>TurtleLike</body>
+      <baseBodySize>2</baseBodySize>
+      <baseHungerRate>0.825</baseHungerRate>
+      <baseHealthScale>1</baseHealthScale>
+      <foodType>OmnivoreRoughAnimal, Meal, Processed, Fluid, Liquor, Kibble</foodType>
+      <leatherDef>Leather_Lizard</leatherDef>
+	  <useMeatFrom>Tortoise</useMeatFrom>
+      <wildness>0.91</wildness>
+      <lifeExpectancy>1800</lifeExpectancy>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.95</manhunterOnTameFailChance>
+	  <predator Inherit="False">true</predator>
+	  <maxPreyBodySize>0.41</maxPreyBodySize>
+	  <canBePredatorPrey>false</canBePredatorPrey>
+	  <willNeverEat>
+			<li>Corpse_Tortoise</li>
+			<li>Corpse_ST_Exanth_Komodon</li>
+			<li>Corpse_Master_Oog</li>
+			<li>Corpse_VQ_Oogway</li>
+	  </willNeverEat>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.7</minAge>
+          <soundWounded>Pawn_Tortoise_Wounded</soundWounded>
+          <soundDeath>Pawn_Tortoise_Death</soundDeath>
+          <soundCall>Pawn_Tortoise_Call</soundCall>
+          <soundAngry>Pawn_Tortoise_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		  <wildBiomes Inherit="False">
+				<!-- RimWorld.Core -->
+				<!-- VANILLA RENDITION -->
+
+				<BorealForest>0.001</BorealForest>
+
+				<Tundra>0</Tundra>
+
+				<ColdBog>0.001</ColdBog>
+
+				<IceSheet>0</IceSheet>
+
+				<SeaIce>0</SeaIce>
+
+				<TemperateForest>0.001</TemperateForest>
+
+				<TemperateSwamp>0.001</TemperateSwamp>
+
+				<TropicalRainforest>0.005</TropicalRainforest>
+
+				<TropicalSwamp>0.005</TropicalSwamp>
+
+				<AridShrubland>0.001</AridShrubland>
+
+				<Desert>0.001</Desert>
+
+				<ExtremeDesert>0.001</ExtremeDesert>
+
+
+
+
+				<!-- ___________________ -->			
+				<!-- Mod Biomes -->
+				<!-- ___________________ -->
+
+				<!-- sarg.alphabiomes -->
+				<!-- ALPHA BIOMES -->
+				
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.008</AB_FeraliskInfestedJungle>
+
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.001</AB_GallatrossGraveyard>
+
+				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.001</AB_GelatinousSuperorganism>
+
+				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.008</AB_MycoticJungle>
+
+				<AB_OcularForest MayRequire="sarg.alphabiomes">0.001</AB_OcularForest>
+
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.001</AB_PyroclasticConflagration>
+
+				<AB_RockyCrags MayRequire="sarg.alphabiomes">0.008</AB_RockyCrags>
+
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.004</AB_TarPits>
+				
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.008</AB_MiasmicMangrove>
+			
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.001</AB_IdyllicMeadows>
+
+
+				<!-- ___________________ -->
+
+				<!-- BiomesTeam.Oasis -->
+				<!-- CHROMATIC OASIS -->
+
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.0015</BMT_ChromaticOasis>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.AdvancedBiomes -->
+				<!-- ADVANCED BIOMES -->
+
+				<Savanna MayRequire="Mlie.AdvancedBiomes">0.001</Savanna>
+				
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.005</Volcano>
+				
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.003</Wetland>
+
+
+				<!-- ____________________ -->
+
+				<!-- zylle.MoreVanillaBiomes -->
+				<!-- More Vanilla Biomes -->
+
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_AlpineMeadow>
+
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_CloudForest>
+
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_CoastalDunes>
+
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_DesertOasis>
+
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.002</ZBiome_Grasslands>
+
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.003</ZBiome_Marsh>
+
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.005</ZBiome_Sandbar_NoBeach>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.NaturesPrettySweet -->
+				<!-- NATURE IS PRETTY SWEET -->
+
+				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_VolcanicFlow>
+
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.008</TKKN_RedwoodForest>
+
+				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.002</TKKN_Grasslands> <!-- PRAIRIE -->
+
+				<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.002</TKKN_Savanna>
+
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.002</TKKN_Oasis>
+				
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_GlacialShield>
+				
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.008</ZBiome_Badlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- Heis.Edo.Themed.Expansion -->
+				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.005</HSBambooForest>
+
+
+
+				<!-- _________________ -->
+				
+				<!-- BiomesTeam.BiomesIslands -->
+				<!-- BIOMES ISLANDS -->
+				
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.008</BiomesIslands_Atoll>
+				
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_BorealIsland>
+				
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.002</BiomesIslands_DesertIsland>
+				
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.002</BiomesIslands_DesertArchipelago>
+				
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TemperateIsland>
+				
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TemperateArchipelago>
+				
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.007</BiomesIslands_TropicalIsland>
+				
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.009</BiomesIslands_TropicalArchipelago>
+				
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TundraIsland>
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- reel.FrozenForest -->
+				<!-- WINTER TAIGA -->
+				
+				<WinterTaiga MayRequire="reel.FrozenForest">0.001</WinterTaiga>
+				
+				
+				
+				<!-- __________________ -->
+				
+				<!-- SirMashedPotato.MorrowRim -->
+				<!-- "MORROWIND" MOD -->
+				
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.001</MorrowRim_Ashlands>
+				
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.009</MorrowRim_BlightedAshlands>
+				
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.002</MorrowRim_AshSwamp>
+				
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0.009</MorrowRim_VolcanicAshlands>
+				
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- pphhyy.gulden -->
+				<!-- FOREST OF GOLD -->
+				<TemperateGuldenForest MayRequire="pphhyy.gulden">0.004</TemperateGuldenForest>
+				
+				<LotRE_MallornForest MayRequire="lordoftherims.elves">0.008</LotRE_MallornForest>
+				
+				
+				<!-- ___________________ -->
+				
+				<!-- deemainiac.securecontainrimworld -->
+				<!-- SCP FOUNDATION -->
+				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0.1</SCR_SCP610Biome>
+				
+				
+				<!-- _________________ -->
+
+				<!-- regrowth.botr.volcanicicesheet -->
+				<!-- VOLCANIC ICE SHEET -->
+
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.001</RG-VIS_VulcanicIceSheet> <!-- Make me, Helixian. MAKE ME. -->
+				
+				
+				<!-- _________________ -->
+				
+				<!-- ironscruff.primordialgeysers -->
+				<!-- PRIMORDIAL GEYSERS -->
+				
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.003</IronScruff_PrimordialGeysers>
+				
+				
+				<BMT_CrystalCaverns MayRequire="BiomesTeam.BiomesCaverns">0.04</BMT_CrystalCaverns>
+				<BMT_EarthenDepths MayRequire="BiomesTeam.BiomesCaverns">0.5</BMT_EarthenDepths>
+				<BMT_FungalForest MayRequire="BiomesTeam.BiomesCaverns">0.001</BMT_FungalForest>
+	  </wildBiomes>
+    </race>
+    <tradeTags>
+      <li>AnimalFighter</li>
+	  <li>AnimalRare</li>
+	  <li>AnimalInsectSpace</li> <!-- Can breathe in space -->
+	  <li>StorytimeAnimal</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>VQ_Oogway</defName>
+    <label>Veequeue tortoise</label>
+    <race>VQ_Oogway</race>
+    <combatPower>650</combatPower>
+    <ecoSystemWeight>0</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawns/Veq/Veq</texPath>
+          <drawSize>0.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawns/Veq/Veq</texPath>
+          <drawSize>1.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawns/Veq/Veq</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.45, 0.45, 0.45)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

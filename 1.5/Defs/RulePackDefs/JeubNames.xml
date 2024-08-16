@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RulePackDef>
+		<defName>TSP_ST_NamerPerson_Jeub</defName>
+		<include>
+			<li>JeubMaleName</li>
+			<li>JeubFemaleName</li>
+			<li>JeubSettlementName</li>
+			<li>NamerFactionMechanoid</li>
+			<li>JeubFestivalName</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[JeubMaleList] [JeubFamilyList]</li>
+				<li>name->[JeubMaleList] [JeubFamilyList]</li>
+				<li>name->[JeubMaleList] J[msyl]jeub</li>
+				<li>name->[JeubMaleList] J[msyl][msyl]jeub</li>
+				<li>name->[JeubMaleList] 'J[msyl]' [JeubFamilyList]</li>
+				<li>name->Jeb[msyl] J[msyl]bush</li>
+				<li>name->[JeubFemaleList] [JeubFamilyList]</li>
+				<li>name->[JeubFemaleList] J[msyl]jeub</li>
+				<li>name->[JeubFemaleList] J[msyl][msyl]jeub</li>
+				<li>name->[JeubFemaleList] 'J[msyl]' [JeubFamilyList]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>JeubMaleList</keyword>
+					<path>JeubNames/JeubMale</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>JeubFemaleList</keyword>
+					<path>JeubNames/JeubFemale</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>JeubFamilyList</keyword>
+					<path>JeubNames/JeubLastNames</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>JeubZonePack</keyword>
+					<path>JeubNames/JeubSettlement</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>JeubMaleName</defName>
+		<include>
+			<li>NamerFactionMechanoid</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[JeubMaleList] [JeubFamilyList]</li>
+				<li>name->[JeubMaleList] [JeubFamilyList]</li>
+				<li>name->[JeubMaleList] J[msyl]jeub</li>
+				<li>name->[JeubMaleList] J[msyl][msyl]jeub</li>
+				<li>name->[JeubMaleList] 'J[msyl]' [JeubFamilyList]</li>
+				<li>name->Jeb[msyl] J[msyl]bush</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>JeubMaleList</keyword>
+					<path>JeubNames/JeubMale</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>JeubFamilyList</keyword>
+					<path>JeubNames/JeubLastNames</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>JeubFemaleName</defName>
+		<include>
+			<li>NamerFactionMechanoid</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[JeubFemaleList] [JeubFamilyList]</li>
+				<li>name->[JeubFemaleList] J[msyl]jeub</li>
+				<li>name->[JeubFemaleList] J[msyl][msyl]jeub</li>
+				<li>name->[JeubFemaleList] 'J[msyl]' [JeubFamilyList]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>JeubFemaleList</keyword>
+					<path>JeubNames/JeubFemale</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>JeubFamilyList</keyword>
+					<path>JeubNames/JeubLastNames</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>JeubSettlementName</defName>
+		<include>
+			<li>NamerFactionMechanoid</li>
+		</include>
+		<rulePack>
+		  <rulesStrings>
+			<li>name-&gt;[JeubZonePack]</li>
+			<li>name-&gt;[JeubZonePack]</li>
+			<li>name-&gt;[JeubZonePack]</li>
+			<li>name-&gt;[msyl] Jeub Hive</li>
+			<li>name-&gt;[Enemy] Jeub Hive</li>
+			<li>name-&gt;[Enemy] [Enemy] Jeub Hive</li>
+			<li>name-&gt;Rata[msyl]</li>
+			<li>name-&gt;Rata [TerrainFeature]</li>
+			<li>name-&gt;Rata [ConceptBadass]</li>
+		  </rulesStrings>
+		  <rulesRaw>
+			<li Class="Rule_File">
+			  <keyword>JeubZonePack</keyword>
+			  <path>JeubNames/JeubSettlement</path>
+			</li>
+		  </rulesRaw>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>JeubFestivalName</defName>
+		<include>
+			<li>NamerFactionMechanoid</li>
+		</include>
+		<rulePack>
+		  <rulesStrings>
+			<li>festivalName->Rata[msyl][msyl] Festival</li>
+			<li>festivalName->Rata[msyl][msyl] Party</li>
+			<li>festivalName->Rata[msyl][msyl] Commemoration</li>
+			<li>festivalName->Rata[msyl][msyl] Shindig</li>
+			<li>festivalName->Rata[msyl][msyl] Gathering</li>
+			<li>festivalName->Celebration for [JeubZonePack]</li>
+			<li>festival->Festival</li>
+			<li>festival->Festivities</li>
+			<li>festival->Party</li>
+		  </rulesStrings>
+		  <rulesRaw>
+			<li Class="Rule_File">
+			  <keyword>JeubZonePack</keyword>
+			  <path>JeubNames/JeubSettlement</path>
+			</li>
+		  </rulesRaw>
+		</rulePack>
+	</RulePackDef>
+</Defs>

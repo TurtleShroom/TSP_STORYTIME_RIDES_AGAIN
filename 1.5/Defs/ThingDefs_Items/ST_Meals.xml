@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="MealBase">
+		<defName>MeatNugget</defName>
+		<label>Meat Nugget</label>
+		<description>A nugget made of meat.</description>
+		<graphicData>
+		  <texPath>Things/Items/Resources/MeatNugget</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>1.25</drawSize>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.25</DeteriorationRate>
+		  <MarketValue>8</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>450</WorkToMake>
+		  <Nutrition>1</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>MealSimple</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <foodType>Meal, CarnivoreAnimalStrict, CarnivoreAnimal, Meat, Corpse</foodType>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>ST_Hed_MeatNugget</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps Inherit="False">
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4.75</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>GnomeMeat</li>
+		</tradeTags>
+	</ThingDef>
+	  
+	<ThingDef ParentName="MealBase">
+		<defName>PadCandy</defName>
+		<label>Directional Pad Candy</label>
+		<description>"Why?" \n n\ Directional Pad Candy is so named after an ancient design for the human interface devices between a primitive human and his video game console. In a time before full game immersion, augmented reality, and neural interfaces like those of modern games, video games had to accept input by the physical manipulation of digital buttons and analog levers with human hands. The Directional Pad, or "D-Pad" for short, accepted input in one of the four cardinal directions, with no intermediate values. \n \n The candy itself is not very tasty; its sweetness is instead "enjoyed" by the subconscious. Eating Directional Pad Candy will increase the Consciousness of anyone that consumes it for a brief period of time.</description>
+		<graphicData>
+		  <texPath>Things/Items/Resources/PadCandy</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>2</drawSize>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.25</DeteriorationRate>
+		  <MarketValue>20</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>450</WorkToMake>
+		  <Nutrition>0.1</Nutrition>
+		</statBases>
+		<ingestible>
+		  <preferability>RawTasty</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>ST_AteCandy_DPAD</hediffDef>
+				<severity>1</severity>
+			</li>
+			<li Class="IngestionOutcomeDoer_OffsetNeed">
+				<need>Rest</need>
+				<offset>1</offset>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps Inherit="False">
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>17</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>GnomeDessert</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="MealBase">
+		<defName>Fuh</defName>
+		<label>Fuh</label>
+		<description>Fuh is an ornamental dish created using Gnome Fiber, cheese, and either meat or vegetables. It is placed in a bowl and the fiber is suspended on sticks to form a sort of "canopy". In addition to being aesthetically pleasing, the entire thing is edible. Fuh is easy to make and tastes delightful.</description>
+		<graphicData>
+		  <texPath>Things/Items/Resources/Fuh</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1.3</drawSize>
+		</graphicData>
+		<statBases>
+		  <DeteriorationRate>0.25</DeteriorationRate>
+		  <MarketValue>30</MarketValue>
+		  <Mass>0.3</Mass>
+		  <WorkToMake>35</WorkToMake>
+		  <Nutrition>1</Nutrition>
+		  <Beauty>3</Beauty>
+		</statBases>
+		<ingestible>
+		  <preferability>MealLavish</preferability>
+		  <ingestEffect>EatVegetarian</ingestEffect>
+		  <ingestSound>Meal_Eat</ingestSound>
+			<!-- Nullification of Gnome Fiber -->
+			<tasteThought Inherit="False"></tasteThought>
+			<specialThoughtDirect Inherit="False"></specialThoughtDirect>
+			<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>HedFuh</hediffDef>
+			  <severity>1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps Inherit="False">
+		  <li Class="CompProperties_Rottable">
+			<daysToRotStart>13</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		  </li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>GnomeBatta</li>
+			<li>GnomeVegetarian</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="MealBase">
+		<defName>TacoBellBurrito</defName>
+		<label>Meaty Five Layer Burrito</label>
+		<description>Technically, it should be called the 'Meaty Four Layer Burrito' since the sour cream has been removed (thank Randy).</description> <!-- Hey! I, TurtleShroom, love sour cream! -->
+		<graphicData>
+			<texPath>Things/Items/Resources/Burrito</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1.25</drawSize>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0.25</DeteriorationRate>
+			<MarketValue>24</MarketValue>
+			<Mass>0.3</Mass>
+			<WorkToMake>450</WorkToMake>
+			<Nutrition>1.3</Nutrition>
+		</statBases>
+		<ingestible>
+			<preferability>MealLavish</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>ST_Actually_Sour_Cream_Is_Delicious</hediffDef>
+					<severity>1</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps Inherit="False">
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>7</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>GnomeMeat</li>
+		</tradeTags>
+	  </ThingDef>
+</Defs>

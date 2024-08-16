@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <DesignatorDropdownGroupDef>
+    <defName>Floor_STMetals</defName>
+    <label>Storytime Tiles</label>
+  </DesignatorDropdownGroupDef>
+  
+  <TerrainDef Abstract="True" ParentName="FloorBase" Name="TileStorytimeBase">
+    <texturePath Inherit="False">Terrain/Surfaces/GenericFloorTile</texturePath>
+    <designatorDropdown>Floor_STMetals</designatorDropdown>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>Smithing</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tags>
+		<li>Floor</li>
+	</tags>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="TileStorytimeBase">
+    <defName>BlackiumTile</defName>
+    <label>blackium tile</label>
+    <renderPrecedence>237</renderPrecedence>
+    <description>Tiles of true blackium.</description>
+	<isPaintable>false</isPaintable>
+    <color>(30, 30, 30)</color>
+    <statBases>
+      <WorkToBuild>800</WorkToBuild>
+      <Beauty>2</Beauty>
+      <Cleanliness>0.2</Cleanliness>
+    </statBases>
+    <costList>
+      <ST_Blackium>7</ST_Blackium>
+    </costList>
+    <!-- <designationHotKey>Misc4</designationHotKey> -->
+  </TerrainDef>    
+  
+  <TerrainDef ParentName="TileStorytimeBase">
+    <defName>BlackTile</defName>
+    <label>black steel tile</label>
+    <renderPrecedence>236</renderPrecedence>
+    <description>Tiles of true black steel.</description>
+	<isPaintable>false</isPaintable>
+    <color>(50, 50, 50)</color>
+    <statBases>
+      <WorkToBuild>1600</WorkToBuild>
+      <Beauty>3</Beauty>
+      <Cleanliness>0.6</Cleanliness>
+    </statBases>
+    <costList>
+      <ST_BlackSteel>7</ST_BlackSteel>
+    </costList>
+    <tags>
+      <li>FineFloor</li>
+	  <li>NoInfestation</li>
+    </tags>
+    <!-- <designationHotKey>Misc5</designationHotKey> -->
+  </TerrainDef>      
+  
+  <TerrainDef ParentName="TileStorytimeBase">
+    <defName>MithrilTile</defName>
+    <label>mithril tile</label>
+    <renderPrecedence>235</renderPrecedence>
+    <description>Tiles of true mithril.</description>
+	<isPaintable>false</isPaintable>
+    <color>(100, 125, 145)</color>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <Beauty>6</Beauty>
+      <Cleanliness>0.3</Cleanliness>
+    </statBases>
+    <costList>
+      <ST_Mithril>7</ST_Mithril>
+    </costList>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+    <!-- <designationHotKey>Misc6</designationHotKey> -->
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  </TerrainDef>      
+
+  <TerrainDef ParentName="TileStorytimeBase">
+    <defName>AdamantiumTile</defName>
+    <label>Mordor tile</label>
+    <renderPrecedence>234</renderPrecedence>
+    <description>Tiles of true Mordor Bricks.</description>
+	<isPaintable>false</isPaintable>
+    <color>(37, 66, 28)</color>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <Beauty>8</Beauty>
+      <Cleanliness>0.4</Cleanliness>
+	  <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <ST_Adamantium>7</ST_Adamantium>
+    </costList>
+    <tags>
+      <li>FineFloor</li>
+	  <li>Road</li>
+	  <li>NoInfestation</li>
+    </tags>
+    <!-- <designationHotKey>Misc7</designationHotKey> -->
+	<constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+  </TerrainDef>      
+
+  <TerrainDef ParentName="TileStorytimeBase">
+    <defName>RuniteTile</defName>
+    <label>runite tile</label>
+    <renderPrecedence>233</renderPrecedence>
+    <description>Tiles of true runite.</description>
+	<isPaintable>false</isPaintable>
+    <color>(25, 100, 125)</color>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <Beauty>9</Beauty>
+      <Cleanliness>0.2</Cleanliness>
+    </statBases>
+    <costList>
+      <ST_Runite>6</ST_Runite>
+    </costList>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <!-- <designationHotKey>Misc8</designationHotKey> -->
+  </TerrainDef>    
+
+  <TerrainDef ParentName="TileStorytimeBase">
+    <defName>DragoniteTile</defName>
+    <label>Hhhhite tile</label>
+    <renderPrecedence>232</renderPrecedence>
+    <description>Tiles of true Hhhite. The rage radiates off the floor even now.</description>
+	<isPaintable>false</isPaintable>
+    <color>(115,1,0)</color>
+    <statBases>
+      <WorkToBuild>800</WorkToBuild>
+      <Beauty>12</Beauty>
+      <Cleanliness>0.4</Cleanliness>
+	  <MarketValue>1</MarketValue> <!-- Cheap because of the rarity of Hhhite -->
+    </statBases>
+    <costList>
+      <ST_Dragonite>6</ST_Dragonite>
+    </costList>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+    <!-- <designationHotKey>Misc9</designationHotKey> -->
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </TerrainDef>
+  
+  <TerrainDef ParentName="TileStorytimeBase">
+    <defName>WeezerTile</defName>
+    <label>Weezer linoleum</label>
+    <renderPrecedence>235</renderPrecedence>
+    <description>Optical discs from Weezer albums, melted into a linoleum-like substance, then spread and dried.</description>
+	<texturePath Inherit="False">Terrain/Surfaces/TileStoneFine</texturePath>
+	<isPaintable>false</isPaintable>
+    <color>(0, 182, 213)</color>
+	<burnedDef>GroundWeezer_Floor</burnedDef>
+    <statBases>
+      <WorkToBuild>800</WorkToBuild>
+      <Beauty>5</Beauty>
+	  <Flammability>0.1</Flammability>
+    </statBases>
+    <costList>
+      <Weezer>8</Weezer>
+    </costList>
+    <tags>
+      <li>FineFloor</li>
+	  <li>Road</li>
+    </tags>
+    <!-- <designationHotKey>Misc6</designationHotKey> -->
+  </TerrainDef>  
+  
+  <TerrainDef ParentName="BurnedFloorBase">
+    <defName>GroundWeezer_Floor</defName>
+    <label>burnt Weezer shards</label>
+    <renderPrecedence>201</renderPrecedence>
+    <description>Optical discs from Weezer albums, melted into a linoleum-like substance. That linoleum has since caught on fire and has been completely ruined.</description>
+	<texturePath Inherit="False">Terrain/Surfaces/BurnedCarpet</texturePath>
+	<edgeType>FadeRough</edgeType>
+	<isPaintable>false</isPaintable>
+    <color>(50, 82, 113)</color>
+  </TerrainDef>  
+</Defs> 

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseSkeleton">
+    <defName>ST_AshSkeleton</defName>
+    <label>Ash Skeleton Pirate</label>
+    <description>Once a pirate, this skeleton is part of a pirate crew that willingly gave up its members' souls in exchange for eternal life. Today, they wander the Rim in search of treasure. This unfortunate skeleton was once burnt in some horrible fire. He will never catch fire again.</description>
+    <statBases>
+      <MoveSpeed>3.0</MoveSpeed>
+      <MarketValue>250</MarketValue>
+	  <Flammability>0</Flammability>
+	  <ArmorRating_Heat>5</ArmorRating_Heat>
+    </statBases>
+    <tools>
+      <li>
+        <label>left hand</label>
+        <capacities>
+          <li>Blunt</li>
+		  <!-- <li>Burn</li> -->
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hand</label>
+        <capacities>
+          <li>Blunt</li>
+		  <!-- <li>Burn</li> -->
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+		<label>jawbone</label>
+		<capacities>
+			<li>Bite</li>
+			<!-- <li>Burn</li> -->
+		</capacities>
+		<power>6</power>
+		<cooldownTime>2.6</cooldownTime>
+		<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+		<chanceFactor>0.7</chanceFactor>
+      </li>
+      <li MayRequire="SirMashedPotato.MorrowRim">
+		<label>curse</label>
+		<capacities>
+			<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_CorprusBite</li>
+		</capacities>
+		<power>2</power>
+		<cooldownTime>4</cooldownTime>
+		<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+		<chanceFactor>0.1</chanceFactor>
+      </li>
+    </tools>
+    <race>
+		<intelligence>ToolUser</intelligence>
+		<body>TSP_ST_SkeletalMan</body>
+		<baseBodySize>0.9</baseBodySize>
+		<baseHungerRate>0</baseHungerRate>
+		<baseHealthScale>0.7</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		<wildBiomes Inherit="False">
+			<!-- ___________________ -->
+			
+			<!-- SirMashedPotato.MorrowRim -->
+			<!-- SirMashedPotato.MorrowRim.AshSwamp -->
+			<!-- SirMashedPotato.MorrowRim.VolcanicAshlands -->
+			
+			<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.01</MorrowRim_Ashlands>
+			<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.4</MorrowRim_BlightedAshlands>
+			<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.AshSwamp">0.04</MorrowRim_AshSwamp>
+			<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.VolcanicAshlands">0.01</MorrowRim_VolcanicAshlands>
+		</wildBiomes>
+    </race>
+
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseSkeletonKind">
+    <defName>ST_AshSkeleton</defName>
+    <label>Ashen Skeleton Pirate</label>
+    <race>ST_AshSkeleton</race>
+    <combatPower>65</combatPower>
+	<canArriveManhunter>false</canArriveManhunter>
+    <lifeStages>
+      <li>
+        <label>Ash Skeleton Pirate</label>
+        <labelPlural>Ash Skeleton Pirates</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/Skeletons/AshSkeleton/AshSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Other/Skeletons/AshSkeleton/AshSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+	<weaponMoney>300~600</weaponMoney>
+	<weaponTags>
+      <li>SkeletonMelee</li>
+    </weaponTags>
+    <inventoryOptions>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>CursedCoin</thingDef>
+          <countRange>1~4</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+</Defs>

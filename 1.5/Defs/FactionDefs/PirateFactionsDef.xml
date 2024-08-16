@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <FactionDef>
+    <defName>NicePirates</defName>
+    <label>Gentlemen Corsairs</label>
+    <description>''Yarr harr fiddle dee dee!'' \n \nWhat happens when you want to loot and plunder like the ancient scourges of Old Earth's seas, but you can't afford a spaceship with modern weaponry and enough armor to survive getting torn asunder by a Trade Ship? You settle and plunder a Rim World, of course! In contrast to the usual space pirates, the numerous Pirate Crews of this Rim World structure themselves on the Old Earth gangs of swashbuckling seafarers during the ancient Golden Age of Piracy. They continue to carry the traditions of these pirates, albeit influenced by nineteenth and twentieth century Old Earth pop culture. These pirates come cheap and fight with archaic swords and medieval kinetic weapons dating to right before the First Industrial Revolution. \n For centuries, all Golden Age styled pirates have maintained fruitful relations with space pirates, which allow them to train on modern pirate ships with their archaic weapons. They may not have pirate ships on the seas of the planets of the Rim, but they all grew up and trained on a pirate ship. Technically. \n \n In contrast with most pirates (including "purist" pirates with identical origins), these thieves have seemed to mellow enough that they are closer to a sedentary civilization than charters of crewmen roving the planet for booty. That does not mean, however, that they won't raid or attack vulnerable societies; their respect must be earned. Anyone that does not earn their respect is fair game for plundering. Each Corsair charter's base elects a Global Captain from among themselves base to represent them all in diplomatic matters.</description>
+    <pawnsPlural>corsairs</pawnsPlural>
+    <settlementGenerationWeight>0.6</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+	<maxCountAtGameStart>3</maxCountAtGameStart>
+	<maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>global captain</leaderTitle>
+    <factionIconPath>World/Pirates/ST_GoldenAgePirates</factionIconPath>
+    <colorSpectrum>
+		<li>(12, 19, 86)</li>
+    </colorSpectrum>
+	<naturalEnemy>true</naturalEnemy>
+	<permanentEnemy>false</permanentEnemy>
+	<basicMemberKind>PirateSwabbie</basicMemberKind>
+	<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+	<backstoryCategories>
+      <li>PirateBackstory</li>
+    </backstoryCategories>
+    <disallowedMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+
+		<!-- If you have the Mod -->
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Aristocratic</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
+		<li MayRequire="llunak.MorePrecepts">Pacifism</li>
+		<li MayRequire="Qux.factionhippie">PeaceLove</li>
+		<li MayRequire="Zezz.Altrumeme">Altruism</li>
+		<li MayRequire="sarg.alphamemes">AM_NonViolence</li>
+		<li MayRequire="vanillaexpanded.vmemese">VME_Egalitarian</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_Xenophobia</li>
+		<li MayRequire="vanillaexpanded.vmemese">VME_Vegan</li>
+    </disallowedMemes>
+    <requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+    </requiredMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+		
+		<!-- DUH -->
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Slavery_Forbidden</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+		<!-- For some reason, the game eliminates the entire Slavery Precept when generating this Faction if this exists in the code -->
+		<!-- <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Acceptable</li> -->
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+		<!-- The following Precepts are only forbidden if you have the Mod -->
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Abhorrent</li>
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Horrible</li>
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Disapproved</li>
+
+		<!-- <li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Respected</li> -->
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Disapproved</li>
+		<!-- For some reason, the game eliminates the entire Precept category when generating this Faction if this exists in the code -->
+	</disallowedPrecepts>
+    <allowedCultures>
+		<li>ST_PirateCulture</li>
+	</allowedCultures>
+	<!--
+    <structureMemeWeights>
+		<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+    </structureMemeWeights>
+	-->
+    <factionNameMaker>NamerFactionStorytimePirate</factionNameMaker>
+    <settlementNameMaker>GoldenAgePirateSettlementName</settlementNameMaker>
+    <techLevel>Medieval</techLevel>
+    <!-- <geneticVariance>1</geneticVariance> -->
+    <caravanTraderKinds>
+      <li>Caravan_Storytime_Pirate</li>
+	  <li>Caravan_Outlander_PirateMerchant</li>
+	  <li>Caravan_Neolithic_Slaver</li>
+	  <li>WW_Caravan_Outlander_Drugdealer</li>
+	  <li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+		<li>WW_Visitor_Outlander_Drugdealer</li>
+		<!-- 
+			<li>Caravan_Outlander_PirateMerchant</li>
+			<li>Caravan_Storytime_Pirate</li>
+		-->
+    </visitorTraderKinds>
+    <baseTraderKinds>
+		<!-- <li>Base_Outlander_Standard</li> -->
+		<li>Caravan_Storytime_Pirate</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-130</min>
+      <max>155</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,100)</li>
+        <li>(70,150)</li>
+        <li>(400,200)</li>
+        <li>(900,300)</li>
+        <li>(100000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<raidLootValueFromPointsCurve>
+      <points>
+        <li>(1,     30)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1.3)</li>
+        <!-- Constant one and three tenths at all points levels -->
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Peaceful</kindDef>
+		<commonality>100</commonality>
+        <options>
+          <PirateSwabbie>35</PirateSwabbie>
+		  <PirateNormal>40</PirateNormal>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateCaptain>15</PirateCaptain>
+		  <PirateJuggernaut>5</PirateJuggernaut>
+		  <Pirate>1</Pirate>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+        </options>
+      </li>
+		<li>
+			<kindDef>Peaceful</kindDef>
+			<commonality>55</commonality>
+			<options>
+				<PirateSwabbie>5</PirateSwabbie>
+				<PirateNormal>5</PirateNormal>
+				<PirateGrenadier>3.5</PirateGrenadier>
+				<PirateJuggernaut>3.5</PirateJuggernaut>
+				<Pirate>1</Pirate>
+				<PirateCaptain>0.5</PirateCaptain>
+				<VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">0.6</VFEP_Footsoldier>
+			</options>
+		</li>
+      <li>
+		<!-- Higher chance of rarer Pawns -->
+        <kindDef>Peaceful</kindDef>
+		<commonality>50</commonality>
+        <options>
+          <PirateSwabbie>1</PirateSwabbie>
+		  <PirateNormal>1</PirateNormal>
+		  <PirateGrenadier>1</PirateGrenadier>
+		  <PirateJuggernaut>1</PirateJuggernaut>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">0.5</ROM_TownsfolkAngler>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">0.66</VFEP_Footsoldier>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+		<commonality>75</commonality>
+        <options>
+          <PirateSwabbie>35</PirateSwabbie>
+		  <PirateNormal>40</PirateNormal>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateCaptain>15</PirateCaptain>
+		  <PirateJuggernaut>20</PirateJuggernaut>
+          <Monkey>5</Monkey>
+		  <ST_Parrot>5</ST_Parrot>
+		  <Pirate>4</Pirate>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">3</VFEP_Footsoldier>
+		  <ST_LivingCoconut>2</ST_LivingCoconut>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkAngler>
+        </options>
+      </li>
+      <li>
+		<!-- Heavy raid -->
+        <kindDef>Combat</kindDef>
+		<commonality>30</commonality>
+        <options>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateCaptain>0.15</PirateCaptain>
+		  <PirateJuggernaut>15</PirateJuggernaut>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">1.3</ROM_TownsfolkAngler>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">6</VFEP_Footsoldier>
+        </options>
+      </li>
+      <li>
+		<!-- Animal-focused -->
+        <kindDef>Combat</kindDef>
+		<commonality>30</commonality>
+        <options>
+		  <Monkey>15</Monkey>
+		  <ST_Parrot>15</ST_Parrot>
+		  <Pirate>1</Pirate>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+			<TSP_PirateTradesman>1</TSP_PirateTradesman>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+		  <Alpaca>1</Alpaca>
+		  <Dromedary>10</Dromedary>
+		  <Elephant>1</Elephant>
+		  <Horse>200</Horse>
+        </carriers>
+        <guards>
+          <PirateSwabbie>35</PirateSwabbie>
+		  <PirateNormal>40</PirateNormal>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateJuggernaut>15</PirateJuggernaut>
+          <Monkey>8</Monkey>
+		  <ST_Parrot>8</ST_Parrot>
+		  <PirateCaptain>1</PirateCaptain>
+		  <Grenadier_Smoke>1</Grenadier_Smoke>
+		  <ST_LivingCoconut>2</ST_LivingCoconut>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">4</VFEP_Footsoldier>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">8</ROM_TownsfolkAngler>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <PirateSwabbie>25</PirateSwabbie>
+		  <PirateNormal>40</PirateNormal>
+		  <PirateGrenadier>20</PirateGrenadier>
+		  <PirateCaptain>18</PirateCaptain>
+		  <PirateJuggernaut>5</PirateJuggernaut>
+          <Monkey>10</Monkey>
+		  <ST_Parrot>10</ST_Parrot>
+		  <TSP_PirateTradesman>2</TSP_PirateTradesman>
+		  <Pirate>15</Pirate>
+		  <ST_LivingCoconut>1</ST_LivingCoconut>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">4</VFEP_Footsoldier>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkAngler>
+        </options>
+      </li>
+    </pawnGroupMakers>
+        <settlementTexturePath>World/Pirates/ST_GoldenAgePirates</settlementTexturePath>
+	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+    <fixedLeaderKinds>
+		<li>PirateCaptain</li>
+    </fixedLeaderKinds>
+	
+	<modExtensions>
+		<!--
+		<li Class="JecsTools.FactionSettings">
+			<entrySoundDef>Pirate_Theme</entrySoundDef>
+		</li>
+		-->
+		<li Class="FactionSounds.FactionSound">
+			<soundDef>Pirate_Theme</soundDef>
+			<combatSoundDef>Pirate_Theme</combatSoundDef>
+		</li>
+		<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
+			<canSendDeserters MayRequire="oskarpotocki.vfe.empire">true</canSendDeserters>
+			<deserterKind MayRequire="oskarpotocki.vfe.empire">TSP_ST_VFEE_PirateDeserter</deserterKind>
+		</li>
+	</modExtensions>
+  </FactionDef>
+  
+  <FactionDef>
+    <defName>MeanPirates</defName>
+    <label>Pirate Crews</label>
+    <description>What happens when you want to loot and plunder like the ancient scourges of Old Earth's seas, but you can't afford a spaceship with modern weaponry and enough armor to survive getting torn asunder by a Trade Ship? You settle and plunder a Rim World, of course! In contrast to the usual space pirates, this Pirate Crew structures itself on the Old Earth gangs of swashbuckling seafarers during the ancient Golden Age of Piracy. They continue to carry the traditions of these pirates, albeit influenced by nineteenth century and later Old Earth pop culture. \n These pirates come cheap and fight with archaic swords and medieval kinetic weapons dating to right before the First Industrial Revolution. Wearing garments styled on those thousands of years ago and maintaining charters with equality and comraderie in mind, these pirates take advantage of the lawless frontiers of civilized space to raid and plunder. For centuries, all Golden Age styled pirates have maintained fruitful relations with space pirates, which allow them to train on modern pirate ships with their archaic weapons. They may not have pirate ships on the seas of the planets of the Rim, but they all grew up and trained on a pirate ship. \n \n These pirates come cheap and fight with swords and medieval kinetic weapons dating to right before the First Industrial Revolution. Costumes and humor aside, these pirates are no less dangerous than a space pirate and no less interested in taking your stuff. They WILL steal your stuff and they WILL kill you to do it. Unlike their ancient piratical models, these pirates are not focused on kidnapping for ransom. They demand blood. \n Each Pirate Crew charter's base elects a Global Captain from their strongest warriors to represent them all in diplomatic matters. Any pirate can challenge this leadership.</description>
+    <pawnsPlural>pirates</pawnsPlural>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+	<maxCountAtGameStart>3</maxCountAtGameStart>
+	<maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>global captain</leaderTitle>
+	<basicMemberKind>PirateNormal</basicMemberKind>
+	<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+    <factionIconPath>World/Pirates/ST_GoldenAgePirates</factionIconPath>
+    <colorSpectrum>
+		<li>(105, 0, 7)</li>
+    </colorSpectrum>
+	<permanentEnemyToEveryoneExcept>
+		<li>Pirate</li>
+		<li>Harriers</li>
+		<li MayRequire="OskarPotocki.VFE.Pirates">VFEP_Junkers</li>
+		<li MayRequire="OskarPotocki.VFE.Pirates">VFEP_Mercenaries</li>
+		<li MayRequire="OskarPotocki.VFE.Pirates">VFEP_PlayerPirate</li>
+    </permanentEnemyToEveryoneExcept>
+    <backstoryCategories>
+		<li>PirateBackstory</li>
+    </backstoryCategories>
+    <disallowedMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+
+		<!-- Forbidden Mod Memes -->
+		<li MayRequire="llunak.MorePrecepts">Pacifism</li>
+		<li MayRequire="Qux.factionhippie">PeaceLove</li>
+		<li MayRequire="Zezz.Altrumeme">Altruism</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Aristocratic</li>
+		<li MayRequire="sarg.alphamemes">AM_NonViolence</li>
+		<li MayRequire="vanillaexpanded.vmemese">VME_Egalitarian</li>
+		<li MayRequire="vanillaexpanded.vmemese">VME_Vegan</li>
+    </disallowedMemes>
+    <requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_BloodCourt</li>
+    </requiredMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+		
+		<!-- DUH -->
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Slavery_Forbidden</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+		<!-- For some reason, the game eliminates the entire Slavery Precept when generating this Faction if this exists in the code -->
+		<!-- <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Acceptable</li> -->
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+		<!-- The following Precepts are only forbidden if you have the Mod -->
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Abhorrent</li>
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Horrible</li>
+		<li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Disapproved</li>
+
+		<!-- <li MayRequire="martinbaste.Ideo.XenoPrecept">XenoDiversity_Respected</li> -->
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Disapproved</li>
+		<!-- For some reason, the game eliminates the entire Precept category when generating this Faction if this exists in the code -->
+	</disallowedPrecepts>
+    <allowedCultures>
+		<li>ST_PirateCulture</li>
+	</allowedCultures>
+	<!--
+    <structureMemeWeights>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+    </structureMemeWeights>
+	-->
+    <factionNameMaker>NamerFactionStorytimePirate</factionNameMaker>
+    <settlementNameMaker>GoldenAgePirateSettlementName</settlementNameMaker>
+    <techLevel>Medieval</techLevel>
+    <!-- <geneticVariance>1</geneticVariance> -->
+    <caravanTraderKinds>
+      <li>Caravan_Storytime_Pirate</li>
+      <li>Caravan_Outlander_Exotic</li>
+	  <li>Caravan_Outlander_PirateMerchant</li>
+	  <li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+		<li>WW_Visitor_Outlander_Drugdealer</li>
+		<li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+		<!-- <li>Base_Outlander_Standard</li> -->
+		<li MayRequire="oskarpotocki.vfe.vikings">VFEV_Caravan_Looter</li>
+		<li>Caravan_Storytime_Pirate</li>
+		<li>Caravan_Outlander_PirateMerchant</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>55</max>
+    </allowedArrivalTemperatureRange>
+    <raidLootMaker>PirateRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,100)</li>
+        <li>(70,150)</li>
+        <li>(400,200)</li>
+        <li>(900,300)</li>
+        <li>(100000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1.45)</li>
+        <!-- Constant one and forty-five hundredths at all points levels -->
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Peaceful</kindDef>
+		<commonality>100</commonality>
+        <options>
+          <PirateSwabbie>35</PirateSwabbie>
+		  <PirateNormal>40</PirateNormal>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateCaptain>15</PirateCaptain>
+		  <PirateJuggernaut>15</PirateJuggernaut>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkAngler>
+		  <!-- ANIMALS CANNOT BE PEACEFUL VISITORS!! -->
+		  <!--
+          <Monkey>5</Monkey>
+		  <ST_Parrot>5</ST_Parrot>
+		  -->
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+        </options>
+      </li>
+      <li>
+		<!-- Higher chance of rarer Pawns -->
+        <kindDef>Peaceful</kindDef>
+		<commonality>25</commonality>
+        <options>
+          <PirateSwabbie>1</PirateSwabbie>
+		  <PirateNormal>1</PirateNormal>
+		  <PirateGrenadier>1</PirateGrenadier>
+		  <PirateJuggernaut>1</PirateJuggernaut>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">0.5</ROM_TownsfolkAngler>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">0.66</VFEP_Footsoldier>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+		<commonality>100</commonality>
+        <options>
+          <PirateSwabbie>35</PirateSwabbie>
+		  <PirateNormal>40</PirateNormal>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateCaptain>15</PirateCaptain>
+		  <PirateJuggernaut>15</PirateJuggernaut>
+          <Monkey>5</Monkey>
+		  <ST_Parrot>5</ST_Parrot>
+		  <Pirate>3</Pirate>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkAngler>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+        </options>
+      </li>
+      <li>
+		<!-- Heavy raid -->
+        <kindDef>Combat</kindDef>
+		<commonality>30</commonality>
+        <options>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateCaptain>0.15</PirateCaptain>
+		  <PirateJuggernaut>15</PirateJuggernaut>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">1.3</ROM_TownsfolkAngler>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">6</VFEP_Footsoldier>
+        </options>
+      </li>
+      <li>
+		<!-- Animal-focused -->
+        <kindDef>Combat</kindDef>
+		<commonality>30</commonality>
+        <options>
+		  <Monkey>15</Monkey>
+		  <ST_Parrot>15</ST_Parrot>
+		  <Pirate>1</Pirate>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+			<TSP_PirateTradesman>1</TSP_PirateTradesman>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+		  <Alpaca>1</Alpaca>
+		  <Dromedary>1</Dromedary>
+		  <Elephant>100</Elephant>
+        </carriers>
+        <guards>
+          <PirateSwabbie>35</PirateSwabbie>
+		  <PirateNormal>40</PirateNormal>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateJuggernaut>15</PirateJuggernaut>
+          <Monkey>5</Monkey>
+		  <ST_Parrot>5</ST_Parrot>
+		  <PirateCaptain>5</PirateCaptain>
+		  <Pirate>1</Pirate>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkAngler>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">1</VFEP_Footsoldier>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <PirateSwabbie>40</PirateSwabbie>
+		  <PirateNormal>40</PirateNormal>
+		  <PirateGrenadier>15</PirateGrenadier>
+		  <PirateCaptain>15</PirateCaptain>
+		  <PirateJuggernaut>15</PirateJuggernaut>
+          <Monkey>5</Monkey>
+		  <ST_Parrot>5</ST_Parrot>
+		  <Pirate>10</Pirate>
+		  <ROM_TownsfolkAngler MayRequire="rimofmadness.callofcthulhu.factions">8</ROM_TownsfolkAngler>
+		  <VFEP_Footsoldier MayRequire="OskarPotocki.VFE.Pirates">13</VFEP_Footsoldier>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/Pirates/ST_GoldenAgePirates</settlementTexturePath>
+
+	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+    <fixedLeaderKinds>
+		<li>PirateCaptain</li>
+    </fixedLeaderKinds>
+
+	<modExtensions>
+		<!--
+		<li Class="JecsTools.FactionSettings">
+			<entrySoundDef>Pirate_Theme</entrySoundDef>
+		</li>
+		-->
+		<li Class="FactionSounds.FactionSound">
+			<soundDef>Pirate_Theme</soundDef>
+			<combatSoundDef>Pirate_Theme</combatSoundDef>
+		</li>
+		<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
+			<canSendDeserters MayRequire="oskarpotocki.vfe.empire">true</canSendDeserters>
+			<deserterKind MayRequire="oskarpotocki.vfe.empire">TSP_ST_VFEE_PirateDeserter</deserterKind>
+		</li>
+	</modExtensions>
+  </FactionDef>
+
+</Defs>
