@@ -26,11 +26,11 @@
 			<canLayDown>false</canLayDown> <!-- Frogs can "assume the position" like cats, but they do not lay down to sleep. Frogs crouch. -->
 			<maxDamageForSocialfight>1</maxDamageForSocialfight>
 			<humanRecipeImport>true</humanRecipeImport>
-				<notXenophobistTowards Inherit="False">
-					<li>Human</li>
-					<li>Forg_Duo</li>
-					<li>Forg_Forg</li>
-				</notXenophobistTowards>
+			<notXenophobistTowards Inherit="False">
+				<li>Human</li>
+				<li>Forg_Duo</li>
+				<li>Forg_Forg</li>
+			</notXenophobistTowards>
 			<alienPartGenerator>
 			  <headTypes Inherit="False">
 				<li>Frogman_Average_Normal</li>
@@ -85,7 +85,6 @@
 					</options>
 				  </first>
 				</li>
-				<!--
 				<li>
 				  <name>hair</name>
 				  <first Class="ColorGenerator_Options">
@@ -103,7 +102,6 @@
 					</options>
 				  </first>
 				</li>
-				-->
 			  </colorChannels>
 			</alienPartGenerator>
 			<raceGenes MayRequire="ludeon.rimworld.biotech">
@@ -267,6 +265,14 @@
 			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			<chanceFactor>0.2</chanceFactor>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
 		  </li>
 		</tools>
 		<verbs>
@@ -335,6 +341,10 @@
 			<li>
 			  <def>HumanlikeTeenager</def>
 			  <minAge>10</minAge>
+			</li>
+			<li>
+			  <def>HumanlikeAdult</def>
+			  <minAge>13.999</minAge>
 			</li>
 			<li>
 			  <def>FrogPersonAdultStage</def>

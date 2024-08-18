@@ -43,11 +43,19 @@
     </skillGains>
 	<forcedTraitsChance>
 	  <li>
-		<defName>Greedy</defName>
+		<options>
+			<li>
+				<defName>Greedy</defName>
+			</li>
+		</options>
 		<chance>999</chance>
       </li>
 	  <li>
-		<defName>Abrasive</defName>
+		<options>
+			<li>
+				<defName>Abrasive</defName>
+			</li>
+		</options>
 		<chance>50</chance>
       </li>
     </forcedTraitsChance>
@@ -97,11 +105,14 @@
       <Social>6</Social>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>Xenophobia</defName>
-		<degree>-1</degree>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName Degree="-1">HAR_Xenophobia</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
@@ -125,17 +136,20 @@
       <Intellectual>3</Intellectual>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>Greedy</defName>
-		<chance>50</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Greedy</defName>
+				</li>
+			</options>
+			<chance>15</chance>
+		</li>
     </forcedTraitsChance>
 	<relationSettings>
 		<relationChanceModifierParent>999</relationChanceModifierParent>
 	</relationSettings>
-	<spawnCategories>
+	<spawnCategories Inherit="False">
 		<li>GoblinChild</li>
-		<li>Antifa</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -152,10 +166,14 @@
 	  <Plants>4</Plants>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>ST_SemiFeral</defName>
-		<chance>40</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_SemiFeral</defName>
+				</li>
+			</options>
+			<chance>66</chance>
+		</li>
     </forcedTraitsChance>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
@@ -208,10 +226,14 @@
       <Cooking>4</Cooking>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>Cannibal</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Cannibal</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinChild</li>
@@ -264,8 +286,20 @@
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>
 	</relationSettings>
 	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<chance>0</chance>
+		</li>
 		<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
-			<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Wanderlust</defName>
+			<options MayRequire="vanillaexpanded.vanillatraitsexpanded">
+				<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
+					<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Wanderlust</defName>
+				</li>
+			</options>
 			<chance MayRequire="vanillaexpanded.vanillatraitsexpanded">999</chance>
 		</li>
 	</forcedTraitsChance>
@@ -288,10 +322,14 @@
       <Mining>6</Mining>
     </skillGains>
 	<forcedTraitsChance>
-	  <li>
-		<defName>Undergrounder</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Undergrounder</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
@@ -308,10 +346,14 @@
       <Melee>6</Melee>
     </skillGains>
 	<forcedTraitsChance>
-	  <li>
-		<defName>Bloodlust</defName>
-		<chance>999</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Bloodlust</defName>
+				</li>
+			</options>
+			<chance>999</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
@@ -418,14 +460,22 @@
         <li>ManualDumb</li>
     </workDisables>
 	<forcedTraitsChance>
-	  <li>
-		<defName>Psychopath</defName>
-		<chance>999</chance>
-      </li>
-	  <li MayRequire="sirmashedpotato.escp.racetools">
-		<defName MayRequire="sirmashedpotato.escp.racetools">ESCP_Slaver</defName>
-		<chance MayRequire="sirmashedpotato.escp.racetools">999</chance>
-	  </li>
+		<li>
+			<options>
+				<li>
+					<defName>Psychopath</defName>
+				</li>
+			</options>
+			<chance>999</chance>
+		</li>
+		<li MayRequire="escp.racetools">
+			<options MayRequire="escp.racetools">
+				<li MayRequire="escp.racetools">
+					<defName MayRequire="escp.racetools">ESCP_Slaver</defName>
+				</li>
+			</options>
+			<chance MayRequire="escp.racetools">999</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>ESCP_DunmerDresBackstory_Adulthood</li>
@@ -440,9 +490,9 @@
 
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Banker</defName>
-    <title>banker</title>
-    <titleShort>banker</titleShort>
-    <baseDesc>[PAWN_nameDef] joined the family business when [PAWN_pronoun] reached adulthood, becoming extremely rich in the process.</baseDesc>
+    <title>Goblin Banker</title>
+    <titleShort>Goblin Banker</titleShort>
+    <baseDesc>[PAWN_nameDef] made a name for [PAWN_objective] in the financial dealings between goblin clans. He joined the family business when [PAWN_pronoun] reached adulthood, becoming extremely rich in the process.</baseDesc>
     <slot>Adulthood</slot>
     <linkedBackstory>ChildGoblin_Banker</linkedBackstory>
     <skillGains>
@@ -450,14 +500,17 @@
       <Intellectual>5</Intellectual>
     </skillGains>
 	<forcedTraitsChance>
-	  <li>
-		<defName>ST_Rich</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_Rich</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
-	<spawnCategories>
+	<spawnCategories Inherit="False">
 		<li>GoblinAdult</li>
-		<li>Antifa</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>  
   
@@ -493,22 +546,27 @@
     <defName>Goblin_Thief</defName>
     <title>thief</title>
     <titleShort>thief</titleShort>
-    <baseDesc>[PAWN_nameDef] made a living as a thief in a city. [PAWN_pronoun] was quite crafty, but eventually the heat became too great and [PAWN_pronoun] had to skip town.</baseDesc>
+    <baseDesc>[PAWN_nameDef] made a living as a thief in a city. [PAWN_pronoun] was quite crafty, but eventually the heat became too great and [PAWN_nameDef] had to skip town.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>3</Melee>
       <Intellectual>3</Intellectual>
     </skillGains>
 	<forcedTraitsChance>
-	  <li>
-		<defName>Nimble</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Nimble</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
 		<li>Skinhead</li>
 		<li>Antifa</li>
+		<li>MedievalCriminal</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>      
   
@@ -516,7 +574,7 @@
     <defName>Goblin_Warlord</defName>
     <title>Ex-Warlord</title>
     <titleShort>warlord</titleShort>
-    <baseDesc>[PAWN_nameDef] came into control of a powerful goblin horde, power which [PAWN_pronoun] used to launch a vast war of annihilation against the inhabitants of [PAWN_possessive] planet. Many thousands died before [PAWN_possessive] were eventually defeated.</baseDesc>
+    <baseDesc>[PAWN_nameDef] came into control of a powerful goblin horde, power which [PAWN_pronoun] used to launch a vast war of annihilation against the inhabitants of [PAWN_possessive] planet. Many thousands died before [PAWN_pronoun] was eventually defeated.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
 		<Shooting>3</Shooting>
@@ -524,10 +582,14 @@
       <Social>6</Social>
     </skillGains>
 	<forcedTraitsChance>
-	  <li>
-		<defName>Bloodlust</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Bloodlust</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
@@ -544,10 +606,14 @@
       <Social>5</Social>
     </skillGains>
 	<forcedTraitsChance>
-	  <li>
-		<defName>Kind</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Kind</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
     <workDisables>
         <li>Violent</li>
@@ -561,7 +627,7 @@
     <defName>Goblin_Fanatic</defName>
     <title>fanatical devotee</title>
     <titleShort>fanatic</titleShort>
-    <baseDesc>[PAWN_nameDef] spent years in special brainwashing programs which turned [PAWN_objective] into the perfect unquestioning kiling machine for [PAWN_possessive] warlord. [PAWN_pronoun] was sent on numerous suicidal missions, but somehow always survived.</baseDesc>
+    <baseDesc>[PAWN_nameDef] spent years in special brainwashing programs which turned [PAWN_objective] into the perfect, unquestioning, kiling machine for [PAWN_possessive] warlord. [PAWN_pronoun] was sent on numerous suicidal missions, but somehow always survived.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>5</Melee>
@@ -569,10 +635,14 @@
       <Social>-5</Social>
     </skillGains>
 	<forcedTraitsChance>
-	  <li>
-		<defName>Tough</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Tough</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
@@ -592,18 +662,30 @@
       <Melee>3</Melee>
     </skillGains>
 	<forcedTraitsChance>
-	  <li>
-		<defName>NightOwl</defName>
-		<chance>100</chance>
-      </li>
-	  <li>
-		<defName>Cannibal</defName>
-		<chance>100</chance>
-      </li>
-	  <li>
-		<defName>Psychopath</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>NightOwl</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>Cannibal</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>Psychopath</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
@@ -655,14 +737,22 @@
         <li>ManualDumb</li>
     </workDisables>
 	<forcedTraitsChance>
-	  <li>
-		<defName>Gourmand</defName>
-		<chance>50</chance>
-      </li>
-	  <li>
-		<defName>Greedy</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Gourmand</defName>
+				</li>
+			</options>
+			<chance>50</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>Greedy</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
@@ -726,10 +816,14 @@
       <Medicine>2</Medicine>
     </skillGains>
 	<forcedTraitsChance>
-	  <li>
-		<defName>Psychopath</defName>
-		<chance>999</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Psychopath</defName>
+				</li>
+			</options>
+			<chance>999</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
@@ -741,7 +835,7 @@
     <defName>TSP_ST_DoomsdayGoblin_Child</defName>
     <title>cauldron poisoning psychopath</title>
 	<titleShort>cauldron poisoning</titleShort>
-    <baseDesc>[PAWN_nameDef] was always a creepy child, known for [PAWN_possessive] tendencies to hurt animals out behind the barn. [PAWN_pronoun] was expelled by [PAWN_possessive] society after poisoning the central cauldron, solely to watch the suffering of others. They lived, but [PAWN_possessive] future victims would not be so lucky.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was always a creepy child, known for [PAWN_possessive] tendencies to hurt animals out behind the barn. [PAWN_pronoun] was expelled by [PAWN_possessive] society after poisoning the central cauldron, solely to watch the suffering of others. [PAWN_nameDef] lived, but [PAWN_possessive] future victims would not be so lucky.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <Social>-5</Social>
@@ -751,23 +845,35 @@
 	  <Melee>5</Melee>
     </skillGains>
 	<forcedTraitsChance>
-      <li MayRequire="vanillaexpanded.vanillatraitsexpanded">
-        <defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_MadSurgeon</defName>
-		<chance MayRequire="vanillaexpanded.vanillatraitsexpanded">999</chance>
-      </li>
-	  <li>
-		<defName>Psychopath</defName>
-		<chance>999</chance>
-	  </li>
+		<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
+			<options MayRequire="vanillaexpanded.vanillatraitsexpanded">
+				<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
+					<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_MadSurgeon</defName>
+				</li>
+			</options>
+			<chance MayRequire="vanillaexpanded.vanillatraitsexpanded">75</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>Psychopath</defName>
+				</li>
+			</options>
+			<chance>999</chance>
+		</li>
     </forcedTraitsChance>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
 	</relationSettings>
-	<disallowedTraits>
-		<BodyPurist>0</BodyPurist>
-		<Kind>0</Kind>
-	</disallowedTraits>
+	<disallowedTraitsChance>
+		<li>
+			<defName>BodyPurist</defName>
+		</li>
+		<li>
+			<defName>Kind</defName>
+		</li>
+	</disallowedTraitsChance>
 	<spawnCategories Inherit="False">
 		<li>GoblinDoomsday</li>
 		<li>GoblinDoomsday_Child</li>
@@ -780,7 +886,7 @@
     <defName>TSP_ST_DoomsdayGoblin_Adult</defName>
     <title>evil toxicologist</title>
 	<titleShort>mad toxicologist</titleShort>
-    <baseDesc>[PAWN_nameDef] ventured out and joined unethical "scientists", where he came to master the art of poison, engaged in torture and maddened experiments, and more. [PAWN_pronoun] would regularly harvest the organs of "patients" and then inject them with poison to see how it effects them. [PAWN_nameDef] became proficient in wielding poison as a weapon, too.</baseDesc>
+    <baseDesc>[PAWN_nameDef] ventured out and joined unethical "scientists", where he came to master the art of poison, engaged in torture and maddened experiments, and more. [PAWN_pronoun] would regularly harvest the organs of "patients" or inject the "patients" with poison to see how it effects them. [PAWN_nameDef] became proficient in wielding poison as a weapon, too.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <Crafting>4</Crafting>
@@ -790,19 +896,38 @@
 	  <Shooting>10</Shooting>
     </skillGains>
 	<forcedTraitsChance>
-      <li MayRequire="vanillaexpanded.vanillatraitsexpanded">
-        <defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_MadSurgeon</defName>
-		<chance MayRequire="vanillaexpanded.vanillatraitsexpanded">999</chance>
-      </li>
+		<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
+			<options MayRequire="vanillaexpanded.vanillatraitsexpanded">
+				<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
+					<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_MadSurgeon</defName>
+				</li>
+			</options>
+			<chance MayRequire="vanillaexpanded.vanillatraitsexpanded">75</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>Psychopath</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
+	<disallowedTraitsChance>
+		<li>
+			<defName>Brawler</defName>
+		</li>
+		<li>
+			<defName>Kind</defName>
+		</li>
+		<li>
+			<defName>BodyPurist</defName>
+		</li>
+	</disallowedTraitsChance>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
 	</relationSettings>
-	<disallowedTraits>
-		<BodyPurist>0</BodyPurist>
-		<Kind>0</Kind>
-	</disallowedTraits>
 	<linkedBackstory>TSP_ST_DoomsdayGoblin_Child</linkedBackstory>
 	<spawnCategories Inherit="False">
 		<li>GoblinDoomsday</li>

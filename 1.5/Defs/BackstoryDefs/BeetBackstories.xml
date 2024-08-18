@@ -41,11 +41,23 @@
 	  <Animals>2</Animals>
 	  <Cooking>3</Cooking>
     </skillGains>
-	<forcedTraitsChance MayRequire="VanillaExpanded.VCEF">
-      <li MayRequire="VanillaExpanded.VCEF">
-        <defName MayRequire="VanillaExpanded.VCEF">VCEF_Fisherman</defName>
-		<chance MayRequire="VanillaExpanded.VCEF">100</chance>
-      </li>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<chance>0</chance>
+		</li>
+		<li MayRequire="VanillaExpanded.VCEF">
+			<options MayRequire="VanillaExpanded.VCEF">
+				<li MayRequire="VanillaExpanded.VCEF">
+					<defName MayRequire="VanillaExpanded.VCEF">VCEF_Fisherman</defName>
+				</li>
+			</options>
+			<chance MayRequire="VanillaExpanded.VCEF">100</chance>
+		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>BeetnikhBackstory</li>
@@ -96,11 +108,14 @@
 	  <Shooting>1</Shooting>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>DrugDesire</defName>
-        <degree>2</degree>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName Degree="2">DrugDesire</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<workDisables>
       <li>Intellectual</li>
@@ -165,20 +180,31 @@
 		<forcedTraitsChance>
 			<!--
 			<li>
-				<defName>DrugDesire</defName>
-				<degree>2</degree>
+				<options>
+					<li>
+						<defName Degree="2">DrugDesire</defName>
+					</li>
+				</options>
+				<change>100</change>
 			</li>
 			-->
 			<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
-				<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Lush</defName>
+				<options MayRequire="vanillaexpanded.vanillatraitsexpanded">
+					<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
+						<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Lush</defName>
+					</li>
+				</options>
 				<chance MayRequire="vanillaexpanded.vanillatraitsexpanded">100</chance>
 			</li>
 			<li>
-				<defName>Bloodlust</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Brawler</defName>
+				<options>
+					<li>
+						<defName>Bloodlust</defName>
+					</li>
+					<li>
+						<defName>Brawler</defName>
+					</li>
+				</options>
 				<chance>100</chance>
 			</li>
 		</forcedTraitsChance>
@@ -193,9 +219,9 @@
 		  <li>Intellectual</li>
 		  <li>ManualSkilled</li>
 		</workDisables>
-		<disallowedTraits>
+		<disallowedTraitsChance>
 			<!-- <DrugDesire>0</DrugDesire> -->
-		</disallowedTraits>
+		</disallowedTraitsChance>
 		<spawnCategories>
 		  <li>WoodBeetBackstory</li>
 		  <li>Outsider</li>

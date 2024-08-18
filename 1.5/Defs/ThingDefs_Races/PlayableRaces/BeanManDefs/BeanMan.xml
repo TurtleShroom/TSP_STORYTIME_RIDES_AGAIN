@@ -178,43 +178,77 @@
 		  </generalSettings>
 		  <graphicPaths>
 			<body>
-				<prioritization>
-					<li MayRequire="ludeon.rimworld.biotech">Gene</li>
-					<li>Hediff</li>
-					<li>Trait</li>
-					<li>Backstory</li>
-					<li>Bodytype</li>
-					<li>Headtype</li>
-					<li>Gender</li>
-				</prioritization>
-				<geneGraphics MayRequire="ludeon.rimworld.biotech">
-					<VRE_Transcendent MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
-						<path>Things/Pawn/Humanlike/BeanMan/ArchonBulborb/Body/Leatherskin_Child</path>
-					</VRE_Transcendent>
-					<VRE_Leatherskin MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
-						<path>Things/Pawn/Humanlike/BeanMan/ArchonBulborb/Body/Leatherskin_Child</path>
-					</VRE_Leatherskin>
-				</geneGraphics>
 				<path>Things/Pawn/Humanlike/BeanMan/Body/</path>
-				<bodytypeGraphics>
-					<Thin>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</Thin>
-					<Hulk>Things/Pawn/Humanlike/BeanMan/Body/Naked_Hulk</Hulk>
-					<Male>Things/Pawn/Humanlike/BeanMan/Body/Naked_Male</Male>
-					<Female>Things/Pawn/Humanlike/BeanMan/Body/Naked_Female</Female>
-					<Fat>Things/Pawn/Humanlike/BeanMan/Body/Naked_Fat</Fat>
-					<ST_BulborbBlack>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbBlack</ST_BulborbBlack>
-					<ST_BulborbBlue>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbBlue</ST_BulborbBlue>
-					<ST_BulborbCave>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbCave</ST_BulborbCave>
-					<ST_BulborbChili>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbChili</ST_BulborbChili>
-					<ST_BulborbCoffee>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbCoffee</ST_BulborbCoffee>
-					<ST_BulborbGreen>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbGreen</ST_BulborbGreen>
-					<ST_BulborbOrange>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbOrange</ST_BulborbOrange>
-					<ST_BulborbPurple>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbPurple</ST_BulborbPurple>
-					<ST_BulborbRed>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbRed</ST_BulborbRed>
-					<ST_BulborbShiny>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbShiny</ST_BulborbShiny>
-					<ST_BulborbSilver>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbSilver</ST_BulborbSilver>
-					<ST_BulborbStinky>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbStinky</ST_BulborbStinky>
-				</bodytypeGraphics>
+				<extendedGraphics>
+					<!--
+					<prioritization>
+						<li MayRequire="ludeon.rimworld.biotech">Gene</li>
+						<li>Hediff</li>
+						<li>Trait</li>
+						<li>Backstory</li>
+						<li>Bodytype</li>
+						<li>Headtype</li>
+						<li>Gender</li>
+						<li>Severity</li>
+						<li>Age</li>
+						<li>Damage</li>
+					</prioritization>
+					-->
+					<gene For="VRE_Transcendent" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+						<path MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">Things/Pawn/Humanlike/BeanMan/ArchonBulborb/Body/Leatherskin_Child</path>
+					</gene>
+					<gene For="VRE_Leatherskin" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+						<path MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">Things/Pawn/Humanlike/BeanMan/ArchonBulborb/Body/Leatherskin_Child</path>
+					</gene>
+					<BodyType For="Thin">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
+					</BodyType>
+					<BodyType For="Hulk">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Hulk</path>
+					</BodyType>
+					<BodyType For="Male">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Male</path>
+					</BodyType>
+					<BodyType For="Female">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Female</path>
+					</BodyType>
+					<BodyType For="Fat">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Fat</path>
+					</BodyType>
+					<BodyType For="ST_BulborbBlack">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbBlack</path>
+					</BodyType>
+					<BodyType For="ST_BulborbBlue">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbBlue</path>
+					</BodyType>
+					<BodyType For="ST_BulborbCave">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbCave</path>
+					</BodyType>
+					<BodyType For="ST_BulborbChili">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbChili</path>
+					</BodyType>
+					<BodyType For="ST_BulborbCoffee">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbCoffee</path>
+					</BodyType>
+					<BodyType For="ST_BulborbGreen">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbGreen</path>
+					</BodyType>
+					<BodyType For="ST_BulborbPurple">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbPurple</path>
+					</BodyType>
+					<BodyType For="ST_BulborbRed">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbRed</path>
+					</BodyType>
+					<BodyType For="ST_BulborbShiny">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbShiny</path>
+					</BodyType>
+					<BodyType For="ST_BulborbSilver">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbSilver</path>
+					</BodyType>
+					<BodyType For="ST_BulborbStinky">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbStinky</path>
+					</BodyType>
+				</extendedGraphics>
 			</body>
 			<head>
 				<path>Things/Pawn/Humanlike/BeanMan/Head/</path>

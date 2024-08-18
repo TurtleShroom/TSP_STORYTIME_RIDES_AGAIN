@@ -88,9 +88,22 @@
 							<value>2</value>
 						</li>
 					</skillGains>
-					<forcedTraitsChance MayRequire="Torann.ARimworldOfMagic">
+					<forcedTraitsChance>
+						<li>
+							<options>
+								<li>
+									<defName>ST_FillerDummy_Trait</defName>
+								</li>
+							</options>
+							<chance>0</chance>
+						</li>
 						<li MayRequire="Torann.ARimworldOfMagic">
-							<defName MayRequire="Torann.ARimworldOfMagic">InnerFire</defName>
+							<options MayRequire="Torann.ARimworldOfMagic">
+								<li MayRequire="Torann.ARimworldOfMagic">
+									<defName MayRequire="Torann.ARimworldOfMagic">InnerFire</defName>
+								</li>
+							</options>
+							<chance MayRequire="Torann.ARimworldOfMagic">999</chance>
 						</li>
 					</forcedTraitsChance>
 				</AlienRace.AlienBackstoryDef>

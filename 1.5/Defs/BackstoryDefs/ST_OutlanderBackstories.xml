@@ -26,8 +26,11 @@
 		</skillGains>
 		<forcedTraitsChance>
 			<li>
-				<defName>ShootingAccuracy</defName>
-				<degree>1</degree>
+				<options>
+					<li>
+						<defName Degree="1">ShootingAccuracy</defName>
+					</li>
+				</options>
 				<chance>100</chance>
 			</li>
 		</forcedTraitsChance>
@@ -48,18 +51,29 @@
 			<li>Intellectual</li>
 		</workDisables>
 		<requiredWorkTags>
-			<li>Social</li>
 			<li>Violent</li>
 		</requiredWorkTags>
 		<skillGains>
-			<Social>-1</Social>
 			<Melee>5</Melee>
 		</skillGains>
 		<forcedTraitsChance>
 			<li>
-				<defName>Psychopath</defName>
+				<options>
+					<li>
+						<defName>Psychopath</defName>
+					</li>
+				</options>
+				<chance>100</chance>
 			</li>
 		</forcedTraitsChance>
+		<disallowedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+			</li>
+			<li>
+				<defName>Cannibal</defName>
+			</li>
+		</disallowedTraitsChance>
 		<spawnCategories>
 			<li>Offworld</li>
 			<li>Outlander</li>
@@ -87,8 +101,12 @@
 		</skillGains>
 		<forcedTraitsChance>
 			<li>
-			  <defName>Neurotic</defName>
-			  <degree>1</degree>
+				<options>
+					<li>
+						<defName degree="1">Neurotic</defName>
+					</li>
+				</options>
+				<chance>100</chance>
 			</li>
 		</forcedTraitsChance>
 		<spawnCategories>

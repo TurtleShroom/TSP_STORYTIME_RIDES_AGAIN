@@ -39,7 +39,7 @@
 							<defName>Psychopath</defName>
 						</li>
 					</options>
-					<chance>60</chance>
+					<chance>50</chance>
 				</li>
 				<li>
 					<options>
@@ -52,13 +52,13 @@
 				<li>
 					<options>
 						<li>
-							<defName Degrees="-1">Beauty</defName>
+							<defName Degree="-1">Beauty</defName>
 						</li>
 						<li>
-							<defName Degrees="-2">Beauty</defName>
+							<defName Degree="-2">Beauty</defName>
 						</li>
 					</options>
-					<chance>15</chance>
+					<chance>22</chance>
 				</li>
 			</forcedRaceTraitEntries>
 			<maxDamageForSocialfight>1</maxDamageForSocialfight>
@@ -137,42 +137,53 @@
 			  </colorChannels>
 			  <bodyAddons>
 					<!-- Jeub Ears -->
-					<!-- Jeub Left Ear -->
 					<li>
+						<!-- Jeub Left Ear -->
+						<name>Jeub left ear</name>
 						<path>Things/Pawn/Humanlike/Jeub/Ears/JeubLeftEar</path>
 						<conditions>
 							<bodyPart>
 								<bodyPart>Ear</bodyPart>
 								<bodyPartLabel>left ear</bodyPartLabel>
-								<layerInvert>true</layerInvert>
-								<alignWithHead>true</alignWithHead>
-								<defaultOffset>Center</defaultOffset>
-								<drawnDesiccated>false</drawnDesiccated>
-								<colorChannel>skin</colorChannel>
 								<drawWithoutPart>false</drawWithoutPart>
 							</bodyPart>
-							<RotStage>Fresh</RotStage>
-							<userCustomizable>false</userCustomizable>
-							<allowColorOverride>false</allowColorOverride>
+							<posture>
+								<drawnInBed>true</drawnInBed>
+								<drawnLaying>true</drawnLaying>
+								<drawnStanding>true</drawnStanding>
+							</posture>
 						</conditions>
+						<layerInvert>true</layerInvert>
+						<userCustomizable>false</userCustomizable>
+						<allowColorOverride>false</allowColorOverride>
+						<alignWithHead>true</alignWithHead>
+						<defaultOffset>Center</defaultOffset>
+						<!-- <drawnDesiccated>false</drawnDesiccated> -->
+						<colorChannel>skin</colorChannel>
 					</li>
-					<!-- Jeub Right Ear -->
 					<li>
+						<!-- Jeub Right Ear -->
+						<name>Jeub right ear</name>
 						<path>Things/Pawn/Humanlike/Jeub/Ears/JeubRightEar</path>
 						<conditions>
 							<bodyPart>
 								<bodyPart>Ear</bodyPart>
 								<bodyPartLabel>right ear</bodyPartLabel>
-								<layerInvert>true</layerInvert>
-								<alignWithHead>true</alignWithHead>
-								<defaultOffset>Center</defaultOffset>
-								<drawnDesiccated>false</drawnDesiccated>
-								<colorChannel>skin</colorChannel>
-							</bodyPart>							
-							<RotStage>Fresh</RotStage>
-							<userCustomizable>false</userCustomizable>
-							<allowColorOverride>false</allowColorOverride>
+								<drawWithoutPart>false</drawWithoutPart>
+							</bodyPart>
+							<posture>
+								<drawnInBed>true</drawnInBed>
+								<drawnLaying>true</drawnLaying>
+								<drawnStanding>true</drawnStanding>
+							</posture>
 						</conditions>
+						<layerInvert>true</layerInvert>
+						<userCustomizable>false</userCustomizable>
+						<allowColorOverride>false</allowColorOverride>
+						<alignWithHead>true</alignWithHead>
+						<defaultOffset>Center</defaultOffset>
+						<!-- <drawnDesiccated>false</drawnDesiccated> -->
+						<colorChannel>skin</colorChannel>
 					</li>
 			  </bodyAddons>
 			</alienPartGenerator>

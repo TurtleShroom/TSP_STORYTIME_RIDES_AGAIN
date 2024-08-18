@@ -19,13 +19,13 @@
 						<chance>100</chance>
 					</li>
 					<!-- If you have the Mod -->
-					<li>
-						<options>
+					<li MayRequire="morishep.tarojun.onioftherim">
+						<options MayRequire="morishep.tarojun.onioftherim">
 							<li MayRequire="morishep.tarojun.onioftherim">
-								<defName>Natures_blessing</defName>
+								<defName MayRequire="morishep.tarojun.onioftherim">Natures_blessing</defName>
 							</li>
 						</options>
-						<chance>50</chance>
+						<chance MayRequire="morishep.tarojun.onioftherim">50</chance>
 					</li>
 				</forcedRaceTraitEntries>
 				<maxDamageForSocialfight>1</maxDamageForSocialfight>
@@ -161,14 +161,14 @@
 				-->
 				<head>
 					<!-- <path>Things/Pawn/Humanlike/Heads/</path> -->
-					<headtypeGraphics>
-						<Male_NarrowPointy>
+					<extendedGraphics>
+						<HeadType For="Male_NarrowPointy">
 							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Male_Normal_Average</path>
-						</Male_NarrowPointy>
-						<Female_NarrowPointy>
+						</HeadType>
+						<HeadType For="Female_NarrowPointy">
 							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Female_Normal_Average</path>
-						</Female_NarrowPointy>
-					</headtypeGraphics>
+						</HeadType>
+					</extendedGraphics>
 				</head>
 			</graphicPaths>
 			<relationSettings>

@@ -1,9 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/shuffleable</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<success>Always</success>
+			<value>
+				<shuffleable>true</shuffleable>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/requiredWorkTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<success>Always</success>
+			<value>
+				<requiredWorkTags></requiredWorkTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/titleShort</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<success>Always</success>
+			<value>
+				<titleShort>turtle herdsman</titleShort>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/spawnCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<success>Always</success>
+			<value>
+				<spawnCategories></spawnCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/possessions</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<success>Always</success>
+			<value>
+				<possessions></possessions>
+			</value>
+		</nomatch>
+	</Operation>
+
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/shuffleable</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
@@ -17,7 +79,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/requiredWorkTags</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
@@ -33,7 +95,7 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/titleShort</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
@@ -47,62 +109,60 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
-		<!-- If it does, do this replacement. -->
+	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/spawnCategories</xpath>
+		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/spawnCategories</xpath>
 			<value>
-				<spawnCategories>
-					<li>Outlander</li>
-					<li>Offworld</li>
-					<li>Tribal</li>
-					<li>Farmer</li>
-					<li>TribalFarmer</li>
-					<li>ImperialCommon</li>
-					<li>Medieval</li>
-					<li>MedievalLow</li>
-					<li>MedievalPeasant</li>
-					<li>MedievalTownsfolk</li>
-					<li>MedievalServant</li>
-					<li>MedievalMisc</li>
-					<li>Classical</li>
-					<li>GnomeBackstory</li>
-					<li>BeetnikhBackstory</li>
-					<li>SW_Hutts_Backstory</li>
-					<li>TTancon_Standard</li>
-					<li>TTancon_Nomal</li>
-					<li>TTancon_Normal</li>
-					<li>TTancon_M</li>
-					<li>GoblinBackstory</li>
-					<li>HSAU_BS_ISC_Childhood</li>
-					<li>TSP_TurtleCult</li>
-					<li>OniBackstory</li>
-					<li>Nyaron_Standard</li>
-					<li>Kurin_Citizen</li>
-					<li>TRAHS_DreemurrBackstories</li>
-					<li>Nyaron_Pawn_bios</li>
-					<li>ArgonianBackstory</li>
-					<li>ESCP_DunmerBackstory</li>
-					<li>ESCP_BosmerBackstory</li>
-					<li>ESCP_ChimerBackstory</li>
-					<li>ESCP_FalmerBackstory</li>
-					<li>ESCP_MaormerBackstory</li>
-					<li>ESCP_AltmerBackstory</li>
-					<li>ESCP_DunmerImperialLegionBackstory</li>
-					<li>ESCP_DunmerIndorilBackstory</li>
-					<li>ESCP_DunmerImperialCultBackstory</li>
-					<li>HSAU_BS_HLS_Childhood</li>
-					<li>OviumBackstory</li>
-					<li>Jews</li> <!-- I did not make this name up. Caulaflour used this for his "Among Us" Mod. -->
-					<li>SZ_FactionStoryZongHe</li>
-					<li>SZ_FactionStoryShangRen</li>
-					<li>SZ_FactionStorySpecial</li>
-					<li>Nyaron_Init</li>
-					<li>EquiumBackstory</li>
-					<li>EBioBs</li>
-					<li>HSEdoBackstories</li>
-				</spawnCategories>
+				<li>Outlander</li>
+				<li>Offworld</li>
+				<li>Tribal</li>
+				<li>Farmer</li>
+				<li>TribalFarmer</li>
+				<li>ImperialCommon</li>
+				<li>Medieval</li>
+				<li>MedievalLow</li>
+				<li>MedievalPeasant</li>
+				<li>MedievalTownsfolk</li>
+				<li>MedievalServant</li>
+				<li>MedievalMisc</li>
+				<li>Classical</li>
+				<li>GnomeBackstory</li>
+				<li>BeetnikhBackstory</li>
+				<li>SW_Hutts_Backstory</li>
+				<li>TTancon_Standard</li>
+				<li>TTancon_Nomal</li>
+				<li>TTancon_Normal</li>
+				<li>TTancon_M</li>
+				<li>GoblinBackstory</li>
+				<li>HSAU_BS_ISC_Childhood</li>
+				<li>TSP_TurtleCult</li>
+				<li>OniBackstory</li>
+				<li>Nyaron_Standard</li>
+				<li>Kurin_Citizen</li>
+				<li>TRAHS_DreemurrBackstories</li>
+				<li>Nyaron_Pawn_bios</li>
+				<li>ArgonianBackstory</li>
+				<li>ESCP_DunmerBackstory</li>
+				<li>ESCP_BosmerBackstory</li>
+				<li>ESCP_ChimerBackstory</li>
+				<li>ESCP_FalmerBackstory</li>
+				<li>ESCP_MaormerBackstory</li>
+				<li>ESCP_AltmerBackstory</li>
+				<li>ESCP_DunmerImperialLegionBackstory</li>
+				<li>ESCP_DunmerIndorilBackstory</li>
+				<li>ESCP_DunmerImperialCultBackstory</li>
+				<li>HSAU_BS_HLS_Childhood</li>
+				<li>OviumBackstory</li>
+				<li>Jews</li> <!-- I did not make this name up. Caulaflour used this for his "Among Us" Mod. -->
+				<li>SZ_FactionStoryZongHe</li>
+				<li>SZ_FactionStoryShangRen</li>
+				<li>SZ_FactionStorySpecial</li>
+				<li>Nyaron_Init</li>
+				<li>EquiumBackstory</li>
+				<li>EBioBs</li>
+				<li>HSEdoBackstories</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -110,18 +170,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
-		<!-- If it does, do this replacement. -->
+	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/possessions</xpath>
+		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/possessions</xpath>
 			<value>
-				<possessions>
-					<li>
-						<key>EggTortoiseFertilized</key>
-						<value>12</value>
-					</li>
-				</possessions>
+				<EggTortoiseFertilized>12</EggTortoiseFertilized>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

@@ -17,10 +17,10 @@
     <slot>Childhood</slot>
     <skillGains>
 		<!--
-      <Social>-10</Social>
+		<Social>-10</Social>
 		-->
-	  <Melee>6</Melee>
-	  <Animals>3</Animals>
+		<Melee>6</Melee>
+		<Animals>3</Animals>
     </skillGains>
 	<spawnCategories Inherit="False">
 		<li>JeubBackstory</li>
@@ -33,12 +33,20 @@
 	<workDisables>
 		<li>Social</li>
 	</workDisables>
-	<disallowedTraits>
-		<Cannibal>0</Cannibal>
-		<Psychopath>0</Psychopath>
-		<Brawler>0</Brawler>
-		<Bloodlust>0</Bloodlust>
-	</disallowedTraits>
+	<disallowedTraitsChance>
+		<li>
+			<defName>Cannibal</defName>
+		</li>
+		<li>
+			<defName>Psychopath</defName>
+		</li>
+		<li>
+			<defName>Brawler</defName>
+		</li>
+		<li>
+			<defName>Bloodlust</defName>
+		</li>
+	</disallowedTraitsChance>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
@@ -85,7 +93,7 @@
     <defName>Raised_Humans_Jeub</defName>
     <title>Raised by Aliens</title>
 	<titleShort>adopted</titleShort>
-    <baseDesc>[PAWN_nameDef] was found abandoned on the border of his hive's land by a family of non-Jeub farmers. For some reason, they took [PAWN_possessive] in and raised [Pawn_objective] as one of their own.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was found abandoned on the border of his hive's land by a family of non-Jeub farmers. For some reason, they took [PAWN_possessive] in and raised [PAWN_objective] as one of their own.</baseDesc>
     <slot>Childhood</slot>
     <skillGains>
       <Intellectual>2</Intellectual>
@@ -93,21 +101,36 @@
     </skillGains>
 	<forcedTraitsChance>
 		<li>
-			<defName>Xenophobia</defName>
-			<degree>-1</degree>
+			<options>
+				<li>
+					<defName Degree="-1">HAR_Xenophobia</defName>
+				</li>
+			</options>
 			<chance>100</chance>
 		</li>
 		<li>
-			<defName>Kind</defName>
-			<chance>50</chance>
+			<options>
+				<li>
+					<defName>Kind</defName>
+				</li>
+			</options>
+			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
-	<disallowedTraits>
-		<Psychopath>0</Psychopath>
-		<Cannibal>0</Cannibal>
-		<Bloodlust>0</Bloodlust>
-		<Abrasive>0</Abrasive>
-	</disallowedTraits>
+	<disallowedTraitsChance>
+		<li>
+			<defName>Psychopath</defName>
+		</li>
+		<li>
+			<defName>Cannibal</defName>
+		</li>
+		<li>
+			<defName>Bloodlust</defName>
+		</li>
+		<li>
+			<defName>Abrasive</defName>
+		</li>
+	</disallowedTraitsChance>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
@@ -159,9 +182,11 @@
 		<li>Skinhead</li>
 		<li>Antifa</li>
 	</spawnCategories>
-	<disallowedTraits>
-		<Kind>0</Kind>
-	</disallowedTraits>
+	<disallowedTraitsChance>
+		<li>
+			<defName>Kind</defName>
+		</li>
+	</disallowedTraitsChance>
 	<requiredWorkTags>
 		<li>Social</li>
 		<li>Violent</li>
@@ -270,7 +295,7 @@
     <defName>Boiling_Rock_Jeub</defName>
     <title>Boiling Rock Inmate</title>
 	<titleShort>Boiling Rock</titleShort>
-    <baseDesc>[PAWN_nameDef] was arrested and sent to the Boiling Rock, an infamous asteroid prison for Spacer criminals, gang bangers, and other dangerous villains. There, [PAWN_pronoun] joined one of the many gangs and fought for survival. When he finished serving his time, he returned as a smarter, stronger, and crueller criminal.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was arrested and sent to the Boiling Rock, an infamous asteroid prison for Spacer criminals, gang bangers, and other dangerous villains. There, [PAWN_pronoun] joined one of the many gangs and fought for survival. When [PAWN_nameDef] finished serving [PAWN_possessive] time, [PAWN_pronoun] returned as a smarter, stronger, and crueler criminal.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>6</Melee>
@@ -303,19 +328,29 @@
 		<li>Skinhead</li>
 		<li>Antifa</li>
     </spawnCategories>
-	<disallowedTraits>
-		<Kind>0</Kind>
-	</disallowedTraits>
 	<forcedTraitsChance>
-      <li>
-        <defName>Psychopath</defName>
-		<chance>100</chance>
-      </li>
-	  <li>
-		<defName>Brawler</defName>
-		<chance>100</chance>
-	  </li>
+		<li>
+			<options>
+				<li>
+					<defName>Psychopath</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>Brawler</defName>
+				</li>
+			</options>
+			<chance>98</chance>
+		</li>
     </forcedTraitsChance>
+	<disallowedTraitsChance>
+		<li>
+			<defName>Kind</defName>
+		</li>
+	</disallowedTraitsChance>
 	<requiredWorkTags>
 		<li>Violent</li>
 	</requiredWorkTags>
@@ -330,7 +365,7 @@
     <defName>Pacifist_Jeub</defName>
     <title>Jeub Pacifist</title>
 	<titleShort>pacifist</titleShort>
-    <baseDesc>[PAWN_nameDef] saw the horror and violence of [PAWN_possessive] Jeub hive and desired to change it. Unfortunately, [PAWN_pronoun] quickly realized that most of the High Jeubs of [PAWN_possessive] hive were inherently violent; [PAWN_possessive] ambition was pointless.</baseDesc>
+    <baseDesc>[PAWN_nameDef] saw the horror and violence of [PAWN_possessive] Jeub hive and desired to change it. Unfortunately, [PAWN_pronoun] quickly realized that most of the High Jeubs of [PAWN_possessive] hive were inherently violent; the peaceful ambition of [PAWN_nameDef] was pointless.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <Social>6</Social>
@@ -339,25 +374,43 @@
 	<forcedTraitsChance>
 		<!--
 		<li>
-			<defName>NaturalMood</defName>
-			<degree>-2</degree>
+			<options>
+				<li>
+					<defName Degree="-2">NaturalMood</defName>
+				</li>
+				<chance>0</chance>
+			</options>
 		</li>
 		-->
 		<li>
-			<defName>Kind</defName>
-			<chance>100</chance>
+			<options>
+				<li>
+					<defName>Kind</defName>
+				</li>
+			</options>
+			<chance>999</chance>
 		</li>
     </forcedTraitsChance>
 	<workDisables>
       <li>Violent</li>
     </workDisables>
-	<disallowedTraits>
-		<Psychopath>0</Psychopath>
-		<Cannibal>0</Cannibal>
-		<Brawler>0</Brawler>
-		<Abrasive>0</Abrasive>
-		<Bloodlust>0</Bloodlust>
-	</disallowedTraits>
+	<disallowedTraitsChance>
+		<li>
+			<defName>Psychopath</defName>
+		</li>
+		<li>
+			<defName>Cannibal</defName>
+		</li>
+		<li>
+			<defName>Brawler</defName>
+		</li>
+		<li>
+			<defName>Abrasive</defName>
+		</li>
+		<li>
+			<defName>Bloodlust</defName>
+		</li>
+	</disallowedTraitsChance>
 	<!--
 	<requiredWorkTags>
 		<li>Social</li>
@@ -369,17 +422,24 @@
     <defName>Farmer_Jeub</defName>
     <title>Botox Farmer</title>
 	<titleShort>Botox junkie</titleShort>
-    <baseDesc>[PAWN_nameDef] worked on a farm that grew recreational Botox and processing it into drugs. He was known to consume a great deal of the farm's supply.</baseDesc>
+    <baseDesc>[PAWN_nameDef] worked on a farm that cultivated samples of botulinium toxin bacteria, from recreational Botox was processed. [PAWN_nameDef] was known to consume a great deal of the farm's supply.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <Intellectual>2</Intellectual>
 	  <Plants>6</Plants>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>DrugDesire</defName>
-        <degree>2</degree>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName Degree="2">DrugDesire</defName>
+				</li>
+				<li>
+					<defName Degree="1">DrugDesire</defName>
+				</li>
+			</options>
+			<chance>999</chance>
+		</li>
     </forcedTraitsChance>
     <forcedHediffs>
       <li>BotoxAddiction</li>

@@ -146,10 +146,14 @@
 	  <Intellectual>1</Intellectual>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>Abrasive</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Abrasive</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   
@@ -163,14 +167,17 @@
 	  <Melee>9</Melee>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>Bloodlust</defName>
-		<chance>100</chance>
-      </li>
-	  <li>
-		<defName>Tough</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Bloodlust</defName>
+				</li>
+				<li>
+					<defName>Tough</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 		<workDisables>
 			<li>Social</li>
@@ -202,15 +209,19 @@
     <baseDesc>[PAWN_nameDef] was captain of a pirate spaceship until being overthrown in a mutiny by [PAWN_possessive] first mate. The mutineers proceeded to abandon [PAWN_objective] on some far-flung Rim World, where [PAWN_pronoun] survived for months until a Golden Age pirate chapter rescued [PAWN_objective]. By the time [PAWN_possessive] remaining loyal crewmen took back the spaceship, [PAWN_nameDef] was presumed dead.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
-      <Plants>7</Plants>
-	  <Cooking>5</Cooking>
+		<Plants>7</Plants>
+		<Cooking>5</Cooking>
 		<Medicine>1</Medicine>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>Nerves</defName>
-		<degree>-1</degree>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName Degree="-1">Nerves</defName>
+				</li>
+			</options>
+			<chance>90</chance>
+		</li>
     </forcedTraitsChance>
 	<requiredWorkTags>
 		<li>Violent</li>
@@ -236,10 +247,14 @@
 	  <Melee>6</Melee>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>Psychopath</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Psychopath</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<requiredWorkTags>
 		<li>Violent</li>
@@ -250,7 +265,7 @@
     <defName>ST_ShipDoctor</defName>
     <title>Pirate Doctor</title> 
 	<titleShort>herbalist</titleShort>
-    <baseDesc>[PAWN_nameDef] served as the chief medical expert of a crew of space pirates. Before [PAWN_nameDef] joined, [PAWN_pronoun] had no formal training and relied primarily on herbal remedies and other folk knowledge. Since [PAWN_pronoun] was not seeking to broaden [PAWN_pronoun] skills beyond traditional medicine at the time, [PAWN_pronoun] was replaced with a more open-minded doctor. His skills were perfect for the shoestring budget of Golden Age pirates, however.</baseDesc>
+    <baseDesc>[PAWN_nameDef] served as the chief medical expert of a crew of space pirates. Before [PAWN_nameDef] joined, [PAWN_pronoun] had no formal training and relied primarily on herbal remedies and other folk knowledge. Since [PAWN_pronoun] was not seeking to broaden [PAWN_pronoun] skills beyond traditional medicine at the time, [PAWN_pronoun] was replaced with a more open-minded, scientific doctor. His skills were perfect for the shoestring budget of Golden Age pirates, however.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <Medicine>4</Medicine>
@@ -266,26 +281,44 @@
     <defName>ST_GentlemanPirate</defName>
     <title>Gentleman Corsair</title> 
 	<titleFemale>Lady-Corsair</titleFemale>
-	<titleShort>honorable corsair</titleShort>
+	<titleShort>honorable ex-corsair</titleShort>
 	<bodyTypeMale>Hulk</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
-    <baseDesc>[PAWN_nameDef] was once a captain of a crew of space pirates. Despite being a thief, [PAWN_pronoun] became well known for [PAWN_possessive] mercy and civility to [PAWN_possessive] foes, as well as for [PAWN_possessive] surprising intelligence and craftiness. Though [PAWN_pronoun] has since gone straight and touched down on this Rim World, [PAWN_pronoun] remains a skilled fighter.</baseDesc>
+    <baseDesc>[PAWN_nameDef] was once a captain of a crew of space pirates. Despite being a thief, [PAWN_pronoun] became well known for [PAWN_possessive] mercy and civility to [PAWN_possessive] foes, as well as for [PAWN_possessive] surprising intelligence and craftiness. Though [PAWN_nameDef] has since gone straight and touched down on this Rim World, [PAWN_pronoun] remains a skilled fighter.</baseDesc>
     <slot>Adulthood</slot>
 	<spawnCategories Inherit="False">
-      <li>Offworld</li>
-	  <li>Outlander</li>
+		<li>Offworld</li>
+		<li>Outlander</li>
     </spawnCategories>
     <skillGains>
-      <Intellectual>3</Intellectual>
-	  <Social>4</Social>
+		<Intellectual>3</Intellectual>
+		<Social>4</Social>
 		<Melee>5</Melee>
     </skillGains>
 	<forcedTraitsChance>
 		<li>
-			<defName>Kind</defName>
+			<options>
+				<li>
+					<defName>Kind</defName>
+				</li>
+			</options>
 			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
+	<disallowedTraitsChance>
+		<li>
+			<defName>Abrasive</defName>
+		</li>
+		<li>
+			<defName>Cannibal</defName>
+		</li>
+		<li>
+			<defName>Psychopath</defName>
+		</li>
+		<li>
+			<defName>Bloodlust</defName>
+		</li>
+	</disallowedTraitsChance>
 	<requiredWorkTags>
 		<li>Violent</li>
 	</requiredWorkTags>
@@ -304,11 +337,14 @@
 	  <Shooting>-1</Shooting>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>DrugDesire</defName>
-        <degree>1</degree>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>DrugDesire</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
   
@@ -316,7 +352,7 @@
     <defName>ST_NavyTraitor</defName>
     <title>Navy Traitor</title>
 	<titleShort>deserter</titleShort>
-    <baseDesc>[PAWN_nameDef] served in a spacefaring navy for a few years before deciding the life wasn't for [PAWN_objective]. [PAWN_pronoun] jumped ship at port and joined up with a space pirate crew. After that, [PAWN_pronoun] headed off at a terrestrial smuggler's port and joined up with a Golden Age crew.</baseDesc>
+    <baseDesc>[PAWN_nameDef] served in a spacefaring navy for a few years before deciding the life wasn't for [PAWN_objective]. [PAWN_pronoun] jumped ship at port and joined up with a space pirate crew. After that, [PAWN_nameDef] headed off at a terrestrial smuggler's port and joined up with a Golden Age crew.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <Intellectual>2</Intellectual>
@@ -366,12 +402,17 @@
     <skillGains>
       <Social>4</Social>
 	  <Animals>4</Animals>
+	  <Intellectual>1</Intellectual>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>Nimble</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Nimble</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
 
@@ -393,21 +434,26 @@
     <defName>ST_Boarder</defName>
     <title>Boarder</title>
 	<titleShort>boarder</titleShort>
-    <baseDesc>Before landing on a Rim World, [PAWN_nameDef] was a space pirate. [PAWN_pronoun] always volunteered to join boarding parties when attacking another ship. In spite of [PAWN_possessive] spacesuit, [PAWN_pronoun] was a terrifying opponent and by far the ship's best fighter.</baseDesc>
+    <baseDesc>Before landing on a Rim World, [PAWN_nameDef] was a space pirate. [PAWN_pronoun] always volunteered to join boarding parties when attacking another ship. In spite of [PAWN_possessive] spacesuit, [PAWN_pronoun] was a terrifying opponent and by far the ship's best fighter. [PAWN_nameDef] continues to excel at this while planet-side.</baseDesc>
     <slot>Adulthood</slot>
 	<spawnCategories>
       <li>PirateBackstory</li>
 	  <li>Pirate</li>
+	  <li>Raider</li>
 	  <li>Offworld</li>
     </spawnCategories>
     <skillGains>
       <Melee>10</Melee>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>Brawler</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<li>
+					<defName>Brawler</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
  
@@ -420,7 +466,7 @@
     <skillGains>
       <Shooting>12</Shooting>
     </skillGains>
-	<spawnCategories Inherit="False">
+	<spawnCategories>
 		<li>PirateBackstory</li>
 		<li>Pirate</li>
 		<li>Raider</li>

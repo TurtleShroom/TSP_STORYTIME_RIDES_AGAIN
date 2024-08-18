@@ -11,12 +11,15 @@
     </spawnCategories>
 	<forcedTraitsChance>
 		<li>
-			<defName>Buglover</defName>
-			<chance>10</chance>
-		</li>
-		<li MayRequire="higgs.cozarkian.entomophagy">
-			<defName MayRequire="higgs.cozarkian.entomophagy">Entomophagous</defName>
-			<chance MayRequire="higgs.cozarkian.entomophagy">5</chance>
+			<options>
+				<li>
+					<defName>Buglover</defName>
+				</li>
+				<li MayRequire="higgs.cozarkian.entomophagy">
+					<defName MayRequire="higgs.cozarkian.entomophagy">Entomophagous</defName>
+				</li>
+			</options>
+			<chance>18</chance>
 		</li>
 	</forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
@@ -65,8 +68,11 @@
 	</skillGains>
 	<forcedTraitsChance>
 		<li>
-			<defName>Xenophobia</defName>
-			<degree>-1</degree>
+			<options>
+				<li>
+					<defName Degree="-1">HAR_Xenophobia</defName>
+				</li>
+			</options>
 			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
@@ -131,12 +137,15 @@
 	</requiredWorkTags>
 	<forcedTraitsChance Inherit="False">
 		<li>
-			<defName>Buglover</defName>
+			<options>
+					<li MayRequire="higgs.cozarkian.entomophagy">
+						<defName MayRequire="higgs.cozarkian.entomophagy">Entomophagous</defName>
+					</li>
+					<li>
+						<defName>Buglover</defName>
+					</li>
+			</options>
 			<chance>75</chance>
-		</li>
-		<li MayRequire="higgs.cozarkian.entomophagy">
-			<defName MayRequire="higgs.cozarkian.entomophagy">Entomophagous</defName>
-			<chance MayRequire="higgs.cozarkian.entomophagy">25</chance>
 		</li>
 	</forcedTraitsChance>
   </AlienRace.AlienBackstoryDef>
@@ -181,10 +190,12 @@
       <Shooting>5</Shooting>
     </skillGains>
 	<forcedTraitsChance>
-      <li>
-        <defName>Cannibal</defName>
-		<chance>100</chance>
-      </li>
+		<li>
+			<options>
+				<defName>Cannibal</defName>
+			</options>
+			<chance>100</chance>
+		</li>
     </forcedTraitsChance>
 	<requiredWorkTags>
 		<li>Violent</li>
@@ -235,7 +246,11 @@
     </skillGains>
 	<forcedTraitsChance Inherit="False">
 		<li>
-			<defName>Buglover</defName>
+			<options>
+				<li>
+					<defName>Buglover</defName>
+				</li>
+			</options>
 			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
@@ -268,7 +283,7 @@
     <defName>Frog_FrogSupremecist</defName>
     <title>Frog Supremecist</title>
 	<titleShort>supremacist</titleShort>
-    <baseDesc>[PAWN_nameDef] believes that his species is the greatest race in the universe, and superior to all others.</baseDesc>
+    <baseDesc>[PAWN_nameDef] believes that frogmen are the greatest race in the universe, and superior to all others.</baseDesc>
     <slot>Adulthood</slot>
     <skillGains>
       <Social>-5</Social>
@@ -276,8 +291,11 @@
     </skillGains>
 	<forcedTraitsChance>
 		<li>
-			<defName>Xenophobia</defName> <!-- No MAYREQUIRE because it is built in with HAR, which is a dependency -->
-			<degree>1</degree>
+			<options>
+				<li>
+					<defName Degree="1">HAR_Xenophobia</defName> <!-- No MAYREQUIRE because it is built in with HAR, which is a dependency -->
+				</li>
+			</options>
 			<chance>100</chance>
 		</li>
 	</forcedTraitsChance>
