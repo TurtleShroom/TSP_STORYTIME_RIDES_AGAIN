@@ -8,9 +8,26 @@
     <hungerRateFactor>0.2</hungerRateFactor>
     <marketValueFactor>0.5</marketValueFactor>
 	<foodMaxFactor>2</foodMaxFactor>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeChild</workerClass>
+	<claimable>true</claimable>
+	<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Babies just fall asleep randomly and they're cool with it. -->
+	<!--
+	<thinkTreeMainOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBaby</thinkTreeMainOverride>
+	<thinkTreeConstantOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBabyConstant</thinkTreeConstantOverride>
+	-->
+	<developmentalStage>Baby</developmentalStage>
+	<canDoRandomMentalBreaks>false</canDoRandomMentalBreaks>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+	<canVoluntarilySleep>false</canVoluntarilySleep> <!-- Babies fall asleep randomly when they're tired. -->
+	<canSleepWhenStarving>false</canSleepWhenStarving>
     <statFactors>
       <MoveSpeed>0.2</MoveSpeed>
     </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeetSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
   </LifeStageDef>
   <LifeStageDef>
     <defName>BeetChildStage</defName>
@@ -20,9 +37,15 @@
     <hungerRateFactor>0.6</hungerRateFactor>
     <marketValueFactor>0.9</marketValueFactor>
 	<foodMaxFactor>2</foodMaxFactor>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeChild</workerClass>
     <statFactors>
       <MoveSpeed>0.65</MoveSpeed>
     </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeetSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
   </LifeStageDef>
   <LifeStageDef>
     <defName>BeetTeenStage</defName>
@@ -32,6 +55,12 @@
     <visible>false</visible>
     <reproductive>true</reproductive>
 	<foodMaxFactor>2</foodMaxFactor>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeetSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
   </LifeStageDef>
   <LifeStageDef>
     <defName>BeetAdultStage</defName>
@@ -40,5 +69,11 @@
     <visible>true</visible>
     <reproductive>true</reproductive>
 	<foodMaxFactor>2</foodMaxFactor>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeetSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
   </LifeStageDef>
 </Defs>

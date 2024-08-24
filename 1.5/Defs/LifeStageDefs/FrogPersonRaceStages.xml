@@ -8,6 +8,23 @@
 		<healthScaleFactor>0.2</healthScaleFactor>
 		<hungerRateFactor>0.2</hungerRateFactor>
 		<marketValueFactor>1.5</marketValueFactor>
+		<claimable>true</claimable>
+		<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Babies just fall asleep randomly and they're cool with it. -->
+		<thinkTreeMainOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBaby</thinkTreeMainOverride>
+		<thinkTreeConstantOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBabyConstant</thinkTreeConstantOverride>
+		<canDoRandomMentalBreaks>false</canDoRandomMentalBreaks> <!-- Babies have crying/giggling fits instead of mental breaks. -->
+		<canSleepWhileHeld>true</canSleepWhileHeld>
+		<canVoluntarilySleep>false</canVoluntarilySleep> <!-- Babies fall asleep randomly when they're tired. -->
+		<canSleepWhenStarving>false</canSleepWhenStarving>
+		<canInitiateSocialInteraction>false</canInitiateSocialInteraction>
+		<alwaysDowned>true</alwaysDowned>
+		<developmentalStage>Baby</developmentalStage>
+		<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeChild</workerClass>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/FrogmenSilhouette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
 	</LifeStageDef>
   
 	<LifeStageDef>
@@ -17,6 +34,12 @@
 		<healthScaleFactor>0.6</healthScaleFactor>
 		<hungerRateFactor>0.6</hungerRateFactor>
 		<marketValueFactor>0.9</marketValueFactor>
+		<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/FrogmenSilhouette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
 	</LifeStageDef>
   
 	<LifeStageDef>
@@ -26,6 +49,12 @@
 		<hungerRateFactor>0.8</hungerRateFactor>
 		<visible>false</visible>
 		<reproductive>false</reproductive>
+		<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/FrogmenSilhouette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
 	</LifeStageDef>
   
 	<LifeStageDef>
@@ -33,24 +62,42 @@
 		<hungerRateFactor>1</hungerRateFactor>
 		<label>adult</label>
 		<visible>false</visible>
-		<reproductive>false</reproductive>
+		<reproductive>true</reproductive>
+		<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/FrogmenSilhouette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
 	</LifeStageDef>
   
 	<LifeStageDef>
 		<defName>forgChild</defName>
 		<label>adult</label>
 		<visible>false</visible>
-		<reproductive>false</reproductive>
+		<reproductive>true</reproductive>
 		<milkable>false</milkable>
 		<shearable>false</shearable>
+		<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/FrogmenSilhouette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
 	</LifeStageDef>
 	
 	<LifeStageDef>
 		<defName>duoChild</defName>
 		<label>adult stack</label>
 		<visible>true</visible>
-		<reproductive>false</reproductive>
+		<reproductive>true</reproductive>
 		<milkable>false</milkable>
 		<shearable>false</shearable>
+		<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/FrogmenSilhouette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
 	</LifeStageDef>
 </Defs>

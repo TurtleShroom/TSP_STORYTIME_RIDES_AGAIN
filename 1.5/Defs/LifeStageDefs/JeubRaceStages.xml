@@ -1,15 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
   <LifeStageDef>
     <defName>JeubBabyStage</defName>
-    <label>Jeubling</label>
+    <label>larval Jeub</label>
     <bodySizeFactor>0.2</bodySizeFactor>
     <healthScaleFactor>0.2</healthScaleFactor>
     <hungerRateFactor>0.2</hungerRateFactor>
     <marketValueFactor>0.5</marketValueFactor>
+	<claimable>true</claimable>
+    <alwaysDowned>false</alwaysDowned>
+	<reproductive>false</reproductive>
+    <involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Babies just fall asleep randomly and they're cool with it. -->
+	<developmentalStage>Baby</developmentalStage>
+    <thinkTreeMainOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBaby</thinkTreeMainOverride>
+    <thinkTreeConstantOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBabyConstant</thinkTreeConstantOverride>
+    <canDoRandomMentalBreaks>false</canDoRandomMentalBreaks>
+    <canSleepWhileHeld>true</canSleepWhileHeld>
+    <canVoluntarilySleep>true</canVoluntarilySleep> <!-- Babies fall asleep randomly when they're tired. -->
+    <canSleepWhenStarving>false</canSleepWhenStarving>
+    <canInitiateSocialInteraction>false</canInitiateSocialInteraction>
+	<foodMaxFactor>3</foodMaxFactor>
     <statFactors>
-      <MoveSpeed>0.2</MoveSpeed>
+      <MoveSpeed>2</MoveSpeed>
     </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/JeubSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
   </LifeStageDef>
   
   <LifeStageDef>
@@ -17,27 +36,122 @@
     <label>Juebling</label>
     <bodySizeFactor>0.5</bodySizeFactor>
     <healthScaleFactor>0.5</healthScaleFactor>
-    <hungerRateFactor>0.5</hungerRateFactor>
+    <hungerRateFactor>0.75</hungerRateFactor>
     <marketValueFactor>0.9</marketValueFactor>
+	<claimable>true</claimable>
+	<reproductive>true</reproductive>
+	<alwaysDowned>false</alwaysDowned>
+	<canInitiateSocialInteraction>false</canInitiateSocialInteraction>
+	<foodMaxFactor>3</foodMaxFactor>
+	<!-- <developmentalStage>Child</developmentalStage> -->
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
     <statFactors>
-      <MoveSpeed>0.65</MoveSpeed>
+      <MoveSpeed>2</MoveSpeed>
     </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/JeubSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
   </LifeStageDef>
   
   <LifeStageDef>
     <defName>JeubTeenStage</defName>
     <label>adolescent Jeub</label>
     <bodySizeFactor>0.8</bodySizeFactor>
-    <hungerRateFactor>0.6</hungerRateFactor>
+    <hungerRateFactor>0.8</hungerRateFactor>
     <visible>false</visible>
     <reproductive>true</reproductive>
+	<claimable>true</claimable>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+	<foodMaxFactor>3</foodMaxFactor>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/JeubSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
   </LifeStageDef>
   
   <LifeStageDef>
     <defName>JeubAdultStage</defName>
-    <hungerRateFactor>0.9</hungerRateFactor>
+    <hungerRateFactor>1</hungerRateFactor>
     <label>adult Jeub</label>
     <visible>false</visible>
     <reproductive>true</reproductive>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<canSleepWhileHeld>false</canSleepWhileHeld>
+	<foodMaxFactor>3</foodMaxFactor>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/JeubSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+  </LifeStageDef>
+  
+  <LifeStageDef>
+    <defName>JeubNonSapientBaby</defName>
+    <label>larval Jeub</label>
+    <bodySizeFactor>0.5</bodySizeFactor>
+    <healthScaleFactor>0.5</healthScaleFactor>
+    <hungerRateFactor>0.5</hungerRateFactor>
+    <marketValueFactor>0.9</marketValueFactor>
+	<!-- <claimable>true</claimable> -->
+	<reproductive>true</reproductive>
+	<alwaysDowned>false</alwaysDowned>
+	<canInitiateSocialInteraction>false</canInitiateSocialInteraction>
+    <milkable>true</milkable>
+    <shearable>true</shearable>
+    <caravanRideable>false</caravanRideable>
+	<foodMaxFactor>3</foodMaxFactor>
+    <statFactors>
+      <MoveSpeed>2</MoveSpeed>
+    </statFactors>
+	<!--
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/JeubSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+	-->
+  </LifeStageDef>
+  
+  <LifeStageDef>
+    <defName>JeubNonSapientChild</defName>
+    <label>Jeubling</label>
+    <bodySizeFactor>0.8</bodySizeFactor>
+    <hungerRateFactor>0.6</hungerRateFactor>
+    <visible>true</visible>
+	<reproductive>true</reproductive>
+	<milkable>true</milkable>
+	<shearable>true</shearable>
+	<caravanRideable>true</caravanRideable>
+	<!-- <claimable>true</claimable> -->
+	<!--
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/JeubSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+	-->
+  </LifeStageDef>
+  
+  <LifeStageDef>
+    <defName>JeubNonSapientAdult</defName>
+    <hungerRateFactor>1</hungerRateFactor>
+    <label>adult Jeub</label>
+    <visible>false</visible>
+    <reproductive>true</reproductive>
+    <milkable>true</milkable>
+    <shearable>true</shearable>
+    <caravanRideable>true</caravanRideable>
+	<foodMaxFactor>3</foodMaxFactor>
+	<!--
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/JeubSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+	-->
   </LifeStageDef>
 </Defs>

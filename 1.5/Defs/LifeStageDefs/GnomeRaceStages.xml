@@ -7,9 +7,28 @@
     <healthScaleFactor>0.2</healthScaleFactor>
     <hungerRateFactor>0.2</hungerRateFactor>
     <marketValueFactor>0.5</marketValueFactor>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeChild</workerClass>
+	<claimable>true</claimable>
+	<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Babies just fall asleep randomly and they're cool with it. -->
+	<!--
+	<thinkTreeMainOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBaby</thinkTreeMainOverride>
+	<thinkTreeConstantOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBabyConstant</thinkTreeConstantOverride>
+	-->
+	<developmentalStage>Baby</developmentalStage>
+	<canDoRandomMentalBreaks>false</canDoRandomMentalBreaks>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+	<canVoluntarilySleep>true</canVoluntarilySleep> <!-- Babies fall asleep randomly when they're tired. -->
+	<canSleepWhenStarving>false</canSleepWhenStarving>
+	<alwaysDowned>false</alwaysDowned>
+	<voxPitch>1.2</voxPitch>
     <statFactors>
       <MoveSpeed>0.2</MoveSpeed>
     </statFactors>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/GnomeSilhouette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
   </LifeStageDef>
   <LifeStageDef>
     <defName>GnomeChildStage</defName>
@@ -18,9 +37,13 @@
     <healthScaleFactor>0.5</healthScaleFactor>
     <hungerRateFactor>0.5</hungerRateFactor>
     <marketValueFactor>0.9</marketValueFactor>
-    <statFactors>
-      <MoveSpeed>0.65</MoveSpeed>
-    </statFactors>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeChild</workerClass>
+    <voxPitch>1.2</voxPitch>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/GnomeSilhouette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
   </LifeStageDef>
   <LifeStageDef>
     <defName>GnomeTeenStage</defName>
@@ -28,6 +51,13 @@
     <hungerRateFactor>0.6</hungerRateFactor>
     <visible>false</visible>
     <reproductive>true</reproductive>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<voxPitch>1.2</voxPitch>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/GnomeSilhouette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
   </LifeStageDef>
   <LifeStageDef>
     <defName>GnomeAdultStage</defName>
@@ -35,5 +65,12 @@
     <label>gnome adult</label>
     <visible>false</visible>
     <reproductive>true</reproductive>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<voxPitch>1.2</voxPitch>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/GnomeSilhouette</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
   </LifeStageDef>
 </Defs>
