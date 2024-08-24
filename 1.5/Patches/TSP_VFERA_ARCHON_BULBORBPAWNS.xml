@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<PawnKindDef ParentName="BasePlayerBeanManPawnKind" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+					<defName>TSP_VFERA_ARCHON_BULBORB</defName>
+					<label>ARCHON BEAN MAN</label>
+					<combatPower>280</combatPower>
+					<defaultFactionType MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">VRE_Archons</defaultFactionType>
+					<backstoryCryptosleepCommonality>0.01</backstoryCryptosleepCommonality>
+					<factionLeader MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">true</factionLeader>
+					<isFighter>true</isFighter>
+					<gearHealthRange>1~2</gearHealthRange>
+					<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+					<combatEnhancingDrugsChance>1</combatEnhancingDrugsChance>
+					<combatEnhancingDrugsCount>7~9</combatEnhancingDrugsCount>
+					<biocodeWeaponChance>1</biocodeWeaponChance>
+					<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+					<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+					<useFactionXenotypes MayRequire="ludeon.rimworld.biotech">false</useFactionXenotypes>
+					<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+						<xenotypeChances MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+							<VRE_Archon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">999</VRE_Archon>
+						</xenotypeChances>
+					</xenotypeSet>
+					<backstoryFiltersOverride MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+						<li MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon" Inherit="False">
+							<categoriesChildhood Inherit="False">
+								<li>TSP_ArchonBulborb_ChildEye</li>
+							</categoriesChildhood>
+							<categoriesAdulthood Inherit="False">
+								<li MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">Archon</li>
+							</categoriesAdulthood>
+						</li>
+					</backstoryFiltersOverride>
+					<weaponTags>
+						<li>SpacerGun</li>
+						<li>ArchobladeBladelink</li>
+						<li>RingCon</li>
+					</weaponTags>
+					<weaponMoney>5250~15000</weaponMoney>
+					<techHediffsChance>0.1</techHediffsChance>
+					<techHediffsMoney>200~700</techHediffsMoney>
+					<techHediffsTags>
+						<li>ImplantEmpireCommon</li>
+					</techHediffsTags>
+					<initialWillRange>40~41</initialWillRange>
+					<initialResistanceRange>45~50</initialResistanceRange>
+				</PawnKindDef>
+				
+				<PawnKindDef ParentName="BasePlayerBeanManPawnKind" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+					<defName>TSP_VFERA_ARCHON_BULBORB_Merchant</defName>
+					<label>ARCHON BEAN COUNTER</label>
+					<combatPower>280</combatPower>
+					<defaultFactionType MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">VRE_Archons</defaultFactionType>
+					<backstoryCryptosleepCommonality>0.01</backstoryCryptosleepCommonality>
+					<factionLeader MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">false</factionLeader>
+					<isFighter>false</isFighter>
+					<trader>true</trader>
+					<gearHealthRange>1~2</gearHealthRange>
+					<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+					<combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+					<combatEnhancingDrugsCount>0</combatEnhancingDrugsCount>
+					<biocodeWeaponChance>1</biocodeWeaponChance>
+					<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+					<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+					<useFactionXenotypes MayRequire="ludeon.rimworld.biotech">false</useFactionXenotypes>
+					<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+						<xenotypeChances MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+							<VRE_Archon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">999</VRE_Archon>
+						</xenotypeChances>
+					</xenotypeSet>
+					<backstoryFiltersOverride MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+						<li MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+							<categoriesChildhood>
+								<li>TSP_ArchonBulborb_ChildEye</li>
+							</categoriesChildhood>
+							<categoriesAdulthood>
+								<li MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">Archon</li>
+							</categoriesAdulthood>
+						</li>
+					</backstoryFiltersOverride>
+					<weaponTags>
+						<li>SpacerGun</li>
+						<li>ArchobladeBladelink</li>
+						<li>RingCon</li>
+					</weaponTags>
+					<weaponMoney>1250~5000</weaponMoney>
+					<techHediffsChance>0.1</techHediffsChance>
+					<techHediffsMoney>200~700</techHediffsMoney>
+					<techHediffsTags>
+						<li>ImplantEmpireCommon</li>
+					</techHediffsTags>
+					<initialWillRange>40~41</initialWillRange>
+					<initialResistanceRange>45~50</initialResistanceRange>
+				</PawnKindDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>
