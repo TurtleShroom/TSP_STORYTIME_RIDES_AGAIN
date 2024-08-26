@@ -32,7 +32,7 @@
                 <immuneToAge>false</immuneToAge>
                 <humanRecipeImport>true</humanRecipeImport>
 
-                <forcedRaceTraitEntries></forcedRaceTraitEntries>
+                <!-- <forcedRaceTraitEntries></forcedRaceTraitEntries> -->
 
             <maxDamageForSocialfight>1</maxDamageForSocialfight>
 
@@ -171,7 +171,7 @@
 						<li>Melanin</li> <!-- Can get an overridden skin color, but will always be a natural born green Pawn otherwise -->
 					</blackEndoCategories>
 					<blackGeneTags>
-						<li>BodyType</li>
+						<!-- <li>BodyType</li> -->
 						<li>Ears</li>
 						<li>AG_Heads</li>
 						<li>Heads</li>
@@ -294,8 +294,48 @@
 				<!-- These affect stats and if your Race is ready to Lay eggs or be milked if you set that up in the LifeStage, it also determins when your Race is Sexualy Mature and can Reproduce which is not used by Humanlikes in Vanilla -->
 			<lifeStageAges Inherit="False">
                 <li Inherit="False">
-					<def>forgChild</def>
+					<def>FrogPersonBabyStage</def>
 					<minAge>0</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False">
+					<def>FrogPersonChildStage</def>
+					<minAge>1</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False">
+					<def>FrogPersonTeenStage</def>
+					<minAge>12</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False">
+					<def>HumanlikeAdult</def>
+					<minAge>17.999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False">
+					<def>FrogPersonAdultStage</def>
+					<minAge>17.9999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False">
+					<def>forgChild</def>
+					<minAge>18</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
 					<soundCall>Pawn_Iguana_Call</soundCall>
@@ -316,23 +356,30 @@
 					<li>(0,0)</li>
 					<li MayRequire="Ludeon.Rimworld.Biotech">(0.001,43)</li>
 					<li MayRequire="Ludeon.Rimworld.Biotech">(8,86)</li>
-					<li MayRequire="Ludeon.Rimworld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+					<li MayRequire="Ludeon.Rimworld.Biotech">(12.5,18)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
 					<li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0)</li>  
 					<li MayRequire="Ludeon.Rimworld.Biotech">(13,0)</li>      
-					<li MayRequire="Ludeon.Rimworld.Biotech">(13.001,122)</li> <!-- End exclude -->
-					<li MayRequire="Ludeon.Rimworld.Biotech">(13.999,130)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(13.001,12)</li> <!-- End exclude -->
+					<li MayRequire="Ludeon.Rimworld.Biotech">(13.999,13)</li>
 					<li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
-					<li MayRequire="Ludeon.Rimworld.Biotech">(14.001,130)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(14.001,10)</li>
 					<li MayRequire="Ludeon.Rimworld.Biotech">(16,100)</li>
-					<li MayRequire="Ludeon.Rimworld.Biotech">(26,100)</li>
-					<li>(20,0)</li>
-					<li>(40,50)</li>
+					<li>(18,50)</li>
+					<li>(19.9,250)</li>
+					<li>(20,125)</li>
+					<li>(40,250)</li>
 					<li>(50,100)</li>
 					<li>(60,20)</li>
 					<li>(70,18)</li>
 					<li>(80,1)</li>
 					<li>(90,0)</li>
 					<li>(100,0)</li>
+					<li>(1000,25)</li>
+					<li>(1410,1)</li>
+					<li>(7499,10)</li>
+					<li>(7500,0.001)</li>
+					<li>(8000,0)</li>
+					<li>(10000,0)</li>
 				</points>
 			</ageGenerationCurve>
 			<hediffGiverSets>

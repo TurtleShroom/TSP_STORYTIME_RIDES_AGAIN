@@ -63,12 +63,12 @@
 							<first Class="ColorGenerator_Options">
 								<options>
 									<li>
-										<weight>0.01</weight>
+										<weight>0.5</weight>
 										<min>RGBA(236, 188, 180)</min>
 										<max>RGBA(230, 182, 172)</max>
 									</li>
 									<li>
-										<weight>0.01</weight>
+										<weight>0.5</weight>
 										<min>RGBA(234,192,134)</min>
 										<max>RGBA(229,92,84)</max>
 									</li>
@@ -212,6 +212,8 @@
 					<li MayRequire="morishep.tarojun.onioftherim">AteDemonBreathBerriesAsIngredient</li>
 					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeat_Sacrilegious</li>
 					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeatAsIngredient_Sacrilegious</li>
+					<li MayRequire="ludeon.rimworld.ideology">AteFungus_Despised</li>
+					<li MayRequire="ludeon.rimworld.ideology">AteFungusAsIngredient_Despised</li>
 				</cannotReceiveThoughts>
 				<replacerList>
 					<!-- Same benefits as Onis, because Gnomes can appreciate a lot broader cuisine than others -->
@@ -236,11 +238,17 @@
 			</thoughtSettings>
 			<styleSettings>
 				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>true</hasStyle>
+					</value>
+				</li>
+				<li>
 					<key>BeardDef</key>
 					<value>
 						<hasStyle>true</hasStyle>
 						<bannedTags>
-							<li>Minimal</li>
+							<!-- <li>Minimal</li> -->
 							<li>Moustache</li>
 							<li>NoBeard</li>
 						</bannedTags>

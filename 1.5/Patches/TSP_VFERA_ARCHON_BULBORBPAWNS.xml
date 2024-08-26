@@ -29,6 +29,7 @@
 						<xenotypeChances MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 							<VRE_Archon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">999</VRE_Archon>
 						</xenotypeChances>
+						<warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1>
 					</xenotypeSet>
 					<backstoryFiltersOverride MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 						<li MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon" Inherit="False">
@@ -76,6 +77,7 @@
 						<xenotypeChances MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 							<VRE_Archon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">999</VRE_Archon>
 						</xenotypeChances>
+						<warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1>
 					</xenotypeSet>
 					<backstoryFiltersOverride MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 						<li MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
@@ -100,6 +102,23 @@
 					</techHediffsTags>
 					<initialWillRange>40~41</initialWillRange>
 					<initialResistanceRange>45~50</initialResistanceRange>
+				</PawnKindDef>
+				
+				<PawnKindDef ParentName="OwenBase" MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">
+					<defName MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">TSP_OwenWilsonpawn_Archon</defName>
+					<label MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">Owen Wilson demi-god</label>
+					<factionLeader MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">true</factionLeader>
+					<race MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">Human</race>
+					<combatPower MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">450</combatPower>
+					<xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+						<xenotypeChances MayRequire="Ludeon.RimWorld.Biotech">
+							<VRE_Archon MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">999</VRE_Archon>
+						</xenotypeChances>
+						<warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1>
+					</xenotypeSet>
+					<weaponTags MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">
+						<li MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">GunOwen</li>
+					</weaponTags>
 				</PawnKindDef>
 			</value>
 		</match>

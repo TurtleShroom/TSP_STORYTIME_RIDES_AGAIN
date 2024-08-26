@@ -318,50 +318,83 @@
 		  <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>
-			  <li>(1, 0.15)</li>
+			  <li>(1, 0.2)</li>
+			  <li>(1.01,1)</li>
 			  <li>(2, 0.35)</li>
 			  <li>(3, 1)</li>
 			  <li>(4, 0.5)</li>
 			  <li>(5, 0.1)</li>
 			</points>
 		  </litterSizeCurve>
-		  <lifeStageAges>
-			<li>
-			  <def>HumanlikeBaby</def>
-			  <minAge>0</minAge>
-			</li>
-			<li>
-			  <def>HumanlikeChild</def>
-			  <minAge>2</minAge>
-			</li>
-			<li MayRequire="Ludeon.Rimworld.Biotech">
-			  <def>HumanlikePreTeenager</def>
-			  <minAge>9</minAge>
-			</li>
-			<li>
-			  <def>HumanlikeTeenager</def>
-			  <minAge>10</minAge>
-			</li>
-			<li>
-			  <def>HumanlikeAdult</def>
-			  <minAge>13.999</minAge>
-			</li>
-			<li>
-			  <def>FrogPersonAdultStage</def>
-			  <minAge>14</minAge>
-			</li>
-		  </lifeStageAges>
+			<lifeStageAges Inherit="False">
+                <li Inherit="False">
+					<def>FrogPersonBabyStage</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False">
+					<def>HumanlikeChild</def>
+					<minAge>0.999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False">
+					<def>FrogPersonChildStage</def>
+					<minAge>1</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+					<def>HumanlikePreTeenager</def>
+					<minAge>11.999</minAge>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+					<def>HumanlikeTeenager</def>
+					<minAge>11.9999</minAge>
+				</li>
+                <li Inherit="False">
+					<def>FrogPersonTeenStage</def>
+					<minAge>12</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False">
+					<def>HumanlikeAdult</def>
+					<minAge>17.999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False">
+					<def>FrogPersonAdultStage</def>
+					<minAge>17.9999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
 		  <lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
-			<Firefighter>2</Firefighter>
+			<Firefighter>0</Firefighter>
 			<Patient>0</Patient>
 			<Doctor>10</Doctor>
 			<PatientBedRest>0</PatientBedRest>
-			<Childcare MayRequire="Ludeon.Rimworld.Biotech">4</Childcare>
-			<BasicWorker>1</BasicWorker>
+			<Childcare MayRequire="Ludeon.Rimworld.Biotech">6</Childcare>
+			<BasicWorker>0</BasicWorker>
 			<Warden>8</Warden>
 			<Handling>1</Handling>
-			<Cooking>6</Cooking>
-			<Hunting>1</Hunting>
+			<Cooking>4</Cooking>
+			<Hunting>3</Hunting>
 			<Construction>10</Construction>
 			<Growing>1</Growing>
 			<Mining>7</Mining>
@@ -404,7 +437,13 @@
 			  <li>(80,0.5)</li>
 			  <li>(90,0.5)</li>
 			  <li>(100,0)</li>
-			  <li>(200,0)</li>
+				<li>(101,0)</li>
+				<li>(1000,0)</li>
+				<li>(1410,0)</li>
+				<li>(7499,0)</li>
+				<li>(7500,0)</li>
+				<li>(8000,0)</li>
+				<li>(10000,0)</li>
 			</points>
 		  </ageGenerationCurve>
 		  <hediffGiverSets>

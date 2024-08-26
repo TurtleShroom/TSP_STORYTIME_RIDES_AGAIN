@@ -108,6 +108,7 @@
 						<defName>BeanMan</defName>
 					</li>
 				</options>
+				<count>1</count>
 				<chance>999</chance>
 			  </li>
 			</forcedRaceTraitEntries>
@@ -123,9 +124,9 @@
 				<li>Thin</li>
 				<li>Fat</li>
 				<li>Hulk</li>
-				<li>Male</li>
 				<li>Female</li>
 				-->
+				<li>Male</li>
 				<li>ST_BulborbBlack</li>
 				<li>ST_BulborbBlue</li>
 				<li>ST_BulborbCave</li>
@@ -200,27 +201,6 @@
 					<gene For="VRE_Leatherskin" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 						<path MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">Things/Pawn/Humanlike/BeanMan/ArchonBulborb/Body/Leatherskin_Child</path>
 					</gene>
-					<BodyType For="Baby">
-						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
-					</BodyType>
-					<BodyType For="Child">
-						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
-					</BodyType>
-					<BodyType For="Thin">
-						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
-					</BodyType>
-					<BodyType For="Hulk">
-						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Hulk</path>
-					</BodyType>
-					<BodyType For="Male">
-						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Male</path>
-					</BodyType>
-					<BodyType For="Female">
-						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Female</path>
-					</BodyType>
-					<BodyType For="Fat">
-						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Fat</path>
-					</BodyType>
 					<BodyType For="ST_BulborbBlack">
 						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbBlack</path>
 					</BodyType>
@@ -262,6 +242,27 @@
 					</BodyType>
 					<BodyType For="ST_BulborbWhiptongue">
 						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbWhiptongue</path>
+					</BodyType>
+					<BodyType For="Baby">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
+					</BodyType>
+					<BodyType For="Child">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
+					</BodyType>
+					<BodyType For="Thin">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
+					</BodyType>
+					<BodyType For="Hulk">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Hulk</path>
+					</BodyType>
+					<BodyType For="Male">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Male</path>
+					</BodyType>
+					<BodyType For="Female">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Female</path>
+					</BodyType>
+					<BodyType For="Fat">
+						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Fat</path>
 					</BodyType>
 				</extendedGraphics>
 			</body>
@@ -371,9 +372,9 @@
 			<MarketValue>500</MarketValue>
 			<MoveSpeed>3</MoveSpeed> <!-- Bulborbs are slow -->
 			<Flammability>1</Flammability>
-			<ComfyTemperatureMin>-50</ComfyTemperatureMin> <!-- Sapient Bulborbs cannot wear clothes so this is for the sake of game play -->
-			<ComfyTemperatureMax>55</ComfyTemperatureMax>
-			<MeatAmount>130</MeatAmount> <!-- "Pikmin II" says that Bulborbs are delicious and prized for their abundant meat -->
+			<ComfyTemperatureMin>-55</ComfyTemperatureMin> <!-- Sapient Bulborbs cannot wear clothes so this is for the sake of game play -->
+			<ComfyTemperatureMax>65</ComfyTemperatureMax>
+			<MeatAmount>173</MeatAmount> <!-- "Pikmin II" says that Bulborbs are delicious and prized for their abundant meat -->
 			<LeatherAmount>50</LeatherAmount>
 			<PsychicSensitivity>0.5</PsychicSensitivity>
 			<Fertility MayRequire="Ludeon.Rimworld.Biotech">0</Fertility>
@@ -567,7 +568,7 @@
 			</li>
 		  </lifeStageAges>
 			<lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
-				<Firefighter>1</Firefighter>
+				<Firefighter>0</Firefighter>
 				<Patient>0</Patient>
 				<Doctor>0</Doctor>
 				<PatientBedRest>0</PatientBedRest>

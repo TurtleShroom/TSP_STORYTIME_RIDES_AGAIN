@@ -17,26 +17,26 @@
 		<invNutrition>4</invNutrition>
 		<invFoodDef>TangledToadLegs</invFoodDef>
 		<specificApparelRequirements>
-		<!-- Relocated to ensure Weezer Albums stay blue -->
-		<!--
-		<li>
-			<colorGenerator Class="ColorGenerator_Options">
-				<options>
-					<li>
-						<only>(69,193,69)</only>  Neon green 
-					</li>
-				</options>
-			</colorGenerator>
-		</li>
-		-->
-		<li>
-			<bodyPartGroup>Torso</bodyPartGroup>
-			<stuff>Gnome_Cloth</stuff>
-		</li>
-		<li>
-			<bodyPartGroup>Legs</bodyPartGroup>
-			<stuff>Gnome_Cloth</stuff>
-		</li>
+			<!-- Relocated to ensure Weezer Albums stay blue -->
+			<!--
+			<li>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<only>(69,193,69)</only>  Neon green 
+						</li>
+					</options>
+				</colorGenerator>
+			</li>
+			-->
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<stuff>Gnome_Cloth</stuff>
+			</li>
+			<li>
+				<bodyPartGroup>Legs</bodyPartGroup>
+				<stuff>Gnome_Cloth</stuff>
+			</li>
 		</specificApparelRequirements>
 		<apparelTags>
 			<li>ST_GnomeClothing</li>
@@ -392,12 +392,13 @@
     </backstoryCategories>
   </PawnKindDef>
   
-	<PawnKindDef ParentName="BasePlayerGnomePawnKind">
+	<PawnKindDef>
 		<defName>TSP_ST_GnomePeasant</defName>
 		<label>Gnome peasant</label>
 		<labelPlural>Gnome peasants</labelPlural>
+		<race>Alien_Gnome</race>
 		<combatPower>10</combatPower>
-		<defaultFactionType>TreeGnomeEmpire</defaultFactionType>
+		<!-- <defaultFactionType>TreeGnomeEmpire</defaultFactionType> -->
 		<apparelIgnoreSeasons Inherit="False">true</apparelIgnoreSeasons>
 		<backstoryCategories Inherit="False">
 			<li Inherit="False">GnomeBackstory</li>
@@ -407,27 +408,19 @@
 			<min Inherit="False">99999</min>
 			<max Inherit="False">99999</max>
 		</apparelMoney>
+		<!--
 		<specificApparelRequirements Inherit="False">
 		  <li>
 			<colorGenerator Class="ColorGenerator_Options">
 			  <options>
 				<li>
-					<only>(69,193,69)</only> <!-- Neon green -->
+					<only>(69,193,69)</only> Neon green
 				</li>
 			  </options>
 			</colorGenerator>
 		  </li>
-		  <!--
-		  <li>
-			<bodyPartGroup>Torso</bodyPartGroup>
-			<stuff>Gnome_Cloth</stuff>
-		  </li>
-		  <li>
-			<bodyPartGroup>Legs</bodyPartGroup>
-			<stuff>Gnome_Cloth</stuff>
-		  </li>
-		  -->
 		</specificApparelRequirements>
+		-->
 		<apparelRequired Inherit="False">
 			<li Inherit="False">ST_GnomeHat</li>
 			<li Inherit="False">GnomeGoggles</li>
@@ -452,7 +445,7 @@
 			<!-- Gnome peasants wear nothing else -->
 			<!-- <li>GnomePeasant</li> -->
 		</apparelTags>
-		<weaponTags Inherit="False">
+		<weaponTags>
 			<li>GnomeSimpleMelee</li>
 			<li>GnomeMelee</li>
 			<li>GnomeRanged</li>
@@ -468,17 +461,17 @@
 			<isFighter>false</isFighter>
 			<combatPower>60</combatPower>
 			<chemicalAddictionChance>0.01</chemicalAddictionChance>
-			<humanPregnancyChance>0.13</humanPregnancyChance>
-			<maxGenerationAge>54</maxGenerationAge>
+			<humanPregnancyChance>0.23</humanPregnancyChance>
 			<minGenerationAge>23</minGenerationAge>
+			<maxGenerationAge>54</maxGenerationAge>
 			<apparelMoney>
 				<min>250</min>
-				<max>450</max>
+				<max>550</max>
 			</apparelMoney>
 			<apparelTags>
 				<li>GnomeChef</li>
 			</apparelTags>
-			<apparelRequired>
+			<apparelRequired Inherit="False">
 				<li MayRequire="vanillaexpanded.vappe">VAE_Apparel_ChefsUniform</li>
 				<li MayRequire="vanillaexpanded.vappe">VAE_Headgear_ChefsToque</li>
 			</apparelRequired>
@@ -498,10 +491,10 @@
 					</colorGenerator>
 				</li>
 			</specificApparelRequirements>
-			<backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>
+			<backstoryCryptosleepCommonality>0.12</backstoryCryptosleepCommonality>
 			<techHediffsMoney>
-				<min>50</min>
-				<max>500</max>
+				<min>250</min>
+				<max>701</max>
 			</techHediffsMoney>
 			<techHediffsTags>
 				<li>Poor</li>

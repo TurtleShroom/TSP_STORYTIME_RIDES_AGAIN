@@ -21,4 +21,68 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
     </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/IdeoStoryPatternDef[defName="TheistMyth"]/rules/rulesStrings</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/IdeoStoryPatternDef[defName="TheistMyth"]/rules/rulesStrings</xpath>
+			<success>Always</success>
+			<value>
+				<li>materialOrigin->beans</li>
+				<li>materialOrigin->Borpa milk</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/IdeoStoryPatternDef[defName="TheistFounder"]/rules/rulesStrings</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/IdeoStoryPatternDef[defName="TheistFounder"]/rules/rulesStrings</xpath>
+			<success>Always</success>
+			<value>
+				<li>revelationAdverb->around a henge of Jeub sculptures</li>
+				<li>revelationObject->a frog totem</li>
+				<li>revelationObject->a Borpa totem</li>
+				<li>revelationObject->a talking Kachorpa</li>
+				<li>revelationObject->a Namaritake mushroom shard</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/IdeoStoryPatternDef[defName="IdeologicalLesson"]/rules/rulesStrings</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/IdeoStoryPatternDef[defName="IdeologicalLesson"]/rules/rulesStrings</xpath>
+			<success>Always</success>
+			<value>
+				<li>lessonReinforcement->And maybe that's the way for us to end...</li>
+				<li>thrownObject->turtle shell</li>
+				<li>thrownObject->bowl of chopped mushrooms</li>
+				<li>thrownObject->Borpa</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/IdeoStoryPatternDef[defName="TheistFounder"]/rules/rulesStrings</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/IdeoStoryPatternDef[defName="TheistFounder"]/rules/rulesStrings</xpath>
+			<success>Always</success>
+			<value>
+				<li>lessonReinforcement->And maybe that's the way for us to end...</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
 </Patch>

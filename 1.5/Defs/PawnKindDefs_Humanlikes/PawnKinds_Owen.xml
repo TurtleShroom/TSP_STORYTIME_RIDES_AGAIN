@@ -10,10 +10,10 @@
 		<backstoryCategories>
 			<li MayRequire="vanillaracesexpanded.archon">Archon</li>
 			<li>Madman</li>
+			<li>Sadist</li>
 			<!--
 			<li>Raider</li>
 			<li>Pirate</li>
-			<li>Sadist</li>
 			<li>Offworld</li>
 			-->
 		</backstoryCategories>
@@ -172,28 +172,11 @@
 		</weaponTags>
 	</PawnKindDef>
 	
-	<PawnKindDef ParentName="OwenBase" MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">
-		<defName MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">TSP_OwenWilsonpawn_Archon</defName>
-		<label MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">Owen Wilson demi-god</label>
-		<factionLeader MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">true</factionLeader>
-		<race MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">Human</race>
-		<combatPower MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">450</combatPower>
-		<xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
-			<xenotypeChances MayRequire="Ludeon.RimWorld.Biotech">
-				<VRE_Archon MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">999</VRE_Archon>
-			</xenotypeChances>
-			<warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1>
-		</xenotypeSet>
-		<weaponTags MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">
-			<li MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">GunOwen</li>
-		</weaponTags>
-	</PawnKindDef>
-	
 	<PawnKindDef Name="TSP_ST_OwenWilsonLeader" ParentName="OwenBase" Abstract="True">
 		<nameMaker>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</nameMaker>
 		<nameMakerFemale>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</nameMakerFemale>
 		<invFoodDef>Meat_Human</invFoodDef>
-		<requiredWorkTags IsNull="True" Inherit="False"></requiredWorkTags>
+		<requiredWorkTags Inherit="False"></requiredWorkTags>
 		<inventoryOptions Inherit="False">
 			<skipChance>0</skipChance>
 			<subOptionsChooseOne>
