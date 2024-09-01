@@ -3,10 +3,16 @@
 <Defs>
   <PawnKindDef Abstract="True" Name="BasePlayerBeetnikhPawnKind">
     <race>Alien_Beet</race>
-    <backstoryCategories>
-      <li>BeetnikhBackstory</li>
-	  <li>Farmer</li>
-    </backstoryCategories>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>BeetnikhBackstory</li>
+				<li>Farmer</li>
+				<li>TribalFarmer</li>
+				<li>MedievalPeasant</li>
+			</categories>
+		</li>
+    </backstoryFilters>
     <!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
     <!-- <isFighter>false</isFighter> -->
     <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
@@ -26,9 +32,8 @@
     <defName>BeetLeader</defName>
     <label>elite beet warrior</label>
     <chemicalAddictionChance>0.2</chemicalAddictionChance>
-	<factionLeader>true</factionLeader>
+	<factionLeader>false</factionLeader>
 	<combatPower>80</combatPower>
-	<defaultFactionType>Beetnikh</defaultFactionType>
     <apparelMoney>
       <min>1800</min>
       <max>4000</max>
@@ -198,18 +203,20 @@
     <initialResistanceRange>5~10</initialResistanceRange>
   </PawnKindDef>
   
- <PawnKindDef ParentName="BasePlayerBeetnikhPawnKind">
-	<race>Alien_Beet</race>
+ <PawnKindDef>
     <defName>TSP_BeetRex</defName>
+	<race>Alien_Beet</race>
 	<fixedGender>Male</fixedGender>
     <label>Pecan Emperor</label>
 	<labelFemale>Pecan Empress</labelFemale>
     <defaultFactionType>Beetnikh</defaultFactionType>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
     <chemicalAddictionChance>0.01</chemicalAddictionChance>
 	<factionLeader>true</factionLeader>
 	<combatPower>200</combatPower>
     <apparelMoney>
-      <min>900</min>
+      <min>1900</min>
       <max>17000</max>
     </apparelMoney> 
 	<apparelTags>
@@ -224,24 +231,39 @@
 		<li>Tribal</li>
 		<li>Cape</li>
 		<li>King</li>
+		<li>Medieval</li>
+		<li>MedievalBasic</li>
+		<li>MedievalApparelBasic</li>
+		<li>ST_BeetClothing</li>
+		<li>Barbarian</li>
+		<li>BeetWear</li>
+		<li>School_Thai</li>
     </apparelTags>
 	<apparelRequired>
 		<li>Apparel_Crown</li>
     </apparelRequired>
-	<backstoryCategories Inherit="False">
-		<li>CivilizedBeetEmperor</li>
-    </backstoryCategories>
 	<!--
-    <backstoryFiltersOverride Inherit="False">
-      <li>
-        <categories>
-          <li>CivilizedBeetEmperor</li>
-        </categories>
-      </li>
-    </backstoryFiltersOverride>
+	<backstoryFilters Inherit="False">
+		<li>CivilizedBeetEmperor</li>
+    </backstoryFilters>
 	-->
-	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <backstoryFiltersOverride Inherit="False">
+		<li>
+			<categoriesChildhood>
+				<li>ImperialRoyal</li>
+				<li>MedievalNoble</li>
+				<li>MedievalRoyal</li>
+				<li>ImperialRare</li>
+				<li>InsectsRelated</li>
+				<li>CivilizedBeetEmperor</li>
+			</categoriesChildhood>
+		</li>
+		<li>
+			<categoriesAdulthood>
+				<li>CivilizedBeetEmperor</li>
+			</categoriesAdulthood>
+		</li>
+    </backstoryFiltersOverride>
 	<!-- <baseRecruitDifficulty>0.9</baseRecruitDifficulty> -->
 	<weaponMoney>
         <min>4000</min>
@@ -281,8 +303,12 @@
     </disallowedTraits>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerBeetnikhPawnKind">
+  <PawnKindDef>
     <defName>TSP_ST_CivilizedBeetCabbageinator</defName>
+    <race>Alien_Beet</race>
+    <isFighter>true</isFighter>
+    <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
     <label>cabbage grenadier</label>
     <combatPower>90</combatPower>
     <chemicalAddictionChance>0.1</chemicalAddictionChance>
@@ -297,6 +323,13 @@
 		<li>MedievalArmorBasic</li>
 		<li>MedievalArmorDecent</li>
 		<li>MedievalAdvanced</li>
+		<li>Medieval</li>
+		<li>MedievalBasic</li>
+		<li>MedievalApparelBasic</li>
+		<li>ST_BeetClothing</li>
+		<li>Barbarian</li>
+		<li>BeetWear</li>
+		<li>School_Thai</li>
     </apparelTags>
 	<weaponMoney>
          <min>10000</min>
@@ -316,9 +349,14 @@
     </weaponTags>
     <initialWillRange>1~8</initialWillRange>
     <initialResistanceRange>5~40</initialResistanceRange>
-    <backstoryCategories Inherit="False">
-		<li>Cabbage</li>
-    </backstoryCategories>
+	<!-- <backstoryFilters IsNull="True" Inherit="False"></backstoryFilters> -->
+    <backstoryFiltersOverride Inherit="False">
+		<li>
+			<categories>
+				<li>Cabbage</li>
+			</categories>
+		</li>
+    </backstoryFiltersOverride>
 	<destroyGearOnDrop>true</destroyGearOnDrop>
   </PawnKindDef>
 </Defs>

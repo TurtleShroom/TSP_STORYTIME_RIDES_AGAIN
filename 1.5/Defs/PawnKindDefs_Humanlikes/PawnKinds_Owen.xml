@@ -7,16 +7,23 @@
 		<defaultFactionType>Owenfaction</defaultFactionType>
 		<nameMaker>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</nameMaker>
 		<nameMakerFemale>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</nameMakerFemale>
-		<backstoryCategories>
-			<li MayRequire="vanillaracesexpanded.archon">Archon</li>
-			<li>Madman</li>
-			<li>Sadist</li>
-			<!--
-			<li>Raider</li>
-			<li>Pirate</li>
-			<li>Offworld</li>
-			-->
-		</backstoryCategories>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li MayRequire="vanillaracesexpanded.archon">Archon</li>
+					<li>Madman</li>
+					<li>Sadist</li>
+					<li>Vatgrown</li>
+					<li>VatGrown</li>
+					<li>OwenWilson</li>
+					<!--
+					<li>Raider</li>
+					<li>Pirate</li>
+					<li>Offworld</li>
+					-->
+				</categories>
+			</li>
+		</backstoryFilters>
 		<chemicalAddictionChance>1</chemicalAddictionChance>
 		<backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
 		<minGenerationAge>21</minGenerationAge>
@@ -30,7 +37,7 @@
 		<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<combatEnhancingDrugsChance>1</combatEnhancingDrugsChance>
-		<biocodeWeaponChance Inherit="False">0.9</biocodeWeaponChance>
+		<biocodeWeaponChance Inherit="False">0.93</biocodeWeaponChance>
 		<requiredWorkTags>
 			<li>Violent</li>
 		</requiredWorkTags>
@@ -71,6 +78,18 @@
 			<min>2600</min>
 			<max>5000</max>
 		</techHediffsMoney>
+		<styleItemTags>
+			<li MayRequire="ludeon.rimworld.anomaly">
+				<tag>Cultist</tag>
+				<baseWeight>5</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+		</styleItemTags>
+		<startingHediffs>
+			<li MayRequire="ludeon.rimworld.anomaly">
+				<def MayRequire="ludeon.rimworld.anomaly">Inhumanized</def>
+			</li>
+		</startingHediffs>
 		<inventoryOptions>
 			<skipChance>0</skipChance>
 			<subOptionsChooseOne>

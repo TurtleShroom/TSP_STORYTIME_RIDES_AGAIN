@@ -7,26 +7,68 @@
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 		<forceNormalGearQuality>true</forceNormalGearQuality>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<minGenerationAge>2</minGenerationAge>
 		<maxGenerationAge>45</maxGenerationAge>
 		<invNutrition>2</invNutrition>
 		<invFoodDef>ST_Bean</invFoodDef>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categoriesChildhood>
+					<li>BeanManBackstory</li>
+					<li>BeanManChildEye</li>
+				</categoriesChildhood>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>BeanManBackstory</li>
+					<li>BeanManChildEye</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
 		<weaponTags>
 			<li>RingCon</li>
 		</weaponTags>
 	</PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerBeanManPawnKind">
-    <defName>PlayerBeanMan</defName>
+  <PawnKindDef>
+    <defName>PlayerColonyBeanMan</defName>
     <label>beanborb</label>
+	<race>Alien_BeanMan</race>
+	<!-- <baseRecruitDifficulty>0.2</baseRecruitDifficulty> -->
+	<isFighter>false</isFighter>
+	<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+	<forceNormalGearQuality>true</forceNormalGearQuality>
+	<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+	<minGenerationAge>2</minGenerationAge>
+	<maxGenerationAge>5</maxGenerationAge>
+	<invNutrition>2</invNutrition>
+	<invFoodDef>ST_Bean</invFoodDef>
     <combatPower>30</combatPower>
     <defaultFactionType>PlayerColony</defaultFactionType>
-	<backstoryFiltersOverride>
-	  <li>
-		<categories>
-		  <li>BeanManBackstory</li>
-		</categories>
-	  </li>
-	</backstoryFiltersOverride>
+	<backstoryFilters>
+		<li>
+			<categories>
+				<li>BeanManBackstory</li>
+				<li>BeanManChildEye</li>
+			</categories>
+		</li>
+	</backstoryFilters>
+    <weaponTags>
+		<li>SimpleGun</li>
+		<li>Gun</li>
+		<li>BeanManRanged</li>
+		<li>WoodcuttingHatchet</li>
+		<li>Lance</li>
+    </weaponTags>
+    <initialWillRange>1~4</initialWillRange>
+    <initialResistanceRange>5~10</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="BasePlayerBeanManPawnKind">
+    <defName>PlayerBeanMan</defName>
+    <label>Bean Man</label>
+    <combatPower>30</combatPower>
+    <defaultFactionType>BeanManFaction</defaultFactionType>
     <weaponTags>
 		<li>SimpleGun</li>
 		<li>Gun</li>
@@ -39,6 +81,8 @@
     <initialResistanceRange>5~10</initialResistanceRange>
   </PawnKindDef>
   
+
+  
   <PawnKindDef ParentName="BasePlayerBeanManPawnKind">
     <defName>BeanManGuard</defName>
     <label>Bean guardsman</label>
@@ -47,6 +91,7 @@
     <isFighter>true</isFighter>
     <gearHealthRange>0.6~2</gearHealthRange>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+	<!--
 	<backstoryFiltersOverride>
 	  <li>
 		<categories>
@@ -54,6 +99,7 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
+	-->
     <weaponTags>
       <li>Gun</li>
 	  <li>WoodcuttingHatchet</li>
@@ -78,6 +124,7 @@
     <isFighter Inherit="False">false</isFighter>
     <gearHealthRange>0.6~2</gearHealthRange>
     <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+	<!--
 	<backstoryFiltersOverride>
 	  <li>
 		<categories>
@@ -85,13 +132,14 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
+	-->
     <weaponTags>
       <li>Gun</li>
 	  <li>WoodcuttingHatchet</li>
 	  <li>BeanManRanged</li>
     </weaponTags>
     <weaponMoney>250~500</weaponMoney>
-    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsChance>0.24</techHediffsChance>
     <techHediffsMoney>200~700</techHediffsMoney>
     <techHediffsTags>
       <li>ImplantEmpireCommon</li>
@@ -109,6 +157,7 @@
     <isFighter>true</isFighter>
     <gearHealthRange>1~2</gearHealthRange>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+	<!--
 	<backstoryFiltersOverride>
 	  <li>
 		<categories>
@@ -116,6 +165,7 @@
 		</categories>
 	  </li>
 	</backstoryFiltersOverride>
+	-->
     <weaponTags>
       <li>Gun</li>
 	  <li>IndustrialRangedAdvanced</li>

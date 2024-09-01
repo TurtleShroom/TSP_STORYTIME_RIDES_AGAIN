@@ -60,9 +60,13 @@
     <factionNameMaker>NamerFactionGoblinTribes</factionNameMaker>
     <settlementNameMaker>GoblinSettlementName</settlementNameMaker>
     <techLevel>Medieval</techLevel>
-    <backstoryCategories>
-      <li>GoblinBackstory</li>
-    </backstoryCategories>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>GoblinBackstory</li>
+			</categories>
+		</li>
+    </backstoryFilters>
     <caravanTraderKinds>
 		<li>Caravan_Neolithic_BulkGoods</li>
 		<li>Caravan_Neolithic_WarMerchant</li>
@@ -299,15 +303,17 @@
       </li>
     </pawnGroupMakers>
     <settlementTexturePath>World/Goblins/GoblinLogo</settlementTexturePath>
-	<xenotypeSet MayRequire= "ludeon.rimworld.biotech" Inherit="False">
-		<xenotypeChances MayRequire="ludeon.rimworld.biotech">
-			<Goblin MayRequire="trukulo.xenofaction.fantasy,ludeon.rimworld.biotech">0.049</Goblin>
+	<xenotypeSet Inherit="False">
+		<xenotypeChances>
+			<Goblin MayRequire="trukulo.xenofaction.fantasy,ludeon.rimworld.biotech">0.149</Goblin>
 		</xenotypeChances>
 	</xenotypeSet>
 	<modExtensions>
+		<!--
 		<li Class="FactionSounds.FactionSound">
 			<soundDef>Goblin_Town</soundDef>
 		</li>
+		-->
 		<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
 			<canSendDeserters MayRequire="oskarpotocki.vfe.empire">true</canSendDeserters>
 			<deserterKind MayRequire="oskarpotocki.vfe.empire">TSP_ST_VFEE_GoblinDeserter</deserterKind>

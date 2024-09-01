@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- This code was provided by the user 'I Exist', and then butchered and simplified on Dub's Discord chat room by Kyoutaigo -->
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Meat_Twisted"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Meat_Twisted"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_SkeletalMarrow</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealSimple</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealFine</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealLavish</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeKibble</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_Meat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_CthulhidMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DeepOneMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ShoggothMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_StarVampireMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DarkYoungMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ChthonianMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_DarkYoungSap</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Meat_Twisted"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_SkeletalMarrow</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealSimple</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealFine</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealLavish</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeKibble</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_Meat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_CthulhidMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DeepOneMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ShoggothMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_StarVampireMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DarkYoungMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ChthonianMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_DarkYoungSap</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Meat_Twisted"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_SkeletalMarrow</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealSimple</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealFine</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealLavish</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeKibble</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_Meat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_CthulhidMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DeepOneMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ShoggothMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_StarVampireMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DarkYoungMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ChthonianMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_DarkYoungSap</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Meat_Twisted"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_SkeletalMarrow</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealSimple</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealFine</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealLavish</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeKibble</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_Meat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_CthulhidMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DeepOneMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ShoggothMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_StarVampireMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DarkYoungMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ChthonianMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_DarkYoungSap</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Meat_Twisted"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_SkeletalMarrow</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealSimple</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealFine</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealLavish</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeKibble</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_Meat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_CthulhidMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DeepOneMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ShoggothMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_StarVampireMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DarkYoungMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ChthonianMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_DarkYoungSap</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Meat_Twisted"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_SkeletalMarrow</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealSimple</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealFine</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMealLavish</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeKibble</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_Meat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_CthulhidMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DeepOneMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ShoggothMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_StarVampireMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_DarkYoungMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_RawCHFood_ChthonianMeat</li>
+						<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_DarkYoungSap</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/BackstoryDef[defName="MedievalLordling19"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/BackstoryDef[defName = "MedievalLordling19" or defName = "Bookworm19" or defName = "FrightenedChild43" or defName = "BuddingArtist44" or defName = "CountryLordling92" or defName = "UrbanLordling82"]/spawnCategories</xpath>
+			<value>
+				<li>CivilizedBeetEmperor</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/BackstoryDef[defName="CountryLordling92"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/BackstoryDef[defName = "CountryLordling92" or defName = "UrbanLordling82"]/spawnCategories</xpath>
+			<value>
+				<li>MedievalNoble</li>
+				<li>MedievalRoyal</li>
+				<li>ClassicalNoble</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

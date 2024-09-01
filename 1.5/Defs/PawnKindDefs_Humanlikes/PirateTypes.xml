@@ -1,20 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
-  <PawnKindDef Abstract="True" Name="BasePlayerStorytimePiratePawnKind">
-	<race>Human</race>
-	<!-- <defaultFactionType>NicePirates</defaultFactionType> -->
-	<backstoryCategories>
-		<li>PirateBackstory</li>
-	</backstoryCategories>
-	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-	<minGenerationAge Inherit="False">16</minGenerationAge> <!-- They don't field young children -->
-	<maxGenerationAge>45</maxGenerationAge>
-	<invFoodDef>ST_Lime</invFoodDef>
-	<invNutrition>2.55</invNutrition>
-	<!-- <baseRecruitDifficulty>0.4</baseRecruitDifficulty> -->
-	<isFighter>true</isFighter>
-	<forceNormalGearQuality>true</forceNormalGearQuality>
-  </PawnKindDef>
+	<PawnKindDef Abstract="True" Name="BasePlayerStorytimePiratePawnKind">
+		<race>Human</race>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<minGenerationAge Inherit="False">15</minGenerationAge> <!-- They don't field young children -->
+		<maxGenerationAge>45</maxGenerationAge>
+		<invFoodDef>ST_Lime</invFoodDef>
+		<invNutrition>2.55</invNutrition>
+		<!-- <baseRecruitDifficulty>0.4</baseRecruitDifficulty> -->
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>PirateBackstory</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+	</PawnKindDef>
+  
+	<PawnKindDef ParentName="BasePlayerStorytimePiratePawnKind" Name="StorytimePirateBackstoryDefault" Abstract="True">
+		<!-- <defaultFactionType>NicePirates</defaultFactionType> -->
+		<backstoryFilters>
+			<li>
+				<categoriesChildhood>
+					<li>PirateBackstory</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>PirateBackstory</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFilters>
+		<isFighter>true</isFighter>
+	</PawnKindDef>
   
   <PawnKindDef ParentName="BasePlayerStorytimePiratePawnKind">
     <defName>PirateSwabbie</defName>
@@ -101,7 +122,7 @@
     <initialResistanceRange>5~15</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerStorytimePiratePawnKind">
+  <PawnKindDef ParentName="StorytimePirateBackstoryDefault">
     <defName>PirateGrenadier</defName>
     <label>pirate grenadier</label>
     <combatPower>65</combatPower>
@@ -195,7 +216,7 @@
     <initialResistanceRange>10~25</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerStorytimePiratePawnKind">
+  <PawnKindDef ParentName="StorytimePirateBackstoryDefault">
     <defName>PirateJuggernaut</defName>
     <label>pirate Juggernaut</label>
 	<combatPower>80</combatPower>
@@ -238,7 +259,7 @@
     <initialResistanceRange>10~25</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerStorytimePiratePawnKind">
+  <PawnKindDef ParentName="StorytimePirateBackstoryDefault">
     <defName>TSP_PirateTradesman</defName>
     <label>smuggler</label>
 	<isFighter Inherit="False">false</isFighter>

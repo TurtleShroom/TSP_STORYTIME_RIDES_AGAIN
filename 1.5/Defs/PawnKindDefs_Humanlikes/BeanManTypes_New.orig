@@ -7,7 +7,7 @@
     <defName>BeanGuardianBasic</defName>
     <label>bean guardian</label>
     <combatPower>55</combatPower>
-    <defaultFactionType>BeanGuardians</defaultFactionType>
+    <!-- <defaultFactionType>BeanGuardians</defaultFactionType> -->
     <isFighter>true</isFighter>
     <gearHealthRange>0.6~2</gearHealthRange>
     <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
@@ -15,12 +15,19 @@
       <li>IndustrialBasic</li>
     </apparelTags>
     <apparelMoney>150~400</apparelMoney>
-	<backstoryFiltersOverride>
-	  <li>
-		<categories>
-		  <li>BeanGuardian</li>
-		</categories>
-	  </li>
+	<backstoryFiltersOverride Inherit="False">
+		<li>
+			<categoriesChildhood>
+				<li>BeanGuardian</li>
+				<li>BeanManBackstory</li>
+				<li>BeanManChildEye</li>
+			</categoriesChildhood>
+		</li>
+		<li>
+			<categoriesAdulthood>
+				<li>BeanGuardian</li>
+			</categoriesAdulthood>
+		</li>
 	</backstoryFiltersOverride>
     <weaponTags>
       <li>Gun</li>
@@ -50,7 +57,7 @@
     <defName>BeanGuardianAdvanced</defName>
     <label>bean guardian</label>
     <combatPower>90</combatPower>
-    <defaultFactionType>BeanGuardians</defaultFactionType>
+    <!-- <defaultFactionType>BeanGuardians</defaultFactionType> -->
     <isFighter>true</isFighter>
     <gearHealthRange>0.6~2</gearHealthRange>
     <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
@@ -93,7 +100,7 @@
     <defName>BeanGuardianTrader</defName>
     <label>merchant</label>
     <combatPower>55</combatPower>
-    <defaultFactionType>BeanGuardians</defaultFactionType>
+    <!-- <defaultFactionType>BeanGuardians</defaultFactionType> -->
 	<trader>true</trader>
     <isFighter>true</isFighter>
     <gearHealthRange>0.6~2</gearHealthRange>
@@ -136,7 +143,7 @@
     <defName>BeanGuardianLeader</defName>
     <label>bean man</label>
     <combatPower>55</combatPower>
-    <defaultFactionType>BeanGuardians</defaultFactionType>
+    <!-- <defaultFactionType>BeanGuardians</defaultFactionType> -->
     <factionLeader>true</factionLeader>
     <isFighter>true</isFighter>
     <gearHealthRange>0.6~2</gearHealthRange>

@@ -14,7 +14,7 @@
     <defName>CommunalChildWoodBeet</defName>
     <title>Child of the Wood Beet Commune</title>
 	<titleShort>Communally Abused</titleShort>
-    <baseDesc>[PAWN_nameDef] never knew [PAWN_possessive] parents or homeland. [PAWN_pronoun] was 'adopted' by Wood Beets and 'raised' communally. This involved a lot of drugs and other questionable parenting decisions.</baseDesc>
+    <description>[PAWN_nameDef] never knew [PAWN_possessive] parents or homeland. [PAWN_pronoun] was 'adopted' by Wood Beets and 'raised' communally. This involved a lot of drugs and other questionable parenting decisions.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Social>3</Social>
@@ -28,7 +28,7 @@
 					<defName Degree="2">DrugDesire</defName>
 				</li>
 			</options>
-			<chance>999</chance>
+			<chance>100</chance>
 		</li>
 		<li>
 			<options>
@@ -65,8 +65,10 @@
 		<li>Raider</li>
 		<li>Pirate</li>
 		<li>Tribal</li>
+		<li>Mate</li>
 		<li>ArgonianBackstory</li>
 		<li>HSAU_BS_MLN_ChildhoodGerman</li>
+		<li>HSAU_BS_MLN_AdulthoodGerman</li>
 		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
 		<li>ESCP_FalmerBackstory_Childhood</li>
 		<li>ESCP_MaormerBackstory_Childhood</li>
@@ -74,6 +76,8 @@
 		<li>ESCP_BosmerBackstory_Childhood</li>
 		<li>Skinhead</li>
 		<li>Antifa</li>
+		<li>OwenWilson</li>
+		<li>Cult</li>
     </spawnCategories>
 	<relationSettings>
 		<relationChanceModifierLover>0</relationChanceModifierLover>
@@ -91,7 +95,7 @@
     <defName>LonelyChildWoodBeet</defName>
     <title>Lone Beet</title>
 	<titleShort>abandoned</titleShort>
-    <baseDesc>[PAWN_nameDef] was abandoned by [PAWN_possessive] parents in the middle of nowhere. Contrary to what one might expect, this actually meant [PAWN_pronoun] had a better childhood than most Wood Beets. </baseDesc>
+    <description>[PAWN_nameDef] was abandoned by [PAWN_possessive] parents in the middle of nowhere. Contrary to what one might expect, this actually meant [PAWN_pronoun] had a better childhood than most Wood Beets. </description>
     <slot>Childhood</slot>
     <skillGains>
       <Social>-3</Social>
@@ -101,17 +105,13 @@
 	  <Cooking>3</Cooking>
 	  <Plants>3</Plants>
     </skillGains>
-	 <disallowedTraitsChance>
-		<li>
-			<defName>Psychopath</defName>
-		</li>
-		<li>
-			<defName>Cannibal</defName>
-		</li>
-		<li>
-			<defName>Bloodlust</defName>
-		</li>
-    </disallowedTraitsChance>
+	 <disallowedTraits>
+		<Psychopath>0</Psychopath>
+		<Abrasive>0</Abrasive>
+		<Cannibal>0</Cannibal>
+		<Bloodlust>0</Bloodlust>
+		<Wimp>0</Wimp>
+    </disallowedTraits>
 	<spawnCategories>
 		<li>Uncommon</li>
 	</spawnCategories>
@@ -129,36 +129,20 @@
     <defName>ParentedChildWoodBeet</defName>
     <title>Loved Beet</title>
 	<titleShort>beloved child</titleShort>
-    <baseDesc>[PAWN_nameDef] was one of the rare Wood Beets whose parents actually cared enough to raise their children. Because of this, [PAWN_pronoun] had a stable, functional family life. [PAWN_nameDef] and [PAWN_possessive] family would go on to leave the Wood Beets and serve the more civilized Beetnikh Empire.</baseDesc>
+    <description>[PAWN_nameDef] was one of the rare Wood Beets whose parents actually cared enough to raise their children. Because of this, [PAWN_pronoun] had a stable, functional family life. [PAWN_nameDef] and [PAWN_possessive] family would go on to leave the Wood Beets and serve the more civilized Beetnikh Empire.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Cooking>4</Cooking>
 	  <Social>6</Social>
 	  <Crafting>4</Crafting>
     </skillGains>
-	 <disallowedTraitsChance>
-		<li>
-			<defName>Bloodlust</defName>
-		</li>
-		<li>
-			<defName>Psychopath</defName>
-		</li>
-		<li>
-			<defName>Cannibal</defName>
-		</li>
-		<li>
-			<defName>Abrasive</defName>
-		</li>
-		<li>
-			<defName>Bloodlust</defName>
-		</li>
-		<li>
-			<defName Degree="1">DrugDesire</defName>
-		</li>
-		<li>
-			<defName Degree="2">DrugDesire</defName>
-		</li>
-    </disallowedTraitsChance>
+	 <disallowedTraits>
+		<Bloodlust>0</Bloodlust>
+		<Psychopath>0</Psychopath>
+		<Cannibal>0</Cannibal>
+		<Abrasive>0</Abrasive>
+		<DrugDesire>2</DrugDesire>
+    </disallowedTraits>
 	<spawnCategories Inherit="False">
 		<li>BeetnikhBackstory</li>
 	</spawnCategories>
@@ -168,10 +152,10 @@
     <defName>DrugAddledWoodBeet</defName>
     <title>Socially Competent Druggie</title>
 	<titleShort>drug-addled</titleShort>
-    <baseDesc>[PAWN_nameDef] has spent most of [PAWN_possessive] adult life doing various drugs. [PAWN_pronoun] is not very smart, but [PAWN_pronoun] had a certain charm.</baseDesc>
+    <description>[PAWN_nameDef] has spent most of [PAWN_possessive] adult life doing various drugs. [PAWN_pronoun] is not very smart, but [PAWN_pronoun] had a certain charm.</description>
     <slot>Adulthood</slot>
     <skillGains>
-      <Social>5</Social>
+      <Social>7</Social>
     </skillGains>
 	<forcedTraitsChance>
 		<li>
@@ -181,6 +165,15 @@
 				</li>
 			</options>
 			<chance>100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
 		</li>
     </forcedTraitsChance>
 	<workDisables>
@@ -203,6 +196,8 @@
 		<li>ArgonianBackstory</li>
 		<li>Skinhead</li>
 		<li>Antifa</li>
+		<li>OwenWilson</li>
+		<li>Cult</li>
     </spawnCategories>
 	<requiredWorkTags Inherit="False">
 		<li>Social</li>
@@ -213,7 +208,7 @@
     <defName>CannibalBeet</defName>
     <title>Sapient Beet Eater</title>
 	<titleShort>devourer</titleShort>
-    <baseDesc>[PAWN_nameDef] loves the taste of beets, and not just the vegetable  kind! [PAWN_pronoun] has eaten a large number of sapient beets over the years, and is adept at catching and cooking them. This "pallate" has extended to any other sapient life.</baseDesc>
+    <description>[PAWN_nameDef] loves the taste of beets, and not just the vegetable  kind! [PAWN_pronoun] has eaten a large number of sapient beets over the years, and is adept at catching and cooking them. This "pallate" has extended to any other sapient life.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>8</Melee>
@@ -250,7 +245,11 @@
 		<li>HSAU_BS_MLN_AdultArtVampSoldier</li>
 		<li>HSAU_BS_MLN_AdulthoodGerman</li>
 		<li>HSAU_BS_MLN_Adulthood</li>
+		<li>HSAU_BS_MLN_ChildhoodGerman</li>
 		<li>Antifa</li>
+		<li>OwenWilson</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
 	</spawnCategories>
 	<requiredWorkTags Inherit="False">
 		<li>Violent</li>
@@ -261,7 +260,7 @@
     <defName>ShamanWoodBeet</defName>
     <title>Pecan Shaman</title>
 	<titleShort>Pecan Shaman</titleShort>
-    <baseDesc>[PAWN_nameDef] is a Pecan Shaman, one of the religious leaders whose job it is to determine the identity of the next Pecan Joe.</baseDesc>
+    <description>[PAWN_nameDef] is a Pecan Shaman, one of the religious leaders whose job it is to determine the identity of the next Pecan Joe.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Social>6</Social>
@@ -270,7 +269,7 @@
 	<requiredWorkTags Inherit="False">
 		<li>Social</li>
 	</requiredWorkTags>
-	<spawnCategories>
+	<spawnCategories Inherit="False">
 		<li>WoodBeetShaman</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
@@ -279,7 +278,7 @@
     <defName>RaiderWoodBeet</defName>
     <title>Valenwood Raider</title>
 	<titleShort>raider</titleShort>
-    <baseDesc>[PAWN_nameDef] has participated in numerous raids on the evil Valenroff holdings. Dozens of Valenroffs have died by [PAWN_possessive] weapons.</baseDesc>
+    <description>[PAWN_nameDef] has participated in numerous raids on the evil Valenroff holdings. Dozens of Valenroffs have died by [PAWN_possessive] weapons.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>6</Melee>
@@ -315,7 +314,7 @@
     <defName>LazyBeet</defName>
     <title>Lazy Druggie</title>
 	<titleShort>druggie</titleShort>
-    <baseDesc>[PAWN_nameDef]'s use of drugs has made [PAWN_objective] quite lazy.</baseDesc>
+    <description>[PAWN_nameDef]'s use of drugs has made [PAWN_objective] quite lazy.</description>
     <slot>Adulthood</slot>
     <skillGains>
 		<Social>-6</Social>
@@ -328,6 +327,15 @@
 				</li>
 			</options>
 			<chance>100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
 		</li>
     </forcedTraitsChance>
 	<workDisables>
@@ -345,6 +353,9 @@
 		<li>Sadist</li>
 		<li>Mate</li>
 		<li>Antifa</li>
+		<li>OwenWilson</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
@@ -352,7 +363,7 @@
     <defName>SlaveWoodBeet</defName>
     <title>Valenroff Slave</title>
 	<titleShort>escaped slave</titleShort>
-    <baseDesc>[PAWN_nameDef] was captured by Valenroffs and forced to work in their mines for years before escaping.</baseDesc>
+    <description>[PAWN_nameDef] was captured by Valenroffs and forced to work in their mines for years before escaping.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Mining>8</Mining>
@@ -379,6 +390,9 @@
 		<li>ESCP_DunmerAshlanderBackstory_Adulthood</li>
 		<li>ArgonianBackstory</li>
 		<li>Skinhead</li>
+		<li>OwenWilson</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
@@ -386,7 +400,7 @@
     <defName>MeatballWoodBeet</defName>
     <title>Slub victim</title>
 	<titleShort>Slub victim</titleShort>
-    <baseDesc>As a young adult,[PAWN_nameDef] claims to have encountered a "Slub" in [PAWN_possessive] wanderings. [PAWN_nameDef] was nearly captured, but [PAWN_pronoun] managed to fight it off. [PAWN_nameDef] has been scarred by this event and, to this day, no one is sure what a "Slub" actually is, or if it exists at all.</baseDesc>
+    <description>As a young adult,[PAWN_nameDef] claims to have encountered a "Slub" in [PAWN_possessive] wanderings. [PAWN_nameDef] was nearly captured, but [PAWN_pronoun] managed to fight it off. [PAWN_nameDef] has been scarred by this event and, to this day, no one is sure what a "Slub" actually is, or if it exists at all.</description>
     <slot>Adulthood</slot>
     <skillGains>
 	  <Melee>5</Melee>
@@ -401,6 +415,15 @@
 			</options>
 			<chance>100</chance>
 		</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
     </forcedTraitsChance>
 	<workDisables>
 	  <li>Animals</li>
@@ -408,7 +431,6 @@
 	<spawnCategories>
 		<li>Medieval</li>
 		<li>Classical</li>
-		<li>Offworld</li>
 		<li>Outlander</li>
 		<li>Pirate</li>
 		<li>Raider</li>
@@ -419,6 +441,8 @@
 		<li>ESCP_DunmerBackstory_Adulthood</li>
 		<li>HSAU_BS_MLN_ChildhoodGerman</li>
 		<li>HSAU_BS_MLN_ChildhoodEarth</li>
+		<li>HSAU_BS_MLN_AdulthoodGerman</li>
+		<li>HSAU_BS_MLN_AdulthoodEarth</li>
 		<li>Uncommon</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
@@ -427,7 +451,7 @@
     <defName>WoodBeetGatherer</defName>
     <title>Forager</title>
 	<titleShort>forager</titleShort>
-    <baseDesc>[PAWN_nameDef] was tasked with gathering food for [PAWN_possessive] community. [PAWN_pronoun] turned out to be quite good at this.</baseDesc>
+    <description>[PAWN_nameDef] was tasked with gathering food for [PAWN_possessive] community. [PAWN_pronoun] turned out to be quite good at this.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Plants>8</Plants>
@@ -449,6 +473,7 @@
 	  <li>ESCP_MaormerBackstory_Adulthood</li>
 	  <li>ESCP_DunmerBackstory_Adulthood</li>
 	  <li>ESCP_DunmerAshlanderBackstory_Adulthood</li>
+	  <li>OwenWilson</li>
     </spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
@@ -466,7 +491,7 @@
 	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
     <title>Pecan Joe</title>
 	<titleShort>Pecan Joe</titleShort>
-    <baseDesc>[PAWN_nameDef] is believed to be a reincarnation of a previous Pecan Joe, and therefore [PAWN_pronoun] is deemed the rightful leader of all Wood Beets.</baseDesc>
+    <description>[PAWN_nameDef] is believed to be a reincarnation of a previous Pecan Joe, and therefore [PAWN_pronoun] is deemed the rightful leader of all Wood Beets.</description>
     <slot>Adulthood</slot>
     <skillGains>
 	  <Social>15</Social>
@@ -504,6 +529,6 @@
 	  <li>PecanJoeBackstory</li>
     </spawnCategories>
 	<femaleCommonality>0</femaleCommonality>
-	<maleCommonality>999</maleCommonality>
+	<maleCommonality>100</maleCommonality>
   </AlienRace.AlienBackstoryDef>
 </Defs>

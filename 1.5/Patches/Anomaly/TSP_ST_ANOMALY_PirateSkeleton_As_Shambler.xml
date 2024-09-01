@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.anomaly">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MutantDef[defName="Shambler"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd" MayRequire="ludeon.rimworld.anomaly">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value MayRequire="ludeon.rimworld.anomaly">
+				<MutantDef MayRequire="ludeon.rimworld.anomaly">
+					<defName>TSP_ST_Shambler_SkeletalPirate</defName>
+					<label>Skeletal Crewman</label>
+					<description>An unique sub-set of Shambler distinguished by advanced intelligence and capabilities, corrupted and reanimated by a Faustian bargain of nano-scale archites. Once pirates, these living skeletons are the remains of a greedy pirate crew that willingly exchanged their soul for eternal life. Today, they wander the Rim in search of treasure. Being men, they are capable of complex attacks such taking as cover, opening doors, fleeing, and more, and they carry powerful, deadly weapons. However, being skeletons without muscles, they cannot perform sieges.</description>
+					<hediff>HedSTUndead</hediff>
+					<namePrefix IsNull="True"></namePrefix>
+					<useCorpseGraphics>false</useCorpseGraphics>
+					<isConsideredCorpse>true</isConsideredCorpse>
+					<canBleed>true</canBleed>
+					<bloodDef>Filth_DarkBlood</bloodDef>
+					<bloodSmearDef>Filth_CorpseBile</bloodSmearDef>
+					<entitledToMedicalCare>true</entitledToMedicalCare>
+					<isImmuneToInfections>true</isImmuneToInfections>
+					<removeChronicIllnesses>true</removeChronicIllnesses>
+					<removeAddictions>false</removeAddictions>
+					<removeAllInjuries>false</removeAllInjuries>
+					<restoreLegs>true</restoreLegs>
+					<defaultFaction>Skeleton_Pirates</defaultFaction>
+					<standingAnimation>ShamblerSway</standingAnimation>
+					<canOpenDoors>true</canOpenDoors>
+					<makesFootprints>true</makesFootprints>
+					<clearMutantStatusOnDeath>false</clearMutantStatusOnDeath>
+					<canAttackWhileCrawling>false</canAttackWhileCrawling>
+					<deathOnDownedChance>0.05</deathOnDownedChance>
+					<woundColor>(0.3, 0.3, 0.0, 1.0)</woundColor>
+					<anomalyKnowledgeOffset>0</anomalyKnowledgeOffset>
+					<knowledgeCategory>Basic</knowledgeCategory>
+					<codexEntry>Shambler</codexEntry>
+					<canBeCaptured>true</canBeCaptured>
+					<foodType Inherit="False">None, OmnivoreHuman, Kibble</foodType> <!-- You have to be able to feed an animal to tame it, apparently. -->
+					<removesHediffs>
+						<li>CryptosleepSickness</li>
+						<li>LuciferiumHigh</li>
+						<li>LuciferiumAddiction</li>
+						<li>CorpseTorment</li>
+						<li>HeartAttack</li>
+						<li>Scaria</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">PsychicAmplifier</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">PregnantHuman</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">PregnancyLabor</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">HemogenAmplified</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">DeathrestExhaustion</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">InterruptedDeathrest</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">HemogenCraving</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Deathrest</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">RegenerationComa</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">PostpartumExhaustion</li>
+					</removesHediffs>
+					<producesBioferrite>true</producesBioferrite>
+					<!-- Sounds -->
+					<!--
+					<soundCall>Pawn_Shambler_Call</soundCall>
+					<soundAttack>Pawn_Shambler_Attack</soundAttack>
+					<soundWounded>Pawn_Shambler_Wounded</soundWounded>
+					<soundDeath>Pawn_Shambler_Killed</soundDeath>
+					-->
+					<!-- Rendering -->
+					<!--
+					<renderNodeProperties>
+						<li Class="PawnRenderNodeProperties_Overlay">
+							<debugLabel>Shambler wounds</debugLabel>
+							<workerClass>PawnRenderNodeWorker_OverlayShambler</workerClass>
+							<overlayLayer>Body</overlayLayer>
+							<baseLayer>20</baseLayer>
+							<pawnType>HumanlikeOnly</pawnType>
+						</li>
+						<li>
+							<debugLabel>Shambler wounds</debugLabel>
+							<nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+							<workerClass>PawnRenderNodeWorker_OverlayShambler</workerClass>
+							<overlayLayer>Body</overlayLayer>
+							<baseLayer>20</baseLayer>
+							<pawnType>NonHumanlikeOnly</pawnType>
+						</li>
+					</renderNodeProperties>
+					-->
+					<tools>
+						<li>
+							<label>left hand</label>
+							<capacities>
+								<li>Blunt</li>
+								<li>Scratch</li>
+							</capacities>
+							<power>4</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+						</li>
+						<li>	
+							<label>right hand</label>
+							<capacities>
+								<li>Blunt</li>
+								<li>Scratch</li>
+							</capacities>
+							<power>4</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+						</li>
+						<li>
+							<label>jawbone</label>
+							<capacities>
+								<li>Blunt</li>
+								<li>Scratch</li>
+								<li>Bite</li>
+							</capacities>
+							<power>6</power>
+							<cooldownTime>2.6</cooldownTime>
+							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+							<chanceFactor>0.7</chanceFactor>
+						</li>
+					</tools>
+				</MutantDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

@@ -31,8 +31,9 @@
 		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] could not understand how a friend could be lost just because his politics didn't match theirs.</li>
 		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] made fun of TurtleShroom.</li>
 		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] agreed that Jeremiah was a [LoreSpecies]! Indeed, he was a good friend of theirs. Neither [INITIATOR_nameDef] nor [RECIPIENT_nameDef] could understand a single word he said, but they helped him drink his Coke. Jeremiah always had some mighty fine Coke.</li>
-		
-        <li>talkedabout(p=4)->chatted about</li>
+		<li>r_logentry(p=2)->[INITIATOR_nameDef] [talkedabout] [fourchanmetaphor] to a confused [RECIPIENT_nameDef].</li>
+		<li>r_logentry(p=1.25)->[INITIATOR_nameDef] joked about [fourchanmetaphor]. [RECIPIENT_nameDef] laughed uproariously.</li>
+        <li>talkedabout->chatted about</li>
         <li>talkedabout->shared a word about</li>
         <li>talkedabout->spoke about</li>
         <li>talkedabout->considered the future lore possibilities of</li>
@@ -44,7 +45,17 @@
         <li>talkedabout->said a word about</li>
         <li>talkedabout->made a comment about</li>
         <li>talkedabout->commented about</li>
-        <li>talkedabout->told a joke about</li>	
+        <li>talkedabout->told a joke about</li>
+		<li>fourchanmetaphor->deep frying albatrosses</li>
+		<li>fourchanmetaphor->paddling bobcats</li>
+		<li>fourchanmetaphor->buttering cylinders</li>
+		<li>fourchanmetaphor->slamming gourmet sausages</li>
+		<li>fourchanmetaphor->plucking a pheasant</li>
+		<li>fourchanmetaphor->schlorping [LoreLocations] sprouts</li>
+		<li>fourchanmetaphor->kerplunking an orca</li>
+		<li>fourchanmetaphor->deep frying a [LoreSpecies]</li>
+		<li>fourchanmetaphor->kerplunking a [LoreSpecies]</li>
+		<li>fourchanmetaphor->padoinking a [LoreSpecies]</li>
       </rulesStrings>
     </logRulesInitiator>
   </InteractionDef>
@@ -61,12 +72,8 @@
       <li>
         <label>discussed deep lore</label>
         <description>The world is an amazing place. There are so many laws, topics, places, and creatures to discuss. Indeed, our discussion about it really got me thinking.</description>
-        <baseOpinionOffset>1</baseOpinionOffset>
+        <baseOpinionOffset>2</baseOpinionOffset>
       </li>
     </stages>
   </ThoughtDef>
-
-
-
-
 </Defs>

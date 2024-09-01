@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-  
   <ThingDef ParentName="BasePawn" Name="BaseSkeleton" Abstract="True">
 	<thingClass>Pawn</thingClass>
 	<category>Pawn</category>
@@ -20,6 +20,7 @@
 	  <BoneAmount MayRequire="sihv.rombones" Inherit="False">206</BoneAmount> <!-- Human skeletons always yield the same bones as their skeleton contains -->
 	  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
 	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_SanctusSensitivity>
+	  <MinimumContainmentStrength MayRequire="ludeon.rimworld.anomaly">17</MinimumContainmentStrength>
     </statBases>
     <race>
 		<giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
@@ -29,13 +30,19 @@
 		<foodType>None</foodType>
 		<lifeExpectancy>2000</lifeExpectancy>
 		<bloodDef>Filth_CorpseBile</bloodDef>
+		<bloodSmearDef>Filth_CorpseBile</bloodSmearDef>
 		<specificMeatDef>TSP_ST_SkeletalMarrow</specificMeatDef>
 		<meatColor>(45,44,39)</meatColor>
+		<body>TSP_ST_SkeletalMan</body>
 		<fleshType MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_StrangeFlesh</fleshType>
 		<lifeStageAges>
 			<li>
 				<def>TSP_ST_SkeletonAge_Undead</def>
 				<minAge>0</minAge>
+			</li>
+			<li MayRequire="ludeon.rimworld.anomaly">
+				<def>EntityFullyFormed</def>
+				<minAge>0.001</minAge>
 			</li>
 		</lifeStageAges>
     </race>
@@ -49,6 +56,20 @@
 			<makeNonFleeingToo>true</makeNonFleeingToo>
 		</li>
 		<li MayRequire="oskarpotocki.vanillafactionsexpanded.core" Class="AnimalBehaviours.CompProperties_DiseaseEventImmunity"></li>
+		<li Class="CompProperties_ProducesBioferrite" MayRequire="ludeon.rimworld.anomaly">
+			<bioferriteDensity>1</bioferriteDensity>
+		</li>
+		<li Class="CompProperties_Studiable" MayRequire="ludeon.rimworld.anomaly">
+			<frequencyTicks>45000</frequencyTicks>
+			<knowledgeCategory>Basic</knowledgeCategory>
+			<anomalyKnowledge>1.5</anomalyKnowledge>
+			<minMonolithLevelForStudy>0</minMonolithLevelForStudy>
+			<requiresHoldingPlatform>true</requiresHoldingPlatform>
+		</li>
+		<li Class="CompProperties_HoldingPlatformTarget" MayRequire="ludeon.rimworld.anomaly">
+			<baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
+			<lookForTargetOnEscape>false</lookForTargetOnEscape>
+		</li>
 		<!--
 		<li Class="WVC_XenotypesAndGenes.CompProperties_InitialHediff" MayRequire="wvc.sergkart.races.biotech">
 			<hediffDefs MayRequire="wvc.sergkart.races.biotech">
@@ -64,6 +85,7 @@
 	-->
 	<tradeTags>
 		<li>AnimalInsectSpace</li> <!-- Skeletons don't breathe -->
+		<li>EVA</li>
 		<!-- <li>Skeleton</li> -->
 	</tradeTags>
 	
@@ -107,6 +129,7 @@
 			<hasGenders>true</hasGenders>
 			<lifeExpectancy>2000</lifeExpectancy>
 			<bloodDef>Filth_CorpseBile</bloodDef>
+			<bloodSmearDef>Filth_CorpseBile</bloodSmearDef>
 			<specificMeatDef>TSP_ST_SkeletalMarrow</specificMeatDef>
 			<meatColor>(45,44,39)</meatColor>
 			<fleshType MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_StrangeFlesh</fleshType>
@@ -132,14 +155,18 @@
 			<li Class="AnimalBehaviours.CompProperties_Draftable">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
 			</li>
+			<li Class="CompProperties_ProducesBioferrite" MayRequire="ludeon.rimworld.anomaly">
+				<bioferriteDensity>1</bioferriteDensity>
+			</li>
 		</comps>
 		<!--
 		<butcherProducts>
-		<BoneItem MayRequire="sihv.rombones">206</BoneItem>
+			<BoneItem MayRequire="sihv.rombones">206</BoneItem>
 		</butcherProducts>
 		-->
 		<tradeTags>
 			<li>AnimalInsectSpace</li> <!-- Skeletons don't breathe -->
+			<li>EVA</li>
 			<li>DocileSkeleton</li>
 			<li>Skeleton</li>
 			<li>AnimalExotic</li>
@@ -158,11 +185,12 @@
 	<PawnKindDef Name="BaseSkeletonKind" Abstract="True">
 		<defaultFactionType>Skeleton_Pirates</defaultFactionType>
 		<canArriveManhunter>false</canArriveManhunter>
-		<aiAvoidCover>true</aiAvoidCover>
+		<aiAvoidCover>false</aiAvoidCover>
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 		<allowOldAgeInjuries>false</allowOldAgeInjuries>
 		<wildGroupSize>2</wildGroupSize>
 		<ecoSystemWeight>0</ecoSystemWeight>
 		<maxGenerationAge>400</maxGenerationAge>
+		<mutant MayRequire="ludeon.rimworld.anomaly">TSP_ST_Shambler_SkeletalPirate</mutant>
 	</PawnKindDef>
 </Defs>

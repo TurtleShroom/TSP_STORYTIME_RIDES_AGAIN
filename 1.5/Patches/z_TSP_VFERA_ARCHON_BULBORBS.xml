@@ -92,7 +92,8 @@
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers/li/options</xpath>
 			<value>
-				<FlyingFrog>0.791</FlyingFrog>
+				<FlyingFrog>1</FlyingFrog>
+				<BMT_GiantSnail MayRequire="biomesteam.biomescaverns">1</BMT_GiantSnail>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -108,7 +109,7 @@
 				<li Inherit="False">
 					<kindDef>Combat</kindDef>
 					<options>
-						<TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">999</TSP_VFERA_ARCHON_BULBORB>
+						<TSP_VFERA_ARCHON_BULBORB_Goon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">999</TSP_VFERA_ARCHON_BULBORB_Goon>
 					</options>
 				</li>
 				<li Inherit="False">
@@ -122,6 +123,7 @@
 					<kindDef>Peaceful</kindDef>
 					<options>
 						<TSP_VFERA_ARCHON_BULBORB>7</TSP_VFERA_ARCHON_BULBORB>
+						<TSP_VFERA_ARCHON_BULBORB_Goon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">11</TSP_VFERA_ARCHON_BULBORB_Goon>
 						<ArchonWarrior>2</ArchonWarrior>
 					</options>
 				</li>
@@ -146,10 +148,29 @@
 						<Scarecrow MayRequire="halloweenparade.velcroboy333">0.75</Scarecrow>
 					</carriers>
 					<guards>
-						<TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">10</TSP_VFERA_ARCHON_BULBORB>
+						<TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">4</TSP_VFERA_ARCHON_BULBORB>
+						<TSP_VFERA_ARCHON_BULBORB_Goon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">19</TSP_VFERA_ARCHON_BULBORB_Goon>
 						<ArchonWarrior>22</ArchonWarrior>
 						<FlyingFrog>3</FlyingFrog>
+						<BMT_GiantSnail MayRequire="biomesteam.biomescaverns">7</BMT_GiantSnail>
 					</guards>
+				</li>
+				<li Inherit="False">
+					<kindDef>Settlement</kindDef>
+					<commonality>100</commonality>
+					<options>
+						<TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">24</TSP_VFERA_ARCHON_BULBORB>
+						<TSP_VFERA_ARCHON_BULBORB_Goon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">19</TSP_VFERA_ARCHON_BULBORB_Goon>
+						<TSP_VFERA_ARCHON_BULBORB_Merchant MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</TSP_VFERA_ARCHON_BULBORB_Merchant>
+						<ArchonWarrior>22</ArchonWarrior>
+						<FlyingFrog>18</FlyingFrog>
+						<Muffalo>1</Muffalo>
+						<Alpaca>1</Alpaca>
+						<Dromedary>1</Dromedary>
+						<Elephant>10</Elephant>
+						<BMT_GiantSnail MayRequire="biomesteam.biomescaverns">19</BMT_GiantSnail>
+						<Scarecrow MayRequire="halloweenparade.velcroboy333">1</Scarecrow>
+					</options>
 				</li>
 			</value>
 		</match>

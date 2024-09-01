@@ -7,19 +7,17 @@
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
   
-	<!--
 	<AlienRace.AlienBackstoryDef Name="GoblinBackstoriesAdult" Abstract="True" ParentName="GoblinBackstories"> 
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 	</AlienRace.AlienBackstoryDef>
-	-->
 
-<!-- Childhood -->
+	<!-- Childhood -->
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>ChildGoblin_Cave</defName>
     <title>cave child</title>
     <titleShort>orphan</titleShort>
-    <baseDesc>[PAWN_nameDef] was birthed in a cave and left behind by [PAWN_possessive] mother immediately. [PAWN_pronoun] had to survive all on [PAWN_possessive] own in the depths of the earth.</baseDesc>
+    <description>[PAWN_nameDef] was birthed in a cave and left behind by [PAWN_possessive] mother immediately. [PAWN_pronoun] had to survive all on [PAWN_possessive] own in the depths of the earth.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Mining>6</Mining>
@@ -29,6 +27,13 @@
 		<li>GoblinChild</li>
 		<li>Skinhead</li>
 		<li>Antifa</li>
+		<li>Miner</li>
+		<li>TribalMiner</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -36,7 +41,7 @@
     <defName>ChildGoblin_Greedy</defName>
     <title>greedy kid</title>
     <titleShort>greedy</titleShort>
-    <baseDesc>[PAWN_nameDef] was at the top of the food chain amongst the children of [PAWN_possessive] clan. [PAWN_pronoun] used this position to take all the best food and toys from [PAWN_possessive] peers, a tendency which earned few friends.</baseDesc>
+    <description>[PAWN_nameDef] was at the top of the food chain amongst the children of [PAWN_possessive] clan. [PAWN_pronoun] used this position to take all the best food and toys from [PAWN_possessive] peers, a tendency which earned few friends.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Social>-4</Social>
@@ -48,7 +53,7 @@
 				<defName>Greedy</defName>
 			</li>
 		</options>
-		<chance>999</chance>
+		<chance>100</chance>
       </li>
 	  <li>
 		<options>
@@ -62,6 +67,13 @@
 	<spawnCategories>
 		<li>GoblinChild</li>
 		<li>Antifa</li>
+		<li>ESCP_DunmerBackstory_Childhood</li>
+		<li>ESCP_AltmerBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -69,7 +81,7 @@
     <defName>ChildGoblin_MaggotSpawnofMordor</defName>
     <title>spawn</title>
     <titleShort>spawn</titleShort>
-    <baseDesc>[PAWN_nameDef] was not born through natural means. Instead, [PAWN_pronoun] was birthed in the Growth Vats of a powerful dark lord's base. He was completely deprived of a childhood and got spit out of the Growth Vat as an adult.</baseDesc>
+    <description>[PAWN_nameDef] was not born through natural means. Instead, [PAWN_pronoun] was birthed in the Growth Vats of a powerful dark lord's base. [PAWN_nameDef] was completely deprived of a childhood and got spit out of the Growth Vat as an adult.</description>
 	<!--
 	<bodyTypeMale>Hulk</bodyTypeMale>
 	<bodyTypeFemale>Hulk</bodyTypeFemale>
@@ -83,10 +95,22 @@
     </skillGains>
 	<spawnCategories>
 		<li>Vatgrown</li>
+		<li>VatGrown</li>
 		<li>Mate</li>
 		<li>Outsider</li>
 		<li>GoblinChild</li>
 		<li>Skinhead</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>ESCP_DunmerBackstory_Childhood</li>
+		<li>ESCP_FalmerBackstory_Childhood</li>
+		<li>ESCP_AltmerBackstory_Childhood</li>
+		<li>Slave</li>
+		<li>NewSlave</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
 	</spawnCategories>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
@@ -99,12 +123,21 @@
     <defName>ChildGoblin_Foundling</defName>
     <title>foundling</title>
     <titleShort>orphan</titleShort>
-    <baseDesc>[PAWN_nameDef] was abandoned by [PAWN_possessive] tribe at birth for unknown reasons. [PAWN_nameDef] was found by an alien couple and raised as their own, despite [PAWN_possessive] species.</baseDesc>
+    <description>[PAWN_nameDef] was abandoned by [PAWN_possessive] tribe at birth for unknown reasons. [PAWN_nameDef] was found by an alien couple and raised as their own, despite [PAWN_possessive] species.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Social>6</Social>
     </skillGains>
 	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
 		<li>
 			<options>
 				<li>
@@ -114,12 +147,26 @@
 			<chance>100</chance>
 		</li>
     </forcedTraitsChance>
+	<disallowedTraits>
+		<Psychopath>0</Psychopath>
+		<Abrasive>0</Abrasive>
+		<Cannibal>0</Cannibal>
+	</disallowedTraits>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
 	</relationSettings>
 	<spawnCategories>
 		<li>GoblinChild</li>
+		<li>Outlander</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>ESCP_DunmerBackstory_Childhood</li>
+		<li>ESCP_FalmerBackstory_Childhood</li>
+		<li>ESCP_AltmerBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>ESCP_ChimerBackstory_Childhood</li>
+		<li>ESCP_MaormerBackstory_Childhood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -128,7 +175,7 @@
     <title>Banker's Son</title>
 	<titleFemale>Banker's Daughter</titleFemale>
 	<titleShort>banker's kid</titleShort>
-    <baseDesc>[PAWN_nameDef] was born to a family of respected bankers. [PAWN_possessive] parents always expected [PAWN_possessive] to follow in the family business.</baseDesc>
+    <description>[PAWN_nameDef] was born to a family of respected bankers. [PAWN_possessive] parents always expected [PAWN_possessive] to follow in the family business.</description>
     <slot>Childhood</slot>
     <linkedBackstory>Goblin_Banker</linkedBackstory>
     <skillGains>
@@ -146,7 +193,7 @@
 		</li>
     </forcedTraitsChance>
 	<relationSettings>
-		<relationChanceModifierParent>999</relationChanceModifierParent>
+		<relationChanceModifierParent>100</relationChanceModifierParent>
 	</relationSettings>
 	<spawnCategories Inherit="False">
 		<li>GoblinChild</li>
@@ -157,7 +204,7 @@
     <defName>ChildGoblin_Feral</defName>
     <title>feral</title>
     <titleShort>feral</titleShort>
-    <baseDesc>[PAWN_nameDef] was abandoned by [PAWN_possessive] parents as an infant. Somehow, [PAWN_pronoun] survived on his own in the wilds, but [PAWN_possessive] isolation from society stunted [PAWN_possessive] social skills.</baseDesc>
+    <description>[PAWN_nameDef] was abandoned by [PAWN_possessive] parents as an infant. Somehow, [PAWN_pronoun] survived on his own in the wilds, but [PAWN_possessive] isolation from society stunted [PAWN_possessive] social skills.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Social>-6</Social>
@@ -182,6 +229,13 @@
 	<spawnCategories>
 		<li>GoblinChild</li>
 		<li>Antifa</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>ESCP_FalmerBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -189,7 +243,7 @@
     <defName>ChildGoblin_Beggar</defName>
     <title>beggar</title>
     <titleShort>beggar</titleShort>
-    <baseDesc>[PAWN_nameDef] grew up in a large city that was populated by non-Goblin sapient races. There was a great deal of anti-goblin prejudice in the city, so [PAWN_possessive] parents were unable to find work. As a result, [PAWN_nameDef] was forced to beg for a living.</baseDesc>
+    <description>[PAWN_nameDef] grew up in a large city that was populated by non-Goblin sapient races. There was a great deal of anti-goblin prejudice in the city, so [PAWN_possessive] parents were unable to find work. As a result, [PAWN_nameDef] was forced to beg for a living.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Social>1</Social>
@@ -206,13 +260,15 @@
     <defName>ChildGoblin_CookpotKeeper</defName>
     <title>cauldron keeper</title>
     <titleShort>keeper</titleShort>
-    <baseDesc>In [PAWN_nameDef]'s family, all food was collectively gathered in a central cauldron where it was rendered into stew and shared amongst the group. As a child, [PAWN_nameDef] was assigned the task of stirring the pot and keeping the flame beneath it going.</baseDesc>
+    <description>In [PAWN_nameDef]'s family, all food was collectively gathered in a central cauldron where it was rendered into stew and shared amongst the group. As a child, [PAWN_nameDef] was assigned the task of stirring the pot and keeping the flame beneath it going.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Cooking>4</Cooking>
     </skillGains>
 	<spawnCategories>
 		<li>GoblinChild</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>ESCP_FalmerBackstory_Childhood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -220,7 +276,7 @@
     <defName>ChildGoblin_CookpotCannibal</defName>
     <title>cannibal cauldron keeper</title>
     <titleShort>cannibal</titleShort>
-    <baseDesc>In [PAWN_nameDef]'s family, all food was collectively gathered in a central cauldron where it was rendered into stew and shared between the group. As a teenager, [PAWN_nameDef] was assigned the task of stirring the pot and keeping the flame beneath it going. He would secretly add the flesh of dead raiders into the pot. [PAWN_nameDef] found that [PAWN_pronoun] quite liked the taste, and no one ever caught [PAWN_objective] doing it.</baseDesc>
+    <description>In [PAWN_nameDef]'s family, all food was collectively gathered in a central cauldron where it was rendered into stew and shared between the group. As a teenager, [PAWN_nameDef] was assigned the task of stirring the pot and keeping the flame beneath it going. He would secretly add the flesh of dead raiders into the pot. [PAWN_nameDef] found that [PAWN_pronoun] quite liked the taste, and no one ever caught [PAWN_objective] doing it.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Cooking>4</Cooking>
@@ -237,6 +293,12 @@
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinChild</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>OwenWilson</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -244,13 +306,17 @@
     <defName>ChildGoblin_AnimalLover</defName>
     <title>animal lover</title>
     <titleShort>animal lover</titleShort>
-    <baseDesc>Unlike most in [PAWN_possessive] tribe, [PAWN_nameDef] loved animals for more than just their meat!</baseDesc>
+    <description>Unlike most in [PAWN_possessive] tribe, [PAWN_nameDef] loved animals for more than just their meat!</description>
     <slot>Childhood</slot>
     <skillGains>
       <Animals>4</Animals>
     </skillGains>
 	<spawnCategories>
 		<li>GoblinChild</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -258,7 +324,7 @@
     <defName>ChildGoblin_Collector</defName>
     <title>collector</title>
     <titleShort>collector</titleShort>
-    <baseDesc>[PAWN_nameDef] was constantly making collections of random items [PAWN_pronoun] found near [PAWN_possessive] village. While it was mostly junk, some of these things quite useful and [PAWN_pronoun] learned a lot by messing with them.</baseDesc>
+    <description>[PAWN_nameDef] was constantly making collections of random items [PAWN_pronoun] found near [PAWN_possessive] village. While it was mostly junk, some of these things quite useful and [PAWN_pronoun] learned a lot by messing with them.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Intellectual>3</Intellectual>
@@ -268,6 +334,8 @@
 	<spawnCategories>
 		<li>GoblinChild</li>
 		<li>Skinhead</li>
+		<li>ESCP_FalmerBackstory_Childhood</li>
+		<li>ESCP_AltmerBackstory_Childhood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -275,7 +343,7 @@
     <defName>ChildGoblin_Nomad</defName>
     <title>nomadic child</title>
     <titleShort>nomadic child</titleShort>
-    <baseDesc>[PAWN_nameDef] grew up living the life of a nomad and was raised by a band of fellow travelers. They mostly survived by foraging or performing for money, both of which taught useful skills.</baseDesc>
+    <description>[PAWN_nameDef] grew up living the life of a nomad and was raised by a band of fellow travelers. They mostly survived by foraging or performing for money, both of which taught useful skills.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Plants>3</Plants>
@@ -300,23 +368,30 @@
 					<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Wanderlust</defName>
 				</li>
 			</options>
-			<chance MayRequire="vanillaexpanded.vanillatraitsexpanded">999</chance>
+			<chance MayRequire="vanillaexpanded.vanillatraitsexpanded">100</chance>
 		</li>
 	</forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinChild</li>
 		<li>Skinhead</li>
+		<li>ESCP_DunmerBackstory_Childhood</li>
+		<li>ESCP_ChimerBackstory_Childhood</li>
+		<li>TribalHunter</li>
+		<li>Hunter</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
 
 
-<!-- Adulthood -->
+	<!-- Adulthood -->
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Cave</defName>
     <title>cave goblin</title>
     <titleShort>cave goblin</titleShort>
-    <baseDesc>[PAWN_nameDef] lived in a complex series of caves with [PAWN_possessive] tribe. [PAWN_pronoun] had to become adept at mining to survive.</baseDesc>
+    <description>[PAWN_nameDef] lived in a complex series of caves with [PAWN_possessive] tribe. [PAWN_pronoun] had to become adept at mining to survive.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Mining>6</Mining>
@@ -338,9 +413,9 @@
   
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Warrior</defName>
-    <title>goblin berserker</title>
+    <title>berserker</title>
     <titleShort>berserker</titleShort>
-    <baseDesc>[PAWN_nameDef] found for [PAWN_possessive] on the front lines as a vicious berserker, entering into feral-like trances in the heat of battle. [PAWN_pronoun] slew many foes along the way. [PAWN_pronoun] enjoyed the feeling of [PAWN_possessive] enemy's blood on [PAWN_possessive] hands.</baseDesc>
+    <description>[PAWN_nameDef] found for [PAWN_possessive] on the front lines as a vicious berserker, entering into feral-like trances in the heat of battle. [PAWN_pronoun] slew many foes along the way. [PAWN_nameDef] enjoyed the feeling of [PAWN_possessive] enemy's blood on [PAWN_possessive] hands.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>6</Melee>
@@ -352,13 +427,19 @@
 					<defName>Bloodlust</defName>
 				</li>
 			</options>
-			<chance>999</chance>
+			<chance>100</chance>
 		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
 		<li>Skinhead</li>
 		<li>Antifa</li>
+		<li>ESCP_BosmerBackstory_Adulthood</li>
+		<li>ESCP_DunmerBackstory_Adulthood</li>
+		<li>ESCP_FalmerBackstory_Adulthood</li>
+		<li>ESCP_AltmerBackstory_Adulthood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>  
   
@@ -366,7 +447,7 @@
     <defName>Goblin_Tinkerer</defName>
     <title>Scrap Engineer</title>
     <titleShort>scrapper</titleShort>
-    <baseDesc>[PAWN_nameDef] had a fascination for new putting together new devices with whatever materials [PAWN_pronoun] had at hand. While [PAWN_possessive] inventions and constructions were crude, they got the job done.</baseDesc>
+    <description>[PAWN_nameDef] had a fascination for new putting together new devices with whatever materials [PAWN_pronoun] had at hand. While [PAWN_possessive] inventions and constructions were crude, they got the job done.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Intellectual>3</Intellectual>
@@ -375,6 +456,11 @@
     </skillGains>
 	<spawnCategories>
 		<li>GoblinAdult</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>ESCP_FalmerBackstory_Childhood</li>
+		<li>ESCP_AltmerBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>  
   
@@ -382,7 +468,7 @@
     <defName>Goblin_Forager</defName>
     <title>forager</title>
     <titleShort>forager</titleShort>
-    <baseDesc>[PAWN_nameDef] was tasked with foraging through flora gathering food and herbs for [PAWN_possessive] tribe.</baseDesc>
+    <description>[PAWN_nameDef] was tasked with foraging through flora gathering food and herbs for [PAWN_possessive] tribe.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Plants>6</Plants>
@@ -397,7 +483,7 @@
     <defName>Goblin_Poisoner</defName>
     <title>poisoner</title>
     <titleShort>poisoner</titleShort>
-    <baseDesc>[PAWN_nameDef] synthesized poisons from various ingredients. These poisons were applied to all his Faction's weapons to give them an edge in battles.</baseDesc>
+    <description>[PAWN_nameDef] synthesized poisons from various ingredients. These poisons were applied to all his Faction's weapons to give them an edge in battles.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Cooking>6</Cooking>
@@ -407,6 +493,8 @@
 		<li>GoblinAdult</li>
 		<li>Skinhead</li>
 		<li>Antifa</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>     
   
@@ -414,7 +502,7 @@
     <defName>Goblin_Hunter</defName>
     <title>hunter</title>
     <titleShort>hunter</titleShort>
-    <baseDesc>[PAWN_nameDef] went out into the wilds, hunting game to supplement [PAWN_possessive] people's diet.</baseDesc>
+    <description>[PAWN_nameDef] went out into the wilds, hunting game to supplement [PAWN_possessive] people's diet.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Animals>3</Animals>
@@ -422,6 +510,8 @@
     </skillGains>
 	<spawnCategories>
 		<li>GoblinAdult</li>
+		<li>Hunter</li>
+		<li>TribalHunter</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>   
   
@@ -429,10 +519,11 @@
     <defName>Goblin_DarkSlave</defName>
     <title>Slave of the Dark Lord</title>
     <titleShort>dark slave</titleShort>
-    <baseDesc>As has been the fate of many creatures over the millenia, [PAWN_nameDef] was for many years a conscript in the armies of some dark lord or another. [PAWN_pronoun] was forced to fight on the front lines as cannon fodder. It was a miracle that [PAWN_pronoun] survived.</baseDesc>
+    <description>As has been the fate of many creatures over the millenia, [PAWN_nameDef] was for many years a conscript in the armies of some dark lord or another. [PAWN_pronoun] was forced to fight on the front lines as cannon fodder. It was a miracle that [PAWN_pronoun] survived.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Shooting>3</Shooting>
+	  <Melee>5</Melee>
     </skillGains>
     <workDisables>
         <li>Artistic</li>
@@ -443,6 +534,16 @@
 		<li>GoblinAdult</li>
 		<li>Mate</li>
 		<li>Vatgrown</li>
+		<li>VatGrown</li>
+		<li>Slave</li>
+		<li>NewSlave</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
@@ -450,7 +551,7 @@
     <defName>Goblin_DarkOverseer</defName>
     <title>overseer</title>
     <titleShort>slave driver</titleShort>
-    <baseDesc>[PAWN_nameDef] joined the infernal legions of an evil overlord willingly. [PAWN_pronoun] rose through the ranks quickly through ruthless cunning, eventually attaining the highest rank that his servant could earn: Overseer. In this role [PAWN_pronoun] operated by the principle of: 'Where there's a whip, there's a way!'.</baseDesc>
+    <description>[PAWN_nameDef] joined the infernal legions of an evil overlord willingly. [PAWN_pronoun] rose through the ranks quickly through ruthless cunning, eventually attaining the highest rank that his servant could earn: Overseer. In this role, [PAWN_nameDef] operated by the principle of: 'Where there's a whip, there's a way!'.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>5</Melee>
@@ -466,7 +567,7 @@
 					<defName>Psychopath</defName>
 				</li>
 			</options>
-			<chance>999</chance>
+			<chance>100</chance>
 		</li>
 		<li MayRequire="escp.racetools">
 			<options MayRequire="escp.racetools">
@@ -474,7 +575,16 @@
 					<defName MayRequire="escp.racetools">ESCP_Slaver</defName>
 				</li>
 			</options>
-			<chance MayRequire="escp.racetools">999</chance>
+			<chance MayRequire="escp.racetools">100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
 		</li>
     </forcedTraitsChance>
 	<spawnCategories>
@@ -485,6 +595,8 @@
 		<li>Mate</li>
 		<li>GoblinAdult</li>
 		<li>Skinhead</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
@@ -492,7 +604,7 @@
     <defName>Goblin_Banker</defName>
     <title>Goblin Banker</title>
     <titleShort>Goblin Banker</titleShort>
-    <baseDesc>[PAWN_nameDef] made a name for [PAWN_objective] in the financial dealings between goblin clans. He joined the family business when [PAWN_pronoun] reached adulthood, becoming extremely rich in the process.</baseDesc>
+    <description>[PAWN_nameDef] made a name for [PAWN_objective] in the financial dealings between goblin clans. He joined the family business when [PAWN_pronoun] reached adulthood, becoming extremely rich in the process.</description>
     <slot>Adulthood</slot>
     <linkedBackstory>ChildGoblin_Banker</linkedBackstory>
     <skillGains>
@@ -518,7 +630,7 @@
     <defName>Goblin_Weaver</defName>
     <title>weaver</title>
     <titleShort>weaver</titleShort>
-    <baseDesc>[PAWN_nameDef] was in charge of weaving cloth and leather into clothing for [PAWN_possessive] tribe, a task which [PAWN_pronoun] excelled at.</baseDesc>
+    <description>[PAWN_nameDef] was in charge of weaving cloth and leather into clothing for [PAWN_possessive] tribe, a task which [PAWN_pronoun] excelled at.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Crafting>6</Crafting>
@@ -530,15 +642,24 @@
   
   <AlienRace.AlienBackstoryDef ParentName="GoblinBackstories">
     <defName>Goblin_Clown</defName>
-    <title>goblin clown</title>
+    <title>clown</title>
     <titleShort>clown</titleShort>
-    <baseDesc>[PAWN_nameDef] became a clown serving the court of a nobleman. [PAWN_pronoun] was treated horribly- constantly humiliated and belittled by the courtiers and other servants. Eventually [PAWN_pronoun] escaped, but was left with lifelong trauma.</baseDesc>
+    <description>[PAWN_nameDef] was forced to be a clown that served the court of a nobleman. [PAWN_defName] was treated horribly, constantly being humiliated and belittled by the courtiers and other servants. Eventually [PAWN_nameDef] escaped, but was left with lifelong trauma.</description>
     <slot>Adulthood</slot>
     <workDisables>
         <li>Social</li>
     </workDisables>
 	<spawnCategories>
 		<li>GoblinAdult</li>
+		<li>JeubBackstory</li>
+		<li>Jester</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
+		<li>Slave</li>
+		<li>NewSlave</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>      
   
@@ -546,7 +667,7 @@
     <defName>Goblin_Thief</defName>
     <title>thief</title>
     <titleShort>thief</titleShort>
-    <baseDesc>[PAWN_nameDef] made a living as a thief in a city. [PAWN_pronoun] was quite crafty, but eventually the heat became too great and [PAWN_nameDef] had to skip town.</baseDesc>
+    <description>[PAWN_nameDef] made a living as a thief in a city. [PAWN_pronoun] was quite crafty, but eventually the heat became too great and [PAWN_nameDef] had to skip town.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>3</Melee>
@@ -574,13 +695,13 @@
     <defName>Goblin_Warlord</defName>
     <title>Ex-Warlord</title>
     <titleShort>warlord</titleShort>
-    <baseDesc>[PAWN_nameDef] came into control of a powerful goblin horde, power which [PAWN_pronoun] used to launch a vast war of annihilation against the inhabitants of [PAWN_possessive] planet. Many thousands died before [PAWN_pronoun] was eventually defeated.</baseDesc>
+    <description>[PAWN_nameDef] came into control of a powerful goblin horde, power which [PAWN_pronoun] used to launch a vast war of annihilation against the inhabitants of [PAWN_possessive] planet. Many thousands died before [PAWN_pronoun] was eventually defeated.</description>
     <slot>Adulthood</slot>
     <skillGains>
 		<Shooting>3</Shooting>
-      <Melee>8</Melee>
-      <Social>6</Social>
-    </skillGains>
+		<Melee>8</Melee>
+		<Social>6</Social>
+	</skillGains>
 	<forcedTraitsChance>
 		<li>
 			<options>
@@ -593,6 +714,8 @@
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>    
 
@@ -600,7 +723,7 @@
     <defName>Goblin_GobbieRights</defName>
     <title>goblin rights activist</title>
     <titleShort>activist</titleShort>
-    <baseDesc>[PAWN_nameDef] spent [PAWN_possessive] constantly in the shadow of the prejudice against [PAWN_possessive] people felt by many other creatures. As an adult, [PAWN_pronoun] dedicated [PAWN_possessive] life to advocating for the rights of goblins everywhere. [PAWN_nameDef] swore off violence to prove that [PAWN_possessive] people were not all savages.</baseDesc>
+    <description>[PAWN_nameDef] spent [PAWN_possessive] constantly in the shadow of the prejudice against [PAWN_possessive] people felt by many other creatures. As an adult, [PAWN_pronoun] dedicated [PAWN_possessive] life to advocating for the rights of goblins everywhere. [PAWN_nameDef] swore off violence to prove that [PAWN_possessive] people were not all savages.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Social>5</Social>
@@ -627,7 +750,7 @@
     <defName>Goblin_Fanatic</defName>
     <title>fanatical devotee</title>
     <titleShort>fanatic</titleShort>
-    <baseDesc>[PAWN_nameDef] spent years in special brainwashing programs which turned [PAWN_objective] into the perfect, unquestioning, kiling machine for [PAWN_possessive] warlord. [PAWN_pronoun] was sent on numerous suicidal missions, but somehow always survived.</baseDesc>
+    <description>[PAWN_nameDef] spent years in special brainwashing programs which turned [PAWN_objective] into the perfect, unquestioning, kiling machine for [PAWN_possessive] warlord. [PAWN_pronoun] was sent on numerous suicidal missions, but somehow always survived.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>5</Melee>
@@ -649,6 +772,13 @@
 		<li>ESCP_MaormerLeviathanBackstory_Adulthood</li>
 		<li>Skinhead</li>
 		<li>Antifa</li>
+		<li>OwenWilson</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>Vatgrown</li>
+		<li>VatGrown</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>  
 
@@ -656,7 +786,7 @@
     <defName>Goblin_NightHaunter</defName>
     <title>Night Haunter</title>
     <titleShort>Night Haunter</titleShort>
-    <baseDesc>[PAWN_nameDef] lived alone out in the wilds. [PAWN_pronoun] survived by sneaking into the homes of  unsuspecting Pawns during the middle of the night, killing them, and then eating the bodies. [PAWN_possessive] crimes were infamous and [PAWN_nameDef] quickly gained the nickname 'The Night Haunter'.</baseDesc>
+    <description>[PAWN_nameDef] lived alone out in the wilds. [PAWN_pronoun] survived by sneaking into the homes of  unsuspecting Pawns during the middle of the night, killing them, and then eating the bodies. [PAWN_possessive] crimes were infamous and [PAWN_nameDef] quickly gained the nickname 'The Night Haunter'.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>3</Melee>
@@ -697,6 +827,11 @@
 		<li>Madman</li>
 		<li>Mate</li>
 		<li>NightHaunter</li>
+		<li>OwenWilson</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>  
 
@@ -704,7 +839,7 @@
     <defName>Goblin_Deserter</defName>
     <title>deserter</title>
     <titleShort>deserter</titleShort>
-    <baseDesc>After countless meaningless battles in the service of a warlord, [PAWN_nameDef] grew tired of the violence and deserted the army to live a life of peace as a farmer.</baseDesc>
+    <description>After countless meaningless battles in the service of a warlord, [PAWN_nameDef] grew tired of the violence and deserted the army to live a life of peace as a farmer.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Plants>3</Plants>
@@ -718,6 +853,19 @@
 	</relationSettings>
 	<spawnCategories>
 		<li>GoblinAdult</li>
+		<li>Farmer</li>
+		<li>TribalFarmer</li>
+		<li>ESCP_FalmerBackstory_Adulthood</li>
+		<li>ESCP_DunmerBackstory_Adulthood</li>
+		<li>ESCP_AltmerBackstory_Adulthood</li>
+		<li>ESCP_BosmerBackstory_Adulthood</li>
+		<li>ESCP_MaormerLeviathanBackstory_Adulthood</li>
+		<li>ESCP_MaormerBackstory_Adulthood</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>  
 
@@ -726,12 +874,13 @@
     <title>Subterranean Lord</title>
 	<titleFemale>Subterranean Lady</titleFemale>
 	<titleShort>Great Goblin</titleShort>
-    <baseDesc>[PAWN_nameDef] ruled over a subterranean society of near-feral goblins. [PAWN_pronoun] expected constant devotion and service from all [PAWN_possessive] servants and grew prodigiously fat as a result.</baseDesc>
+    <description>[PAWN_nameDef] ruled over a subterranean society of near-feral goblins. [PAWN_pronoun] expected constant devotion and service from all [PAWN_possessive] servants and grew prodigiously fat as a result.</description>
     <slot>Adulthood</slot>
     <bodyTypeGlobal>Fat</bodyTypeGlobal>
     <skillGains>
       <Social>3</Social>
-      <Cooking>1</Cooking>
+      <Cooking>2</Cooking>
+	  <Mining>1</Mining>
     </skillGains>
     <workDisables>
         <li>ManualDumb</li>
@@ -756,6 +905,8 @@
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>  
 
@@ -763,7 +914,7 @@
     <defName>Goblin_TribalHealer</defName>
     <title>tribal healer</title>
     <titleShort>healer</titleShort>
-    <baseDesc>[PAWN_nameDef] gathered herbs and other ingredients for use in various healing concotions that [PAWN_possessive] tribe needed.</baseDesc>
+    <description>[PAWN_nameDef] gathered herbs and other ingredients for use in various healing concotions that [PAWN_possessive] tribe needed.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Cooking>2</Cooking>
@@ -779,7 +930,7 @@
     <defName>Goblin_CityGoblin</defName>
     <title>city goblin</title>
     <titleShort>city goblin</titleShort>
-    <baseDesc>[PAWN_nameDef] made a living in an urban center on [PAWN_possessive] home world. Finding work was tough, but [PAWN_pronoun] was able to find various odd jobs to make ends meet.</baseDesc>
+    <description>[PAWN_nameDef] made a living in an urban center on [PAWN_possessive] home world. Finding work was tough, but [PAWN_pronoun] was able to find various odd jobs to make ends meet.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Cooking>4</Cooking>
@@ -795,13 +946,24 @@
     <defName>Goblin_Weaponsmith</defName>
     <title>Craft Slave</title>
     <titleShort>weaponsmith</titleShort>
-    <baseDesc>[PAWN_nameDef] was enslaved for many years in the vast forges of a Dark Lord, forging thousands upon thousands of blades, clubs, and other weapons for service in [PAWN_possessive] master's never ending war against the freemen of the region.</baseDesc>
+    <description>[PAWN_nameDef] was enslaved for many years in the vast forges of a Dark Lord, forging thousands upon thousands of blades, clubs, and other weapons for service in [PAWN_possessive] master's never ending war against the freemen of the region.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Crafting>7</Crafting>
     </skillGains>
 	<spawnCategories>
 		<li>GoblinAdult</li>
+		<li>OwenWilson</li>
+		<li>Outsider</li>
+		<li>Slave</li>
+		<li>NewSlave</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>ESCP_DunmerSlaveBackstory</li>
+		<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+		<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef> 
 
@@ -809,7 +971,7 @@
     <defName>Goblin_TrophyKeeper</defName>
     <title>Trophy-Keeper</title>
     <titleShort>psychopath</titleShort>
-    <baseDesc>[PAWN_nameDef] fought in many battles, brawls, and general scuffles. Everytime [PAWN_pronoun] killed a foe, [PAWN_pronoun] made a special point of gathering a grisly trophy from the body- an ear, a nose, a finger, and so on. While not a particularly pleasant habit, it did give [PAWN_objective] a bit of knowledge about... anatomy.</baseDesc>
+    <description>[PAWN_nameDef] fought in many battles, brawls, and general scuffles. Everytime [PAWN_pronoun] killed a foe, [PAWN_pronoun] made a special point of gathering a grisly trophy from the body- an ear, a nose, a finger, and so on. While not a particularly pleasant habit, it did give [PAWN_objective] a bit of knowledge about... anatomy.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>4</Melee>
@@ -822,12 +984,17 @@
 					<defName>Psychopath</defName>
 				</li>
 			</options>
-			<chance>999</chance>
+			<chance>100</chance>
 		</li>
     </forcedTraitsChance>
 	<spawnCategories>
 		<li>GoblinAdult</li>
 		<li>Antifa</li>
+		<li>OwenWilson</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
@@ -835,7 +1002,7 @@
     <defName>TSP_ST_DoomsdayGoblin_Child</defName>
     <title>cauldron poisoning psychopath</title>
 	<titleShort>cauldron poisoning</titleShort>
-    <baseDesc>[PAWN_nameDef] was always a creepy child, known for [PAWN_possessive] tendencies to hurt animals out behind the barn. [PAWN_pronoun] was expelled by [PAWN_possessive] society after poisoning the central cauldron, solely to watch the suffering of others. [PAWN_nameDef] lived, but [PAWN_possessive] future victims would not be so lucky.</baseDesc>
+    <description>[PAWN_nameDef] was always a creepy child, known for [PAWN_possessive] tendencies to hurt animals out behind the barn. [PAWN_pronoun] was expelled by [PAWN_possessive] society after poisoning the central cauldron, solely to watch the suffering of others. [PAWN_nameDef] lived, but [PAWN_possessive] future victims would not be so lucky.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Social>-5</Social>
@@ -859,25 +1026,35 @@
 					<defName>Psychopath</defName>
 				</li>
 			</options>
-			<chance>999</chance>
+			<chance>100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
 		</li>
     </forcedTraitsChance>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
 	</relationSettings>
-	<disallowedTraitsChance>
-		<li>
-			<defName>BodyPurist</defName>
-		</li>
-		<li>
-			<defName>Kind</defName>
-		</li>
-	</disallowedTraitsChance>
+	<disallowedTraits>
+		<BodyPurist>0</BodyPurist>
+		<Kind>0</Kind>
+	</disallowedTraits>
 	<spawnCategories Inherit="False">
 		<li>GoblinDoomsday</li>
 		<li>GoblinDoomsday_Child</li>
 		<li>Sadist</li>
+		<li>OwenWilson</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
 	</spawnCategories>
 	<linkedBackstory>TSP_ST_DoomsdayGoblin_Adult</linkedBackstory>
   </AlienRace.AlienBackstoryDef>
@@ -886,7 +1063,7 @@
     <defName>TSP_ST_DoomsdayGoblin_Adult</defName>
     <title>evil toxicologist</title>
 	<titleShort>mad toxicologist</titleShort>
-    <baseDesc>[PAWN_nameDef] ventured out and joined unethical "scientists", where he came to master the art of poison, engaged in torture and maddened experiments, and more. [PAWN_pronoun] would regularly harvest the organs of "patients" or inject the "patients" with poison to see how it effects them. [PAWN_nameDef] became proficient in wielding poison as a weapon, too.</baseDesc>
+    <description>[PAWN_nameDef] ventured out and joined unethical "scientists", where he came to master the art of poison, engaged in torture and maddened experiments, and more. [PAWN_pronoun] would regularly harvest the organs of "patients" or inject the "patients" with poison to see how it effects them. [PAWN_nameDef] became proficient in wielding poison as a weapon, too.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Crafting>4</Crafting>
@@ -912,18 +1089,21 @@
 			</options>
 			<chance>100</chance>
 		</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
     </forcedTraitsChance>
-	<disallowedTraitsChance>
-		<li>
-			<defName>Brawler</defName>
-		</li>
-		<li>
-			<defName>Kind</defName>
-		</li>
-		<li>
-			<defName>BodyPurist</defName>
-		</li>
-	</disallowedTraitsChance>
+	<disallowedTraits>
+		<Brawler>0</Brawler>
+		<Kind>0</Kind>
+		<BodyPurist>0</BodyPurist>
+	</disallowedTraits>
 	<relationSettings>
 		<relationChanceModifierParent>0</relationChanceModifierParent>
 		<relationChanceModifierSibling>0</relationChanceModifierSibling>     
@@ -933,6 +1113,11 @@
 		<li>GoblinDoomsday</li>
 		<li>GoblinDoomsday_Adult</li>
 		<li>Sadist</li>
+		<li>OwenWilson</li>
+		<li>Cult</li>
+		<li>Horaxian</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Adulthood</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
 </Defs>

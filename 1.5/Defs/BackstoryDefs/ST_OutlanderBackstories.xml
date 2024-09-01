@@ -13,7 +13,7 @@
 		<slot>Adulthood</slot>
 		<title>Bowling Champion</title>
 		<titleShort>bowler</titleShort>
-		<baseDesc>[PAWN_nameDef] was known far and wide for being the best bowler in [PAWN_possessive] homeland. [PAWN_pronoun] was considered the peak of athleticism by [PAWN_possessive] peers.</baseDesc>
+		<description>[PAWN_nameDef] was known far and wide for being the best bowler in [PAWN_possessive] homeland. [PAWN_pronoun] was considered the peak of athleticism by [PAWN_possessive] peers.</description>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<requiredWorkTags>
@@ -33,10 +33,20 @@
 				</options>
 				<chance>100</chance>
 			</li>
+			<li>
+				<options>
+					<li>
+						<defName>ST_FillerDummy_Trait</defName>
+					</li>
+				</options>
+				<!-- <count>1</count> -->
+				<chance>0</chance>
+			</li>
 		</forcedTraitsChance>
 		<spawnCategories>
 			<li>Offworld</li>
 			<li>Outlander</li>
+			<li>OwenWilson</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 	
@@ -45,7 +55,7 @@
 		<slot>Childhood</slot>
 		<title>Petty Criminal</title>
 		<titleShort>petty criminal</titleShort>
-		<baseDesc>Growing up, [PAWN_nameDef] spent [PAWN_possessive] time constantly committing heinous crimes such as going sixty-seven miles per hour (107.83 KMPH) in a forty-five mile per hour (72.42 KMPH) zone. Despite being a psychopath, he never actually saw the need to commit any serious crimes. Petty ones were just too fun!</baseDesc>
+		<description>Growing up, [PAWN_nameDef] spent [PAWN_possessive] time constantly committing heinous crimes such as going sixty-seven miles per hour (107.83 KMPH) in a forty-five mile per hour (72.42 KMPH) zone. Despite being a psychopath, he never actually saw the need to commit any serious crimes. Petty ones were just too fun!</description>
 		<bodyTypeGlobal>Fat</bodyTypeGlobal>
 		<workDisables>
 			<li>Intellectual</li>
@@ -66,14 +76,10 @@
 				<chance>100</chance>
 			</li>
 		</forcedTraitsChance>
-		<disallowedTraitsChance>
-			<li>
-				<defName>Bloodlust</defName>
-			</li>
-			<li>
-				<defName>Cannibal</defName>
-			</li>
-		</disallowedTraitsChance>
+		<disallowedTraits>
+			<Bloodlust>0</Bloodlust>
+			<Cannibal>0</Cannibal>
+		</disallowedTraits>
 		<spawnCategories>
 			<li>Offworld</li>
 			<li>Outlander</li>
@@ -83,6 +89,7 @@
 			<li>TTancon_Military</li>
 			<li>Outsider</li>
 			<li>PirateBackstory</li>
+			<li>WoodBeetJoe</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 	
@@ -91,7 +98,7 @@
 		<slot>Childhood</slot>
 		<title>Smart Kid</title>
 		<titleShort>gifted</titleShort>
-		<baseDesc>[PAWN_nameDef] was considered one of the smartest kids in [PAWN_possessive] village. This constant lavishing of praise had strange effects on [PAWN_possessive] ego.</baseDesc>
+		<description>[PAWN_nameDef] was considered one of the smartest kids in [PAWN_possessive] village. This constant lavishing of praise had strange effects on [PAWN_possessive] ego.</description>
 		<requiredWorkTags>
 			<li>Intellectual</li>
 		</requiredWorkTags>
@@ -108,6 +115,15 @@
 				</options>
 				<chance>100</chance>
 			</li>
+			<li>
+				<options>
+					<li>
+						<defName>ST_FillerDummy_Trait</defName>
+					</li>
+				</options>
+				<!-- <count>1</count> -->
+				<chance>0</chance>
+			</li>
 		</forcedTraitsChance>
 		<spawnCategories>
 			<li>Outlander</li>
@@ -116,6 +132,8 @@
 			<li>Medieval</li>
 			<li>MedievalPeasant</li>
 			<li>Classical</li>
+			<li>OwenWilson</li>
+			<li>WoodBeetJoe</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 	
@@ -124,7 +142,7 @@
 		<slot>Adulthood</slot>
 		<title>Frog Rancher</title>
 		<titleShort>frog rancher</titleShort>
-		<baseDesc>The marvels of genetic engineering across the galaxy has created specialized frogs capable of almost any task or livestock niche. Naturally, this led to entire ranches dedicated to amphibian husbandry, even among low-tech societies. [PAWN_nameDef] was such a rancher, owning and operating a ranch specializing in frogs. [PAWN_pronoun] raised many different species of frog, including some of the more exotic ones.</baseDesc>
+		<description>The marvels of genetic engineering across the galaxy has created specialized frogs capable of almost any task or livestock niche. Naturally, this led to entire ranches dedicated to amphibian husbandry, even among low-tech societies. [PAWN_nameDef] was such a rancher, owning and operating a ranch specializing in frogs. [PAWN_pronoun] raised many different species of frog, including some of the more exotic ones.</description>
 		<skillGains>
 			  <Animals>6</Animals>
 		</skillGains>

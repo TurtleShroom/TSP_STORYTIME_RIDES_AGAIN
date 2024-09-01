@@ -280,6 +280,7 @@
 			<meatMarketValue>0.8</meatMarketValue>
 			<manhunterOnDamageChance>1</manhunterOnDamageChance>
 			<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+			<knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
 			<litterSizeCurve Inherit="False">
 				<!-- how many babies are made unused in vanilla for humanlikes -->
 				<points>
@@ -293,15 +294,26 @@
 			</litterSizeCurve>
 				<!-- These affect stats and if your Race is ready to Lay eggs or be milked if you set that up in the LifeStage, it also determins when your Race is Sexualy Mature and can Reproduce which is not used by Humanlikes in Vanilla -->
 			<lifeStageAges Inherit="False">
-                <li Inherit="False">
-					<def>FrogPersonBabyStage</def>
+				<li Inherit="False">
+					<def>HumanlikeBaby</def>
 					<minAge>0</minAge>
+				</li>
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
+					<def>FrogPersonBabyStage</def>
+					<minAge>0.001</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
 					<soundCall>Pawn_Iguana_Call</soundCall>
 					<soundAngry>Frog_Angry</soundAngry>
 				</li>
-                <li Inherit="False">
+				<li Inherit="False">
+					<def>HumanlikeChild</def>
+					<minAge>0.9999</minAge>
+					<soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
+					<soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
+					<soundAngry>TSP_BulborbSqueal</soundAngry>
+				</li>
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
 					<def>FrogPersonChildStage</def>
 					<minAge>1</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
@@ -309,7 +321,23 @@
 					<soundCall>Pawn_Iguana_Call</soundCall>
 					<soundAngry>Frog_Angry</soundAngry>
 				</li>
-                <li Inherit="False">
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+					<def>HumanlikePreTeenager</def>
+					<minAge>11.999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+				<li Inherit="False">
+					<def>HumanlikeTeenager</def>
+					<minAge>11.9999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
 					<def>FrogPersonTeenStage</def>
 					<minAge>12</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
@@ -319,23 +347,23 @@
 				</li>
                 <li Inherit="False">
 					<def>HumanlikeAdult</def>
-					<minAge>17.999</minAge>
+					<minAge>14</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
 					<soundCall>Pawn_Iguana_Call</soundCall>
 					<soundAngry>Frog_Angry</soundAngry>
 				</li>
-                <li Inherit="False">
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
 					<def>FrogPersonAdultStage</def>
-					<minAge>17.9999</minAge>
+					<minAge>14.001</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
 					<soundCall>Pawn_Iguana_Call</soundCall>
 					<soundAngry>Frog_Angry</soundAngry>
 				</li>
-                <li Inherit="False">
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
 					<def>forgChild</def>
-					<minAge>18</minAge>
+					<minAge>14.003</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
 					<soundCall>Pawn_Iguana_Call</soundCall>

@@ -9,6 +9,7 @@
 				<maleGenderProbability>0.55</maleGenderProbability>
 				<immuneToAge>false</immuneToAge>
 				<canLayDown>true</canLayDown>
+				<allowHumanBios>true</allowHumanBios>
 				<forcedRaceTraitEntries>
 					<li>
 						<options>
@@ -26,6 +27,15 @@
 							</li>
 						</options>
 						<chance MayRequire="morishep.tarojun.onioftherim">50</chance>
+					</li>
+					<li>
+						<options>
+							<li>
+								<defName>ST_FillerDummy_Trait</defName>
+							</li>
+						</options>
+						<!-- <count>1</count> -->
+						<chance>0</chance>
 					</li>
 				</forcedRaceTraitEntries>
 				<maxDamageForSocialfight>1</maxDamageForSocialfight>
@@ -356,21 +366,21 @@
 					<li>(1, 0.01)</li>
 					<li>(1.01, 1)</li>
 					<li>(2, 0.5)</li>
-					<li>(3.5, 0)</li>
+					<li>(3.5, 0.1)</li>
 				</points>
 			</litterSizeCurve>
-			<lifeStageAges>
+			<lifeStageAges Inherit="False">
 				<li>
 					<def>HumanlikeBaby</def>
 					<minAge>0</minAge>
 				</li>
 				<li>
 					<def>HumanlikeChild</def>
-					<minAge>3</minAge>
+					<minAge>2</minAge>
 				</li>
 				<li MayRequire="Ludeon.Rimworld.Biotech">
 					<def>HumanlikePreTeenager</def>
-					<minAge>6</minAge>
+					<minAge>7</minAge>
 				</li>
 				<li>
 					<def>HumanlikeTeenager</def>

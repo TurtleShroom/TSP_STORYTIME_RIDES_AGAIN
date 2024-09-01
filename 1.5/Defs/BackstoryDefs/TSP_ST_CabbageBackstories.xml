@@ -9,7 +9,7 @@
 		<slot>Childhood</slot>
 		<title>Enlightened Cabbage Farmer</title>
 		<titleShort>cabbage farmer</titleShort>
-		<baseDesc>[PAWN_nameDef] grew up as a farmer and developed a fascination for the cabbage plant. When [PAWN_nameDef] accidentally discovered the Cabbage of Power, [PAWN_possessive] life changed forever.</baseDesc>
+		<description>[PAWN_nameDef] grew up as a farmer and developed a fascination for the cabbage plant. When [PAWN_nameDef] accidentally discovered the Cabbage of Power, [PAWN_possessive] life changed forever.</description>
 		<requiredWorkTags>
 			<li>Violent</li>
 			<li>PlantWork</li>
@@ -19,17 +19,16 @@
 			<Crafting>2</Crafting>
 			<Cooking>1</Cooking>
 		</skillGains>
+		<!--
 		<forcedTraitsChance>
-			<!--
 			<li>
 				<options>
 					<li>
 						<defName Degree="1">ShootingAccuracy</defName>
 					</li>
 				</options>
-				<change>0</change>
+				<change>10</change>
 			</li>
-			-->
 			<li>
 				<options>
 					<li>
@@ -39,6 +38,7 @@
 				<chance>0</chance>
 			</li>
 		</forcedTraitsChance>
+		-->
 		<spawnCategories>
 			<li>Cabbage</li>
 		</spawnCategories>
@@ -53,7 +53,7 @@
 		<slot>Adulthood</slot>
 		<title>Cabbage of Power Grenadier</title>
 		<titleShort>cabbage grenadier</titleShort>
-		<baseDesc>[PAWN_nameDef] has mastered the art of lobbing Cabbage of Power grenades. [PAWN_possessive] ability to throw grenades with deadly precision is unmatched, though it takes [PAWN_possessive] a bit longer to aim. [PAWN_pronoun] is considered a special forces warrior for [PAWN_possessive] Faction. To hone [PAWN_possessive] power, [PAWN_pronoun] will not distract [PAWN_objective]self with any physical labor, nor perform most menial tasks.</baseDesc>
+		<description>[PAWN_nameDef] has mastered the art of lobbing Cabbage of Power grenades. [PAWN_possessive] ability to throw grenades with deadly precision is unmatched, though it takes [PAWN_possessive] a bit longer to aim. [PAWN_pronoun] is considered a special forces warrior for [PAWN_possessive] Faction. To hone [PAWN_possessive] power, [PAWN_pronoun] will not distract [PAWN_objective]self with any physical labor, nor perform most menial tasks.</description>
 		<linkedBackstory>TSP_ST_Backstory_CabbagePatchKid</linkedBackstory>
 		<requiredWorkTags>
 			<li>Violent</li>
@@ -73,6 +73,15 @@
 				</options>
 				<chance>100</chance>
 			</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
 		</forcedTraitsChance>
 		<spawnCategories>
 			<li>Cabbage</li>

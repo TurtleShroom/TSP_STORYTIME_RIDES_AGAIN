@@ -37,9 +37,13 @@
     <fixedName>Tribes of the Frogmen</fixedName>
     <settlementNameMaker>FrogPersonSettlementName</settlementNameMaker>
     <techLevel>Neolithic</techLevel>
-    <backstoryCategories>
-      <li>FrogPersonBackstory</li>
-    </backstoryCategories>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>FrogPersonBackstory</li>
+			</categories>
+		</li>
+    </backstoryFilters>
     <!-- <geneticVariance>0.8</geneticVariance> -->
     <raidLootMaker>PirateRaidLootMaker</raidLootMaker>
     <caravanTraderKinds>
@@ -127,7 +131,7 @@
       </li>
       <li>
         <kindDef>Combat</kindDef>
-		<commonality>0.8</commonality>
+		<commonality>0.908</commonality>
         <options>
 			<PoisonDartFrog>150</PoisonDartFrog>	
 			<BudgettFrog>150</BudgettFrog>
@@ -246,8 +250,8 @@
 		  <FrogPersonWarrior>0.1</FrogPersonWarrior>
           <PoisonDartFrog>20</PoisonDartFrog>
 		  <FireBelliedToad>5</FireBelliedToad>
-		  <ForgPawnKindDef>100</ForgPawnKindDef>
-		  <DuoPawnKindDef>100</DuoPawnKindDef>
+		  <ForgPawnKindDef>120</ForgPawnKindDef>
+		  <DuoPawnKindDef>120</DuoPawnKindDef>
 		  <Frug MayRequire="crazedmonkey231.frug">1</Frug>
         </options>
       </li>
@@ -295,7 +299,7 @@
 		<commonality>0.5</commonality>
         <traders>
           <TSP_TwoForgsInTrenchcoat_Merchant>3</TSP_TwoForgsInTrenchcoat_Merchant>
-		  <TSP_ForgMerchant>1</TSP_ForgMerchant>
+		  <TSP_ForgMerchant>2.75</TSP_ForgMerchant>
         </traders>
         <carriers>
           <LeviathanFrog>999</LeviathanFrog>
@@ -404,13 +408,18 @@
 				<li>TemperateSwamp</li>
 				<li>TropicalSwamp</li>
 				<li>TropicalRainforest</li>
-				<li>froggySwamp</li>
+				<li MayRequire="TSP.Isengriff.BiomeSplit">froggySwamp</li>
 				<li MayRequire="SirMashedPotato.MorrowRim.ashswamp">MorrowRim_AshSwamp</li>
 				<li MayRequire="comigogames.biomes.greaterswamps">COMIGO_GreaterSwamp_Cold</li>
 				<li MayRequire="comigogames.biomes.greaterswamps">COMIGO_GreaterSwamp_Temperate</li>
 				<li MayRequire="comigogames.biomes.greaterswamps">COMIGO_GreaterSwamp_Tropical</li>
 				<li MayRequire="mlie.advancedbiomes">PoisonForest</li>
 				<li MayRequire="ironscruff.primordialgeysers">IronScruff_PrimordialGeysers</li>
+				<li MayRequire="sarg.alphabiomes">AB_MiasmicMangrove</li>
+				<li MayRequire="zylle.morevanillabiomes">ZBiome_Marsh</li>
+				<li MayRequire="zylle.morevanillabiomes">ZBiome_CoastalDunes</li>
+				<li MayRequire="zylle.morevanillabiomes">ZBiome_Sandbar_NoBeach</li> <!-- Estuary -->
+				<li MayRequire="mlie.advancedbiomes">Wetland</li>
 			</allowedBiomes>					
 		</li>
 	</modExtensions>

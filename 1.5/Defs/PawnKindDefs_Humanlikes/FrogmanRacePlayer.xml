@@ -2,10 +2,14 @@
 <Defs>
   <PawnKindDef Abstract="True" Name="BasePlayerFrogPersonPawnKind">
     <race>Alien_FrogPerson</race>
-    <backstoryCategories Inherit="False">
-      <li>FrogPersonBackstory</li>
-	  <li>InsectRelated</li>
-    </backstoryCategories>
+    <backstoryFilters Inherit="False">
+		<li>
+			<categories>
+				<li>FrogPersonBackstory</li>
+				<li>InsectRelated</li>
+			</categories>
+		</li>
+    </backstoryFilters>
     <!-- <baseRecruitDifficulty>0.5</baseRecruitDifficulty> -->
     <isFighter>false</isFighter>
     <apparelIgnoreSeasons>true</apparelIgnoreSeasons>

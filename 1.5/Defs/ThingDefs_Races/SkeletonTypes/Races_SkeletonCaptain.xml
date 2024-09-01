@@ -3,16 +3,17 @@
   <ThingDef ParentName="BaseSkeleton">
     <defName>ST_SkeletonCaptain</defName>
     <label>Skeleton Captain</label>
-    <description>This skeleton was once a local charter's captain in a Pirate Faction who willingly exchanged their souls in exchange for the ability to plunder for all of time. As in life, he still possesses his extraordinary power, intellect, and combat prowess.</description>
+    <description>This skeleton was once a local charter's captain in a Pirate Faction crew, who willingly exchanged their souls in exchange for the ability to plunder for all of time. As in life, he still possesses his extraordinary power, intellect, and combat prowess.</description>
     <statBases>
       <MoveSpeed>4</MoveSpeed>
-      <MarketValue>600</MarketValue>
+      <MarketValue>2600</MarketValue>
 	  <Flammability>0</Flammability>
 	  <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
 	  <MeatAmount Inherit="False">150</MeatAmount>
 	  <HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">1.1</HSAU_SoulRendSensitivity> <!-- The captain's power is immense and terrifying. -->
 	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_SanctusSensitivity>
+	  <MinimumContainmentStrength MayRequire="ludeon.rimworld.anomaly">85</MinimumContainmentStrength>
     </statBases>
     <tools>
       <li>
@@ -21,7 +22,7 @@
           <li>Blunt</li>
 		  <li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
         </capacities>
-        <power>14</power>
+        <power>24</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
       </li>
@@ -31,7 +32,7 @@
           <li>Blunt</li>
 		  <li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
         </capacities>
-        <power>14</power>
+        <power>24</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
       </li>
@@ -77,17 +78,39 @@
 	  <!-- <deathActionWorkerClass>TorannMagic.DeathWorker_Skeletal</deathActionWorkerClass> -->
       <baseBodySize>2</baseBodySize>
       <baseHungerRate>0</baseHungerRate>
-      <baseHealthScale>3</baseHealthScale>
+      <baseHealthScale>4</baseHealthScale>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
-	
 	<butcherProducts Inherit="False">
 		<BoneItem MayRequire="sihv.rombones">206</BoneItem>
 		<ST_PirateHat>1</ST_PirateHat>
-		<ST_KrakenRum>15</ST_KrakenRum>
+		<ST_KrakenRum>35</ST_KrakenRum>
 	</butcherProducts>
+	<comps Inherit="False">
+		<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<hediffname>HedSTUndead</hediffname>
+			<hediffseverity>1</hediffseverity>
+		</li>
+		<li Class="AnimalBehaviours.CompProperties_Draftable">
+			<makeNonFleeingToo>true</makeNonFleeingToo>
+		</li>
+		<li Class="CompProperties_ProducesBioferrite" MayRequire="ludeon.rimworld.anomaly">
+			<bioferriteDensity>2</bioferriteDensity>
+		</li>
+		<li Class="CompProperties_Studiable" MayRequire="ludeon.rimworld.anomaly">
+			<frequencyTicks>100000</frequencyTicks>
+			<knowledgeCategory>Advanced</knowledgeCategory>
+			<anomalyKnowledge>4</anomalyKnowledge>
+			<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+			<requiresHoldingPlatform>true</requiresHoldingPlatform>
+		</li>
+		<li Class="CompProperties_HoldingPlatformTarget" MayRequire="ludeon.rimworld.anomaly">
+			<baseEscapeIntervalMtbDays>20</baseEscapeIntervalMtbDays>
+			<lookForTargetOnEscape>true</lookForTargetOnEscape>
+		</li>
+	</comps>
   </ThingDef>
   
   <PawnKindDef ParentName="BaseSkeletonKind">
@@ -137,7 +160,7 @@
 		<projectile>
 			<damageDef>Thump</damageDef>
 			<damageAmountBase>18</damageAmountBase>
-			<stoppingPower>5</stoppingPower>
+			<stoppingPower>25</stoppingPower>
 			<speed>75</speed>
 		</projectile>
   </ThingDef>

@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
   <AlienRace.AlienBackstoryDef Name="BeanBackstories" Abstract="True">
 	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
 	<!--
-    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeMale>Hulk</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
 	-->
+	<disallowedTraits>
+		<BodyPurist>0</BodyPurist>
+	</disallowedTraits>
 	<spawnCategories>
       <li>BeanManBackstory</li>
     </spawnCategories>
@@ -15,7 +19,7 @@
     <defName>BeanMan</defName>
     <title>Ascended Bulborb</title>
 	<titleShort>Bean Man</titleShort>
-    <baseDesc>[PAWN_nameDef] was a Bulborb that was granted sapience in a Bean Pit, like all of [PAWN_possessive] kind.</baseDesc>
+    <description>[PAWN_nameDef] was a Bulborb that was granted sapience in a Bean Pit, like all of [PAWN_possessive] kind.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Social>-4</Social>
@@ -25,28 +29,34 @@
 		<li>
 			<options>
 				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+		<li>
+			<options>
+				<li>
 					<defName>BeanMan</defName>
 				</li>
 			</options>
+			<count>1</count>
 			<chance>100</chance>
 		</li>
     </forcedTraitsChance>
-	<disallowedTraitsChance>
-		<li>
-			<defName>BodyPurist</defName>
-		</li>
-	</disallowedTraitsChance>
 	<spawnCategories>
 		<li>BeanManChildEye</li>
+		<li>BeanGuardian</li>
 	</spawnCategories>
-	<linkedBackstory>BeanManAdult</linkedBackstory>
+	<!-- <linkedBackstory>BeanManAdult</linkedBackstory> -->
   </AlienRace.AlienBackstoryDef>
   
   <AlienRace.AlienBackstoryDef ParentName="BeanBackstories">
     <defName>BeanManAdult</defName>
     <title>Bean Man</title>
 	<titleShort>Bean Man</titleShort>
-    <baseDesc>[PAWN_nameDef] is a Bean Man. Formerly an ordinary Bulborb, [PAWN_nameDef] was granted sapience at birth by the miraculous implantation of bean-based Glitter World technology.</baseDesc>
+    <description>[PAWN_nameDef] is a Bean Man. Formerly an ordinary Bulborb, [PAWN_nameDef] was granted sapience at birth by the miraculous implantation of bean-based Glitter World technology.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Plants>4</Plants>
@@ -59,25 +69,24 @@
 				<defName>BeanMan</defName>
 			</li>
 		</options>
+		<count>1</count>
 		<chance>100</chance>
       </li>
     </forcedTraitsChance>
-	<disallowedTraitsChance>
-		<li>
-			<defName>BodyPurist</defName>
-		</li>
-	</disallowedTraitsChance>
-	<linkedBackstory>BeanMan</linkedBackstory>
+	<disallowedTraits>
+		<BodyPurist>0</BodyPurist>
+	</disallowedTraits>
+	<!-- <linkedBackstory>BeanMan</linkedBackstory> -->
 	<spawnCategories>
 		<li>BeanManAdult</li>
 	</spawnCategories>
   </AlienRace.AlienBackstoryDef>
   
-	<AlienRace.AlienBackstoryDef MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+	<AlienRace.AlienBackstoryDef>
 		<defName>TSP_VFERA_BeanMan_Archon</defName>
 		<title>Archotech Bulborb</title>
 		<titleShort>Archon Bean Man</titleShort>
-		<baseDesc>The transcendance of Glitter Worlds allowed for Archotechs to capture the technology for making sapient Bulborbs. [PAWN_nameDef] was such a Bulborb, empowered by the legendary might of the Archons beyond that which a normal Bean Pit could ever produce.</baseDesc>
+		<description>The transcendance of Glitter Worlds allowed for Archotechs to capture the technology for making sapient Bulborbs. [PAWN_nameDef] was such a Bulborb, empowered by the legendary might of the Archons beyond that which a normal Bean Pit could ever produce.</description>
 		<slot>Childhood</slot> <!-- Uses Archon Mod Adulthood Backstories -->
 		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
 		<skillGains>
@@ -94,17 +103,14 @@
 						<defName>BeanMan</defName>
 					</li>
 				</options>
+				<count>1</count>
 				<chance>100</chance>
 			</li>
 		</forcedTraitsChance>
-		<disallowedTraitsChance>
-			<li>
-				<defName>BodyPurist</defName>
-			</li>
-			<li>
-				<defName>Kind</defName>
-			</li>
-		</disallowedTraitsChance>
+		<disallowedTraits>
+			<BodyPurist>0</BodyPurist>
+			<Kind>0</Kind>
+		</disallowedTraits>
 		<spawnCategories>
 			<li>TSP_ArchonBulborb_ChildEye</li>
 		</spawnCategories>

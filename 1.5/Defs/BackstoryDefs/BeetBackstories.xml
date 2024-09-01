@@ -14,7 +14,7 @@
     <defName>BeetHerderChild</defName>
     <title>Young Herdsman</title>
 	<titleShort>herdsman</titleShort>
-    <baseDesc>[PAWN_nameDef] helped herd the livestock that lived on his family's homestead. It was a lonely upbringing.</baseDesc>
+    <description>[PAWN_nameDef] helped herd the livestock that lived on his family's homestead. It was a lonely upbringing.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Social>-3</Social>
@@ -34,7 +34,7 @@
     <defName>BeetFisherChild</defName>
     <title>Young Fisherman</title>
 	<titleShort>fisherman</titleShort>
-    <baseDesc>[PAWN_nameDef] lived in town and helped catch fish. Everybody liked [PAWN_pronoun] when  landed a big one.</baseDesc>
+    <description>[PAWN_nameDef] lived in town and helped catch fish. Everybody liked [PAWN_pronoun] when  landed a big one.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Social>6</Social>
@@ -48,6 +48,7 @@
 					<defName>ST_FillerDummy_Trait</defName>
 				</li>
 			</options>
+			<!-- <count>1</count> -->
 			<chance>0</chance>
 		</li>
 		<li MayRequire="VanillaExpanded.VCEF">
@@ -85,7 +86,7 @@
     <title>Schoolboy</title>
 	<titleFemale>Schoolgirl</titleFemale>
 	<titleShort>student</titleShort>
-    <baseDesc>[PAWN_nameDef]'s family was well off enough that [PAWN_pronoun] was able to attend school instead of helping out around the house.</baseDesc>
+    <description>[PAWN_nameDef]'s family was well off enough that [PAWN_pronoun] was able to attend school instead of helping out around the house.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Intellectual>6</Intellectual>
@@ -101,7 +102,7 @@
     <defName>BeetCulturalExchange</defName>
     <title>Exchange Student</title>
 	<titleShort>exchange victim</titleShort>
-    <baseDesc>[PAWN_nameDef] joined a program of cultural exchange with their savage wood beet cousins. This ended poorly.</baseDesc>
+    <description>[PAWN_nameDef] joined a program of cultural exchange with their savage wood beet cousins. This ended poorly.</description>
     <slot>Childhood</slot>
     <skillGains>
       <Melee>3</Melee>
@@ -111,9 +112,19 @@
 		<li>
 			<options>
 				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+		<li>
+			<options>
+				<li>
 					<defName Degree="2">DrugDesire</defName>
 				</li>
 			</options>
+			<count>1</count>
 			<chance>100</chance>
 		</li>
     </forcedTraitsChance>
@@ -126,7 +137,7 @@
     <defName>BeetFarmer</defName>
     <title>Beet Farmer</title>
 	<titleShort>beet farmer</titleShort>
-    <baseDesc>[PAWN_nameDef] quietly farmed beets. Not the sapient kind, though.</baseDesc>
+    <description>[PAWN_nameDef] quietly farmed beets. Not the sapient kind, though.</description>
     <slot>Adulthood</slot>
     <skillGains>
 	  <Plants>5</Plants>
@@ -147,7 +158,7 @@
     <defName>BeetShaman</defName>
     <title>Beet Shaman</title>
 	<titleShort>shaman</titleShort>
-    <baseDesc>[PAWN_nameDef] was a member of the elite group who communed with the spirits of nature.</baseDesc>
+    <description>[PAWN_nameDef] was a member of the elite group who communed with the spirits of nature.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Social>6</Social>
@@ -159,7 +170,7 @@
     <defName>BeetGuard</defName>
     <title>Guardsman</title>
 	<titleShort>guardsman</titleShort>
-    <baseDesc>[PAWN_nameDef] worked as a guard in one of his Faction's local realms, protecting the citizenry from pirates and drunkards.</baseDesc>
+    <description>[PAWN_nameDef] worked as a guard in one of his Faction's local realms, protecting the citizenry from pirates and drunkards.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Melee>6</Melee>
@@ -171,7 +182,7 @@
 		<defName>BeetAlcoholic</defName>
 		<title>Vicious Drunkard</title>
 		<titleShort>drunkard</titleShort>
-		<baseDesc>[PAWN_nameDef] can't stop drinking alcohol. This has made [PAWN_objective] violent and dangerous to society.</baseDesc>
+		<description>[PAWN_nameDef] can't stop drinking alcohol. This has made [PAWN_objective] violent and dangerous to society.</description>
 		<slot>Adulthood</slot>
 		<skillGains>
 		  <Social>-6</Social>
@@ -188,6 +199,15 @@
 				<change>100</change>
 			</li>
 			-->
+			<li>
+				<options>
+					<li>
+						<defName>ST_FillerDummy_Trait</defName>
+					</li>
+				</options>
+				<!-- <count>1</count> -->
+				<chance>0</chance>
+			</li>
 			<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
 				<options MayRequire="vanillaexpanded.vanillatraitsexpanded">
 					<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
@@ -219,9 +239,7 @@
 		  <li>Intellectual</li>
 		  <li>ManualSkilled</li>
 		</workDisables>
-		<disallowedTraitsChance>
-			<!-- <DrugDesire>0</DrugDesire> -->
-		</disallowedTraitsChance>
+		<disallowedTraits></disallowedTraits>
 		<spawnCategories>
 		  <li>WoodBeetBackstory</li>
 		  <li>Outsider</li>
@@ -249,7 +267,7 @@
 		<title>Beet Emperor</title>
 		<titleFemale>Beet Empress</titleFemale>
 		<titleShort>Beet Emperor</titleShort>
-		<baseDesc>Thanks to [PAWN_possessive] spectacular military prowess, [PAWN_nameDef] somehow managed to become the ruler of a great Beetnikh realm. Considering how stupid [PAWN_pronoun] is at governing, [PAWN_pronoun] cannot do it alone. [PAWN_nameDef] is surrounded by a host of advisors that do most of the peacetime work.</baseDesc>
+		<description>Thanks to [PAWN_possessive] spectacular military prowess, [PAWN_nameDef] somehow managed to become the ruler of a great Beetnikh realm. Considering how stupid [PAWN_pronoun] is at governing, [PAWN_pronoun] cannot do it alone. [PAWN_nameDef] is surrounded by a host of advisors that do most of the peacetime work.</description>
 		<slot>Adulthood</slot>
 		<skillGains Inherit="False">
 		  <Melee>12</Melee>
@@ -278,7 +296,7 @@
     <defName>BeetHerder</defName>
     <title>Beet Shepherd</title>
 	<titleShort>shepherd</titleShort>
-    <baseDesc>[PAWN_nameDef] herded sheep around his ancestral homestead. It was boring.</baseDesc>
+    <description>[PAWN_nameDef] herded sheep around his ancestral homestead. It was boring.</description>
     <slot>Adulthood</slot>
     <skillGains>
 	  <Social>-5</Social>
@@ -291,7 +309,7 @@
     <defName>BeetTownsperson</defName>
     <title>Beet Townsman</title>
 	<titleShort>townsman</titleShort>
-    <baseDesc>[PAWN_nameDef] lived with other Beets in a small village, doing various odd tasks for pay.</baseDesc>
+    <description>[PAWN_nameDef] lived with other Beets in a small village, doing various odd tasks for pay.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Construction>2</Construction>
@@ -299,5 +317,4 @@
 	  <Cooking>2</Cooking>
     </skillGains>
   </AlienRace.AlienBackstoryDef>
-
 </Defs>

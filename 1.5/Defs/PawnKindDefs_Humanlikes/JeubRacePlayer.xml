@@ -7,11 +7,16 @@
 	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 	<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
 	<maxGenerationAge>35</maxGenerationAge>
-    <backstoryCategories>
-      <li>JeubBackstory</li>
-	  <li>Madman</li>
-	  <li>Vatgrown</li>
-    </backstoryCategories>
+	<backstoryFilters>
+		<li>
+			<categories>
+				<li>JeubBackstory</li>
+				<li>Madman</li>
+				<li>Vatgrown</li>
+				<li>VatGrown</li>
+			</categories>
+		</li>
+	</backstoryFilters>
 	<invFoodDef>Pemmican</invFoodDef>
     <!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
     <isFighter>false</isFighter>
@@ -19,6 +24,7 @@
 	<apparelTags>
 		<li>JeubWear</li>
 		<li>School_Thai</li>
+		<li>SchoolThai</li>
 	</apparelTags>
 	<modExtensions>
 		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
@@ -38,9 +44,13 @@
     <chemicalAddictionChance>0.12</chemicalAddictionChance>
 	<isFighter>true</isFighter>
 	<combatPower>75</combatPower>
-    <backstoryCategories>
-      <li>JeubBackstory</li>
-    </backstoryCategories>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>JeubBackstory</li>
+			</categories>
+		</li>
+    </backstoryFilters>
     <apparelMoney>
       <min>700</min>
       <max>2000</max>
@@ -93,6 +103,14 @@
     <chemicalAddictionChance>0.5</chemicalAddictionChance>
 	<minGenerationAge>23</minGenerationAge> <!-- Prevents bug when Children are allowed to spawn in V1.3 via Mods causing the trade caravan to pump out massive errors -->
 	<maxGenerationAge>39</maxGenerationAge>
+	<backstoryFilters>
+		<li>
+			<categoriesChildhood>
+				<li>ImperialNoble</li>
+				<li>ImperialFighter</li>
+			</categoriesChildhood>
+		</li>
+	</backstoryFilters>
     <apparelTags>
 		<li>JeubWear</li>
 		<li>Tribal</li>
@@ -186,12 +204,14 @@
     <initialResistanceRange>3~10</initialResistanceRange>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="BasePlayerJeubPawnKind">
+  <PawnKindDef>
     <defName>TSP_ST_JeubCabbageinator</defName>
     <label>cabbage grenadier</label>
+	<race>Alien_Jeub</race>
     <combatPower>90</combatPower>
-    <chemicalAddictionChance>0.15</chemicalAddictionChance>
+    <chemicalAddictionChance>0.35</chemicalAddictionChance>
 	<isFighter>true</isFighter>
+	<forceNormalGearQuality>true</forceNormalGearQuality>
     <apparelMoney>
       <min>100</min>
       <max>1750</max>
@@ -209,7 +229,7 @@
 		<li>Western</li>
     </apparelTags>
 	<weaponMoney>
-         <min>5000</min>
+         <min>7500</min>
          <max>20000</max>
     </weaponMoney>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
@@ -220,15 +240,19 @@
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <techHediffsChance>0.2</techHediffsChance>
+    <techHediffsChance>0.12</techHediffsChance>
 	<weaponTags Inherit="False">
 		<li>CabbageWarrior</li>
     </weaponTags>
     <initialWillRange>1~8</initialWillRange>
     <initialResistanceRange>5~40</initialResistanceRange>
-    <backstoryCategories Inherit="False">
-		<li>Cabbage</li>
-    </backstoryCategories>
+    <backstoryFiltersOverride Inherit="False">
+		<li>
+			<categories>
+				<li>Cabbage</li>
+			</categories>
+		</li>
+    </backstoryFiltersOverride>
 	<destroyGearOnDrop>true</destroyGearOnDrop>
   </PawnKindDef>
 </Defs>

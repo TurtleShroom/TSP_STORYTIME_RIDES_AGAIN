@@ -6,10 +6,13 @@
 		<slot>Childhood</slot>
 		<title>Aspiring Geologist</title>
 		<titleShort>rock lover</titleShort>
-		<baseDesc>For as long as [PAWN_pronoun] can remember, [PAWN_nameDef] was fascinated by rocks. [PAWN_pronoun] would collect rocks wherever [PAWN_pronoun] went and even travelled to other Biomes as a teenager. [PAWN_possessive] favorite rocks, however, were the sapient ones.</baseDesc>
+		<description>For as long as [PAWN_pronoun] can remember, [PAWN_nameDef] was fascinated by rocks. [PAWN_pronoun] would collect rocks wherever [PAWN_pronoun] went and even travelled to other Biomes as a teenager. [PAWN_possessive] favorite rocks, however, were the moving ones.</description>
 		<skillGains>
 			<Mining>4</Mining>
 		</skillGains>
+		<spawnCategories>
+			<li>OwenWilson</li>
+		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
 	
 	<AlienRace.AlienBackstoryDef ParentName="STOutlanderBackstories">
@@ -17,7 +20,7 @@
 		<slot>Adulthood</slot>
 		<title>Modern Major Geologist</title>
 		<titleShort>master geologist</titleShort>
-		<baseDesc>[PAWN_nameDef] was passsionate about geology; [PAWN_pronoun] spent years learning the way of the rock. Once [PAWN_pronoun] had achieved full mastery, [PAWN_nameDef] decided to share [PAWN_possessive] wisdom by becoming a circuit teacher, travelling across the Rim to teach geology. [PAWN_possessive] mining training was among the best on the planet.</baseDesc>
+		<description>[PAWN_nameDef] was passsionate about geology; [PAWN_pronoun] spent years learning the way of the rock. Once [PAWN_pronoun] had achieved full mastery, [PAWN_nameDef] decided to share [PAWN_possessive] wisdom by becoming a circuit teacher, travelling across the Rim to teach geology. [PAWN_possessive] mining training was among the best on the planet.</description>
 		<skillGains>
 			  <Mining>9</Mining>
 			  <Intellectual>6</Intellectual>
@@ -39,6 +42,15 @@
 				</options>
 				<chance>100</chance>
 			</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
 		</forcedTraitsChance>
 	</AlienRace.AlienBackstoryDef>
 </Defs>

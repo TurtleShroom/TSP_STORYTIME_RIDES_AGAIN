@@ -315,6 +315,7 @@
 		  <baseHealthScale>0.9</baseHealthScale>
 		  <foodType>OmnivoreRoughAnimal, Meal, Processed, Fluid, Liquor, Kibble</foodType>
 		  <gestationPeriodDays>10</gestationPeriodDays>
+		  <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
 		  <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>
@@ -327,9 +328,13 @@
 			</points>
 		  </litterSizeCurve>
 			<lifeStageAges Inherit="False">
-                <li Inherit="False">
-					<def>FrogPersonBabyStage</def>
+				<li Inherit="False">
+					<def>HumanlikeBaby</def>
 					<minAge>0</minAge>
+				</li>
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
+					<def>FrogPersonBabyStage</def>
+					<minAge>0.001</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
 					<soundCall>Pawn_Iguana_Call</soundCall>
@@ -337,13 +342,13 @@
 				</li>
                 <li Inherit="False">
 					<def>HumanlikeChild</def>
-					<minAge>0.999</minAge>
+					<minAge>0.9999</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
 					<soundCall>Pawn_Iguana_Call</soundCall>
 					<soundAngry>Frog_Angry</soundAngry>
 				</li>
-                <li Inherit="False">
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
 					<def>FrogPersonChildStage</def>
 					<minAge>1</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
@@ -354,12 +359,20 @@
 				<li MayRequire="Ludeon.RimWorld.Biotech">
 					<def>HumanlikePreTeenager</def>
 					<minAge>11.999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
 				</li>
-				<li MayRequire="Ludeon.RimWorld.Biotech">
+				<li Inherit="False">
 					<def>HumanlikeTeenager</def>
 					<minAge>11.9999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
 				</li>
-                <li Inherit="False">
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
 					<def>FrogPersonTeenStage</def>
 					<minAge>12</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
@@ -375,7 +388,7 @@
 					<soundCall>Pawn_Iguana_Call</soundCall>
 					<soundAngry>Frog_Angry</soundAngry>
 				</li>
-                <li Inherit="False">
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
 					<def>FrogPersonAdultStage</def>
 					<minAge>17.9999</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>

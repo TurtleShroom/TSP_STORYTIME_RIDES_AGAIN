@@ -20,9 +20,13 @@
 			</blackGeneList>
 			<blackGeneTags MayRequire="Ludeon.RimWorld.Biotech">
 				<li>BodyType</li>
+				<li>Body</li>
+				<li>Bodies</li>
 				<li>HairColor</li>
+				<!--
 				<li>SkinColorOverride</li>
 				<li>SkinColor</li>
+				-->
 				<li>Ears</li>
 				<li>Melanin</li>
 				<li>BeardStyle</li>
@@ -30,11 +34,14 @@
 				<li>HairStyle</li>
 				<li>AG_Gestation</li>
 				<li>AG_Fertility</li>
+				<li>AG_Body</li>
+				<li>AG_BodyType</li>
+				<li>AG_Bodies</li>
 				<li>Head</li>
 				<li>AG_Heads</li>
 				<li>Reproduction</li>
 				<li>Fertility</li>
-				<!-- <li>Fur</li> -->
+				<li>Fur</li>
 			</blackGeneTags>
 			<blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
 				<li>Ears</li>
@@ -42,7 +49,7 @@
 				<li>Jaw</li>
 				<li>Head</li>
 				<li>BodyType</li>
-				<li>Melanin</li>
+				<!-- <li>Melanin</li> -->
 			</blackEndoCategories>
 			<onlyHaveRaceRestrictedGenes MayRequire="ludeon.rimworld.biotech">false</onlyHaveRaceRestrictedGenes>
 			<whiteGeneList MayRequire="ludeon.rimworld.biotech">
@@ -101,20 +108,22 @@
 			<immuneToXenophobia>true</immuneToXenophobia>
 			<immuneToAge>false</immuneToAge>
 			<canLayDown>true</canLayDown>
+			<allowHumanBios>false</allowHumanBios>
 			<forcedRaceTraitEntries>
-			  <li>
-				<options>
-					<li>
-						<defName>BeanMan</defName>
-					</li>
-				</options>
-				<count>1</count>
-				<chance>999</chance>
-			  </li>
+				<li>
+					<defName>BeanMan</defName>
+					<chance>999</chance>
+				</li>
 			</forcedRaceTraitEntries>
 			<humanRecipeImport>true</humanRecipeImport>
 			<maxDamageForSocialfight>1</maxDamageForSocialfight>
 			<minAgeForAdulthood>0</minAgeForAdulthood>
+			<growthAges>
+				<li>0.1</li>
+				<li>1</li>
+				<li>2</li>
+				<li>25</li>
+			</growthAges>
 			<alienPartGenerator>
 			  <headTypes Inherit="False">
 				<li>BeanMan_Narrow_Normal</li>
@@ -195,12 +204,15 @@
 						<li>Damage</li>
 					</prioritization>
 					-->
-					<gene For="VRE_Transcendent" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+					<Backstory For="TSP_VFERA_BeanMan_Archon" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 						<path MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">Things/Pawn/Humanlike/BeanMan/ArchonBulborb/Body/Leatherskin_Child</path>
-					</gene>
-					<gene For="VRE_Leatherskin" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+					</Backstory>
+					<Gene For="VRE_Transcendent" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 						<path MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">Things/Pawn/Humanlike/BeanMan/ArchonBulborb/Body/Leatherskin_Child</path>
-					</gene>
+					</Gene>
+					<Gene For="VRE_Leatherskin" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
+						<path MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">Things/Pawn/Humanlike/BeanMan/ArchonBulborb/Body/Leatherskin_Child</path>
+					</Gene>
 					<BodyType For="ST_BulborbBlack">
 						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbBlack</path>
 					</BodyType>
@@ -495,7 +507,8 @@
 		  <!-- VegetarianRoughAnimal makes them eat grass. Grass doesn't dissappear after so it's super unbalanced-->
 		  <foodType>OmnivoreHuman, OmnivoreAnimal, CarnivoreAnimal, CarnivoreAnimalStrict, VegetarianRoughAnimal, Processed, Meal, Fluid, Meat, Corpse, Seed, Liquor, Plant, Fungus, VegetableOrFruit, Kibble</foodType>
 		  <!-- Actually, grass DOES disappear when eaten, I tested it -->
-		  <gestationPeriodDays>65</gestationPeriodDays>
+		  <gestationPeriodDays>965</gestationPeriodDays>
+		  <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
 		  <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>
@@ -505,28 +518,56 @@
 			</points>
 		  </litterSizeCurve>
 		  <lifeStageAges Inherit="False">
-			<li>
+			<li Inherit="False">
+				<def>HumanlikeBaby</def>
+				<minAge>0</minAge>
+				<soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
+				<soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
+				<soundAngry>TSP_BulborbSqueal</soundAngry>
+			</li>
+			<li Class="AlienRace.LifeStageAgeAlien">
 			  <def>BeanManBabyStage</def>
-			  <minAge>0</minAge>
+			  <minAge>0.001</minAge>
 			  <soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
 			  <soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
 			  <soundAngry>TSP_BulborbSqueal</soundAngry>
 			</li>
-			<li>
+			<li Inherit="False">
+				<def>HumanlikeChild</def>
+				<minAge>0.0999</minAge>
+				<soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
+				<soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
+				<soundAngry>TSP_BulborbSqueal</soundAngry>
+			</li>
+			<li Class="AlienRace.LifeStageAgeAlien">
 			  <def>BeanManChildStage</def>
 			  <minAge>0.1</minAge>
 			  <soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
 			  <soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
 			  <soundAngry>TSP_BulborbSqueal</soundAngry>
 			</li>
-			<li>
+			<li Inherit="False">
+				<def>HumanlikeTeenager</def>
+				<minAge>0.1999</minAge>
+				<soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
+				<soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
+				<soundAngry>TSP_BulborbSqueal</soundAngry>
+			</li>
+			<li Class="AlienRace.LifeStageAgeAlien">
 			  <def>BeanManTeenStage</def>
 			  <minAge>0.2</minAge>
 			  <soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
 			  <soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
 			  <soundAngry>TSP_BulborbSqueal</soundAngry>
 			</li>
-			<li>
+			<li Inherit="False">
+				<def>HumanlikeAdult</def>
+				<minAge>1.1999</minAge>
+				<soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
+				<soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
+				<soundAngry>TSP_BulborbSqueal</soundAngry>
+			</li>
+			<li Class="AlienRace.LifeStageAgeAlien">
 			  <def>BeanManAdultStage</def>
 			  <minAge>1.2</minAge>
 			  <soundWounded>TSP_BulborbSqueal</soundWounded>
@@ -534,7 +575,7 @@
 			  <soundCall>TSP_BulborbCall</soundCall>
 			  <soundAngry>TSP_BulborbSnort</soundAngry>
 			</li>
-			<li>
+			<li Class="AlienRace.LifeStageAgeAlien">
 			  <def>BeanManMatureAdultStage</def>
 			  <minAge>25</minAge>
 			  <soundWounded>TSP_BulborbSqueal</soundWounded>
@@ -542,7 +583,7 @@
 			  <soundCall>TSP_BulborbCall</soundCall>
 			  <soundAngry>TSP_BulborbSnort</soundAngry>
 			</li>
-			<li>
+			<li Class="AlienRace.LifeStageAgeAlien">
 				<def>TSP_ST_BeanManElderStage</def>
 				<minAge>50</minAge>
 				<soundWounded>TSP_BulborbSqueal</soundWounded>
@@ -550,7 +591,7 @@
 				<soundCall>TSP_BulborbCall</soundCall>
 				<soundAngry>TSP_BulborbSnort</soundAngry>
 			</li>
-			<li>
+			<li Class="AlienRace.LifeStageAgeAlien">
 				<def>TSP_ST_BeanManSuperElderStage</def>
 				<minAge>75</minAge>
 				<soundWounded>TSP_BulborbSqueal</soundWounded>
@@ -558,7 +599,7 @@
 				<soundCall>TSP_BulborbCall</soundCall>
 				<soundAngry>TSP_BulborbSnort</soundAngry>
 			</li>
-			<li>
+			<li Class="AlienRace.LifeStageAgeAlien">
 				<def>TSP_ST_BeanManMiyamoto</def>
 				<minAge>101</minAge>
 				<soundWounded>TSP_BulborbSqueal</soundWounded>
@@ -600,10 +641,27 @@
 		  <ageGenerationCurve>
 			<points>
 			  <li>(0,0)</li>
+			  <li>(1,0)</li>
+			  <li>(2,90)</li>
+			  <li>(3,90)</li>
+			  <li>(4,90)</li>
+			  <li>(5,90)</li>
+			  <li>(6,90)</li>
+			  <li>(7,90)</li>
 			  <li>(8,90)</li>
-			  <li>(30,24)</li>
-			  <li>(80,00)</li>
+			  <li>(30,4)</li>
+			  <li>(80,0.5)</li>
+			  <li>(100,0.021)</li>
+			  <li>(101,0.1)</li>
+			  <li>(119,0)</li>
+			  <li>(120,0)</li>
 			  <li>(130,0)</li>
+			  <li>(300,0)</li>
+			  <li>(500,0)</li>
+			  <li>(1000,0)</li>
+			  <li>(2500,0)</li>
+			  <li>(5000,0)</li>
+			  <li>(10000,0)</li>
 			</points>
 		  </ageGenerationCurve>
 		  <hediffGiverSets>
@@ -656,6 +714,14 @@
 			</li>
 			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
 				<hediffname>HedBeanMan</hediffname>
+			</li>
+			<li Class="CompProperties_Studiable" MayRequire="Ludeon.RimWorld.Anomaly">
+				<frequencyTicks>130000</frequencyTicks>
+				<knowledgeCategory>Basic</knowledgeCategory>
+				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+				<anomalyKnowledge>0.75</anomalyKnowledge>
+				<requiresHoldingPlatform>false</requiresHoldingPlatform>
+				<requiresImprisonment>true</requiresImprisonment>
 			</li>
 		</comps>
 		<modExtensions>

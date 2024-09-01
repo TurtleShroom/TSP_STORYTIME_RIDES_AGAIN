@@ -3,11 +3,15 @@
 <Defs>
 	<PawnKindDef Abstract="True" Name="BasePlayerGnomePawnKind">
 		<race>Alien_Gnome</race>
-		<backstoryCategories>
-			<li>Farmer</li>
-			<li>TribalFarmer</li>
-			<li>GnomeBackstory</li>
-		</backstoryCategories>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Farmer</li>
+					<li>TribalFarmer</li>
+					<li>GnomeBackstory</li>
+				</categories>
+			</li>
+		</backstoryFilters>
 		<!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
 		<isFighter>false</isFighter>
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
@@ -55,10 +59,10 @@
     <defName>PlayerGnome</defName>
     <label>Gnome colonist</label>
 	<!--
-	<backstoryCategories>
+	<backstoryFilters>
 		<li>Farmer</li>
 		<li>GnomeBackstory</li>
-	</backstoryCategories>
+	</backstoryFilters>
 	-->
     <combatPower>50</combatPower>
     <!-- <defaultFactionType>PlayerColony</defaultFactionType> -->
@@ -267,9 +271,10 @@
 		<initialResistanceRange>5~20</initialResistanceRange>
 	</PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerGnomePawnKind">
+  <PawnKindDef>
     <defName>TSP_ST_GnomeCabbageinator</defName>
     <label>cabbage grenadier</label>
+	<race>Alien_Gnome</race>
 	<isFighter>true</isFighter>
     <combatPower>250</combatPower>
     <chemicalAddictionChance>0.1</chemicalAddictionChance>
@@ -302,16 +307,21 @@
     </weaponTags>
     <initialWillRange>1~8</initialWillRange>
     <initialResistanceRange>7~40</initialResistanceRange>
-    <backstoryCategories Inherit="False">
-      <li>Cabbage</li>
-    </backstoryCategories>
+    <backstoryFiltersOverride Inherit="False">
+		<li>
+			<categories>
+				<li>Cabbage</li>
+			</categories>
+		</li>
+    </backstoryFiltersOverride>
 	<destroyGearOnDrop>true</destroyGearOnDrop>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerGnomePawnKind">
+  <PawnKindDef>
     <defName>GnomeKing</defName>
     <label>Gnoble King</label>
 	<labelFemale>Gnoble Queen</labelFemale>
+	<race>Alien_Gnome</race>
 	<combatPower>80</combatPower>
     <defaultFactionType>TreeGnomeEmpire</defaultFactionType>
     <factionLeader>true</factionLeader>
@@ -387,9 +397,20 @@
     </weaponTags>
     <initialWillRange>0.5~6</initialWillRange>
     <initialResistanceRange>15~60</initialResistanceRange>
-    <backstoryCategories Inherit="False">
-      <li>GnobleBackstory</li>
-    </backstoryCategories>
+    <backstoryFiltersOverride Inherit="False">
+		<li>
+			<categoriesChildhood>
+				<li>GnobleBackstory</li>
+				<li>ImperialNoble</li>
+				<li>ImperialRoyal</li>
+			</categoriesChildhood>
+		</li>
+		<li>
+			<categoriesAdulthood>
+				<li>GnobleBackstory</li>
+			</categoriesAdulthood>
+		</li>
+    </backstoryFiltersOverride>
   </PawnKindDef>
   
 	<PawnKindDef>
@@ -400,9 +421,13 @@
 		<combatPower>10</combatPower>
 		<!-- <defaultFactionType>TreeGnomeEmpire</defaultFactionType> -->
 		<apparelIgnoreSeasons Inherit="False">true</apparelIgnoreSeasons>
-		<backstoryCategories Inherit="False">
-			<li Inherit="False">GnomeBackstory</li>
-		</backstoryCategories>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categories>
+					<li Inherit="False">GnomeBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
 		<apparelMoney Inherit="False"> <!-- They wear nothing else but the apparel below -->
 			<min Inherit="False">99999</min>

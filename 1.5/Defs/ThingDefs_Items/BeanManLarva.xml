@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Defs>
 
+<Defs>
 	<ThingDef ParentName="ResourceBase">
 		<defName>BeanManLarva</defName>
 		<label>Bean Man Larva</label>
@@ -45,6 +45,14 @@
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
+			</li>
+			<li Class="CompProperties_Studiable" MayRequire="Ludeon.RimWorld.Anomaly">
+				<frequencyTicks>130000</frequencyTicks>
+				<knowledgeCategory>Basic</knowledgeCategory>
+				<minMonolithLevelForStudy>0</minMonolithLevelForStudy>
+				<anomalyKnowledge>1</anomalyKnowledge>
+				<requiresHoldingPlatform>false</requiresHoldingPlatform>
+				<requiresImprisonment>false</requiresImprisonment>
 			</li>
 		</comps>
 		<thingSetMakerTags>

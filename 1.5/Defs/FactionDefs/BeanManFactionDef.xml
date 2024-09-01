@@ -36,9 +36,13 @@
     <factionNameMaker>NamerFactionBeanMan</factionNameMaker>
     <settlementNameMaker>BeanSettlementName</settlementNameMaker>
     <techLevel>Industrial</techLevel>
-    <backstoryCategories>
-      <li>BeanManBackstory</li>
-    </backstoryCategories>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>BeanManBackstory</li>
+			</categories>
+		</li>
+    </backstoryFilters>
 	<allowedCultures>
 		<li>ST_BeanManCulture</li>
 	</allowedCultures>
@@ -64,8 +68,8 @@
       <min>-999</min>
       <max>999</max>
     </allowedArrivalTemperatureRange>
-    <xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
-      <xenotypeChances MayRequire="ludeon.rimworld.biotech">
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
         <VRE_Archon MayRequire="vanillaracesexpanded.archon,ludeon.rimworld.biotech">0.04</VRE_Archon>
       </xenotypeChances>
     </xenotypeSet>
@@ -181,8 +185,10 @@
     </pawnGroupMakers>
     <settlementTexturePath>Achievements/beanManAchievement</settlementTexturePath>
 	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+	<!--
     <fixedLeaderKinds>
       <li>BeanManLeader</li>
     </fixedLeaderKinds>
+	-->
   </FactionDef>
 </Defs>
