@@ -95,13 +95,16 @@
 			<preferability>RawTasty</preferability>
 			<foodType>Meat, OmnivoreAnimal, CarnivoreAnimal, CarnivoreAnimalStrict, Corpse</foodType>
 		</ingestible>
-		<comps Inherit="False">
-		</comps>
 		<tradeability>Sellable</tradeability>
 		<thingCategories>
 			<li>MeatRaw</li>
 			<li MayRequire="vanillaexpanded.vcooke" Inherit="False">VCE_Condiments</li> <!-- Gourmet ingredients! -->
 		</thingCategories>
+		<comps Inherit="False">
+			<li Class="RedConsumingHemogenics.RedConsumingHemogenics_RedItemProperty" MayRequire="sealandball.biotech.redconsuminghemogenics">
+				<isRed MayRequire="sealandball.biotech.redconsuminghemogenics">true</isRed>
+			</li>
+		</comps>
 		<tradeTags Inherit="False">
 			<li>JohnBorpaSteak</li>
 			<li>ExoticMisc</li>

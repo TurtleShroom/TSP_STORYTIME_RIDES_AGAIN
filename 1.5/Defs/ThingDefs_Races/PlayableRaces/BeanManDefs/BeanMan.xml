@@ -112,16 +112,16 @@
 			<forcedRaceTraitEntries>
 				<li>
 					<defName>BeanMan</defName>
-					<chance>999</chance>
 				</li>
 			</forcedRaceTraitEntries>
 			<humanRecipeImport>true</humanRecipeImport>
 			<maxDamageForSocialfight>1</maxDamageForSocialfight>
 			<minAgeForAdulthood>0</minAgeForAdulthood>
 			<growthAges>
-				<li>0.1</li>
+				<!-- <li>0.1</li> -->
 				<li>1</li>
 				<li>2</li>
+				<li>10</li>
 				<li>25</li>
 			</growthAges>
 			<alienPartGenerator>
@@ -135,6 +135,8 @@
 				<li>Hulk</li>
 				<li>Female</li>
 				-->
+				<li MayRequire="Ludeon.Rimworld.Biotech">Baby</li>
+				<li MayRequire="Ludeon.Rimworld.Biotech">Child</li>
 				<li>Male</li>
 				<li>ST_BulborbBlack</li>
 				<li>ST_BulborbBlue</li>
@@ -255,11 +257,11 @@
 					<BodyType For="ST_BulborbWhiptongue">
 						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_ST_BulborbWhiptongue</path>
 					</BodyType>
-					<BodyType For="Baby">
-						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
+					<BodyType For="Baby" MayRequire="Ludeon.Rimworld.Biotech">
+						<path MayRequire="Ludeon.Rimworld.Biotech">Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
 					</BodyType>
-					<BodyType For="Child">
-						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
+					<BodyType For="Child" MayRequire="Ludeon.Rimworld.Biotech">
+						<path MayRequire="Ludeon.Rimworld.Biotech">Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
 					</BodyType>
 					<BodyType For="Thin">
 						<path>Things/Pawn/Humanlike/BeanMan/Body/Naked_Thin</path>
