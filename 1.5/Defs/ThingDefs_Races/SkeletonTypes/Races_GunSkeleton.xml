@@ -8,6 +8,7 @@
       <MoveSpeed>3.0</MoveSpeed>
       <MarketValue>250</MarketValue>
 	  <Flammability>0.5</Flammability>
+	  <MinimumContainmentStrength MayRequire="ludeon.rimworld.anomaly">30</MinimumContainmentStrength>
     </statBases>
     <tools>
       <li>
@@ -74,8 +75,20 @@
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
+      <li MayRequire="ludeon.rimworld.anomaly">
+        <label>Gun Skeleton Pirate</label>
+        <labelPlural>Gun Skeleton Pirates</labelPlural>
+        <bodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Other/Skeletons/GunSkeleton/GunSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Other/Skeletons/GunSkeleton/GunSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
     </lifeStages>
-	<weaponMoney>150~15000</weaponMoney>
+	<weaponMoney>275~15000</weaponMoney>
 	<weaponTags>
 		<li>SkeletonCrypto</li>
 		<li>CryptoRanged</li>

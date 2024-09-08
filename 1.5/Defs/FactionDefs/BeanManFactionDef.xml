@@ -40,6 +40,7 @@
 		<li>
 			<categories>
 				<li>BeanManBackstory</li>
+				<li>BeanManChildEye</li>
 			</categories>
 		</li>
     </backstoryFilters>
@@ -100,10 +101,20 @@
     <pawnGroupMakers>
       <li>
         <kindDef>Peaceful</kindDef>
+		<commonality>100</commonality>
         <options>
           <BeanManGuard>1000</BeanManGuard>
 		  <BeanManTrader>1</BeanManTrader>
 		  <TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</TSP_VFERA_ARCHON_BULBORB>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+		<commonality>40</commonality>
+        <options>
+		  <BeanManTrader>25</BeanManTrader>
+		  <TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">100</TSP_VFERA_ARCHON_BULBORB>
+		  <BeanManLeader>20</BeanManLeader>
         </options>
       </li>
       <li>
@@ -174,6 +185,7 @@
       </li>
       <li>
         <kindDef>Settlement</kindDef>
+		<commonality>100</commonality>
         <options>
           <BeanManGuard>200</BeanManGuard>
 		  <BeanManLeader>100</BeanManLeader>
@@ -182,13 +194,22 @@
 		  <TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">11</TSP_VFERA_ARCHON_BULBORB>
         </options>
       </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+		<commonality>25</commonality>
+        <options>
+          <BeanManGuard>1</BeanManGuard>
+		  <BeanManLeader>50</BeanManLeader>
+		  <DaneDachshund>50</DaneDachshund>
+		  <LongBoi MayRequire="overpl.longboi">50</LongBoi>
+		  <TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">110</TSP_VFERA_ARCHON_BULBORB>
+        </options>
+      </li>
     </pawnGroupMakers>
     <settlementTexturePath>Achievements/beanManAchievement</settlementTexturePath>
 	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
-	<!--
-    <fixedLeaderKinds>
-      <li>BeanManLeader</li>
-    </fixedLeaderKinds>
-	-->
+	<fixedLeaderKinds>
+		<li>BeanManLeader</li>
+	</fixedLeaderKinds>
   </FactionDef>
 </Defs>

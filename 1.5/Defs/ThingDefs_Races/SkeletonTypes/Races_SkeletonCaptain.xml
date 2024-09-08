@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
   <ThingDef ParentName="BaseSkeleton">
     <defName>ST_SkeletonCaptain</defName>
@@ -132,8 +133,20 @@
           <drawSize>3.05</drawSize>
         </dessicatedBodyGraphicData>
       </li>
+      <li MayRequire="ludeon.rimworld.anomaly">
+        <label>Skeleton Captain</label>
+        <labelPlural>Skeleton Captains</labelPlural>
+        <bodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Other/Skeletons/SkeletonCaptain/SkeletonCaptain</texPath>
+          <drawSize>2.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Humanlike/Apparel/PirateClothing/Tricorn/Tricorn</texPath>
+          <drawSize>3.05</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
     </lifeStages>
-	<weaponMoney>3000~12000</weaponMoney>
+	<weaponMoney>13000~22000</weaponMoney>
 	<weaponTags>
 		<li>SkeletonCaptain</li>
 		<li>IndustrialRangedHeavy</li>
@@ -164,5 +177,4 @@
 			<speed>75</speed>
 		</projectile>
   </ThingDef>
-  
 </Defs>
