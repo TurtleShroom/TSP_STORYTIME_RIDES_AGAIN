@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
-	<Operation Class="PatchOperationConditional">
+	<Operation Class="PatchOperationConditional" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 	<!-- Does this exist? -->
 	<xpath>/Defs/ThingDef[defName="Chi_CiYao"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationAddModExtension">
 			<xpath>/Defs/ThingDef[defName="Chi_Ciyao"]</xpath>
 			<value>
-				<li Class="RecipeInheritance.ThingDefExtension">
-					<inheritRecipesFrom>
-						<li>BlastFurnaceHeater</li>
+				<li Class="RecipeInheritance.ThingDefExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<inheritRecipesFrom MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+						<li MayRequire="oskarpotocki.vanillafactionsexpanded.core">BlastFurnaceHeater</li>
 					</inheritRecipesFrom>
 				</li>
 			</value>

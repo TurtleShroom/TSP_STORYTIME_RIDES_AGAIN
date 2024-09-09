@@ -1,6 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="EggBullfrog"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="EggBullfrog"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 	<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
@@ -100,16 +114,16 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
 			<value>
-				<li Class="AnimalBehaviours.AnimalStatExtension">
-					<statToAdd>
+				<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 						<li>ST_FrogRole</li>
-						<li>ST_FrogRarity</li>					
+						<li>ST_FrogRarity</li>
 					</statToAdd>
-					<statValues>
+					<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 						<li>TSP_ST_FrogNormal</li>
-						<li>ST_FrogCommon</li>					
+						<li>ST_FrogCommon</li>
 					</statValues>
-					<statDescriptions>
+					<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 						<li>TSP_ST_FrogNormalDesc</li>
 						<li>ST_FrogCommonDesc</li>
 					</statDescriptions>
@@ -120,15 +134,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="EggBullfrog"]</xpath>
+		<xpath>/Defs/ThingDef[defName="EggBullfrog"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="EggBullfrog"]</xpath>
+			<xpath>/Defs/ThingDef[defName="EggBullfrog"]/tradeTags</xpath>
 			<value>
-				<tradeTags>
-					<li>FertilizedFrogEgg</li>
-				</tradeTags>
+				<li>FertilizedFrogEgg</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

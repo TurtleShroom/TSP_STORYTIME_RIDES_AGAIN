@@ -379,10 +379,10 @@
 				<tomatoIntervalDays>1</tomatoIntervalDays>
 				<tomatoAmount>5</tomatoAmount>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<hediffname>Hediff_CoconutFrog</hediffname>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef">
+			<li Class="AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<needsDiggableTerrain>true</needsDiggableTerrain>
 				<gizmoImage>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</gizmoImage>
 				<gizmoLabel>ST_WoodFrog_CommandLabel</gizmoLabel>
@@ -391,22 +391,22 @@
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>
-					<li>ST_FrogRarity</li>					
+					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogFoodProduction</li>
 					<li>ST_MeleeTank</li>
-					<li>ST_FrogRare</li>					
+					<li>ST_FrogRare</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogProductionDesc</li>
 					<li>ST_MeleeTankDesc</li>
 					<li>ST_FrogRareDesc</li>
-				</statDescriptions>				
+				</statDescriptions>
 			</li>
 		</modExtensions>
 	</ThingDef>

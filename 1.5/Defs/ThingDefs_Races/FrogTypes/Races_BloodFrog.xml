@@ -60,7 +60,7 @@
 			<tomatoAmount MayRequire="ludeon.rimworld.biotech">1</tomatoAmount>
 		</li>
 		<!-- These frogs are so fragile that the player should be allowed to intervene at any time to move them. -->
-		<li Class="AnimalBehaviours.CompProperties_Draftable">
+		<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<makeNonFleeingToo>true</makeNonFleeingToo>
 		</li>
     </comps>
@@ -368,19 +368,19 @@
 		<li MayRequire="baskerville.hellsingarmsultimate" Inherit="False">HSAU_Operation_ExtractBlood</li>
 	</recipes>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
-					<li>ST_FrogRarity</li>					
+					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogExplosive</li>
-					<li>ST_FrogRare</li>					
+					<li>ST_FrogRare</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogExplosiveDesc</li>
 					<li>ST_FrogRareDesc</li>
-				</statDescriptions>				
+				</statDescriptions>
 			</li>
 		</modExtensions>
   </ThingDef>

@@ -1,6 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="AA_Barbslinger"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="AA_Barbslinger"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 	<xpath>/Defs/ThingDef[defName="AEXP_Rattlesnake"]</xpath>
@@ -9,7 +23,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="AEXP_Rattlesnake"]/comps</xpath>
 			<value>
-				<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<resourceDef>ST_PoisonExtract</resourceDef>
 					<gatheringIntervalDays>2</gatheringIntervalDays>
 					<resourceAmount>5</resourceAmount>
@@ -28,7 +42,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="AEXP_Megascorpion"]/comps</xpath>
 			<value>
-				<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<resourceDef>ST_PoisonExtract</resourceDef>
 					<gatheringIntervalDays>2</gatheringIntervalDays>
 					<resourceAmount>5</resourceAmount>
@@ -47,7 +61,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="AEXP_Megascorpion"]/comps</xpath>
 			<value>
-				<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<resourceDef>ST_PoisonExtract</resourceDef>
 					<gatheringIntervalDays>2</gatheringIntervalDays>
 					<resourceAmount>5</resourceAmount>
@@ -66,7 +80,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Cobra"]/comps</xpath>
 			<value>
-				<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<resourceDef>ST_PoisonExtract</resourceDef>
 					<gatheringIntervalDays>2</gatheringIntervalDays>
 					<resourceAmount>5</resourceAmount>
@@ -85,7 +99,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="AA_RedSpore"]/comps</xpath>
 			<value>
-				<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<resourceDef>ST_PoisonExtract</resourceDef>
 					<gatheringIntervalDays>2</gatheringIntervalDays>
 					<resourceAmount>5</resourceAmount>
@@ -104,7 +118,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="AA_BedBug"]/comps</xpath>
 			<value>
-				<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<resourceDef>ST_PoisonExtract</resourceDef>
 					<gatheringIntervalDays>2</gatheringIntervalDays>
 					<resourceAmount>5</resourceAmount>
@@ -123,7 +137,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="AA_MegaLouse"]/comps</xpath>
 			<value>
-				<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<resourceDef>ST_PoisonExtract</resourceDef>
 					<gatheringIntervalDays>2</gatheringIntervalDays>
 					<resourceAmount>5</resourceAmount>
@@ -140,16 +154,14 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="AA_Barbslinger"]</xpath>
+			<xpath>/Defs/ThingDef[defName="AA_Barbslinger"]/comps</xpath>
 			<value>
-				<comps>
-					<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
-						<resourceDef>ST_PoisonExtract</resourceDef>
-						<gatheringIntervalDays>2</gatheringIntervalDays>
-						<resourceAmount>5</resourceAmount>
-						<customResourceString>PoisonGather</customResourceString>
-					</li>
-				</comps>
+				<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<resourceDef>ST_PoisonExtract</resourceDef>
+					<gatheringIntervalDays>2</gatheringIntervalDays>
+					<resourceAmount>5</resourceAmount>
+					<customResourceString>PoisonGather</customResourceString>
+				</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -163,7 +175,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="AA_Atispec"]/comps</xpath>
 			<value>
-				<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<resourceDef>ST_PoisonExtract</resourceDef>
 					<gatheringIntervalDays>2</gatheringIntervalDays>
 					<resourceAmount>5</resourceAmount>

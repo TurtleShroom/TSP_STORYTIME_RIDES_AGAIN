@@ -8,7 +8,7 @@
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has touched a poison dart frog.</deathMessage>
 		<hediff>Scratch</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediffSolid>ToxicBuildup</hediffSolid>
 		<additionalHediffs>
 			<li>
 				<hediff>ToxicBuildup</hediff>
@@ -45,7 +45,7 @@
 				<eggLayIntervalDays>8</eggLayIntervalDays>
 				<eggCountRange>1~3</eggCountRange>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+			<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<resourceDef>ST_PoisonExtract</resourceDef>
 				<gatheringIntervalDays>2</gatheringIntervalDays>
 				<resourceAmount>15</resourceAmount>
@@ -356,23 +356,23 @@
 		<li>StorytimeAnimal</li>
     </tradeTags>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>
-					<li>ST_FrogRarity</li>					
+					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogPoison</li>
 					<li>ST_FrogProduction</li>
-					<li>ST_FrogCommon</li>					
+					<li>ST_FrogCommon</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogPoisonDesc</li>
 					<li>ST_FrogProductionDesc</li>
 					<li>ST_FrogCommonDesc</li>
-				</statDescriptions>		
-				<showImageInInfoCard>true</showImageInInfoCard>
+				</statDescriptions>
+				<showImageInInfoCard>false</showImageInInfoCard>
 			</li>
 		</modExtensions>
   </ThingDef>
@@ -421,5 +421,4 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  
 </Defs>

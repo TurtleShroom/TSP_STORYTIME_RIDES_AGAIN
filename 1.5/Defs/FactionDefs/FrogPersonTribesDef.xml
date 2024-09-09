@@ -395,15 +395,15 @@
     </pawnGroupMakers>
     <settlementTexturePath>World/FrogPeople/FrogPeopleFactionLogo</settlementTexturePath>
 	<modExtensions>
-		<li Class="VFECore.FactionDefExtension">
-			<disallowedBiomes>
+		<li Class="VFECore.FactionDefExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<disallowedBiomes MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<li>Desert</li>
 				<li>ExtremeDesert</li>
 				<li>Tundra</li>
 				<li>IceSheet</li>
 				<li>SeaIce</li>
 			</disallowedBiomes>
-			<allowedBiomes>
+			<allowedBiomes MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<li>ColdBog</li>
 				<li>TemperateSwamp</li>
 				<li>TropicalSwamp</li>
@@ -420,7 +420,7 @@
 				<li MayRequire="zylle.morevanillabiomes">ZBiome_CoastalDunes</li>
 				<li MayRequire="zylle.morevanillabiomes">ZBiome_Sandbar_NoBeach</li> <!-- Estuary -->
 				<li MayRequire="mlie.advancedbiomes">Wetland</li>
-			</allowedBiomes>					
+			</allowedBiomes>
 		</li>
 	</modExtensions>
   </FactionDef> 

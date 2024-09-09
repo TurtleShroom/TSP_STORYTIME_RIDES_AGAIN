@@ -35,14 +35,14 @@
 				<eggCountRange>1~2</eggCountRange>
 				<eggLayFemaleOnly>false</eggLayFemaleOnly>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef">
+			<li Class="AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<needsDiggableTerrain>true</needsDiggableTerrain>
 				<gizmoImage>Things/Plant/TreeOak/TreeOakA</gizmoImage>
 				<gizmoLabel>ST_WoodFrog_CommandLabel</gizmoLabel>
 				<gizmoDesc>ST_WoodFrog_CommandDesc</gizmoDesc>
 				<defToChangeTo>Plant_TreeOak</defToChangeTo>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_LightSustenance" MayRequire="sarg.alphaanimals"></li>
+			<li Class="AnimalBehaviours.CompProperties_LightSustenance" MayRequire="sarg.alphaanimals,oskarpotocki.vanillafactionsexpanded.core"></li>
 		</comps>
 		<tools>
 		  <li>
@@ -357,20 +357,20 @@
 			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
 			</li>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
-					<li>ST_FrogRarity</li>					
+					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogProduction</li>
-					<li>ST_FrogCommon</li>					
+					<li>ST_FrogCommon</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogProductionDesc</li>
 					<li>ST_FrogCommonDesc</li>
-				</statDescriptions>	
-				<showImageInInfoCard>true</showImageInInfoCard>
+				</statDescriptions>
+				<showImageInInfoCard>false</showImageInInfoCard>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -419,5 +419,4 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  
 </Defs>

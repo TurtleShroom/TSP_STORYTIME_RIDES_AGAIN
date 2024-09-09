@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
 	<ThingDef ParentName="BaseBullet">
 		<defName>FrogFire</defName>
@@ -361,18 +362,18 @@
 		<li>StorytimeAnimal</li>
     </tradeTags>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>					
-					<li>ST_FrogRarity</li>					
+					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogFire</li>
 					<li>ST_FrogRanged</li>	
-					<li>ST_FrogUncommon</li>					
+					<li>ST_FrogUncommon</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogFireDesc</li>
 					<li>ST_FrogRangedDesc</li>	
 					<li>ST_FrogUncommonDesc</li>

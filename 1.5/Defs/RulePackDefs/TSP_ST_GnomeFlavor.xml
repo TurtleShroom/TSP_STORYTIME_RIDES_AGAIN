@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RulePackDef>
+		<defName>TSP_ST_NamerGnomeUtility</defName>
+		<include>
+			<li>GlobalUtility</li>
+			<li>PuffleNamer</li>
+			<li>GnomeSettlementName</li>
+			<li></li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[MaleList] [FamilyList]</li>
+				<li>name->[MaleList] [Puffle] [FamilyList]</li>
+				<!-- <li>name->[Puffle]</li> -->
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>MaleList</keyword>
+					<path>GnomeNames/GnomeMale</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>FamilyList</keyword>
+					<path>GnomeNames/GnomeLastNames</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+</Defs>

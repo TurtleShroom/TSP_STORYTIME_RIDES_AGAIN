@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
+<Defs>
 	<RulePackDef>
 		<defName>GnomeMaleName</defName>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[MaleList] [FamilyList]</li>
+				<li>name->[GnomeMaleList] [GnomeFamilyList]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
-					<keyword>MaleList</keyword>
+					<keyword>GnomeMaleList</keyword>
 					<path>GnomeNames/GnomeMale</path>
 				</li>
 				<li Class="Rule_File">
-					<keyword>FamilyList</keyword>
+					<keyword>GnomeFamilyList</keyword>
 					<path>GnomeNames/GnomeLastNames</path>
 				</li>
 			</rulesRaw>
@@ -24,15 +24,15 @@
 		<defName>GnomeFemaleName</defName>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[FemaleList] [FamilyList]</li>
+				<li>name->[GnomeFemaleList] [GnomeFamilyList]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
-					<keyword>FemaleList</keyword>
+					<keyword>GnomeFemaleList</keyword>
 					<path>GnomeNames/GnomeFemale</path>
 				</li>
 				<li Class="Rule_File">
-					<keyword>FamilyList</keyword>
+					<keyword>GnomeFamilyList</keyword>
 					<path>GnomeNames/GnomeLastNames</path>
 				</li>
 			</rulesRaw>
@@ -40,19 +40,17 @@
 	</RulePackDef>
 	
 	<RulePackDef>
-    <defName>GnomeSettlementName</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>name-&gt;[pack]</li>
-      </rulesStrings>
-      <rulesRaw>
-        <li Class="Rule_File">
-          <keyword>pack</keyword>
-          <path>GnomeNames/GnomeSettlement</path>
-        </li>
-      </rulesRaw>
-    </rulePack>
-  </RulePackDef>
-	
-	
+		<defName>GnomeSettlementName</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name-&gt;[GnomePack]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>GnomePack</keyword>
+					<path>GnomeNames/GnomeSettlement</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
 </Defs>

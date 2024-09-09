@@ -20,12 +20,12 @@
 			<eggLayIntervalDays>5</eggLayIntervalDays>
 			<eggCountRange>1</eggCountRange>
 		  </li>
-			<li Class="AnimalBehaviours.CompProperties_ThoughtEffecter">
+			<li Class="AnimalBehaviours.CompProperties_ThoughtEffecter" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<radius>15</radius>
 				<tickInterval>2500</tickInterval>
 				<thoughtDef>ST_GainerThought</thoughtDef>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<hediffname>ST_GainerFrog</hediffname>
 			</li>
 		</comps>
@@ -335,20 +335,20 @@
 		  <li>AnimalUncommon</li>
 		</tradeTags>
 			<modExtensions>
-				<li Class="AnimalBehaviours.AnimalStatExtension">
+				<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<statToAdd>
 						<li>ST_FrogRole</li>
-						<li>ST_FrogRarity</li>					
+						<li>ST_FrogRarity</li>	
 					</statToAdd>
-					<statValues>
+					<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 						<li>ST_FrogFriendly</li>
-						<li>ST_FrogUncommon</li>					
+						<li>ST_FrogUncommon</li>
 					</statValues>
-					<statDescriptions>
+					<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 						<li>ST_FrogFriendlyDesc</li>
 						<li>ST_FrogUncommonDesc</li>
 					</statDescriptions>	
-					<showImageInInfoCard>true</showImageInInfoCard>
+					<showImageInInfoCard>false</showImageInInfoCard>
 				</li>
 			</modExtensions>
 	</ThingDef>

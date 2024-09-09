@@ -16,13 +16,13 @@
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<everCurableByItem>false</everCurableByItem>
 		<comps>
-			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>120000</disappearsAfterTicks>
-				<showRemainingTime>True</showRemainingTime>
-			</li>
-		  <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
-						<verbs>
-							<li>
+				<li Class="HediffCompProperties_Disappears">
+					<disappearsAfterTicks>120000</disappearsAfterTicks>
+					<showRemainingTime>True</showRemainingTime>
+				</li>
+				<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+						<verbs MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+							<li MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 								<verbClass>Verb_Shoot</verbClass>
 								<accuracyTouch>1</accuracyTouch>
 								<accuracyShort>0.8</accuracyShort>
@@ -38,8 +38,8 @@
 								<commonality>1</commonality>
 							</li>
 						</verbs>
-						<verbProps>
-							<li>
+						<verbProps MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+							<li MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 								<label>lick</label>
 								<draw>false</draw>
 								<canBeToggled>true</canBeToggled>
@@ -113,8 +113,7 @@
 		</stages>
 	</ThoughtDef>
 	
-<!--Bogey-->  
-
+	<!--Bogey-->  
 	<HediffDef>
 		<defName>ST_Bean_Bogey</defName>
 		<label>Roulette Bean: Vomit Fountain</label>

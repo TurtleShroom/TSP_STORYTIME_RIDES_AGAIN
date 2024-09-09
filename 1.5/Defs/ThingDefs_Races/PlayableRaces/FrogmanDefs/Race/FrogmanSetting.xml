@@ -104,14 +104,12 @@
 				</li>
 			  </colorChannels>
 			</alienPartGenerator>
-			<!--
 			<raceGenes MayRequire="ludeon.rimworld.biotech">
 				<li MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">
 					<defName MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">AG_FrogVoice</defName>
 					<chance MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">999</chance>
 				</li>
 			</raceGenes>
-			-->
 		  </generalSettings>
 		  <graphicPaths>
 			  <head>Things/Pawn/Humanlike/FrogPeople/Head/</head>
@@ -513,23 +511,20 @@
 		</recipes>
 		<comps></comps>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
-					<li>ST_FrogRarity</li>					
+					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_FrogSapient</li>
-					<li>ST_FrogCommon</li>					
+					<li>ST_FrogCommon</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_FrogSapientDesc</li>
 					<li>ST_FrogCommonDesc</li>
 				</statDescriptions>
-				<!--
-				<showImageInInfoCard>true</showImageInInfoCard>
-				<ImageToShowInInfoCard>UI/Lore/FrogmanLore</ImageToShowInInfoCard>
-				-->
+				<showImageInInfoCard>false</showImageInInfoCard>
 			</li>
 		</modExtensions>
 	</AlienRace.ThingDef_AlienRace>

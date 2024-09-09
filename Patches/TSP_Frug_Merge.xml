@@ -176,16 +176,16 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
 			<value>
-				<li Class="AnimalBehaviours.AnimalStatExtension">
-					<statToAdd>
+				<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 						<li>ST_FrogRole</li>
-						<li>ST_FrogRarity</li>					
+						<li>ST_FrogRarity</li>
 					</statToAdd>
-					<statValues>
+					<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 						<li>TSP_ST_FrogNormal</li>
-						<li>ST_FrogUncommon</li>					
+						<li>ST_FrogUncommon</li>
 					</statValues>
-					<statDescriptions>
+					<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 						<li>TSP_ST_FrogNormalDesc</li>
 						<li>ST_FrogUncommonDesc</li>
 					</statDescriptions>
@@ -196,7 +196,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+		<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>

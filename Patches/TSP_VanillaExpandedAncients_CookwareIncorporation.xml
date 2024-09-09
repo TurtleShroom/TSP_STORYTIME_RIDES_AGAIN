@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
-	<Operation Class="PatchOperationConditional">
+	<Operation Class="PatchOperationConditional" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="VFEA_AncientCookingStation"]</xpath>
+	<xpath MayRequire="oskarpotocki.vanillafactionsexpanded.core">/Defs/ThingDef[defName="VFEA_AncientCookingStation"]</xpath>
 		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationAdd">
-			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEA_AncientCookingStation"]/modExtensions/li/inheritRecipesFrom</xpath>
-			<value>
+		<match Class="PatchOperationAdd" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<success MayRequire="oskarpotocki.vanillafactionsexpanded.core">Always</success>
+			<xpath MayRequire="oskarpotocki.vanillafactionsexpanded.core">/Defs/ThingDef[defName="VFEA_AncientCookingStation"]/modExtensions/li/inheritRecipesFrom</xpath>
+			<value MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<li>GnomeTable</li>
 				<li>WormSpot</li>
 				<li>Campfire</li>

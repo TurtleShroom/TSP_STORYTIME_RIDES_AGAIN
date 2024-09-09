@@ -347,20 +347,20 @@
 		  <li>Borpa</li>
 		</tradeTags>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>
 					<li>ST_FrogRoleTertiary</li>
 					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_Frog_BORPA</li>
 					<li>ST_FrogFoodProduction</li>
 					<li>ST_FrogFriendly</li>
-					<li>ST_FrogCommon</li>					
+					<li>ST_FrogCommon</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_Frog_BORPA_Desc</li>
 					<li>ST_FrogFoodProduction</li>
 					<li>ST_FrogFriendlyDesc</li>
@@ -841,7 +841,7 @@
 	  <li>AnimalFighter</li>
     </tradeTags>
 	<comps>
-		<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+		<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<resourceDef>ST_NightFrog_Venom</resourceDef>
 			<gatheringIntervalDays>3</gatheringIntervalDays>
 			<resourceAmount>5</resourceAmount>
@@ -849,20 +849,20 @@
 		</li>
 	</comps>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>
 					<li>ST_FrogRoleTertiary</li>
 					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_Frog_BORPA</li>
 					<li>ST_FrogPoison</li>
 					<li>ST_FrogRanged</li>
-					<li>ST_FrogUnommon</li>					
+					<li>ST_FrogUnommon</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_Frog_BORPA_Desc</li>
 					<li>TSP_ST_FrogPoisonDesc</li>
 					<li>ST_FrogRangedDesc</li>
@@ -947,9 +947,7 @@
 		<ArmorRating_Heat>0.25</ArmorRating_Heat>
 		<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
     </statBases>
-    <comps>
-
-    </comps>
+    <comps></comps>
     <tools>
       <li>
         <capacities>
@@ -1252,61 +1250,61 @@
 	  <li>Borpa</li>
     </tradeTags>
   </ThingDef>
-	 <PawnKindDef ParentName="AnimalKindBase">
-	
-    <defName>BORPA_Snorpa</defName>
-    <label>snorpa</label>
-    <race>BORPA_Snorpa</race>
-	<canArriveManhunter>true</canArriveManhunter>
-    <combatPower>200</combatPower>
-    <ecoSystemWeight>0</ecoSystemWeight>
-    <wildGroupSize>1~3</wildGroupSize>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Snorpa</texPath>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.25, 0.25)</volume>
-            <offset>(0,0,-0.1)</offset>
-          </shadowData>
-        </bodyGraphicData> 
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Dessicated_Snorpa</texPath>
-          <drawSize>1.5</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Snorpa</texPath>
-          <drawSize>2.5</drawSize>
-          <shadowData>
-            <volume>(0.45, 0.4, 0.4)</volume>
-            <offset>(0,0,-0.15)</offset>
-          </shadowData>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Dessicated_Snorpa</texPath>
-          <drawSize>2.5</drawSize>
-        </dessicatedBodyGraphicData>
 
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Snorpa</texPath>
-          <drawSize>3.5</drawSize>
-          <shadowData>
-            <volume>(0.5, 0.45, 0.45)</volume>
-            <offset>(0,0,-0.2)</offset>
-          </shadowData>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Snorpa/Dessicated_Snorpa</texPath>
-          <drawSize>3.5</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-    </lifeStages>
-  </PawnKindDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>BORPA_Snorpa</defName>
+		<label>snorpa</label>
+		<race>BORPA_Snorpa</race>
+		<canArriveManhunter>true</canArriveManhunter>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<wildGroupSize>1~3</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Snorpa/Snorpa</texPath>
+			  <drawSize>1.5</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.25, 0.25)</volume>
+				<offset>(0,0,-0.1)</offset>
+			  </shadowData>
+			</bodyGraphicData> 
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Snorpa/Dessicated_Snorpa</texPath>
+			  <drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Snorpa/Snorpa</texPath>
+			  <drawSize>2.5</drawSize>
+			  <shadowData>
+				<volume>(0.45, 0.4, 0.4)</volume>
+				<offset>(0,0,-0.15)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Snorpa/Dessicated_Snorpa</texPath>
+			  <drawSize>2.5</drawSize>
+			</dessicatedBodyGraphicData>
+
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Snorpa/Snorpa</texPath>
+			  <drawSize>3.5</drawSize>
+			  <shadowData>
+				<volume>(0.5, 0.45, 0.45)</volume>
+				<offset>(0,0,-0.2)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Snorpa/Dessicated_Snorpa</texPath>
+			  <drawSize>3.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
  
   	<!-- ======================= Kachorpa  =============================== -->
 
@@ -1663,20 +1661,20 @@
 		<BORPA_KachorpaSteel>20</BORPA_KachorpaSteel>
 	</butcherProducts>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>
 					<li>ST_FrogRoleTertiary</li>
-					<li>ST_FrogRarity</li>					
+					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_Frog_BORPA</li>
 					<li>TSP_ST_Frog_KACHOW</li>
 					<li>ST_FrogIntelligent</li>
-					<li>ST_FrogUncommon</li>					
+					<li>ST_FrogUncommon</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_Frog_BORPA_Desc</li>
 					<li>TSP_ST_Frog_KACHOW_Desc</li>
 					<li>ST_FrogIntelligentDesc</li>
@@ -1688,66 +1686,64 @@
   
   
   
-	 <PawnKindDef ParentName="AnimalKindBase">
-	
-    <defName>BORPA_Kachorpa</defName>
-    <label>kachorpa</label>
-    <race>BORPA_Kachorpa</race>
-	<canArriveManhunter>true</canArriveManhunter>
-    <combatPower>190</combatPower>
-    <ecoSystemWeight>0</ecoSystemWeight>
-    <wildGroupSize>1~3</wildGroupSize>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa</texPath>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.3, 0.35, 0.35)</volume>
-            <offset>(0,0,-0.1)</offset>
-          </shadowData>
-        </bodyGraphicData>
-      
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
-          <drawSize>0.8</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa</texPath>
-          <drawSize>2</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.5, 0.5)</volume>
-            <offset>(0,0,-0.15)</offset>
-          </shadowData>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
-          <drawSize>1.0</drawSize>
-        </dessicatedBodyGraphicData>
- 
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa</texPath>
-          <drawSize>2.5</drawSize>
-          <shadowData>
-            <volume>(0.5, 0.6, 0.6)</volume>
-            <offset>(0,0,-0.2)</offset>
-          </shadowData>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
-          <drawSize>1.5</drawSize>
-        </dessicatedBodyGraphicData>
-		 <butcherBodyPart>
-          <bodyPartGroup>Eyes</bodyPartGroup>
-          <thing>BORPA_BorpaEye</thing>
-        </butcherBodyPart>
-      </li>
-    </lifeStages>
-  </PawnKindDef>
+	<PawnKindDef ParentName="AnimalKindBase">	
+		<defName>BORPA_Kachorpa</defName>
+		<label>kachorpa</label>
+		<race>BORPA_Kachorpa</race>
+		<canArriveManhunter>true</canArriveManhunter>
+		<combatPower>190</combatPower>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<wildGroupSize>1~3</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa</texPath>
+			  <drawSize>1.5</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.35, 0.35)</volume>
+				<offset>(0,0,-0.1)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+		  
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
+			  <drawSize>0.8</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa</texPath>
+			  <drawSize>2</drawSize>
+			  <shadowData>
+				<volume>(0.4, 0.5, 0.5)</volume>
+				<offset>(0,0,-0.15)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
+			  <drawSize>1.0</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa</texPath>
+			  <drawSize>2.5</drawSize>
+			  <shadowData>
+				<volume>(0.5, 0.6, 0.6)</volume>
+				<offset>(0,0,-0.2)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
+			  <drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+			 <butcherBodyPart>
+			  <bodyPartGroup>Eyes</bodyPartGroup>
+			  <thing>BORPA_BorpaEye</thing>
+			</butcherBodyPart>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
   
  
 	<!-- ======================= John Borpa =============================== -->
@@ -1771,6 +1767,7 @@
 			<MarketValue>66666</MarketValue>
 			<MeatAmount>666</MeatAmount>
 			<LeatherAmount>666</LeatherAmount>
+			<Mass>666</Mass>
 			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
 		</statBases>
 		<tools>
@@ -1823,30 +1820,30 @@
 			<li Class="AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<gender MayRequire="oskarpotocki.vanillafactionsexpanded.core">Male</gender>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_ChangeWeather">
+			<li Class="AnimalBehaviours.CompProperties_ChangeWeather" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<weatherDef>Rain</weatherDef>
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>
 					<li>ST_FrogRoleTertiary</li>
-					<li>ST_FrogRarity</li>					
+					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_Frog_JOHNBORPA</li>
 					<li>ST_MeleeTank</li>
 					<li>TSP_ST_FrogEnemy</li>
-					<li>TSP_ST_FrogCommonality_Hostile</li>					
+					<li>TSP_ST_FrogCommonality_Hostile</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_Frog_JOHNBORPA_Desc</li>
 					<li>ST_MeleeTankDesc</li>
 					<li>TSP_ST_FrogEnemyDesc</li>
 					<li>TSP_ST_FrogCommonality_Hostile_Desc</li>
-				</statDescriptions>				
+				</statDescriptions>
 			</li>
 		</modExtensions>
   </ThingDef>

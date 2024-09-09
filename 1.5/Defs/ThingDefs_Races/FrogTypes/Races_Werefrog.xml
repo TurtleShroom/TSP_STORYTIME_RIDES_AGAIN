@@ -72,10 +72,10 @@
 			</li>
 		</tools>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_Regeneration">
+			<li Class="AnimalBehaviours.CompProperties_Regeneration" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<rateInTicks>60</rateInTicks>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_DoesntFlee"></li>
+			<li Class="AnimalBehaviours.CompProperties_DoesntFlee" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
 		</comps>
 		<race>
 			<body>FrogPersonBody</body>
@@ -118,19 +118,19 @@
 			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
 			</li>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
-					<li>ST_FrogRarity</li>					
+					<li>ST_FrogRarity</li>
 				</statToAdd>
-				<statValues>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_FrogEnemy</li>
-					<li>ST_FrogCommonality_Hostile</li>					
+					<li>ST_FrogCommonality_Hostile</li>
 				</statValues>
-				<statDescriptions>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>TSP_ST_FrogEnemyDesc</li>
 					<li>ST_FrogCommonality_Hostile_Desc</li>
-				</statDescriptions>				
+				</statDescriptions>
 			</li>
 		</modExtensions>
 	</ThingDef>
