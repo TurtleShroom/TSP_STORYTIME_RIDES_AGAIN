@@ -2,6 +2,49 @@
 
 <!-- Birds don't have boobs. -->
 <Defs>
+	<ThingDef Name="TSP_WW_DrugBase" ParentName="DrugBase" Abstract="True">
+		<statBases>
+			<Nutrition>1</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<preferability>DesperateOnly</preferability>
+			<joy>0.5</joy>
+			<joyKind>TSP_WW_EatDrugs_Classification</joyKind>
+			<baseIngestTicks>720</baseIngestTicks>
+			<nurseable>false</nurseable>
+			<drugCategory>Hard</drugCategory>
+			<ingestSound>Ingest_Pill</ingestSound>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Consume {0}</ingestCommandString>
+			<ingestReportString>Consuming {0}.</ingestReportString>
+			<ingestReportStringEat>Consuming {0}.</ingestReportStringEat>
+			<useEatingSpeedStat>true</useEatingSpeedStat>
+			<tableDesired>false</tableDesired>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.27,0,0.08)</offset>
+					<behind>true</behind>
+				</northDefault>
+				<east>
+					<offset>(0.45,0,0.08)</offset>
+				</east>
+				<south>
+					<offset>(0.27,0,0.08)</offset>
+				</south>
+				<west>
+					<offset>(-0.50,0,0.08)</offset>
+					<flip>false</flip>
+				</west>
+			</ingestHoldOffsetStanding>
+		</ingestible>
+		<tradeTags>
+			<li>StorytimeDrugs</li>
+			<li>WinkworldDrugs</li>
+			<li>Drugs</li>
+		</tradeTags>
+	</ThingDef>
+
 	<RecipeDef Name="TSP_WW_DrugRecipe_Base" Abstract="True">
 		<workAmount>475</workAmount>
 		<workSpeedStat>DrugCookingSpeed</workSpeedStat>

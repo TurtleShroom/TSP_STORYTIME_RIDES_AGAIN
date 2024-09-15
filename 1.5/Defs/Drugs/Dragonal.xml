@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-  <ThingDef ParentName="DrugBase">
+  <ThingDef ParentName="TSP_WW_DrugBase">
     <defName>Dragonal</defName>
     <label>Dragonal pill</label>
     <description>A dangerous pill developed by Wing Corp, made originally to be the cure all to any pain one has. \n\n\The most obvious downside is the fact that after use, prolonged failure of repeated use begins to rapidly decay the mental state and brain of a consumer, going insane and dying. \nHowever, the benefits of near complete pain tolerance and the other properties of the pill can't be ignored either.</description>
@@ -24,49 +24,25 @@
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>
-      <foodType>Processed</foodType>
-      <joyKind>TSP_WW_EatDrugs_Classification</joyKind>
-      <joy>0.80</joy>
-      <baseIngestTicks>720</baseIngestTicks>
-      <nurseable>false</nurseable>
-      <drugCategory>Hard</drugCategory>
-      <ingestSound>Ingest_Pill</ingestSound>
-      <ingestHoldOffsetStanding>
-        <northDefault>
-          <offset>(0.27,0,0.08)</offset>
-          <behind>true</behind>
-        </northDefault>
-        <east>
-          <offset>(0.45,0,0.08)</offset>
-        </east>
-        <south>
-          <offset>(0.27,0,0.08)</offset>
-        </south>
-        <west>
-          <offset>(-0.50,0,0.08)</offset>
-          <flip>true</flip>
-        </west>
-      </ingestHoldOffsetStanding>
-      <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>DragonalHigh</hediffDef>
-          <severity>0.5</severity>
-          <toleranceChemical>Dragonal</toleranceChemical>
-        </li>
-        <li Class="IngestionOutcomeDoer_OffsetNeed">
-          <need>Rest</need>
-          <offset>0.04</offset>
-          <!-- <toleranceChemical>Highwing</toleranceChemical> -->
-        </li>
-        <li Class="IngestionOutcomeDoer_OffsetPsyfocus">
-          <offset>0.15</offset>
-        </li>
-      </outcomeDoers>
-      <ingestHoldUsesTable>false</ingestHoldUsesTable>
-      <ingestCommandString>Take {0}</ingestCommandString>
-      <ingestReportString>Taking {0}.</ingestReportString>
-      <ingestReportStringEat>Consuming {0}.</ingestReportStringEat>
-      <useEatingSpeedStat>true</useEatingSpeedStat>
+		<ingestCommandString>Take {0}</ingestCommandString>
+		<ingestReportString>Ingesting {0}.</ingestReportString>
+		<ingestReportStringEat>Consuming {0}.</ingestReportStringEat>
+		<joy>0.80</joy>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>DragonalHigh</hediffDef>
+			  <severity>0.5</severity>
+			  <toleranceChemical>Dragonal</toleranceChemical>
+			</li>
+			<li Class="IngestionOutcomeDoer_OffsetNeed">
+			  <need>Rest</need>
+			  <offset>0.0748</offset>
+			  <!-- <toleranceChemical>Highwing</toleranceChemical> -->
+			</li>
+			<li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+			  <offset>0.15</offset>
+			</li>
+		  </outcomeDoers>
     </ingestible>
     <comps>
       <li Class="CompProperties_Drug">
