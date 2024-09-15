@@ -3,9 +3,21 @@
 <Defs>
 	<RulePackDef>
 		<defName>GnomeMaleName</defName>
+		<include>
+			<li>PuffleNamer</li>
+			<li>ST_NamerElfoidMale</li>
+		</include>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[GnomeMaleList] [GnomeFamilyList]</li>
+				<li>name(p=5)->[GnomeMaleList] [GnomeFamilyList]</li>
+				<li>name(p=4)->[GnomeMaleList] [ST_ElfMaleList] [GnomeFamilyList]</li>
+				<li>name(p=2)->[GnomeMaleList] [ST_ElfFamilyList]</li>
+				<li>name(p=2)->[ST_ElfMaleList] [ST_ElfFamilyList]</li>
+				<li>name(p=2)->[ST_ElfMaleList] [GnomeFamilyList]</li>
+				<li>name(p=1)->[GnomeMaleList] [Puffle] [GnomeFamilyList]</li>
+				<li>name(p=0.75)->Schmebuloc 'Schmebuloc' [GnomeFamilyList]</li>
+				<li>name(p=0.75)->Schmebuloc 'Schmebuloc' [ST_ElfFamilyList]</li>
+				<li>name(p=0.5)->Schmebuloc [Puffle] [ST_ElfFamilyList]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
@@ -22,9 +34,20 @@
 
 	<RulePackDef>
 		<defName>GnomeFemaleName</defName>
+		<include>
+			<li>PuffleNamer</li>
+			<li>ST_NamerElfoidFemale</li>
+		</include>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[GnomeFemaleList] [GnomeFamilyList]</li>
+				<li>name(p=4.5)->[GnomeFemaleList] [GnomeFamilyList]</li>
+				<li>name(p=4.5)->[GnomeFemaleList] [ST_ElfFemaleList] [GnomeFamilyList]</li>
+				<li>name(p=2)->[GnomeFemaleList] [ST_ElfFamilyList]</li>
+				<li>name(p=2)->[ST_ElfFemaleList] [ST_ElfFamilyList]</li>
+				<li>name(p=2.75)->[ST_ElfFemaleList] [GnomeFamilyList]</li>
+				<li>name(p=1)->[GnomeFemaleList] [Puffle] [GnomeFamilyList]</li>
+				<li>name(p=0.1)->[Puffle] [Puffle] [GnomeFamilyList]</li>
+				<li>name(p=0.1)->[Puffle] [Puffle] [GnomeFamilyList]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
@@ -41,14 +64,41 @@
 	
 	<RulePackDef>
 		<defName>GnomeSettlementName</defName>
+		<include>
+			<li>PuffleNamer</li>
+		</include>
 		<rulePack>
 			<rulesStrings>
-				<li>name-&gt;[GnomePack]</li>
+				<li>name(p=3)->[GnomePack]</li>
+				<li>name(p=1)->[Puffle] [GnomePack]</li>
+				<li>name(p=0.1)->[Puffle] Forest</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
 					<keyword>GnomePack</keyword>
 					<path>GnomeNames/GnomeSettlement</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>GnomeFamilyList</defName>
+		<include>
+			<li>PuffleNamer</li>
+			<li>ST_NamerElfoidMale</li>
+			<li>ST_NamerElfoidFemale</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>name(p=10)->[GnomeFamilyList]</li>
+				<li>name(p=1)->[Puffle]-[GnomeFamilyList]</li>
+				<li>name(p=1)->[ST_ElfFamilyList]-[GnomeFamilyList]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>GnomeFamilyList</keyword>
+					<path>GnomeNames/GnomeLastNames</path>
 				</li>
 			</rulesRaw>
 		</rulePack>

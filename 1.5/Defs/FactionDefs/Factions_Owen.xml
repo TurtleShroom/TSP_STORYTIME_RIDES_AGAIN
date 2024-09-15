@@ -5,6 +5,7 @@
 		<defName>Owenfaction</defName>
 		<label>Cult of Owen Wilson</label>
 		<description>Wow! It's the Cult of Owen Wilson! These fierce fighters sent from the gods spread from base to base, lecturing those they encounter about their lord and saviour Owen Cunningham Wilson through the use of bullets. Unbelievable!</description>
+		<fixedName>Cult of Owen Wilson</fixedName>
 		<pawnSingular>Owen Wilson disciple</pawnSingular>
 		<pawnsPlural>Owen Wilson disciples</pawnsPlural>
 		<settlementGenerationWeight>1.05</settlementGenerationWeight>
@@ -12,7 +13,7 @@
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>O-Dog</leaderTitle>
-		<earliestRaidDays>27</earliestRaidDays>
+		<earliestRaidDays>30</earliestRaidDays>
 		<factionIconPath>Things/OwenWilson</factionIconPath>
 		<colorSpectrum>
 			<li>(255, 255, 255)</li>
@@ -46,7 +47,6 @@
 			<li MayRequire="Ludeon.RimWorld.Ideology">HAR_Xenophilia</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginChristian</li>
 		</disallowedMemes>
-		
 		<fixedIdeo>true</fixedIdeo>
 		<ideoName>Cult of Owen Wilson</ideoName>
 		<ideoDescription>Wow! It's the Cult of Owen Wilson! These fierce fighters sent from the gods spread from base to base, lecturing those they encounter about their lord and saviour Owen Cunningham Wilson through the use of bullets. Unbelievable!</ideoDescription>
@@ -61,7 +61,6 @@
 				<iconPath>Things/OwenWilson</iconPath>
 			</li>
 		</deityPresets>
-		
 		<permanentEnemy>true</permanentEnemy>
 		<factionNameMaker>NamerOwenBase</factionNameMaker>
 		<settlementNameMaker>NamerOwenFactionBase</settlementNameMaker>
@@ -183,7 +182,7 @@
 			</li>
 			<li MayRequire="vanillaracesexpanded.archon">
 				<kindDef MayRequire="vanillaracesexpanded.archon">Combat</kindDef>
-				<commonality MayRequire="vanillaracesexpanded.archon">50</commonality>
+				<commonality MayRequire="vanillaracesexpanded.archon">91</commonality>
 				<options MayRequire="vanillaracesexpanded.archon">
 					<TSP_OwenWilsonpawn_Archon MayRequire="vanillaracesexpanded.archon">999</TSP_OwenWilsonpawn_Archon>
 				</options>
@@ -226,7 +225,7 @@
 			<li>OwenWilsonleader_Frogman</li>
 			<li>OwenWilsonleader_Forg</li>
 			<li>OwenWilsonleaders_DuoForg</li>
-			<li MayRequire="vanillaracesexpanded.archon">TSP_OwenWilsonpawn_Archon</li>
+			<!-- <li MayRequire="vanillaracesexpanded.archon">TSP_OwenWilsonpawn_Archon</li> -->
 		</fixedLeaderKinds>
 		<modExtensions>
 			<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
@@ -243,6 +242,9 @@
 			<fixedParams>
 				<filter>
 					<thingDefs>
+						<li>Apparel_Owenhelmet</li>
+						<li>Apparel_Owenparka</li>
+						<li>Gun_OwenGun</li>
 						<li>Flake</li>
 						<li>Yayo</li>
 						<li>GoJuice</li>
