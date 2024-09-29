@@ -4,12 +4,12 @@
 	<TraderKindDef>
 		<defName>TSP_HouseOfTheWorm_InSpace</defName>
 		<label>worm-infested space junk</label>
-		<commonality>0.5</commonality>
+		<commonality>0.65</commonality>
 		<orbital>true</orbital>
 		<stockGenerators>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Silver</thingDef>
-				<countRange>20000~40000</countRange>
+				<countRange>75000~100000</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>ST_Worm</thingDef>
@@ -32,8 +32,15 @@
 					<max>10000</max>
 				</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</thingDef>
+				<countRange MayRequire="Ludeon.RimWorld.Anomaly">
+					<min>50</min>
+					<max>100</max>
+				</countRange>
+			</li>
 			<li Class="StockGenerator_ReinforcedBarrels">
-				<countRange>3~9</countRange>
+				<countRange>13~19</countRange>
 			</li>
 			
 			<li Class="StockGenerator_SingleDef" MayRequire="sarg.rimbees">
@@ -59,6 +66,11 @@
 				<createMatingPair>
 					<li>JudasFrog</li>
 				</createMatingPair>
+			</li>
+			
+			<!-- Buying -->
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Bioferrite</thingDef>
 			</li>
 		</stockGenerators>
 	</TraderKindDef>

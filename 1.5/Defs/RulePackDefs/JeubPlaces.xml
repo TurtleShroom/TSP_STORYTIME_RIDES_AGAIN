@@ -1,14 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
+	<RulePackDef>
+		<defName>TSP_ST_JeubPlaceFlavor_PlaceMakerCommon</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>place_personalWeapon(p=0)->U Jeub</li>
+				<li>place_massWeapon(p=0)->U Jeub</li>
+				<li>seismicDevice(p=0)->U Jeub</li>
+				<li>anEMPAttack(p=0)->U Jeub</li>
+				<li>place_summary(p=0)->U Jeub</li>
+				<li>place_community(p=0)->U-Jueb</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
 	<PlaceDef>
-		<defName>TSP_ST_JeubPlaceFlavor</defName>
+		<defName></defName>
 		<tags>
 			<li>ST_OriginJeub</li>
 		</tags>
 		<placeRules>
 			<include>
-				<li MayRequire="Ludeon.RimWorld.Ideology">PlaceMakerCommon</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">TSP_ST_JeubPlaceFlavor_PlaceMakerCommon</li>
 				<li MayRequire="Ludeon.RimWorld.Ideology">IdeoDescriptionGlobal</li>
 				<li>TSP_ST_NamerPerson_Jeub</li>
 				<li>JeubMaleName</li>

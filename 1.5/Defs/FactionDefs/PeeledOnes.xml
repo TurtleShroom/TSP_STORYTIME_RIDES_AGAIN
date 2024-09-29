@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
   <FactionDef>
     <defName>Peeled_Ones</defName>
@@ -13,9 +14,12 @@
 	<maxCountAtGameStart>2</maxCountAtGameStart>
 	<maxConfigurableAtWorldCreation>2</maxConfigurableAtWorldCreation>
 	<hidden>true</hidden>
+    <humanlikeFaction>false</humanlikeFaction>
+    <autoFlee>false</autoFlee>
 	<displayInFactionSelection>false</displayInFactionSelection>
 	<canMakeRandomly>true</canMakeRandomly>
 	<canStageAttacks>true</canStageAttacks>
+	<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
 	<factionIconPath>Things/Items/DemonPotatoes</factionIconPath>
     <pawnGroupMakers>
       <li>
@@ -28,9 +32,9 @@
     </pawnGroupMakers>
     <maxPawnCostPerTotalPointsCurve>
       <points>
-		<li>(0,200)</li>
-        <li>(400,300)</li>
-        <li>(900,400)</li>
+		<li>(0,300)</li>
+        <li>(400,400)</li>
+        <li>(900,500)</li>
         <li>(100000,10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
@@ -45,12 +49,10 @@
     </raidLootValueFromPointsCurve>
     <raidCommonalityFromPointsCurve>
       <points>
-        <li>(0, 1.4)</li>
-        <!--Constant one and four tenths at all points levels-->
+        <li>(0, 1.5)</li>
+        <!--Constant one and one half at all points levels-->
       </points>
     </raidCommonalityFromPointsCurve>
-    <humanlikeFaction>false</humanlikeFaction>
-    <autoFlee>false</autoFlee>
     <techLevel>Spacer</techLevel> <!-- They can drop in from "magical" pods. They are actually Industrial Tech when it comes to the weapons they use. -->
     <settlementTexturePath>Things/Items/DemonPotatoes</settlementTexturePath>
     <allowedArrivalTemperatureRange>

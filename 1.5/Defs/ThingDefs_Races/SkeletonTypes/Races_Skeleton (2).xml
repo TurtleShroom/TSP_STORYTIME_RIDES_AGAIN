@@ -115,4 +115,39 @@
     </inventoryOptions>
   </PawnKindDef>
   
+	<PawnKindDef ParentName="BaseSkeletonKindAsShambler" MayRequire="ludeon.rimworld.anomaly">
+		<defName>ST_Skeleton_Shambler</defName>
+		<label>Skeleton Pirate</label>
+		<race>ST_Skeleton</race>
+		<combatPower>10</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight Inherit="False">0</ecoSystemWeight>
+		<mutant MayRequire="ludeon.rimworld.anomaly">TSP_ST_Shambler_SkeletalPirate</mutant>
+		<lifeStages MayRequire="ludeon.rimworld.anomaly">
+			<li MayRequire="ludeon.rimworld.anomaly">
+				<label>Skeleton Pirate</label>
+				<labelPlural>Skeleton Pirates</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Other/Skeletons/NormalSkeleton/NormalSkeleton</texPath>
+					<drawSize>1.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li MayRequire="ludeon.rimworld.anomaly">
+				<label>Skeleton Pirate</label>
+				<labelPlural>Skeleton Pirates</labelPlural>
+				<bodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+					<texPath>Things/Pawn/Other/Skeletons/NormalSkeleton/NormalSkeleton</texPath>
+					<drawSize>1.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
 </Defs>

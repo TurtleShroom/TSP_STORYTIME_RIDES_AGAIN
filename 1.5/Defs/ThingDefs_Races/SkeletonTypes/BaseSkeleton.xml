@@ -26,7 +26,7 @@
 		<giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
 		<needsRest>false</needsRest>
 		<thinkTreeMain>SkeletonPirate</thinkTreeMain>
-		<thinkTreeConstant>SkeletonPirate</thinkTreeConstant>
+		<!-- <thinkTreeConstant>SkeletonPirate</thinkTreeConstant> -->
 		<hasGenders>true</hasGenders>
 		<foodType>None</foodType>
 		<lifeExpectancy>2000</lifeExpectancy>
@@ -184,6 +184,17 @@
 	</ThingDef>
   
 	<PawnKindDef Name="BaseSkeletonKind" Abstract="True">
+		<defaultFactionType>Skeleton_Pirates</defaultFactionType>
+		<canArriveManhunter>false</canArriveManhunter>
+		<aiAvoidCover>false</aiAvoidCover>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<allowOldAgeInjuries>false</allowOldAgeInjuries>
+		<wildGroupSize>2</wildGroupSize>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<maxGenerationAge>400</maxGenerationAge>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="BaseSkeletonKindAsShambler" Abstract="True">
 		<defaultFactionType>Skeleton_Pirates</defaultFactionType>
 		<canArriveManhunter>false</canArriveManhunter>
 		<aiAvoidCover>false</aiAvoidCover>

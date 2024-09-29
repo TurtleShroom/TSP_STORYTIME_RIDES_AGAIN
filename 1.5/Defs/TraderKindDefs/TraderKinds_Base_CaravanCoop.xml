@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Defs>
 
+<Defs>
   <TraderKindDef>
     <defName>Base_Caravan_Standard</defName>
     <stockGenerators>
-	
       <!-- 자원 -->
       <li Class="StockGenerator_SingleDef">
         <thingDef>Silver</thingDef>
@@ -234,8 +233,23 @@
 				</countRange>
 			</li>
 
-      <!-- Buying -->
-			<li Class="StockGenerator_BuyExpensiveSimple" />
+			<!-- Buying -->
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shell_Deadlife</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>VoidSculpture</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shard</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Bioferrite</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>RevenantSpine</thingDef>
+			</li>
+			<li Class="StockGenerator_BuyExpensiveSimple"></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>

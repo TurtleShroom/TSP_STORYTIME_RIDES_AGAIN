@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Defs>
 
+<Defs>
   <TraderKindDef>
     <defName>Caravan_CaravanCoop_BulkGoods</defName>
     <label>원자재 판매상</label>
     <stockGenerators>
-
       <!-- Resources -->
       <li Class="StockGenerator_SingleDef">
         <thingDef>Silver</thingDef>
@@ -121,11 +120,25 @@
         <countRange>1~7</countRange>
       </li>
       
-      <!-- Buying -->
-      <li Class="StockGenerator_BuyExpensiveSimple" />
-      <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
-      <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
-      
+		<!-- Buying -->
+		<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+			<thingDef>Shell_Deadlife</thingDef>
+		</li>
+		<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+			<thingDef>VoidSculpture</thingDef>
+		</li>
+		<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+			<thingDef>Shard</thingDef>
+		</li>
+		<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+			<thingDef>Bioferrite</thingDef>
+		</li>
+		<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+			<thingDef>RevenantSpine</thingDef>
+		</li>
+		<li Class="StockGenerator_BuyExpensiveSimple"></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+		<li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>      
     </stockGenerators>
   </TraderKindDef>
 
@@ -155,7 +168,22 @@
         <countRange>250~550</countRange>
       </li>
 
-      <!-- Buying -->
+			<!-- Buying -->
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shell_Deadlife</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>VoidSculpture</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shard</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Bioferrite</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>RevenantSpine</thingDef>
+			</li>
 			<li Class="StockGenerator_BuyExpensiveSimple" />
 			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
@@ -216,7 +244,6 @@
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>EggNog</tag>
 			</li>
-
     </stockGenerators>
   </TraderKindDef>
 
@@ -225,11 +252,10 @@
     <defName>Caravan_CaravanCoop_Exotic</defName>
     <label>희귀품 판매상</label>
     <stockGenerators>
-
       <!-- Resources -->
       <li Class="StockGenerator_SingleDef">
         <thingDef>Silver</thingDef>
-        <countRange>1500~2500</countRange>
+        <countRange>1500~7500</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>ComponentIndustrial</thingDef>
@@ -249,6 +275,7 @@
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>MedicineUltratech</thingDef>
+		<price>Expensive</price>
         <countRange>5~20</countRange>
       </li>
 
@@ -304,6 +331,12 @@
         <thingDefCountRange>2~3</thingDefCountRange>
         <countRange>1~2</countRange>
       </li>
+	  
+		<li Class="StockGenerator_SingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+			<thingDef>Shard</thingDef>
+			<price>Expensive</price>
+			<countRange>-3~1</countRange>
+		</li>
       
       <!-- Slaves -->
       <!-- none -->
@@ -336,9 +369,24 @@
         <kindCountRange>0~2</kindCountRange>
         <countRange>0~2</countRange>
       </li>
-      
-      <!-- Buying -->
-			<li Class="StockGenerator_BuyExpensiveSimple" />
+	  
+			<!-- Buying -->
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shell_Deadlife</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>VoidSculpture</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shard</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Bioferrite</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>RevenantSpine</thingDef>
+			</li>
+			<li Class="StockGenerator_BuyExpensiveSimple"></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>

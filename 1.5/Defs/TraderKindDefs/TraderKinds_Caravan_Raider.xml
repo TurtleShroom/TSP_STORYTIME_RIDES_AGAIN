@@ -6,7 +6,6 @@
 		<!-- <label>장물 판매상</label> -->
 		<label>stolen goods smuggler</label>
 		<stockGenerators>
-
 		  <!-- Resources -->
 		  <li Class="StockGenerator_SingleDef">
 			<thingDef>Silver</thingDef>
@@ -174,7 +173,7 @@
 				<thingDefCountRange>1~4</thingDefCountRange>
 				<countRange>1~2</countRange>
 				<customCountRanges>
-					<Hyperweave>-25~50</Hyperweave>
+					<Hyperweave>-10~50</Hyperweave>
 				</customCountRanges>
 			</li>
 			
@@ -198,10 +197,44 @@
 			</li>
 			
 			<li Class="StockGenerator_ReinforcedBarrels">
-				<countRange>0~1</countRange>
+				<countRange>1~2</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shard</thingDef>
+				<price>Expensive</price>
+				<countRange>-5~2</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Bioferrite</thingDef>
+				<price>Cheap</price>
+				<countRange>0~2</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>RevenantSpine</thingDef>
+				<price>Expensive</price>
+				<countRange>-10~1</countRange>
 			</li>
 
-			<li Class="StockGenerator_BuyExpensiveSimple" />
+			<!-- Buying -->
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shell_Deadlife</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>VoidSculpture</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shard</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Bioferrite</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>RevenantSpine</thingDef>
+			</li>
+			<li Class="StockGenerator_BuyExpensiveSimple"></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
@@ -261,7 +294,6 @@
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>EggNog</tag>
 			</li>
-
 		</stockGenerators>
 	</TraderKindDef>
 	
@@ -304,11 +336,26 @@
 	  -->
 	  
 		<li Class="StockGenerator_ReinforcedBarrels">
-			<countRange>4~14</countRange>
+			<countRange>7~30</countRange>
 		</li>
 
 		<!-- Buying -->
-		<li Class="StockGenerator_BuyExpensiveSimple" />
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shell_Deadlife</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>VoidSculpture</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shard</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Bioferrite</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>RevenantSpine</thingDef>
+			</li>
+		<li Class="StockGenerator_BuyExpensiveSimple"></li>
 		<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
 		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
 		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
@@ -368,27 +415,41 @@
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>EggNog</tag>
 			</li>
-
     </stockGenerators>
   </TraderKindDef>
   
-  <TraderKindDef>
-    <defName>Caravan_Raider_Drugs</defName>
-    <!-- <label>마약 거래상</label> -->
-	<label>drug smuggler</label>
-    <stockGenerators>
-      <li Class="StockGenerator_SingleDef">
-        <thingDef>Silver</thingDef>
-        <countRange>11800~15000</countRange>
-      </li>
-	
-     <li Class="StockGenerator_Category">
-        <categoryDef>Drugs</categoryDef>
-		<thingDefCountRange>12~17</thingDefCountRange>
-		<countRange>5~10</countRange>
-     </li>
+	<TraderKindDef>
+		<defName>Caravan_Raider_Drugs</defName>
+		<!-- <label>마약 거래상</label> -->
+		<label>drug smuggler</label>
+		<stockGenerators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>11800~15000</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+				<thingDefCountRange>12~17</thingDefCountRange>
+				<countRange>5~13</countRange>
+			</li>
    
-		<li Class="StockGenerator_BuyExpensiveSimple" />
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shell_Deadlife</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>VoidSculpture</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shard</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Bioferrite</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>RevenantSpine</thingDef>
+			</li>
+		<li Class="StockGenerator_BuyExpensiveSimple"></li>
 		<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
 		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
 		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
@@ -448,8 +509,8 @@
 		<li Class="StockGenerator_BuyTradeTag">
 			<tag>EggNog</tag>
 		</li>
-	 </stockGenerators>
-   </TraderKindDef>
+		</stockGenerators>
+	</TraderKindDef>
 	  
  <TraderKindDef>
     <defName>Caravan_Raider_Slaver</defName>
@@ -474,7 +535,7 @@
 		<!-- none -->
 
 		<!-- Buying -->
-		<li Class="StockGenerator_BuyExpensiveSimple" />
+		<li Class="StockGenerator_BuyExpensiveSimple"></li>
 		<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
 		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
 		<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
