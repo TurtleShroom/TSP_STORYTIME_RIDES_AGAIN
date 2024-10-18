@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-  
   <ThingDef ParentName="BenchBase">
     <defName>GnomeTable</defName>
     <label>Gnome kitchen</label>
@@ -80,10 +80,10 @@
 		<li MayRequire="Argon.VCEmp">VCE_CookSoupLavish_Carn</li>
 		<li MayRequire="Argon.VCEmp">VCE_CookSoupGourmet_Veg</li>
 		<li MayRequire="Argon.VCEmp">VCE_CookSoupGourmet_Carn</li>
-		<li MayRequire="higgs.cozarkian.entomophagy">Insect_CookSoupSimple</li>
-		<li MayRequire="higgs.cozarkian.entomophagy">Insect_CookSoupFine</li>
-		<li MayRequire="higgs.cozarkian.entomophagy">Insect_CookSoupLavish</li>
-		<li MayRequire="higgs.cozarkian.entomophagy">Insect_CookSoupGourmet</li>
+		<li MayRequire="higgs.cozarkian.entomophagy,vanillaexpanded.vcooke">Insect_CookSoupSimple</li>
+		<li MayRequire="higgs.cozarkian.entomophagy,vanillaexpanded.vcooke">Insect_CookSoupFine</li>
+		<li MayRequire="higgs.cozarkian.entomophagy,vanillaexpanded.vcooke">Insect_CookSoupLavish</li>
+		<li MayRequire="higgs.cozarkian.entomophagy,vanillaexpanded.vcooke">Insect_CookSoupGourmet</li>
 		<!--
 		<li MayRequire="Mlie.AncientRimSPQRim">AR_MakeSalad</li>
 		<li MayRequire="Mlie.AncientRimSPQRim">TSP_AR_MakeSaladBulk</li>
@@ -106,10 +106,18 @@
 		<li MayRequire="tangw.taco">Cook_TW_Taco_Tortilla</li>
 		<li MayRequire="mlie.vanillalikewheat">VLW_BakeBread</li>
 		<li MayRequire="mlie.vanillalikewheat">VLW_BakeCake</li>
+		<li MayRequire="mlie.vanillalikewheat">VLW_BakeHardtack</li>
 		<li MayRequire="lvgx.dontstarvefood">CookMeatyStew</li>
 		<li MayRequire="lat.rimstro">Cook_RS_ChefsDish</li>
 		<li MayRequire="lat.rimstro">Cook_RS_ChefsDish_bulk</li>
 		<li MayRequire="8z.cookcarefully">CookMealCarefully</li>
+		<li MayRequire="sarg.rimbees">RB_CookHoneyMealSimple</li>
+		<li MayRequire="sarg.rimbees">RB_CookHoneyMealSimpleBulk</li>
+		<li MayRequire="sarg.rimbees">RB_CookHoneyMealFine</li>
+		<li MayRequire="sarg.rimbees">RB_CookHoneyMealFineBulk</li>
+		<li MayRequire="sarg.rimbees">RB_CookHoneyMealLavish</li>
+		<li MayRequire="sarg.rimbees">RB_CookHoneyMealLavishBulk</li>
+		<li MayRequire="sarg.rimbees,vanillaexpanded.vcooke">RB_CookHoneyMealGourmet</li>
 	</recipes>
     <comps>
       <li Class="CompProperties_Power">
@@ -157,6 +165,17 @@
     <researchPrerequisites>
 		<li>gnomeCooking</li>
     </researchPrerequisites>
+	<modExtensions>
+		<!--
+		<li Class="RecipeInheritance.ThingDefExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<inheritRecipesFrom MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<li MayRequire="lat.rimstro,oskarpotocki.vanillafactionsexpanded.core">RS_Blender</li>
+				<li MayRequire="mlie.vanillalikewheat">QuernLowTech</li>
+				<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
+			</inheritRecipesFrom>
+		</li>
+		-->
+	</modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
