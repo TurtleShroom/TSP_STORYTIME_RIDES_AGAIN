@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- ==================== Nokia Bomb ========================== -->
+
+  <ThingDef ParentName="BaseMakeableGrenade">
+    <defName>Nokia_Bomb</defName>
+    <label>Nokia Bomb</label>
+    <description>A device which concentrates all the might of a Nokia-3310 in a forty tile radius. If he cannot escape, its user should not expect to live to tell the tale of desecrating a Nokia phone.</description>
+    <recipeMaker>
+      <researchPrerequisite>Machining</researchPrerequisite>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Nades/nokia3310bomb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <Mass>3</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>30000</WorkToMake>
+    </statBases>
+    <costList>
+      <nokia3310a>15</nokia3310a>
+      <Chemfuel>10</Chemfuel>
+    </costList>
+    <weaponTags>
+      <!-- <li>GrenadeDestructive</li> -->
+      <li>EmpireGrenadeDestructive</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <verbs>
+      <li>
+        <label>throw a grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>12.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>5</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_NokiaFrag</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>40</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="BaseFragGrenadeProjectiled_Nokia" ParentName="BaseGrenadeProjectile" Abstract="True">
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/nokia3310bomb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+		<explosionRadius>40</explosionRadius >
+		<damageDef>Bomb</damageDef>
+		<!-- Use default damage from explosion def -->
+		<explosionDelay>500</explosionDelay>
+		<damageAmountBase>300</damageAmountBase>
+		<armorPenetrationBase>3</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFragGrenadeProjectiled_Nokia">
+    <defName>Proj_NokiaFrag</defName>
+    <label>Nokia bomb</label>
+  </ThingDef>
+</Defs>
