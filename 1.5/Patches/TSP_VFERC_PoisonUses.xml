@@ -317,11 +317,37 @@
 					<li>TableMachining</li>
 					<li>FueledSmithy</li>
 					<li>ElectricSmithy</li>
-					<li>ManualGrinder</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
 					<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
 				</recipeUsers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_WasteCrate"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRecyclingE_WasteCrate"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+			<value>
+				<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional" MayRequire="vanillaexpanded.recycling">
+	<!-- Does this exist? -->
+		<xpath MayRequire="vanillaexpanded.recycling">/Defs/ThingCategoryDef[defName="WPM_barrelcategory"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace" MayRequire="vanillaexpanded.recycling">
+			<success MayRequire="vanillaexpanded.recycling">Always</success>
+			<xpath MayRequire="vanillaexpanded.recycling">/Defs/ThingCategoryDef[defName="WPM_barrelcategory"]/parent</xpath>
+			<value MayRequire="vanillaexpanded.recycling">
+				<parent>VRecyclingE_SpecializedPacks</parent>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

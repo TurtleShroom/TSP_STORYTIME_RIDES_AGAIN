@@ -1992,4 +1992,18 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ResearchProjectDef[defName="ContainToxicWaste"]/baseCost</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ResearchProjectDef[defName="ContainToxicWaste"]/baseCost</xpath>
+			<value>
+				<baseCost>200</baseCost>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

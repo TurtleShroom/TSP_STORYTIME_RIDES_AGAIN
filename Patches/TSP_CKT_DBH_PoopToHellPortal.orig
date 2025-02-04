@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="CKT_Can_Of_Death"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef ParentName="TSP_WW_CKT_DrugRecipe_Base">
+					<defName>TSP_CKT_DZ_BadSmellJar_PoopChunk</defName>
+					<label>make Bad Smell Jar from Poop Chunk</label>
+					<description>Take a turd the size of a man and compress it into a rotten, disgusting, fetid mess, and seal it in a jar.</description>
+					<descriptionHyperlinks>
+						<ThingDef>CKT_Can_Of_Death</ThingDef>
+						<ThingDef>DZ_ChunkPoop</ThingDef>
+					</descriptionHyperlinks>
+					<jobString>sealing Portal to Hell</jobString>
+					<workAmount>275</workAmount>
+					<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+					<workSkill>Cooking</workSkill>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<customSummary>poop chunk</customSummary>
+								<thingDefs>
+									<li>DZ_ChunkPoop</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter Inherit="False">
+						<thingDefs>
+							<li>DZ_ChunkPoop</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter Inherit="False">
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+						</thingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<CKT_Can_Of_Death>30</CKT_Can_Of_Death>
+					</products>
+					<recipeUsers>
+						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					</recipeUsers>
+					<researchPrerequisites></researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
