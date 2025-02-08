@@ -101,13 +101,14 @@
 	
 	<WorkGiverDef>
 		<defName>ST_Grinding_Electric</defName>
-		<label>grind stuff at a grinder</label>
+		<label>grind stuff at grinder</label>
 		<giverClass>WorkGiver_DoBill</giverClass>
 		<workType>BasicWorker</workType> <!-- Anyone can turn a handle -->
 		<priorityInType>95</priorityInType>
 		<fixedBillGiverDefs>
 			<!-- <li>ManualGrinder</li> -->
 			<li>ElectricGrinder</li>
+			<li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li>
 		</fixedBillGiverDefs>
 		<verb>grind</verb>
 		<gerund>grinding at</gerund>

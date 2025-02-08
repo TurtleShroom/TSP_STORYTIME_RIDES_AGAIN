@@ -551,8 +551,8 @@
 			<xpath>/Defs/ThingDef[defName = "MakeBoringPizza" or defName = "MakeCheesePizza" or defName = "MakePepperoniPizza" or defName = "MakeCombinationPizza" or defName = "MakeBaconPizza" or defName = "MakeBulgogiPizza" or defName = "MakeVeggiePizza" or defName = "MakeSteakPizza" or defName = "MakeMeatBallPizza" or defName = "MakeBoomratPizza" or defName = "MakeAmbrosiaPizza" or defName = "MakeBoringPizzaBulk" or defName = "MakeCheesePizzaBulk" or defName = "MakePepperoniPizzaBulk" or defName = "MakeCombinationPizzaBulk" or defName = "MakeBaconPizzaBulk" or defName = "MakeBulgogiPizzaBulk" or defName = "MakeVeggiePizzaBulk" or defName = "MakeSteakPizzaBulk" or defName = "MakeMeatBallPizzaBulk" or defName = "MakeBoomratPizzaBulk" or defName = "MakeAmbrosiaPizzaBulk"]/recipeUsers</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeTable</li>
-				<li MayRequire="tarojun.morishep.onioftherim">Oni_GroundOven</li>
-				<li MayRequire="morishep.tarojun.onioftherim">Oni_GroundOven</li>
+				<li MayRequire="tarojun.morishep.onioftherim">OotR_GroundOven</li>
+				<li MayRequire="morishep.tarojun.onioftherim">OotR_GroundOven</li>
 			</value>
 		</match>
 	</Operation>
@@ -561,9 +561,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]/comps</xpath>
+		<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]/comps</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]</xpath>
+			<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]</xpath>
 			<success>Always</success>
 			<value>
 				<comps></comps>
@@ -573,9 +573,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]/recipes</xpath>
+		<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]/recipes</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]</xpath>
+			<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]</xpath>
 			<success>Always</success>
 			<value>
 				<recipes></recipes>
@@ -585,11 +585,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]</xpath>
+		<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Oni_GroundOven"]/recipes</xpath>
+			<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]/recipes</xpath>
 			<value>
 				<li MayRequire="onekimchiman.pizzatime">MakeBoringPizza</li>
 				<li MayRequire="onekimchiman.pizzatime">MakeCheesePizza</li>

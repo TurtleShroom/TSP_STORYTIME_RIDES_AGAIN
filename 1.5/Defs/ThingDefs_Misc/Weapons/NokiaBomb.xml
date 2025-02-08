@@ -42,7 +42,7 @@
         <verbClass>Verb_LaunchProjectile</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <range>12.9</range>
-        <forcedMissRadius>1.9</forcedMissRadius>
+        <forcedMissRadius>6</forcedMissRadius>
         <warmupTime>1.5</warmupTime>
         <noiseRadius>5</noiseRadius>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
@@ -65,10 +65,6 @@
 
   <ThingDef Name="BaseFragGrenadeProjectiled_Nokia" ParentName="BaseGrenadeProjectile" Abstract="True">
     <thingClass>Projectile_Explosive</thingClass>
-    <graphicData>
-      <texPath>Things/Projectile/nokia3310bomb</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
     <projectile>
 		<explosionRadius>40</explosionRadius >
 		<damageDef>Bomb</damageDef>
@@ -82,5 +78,9 @@
   <ThingDef ParentName="BaseFragGrenadeProjectiled_Nokia">
     <defName>Proj_NokiaFrag</defName>
     <label>Nokia bomb</label>
+    <graphicData>
+      <texPath>Things/Projectile/nokia3310bomb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
   </ThingDef>
 </Defs>
