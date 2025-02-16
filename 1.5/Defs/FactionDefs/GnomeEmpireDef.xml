@@ -32,6 +32,7 @@
     </disallowedMemes>
     <requiredMemes>
 		<li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>
+		<li MayRequire="sarg.alphamemes">AM_Epicurean</li>
 		
 		<!-- If you have the Mod -->
 		<li MayRequire="VanillaExpanded.VMemesE">VME_Aristocratic</li>
@@ -104,6 +105,13 @@
       </points>
     </raidCommonalityFromPointsCurve>
 	<humanlikeFaction Inherit="False">true</humanlikeFaction>
+	<xenotypeSet MayRequire="ludeon.rimworld.biotech">
+		<xenotypeChances MayRequire="ludeon.rimworld.biotech">
+			<BS_Gnome MayRequire="redmattis.bigsmall,ludeon.rimworld.biotech">0.1</BS_Gnome>
+			<Turn_XenoType_Regalid MayRequire="turnovus.biotech.integratedxenotypes,ludeon.rimworld.biotech">0.01</Turn_XenoType_Regalid>
+			<HBX_Highborn MayRequire="elsov.highborn,ludeon.rimworld.biotech">0.012</HBX_Highborn>
+		</xenotypeChances>
+	</xenotypeSet>
     <pawnGroupMakers>
       <li>
         <kindDef>Peaceful</kindDef>

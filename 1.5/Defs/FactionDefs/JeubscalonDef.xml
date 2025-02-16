@@ -103,6 +103,15 @@
         <!--Constant 1 at all points levels-->
       </points>
     </raidCommonalityFromPointsCurve>
+		<xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+			<xenotypeChances MayRequire="Ludeon.RimWorld.Biotech">
+				<BEWH_DPKhorne MayRequire="phonicmas.40kgenes,Ludeon.RimWorld.Biotech">0.01</BEWH_DPKhorne>
+				<BEWH_KhorneMarine MayRequire="phonicmas.40kgenes,Ludeon.RimWorld.Biotech">0.01</BEWH_KhorneMarine>
+				<BEWH_KhorneCultist MayRequire="phonicmas.40kgenes,Ludeon.RimWorld.Biotech">0.02</BEWH_KhorneCultist>
+				<BEWH_NurgleCultist MayRequire="phonicmas.40kgenes,Ludeon.RimWorld.Biotech">0.02</BEWH_NurgleCultist>
+			</xenotypeChances>
+			<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+		</xenotypeSet>
     <pawnGroupMakers>
       <li>
         <kindDef>Combat</kindDef>
@@ -112,14 +121,18 @@
 			<Snaff_HighKing>25</Snaff_HighKing>
 			<Jeub>400</Jeub>
 			<Bat MayRequire="zal.witchinghour">5</Bat>
+			<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">40</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
         </options>
       </li>
       <li>
         <kindDef>Peaceful</kindDef>
 		<commonality>100</commonality>
         <options>
-          <PlayerJeub>100</PlayerJeub>
-		  <Snaff_HighKing>15</Snaff_HighKing>
+			<PlayerJeub>100</PlayerJeub>
+			<Snaff_HighKing>15</Snaff_HighKing>
+			<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">1</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+			<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">1.54</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+			<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">1</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
         </options>
       </li>
       <li>
@@ -135,22 +148,94 @@
 			<Elephant>50</Elephant>
         </carriers>
         <guards>
-          <PlayerJeub>15</PlayerJeub>
-          <Jeub>400</Jeub>
-		  <Snaff_HighKing>1</Snaff_HighKing>
-		  <Bat MayRequire="zal.witchinghour">5</Bat>
+			<PlayerJeub>15</PlayerJeub>
+			<Jeub>400</Jeub>
+			<Snaff_HighKing>1</Snaff_HighKing>
+			<Bat MayRequire="zal.witchinghour">5</Bat>
+			<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">1</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+			<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">1.54</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+			<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">1</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
         </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+		<commonality>90</commonality>
+        <options>
+			<JeubCaller>100</JeubCaller>
+			<PlayerJeub>100</PlayerJeub>
+			<Jeub>500</Jeub>
+			<Snaff_HighKing>20</Snaff_HighKing>
+			<Bat MayRequire="zal.witchinghour">1</Bat>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+		<commonality>10</commonality>
+        <options>
+			<JeubCaller>100</JeubCaller>
+			<PlayerJeub>1</PlayerJeub>
+			<Jeub>50</Jeub>
+			<Snaff_HighKing>2</Snaff_HighKing>
+			<Bat MayRequire="zal.witchinghour">51</Bat>
+        </options>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
 		<commonality>100</commonality>
         <options>
-          <PlayerJeub>100</PlayerJeub>
-          <Jeub>500</Jeub>
-		  <Snaff_HighKing>20</Snaff_HighKing>
-		  <Bat MayRequire="zal.witchinghour">1</Bat>
+			<JeubCaller>10</JeubCaller>
+			<Jeub>1000</Jeub>
+			<Snaff_HighKing>1</Snaff_HighKing>
+			<Bat MayRequire="zal.witchinghour">25</Bat>
+			<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">25</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+			<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">25</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+			<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">25</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
         </options>
       </li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Hunters</kindDef>
+			<commonality>1</commonality>
+			<options>
+				<JeubCaller>10</JeubCaller>
+				<Jeub>190</Jeub>
+				<Bat MayRequire="zal.witchinghour">5</Bat>
+				<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">5</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+				<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">5</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+				<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">5</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
+			</options>
+		</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Loggers</kindDef>
+			<commonality>100</commonality>
+			<options>
+				<JeubCaller>10</JeubCaller>
+				<Jeub>190</Jeub>
+				<Bat MayRequire="zal.witchinghour">5</Bat>
+				<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">5</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+				<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">5</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+				<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">5</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
+			</options>
+		</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Farmers</kindDef>
+			<commonality>100</commonality>
+			<options>
+				<JeubCaller>10</JeubCaller>
+				<Jeub>190</Jeub>
+				<Bat MayRequire="zal.witchinghour">5</Bat>
+				<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">5</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+				<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">5</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+				<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">5</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
+			</options>
+		</li>
+		<li MayRequire="Ludeon.Rimworld.Ideology">
+			<kindDef>Miners</kindDef>
+			<commonality>300</commonality>
+			<options>
+				<JeubCaller>100</JeubCaller>
+				<Jeub>999</Jeub>
+			</options>
+		</li>
     </pawnGroupMakers>
 	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
     <fixedLeaderKinds>
