@@ -4,10 +4,13 @@
  <ThingDef ParentName="PlantBase">
     <defName>ST_Plant_Sugar</defName>
     <label>Gnome Sugarcane plant</label>
-    <description>A special form of sugarcane, domesticated by Gnomes and distinct from ordinary sugar.</description>
+    <description>A special form of sugarcane, domesticated by Gnomes and distinct from ordinary sugar by both its purity and its color.</description>
     <statBases>
-      <MaxHitPoints>85</MaxHitPoints>
-      <Nutrition>0.1</Nutrition>
+		<MaxHitPoints>85</MaxHitPoints>
+		<Nutrition>0.1</Nutrition>
+		<VV_MinGrowthPlantGatherable MayRequire="gguake.race.vivi">0.5</VV_MinGrowthPlantGatherable>
+		<VV_PlantGatherCooldown MayRequire="gguake.race.vivi">0.5</VV_PlantGatherCooldown>
+		<VV_PlantHoneyGatherYield MayRequire="gguake.race.vivi">2</VV_PlantHoneyGatherYield>
     </statBases>
     <graphicData>
       <texPath>Things/Plants/SugarPlant</texPath>
@@ -34,5 +37,8 @@
       <visualSizeRange>0.6~1.3</visualSizeRange>
       <wildOrder>2</wildOrder>
     </plant>
+	<comps>
+		<li Class="VVRace.CompProperties_RepeatGatherable" MayRequire="gguake.race.vivi"></li>
+	</comps>
   </ThingDef>
 </Defs>

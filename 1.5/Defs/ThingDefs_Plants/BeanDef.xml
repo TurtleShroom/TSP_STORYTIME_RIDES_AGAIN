@@ -13,8 +13,12 @@
 			<ThingDef>Alien_BeanMan</ThingDef>
 		</descriptionHyperlinks>
 		<statBases>
-		  <MaxHitPoints>85</MaxHitPoints>
-		  <Nutrition>0.1</Nutrition>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Nutrition>0.1</Nutrition>
+			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
+			<VV_MinGrowthPlantGatherable MayRequire="gguake.race.vivi">0.9</VV_MinGrowthPlantGatherable>
+			<VV_PlantGatherCooldown MayRequire="gguake.race.vivi">1</VV_PlantGatherCooldown>
+			<VV_PlantHoneyGatherYield MayRequire="gguake.race.vivi">1.1</VV_PlantHoneyGatherYield>
 		</statBases>
 		<graphicData>
 		  <texPath>Things/Plants/BeanPlant</texPath>
@@ -263,5 +267,8 @@
 
 		  </wildBiomes>
 		</plant>
+		<comps>
+			<li Class="VVRace.CompProperties_RepeatGatherable" MayRequire="gguake.race.vivi"></li>
+		</comps>
 	</ThingDef>
 </Defs>

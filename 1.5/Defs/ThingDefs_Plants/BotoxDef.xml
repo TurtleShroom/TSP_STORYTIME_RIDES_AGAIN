@@ -8,6 +8,10 @@
 		<statBases>
 		  <MaxHitPoints>85</MaxHitPoints>
 		  <Nutrition>0.1</Nutrition>
+			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">0.78</Mashed_Ashlands_AshResistance>
+			<VV_MinGrowthPlantGatherable MayRequire="gguake.race.vivi">0.31</VV_MinGrowthPlantGatherable>
+			<VV_PlantGatherCooldown MayRequire="gguake.race.vivi">6</VV_PlantGatherCooldown>
+			<VV_PlantHoneyGatherYield MayRequire="gguake.race.vivi">0.48</VV_PlantHoneyGatherYield>
 		</statBases>
 		<graphicData>
 		  <texPath>Things/Plants/Botox</texPath>
@@ -31,5 +35,8 @@
 		  <visualSizeRange>0.4~1.2</visualSizeRange>
 		  <wildOrder>2</wildOrder>
 		</plant>
+		<comps>
+			<li Class="VVRace.CompProperties_RepeatGatherable" MayRequire="gguake.race.vivi"></li>
+		</comps>
 	</ThingDef>
 </Defs>

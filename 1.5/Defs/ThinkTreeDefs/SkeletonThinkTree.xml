@@ -1,11 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-
 <Defs>
 	<ThinkTreeDef>
 		<defName>SkeletonPirate</defName>
 		<thinkRoot Class="ThinkNode_Priority">
 			<subNodes>
+				<!-- Despawned -->
+				<!--
+				<li Class="ThinkNode_Subtree" MayRequire="ludeon.rimworld.anomaly">
+					<treeDef MayRequire="ludeon.rimworld.anomaly">Despawned</treeDef>
+				</li>
+				-->
+			
+				<!-- Keep lying down if we have to -->
+				<li Class="ThinkNode_ConditionalMustKeepLyingDown">
+					<subNodes>
+						<!-- Do a queued job if possible -->
+						<li Class="ThinkNode_QueuedJob">
+							<inBedOnly>false</inBedOnly>
+						</li>
+
+						<!-- Keep lying down -->
+						<li Class="JobGiver_KeepLyingDown"></li>
+					</subNodes>
+				</li>
+			
 				<li Class="ThinkNode_Subtree">
 					<treeDef>Downed</treeDef>
 				</li>
@@ -14,12 +33,39 @@
 					<treeDef>BurningResponse</treeDef>
 				</li>
 				
+				<!-- React to close melee threat -->
+				<li Class="JobGiver_ReactToCloseMeleeThreat"></li>
+				
 				<!-- Do a queued job -->
-				<li Class="ThinkNode_QueuedJob" />
+				<li Class="ThinkNode_QueuedJob"></li>
+				
+				<!-- Forced goto -->
+				<li Class="ThinkNode_ConditionalForcedGoto">
+					<subNodes>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>Misc</tagToGive>
+							<subNodes>
+								<li Class="JobGiver_ForcedGoto"></li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+				
+				<!-- Escaping-->
+				<li Class="ThinkNodeConditional_EscapingHoldingPlatform" MayRequire="ludeon.rimworld.anomaly">
+					<subNodes MayRequire="ludeon.rimworld.anomaly">
+						<li Class="JobGiver_EscapingHoldingPlatform" MayRequire="ludeon.rimworld.anomaly"></li>
+					</subNodes>
+				</li>
 				
 				<!-- Lord -->
 				<li Class="ThinkNode_Subtree">
 					<treeDef>LordDuty</treeDef>
+				</li>
+				
+				<li Class="JobGiver_ShamblerFight" MayRequire="ludeon.rimworld.anomaly">
+					<targetAcquireRadius MayRequire="ludeon.rimworld.anomaly">40</targetAcquireRadius>
+					<targetKeepRadius MayRequire="ludeon.rimworld.anomaly">51</targetKeepRadius>
 				</li>
 
 				<!-- Idle -->
@@ -28,12 +74,13 @@
 					<subNodes>
 						<li Class="JobGiver_WanderAnywhere">
 							<maxDanger>Deadly</maxDanger>
+							<ticksBetweenWandersRange>160~200</ticksBetweenWandersRange>
 						</li>
 					</subNodes>
 				</li>
         
 				<!-- Idle error -->
-				<li Class="JobGiver_IdleError"/>
+				<!-- <li Class="JobGiver_IdleError"></li> -->
 			</subNodes>
 		</thinkRoot>
 	</ThinkTreeDef>
@@ -42,6 +89,19 @@
 		<defName>TSP_ST_SkeletonPirateCanTame</defName>
 		<thinkRoot Class="ThinkNode_Priority">
 			<subNodes>
+				<!-- Keep lying down if we have to -->
+				<li Class="ThinkNode_ConditionalMustKeepLyingDown">
+					<subNodes>
+						<!-- Do a queued job if possible -->
+						<li Class="ThinkNode_QueuedJob">
+							<inBedOnly>false</inBedOnly>
+						</li>
+
+						<!-- Keep lying down -->
+						<li Class="JobGiver_KeepLyingDown"></li>
+					</subNodes>
+				</li>
+			
 				<li Class="ThinkNode_Subtree">
 					<treeDef>Downed</treeDef>
 				</li>
@@ -51,7 +111,7 @@
 				</li>
 				
 				<!-- Do a queued job -->
-				<li Class="ThinkNode_QueuedJob" />
+				<li Class="ThinkNode_QueuedJob"></li>
 				
 				<!-- Lord -->
 				<li Class="ThinkNode_Subtree">
@@ -68,9 +128,6 @@
 					</subNodes>
 				</li>
         
-				<!-- Idle error -->
-				<li Class="JobGiver_IdleError"/>
-				
 				<!-- Tame animal: do useful things for the colony-->
 				<li Class="ThinkNode_ConditionalHasFaction">
 					<subNodes>
@@ -79,9 +136,7 @@
 							<mtbHours>0.33</mtbHours>
 								<subNodes>
 									<li Class="ThinkNode_ConditionalRequireCapacities">
-										<requiredCapacities>
-											<li>Manipulation</li>
-										</requiredCapacities>
+										<requiredCapacities></requiredCapacities>
 										<subNodes>
 											<li Class="ThinkNode_ConditionalTrainableCompleted">
 											  <trainable>Haul</trainable>
@@ -89,7 +144,7 @@
 													<li Class="ThinkNode_Tagger">
 														<tagToGive>TrainedAnimalBehavior</tagToGive>
 														<subNodes>
-															<li Class="JobGiver_Haul" />
+															<li Class="JobGiver_Haul"></li>
 														</subNodes>
 													</li>
 												</subNodes>
@@ -100,6 +155,9 @@
 						</li>
 					</subNodes>
 				</li>
+				
+				<!-- Idle error -->
+				<li Class="JobGiver_IdleError"></li>
 			</subNodes>
 		</thinkRoot>
 	</ThinkTreeDef>

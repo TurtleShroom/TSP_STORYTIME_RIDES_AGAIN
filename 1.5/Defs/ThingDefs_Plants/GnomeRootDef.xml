@@ -8,6 +8,9 @@
     <statBases>
       <MaxHitPoints>85</MaxHitPoints>
       <Nutrition>0.1</Nutrition>
+			<VV_MinGrowthPlantGatherable MayRequire="gguake.race.vivi">0.5</VV_MinGrowthPlantGatherable>
+			<VV_PlantGatherCooldown MayRequire="gguake.race.vivi">0.5</VV_PlantGatherCooldown>
+			<VV_PlantHoneyGatherYield MayRequire="gguake.race.vivi">2</VV_PlantHoneyGatherYield>
     </statBases>
     <graphicData>
       <texPath>Things/Plants/GnomeRoot</texPath>
@@ -33,5 +36,8 @@
       <visualSizeRange>1~1.15</visualSizeRange>
       <wildOrder>2</wildOrder>
     </plant>
+	<comps>
+		<li Class="VVRace.CompProperties_RepeatGatherable" MayRequire="gguake.race.vivi"></li>
+	</comps>
   </ThingDef>
 </Defs>

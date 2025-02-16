@@ -123,11 +123,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="DMS_Mech_Tarbosaurus"]</xpath>
+		<xpath>/Defs/ThingDef/modExtensions/li/UsableWeaponTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/modExtensions/li[@Class="DMS.MechWeaponExtension"]/UsableWeaponTags</xpath>
+			<xpath>/Defs/ThingDef/modExtensions/li/UsableWeaponTags</xpath>
 			<value>
 				<li>TSP_DMS_Ranged</li>
 				<li>GoblinTech</li>

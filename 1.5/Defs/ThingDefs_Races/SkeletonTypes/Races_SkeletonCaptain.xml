@@ -12,7 +12,7 @@
 	  <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
 	  <MeatAmount Inherit="False">150</MeatAmount>
-	  <HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">1.1</HSAU_SoulRendSensitivity> <!-- The captain's power is immense and terrifying. -->
+	  <HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">1.52</HSAU_SoulRendSensitivity> <!-- The captain's power is immense and terrifying. -->
 	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_SanctusSensitivity>
 	  <MinimumContainmentStrength MayRequire="ludeon.rimworld.anomaly">85</MinimumContainmentStrength>
     </statBases>
@@ -50,32 +50,35 @@
     </tools>
 		<verbs>
 			<li>
-				<verbClass>Verb_Shoot</verbClass>
+				<!-- <verbClass>Verb_Shoot</verbClass> -->
+				<verbClass>Verb_LaunchProjectile</verbClass>
 				<accuracyTouch>1</accuracyTouch>
-				<accuracyShort>1</accuracyShort>
-				<accuracyMedium>0.8</accuracyMedium>
-				<accuracyLong>0.7</accuracyLong>
+				<accuracyShort>0.9</accuracyShort>
+				<accuracyMedium>0.61</accuracyMedium>
+				<accuracyLong>0.3</accuracyLong>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>SkeletonBlast</defaultProjectile>
-				<warmupTime>1.5</warmupTime>
+				<defaultProjectile>ST_SkeletonBlast</defaultProjectile>
+				<warmupTime>1.08</warmupTime>
 				<burstShotCount>3</burstShotCount>
-				<minRange>3</minRange>
+				<minRange>5</minRange>
 				<range>25</range>				
 				<soundCast>Shot_NeedleGun</soundCast>
 				<muzzleFlashScale>13</muzzleFlashScale>
 				<label>ethereal skeleton blast</label>
-				<requireLineOfSight>false</requireLineOfSight>
+				<requireLineOfSight>true</requireLineOfSight>
 				<commonality>1</commonality>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
 			</li>
 		</verbs>
     <race>
 	  <intelligence>ToolUser</intelligence>
       <body>TSP_ST_SkeletalMan</body>
-		<!--
 		<deathAction>
 			<workerClass>DeathActionWorker_SmallExplosion</workerClass>
 		</deathAction>
-		-->
 	  <!-- <deathActionWorkerClass>TorannMagic.DeathWorker_Skeletal</deathActionWorkerClass> -->
       <baseBodySize>2</baseBodySize>
       <baseHungerRate>0</baseHungerRate>
@@ -98,10 +101,10 @@
 			<makeNonFleeingToo>true</makeNonFleeingToo>
 		</li>
 		<li Class="CompProperties_ProducesBioferrite" MayRequire="ludeon.rimworld.anomaly">
-			<bioferriteDensity>2</bioferriteDensity>
+			<bioferriteDensity>4</bioferriteDensity>
 		</li>
 		<li Class="CompProperties_Studiable" MayRequire="ludeon.rimworld.anomaly">
-			<frequencyTicks>100000</frequencyTicks>
+			<frequencyTicks>55000</frequencyTicks>
 			<knowledgeCategory>Advanced</knowledgeCategory>
 			<anomalyKnowledge>4</anomalyKnowledge>
 			<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
@@ -165,17 +168,20 @@
   
   
 	<ThingDef ParentName="BaseBullet">
-		<defName>SkeletonBlast</defName>
+		<defName>ST_SkeletonBlast</defName>
 		<label>ethereal blast</label>
+		<thingClass>Projectile_Explosive</thingClass>
 		<graphicData>
 			<texPath>Projectiles/TSP_ST_LoadedFemur</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
 			<damageDef>Thump</damageDef>
+			<explosionRadius>3</explosionRadius>
 			<damageAmountBase>18</damageAmountBase>
 			<stoppingPower>25</stoppingPower>
-			<speed>75</speed>
+			<speed>166</speed>
+			<explosionDelay>90</explosionDelay>
 		</projectile>
   </ThingDef>
 </Defs>

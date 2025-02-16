@@ -491,12 +491,15 @@
           <success>Always</success>
           <value>
             <li>ST_Lemon</li>
+			<li MayRequire="vanillaexpanded.vbrewe">VBE_Gin</li>
+			<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
           </value>
         </li>
         <li Class="PatchOperationInsert">
           <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
           <success>Always</success>
           <value>
+			<li>ST_Lemon</li>
             <li MayRequire="vanillaexpanded.vbrewe">VBE_Gin</li>
 			<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
           </value>
@@ -505,6 +508,7 @@
           <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
           <success>Always</success>
           <value>
+			<li>ST_Lemon</li>
             <li MayRequire="vanillaexpanded.vbrewe">VBE_Gin</li>
 			<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
           </value>
@@ -513,6 +517,7 @@
           <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
           <success>Always</success>
           <value>
+			<li>ST_Lemon</li>
             <li MayRequire="vanillaexpanded.vbrewe">VBE_Gin</li>
 			<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
           </value>
@@ -521,6 +526,7 @@
           <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
           <success>Always</success>
           <value>
+			<li>ST_Lemon</li>
             <li MayRequire="vanillaexpanded.vbrewe">VBE_Gin</li>
 			<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
           </value>
@@ -529,7 +535,9 @@
           <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_RawLemon"]</xpath>
           <success>Always</success>
           <value>
+			<li>ST_Lemon</li>
             <li MayRequire="vanillaexpanded.vbrewe">VBE_Gin</li>
+			<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
           </value>
         </li>
         <li Class="PatchOperationRemove">
@@ -552,21 +560,21 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef/costList/VCE_RawLemon</xpath>
 			<value>
-				<VBE_Gin>1</VBE_Gin>
+				<ST_Lemon>2</ST_Lemon>
 			</value>
 		</li>
 		<li Class="PatchOperationReplace">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="CranberryLongDrink"]/costList/VCE_RawLemon</xpath>
 			<value>
-				<VBE_Gin>1</VBE_Gin>
+				<ST_Lemon>2</ST_Lemon>
 			</value>
 		</li>
 		<li Class="PatchOperationReplace">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="FinnishLongDrink"]/costList/VCE_RawLemon</xpath>
 			<value>
-				<VBE_Gin>1</VBE_Gin>
+				<ST_Lemon>1</ST_Lemon>
 			</value>
 		</li>
 		<li Class="PatchOperationAdd">

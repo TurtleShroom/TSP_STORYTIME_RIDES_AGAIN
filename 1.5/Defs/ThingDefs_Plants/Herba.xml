@@ -8,6 +8,9 @@
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
       <Nutrition>0.50</Nutrition>
+		<VV_MinGrowthPlantGatherable MayRequire="gguake.race.vivi">0.5</VV_MinGrowthPlantGatherable>
+		<VV_PlantGatherCooldown MayRequire="gguake.race.vivi">1</VV_PlantGatherCooldown>
+		<VV_PlantHoneyGatherYield MayRequire="gguake.race.vivi">1</VV_PlantHoneyGatherYield>
     </statBases>
     <graphicData>
       <texPath>Things/Plants/Herbs/Herba</texPath>
@@ -45,6 +48,9 @@
 			<AridShrubland>0.01</AridShrubland>
 		</wildBiomes>
     </plant>
+	<comps>
+		<li Class="VVRace.CompProperties_RepeatGatherable" MayRequire="gguake.race.vivi"></li>
+	</comps>
   </ThingDef>
   
 </Defs>

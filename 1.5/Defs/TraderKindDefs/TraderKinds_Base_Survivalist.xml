@@ -139,12 +139,12 @@
       <li Class="StockGenerator_Tag">
         <tradeTag>Artifact</tradeTag>
         <thingDefCountRange>1</thingDefCountRange>
-        <countRange>1~2</countRange>
+        <countRange>0~1</countRange>
       </li>
       <li Class="StockGenerator_Tag">
         <tradeTag>ExoticMisc</tradeTag>
         <thingDefCountRange>2</thingDefCountRange>
-        <countRange>1~2</countRange>
+        <countRange>0~1</countRange>
       </li>
 
       <!-- 동물 -->
@@ -202,6 +202,32 @@
 			<li Class="StockGenerator_ReinforcedBarrels">
 				<countRange>3~19</countRange>
 			</li>
+			
+			<!-- Weapons -->
+			<li Class="StockGenerator_MarketValue" MayRequire="k4g.vagrants">
+				<tradeTag>WeaponMelee</tradeTag>
+				<weaponTag>K4GVagrantsMelee</weaponTag>
+				<countRange>11~14</countRange>
+			</li>
+			
+			<li Class="StockGenerator_MarketValue" MayRequire="k4g.vagrants">
+				<tradeTag>WeaponMelee</tradeTag>
+				<weaponTag>K4GScimitar</weaponTag>
+				<countRange>11~23</countRange>
+			</li>
+			
+			<li Class="StockGenerator_MarketValue" MayRequire="k4g.vagrants">
+				<tradeTag>WeaponRanged</tradeTag>
+				<weaponTag>K4GBolter</weaponTag>
+				<countRange>11~13</countRange>
+			</li>
+
+			<!-- Apparel -->
+			<li Class="StockGenerator_MarketValue" MayRequire="k4g.vagrants">
+				<tradeTag>BasicClothing</tradeTag>
+				<apparelTag>K4GVagrantsBasic</apparelTag>
+				<countRange>18~30</countRange>
+			</li>
 
 			<!-- Buying -->
 			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
@@ -219,7 +245,12 @@
 			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
 				<thingDef>RevenantSpine</thingDef>
 			</li>
+			<li Class="StockGenerator_BuySingleDef">
+				<thingDef>Gold</thingDef>
+			</li>
 			<li Class="StockGenerator_BuyExpensiveSimple"></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>FoodRaw</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>FoodMeals</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
@@ -279,7 +310,6 @@
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>EggNog</tag>
 			</li>
-
     </stockGenerators>
   </TraderKindDef>
 

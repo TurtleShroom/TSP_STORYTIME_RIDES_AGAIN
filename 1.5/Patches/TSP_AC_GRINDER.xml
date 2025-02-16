@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AC_ArtisanalGrinder"]</xpath>
+		<!-- If it does, insert this as a sibling entry in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="AC_ArtisanalGrinder"]</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+				<li MayRequire="lat.rimstro,oskarpotocki.vanillafactionsexpanded.core">RS_Blender</li>
+				<li MayRequire="mlie.vanillalikewheat">QuernLowTech</li>
+				<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
+				<li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="QuernLowTech"]</xpath>
+		<!-- If it does, insert this as a sibling entry in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="QuernLowTech"]</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+				<!-- <li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li> -->
+				<!-- <li MayRequire="lat.rimstro,oskarpotocki.vanillafactionsexpanded.core">RS_Blender</li> -->
+				<li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="QuernHighTech"]</xpath>
+		<!-- If it does, insert this as a sibling entry in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="QuernHighTech"]</xpath>
+			<success>Always</success>
+			<value>
+				<!-- <li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li> -->
+				<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+				<li MayRequire="lat.rimstro,oskarpotocki.vanillafactionsexpanded.core">RS_Blender</li>
+				<li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="COMIGO_ElectricMill"]</xpath>
+		<!-- If it does, insert this as a sibling entry in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="COMIGO_ElectricMill"]</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+				<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="COMIGO_PrimitiveCrushingSpot"]</xpath>
+		<!-- If it does, insert this as a sibling entry in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="COMIGO_PrimitiveCrushingSpot"]</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+				<li MayRequire="mlie.vanillalikewheat">QuernLowTech</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="COMIGO_Quernstone"]</xpath>
+		<!-- If it does, insert this as a sibling entry in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="COMIGO_Quernstone"]</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+				<li MayRequire="mlie.vanillalikewheat">QuernLowTech</li>
+				<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
+				<li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

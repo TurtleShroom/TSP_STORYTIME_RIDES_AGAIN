@@ -30,7 +30,7 @@
 									<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
 								</thingDefs>
 							</filter>
-							<count>20</count>
+							<count>50</count>
 						</li>
 					</ingredients>
 					<fixedIngredientFilter>
@@ -40,7 +40,7 @@
 						</thingDefs>
 					</fixedIngredientFilter>
 					<products>
-						<VRecyclingE_ReactiveChempack>2</VRecyclingE_ReactiveChempack>
+						<VRecyclingE_ReactiveChempack>1</VRecyclingE_ReactiveChempack>
 						<VRecyclingE_Trash>3</VRecyclingE_Trash>
 					</products>
 					<workSkill>Crafting</workSkill>
@@ -182,7 +182,7 @@
 						</thingDefs>
 					</defaultIngredientFilter>
 					<products>
-						<VRecyclingE_Trash>4</VRecyclingE_Trash>
+						<VRecyclingE_Trash>6</VRecyclingE_Trash>
 						<Minerals MayRequire="lolxy.starcraftcore.1">8</Minerals>
 					</products>
 					<workSkill>Crafting</workSkill>
@@ -211,6 +211,7 @@
 							<filter>
 								<customSummary>goblin poison, diagen, dragonal, goblin psychite, heaven dust, highwing, hard lemonade, Botox, foggy egg nog, profane egg nog, Kraken Rum, Werefrog blood</customSummary>
 								<thingDefs>
+									<li>ST_PoisonExtract</li>
 									<li>ST_GoblinPoison</li>
 									<li>Diagen</li>
 									<li>Dragonal</li>
@@ -229,7 +230,7 @@
 									<li MayRequire="lolxy.starcraftcore.1">Quartz</li>
 								</thingDefs>
 							</filter>
-							<count>5</count>
+							<count>15</count>
 						</li>
 						<li>
 							<customSummary>Night Frog venom</customSummary>
@@ -238,7 +239,7 @@
 									<li>ST_NightFrog_Venom</li>
 								</thingDefs>
 							</filter>
-							<count>15</count>
+							<count>7</count>
 						</li>
 					</ingredients>
 					<fixedIngredientFilter>
@@ -274,7 +275,13 @@
 							<li>BotoxFruit</li>
 							<li>ST_ProfaneNog</li>
 							<li>ST_KrakenRum</li>
+							<li MayRequire="lolxy.starcraftcore.1">Minerals</li>
+							<li MayRequire="lolxy.starcraftcore.1">Quartz</li>
 						</thingDefs>
+						<disallowedThingDefs>
+							<li>ST_PoisonExtract</li>
+							<li>RawNog</li>
+						</disallowedThingDefs>
 					</defaultIngredientFilter>
 					<products>
 						<VRecyclingE_RadioactiveIsotopack>4</VRecyclingE_RadioactiveIsotopack>

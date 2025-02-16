@@ -8,6 +8,9 @@
 		<statBases>
 		  <MaxHitPoints>120</MaxHitPoints>
 		  <Nutrition>0.35</Nutrition>
+			<VV_MinGrowthPlantGatherable MayRequire="gguake.race.vivi">0.25</VV_MinGrowthPlantGatherable>
+			<VV_PlantGatherCooldown MayRequire="gguake.race.vivi">0.33</VV_PlantGatherCooldown>
+			<VV_PlantHoneyGatherYield MayRequire="gguake.race.vivi">0.75</VV_PlantHoneyGatherYield>
 		</statBases>
 		<graphicData>
 		  <texPath>Things/Plants/MysteriousFruitBush</texPath>
@@ -25,7 +28,7 @@
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_OffsetNeed">
 					<need>Rest</need>
-					<offset>1</offset>
+					<offset>1.1</offset>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -277,5 +280,8 @@
 				<allowUnroofed MayRequire="biomesteam.biomescore">true</allowUnroofed>
 			</li>
 		</modExtensions>
+		<comps>
+			<li Class="VVRace.CompProperties_RepeatGatherable" MayRequire="gguake.race.vivi"></li>
+		</comps>
 	</ThingDef>
 </Defs>

@@ -3,6 +3,143 @@
 <!-- This code was provided by the user 'I Exist', and then butchered and simplified on Dub's Discord chat room by Kyoutaigo -->
 
 <Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="AC_GrindFlours"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="AC_GrindFlours"]</xpath>
+			<success>Always</success>
+			<value>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="AC_GrindFlours"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="AC_GrindFlours"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="AC_GrindFlours"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="AC_GrindFlours"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ToadflaxLeaves</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li>
+				<li MayRequire="lordoftherims.elves">LotRE_Lembasflour</li>
+				<li MayRequire="onekimchiman.ingredienttime">O_GrainFlour</li>
+				<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
+				<li MayRequire="mlie.vanillalikewheat">Flour</li>
+				<li MayRequire="sarg.alphacrafts">AC_Flour</li>
+			</value>
+		</nomatch>
+	<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]</xpath>
+			<success>Always</success>
+			<value>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ToadflaxLeaves</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li>
+				<li MayRequire="lordoftherims.elves">LotRE_Lembasflour</li>
+				<li MayRequire="onekimchiman.ingredienttime">O_GrainFlour</li>
+				<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
+				<li MayRequire="mlie.vanillalikewheat">Flour</li>
+				<li MayRequire="sarg.alphacrafts">AC_Flour</li>
+			</value>
+		</nomatch>
+	<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="AC_PepareGravy"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="AC_PepareGravy"]</xpath>
+			<success>Always</success>
+			<value>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="AC_PepareGravy"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="AC_PepareGravy"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="AC_PepareGravy"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="AC_PepareGravy"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ToadflaxLeaves</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li>
+				<li MayRequire="lordoftherims.elves">LotRE_Lembasflour</li>
+				<li MayRequire="onekimchiman.ingredienttime">O_GrainFlour</li>
+				<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
+				<li MayRequire="mlie.vanillalikewheat">Flour</li>
+				<li MayRequire="sarg.alphacrafts">AC_Flour</li>
+			</value>
+		</nomatch>
+	<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 	<xpath>/Defs/ThingDef[defName="VCE_Flour"]</xpath>
@@ -21,6 +158,7 @@
 						<li MayRequire="onekimchiman.ingredienttime">O_GrainFlour</li>
 						<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
 						<li MayRequire="mlie.vanillalikewheat">Flour</li>
+						<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 					</value>
 				</li>
 				
@@ -35,6 +173,7 @@
 						<li MayRequire="onekimchiman.ingredienttime">O_GrainFlour</li>
 						<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
 						<li MayRequire="mlie.vanillalikewheat">Flour</li>
+						<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 					</value>
 				</li>
 				
@@ -62,6 +201,8 @@
 						<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
 						<!-- <li MayRequire="zal.witchinghour">Candycorn</li> -->
 						<li MayRequire="zal.witchinghour">Smirties</li>
+						<li MayRequire="sarg.alphacrafts">AC_CornSyrup</li>
+						<li MayRequire="sarg.alphacrafts,vanillaexpanded.vcooke">AC_Molasses</li>
 					</value>
 				</li>
 				
@@ -75,6 +216,8 @@
 						<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
 						<!-- <li MayRequire="zal.witchinghour">Candycorn</li> -->
 						<li MayRequire="zal.witchinghour">Smirties</li>
+						<li MayRequire="sarg.alphacrafts">AC_CornSyrup</li>
+						<li MayRequire="sarg.alphacrafts,vanillaexpanded.vcooke">AC_Molasses</li>
 					</value>
 				</li>
 				
@@ -88,6 +231,8 @@
 						<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
 						<!-- <li MayRequire="zal.witchinghour">Candycorn</li> -->
 						<li MayRequire="zal.witchinghour">Smirties</li>
+						<li MayRequire="sarg.alphacrafts">AC_CornSyrup</li>
+						<li MayRequire="sarg.alphacrafts,vanillaexpanded.vcooke">AC_Molasses</li>
 					</value>
 				</li>
 			</operations>
@@ -112,6 +257,7 @@
 						<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
 						<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
 						<li MayRequire="mlie.vanillalikewheat">Flour</li>
+						<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 					</value>
 				</li>
 				
@@ -126,6 +272,7 @@
 						<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
 						<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
 						<li MayRequire="mlie.vanillalikewheat">Flour</li>
+						<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 					</value>
 				</li>
 				
@@ -159,8 +306,9 @@
 					<xpath>/Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
 					<success>Always</success>
 					<value>
-						<li>O_GrainFlour</li>
+						<!-- <li>O_GrainFlour</li> -->
 						<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
+						<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 					</value>
 				</li>
 			</operations>
@@ -180,6 +328,7 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ToadflaxLeaves</li>
 						<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
+						<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 					</value>
 				</li>
 				
@@ -189,6 +338,7 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ToadflaxLeaves</li>
 						<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
+						<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 					</value>
 				</li>
 				
@@ -222,6 +372,7 @@
 						<li MayRequire="onekimchiman.ingredienttime">O_GrainFlour</li>
 						<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
 						<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+						<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 					</value>
 				</li>
 				
@@ -236,6 +387,7 @@
 						<li MayRequire="onekimchiman.ingredienttime">O_GrainFlour</li>
 						<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
 						<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+						<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 					</value>
 				</li>
 				

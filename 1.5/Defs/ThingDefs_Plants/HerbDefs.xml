@@ -6,8 +6,11 @@
 		<label>guam bush</label>
 		<description>A bitter green herb. Developed by culinary scientists seeking to create new flavors, it was first sewn on the island of Guam on Old Earth, and thrives in poor soil.</description>
 		<statBases>
-		  <MaxHitPoints>120</MaxHitPoints>
-		  <Nutrition>0.60</Nutrition>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Nutrition>0.60</Nutrition>
+			<VV_MinGrowthPlantGatherable MayRequire="gguake.race.vivi">0.5</VV_MinGrowthPlantGatherable>
+			<VV_PlantGatherCooldown MayRequire="gguake.race.vivi">1</VV_PlantGatherCooldown>
+			<VV_PlantHoneyGatherYield MayRequire="gguake.race.vivi">1</VV_PlantHoneyGatherYield>
 		</statBases>
 		<graphicData>
 		  <texPath>Things/Plants/Herbs/Guam</texPath>
@@ -254,5 +257,8 @@
 				
 			</wildBiomes>
 		</plant>
+		<comps>
+			<li Class="VVRace.CompProperties_RepeatGatherable" MayRequire="gguake.race.vivi"></li>
+		</comps>
 	</ThingDef>
 </Defs>
