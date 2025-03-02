@@ -93,12 +93,66 @@
 			<success>Always</success>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
-				<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+				<!-- <li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li> -->
 				<li MayRequire="mlie.vanillalikewheat">QuernLowTech</li>
-				<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
+				<!-- <li MayRequire="mlie.vanillalikewheat">QuernHighTech</li> -->
 				<li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VinegarCask"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<PipeSystem.ProcessDef>
+					<defName>TSP_InstaNog</defName>
+					<label>Ferment egg nog directly</label>
+					<description>Using milk and crushed eggs, bypass the fermentation process and directly create  egg nog.</description>
+					<useIngredients>true</useIngredients>
+					<spawnOnInteractionCell>true</spawnOnInteractionCell>
+					<labelOverride>Ferment 20 milk + 10 crushed eggs into 10 egg nog</labelOverride>
+					<priorityInBillList>9</priorityInBillList>
+					<researchPrerequisites>
+						<li>AC_MiscellaneousArtisanalCrafting</li>
+						<li>nogAlchemy</li>
+					</researchPrerequisites>
+					<ingredients>
+						<li>
+							<thing>Milk</thing>
+							<countNeeded>20</countNeeded>
+						</li>
+						<li>
+							<thing>NogStarter</thing>
+							<countNeeded>10</countNeeded>
+						</li>
+					</ingredients>
+					<ticks>107250</ticks>
+					<results>
+						<li>
+							<thing>ST_EggNog</thing>
+							<count>10</count>
+						</li>
+					</results>
+				</PipeSystem.ProcessDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VinegarCask"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="AC_VinegarCask"]/comps/li/processes</xpath>
+			<success>Always</success>
+			<value>
+				<li>TSP_InstaNog</li>
+			</value>
+		</match>
 	</Operation>
 </Patch>
