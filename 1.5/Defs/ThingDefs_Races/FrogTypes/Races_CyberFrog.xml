@@ -4,8 +4,7 @@
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>CyberFrogHostile</defName>
 		<label>Mechanoid Cyber-Frog</label>
-		<description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particualar Cyber Frogs have since betrayed their own kind and joined the Mechanoids in their conquest. Randy have mercy on us all. \n \n A Mechanoid Cyber-Frog that has been brought under a Mechanitor's command is capable of multiple forms of work: their cuteness makes them great at entertaining Guests*, they flip switches, and they (like most frogs) have good marksmanship when hunting. When completely idle, a Mechanoid Cyber-Frog with nothing else to do will haul things. \n \n \n \n
-		* = Requires Hospitality Mod</description>
+		<description>This frog looks to be cybernetically enhanced. It must have escaped from the lab of some kind of mad scientist. These particualar Cyber Frogs have since betrayed their own kind and joined the Mechanoids in their conquest. Randy have mercy on us all. \n \n A Mechanoid Cyber-Frog that has been brought under a Mechanitor's command is capable of multiple forms of work: they flip switches and and they (like most frogs) have good marksmanship when hunting. When completely idle, a Mechanoid Cyber-Frog with nothing else to do will haul things.</description>
 		<statBases>
 		  <MoveSpeed>9</MoveSpeed>
 		  <MarketValue>41</MarketValue>
@@ -55,7 +54,7 @@
 				<feralMtbDays>100</feralMtbDays>
 				<feralCascadeRadialDistance>0</feralCascadeRadialDistance>
 			</li>
-			<li Class="CompProperties_MechRepairable" MayRequire="Ludeon.Rimworld.Biotech" />
+			<li Class="CompProperties_MechRepairable" MayRequire="Ludeon.Rimworld.Biotech"></li>
 		</comps>
 		<tools>
 		  <li>
@@ -116,10 +115,11 @@
 				<BasicWorker>3</BasicWorker>
 				<!-- <Handling>2</Handling> -->
 				<Hauling>4</Hauling>
-				<Hunting>2</Hunting>
+				<Hunting>1</Hunting>
 				<Diplomat MayRequire="orion.hospitality">1</Diplomat>
-				<ApiniHoneyMaker MayRequire="sera.apinialienrace">1</ApiniHoneyMaker>
-				<RimefellerCrafting MayRequire="dubwise.rimefeller">3</RimefellerCrafting>
+				<ApiniHoneyMaker MayRequire="sera.apinialienrace">2</ApiniHoneyMaker>
+				<TSP_DoctorBees_Work MayRequire="ludeon.rimworld.biotech,tsp.zal.patchhoney2">2</TSP_DoctorBees_Work>
+				<RimefellerCrafting MayRequire="dubwise.rimefeller">4</RimefellerCrafting>
 			</mechWorkTypePriorities>
 		  <wildBiomes Inherit="False">
 				<BorealForest>0</BorealForest>

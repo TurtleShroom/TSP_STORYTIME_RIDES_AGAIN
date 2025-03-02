@@ -2,7 +2,7 @@
 
 <Defs>
 	  <ThoughtDef>
-		<defName>AteOoze</defName>
+		<defName>ST_AteOoze</defName>
 		<durationDays>1</durationDays>
 		<stages>
 		  <li>
@@ -32,7 +32,7 @@
 		<ingestible>
 			<preferability>RawBad</preferability>
 			<foodType>AnimalProduct, Fluid, Liquor, Kibble</foodType>
-			<specialThoughtDirect>AteOoze</specialThoughtDirect>
+			<specialThoughtDirect>ST_AteOoze</specialThoughtDirect>
 			<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient> <!-- It tastes just fine when cooked! -->
 			<babiesCanIngest>true</babiesCanIngest>
 			<optimalityOffsetHumanlikes>-1</optimalityOffsetHumanlikes>
@@ -50,7 +50,7 @@
 		<modExtensions>
 			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
 				<water>0.9</water>
-				<UseForWashing>true</UseForWashing>
+				<UseForWashing>false</UseForWashing>
 				<SeekForThirst>false</SeekForThirst>
 			</li>
 		</modExtensions>

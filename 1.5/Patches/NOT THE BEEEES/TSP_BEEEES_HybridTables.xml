@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Patch>
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
+	Does this exist?
 		<xpath>/Defs/ThingDef[defName="RB_BaseHoney"]</xpath>
-		<!-- If it does, add this. -->
+		If it does, add this.
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
 			<xpath>/Defs</xpath>
 			<value>
-				<!--
 				<RimBees.BeeCombinationDef>
 					<defName>TSP_ST_Gnee_TEST</defName>
 					<bee1>Culinary</bee1>
@@ -18,7 +18,6 @@
 						<li>TSP_ST_Gnee_Basic</li>
 					</result>				
 				</RimBees.BeeCombinationDef>
-				-->
 				
 				<RimBees.BeeCombinationDef>
 					<defName>TSP_ST_Gnee_SECONDTEST</defName>
@@ -30,8 +29,9 @@
 				</RimBees.BeeCombinationDef>
 			</value>
 		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
+		If the first XPATH does not exist, the original code stands.
 	</Operation>
+	-->
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
