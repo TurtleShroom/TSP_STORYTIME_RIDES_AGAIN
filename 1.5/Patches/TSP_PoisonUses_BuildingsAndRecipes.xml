@@ -196,7 +196,7 @@
 					<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="TSP.Isengriff.Storytime,oskarpotocki.vanillafactionsexpanded.core">
 						<resourceDef MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</resourceDef>
 						<gatheringIntervalDays MayRequire="TSP.Isengriff.Storytime">1</gatheringIntervalDays>
-						<resourceAmount MayRequire="TSP.Isengriff.Storytime">3</resourceAmount>
+						<resourceAmount MayRequire="TSP.Isengriff.Storytime">7</resourceAmount>
 						<customResourceString MayRequire="TSP.Isengriff.Storytime">PoisonGather</customResourceString>
 					</li>
 				</comps>
@@ -606,7 +606,7 @@
 								<li>WasteCanister</li>
 							</disallowedThingDefs>
 						</filter>
-						<count>1</count>
+						<count>2</count>
 					</li>
 					<li>
 						<filter>
@@ -761,23 +761,33 @@
 			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/skillRequirements</xpath>
 			<value>
-				<skillRequirements>
-					<Crafting>1</Crafting>
-				</skillRequirements>
+				<skillRequirements></skillRequirements>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="WasteCanister"]/stackLimit</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="WasteCanister"]</xpath>
+			<success>Always</success>
+			<value>
+				<stacklimit>725</stacklimit>
+			</value>
+		</nomatch>
+	</Operation>
+	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="WasteCanister"]</xpath>
+		<xpath>/Defs/ThingDef[defName="WasteCanister"]/stackLimit</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="WasteCanister"]/stackLimit</xpath>
 			<value>
-				<stackLimit>15</stackLimit>
+				<stackLimit>725</stackLimit>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -1258,7 +1268,7 @@
 			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]/prerequisites</xpath>
 			<value>
 				<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
-				<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
+				<!-- <li MayRequire="ludeon.rimworld.biotech">ToxGas</li> -->
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -1822,7 +1832,7 @@
 							<li>EMWH_ToxicWater</li>
 						  </disallowedThingDefs>
 						</filter>
-						<count>20</count>
+						<count>30</count>
 					  </li>
 					</ingredients>
 					<fixedIngredientFilter>
@@ -1874,7 +1884,7 @@
 							<li>EMWH_ToxicWater</li>
 						  </disallowedThingDefs>
 						</filter>
-						<count>20</count>
+						<count>60</count>
 					  </li>
 					</ingredients>
 					<fixedIngredientFilter>
@@ -1896,7 +1906,7 @@
 					</defaultIngredientFilter>
 					<researchPrerequisites></researchPrerequisites>
 					<products>
-						<EMWH_ToxicWater>12</EMWH_ToxicWater>
+						<EMWH_ToxicWater>24</EMWH_ToxicWater>
 					</products>
 					<recipeUsers>
 						<li>DrugLab</li>
@@ -1905,11 +1915,11 @@
 				</RecipeDef>
 				
 				<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
-					<defName>TSP_ST_EMWH_ToxicWater_Bulk</defName>
-					<label>brew Toxic Water (x24)</label>
+					<defName>TSP_ST_EMWH_ToxicWater_SuperBulk</defName>
+					<label>brew Toxic Water (x50)</label>
 					<description>Weaken poison extracts with water.</description>
 					<jobString>diluting poisons</jobString>
-					<workAmount>2300</workAmount>
+					<workAmount>4440</workAmount>
 					<workSpeedStat>DrugCookingSpeed</workSpeedStat>
 					<workSkill>Cooking</workSkill>
 					<effectWorking>Cook</effectWorking>
@@ -1926,7 +1936,7 @@
 							<li>EMWH_ToxAway</li>
 						  </disallowedThingDefs>
 						</filter>
-						<count>20</count>
+						<count>145</count>
 					  </li>
 					</ingredients>
 					<fixedIngredientFilter>
@@ -1945,7 +1955,7 @@
 					</defaultIngredientFilter>
 					<researchPrerequisites></researchPrerequisites>
 					<products>
-						<EMWH_ToxicWater>24</EMWH_ToxicWater>
+						<EMWH_ToxicWater>50</EMWH_ToxicWater>
 					</products>
 					<recipeUsers>
 						<li>DrugLab</li>
@@ -2307,7 +2317,7 @@
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/workAmount</xpath>
 			<value>
-				<workAmount>191</workAmount>
+				<workAmount>19</workAmount>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -2320,7 +2330,20 @@
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/description</xpath>
 			<value>
-				<description>Easily contain toxic wastepacks in a sealed canister, preventing leaking. The process is extremely quick, but very inefficient, producing multiple containers for one Waste Pack.</description>
+				<description>Easily contain toxic wastepacks in a sealed canister, preventing leaking. Waste Canisters cannot and will not decay, rot, or pollute unless they are directly struck or damaged. The process is extremely quick, but very inefficient, producing multiple containers for one Waste Pack.</description>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="WasteCanister"]/description</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="WasteCanister"]/description</xpath>
+			<value>
+				<description>The pollution and posion of a Waste Pack, sealed in a canister that will never decay, leak, or pollute unless the integrity of the canister is compromised. The main advantage of containing waste this way is that it can be easily and safely stored almost anywhere, without the fear of having to keep it frozen or protected. Do not allow it to catch fire or be damaged.</description>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

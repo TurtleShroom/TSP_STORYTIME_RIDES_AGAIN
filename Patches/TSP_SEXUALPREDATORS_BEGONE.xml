@@ -410,4 +410,37 @@
 			</value>
 		</nomatch>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[@Name="ck_ShirtBase"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[@Name="ck_ShirtBase"]/apparel</xpath>
+			<value>
+				<gender>Female</gender>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ck_Gymnastyorka"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="ck_Gymnastyorka"]/apparel</xpath>
+			<value>
+				<gender>Female</gender>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ck_Chereska"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="ck_Chereska"]/apparel</xpath>
+			<value>
+				<gender>Female</gender>
+			</value>
+		</nomatch>
+	</Operation>
 </Patch>
