@@ -4,24 +4,26 @@
 	<ThingDef ParentName="MealBase">
 		<defName>MeatNugget</defName>
 		<label>Meat Nugget</label>
-		<description>A nugget made of meat.</description>
+		<description>A nugget made of meat. It takes a week to rot, but the main advantage is that it can be stacked in enormous quantities, which saves space and vastly exceeds that of meals with similar nutritional value.</description>
 		<graphicData>
 		  <texPath>Things/Items/Resources/MeatNugget</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
 		  <drawSize>1.25</drawSize>
 		</graphicData>
+		<stackLimit>500</stackLimit>
 		<statBases>
-		  <DeteriorationRate>0.25</DeteriorationRate>
-		  <MarketValue>8</MarketValue>
+		  <DeteriorationRate>3</DeteriorationRate>
+		  <MarketValue>4</MarketValue>
 		  <Mass>0.3</Mass>
 		  <WorkToMake>450</WorkToMake>
-		  <Nutrition>1</Nutrition>
+		  <Nutrition>0.51</Nutrition>
 		</statBases>
 		<ingestible>
 		  <preferability>MealSimple</preferability>
 		  <ingestEffect>EatVegetarian</ingestEffect>
 		  <ingestSound>Meal_Eat</ingestSound>
 		  <foodType>Meal, CarnivoreAnimalStrict, CarnivoreAnimal, Meat, Corpse</foodType>
+		  <maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
 		  <outcomeDoers>
 			<li Class="IngestionOutcomeDoer_GiveHediff">
 			  <hediffDef>ST_Hed_MeatNugget</hediffDef>
@@ -31,7 +33,7 @@
 		</ingestible>
 		<comps Inherit="False">
 			<li Class="CompProperties_Rottable">
-				<daysToRotStart>4.75</daysToRotStart>
+				<daysToRotStart>7.75</daysToRotStart>
 				<rotDestroys>true</rotDestroys>
 			</li>
 			<li Class="CompProperties_Ingredients">
