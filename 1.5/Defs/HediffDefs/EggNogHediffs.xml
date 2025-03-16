@@ -74,7 +74,7 @@
 	<everCurableByItem>false</everCurableByItem>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.15</severityPerDay>
+        <severityPerDay>-0.25</severityPerDay>
       </li>
       <li Class="HediffCompProperties_DrugEffectFactor">
         <chemical>EggNogChemical</chemical>
@@ -99,7 +99,7 @@
   <HediffDef ParentName="AddictionBase">
     <defName>EggNogAddiction</defName>
     <label>egg nog addiction</label>
-    <description>A deep love of egg nog. Not being able to drink it will make this Pawn mad, but it'll wear off after a few days.</description>
+    <description>A deep love of egg nog. Not being able to drink it will make this Pawn angry, but it'll quickly wear off after a few days.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
     <causesNeed>ST_EggNog_DependencyNeed</causesNeed>
 	<everCurableByItem>false</everCurableByItem>
@@ -120,7 +120,6 @@
       <li>
         <label>egg nog withdrawal</label>
         <socialFightChanceFactor>2</socialFightChanceFactor>
-
         <mentalStateGivers>
           <li>
             <mentalState>Binging_Food</mentalState>
@@ -149,7 +148,7 @@
       <li>
         <label>Drank Frog-Nog</label>
         <description>Frogs are good... egg nog is good... but Frog-Nog? I'm not sure, but I am certainly more perked up now...</description>
-        <baseMoodEffect>-2</baseMoodEffect>
+        <baseMoodEffect>1</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

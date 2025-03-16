@@ -676,7 +676,7 @@
 
 				<Volcano MayRequire="Mlie.AdvancedBiomes">0.08</Volcano>
 
-				<Wasteland MayRequire="Mlie.AdvancedBiomes">0.5</Wasteland>
+				<Wasteland MayRequire="Mlie.AdvancedBiomes">0.75</Wasteland>
 
 				<Wetland MayRequire="Mlie.AdvancedBiomes">0.08</Wetland>
 
@@ -879,7 +879,7 @@
     <race>BORPA_AcridBorpa</race>
 	<canArriveManhunter>true</canArriveManhunter>
     <combatPower>300</combatPower>
-    <ecoSystemWeight>0.1</ecoSystemWeight>
+    <ecoSystemWeight>0</ecoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -1311,7 +1311,7 @@
 	<ThingDef ParentName="AnimalThingBase">
     <defName>BORPA_Kachorpa</defName>
     <label>kachorpa</label>
-    <description>KACHOW! These experimental Borpa variants were created to make the ultimate racer, and as such are partially mechanical! Forty-two losers were created in the process. Kachorpas shed their excess chassis sheds regularly, but they need a little help in getting it off, which is a painless affair. After all, rust is bad for your image when you're this fast! \n \n As a side-effect to the creation of these creatures, liquor and fluids were found to be the only way to continually fuel a Kachorpa, until recently. It seems the Kachorpa have now adapted to also eating raw flesh, probably due to the lack of liquor available in the wild, or maybe that is just because of an insatiable thirst to KACHOW.</description>
+    <description>KACHOW! These experimental Borpa variants were created to make the ultimate racer, and as such are partially mechanical! Forty-two losers were created in the process. Kachorpas shed their excess chassis regularly, but they need a little help in getting it off, which is a painless affair. After all, rust is bad for your image when you're this fast! \n \n As a side-effect to the creation of these creatures, liquor and fluids were found to be the only way to continually fuel a Kachorpa, until recently. It seems the Kachorpa have now adapted to also eating raw flesh, probably due to the lack of liquor available in the wild, or maybe that is just because of an insatiable thirst to KACHOW.</description>
     <statBases>
 		<MoveSpeed>15</MoveSpeed>
 		<ComfyTemperatureMin>-30</ComfyTemperatureMin>
@@ -1709,6 +1709,10 @@
 			  <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
 			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
+			 <butcherBodyPart>
+			  <bodyPartGroup>Eyes</bodyPartGroup>
+			  <thing>BORPA_BorpaEye</thing>
+			</butcherBodyPart>
 		  </li>
 		  <li>
 			<bodyGraphicData>
@@ -1723,6 +1727,10 @@
 			  <texPath>Things/Pawn/Animal/BORPA_Kachorpa/Kachorpa_dessicated</texPath>
 			  <drawSize>1.0</drawSize>
 			</dessicatedBodyGraphicData>
+			 <butcherBodyPart>
+			  <bodyPartGroup>Eyes</bodyPartGroup>
+			  <thing>BORPA_BorpaEye</thing>
+			</butcherBodyPart>
 		  </li>
 		  <li>
 			<bodyGraphicData>
