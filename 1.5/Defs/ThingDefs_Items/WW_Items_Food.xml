@@ -4,7 +4,7 @@
 	<ThingDef ParentName="OrganicProductBase">
 		<defName>WW_Sloodge</defName>
 		<label>sloodge</label>
-		<description>A preserved mashed mixture of animal products and plant food. It tastes bland, but is not offensive; unlike Kibble, Pawns will not hate eating it. It lasts a very long time without refrigeration and has just enough nutrients to be worth eating. Unlike Kibble, is still salvagable as an ingredient. \n Almost every creature in existence is capable of digesting Sloodge, regardless of its ordinary diet.</description>
+		<description>A preserved mashed mixture of organic ingredients. It tastes bland, but is not offensive; unlike Kibble, Pawns will not hate eating it. It lasts a very long time without refrigeration and has just enough nutrients to be worth eating. Unlike Kibble, is still salvagable as an ingredient. \n Almost every creature in existence is capable of digesting Sloodge, regardless of its ordinary diet.</description>
 		<thingClass>ThingWithComps</thingClass>
 		<thingCategories>
 			<li>Foods</li>
@@ -30,8 +30,10 @@
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>Meal_Eat</ingestSound>
 			<ateEvent>AteNutrientPaste</ateEvent>
-			<optimalityOffsetHumanlikes>-1</optimalityOffsetHumanlikes>
-			<optimalityOffsetFeedingAnimals>20</optimalityOffsetFeedingAnimals>
+			<specialThoughtDirect Inherit="False"></specialThoughtDirect>
+			<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient> 
+			<optimalityOffsetHumanlikes>-6</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>40</optimalityOffsetFeedingAnimals>
 		</ingestible>
 		<comps Inherit="False">
 			<li Class="CompProperties_Rottable">
@@ -50,7 +52,7 @@
 			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
 				<water>0.4</water>
 				<UseForWashing>false</UseForWashing>
-				<SeekForThirst>true</SeekForThirst>
+				<SeekForThirst>false</SeekForThirst>
 			</li>
 		</modExtensions>
 	</ThingDef>

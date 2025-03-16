@@ -64,7 +64,7 @@
     <defName>DragonalHigh</defName>
     <label>empowered by dragonal</label>
     <labelNoun>Dragonal resistance</labelNoun>
-    <description>Active Dragonal in the bloodstream, granting the tolerance of a dragon. \nIf grown dependant on Dragonal, the victim will go insane without continued use.</description>
+    <description>Active Dragonal in the bloodstream, granting the pain tolerance of a dragon! \nIf grown dependant on Dragonal, the victim will go insane without continued use.</description>
     <hediffClass>Hediff_High</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -78,7 +78,7 @@
     </comps>
       <stages>
 		<li>
-          <painFactor>0</painFactor>
+          <painFactor>0.01</painFactor>
           <capMods>
             <li>
               <capacity>Consciousness</capacity>
@@ -138,7 +138,7 @@
     <defName>Chemical_Dragonal</defName>
     <needClass>Need_Chemical</needClass>
     <label>Dragonal</label>
-    <description>The subject has taken too much Dragonal and has passed the point of no return; they must continue to use the drug or risk going insane.</description>
+    <description>This Pawn has taken too much Dragonal and has passed the point of no return; he must now continue to use the drug or risk going insane.</description>
     <listPriority>25</listPriority>
 	<fallPerDay>0.15</fallPerDay>
   </NeedDef>
@@ -147,7 +147,7 @@
     <defName>DragonalAddiction</defName>
     <label>Dragonal dependence</label>
     <description>This Pawn's body has grown too dependant on the use of Dragonal. To this Pawn, feeling the world without its effects is maddening.
-\nWithout dragonal, the victim to go insane and die.</description>
+\nWithout Dragonal, the victim will go insane and eventually die.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
     <causesNeed>Chemical_Dragonal</causesNeed>
     <comps>
@@ -163,7 +163,7 @@
         <label>withdrawal</label>
 		<painOffset>0.4</painOffset>
         <lifeThreatening>true</lifeThreatening>
-        <deathMtbDays>10</deathMtbDays>
+        <deathMtbDays>29</deathMtbDays>
         <mtbDeathDestroysBrain>false</mtbDeathDestroysBrain>
         <capMods>
           <li>
@@ -178,7 +178,7 @@
         <mentalStateGivers>
           <li>
             <mentalState>Berserk</mentalState>
-            <mtbDays>6</mtbDays>
+            <mtbDays>4</mtbDays>
           </li>
         </mentalStateGivers>
       </li>
@@ -197,7 +197,7 @@
       </li>
       <li>
         <label>Dragonal withdrawal</label>
-        <description>It all aches...</description>
+        <description>It all aches... everything aches...</description>
         <baseMoodEffect>-80</baseMoodEffect>
       </li>
     </stages>

@@ -28,6 +28,7 @@
 		<description>By combining beans and certain plants, a potent poison can be synthesized. It bares a strong resemblance in effects to many natural poison and venom types in nature.</description>
 		<jobString>Extracting poison.</jobString>
 		<workAmount>1000</workAmount>
+		<unfinishedThingDef>TSP_ST_WW_Unfinished</unfinishedThingDef>
 		<ingredients>
 		  <li>
 			<filter>
@@ -35,6 +36,9 @@
 				<thingDefs>
 					<li>ST_Bean</li>
 				</thingDefs>
+				<disallowedThingDefs>
+					<li>ST_PoisonExtract</li>
+				</disallowedThingDefs>
 			</filter>
 			<count>40</count>
 		  </li>
@@ -51,6 +55,9 @@
 					<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
 					<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
 				</thingDefs>
+				<disallowedThingDefs>
+					<li>ST_PoisonExtract</li>
+				</disallowedThingDefs>
 			</filter>
 			<count>25</count>
 		  </li>
@@ -443,6 +450,7 @@
 		<description>Trace amounts of potent chemicals can be extracted from unprocessed Psychite Leaves and refined into a powerful poison. This is extremely inefficient and produces very little substance.</description>
 		<jobString>Extracting poison.</jobString>
 		<workAmount>7000</workAmount>
+		<unfinishedThingDef>TSP_ST_UnfinishedFrog</unfinishedThingDef>
 		<recipeUsers>
 			<li>CraftingSpot</li>
 		</recipeUsers>

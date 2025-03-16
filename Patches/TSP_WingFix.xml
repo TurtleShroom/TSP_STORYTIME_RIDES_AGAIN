@@ -4,7 +4,7 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Sloodge"]</xpath>
+		<xpath>/Defs/ThingDef[defName="WW_Sloodge"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/ThingSetMakerDef[defName="PirateRaidLootMaker"]/root/fixedParams/thingDefs</xpath>
@@ -28,7 +28,7 @@
 			<xpath>/Defs/ThingDef[defName="Sloodge"]/ingestible/foodType</xpath>
 			<success>Always</success>
 			<value>
-				<foodType>Meal, Processed, Fluid, Kibble</foodType>
+				<foodType>Processed, CarnivoreAnimalStrict, CarnivoreAnimal, VegetarianRoughAnimal, OmnivoreAnimal, OmnivoreRoughAnimal, OmnivoreHuman, DendrovoreAnimal, Corpse, Meat, VegetableOrFruit, AnimalProduct, Seed, Plant, Tree, Fluid, Liquor, Kibble</foodType>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -135,4 +135,19 @@
 		If the first XPATH does not exist, the original code stands.
 	</Operation>
 	-->
+	
+	<!-- EVERYONE can eat Sloodge! -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="WW_Sloodge"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef/comps/li/customThingToEat</xpath>
+			<success>Always</success>
+			<value>
+				<li>WW_Sloodge</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>
