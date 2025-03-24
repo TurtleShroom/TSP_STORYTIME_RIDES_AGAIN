@@ -9,7 +9,7 @@
     <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
   </ChemicalDef>
   
-  <ThingDef ParentName="ResourceBase">
+  <ThingDef ParentName="DrugPillBase">
     <defName>DriedFrogPills</defName>
     <label>dried frog pills</label>
     <description>Dried frog pills are useful for increasing sanity, but one shouldn't become TOO reliant on them. Once an addiction begins, it is extremely difficult and exhausting to break it, far more than even most hard drugs.</description>
@@ -61,7 +61,7 @@
 				<severity>0.07</severity>
 				<divideByBodySize>false</divideByBodySize>
 			</li>
-			<li Class="IngestionOutcomeDoer_GiveHediff" MayReqiore="vanillaexpanded.vbrewe">
+			<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="vanillaexpanded.vbrewe">
 				<hediffDef MayRequire="vanillaexpanded.vbrewe">VBE_CaffeineTolerance</hediffDef>
 				<severity MayRequire="vanillaexpanded.vbrewe">0.299</severity>
 				<divideByBodySize MayRequire="vanillaexpanded.vbrewe">false</divideByBodySize>
@@ -80,9 +80,9 @@
         <overdoseSeverityOffset>0.001~0.01</overdoseSeverityOffset>
         <largeOverdoseChance>0</largeOverdoseChance>
       </li>
-		<li Class="CompProperties_Drug" MayRequire="vanillaexpanded.vbrewe">
+		<li Class="CompProperties_Drug" MayRequire="vanillaexpanded.vbrewe" Inherit="False">
 			<chemical MayRequire="vanillaexpanded.vbrewe">VBE_Caffeine</chemical>
-			<addictiveness MayRequire="vanillaexpanded.vbrewe">1</addictiveness>
+			<addictiveness MayRequire="vanillaexpanded.vbrewe">0.91</addictiveness>
 			<minToleranceToAddict MayRequire="vanillaexpanded.vbrewe">0.6</minToleranceToAddict>
 			<existingAddictionSeverityOffset MayRequire="vanillaexpanded.vbrewe">1</existingAddictionSeverityOffset>
 			<needLevelOffset MayRequire="vanillaexpanded.vbrewe">1</needLevelOffset>
@@ -90,6 +90,8 @@
 			<largeOverdoseChance MayRequire="vanillaexpanded.vbrewe">0</largeOverdoseChance>
 		</li>
     </comps>
+    <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+    <orderedTakeGroup>Drug</orderedTakeGroup>
 	<tradeTags>
 		<li>DriedFrogPills</li>
 		<li>FrogDrugs</li>

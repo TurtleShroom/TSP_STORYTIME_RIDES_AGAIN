@@ -133,9 +133,7 @@
 					<surgerySuccessChanceFactor>999</surgerySuccessChanceFactor>
 					<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
 					<anesthetize>false</anesthetize>
-					<skillRequirements>
-						<Medicine>1</Medicine>
-					</skillRequirements>
+					<skillRequirements></skillRequirements>
 					<ingredients>
 						<li>
 							<filter>
@@ -205,7 +203,7 @@
 	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist/ -->
-		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Human"]</xpath>
+		<xpath>/Defs/RecipeDef[defName="TSP_KASENRA_CureCatatonia"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -225,7 +223,7 @@
 	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
 	<Operation Class="PatchOperationConditional">
 	 <!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Human"]</xpath>
+		<xpath>/Defs/ThingDef[defName="Human"]/recipes</xpath>
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Human"]/recipes</xpath>
@@ -244,7 +242,7 @@
 	<!-- This allows insane animals to be cured, too. -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/HediffDef[defName="CatatonicBreakdown"]</xpath>
+		<xpath>/Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
