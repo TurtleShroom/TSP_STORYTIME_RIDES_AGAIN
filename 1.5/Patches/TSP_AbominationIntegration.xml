@@ -3,7 +3,7 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="DarkDescent_Brute"]</xpath>
+		<xpath>/Defs/ThingDef[defName="DarkDescent_Brute"]/comps</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/ThingDef[@Name="DarkDescent_CreationBase"]/comps</xpath>
@@ -23,7 +23,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="MO_AbominationRace"]</xpath>
+		<xpath>/Defs/ThingDef[defName="MO_AbominationRace"]/comps</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/ThingDef[defName="MO_AbominationRace"]/comps</xpath>

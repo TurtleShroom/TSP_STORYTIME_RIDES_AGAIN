@@ -3,15 +3,19 @@
 <Defs>
 	<ThingDef ParentName="ResourceBase">
 		<defName>ST_NightFrog_Venom</defName>
-		<label>night frog venom</label>
-		<description>Insidious venom extracted from a night frog's tongue. It can be used in weapons, ammo, and traps to add that little extra nastiness.</description>
+		<label>neuro-toxin</label>
+		<description>Insidious neuro-toxins that directly attacks the nervous system, such as that extracted from a night frog's venomous tongue. It can be used in weapons, ammo, and traps to add that little extra nastiness.</description>
+		<descriptionHyperlinks>
+			<ThingDef>NightFrog</ThingDef>
+		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Items/Resources/Neurotoxin</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
 		  <MarketValue>4</MarketValue>
-		  <Mass>0.01</Mass>
+		  <Mass>0.003</Mass>
+		  <Nutrition>0.05</Nutrition>
 		</statBases>
 		<thingCategories>
 			<li>Drugs</li>
@@ -19,21 +23,21 @@
 		</thingCategories>
 		<soundInteract>Standard_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
-		<stackLimit>25</stackLimit>
+		<stackLimit>250</stackLimit>
 		<tickerType>Rare</tickerType>
 		<burnableByRecipe>false</burnableByRecipe>
-		<allowedArchonexusCount>1000</allowedArchonexusCount>
+		<allowedArchonexusCount>2000</allowedArchonexusCount>
 		<ingestible>
 			<preferability>NeverForNutrition</preferability>
-			<foodType>Liquor</foodType>
+			<foodType>Tree</foodType> <!-- EVERY ANIMAL KEEPS EATING IT!! -->
 			<ingestSound>Ingest_Beer</ingestSound>
 			<optimalityOffsetHumanlikes>-999</optimalityOffsetHumanlikes>
 			<optimalityOffsetFeedingAnimals>-999</optimalityOffsetFeedingAnimals>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-				<hediffDef>ST_NeurotoxinBuildup</hediffDef>
-				<severity>0.5</severity>
-				<divideByBodySize>true</divideByBodySize>
+					<hediffDef>ST_NeurotoxinBuildup</hediffDef>
+					<severity>0.2</severity>
+					<divideByBodySize>true</divideByBodySize>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -93,6 +97,47 @@
 	
 	<RecipeDef>
 		<defName>MakeNeurotoxinBotox</defName>
+		<label>synthesize night frog venom with Botox</label>
+		<description>By combining the concentrated botulinium toxins with purified poisons synthesized elsewhere, a potent drug akin equal in potency to night frog venom can be produced!</description>    
+		<jobString>synthesizing poison</jobString>
+		<workAmount>800</workAmount>
+		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>BotoxFruit</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_PoisonExtract</li>
+				</thingDefs>
+			</filter>
+			<count>3</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>BotoxFruit</li>
+				<li>ST_PoisonExtract</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_NightFrog_Venom>5</ST_NightFrog_Venom>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>TSP_ST_MakeNeurotoxinToPoison</defName>
 		<label>synthesize night frog venom with Botox</label>
 		<description>By combining the concentrated botulinium toxins with purified poisons synthesized elsewhere, a potent drug akin equal in potency to night frog venom can be produced!</description>    
 		<jobString>synthesizing poison</jobString>

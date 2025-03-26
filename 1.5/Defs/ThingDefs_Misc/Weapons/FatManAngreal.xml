@@ -27,14 +27,15 @@
 		  <li>Melee</li>
 		  <li>MeleeBlunt</li>
 		</weaponClasses>
-		<comps>
+		<comps Inherit="False">
+			<li Class="CompProperties_Forbiddable"></li>
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
-			<li Class="CompProperties_BladelinkWeapon">
+			<li Class="CompProperties_BladelinkWeapon" MayRequire="ludeon.rimworld.royalty">
 				<biocodeOnEquip>true</biocodeOnEquip>
 			</li>
-			<li Class="CompProperties_GeneratedName">
+			<li Class="CompProperties_GeneratedName" MayRequire="ludeon.rimworld.royalty">
 				<nameMaker>NamerWeaponBladelink</nameMaker>
 			</li>
 			<li Class="TorannMagic.Enchantment.CompProperties_EnchantedItem" MayRequire="Torann.ARimworldOfMagic">
@@ -45,6 +46,10 @@
 			<li MayRequire="carnysenpai.enableoversizedweapons">
 			  <compClass MayRequire="carnysenpai.enableoversizedweapons">CompOversizedWeapon.CompOversizedWeapon</compClass>
 			</li>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+			<li Class="CompProperties_Styleable"></li>
 		</comps>
 		<tools>
 		  <li>
@@ -112,14 +117,14 @@
 		<weaponTags>
 			<li>Bladelink</li>
 		</weaponTags>
-		<comps>
+		<comps Inherit="False">
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
-			<li Class="CompProperties_BladelinkWeapon">
+			<li Class="CompProperties_BladelinkWeapon" MayRequire="ludeon.rimworld.royalty">
 				<biocodeOnEquip>true</biocodeOnEquip>
 			</li>
-			<li Class="CompProperties_GeneratedName">
+			<li Class="CompProperties_GeneratedName" MayRequire="ludeon.rimworld.royalty">
 				<nameMaker>NamerWeaponBladelink</nameMaker>
 			</li>
 			<li Class="CompProperties_Biocodable"></li>
@@ -128,6 +133,11 @@
 			  <arcaneDmg MayRequire="Torann.ARimworldOfMagic" Inherit="False">1.00</arcaneDmg>
 			  <arcaneDmgTier MayRequire="Torann.ARimworldOfMagic" Inherit="False">Crafted</arcaneDmgTier>	
 			</li>
+			<li Class="CompProperties_Forbiddable"></li>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+			<li Class="CompProperties_Styleable"></li>
 		</comps>
 		<thingCategories>
 		  <li>WeaponsMeleeBladelink</li>

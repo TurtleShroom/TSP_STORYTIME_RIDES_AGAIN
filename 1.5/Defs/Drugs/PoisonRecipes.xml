@@ -6,7 +6,7 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
-		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<unfinishedThingDef>TSP_ST_WW_Unfinished</unfinishedThingDef>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>ST_PoisonExtract</li>
@@ -464,7 +464,7 @@
 					<li>ST_PoisonExtract</li>
 				</disallowedThingDefs>
 			</filter>
-			<count>40</count>
+			<count>55</count>
 		  </li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -509,5 +509,208 @@
 			<ST_PoisonExtract>15</ST_PoisonExtract>
 		</products>
 		<researchPrerequisites Inherit="False" MayRequire="ludeon.rimworld.biotech"></researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Neurotoxin</defName>
+		<label>dilute poison from neuro-toxins</label>
+		<description>Dilute the powerful toxins in neuro-toxins to produce a general-use poison, fit for all sorts of nefarious schemes.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>1000</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_NightFrog_Venom</li>
+				</thingDefs>
+				<disallowedThingDefs>
+					<li>ST_PoisonExtract</li>
+				</disallowedThingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_NightFrog_Venom</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>10</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Neurotoxin_Bulk</defName>
+		<label>dilute poison from neuro-toxins (x20)</label>
+		<description>Dilute the powerful toxins in neuro-toxins to produce a general-use poison, fit for all sorts of nefarious schemes.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>2000</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_NightFrog_Venom</li>
+				</thingDefs>
+				<disallowedThingDefs>
+					<li>ST_PoisonExtract</li>
+				</disallowedThingDefs>
+			</filter>
+			<count>20</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_NightFrog_Venom</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>20</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Neurotoxin_SuperBulk</defName>
+		<label>dilute poison from neuro-toxins (x40)</label>
+		<description>Dilute the powerful toxins in neuro-toxins to produce a general-use poison, fit for all sorts of nefarious schemes.</description>
+		<jobString>Diluting poison.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_NightFrog_Venom</li>
+				</thingDefs>
+				<disallowedThingDefs>
+					<li>ST_PoisonExtract</li>
+				</disallowedThingDefs>
+			</filter>
+			<count>30</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_NightFrog_Venom</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>40</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Neurotoxin_SuperDuperBulk</defName>
+		<label>dilute poison from neuro-toxins (x80)</label>
+		<description>Dilute the powerful toxins in neuro-toxins to produce a general-use poison, fit for all sorts of nefarious schemes.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>4000</workAmount>
+		<recipeUsers>
+			<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+		</recipeUsers>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_NightFrog_Venom</li>
+				</thingDefs>
+				<disallowedThingDefs>
+					<li>ST_PoisonExtract</li>
+				</disallowedThingDefs>
+			</filter>
+			<count>40</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_NightFrog_Venom</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>80</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Neurotoxin_SuperDuperUltraBulk</defName>
+		<label>dilute poison from neuro-toxins (x160)</label>
+		<description>Dilute the powerful toxins in neuro-toxins to produce a general-use poison, fit for all sorts of nefarious schemes.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>7000</workAmount>
+		<recipeUsers>
+			<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+		</recipeUsers>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_NightFrog_Venom</li>
+				</thingDefs>
+				<disallowedThingDefs>
+					<li>ST_PoisonExtract</li>
+				</disallowedThingDefs>
+			</filter>
+			<count>80</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_NightFrog_Venom</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>160</ST_PoisonExtract>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_ST_PoisonRecipe_Base">
+		<defName>ST_MakePoison_Neurotoxin_SuperDuperUltraMegaBulk</defName>
+		<label>dilute poison from neuro-toxins (x220)</label>
+		<description>Dilute the powerful toxins in neuro-toxins to produce a general-use poison, fit for all sorts of nefarious schemes.</description>
+		<jobString>Diluting poison.</jobString>
+		<workAmount>11000</workAmount>
+		<recipeUsers>
+			<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+		</recipeUsers>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ST_NightFrog_Venom</li>
+				</thingDefs>
+				<disallowedThingDefs>
+					<li>ST_PoisonExtract</li>
+				</disallowedThingDefs>
+			</filter>
+			<count>160</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_NightFrog_Venom</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>ST_PoisonExtract</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ST_PoisonExtract>220</ST_PoisonExtract>
+		</products>
 	</RecipeDef>
 </Defs>

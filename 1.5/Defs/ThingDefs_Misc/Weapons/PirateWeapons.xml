@@ -581,6 +581,7 @@
 			<compClass>CompEquippable</compClass>
 		</li>
 		<li Class="CompProperties_Biocodable"></li>
+		<li Class="CompProperties_Forbiddable"></li>
     </comps>
 	<tradeTags>
 		<li>WeaponRanged</li>
@@ -892,19 +893,24 @@
 		<li>ST_CursedWeapons</li>
 		<li>SkeletonCaptain</li>
 	</weaponTags>
-	<comps>
+	<comps Inherit="False">
 		<li Class="CompProperties_Art">
 			<nameMaker>NamerArtWeaponMelee</nameMaker>
 			<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
 			<minQualityForArtistic>Awful</minQualityForArtistic>
 		</li>
-		<li Class="CompProperties_BladelinkWeapon">
+		<li Class="CompProperties_BladelinkWeapon" MayRequire="ludeon.rimworld.royalty">
 			<biocodeOnEquip>true</biocodeOnEquip>
 		</li>
-		<li Class="CompProperties_GeneratedName">
+		<li Class="CompProperties_GeneratedName" MayRequire="ludeon.rimworld.royalty">
 			<nameMaker>NamerWeaponBladelink</nameMaker>
 		</li>
 		<li Class="CompProperties_Biocodable"></li>
+		<li Class="CompProperties_Forbiddable"></li>
+		<li>
+			<compClass>CompEquippable</compClass>
+		</li>
+		<li Class="CompProperties_Styleable"></li>
 	</comps>
 	<equippedStatOffsets>
 		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
@@ -1000,7 +1006,7 @@
 		<ComponentIndustrial>13</ComponentIndustrial>
 	</costList>
 	-->
-	<comps>
+	<comps Inherit="False">
         <li>
 			<compClass>CompQuality</compClass>
 		</li>
@@ -1009,6 +1015,14 @@
 			<nameMaker>NamerArtWeaponMelee</nameMaker>
 			<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
 			<minQualityForArtistic>Awful</minQualityForArtistic>
+		</li>
+		<li>
+			<compClass>CompEquippable</compClass>
+		</li>
+		<li Class="CompProperties_Styleable"></li>
+		<li Class="CompProperties_Forbiddable"></li>
+		<li Class="CompProperties_BladelinkWeapon" MayRequire="ludeon.rimworld.royalty">
+			<biocodeOnEquip>false</biocodeOnEquip>
 		</li>
 	</comps>
 	<equippedStatOffsets>
