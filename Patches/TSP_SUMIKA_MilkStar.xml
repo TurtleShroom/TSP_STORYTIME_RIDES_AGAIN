@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional" MayRequire="sumika.milkystar">
+	<!-- Does this exist? -->
+		<xpath MayRequire="sumika.milkystar">/Defs/ThingDef[defName="sumi_MilkyBeads"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOO! -->
+		<match Class="PatchOperationSequence" MayRequire="sumika.milkystar">
+			<operations MayRequire="sumika.milkystar">
+				<li Class="PatchOperationAttributeRemove">
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk"]</xpath>
+					<success>Always</success>
+					<attribute>MayRequire</attribute>
+				</li>
+				<li Class="PatchOperationAttributeRemove">
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk_more"]</xpath>
+					<success>Always</success>
+					<attribute>MayRequire</attribute>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<value>
+						<li>sumi_MilkyBeads</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>sumi_MilkyBeads</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<value>
+						<li>sumi_MilkyBeads</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>sumi_MilkyBeads</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/recipeUsers</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/recipeUsers</xpath>
+			<success>Always</success>
+			<value>
+				<recipeUsers>
+					<li>ButcherSpot</li>
+					<li>TableButcher</li>
+					<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_ButchersBlock</li>
+					<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_RusticCookingTable</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					<li MayRequire="lat.rimstro">RS_Blender</li>
+					<li MayRequire="mlie.vanillalikewheat">QuernLowTech</li>
+					<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
+					<li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li>
+					<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+					<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+				</recipeUsers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/recipeUsers</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/recipeUsers</xpath>
+			<success>Always</success>
+			<value>
+				<recipeUsers>
+					<li>ButcherSpot</li>
+					<li>TableButcher</li>
+					<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_ButchersBlock</li>
+					<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_RusticCookingTable</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					<li MayRequire="lat.rimstro">RS_Blender</li>
+					<li MayRequire="mlie.vanillalikewheat">QuernLowTech</li>
+					<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
+					<li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li>
+					<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker_Old</li>
+					<li MayRequire="Dajian.ChiTeaditional.Expanded">Chi_RiceMaker</li>
+				</recipeUsers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+
+	<Operation Class="PatchOperationConditional" MayRequire="sumika.milkystar">
+	<!-- Does this exist? -->
+		<xpath MayRequire="sumika.milkystar">/Defs/ThingDef[defName="ST_Green_Milk"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOO! -->
+		<match Class="PatchOperationSequence" MayRequire="sumika.milkystar">
+			<operations MayRequire="sumika.milkystar">
+				<li Class="PatchOperationAttributeRemove">
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk"]</xpath>
+					<success>Always</success>
+					<attribute>MayRequire</attribute>
+				</li>
+				<li Class="PatchOperationAttributeRemove">
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk_more"]</xpath>
+					<success>Always</success>
+					<attribute>MayRequire</attribute>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">BORPA_Milk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">Rylex_CoconutMilk</li>
+						<li MayRequire="tsp.isengriff.storytime.runezone">TSP_ST_RuneJuice</li>
+						<li MayRequire="sarg.rimbees">RB_HoneyedIcePop</li>
+						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_NightMilk</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_InsectMilk</li>
+						<li MayRequire="hh.xrushha.AnimaAnimalsCombined">AnimaThrumboMilk</li>
+						<li MayRequire="ironscruff.primordialgeysers">IronScruff_MicrobeSqueezins</li>
+						<li MayRequire="lat.rimstro">RS_Berrymilk</li>
+						<li MayRequire="lat.rimstro">RS_chocomilk</li>
+						<li MayRequire="dtf.milkrats">dtf_vanillamilk</li>
+						<li MayRequire="dtf.milkrats">dtf_chocolatemilk</li>
+						<li MayRequire="dtf.milkrats">dtf_strawberrymilk</li>
+						<li MayRequire="gguake.race.vivi">VV_Vivicream</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">BORPA_Milk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">Rylex_CoconutMilk</li>
+						<li MayRequire="tsp.isengriff.storytime.runezone">TSP_ST_RuneJuice</li>
+						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_NightMilk</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_InsectMilk</li>
+						<li MayRequire="hh.xrushha.AnimaAnimalsCombined">AnimaThrumboMilk</li>
+						<li MayRequire="ironscruff.primordialgeysers">IronScruff_MicrobeSqueezins</li>
+						<li MayRequire="lat.rimstro">RS_Berrymilk</li>
+						<li MayRequire="lat.rimstro">RS_chocomilk</li>
+						<li MayRequire="dtf.milkrats">dtf_vanillamilk</li>
+						<li MayRequire="dtf.milkrats">dtf_chocolatemilk</li>
+						<li MayRequire="dtf.milkrats">dtf_strawberrymilk</li>
+						<li MayRequire="gguake.race.vivi">VV_Vivicream</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">BORPA_Milk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">Rylex_CoconutMilk</li>
+						<li MayRequire="tsp.isengriff.storytime.runezone">TSP_ST_RuneJuice</li>
+						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_NightMilk</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_InsectMilk</li>
+						<li MayRequire="hh.xrushha.AnimaAnimalsCombined">AnimaThrumboMilk</li>
+						<li MayRequire="ironscruff.primordialgeysers">IronScruff_MicrobeSqueezins</li>
+						<li MayRequire="lat.rimstro">RS_Berrymilk</li>
+						<li MayRequire="lat.rimstro">RS_chocomilk</li>
+						<li MayRequire="dtf.milkrats">dtf_vanillamilk</li>
+						<li MayRequire="dtf.milkrats">dtf_chocolatemilk</li>
+						<li MayRequire="dtf.milkrats">dtf_strawberrymilk</li>
+						<li MayRequire="gguake.race.vivi">VV_Vivicream</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">BORPA_Milk</li>
+						<li MayRequire="TSP.Isengriff.Storytime">Rylex_CoconutMilk</li>
+						<li MayRequire="tsp.isengriff.storytime.runezone">TSP_ST_RuneJuice</li>
+						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+						<li MayRequire="sarg.alphaanimals">AA_NightMilk</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_InsectMilk</li>
+						<li MayRequire="hh.xrushha.AnimaAnimalsCombined">AnimaThrumboMilk</li>
+						<li MayRequire="ironscruff.primordialgeysers">IronScruff_MicrobeSqueezins</li>
+						<li MayRequire="lat.rimstro">RS_Berrymilk</li>
+						<li MayRequire="lat.rimstro">RS_chocomilk</li>
+						<li MayRequire="dtf.milkrats">dtf_vanillamilk</li>
+						<li MayRequire="dtf.milkrats">dtf_chocolatemilk</li>
+						<li MayRequire="dtf.milkrats">dtf_strawberrymilk</li>
+						<li MayRequire="gguake.race.vivi">VV_Vivicream</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
