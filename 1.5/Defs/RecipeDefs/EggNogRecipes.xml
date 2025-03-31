@@ -317,12 +317,69 @@
 		<ST_FieryNog>2</ST_FieryNog>
 	</products>
   </RecipeDef>
-
-
-
-
-
-
-
-
+  
+	<RecipeDef>
+		<defName>MakeHoneyNog</defName>
+		<label>Make mead egg nog</label>
+		<description>Make mead egg nog</description>
+		<jobString>Mixing honey and egg nog.</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawNog</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li MayRequire="zal.patchhoney">Honey</li>
+						<li MayRequire="sarg.rimbees">RB_Honeys</li>
+					</categories>
+					<thingDefs>
+						<li>TSP_ST_GnomeHoney</li>
+						<li MayRequire="tsp.zal.patchhoney2">TSP_HoneyWort</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li MayRequire="zal.patchhoney">Honey</li>
+				<li MayRequire="sarg.rimbees">RB_Honeys</li>
+			</categories>
+			<thingDefs>
+				<li>RawNog</li>
+				<li>TSP_ST_GnomeHoney</li>
+				<li MayRequire="tsp.zal.patchhoney2">TSP_HoneyWort</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>RawNog</li>
+				<li>TSP_ST_GnomeHoney</li>
+				<li MayRequire="tsp.zal.patchhoney2">TSP_HoneyWort</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+			<li>Brewery</li>
+			<li MayRequire="vanillaexpanded.vbrewe">VBE_Bar</li>
+			<li>GnomeTable</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li>nogAlchemy</li>
+			<li MayRequire="tsp.zal.patchhoney2">TSP_DoctorBees_BeekeepingMerge</li>
+		</researchPrerequisites>
+		<products>
+			<TSP_ST_HoneyEggNog>5</TSP_ST_HoneyEggNog>
+		</products>
+	</RecipeDef>
 </Defs>

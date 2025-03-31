@@ -112,7 +112,7 @@
         <daysToRotStart>7</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
-	  <li Class="CompProperties_Ingredients" />
+	  <li Class="CompProperties_Ingredients"></li>
     </comps>
   </ThingDef>
   
@@ -413,7 +413,7 @@
       <graphicClass Inherit="False">Graphic_Single</graphicClass>
 	  <color>(75,75,75)</color>
     </graphicData>
-	<alwaysHaulable>true</alwaysHaulable>
+	<alwaysHaulable>false</alwaysHaulable>
     <rotatable>false</rotatable>
     <stackLimit>10</stackLimit>
     <statBases>
@@ -630,4 +630,128 @@
       <speed>40</speed>
     </projectile>
   </ThingDef>
+  
+	<ThingDef ParentName="EggBase">
+		<defName>TSP_ST_HoneyEggNog</defName>
+		<label>mead egg nog</label>
+		<description>This is egg nog mixed with fermented honey. It is a Gnome delicacy and improves on the already sweet power of the egg nog.</description>
+		<descriptionHyperlinks>
+			<ThingDef>TSP_ST_GnomeHoney</ThingDef>
+			<HediffDef>AlcoholHigh</HediffDef>
+			<HediffDef>AlcoholTolerance</HediffDef>
+			<HediffDef>Hangover</HediffDef>
+			<HediffDef>AlcoholAddiction</HediffDef>
+			<HediffDef>Cirrhosis</HediffDef>
+			<HediffDef>ChemicalDamageModerate</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData Inherit="False">
+			<texPath Inherit="False">Things/Items/EggNogFlavors/EggNogCarton/EggNog</texPath>
+			<graphicClass Inherit="False">Graphic_Single</graphicClass>
+			<color>(184,181,31)</color>
+		</graphicData>
+		<alwaysHaulable>true</alwaysHaulable>
+		<rotatable>false</rotatable>
+		<stackLimit>30</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>12</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+			<Nutrition>0.6</Nutrition>
+		</statBases>
+		<thingCategories>
+			<li>TSP_ST_EggNog</li>
+		</thingCategories>
+		<ingestible>
+			<foodType>Processed, Fluid, Liquor</foodType>
+			<preferability>NeverForNutrition</preferability>
+			<joyKind>TSP_ST_EggNogJoy</joyKind>
+			<joy>0.45</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Celebrating with honey-infused {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+			<tasteThought Inherit="False"></tasteThought>
+			<specialThoughtDirect Inherit="False"></specialThoughtDirect>
+			<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholHigh</hediffDef>
+					<severity>0.13</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+					<doToGeneratedPawnIfAddicted>false</doToGeneratedPawnIfAddicted>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholTolerance</hediffDef>
+					<severity>0.01</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>HediffEggNog</hediffDef>
+					<severity>1.2</severity>
+					<toleranceChemical>EggNogChemical</toleranceChemical>
+					<doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>EggNogTolerance</hediffDef>
+					<severity>0.05</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="gguake.race.vivi">
+					<hediffDef>VV_ViviGrowthBoost</hediffDef>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="gguake.race.vivi">
+					<hediffDef>VV_RoyalJelly</hediffDef>
+					<severity>0.5</severity>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed" MayRequire="gguake.race.vivi">
+					<need>VV_RoyalJelly</need>
+					<offset>0.05</offset>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<techLevel>Medieval</techLevel>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>EggNogChemical</chemical>
+				<addictiveness>0.3</addictiveness>
+				<minToleranceToAddict>0.13</minToleranceToAddict>
+				<existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
+				<needLevelOffset>1.1</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
+			<li Class="CompProperties_Drug">
+				<chemical>Alcohol</chemical>
+				<addictiveness>0.01</addictiveness>
+				<minToleranceToAddict>0.1</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.50</existingAddictionSeverityOffset>
+				<needLevelOffset>1.5</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
+			<li Class="CompProperties_Forbiddable"></li>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="VVRace.CompProperties_Honey" Inherit="False" MayRequire="gguake.race.vivi"></li>
+		</comps>
+		<storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+		<orderedTakeGroup>Drug</orderedTakeGroup>
+		<tradeTags>
+			<li>EggNog</li>
+			<li>StorytimeDrugs</li>
+			<li>StorytimeBooze</li>
+			<li>Honey</li>
+			<li>GnomeHoney</li>
+		</tradeTags>
+	</ThingDef>
 </Defs>

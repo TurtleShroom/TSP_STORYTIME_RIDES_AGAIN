@@ -21,13 +21,13 @@
 		<uiIconPath>Things/Items/GnomeFood/GnomeHoney/GnomeHoney_a</uiIconPath>
 		<statBases>
 			<MarketValue>2</MarketValue>
-			<Nutrition>0.07</Nutrition>
+			<Nutrition>0.06</Nutrition>
 			<Mass>0.02</Mass>
 			<FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
 		</statBases>
 		<ingestible>
 			<foodType>AnimalProduct, Processed, VegetarianAnimal, OmnivoreHuman, Kibble</foodType>
-			<preferability>MealSimple</preferability>
+			<preferability>RawTasty</preferability>
 			<!--
 			<joy>0.03</joy>
 			<joyKind>Gluttonous</joyKind>
@@ -36,10 +36,17 @@
 			<ingestSound>Meal_Eat</ingestSound>
 			<canAutoSelectAsFoodForCaravan>true</canAutoSelectAsFoodForCaravan>
 			<babiesCanIngest>true</babiesCanIngest>
-			<!--
 			<optimalityOffsetHumanlikes>1</optimalityOffsetHumanlikes>
 			<optimalityOffsetFeedingAnimals>1</optimalityOffsetFeedingAnimals>
-			-->
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="gguake.race.vivi">
+					<hediffDef>VV_ViviGrowthBoost</hediffDef>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="gguake.race.vivi">
+					<hediffDef>VV_RoyalJelly</hediffDef>
+					<severity>0.31</severity>
+				</li>
+			</outcomeDoers>
 		</ingestible>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<stackLimit>1000</stackLimit>
@@ -50,5 +57,9 @@
 		<comps>
 			<li Class="VVRace.CompProperties_Honey" Inherit="False" MayRequire="gguake.race.vivi"></li>
 		</comps>
+		<tradeTags>
+			<li>Honey</li>
+			<li>GnomeHoney</li>
+		</tradeTags>
 	</ThingDef>
 </Defs>
