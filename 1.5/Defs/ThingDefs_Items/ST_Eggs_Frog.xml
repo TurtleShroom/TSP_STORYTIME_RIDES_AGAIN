@@ -439,12 +439,12 @@
 	<ThingDef ParentName="EggFertBase">
 		<defName>FireToadEggFertilized</defName>
 		<label>fire-bellied toad egg (fert.)</label>
-		<description>A fertilized fire-bellied toad egg. If all goes well, it should hatch into a fire-bellied toad tadpole. It can be eaten raw, but it's much better cooked. The firery abilities of the fire-bellied toad within make the egg impossible to spoil due to temperature.</description>
+		<description>A fertilized fire-bellied toad egg. If all goes well, it should hatch into a fire-bellied toad tadpole. It can be eaten raw, but it's much better cooked. The fiery abilities of the fire-bellied toad within make the egg impossible to spoil due to temperature.</description>
 		<graphicData>
 			<color>(254,216,177)</color>
 		</graphicData>
 		<statBases>
-		<MarketValue>7.0</MarketValue>
+			<MarketValue>7.0</MarketValue>
 		</statBases>
 		<comps Inherit="False">
 			<li Class="CompProperties_Hatcher">
@@ -465,7 +465,7 @@
 		</tradeTags>
 	</ThingDef>
 
-	<ThingDef ParentName="ResourceBase">
+	<ThingDef ParentName="EggFertBase">
 		<defName>TSP_ST_BloodFrogEgg_Fertilized</defName>
 		<label>blood frog egg (fert.)</label>
 		<description>A fertilized engorged Frogglobin egg. If all goes well, it should hatch into an engorged Frogglobin tadpole. It is completely inedible.</description>
@@ -474,11 +474,13 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 			<color>(255,16,17)</color>
 		</graphicData>
-		<statBases>
+		<statBases Inherit="False">
 			<MarketValue>17</MarketValue>
-			<Nutrition Inherit="False">0</Nutrition>
+			<!-- <Nutrition Inherit="False">0</Nutrition> -->
+			<!-- <Nutrition IsNull="True" Inherit="False"></Nutrition> -->
 			<Mass>0.15</Mass>
 		</statBases>
+		<ingestible IsNull="True" Inherit="False"></ingestible>
 		<!--
 		<ingestible>
 			<foodType>None</foodType>
@@ -490,7 +492,7 @@
 		</thingCategories>
 		<comps>
 			<li Class="CompProperties_TemperatureRuinable">
-				<minSafeTemperature>5</minSafeTemperature>
+				<minSafeTemperature>-5</minSafeTemperature>
 				<maxSafeTemperature>90</maxSafeTemperature>
 				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
 			</li>

@@ -14,7 +14,7 @@
 				<li>Dragonal</li>
 				<li>WW_Sloodge</li>
 				<li>Diagen</li>
-				<li>HeavenDust</li>
+				<li>WW_HeavenDust</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -58,6 +58,35 @@
 			<success>Always</success>
 			<value>
 				<li>OniFeather</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- The Oni Mod has more than one version, so a Patch is needed instead of a direct call -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="OotR_OniFeathers"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/ingredients/li[1]/filter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>OotR_OniFeathers</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="OotR_OniFeathers"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/fixedIngredientFilter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>OotR_OniFeathers</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

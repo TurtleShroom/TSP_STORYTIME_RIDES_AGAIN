@@ -2,13 +2,13 @@
 <Defs>
 
   <ThingDef ParentName="TSP_WW_DrugBase">
-    <defName>HeavenDust</defName>
+    <defName>WW_HeavenDust</defName>
     <label>heaven dust</label>
     <description>A refined powder made from Yayo. First coined by a man known for robbing gas stations in medieval Plate Armor, heaven dust is highly addictive and has many, MANY known side effects, yet it is still made and used due to the extreme high it can make one experience.</description>
     <descriptionHyperlinks>
-      <HediffDef>HeavenDustHigh</HediffDef>
-      <HediffDef>HeavenDustTolerance</HediffDef>
-      <HediffDef>HeavenDustAddiction</HediffDef>
+      <HediffDef>WW_HeavenDustHigh</HediffDef>
+      <HediffDef>WW_HeavenDustTolerance</HediffDef>
+      <HediffDef>WW_HeavenDustAddiction</HediffDef>
       <HediffDef>ChemicalDamageSevere</HediffDef>
 	  <HediffDef>Crack</HediffDef>
     </descriptionHyperlinks>
@@ -43,17 +43,17 @@
       <useEatingSpeedStat>false</useEatingSpeedStat>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HeavenDustHigh</hediffDef>
+          <hediffDef>WW_HeavenDustHigh</hediffDef>
           <severity>0.80</severity>
-          <toleranceChemical>HeavenDust</toleranceChemical>
+          <toleranceChemical>WW_HeavenDust</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
           <need>Rest</need>
           <offset>0.4</offset>
-          <toleranceChemical>HeavenDust</toleranceChemical>
+          <toleranceChemical>WW_HeavenDust</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>HeavenDustTolerance</hediffDef>
+          <hediffDef>WW_HeavenDustTolerance</hediffDef>
           <severity>0.040</severity>
           <divideByBodySize>true</divideByBodySize>
           <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
@@ -62,7 +62,7 @@
     </ingestible>
     <comps>
       <li Class="CompProperties_Drug">
-        <chemical>HeavenDust</chemical>
+        <chemical>WW_HeavenDust</chemical>
         <addictiveness>0.10</addictiveness>
         <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
@@ -80,7 +80,7 @@
   </ThingDef>
 
   <HediffDef>
-    <defName>HeavenDustHigh</defName>
+    <defName>WW_HeavenDustHigh</defName>
     <label>high on heaven dust</label>
     <labelNoun>a heaven dust high</labelNoun>
     <description>Active heaven dust in the bloodstream. Generates an extremely intense euphoric high.</description>
@@ -112,9 +112,9 @@
   </HediffDef>
 
   <ThoughtDef>
-    <defName>HeavenDustHigh</defName>
+    <defName>WW_HeavenDustHigh</defName>
     <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>HeavenDustHigh</hediff>
+    <hediff>WW_HeavenDustHigh</hediff>
     <validWhileDespawned>true</validWhileDespawned>
     <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
     <stages>
@@ -129,10 +129,10 @@
   <!-- Psychite addiction -->
   
   <ChemicalDef>
-    <defName>HeavenDust</defName>
+    <defName>WW_HeavenDust</defName>
     <label>heaven dust</label>
-    <addictionHediff>HeavenDustAddiction</addictionHediff>
-    <toleranceHediff>HeavenDustTolerance</toleranceHediff>
+    <addictionHediff>WW_HeavenDustAddiction</addictionHediff>
+    <toleranceHediff>WW_HeavenDustTolerance</toleranceHediff>
     <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
     <onGeneratedAddictedEvents>
       <li>
@@ -157,7 +157,7 @@
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">
-    <defName>Chemical_HeavenDust</defName>
+    <defName>Chemical_WW_HeavenDust</defName>
     <needClass>Need_Chemical</needClass>
     <label>heaven dust</label>
     <description>Because of a heaven dust addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
@@ -165,7 +165,7 @@
   </NeedDef>
 
   <HediffDef ParentName="DrugToleranceBase">
-    <defName>HeavenDustTolerance</defName>
+    <defName>WW_HeavenDustTolerance</defName>
     <label>heaven dust tolerance</label>
     <description>A built-up tolerance to heaven dust. The more severe this tolerance is, the more heaven dust it takes to get the same effect.</description>
     <comps>
@@ -173,7 +173,7 @@
         <severityPerDay>-0.015</severityPerDay>
       </li>
       <li Class="HediffCompProperties_DrugEffectFactor">
-        <chemical>HeavenDust</chemical>
+        <chemical>WW_HeavenDust</chemical>
       </li>
     </comps>
     <hediffGivers>
@@ -194,12 +194,12 @@
   </HediffDef>
   
   <HediffDef ParentName="AddictionBase">
-    <defName>HeavenDustAddiction</defName>
+    <defName>WW_HeavenDustAddiction</defName>
     <label>psychite addiction</label>
     <description>A chemical addiction to heaven dust. Long-term presence heaven dust has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
 \nWithout regular doses of heaven dust, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
-    <causesNeed>Chemical_HeavenDust</causesNeed>
+    <causesNeed>Chemical_WW_HeavenDust</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.0333</severityPerDay>
@@ -244,9 +244,9 @@
   </HediffDef>
 
   <ThoughtDef>
-    <defName>HeavenDustWithdrawal</defName>
+    <defName>WW_HeavenDustWithdrawal</defName>
     <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>HeavenDustAddiction</hediff>
+    <hediff>WW_HeavenDustAddiction</hediff>
     <validWhileDespawned>true</validWhileDespawned>
     <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
     <stages>
