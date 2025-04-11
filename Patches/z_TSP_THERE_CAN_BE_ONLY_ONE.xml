@@ -129,9 +129,9 @@
           <value>
 				<ThingDef ParentName="BaseFilth">
 					<defName>VCE_RawCabbage</defName>
-					<label>faggot cabbage (ERROR)</label>
+					<label>VFEP cabbage (ERROR)</label>
 					<category>Filth</category>
-					<description>The Storytime Rides Again Mod adds cabbages to the game, and removes the version of the cabbage from the Vanilla Factions Plants Expanded Mod. If this is ever encountered in the game as an item, you are seeing an error. Please report it to TurtleShroom.</description>
+					<description>The Storytime Rides Again Mod adds cabbages to the game, and removes the version of the faggot cabbage from the Vanilla Factions Plants Expanded Mod. If this faggotry is ever encountered in the game as an item, you are seeing an error. Please report it to TurtleShroom.</description>
 					<graphicData>
 						<texPath>Things/Items/PowerCabbage</texPath>
 						<graphicClass>Graphic_Single</graphicClass>
@@ -290,9 +290,9 @@
           <value>
 				<ThingDef ParentName="BaseFilth">
 					<defName>VCE_RawOrange</defName>
-					<label>faggot oranges (ERROR)</label>
+					<label>VFEP oranges (ERROR)</label>
 					<category>Filth</category>
-					<description>The Storytime Rides Again Mod adds oranges to the game, and removes the version of the oranges from the Vanilla Factions Plants Expanded Mod. If this is ever encountered in the game as an item, you are seeing an error. Please report it to TurtleShroom.</description>
+					<description>The Storytime Rides Again Mod adds oranges to the game, and removes the faggot oranges from the Vanilla Factions Plants Expanded Mod. If this is ever encountered in the game as an item, you are seeing an error. Please report it to TurtleShroom.</description>
 					<graphicData>
 						<texPath>Things/Items/Resources/Fruits/Orange</texPath>
 						<graphicClass>Graphic_StackCount</graphicClass>
@@ -538,7 +538,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Make_VGGuacamole"]</xpath>
+		<xpath>/Defs/RecipeDef[defName="Make_VGGuacamole"]/fixedIngredientFilter</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
@@ -1212,5 +1212,58 @@
 				<key>ST_Lemon</key>
 			</value>
 		</match>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional" MayRequire="rh2.randy.burger.fast.food">
+		<xpath MayRequire="rh2.randy.burger.fast.food">/Defs/ThingDef[defName="RH2Beer_MuffBeer"]</xpath>
+		<nomatch Class="PatchOperationAdd" MayRequire="rh2.randy.burger.fast.food">
+			<xpath MayRequire="rh2.randy.burger.fast.food">/Defs</xpath>
+			<success MayRequire="rh2.randy.burger.fast.food">Always</success>
+			<value MayRequire="rh2.randy.burger.fast.food">
+				<ThingDef ParentName="BaseFilth" MayRequire="rh2.randy.burger.fast.food">
+					<defName>RH2Beer_MuffBeer</defName>
+					<label>RH2 Muff Beer (ERROR)</label>
+					<thingClass>ThingWithComps</thingClass>
+					<category>Filth</category>
+					<description>An error in the RH2 Fast Food Mod has caused the Muff Beer to throw errors. Until that is fixed, this stand in will solve issues with compatibility. If this is ever encountered in the game as an item, you are seeing an error, but DO NOT report it to TurtleShroom. Report it to the RH2 Mod's author, Chickenplucker.</description>
+					<graphicData MayRequire="rh2.randy.burger.fast.food">
+						<texPath>Things/Drug/MuffBeer</texPath>
+						<graphicClass>Graphic_StackCount</graphicClass>
+					</graphicData>
+					<altitudeLayer>Filth</altitudeLayer>
+					<selectable>true</selectable>
+					<statBases MayRequire="rh2.randy.burger.fast.food">
+						<Flammability>0</Flammability>
+						<Nutrition>0.0001</Nutrition>
+					</statBases>
+					<ingestible>
+						<preferability>NeverForNutrition</preferability>
+						<foodType>DendrovoreAnimal</foodType>
+					</ingestible>
+					<filth Inherit="False" MayRequire="rh2.randy.burger.fast.food">
+						<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+						<disappearsInDays>0.01~0.05</disappearsInDays>
+						<rainWashes>true</rainWashes>
+						<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+						<canFilthAttach>false</canFilthAttach>
+						<cleaningSound Inherit="False">Vomit</cleaningSound>
+					</filth>
+					<comps>
+						<li Class="CompProperties_Drug">
+							<chemical>Alcohol</chemical>
+							<addictiveness>0.5</addictiveness>
+							<minToleranceToAddict>0.02</minToleranceToAddict>
+							<existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
+							<needLevelOffset>1</needLevelOffset>
+							<listOrder>10</listOrder>
+							<overdoseSeverityOffset>0</overdoseSeverityOffset>
+							<largeOverdoseChance>0</largeOverdoseChance>
+						</li>
+						<li Class="CompProperties_Forbiddable"></li>
+					</comps>
+				</ThingDef>
+			</value>
+		</nomatch>
 	</Operation>
 </Patch>

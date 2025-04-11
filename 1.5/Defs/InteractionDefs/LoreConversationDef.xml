@@ -7,7 +7,7 @@
     <workerClass>InteractionWorker_DeepTalk</workerClass>
     <symbol>Things/Motes/LoreMote</symbol>
     <initiatorThought>Loreytime</initiatorThought>
-    <initiatorXpGainSkill>Intellectual</initiatorXpGainSkill>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
     <initiatorXpGainAmount>16</initiatorXpGainAmount>
     <recipientThought>Loreytime</recipientThought>
     <logRulesInitiator>
@@ -30,9 +30,10 @@
 		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] the [Color] [LoreSpecies] of [LoreLocations].</li>
 		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] could not understand how a friend could be lost just because his politics didn't match theirs.</li>
 		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] made fun of TurtleShroom.</li>
-		<li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] agreed that Jeremiah was a [LoreSpecies]! Indeed, he was a good friend of theirs. Neither [INITIATOR_nameDef] nor [RECIPIENT_nameDef] could understand a single word he said, but they helped him drink his Coke. Jeremiah always had some mighty fine Coke.</li>
-		<li>r_logentry(p=2)->[INITIATOR_nameDef] [talkedabout] [fourchanmetaphor] to a confused [RECIPIENT_nameDef].</li>
-		<li>r_logentry(p=1.25)->[INITIATOR_nameDef] joked about [fourchanmetaphor]. [RECIPIENT_nameDef] laughed uproariously.</li>
+		<li>r_logentry(p=0.5)->[INITIATOR_nameDef] and [RECIPIENT_nameDef] agreed that Jeremiah was a [LoreSpecies]! Indeed, he was a good friend of theirs. Neither [INITIATOR_nameDef] nor [RECIPIENT_nameDef] could understand a single word he said, but they helped him drink his Coke. Jeremiah always had some mighty fine Coke.</li>
+		<li>r_logentry->[INITIATOR_nameDef] [talkedabout] [fourchanmetaphor] to a confused [RECIPIENT_nameDef].</li>
+		<li>r_logentry(p=1.12)->[INITIATOR_nameDef] joked about [fourchanmetaphor]. [RECIPIENT_nameDef] laughed uproariously.</li>
+		<li>r_logentry->[INITIATOR_nameDef] asked [RECIPIENT_nameDef] why Core World philosophers think of [LoreCharacters] as fondly as the mythical (nonexistant) Doctor Pepper. [ColorBadass] Perchance.</li>
         <li>talkedabout->chatted about</li>
         <li>talkedabout->shared a word about</li>
         <li>talkedabout->spoke about</li>
@@ -46,16 +47,21 @@
         <li>talkedabout->made a comment about</li>
         <li>talkedabout->commented about</li>
         <li>talkedabout->told a joke about</li>
-		<li>fourchanmetaphor->deep frying albatrosses</li>
-		<li>fourchanmetaphor->paddling bobcats</li>
-		<li>fourchanmetaphor->buttering cylinders</li>
-		<li>fourchanmetaphor->slamming gourmet sausages</li>
-		<li>fourchanmetaphor->plucking a pheasant</li>
-		<li>fourchanmetaphor->schlorping [LoreLocations] sprouts</li>
-		<li>fourchanmetaphor->kerplunking an orca</li>
+		<li>talkedabout->referenced a meme concerning</li>
+		<li>talkedabout->told a story involving</li>
+		<li>talkedabout->enthused over</li>
+		<li>fourchanmetaphor(p=0.95)->deep frying albatrosses</li>
+		<li>fourchanmetaphor(p=0.95)->paddling bobcats</li>
+		<li>fourchanmetaphor(p=0.8)->buttering cylinders</li>
+		<li>fourchanmetaphor(p=0.8)->slamming gourmet sausages</li>
+		<li>fourchanmetaphor(p=0.9)->plucking a pheasant</li>
+		<li>fourchanmetaphor(p=0.95)->schlorping [LoreLocations] sprouts</li>
+		<li>fourchanmetaphor(p=0.95)->kerplunking an orca</li>
 		<li>fourchanmetaphor->deep frying a [LoreSpecies]</li>
 		<li>fourchanmetaphor->kerplunking a [LoreSpecies]</li>
 		<li>fourchanmetaphor->padoinking a [LoreSpecies]</li>
+		<li>fourchanmetaphor->buttering a [LoreSpecies]</li>
+		<li>fourchanmetaphor->stomping a [LoreSpecies]y. Perchance</li>
       </rulesStrings>
     </logRulesInitiator>
   </InteractionDef>
@@ -71,7 +77,7 @@
     <stages>
       <li>
         <label>discussed deep lore</label>
-        <description>The world is an amazing place. There are so many laws, topics, places, and creatures to discuss. Indeed, our discussion about it really got me thinking.</description>
+        <description>The galaxy, even worlds as far out as this one, is an amazing place. There are so many laws, topics, places, and creatures to discuss. Indeed, our discussion about it really got me thinking. Perchance.</description>
         <baseOpinionOffset>2</baseOpinionOffset>
       </li>
     </stages>

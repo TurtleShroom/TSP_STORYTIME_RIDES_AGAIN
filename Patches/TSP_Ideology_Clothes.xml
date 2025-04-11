@@ -902,4 +902,28 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_Mantle"]/apparel/tags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_Mantle"]/apparel/tags</xpath>
+			<value>
+				<li>OniWear</li>
+				<li>JeubWear</li>
+				<li>GoblinWear</li>
+				<li>BeetWear</li>
+				<li>ST_BeetClothing</li>
+				<li>VFEM2_Medieval</li>
+				<li>MedievalWorker</li>
+				<li>Medieval</li>
+				<li>MedievalBasic</li>
+				<li>HarrierWear</li>
+				<li>SurvivalistWear</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

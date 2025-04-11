@@ -3,6 +3,34 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Gun_Revolver"]</xpath>
+		<!-- If it does, insert this in the same bracket as the sibling bracket. -->
+		<match Class="PatchOperationInsert">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/weaponTags/li[text()="K4GSimpleTool"]</xpath>
+			<value>
+				<li>Toolagri</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Gun_Revolver"]</xpath>
+		<!-- If it does, insert this in the same bracket as the sibling bracket. -->
+		<match Class="PatchOperationInsert">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/weaponTags/li[text()="Toolagri"]</xpath>
+			<value>
+				<li>K4GSimpleTool</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="ROM_Pitchfork"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">

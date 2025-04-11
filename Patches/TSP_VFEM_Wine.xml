@@ -62,4 +62,66 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
     </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TraderKindDef[defName="VFEM2_Caravan_Medieval_WineMerchant"]/commonality</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/TraderKindDef[defName="VFEM2_Caravan_Medieval_WineMerchant"]/commonality</xpath>
+			<success>Always</success>
+			<value>
+				<commonality>0.851</commonality>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TraderKindDef[defName="VFEM2_Caravan_Medieval_WineMerchant"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/TraderKindDef[defName="VFEM2_Caravan_Medieval_WineMerchant"]/stockGenerators</xpath>
+			<success>Always</success>
+			<value>
+				<li Class="StockGenerator_SingleDef">
+					<thingDef>TSP_ST_VFEM_GnomeWine_Lime</thingDef>
+					<countRange>
+						<min>30</min>
+						<max>100</max>
+					</countRange>
+				</li>
+				<li Class="StockGenerator_SingleDef">
+					<thingDef>ST_Lime</thingDef>
+					<countRange>
+						<min>-40</min>
+						<max>40</max>
+					</countRange>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>ST_GnomeBooze</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>DunmerBooze</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>ST_Poison</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>DreadedLaced_CringeWonka_Candy</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>StorytimeDrugs</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>StorytimeBooze</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>EggNog</tag>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
 </Patch>
