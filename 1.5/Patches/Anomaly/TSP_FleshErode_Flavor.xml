@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]</xpath>
+			<success>Always</success>
+			<value>
+				<race>Alien_Jeub</race>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
+		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="ludeon.rimworld.biotech" Inherit="False"></xenotypeSet>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
+		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet/xenotypeChances</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeChances MayRequire="ludeon.rimworld.biotech" Inherit="False"></xenotypeChances>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/XenotypeDef[defName="AV_Slavant"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet/xenotypeChances</xpath>
+			<value>
+				<AV_Slavant MayRequire="ludeon.rimworld.biotech">1</AV_Slavant>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/XenotypeDef[defName="AG_Mycormorph"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet/xenotypeChances</xpath>
+			<value>
+				<AG_Mycormorph MayRequire="ludeon.rimworld.biotech">10</AG_Mycormorph>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/XenotypeDef[defName="AG_Mycormorph"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="VRE_Fungoid"]/xenotypeSet/xenotypeChances</xpath>
+			<value>
+				<VRE_Fungoid MayRequire="ludeon.rimworld.biotech">3</VRE_Fungoid>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
+			<value>
+				<race>Alien_Jeub</race>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/backstoryFilters</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/backstoryFilters</xpath>
+			<value>
+				<backstoryFilters>
+					<li>
+						<categories>
+							<li>Madman</li>
+							<li>Cult</li>
+							<li>Cultist</li>
+							<li>Scientist</li>
+						</categories>
+					</li>
+				</backstoryFilters>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/label</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/label</xpath>
+			<value>
+				<label>Jeub wanderer</label>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelPlural</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelPlural</xpath>
+			<value>
+				<labelPlural>Jeub wanderers</labelPlural>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemale</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemale</xpath>
+			<value>
+				<labelFemale>Jeub wanderer</labelFemale>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemalePlural</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemalePlural</xpath>
+			<value>
+				<labelFemalePlural>Jeub wanderers</labelFemalePlural>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
