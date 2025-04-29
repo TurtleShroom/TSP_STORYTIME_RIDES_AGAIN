@@ -4,7 +4,10 @@
   <ThingDef ParentName="RoughPlantBase">
     <defName>ST_CookingApple</defName>
     <label>cooking apple</label>
-    <description>Keeps the doctor away.</description>
+    <description>Green apples. Keeps the doctor away.</description>
+	<descriptionHyperlinks>
+		<ThingDef>ST_CookingAppleTree</ThingDef>
+	</descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Items/Resources/Fruits/CookingApple</texPath>
 	  <graphicClass>Graphic_StackCount</graphicClass>
@@ -27,14 +30,19 @@
 		<li>PlantFoodRaw</li>
     </thingCategories>
     <ingestible>
-      <foodType>VegetableOrFruit</foodType>
+      <foodType>VegetableOrFruit, Seed</foodType>
     </ingestible>
   </ThingDef>
   
   <ThingDef ParentName="RoughPlantBase">
     <defName>ST_Lemon</defName>
     <label>lemon</label>
-    <description>Lemons are a sour, bright yellow, citrus fruit of the rue family of plants. Its juice, used priamrily for flavoring beverages, yields citric acid. Notably, lemons are not naturally occuring. Instead, they are a hybrid formed by crossing a bitter orange with a citron. \n\n LIFE NEVER GAVE MAN LEMONS! MAN INVENTED THEM ALL BY HIMSELF!! FOR MAN GAVE LEMONS LIFE!!</description>
+    <description>Lemons are a sour, bright yellow, citrus fruit of the rue family of plants. Its juice, used priamrily for flavoring beverages, yields citric acid. Notably, lemons are not naturally occuring. Instead, they are a hybrid formed by crossing a bitter orange with a citron. \n\n LIFE NEVER GAVE MAN LEMONS! MAN INVENTED THEM ALL BY HIMSELF!! MAN GAVE LEMONS LIFE!!</description>
+	<descriptionHyperlinks>
+		<ThingDef>ST_LemonTree</ThingDef>
+		<ThingDef>TSP_ST_Citron</ThingDef>
+		<ThingDef>ST_MikesLemonade</ThingDef>
+	</descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Items/Resources/Fruits/Lemon</texPath>
 	  <graphicClass>Graphic_StackCount</graphicClass>
@@ -56,14 +64,17 @@
 		<li>PlantFoodRaw</li>
     </thingCategories>
     <ingestible>
-      <foodType>VegetableOrFruit</foodType>
+      <foodType>VegetableOrFruit, Seed</foodType>
     </ingestible>
   </ThingDef>
   
   <ThingDef ParentName="RoughPlantBase">
     <defName>ST_Lime</defName>
     <label>lime</label>
-    <description>A fresh lime.</description>
+    <description>A fresh lime. All limes are hybrids of citrons and a fruit called the micrantha, but many varieties, including this one, are further crossed and bred for further taste.</description>
+	<descriptionHyperlinks>
+		<ThingDef>ST_LimeTree</ThingDef>
+	</descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Items/Resources/Fruits/Lime</texPath>
 	  <graphicClass>Graphic_StackCount</graphicClass>
@@ -85,14 +96,17 @@
 		<li>PlantFoodRaw</li>
     </thingCategories>
     <ingestible>
-      <foodType>VegetableOrFruit</foodType>
+      <foodType>VegetableOrFruit, Seed</foodType>
     </ingestible>
   </ThingDef>
   
   <ThingDef ParentName="RoughPlantBase">
     <defName>ST_Orange</defName>
     <label>orange</label>
-    <description>A fresh orange.</description>
+    <description>A fresh, sour orange. All oranges are globose and contain pulp that consists of oblong vesicles that are filled with a sugary, refreshing juice, segregated into multiple "compartments." This type of orange is called a bitter orange (taxonomy &lt;i>Citrus aurantium&lt;/i>), which is created by crossing Mandarin oranges with pomelos. \n Along with citrons and pomelos, the original Mandarin orange (taxonomy &lt;i>Citrus reticulata&lt;/i>) is one of the core components of every other citrus crop that exists.</description>
+	<descriptionHyperlinks>
+		<ThingDef>ST_OrangeTree</ThingDef>
+	</descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Items/Resources/Fruits/Orange</texPath>
 	  <graphicClass>Graphic_StackCount</graphicClass>
@@ -115,7 +129,7 @@
 		<li>PlantFoodRaw</li>
     </thingCategories>
     <ingestible>
-      <foodType>VegetableOrFruit</foodType>
+      <foodType>VegetableOrFruit, Seed</foodType>
     </ingestible>
   </ThingDef>
 
@@ -161,5 +175,38 @@
 	<tradeTags>
 		<li>Beans</li>
 	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>TSP_ST_Citron</defName>
+    <label>citron</label>
+    <description>Citrons (taxonomy &lt;i>Citrus medica&lt;/i>) are one of the core ancient predecessors to almost every citric crop that has ever existed, as well as the namesake for "citrus" and "citric acid." They resemble enourmous, lumpy, rough lemons with thick rinds.</description>
+	<descriptionHyperlinks>
+		<ThingDef>TSP_ST_CitronTree</ThingDef>
+	</descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Items/Resources/Fruits/Citron</texPath>
+	  <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+	<uiIconPath>Things/Items/Resources/Fruits/Citron/Citron_a</uiIconPath>
+	<uiIconScale>1.45</uiIconScale>
+    <statBases>
+      <MarketValue>1.05</MarketValue>
+      <Flammability>1</Flammability>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+		<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+		<li>PlantFoodRaw</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>VegetableOrFruit, Seed</foodType>
+    </ingestible>
   </ThingDef>
 </Defs>
