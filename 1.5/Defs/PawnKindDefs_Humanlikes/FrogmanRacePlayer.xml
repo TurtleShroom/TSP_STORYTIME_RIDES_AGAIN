@@ -1,39 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
-  <PawnKindDef Abstract="True" Name="BasePlayerFrogPersonPawnKind">
-    <race>Alien_FrogPerson</race>
-    <backstoryFilters Inherit="False">
-		<li>
-			<categories>
-				<li>FrogPersonBackstory</li>
-				<li>InsectRelated</li>
-			</categories>
-		</li>
-    </backstoryFilters>
-    <!-- <baseRecruitDifficulty>0.5</baseRecruitDifficulty> -->
-    <isFighter>false</isFighter>
-    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-    <forceNormalGearQuality>true</forceNormalGearQuality>
-	<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-	<apparelTags>
-		<li>FrogmanWear</li>
-		<li>RWPGentlemanWear</li> <!-- Michelin J. Frog -->
-		<li>School_Thai</li>
-	</apparelTags>
-	<!-- Prevents bug when Children are allowed to spawn in V1.3 via Mods causing the trade caravan to pump out massive errors -->
-	<modExtensions>
-		<!--
-		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
-			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
-				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
-					<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
-					<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
-				</li>
-			</genes>
-		</li>
-		-->
-	</modExtensions>
-  </PawnKindDef>
+	<PawnKindDef Abstract="True" Name="BasePlayerFrogPersonPawnKind">
+		<race>Alien_FrogPerson</race>
+		<!-- <baseRecruitDifficulty>0.5</baseRecruitDifficulty> -->
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<apparelTags>
+			<li>FrogmanWear</li>
+			<li>RWPGentlemanWear</li> <!-- Michelin J. Frog -->
+			<li>School_Thai</li>
+		</apparelTags>
+		<!-- Prevents bug when Children are allowed to spawn in V1.3 via Mods causing the trade caravan to pump out massive errors -->
+		<combatPower>40</combatPower>
+		<initialWillRange>1~4</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		<modExtensions>
+			<!--
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+					<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools,sarg.alphagenes">
+						<defName MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">AG_FrogVoice</defName>
+						<chance MayRequire="sarg.alphagenes,jecrell.jecstools,sarg.alphagenes">999</chance>
+					</li>
+				</genes>
+			</li>
+			-->
+		</modExtensions>
+	</PawnKindDef>
+  
+	<PawnKindDef Name="ST_Frogman_Character" ParentName="BasePlayerFrogPersonPawnKind" Abstract="True">
+		<race>Alien_FrogPerson</race>
+		<defaultFactionType>FrogTribes</defaultFactionType>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>FrogPersonBackstory</li>
+					<li>InsectRelated</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+	</PawnKindDef>
   
   <PawnKindDef ParentName="BasePlayerFrogPersonPawnKind">
     <defName>PlayerFrogPerson</defName>
@@ -77,7 +86,7 @@
     <initialResistanceRange>5~20</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerFrogPersonPawnKind">
+  <PawnKindDef ParentName="ST_Frogman_Character">
     <defName>FrogPersonHunter</defName>
     <label>frogman hunter</label>
     <combatPower>45</combatPower>
@@ -112,7 +121,7 @@
     <initialResistanceRange>5~20</initialResistanceRange>
   </PawnKindDef>
   
-    <PawnKindDef ParentName="BasePlayerFrogPersonPawnKind">
+    <PawnKindDef ParentName="ST_Frogman_Character">
 		<defName>FrogPersonWarrior</defName>
 		<label>frog warrior</label>
 		<combatPower>45</combatPower>
@@ -147,7 +156,7 @@
 		<initialResistanceRange>5~20</initialResistanceRange>
 	</PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerFrogPersonPawnKind">
+  <PawnKindDef ParentName="ST_Frogman_Character">
     <defName>FrogPersonTrader</defName>
     <label>frog merchant</label>
     <trader>true</trader>
@@ -185,7 +194,7 @@
     <initialResistanceRange>5~20</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerFrogPersonPawnKind">
+  <PawnKindDef ParentName="ST_Frogman_Character">
     <defName>FrogPersonChief</defName>
     <label>chief frogman</label>
 	<combatPower>60</combatPower>
@@ -273,7 +282,7 @@
 		</techHediffsTags>
 	</PawnKindDef>
 	
-  <PawnKindDef ParentName="BasePlayerFrogPersonPawnKind">
+  <PawnKindDef ParentName="ST_Frogman_Character">
     <defName>TSP_TwoForgsInTrenchcoat_Merchant</defName>
     <label>Forg merchants</label>
 	<race>Forg_Duo</race>
@@ -318,7 +327,7 @@
     <initialResistanceRange>5~20</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerFrogPersonPawnKind">
+  <PawnKindDef ParentName="ST_Frogman_Character">
     <defName>TSP_ForgMerchant</defName>
     <label>Forg merchant</label>
 	<race>Forg_Forg</race>

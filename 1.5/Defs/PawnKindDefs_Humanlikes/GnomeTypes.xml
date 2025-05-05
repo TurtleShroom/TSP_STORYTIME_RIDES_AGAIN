@@ -2,7 +2,27 @@
 
 <Defs>
 	<PawnKindDef Abstract="True" Name="BasePlayerGnomePawnKind">
-		<race>Alien_Gnome</race>
+		<race>Alien_ST_Gnome</race>
+		<!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelColor>(69,193,69)</apparelColor>
+		<favoriteColor>(69,193,69)</favoriteColor>
+		<invNutrition>4</invNutrition>
+		<apparelTags>
+			<li>ST_GnomeClothing</li>
+			<li>GnomeWear</li>
+		</apparelTags>
+		<requiredWorkTags>
+			<li>Cooking</li>
+		</requiredWorkTags>
+		<combatPower>45</combatPower>
+		<initialWillRange>1~4</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="ST_Character_Gnome" ParentName="BasePlayerGnomePawnKind" Abstract="True">
+		<race>Alien_ST_Gnome</race>
 		<backstoryFilters>
 			<li>
 				<categories>
@@ -12,14 +32,16 @@
 				</categories>
 			</li>
 		</backstoryFilters>
-		<!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
 		<isFighter>false</isFighter>
-		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-		<forceNormalGearQuality>true</forceNormalGearQuality>
-		<apparelColor>(69,193,69)</apparelColor>
-		<favoriteColor>(69,193,69)</favoriteColor>
-		<invNutrition>4</invNutrition>
 		<invFoodDef>TangledToadLegs</invFoodDef>
+		<apparelTags>
+			<li>ST_GnomeClothing</li>
+			<li>Medieval</li>
+			<li>MedievalBasic</li>
+			<li>MedievalApparelBasic</li>
+			<li>MedievalApparel</li>
+			<li>Classical</li>
+		</apparelTags>
 		<specificApparelRequirements>
 			<!-- Relocated to ensure Weezer Albums stay blue -->
 			<!--
@@ -42,20 +64,12 @@
 				<stuff>Gnome_Cloth</stuff>
 			</li>
 		</specificApparelRequirements>
-		<apparelTags>
-			<li>ST_GnomeClothing</li>
-			<li>Medieval</li>
-			<li>MedievalBasic</li>
-			<li>MedievalApparelBasic</li>
-			<li>MedievalApparel</li>
-			<li>Classical</li>
-		</apparelTags>
-		<requiredWorkTags>
-			<li>Cooking</li>
-		</requiredWorkTags>
+		<combatPower>10</combatPower>
+		<initialWillRange>1~4</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
 	</PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerGnomePawnKind">
+  <PawnKindDef ParentName="ST_Character_Gnome">
     <defName>PlayerGnome</defName>
     <label>Gnome colonist</label>
 	<!--
@@ -109,7 +123,7 @@
     <initialResistanceRange>6~20</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerGnomePawnKind">
+  <PawnKindDef ParentName="ST_Character_Gnome">
     <defName>GnomeArcher</defName>
     <label>Gnome archer</label>
     <combatPower>50</combatPower>
@@ -160,7 +174,7 @@
     <initialResistanceRange>3~16</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerGnomePawnKind">
+  <PawnKindDef ParentName="ST_Character_Gnome">
     <defName>GnomeWarrior</defName>
     <label>Gnome warrior</label>
 	<isFighter>true</isFighter>
@@ -209,7 +223,7 @@
     <initialResistanceRange>3~16</initialResistanceRange>
   </PawnKindDef>
   
-	<PawnKindDef ParentName="BasePlayerGnomePawnKind">
+	<PawnKindDef ParentName="ST_Character_Gnome">
 		<defName>GnomeTrader</defName>
 		<label>Gnome tradesman</label>
 		<trader>true</trader>
@@ -274,7 +288,7 @@
   <PawnKindDef>
     <defName>TSP_ST_GnomeCabbageinator</defName>
     <label>cabbage grenadier</label>
-	<race>Alien_Gnome</race>
+	<race>Alien_ST_Gnome</race>
 	<isFighter>true</isFighter>
     <combatPower>250</combatPower>
     <chemicalAddictionChance>0.1</chemicalAddictionChance>
@@ -321,7 +335,7 @@
     <defName>GnomeKing</defName>
     <label>Gnoble King</label>
 	<labelFemale>Gnoble Queen</labelFemale>
-	<race>Alien_Gnome</race>
+	<race>Alien_ST_Gnome</race>
 	<combatPower>80</combatPower>
     <defaultFactionType>TreeGnomeEmpire</defaultFactionType>
     <factionLeader>true</factionLeader>
@@ -398,6 +412,7 @@
     </weaponTags>
     <initialWillRange>0.5~6</initialWillRange>
     <initialResistanceRange>15~60</initialResistanceRange>
+	<backstoryFilters Inherit="False" IsNull="True"></backstoryFilters>
     <backstoryFiltersOverride Inherit="False">
 		<li>
 			<categoriesChildhood>
@@ -418,10 +433,11 @@
 		<defName>TSP_ST_GnomePeasant</defName>
 		<label>Gnome peasant</label>
 		<labelPlural>Gnome peasants</labelPlural>
-		<race>Alien_Gnome</race>
+		<race>Alien_ST_Gnome</race>
 		<combatPower>10</combatPower>
 		<!-- <defaultFactionType>TreeGnomeEmpire</defaultFactionType> -->
 		<apparelIgnoreSeasons Inherit="False">true</apparelIgnoreSeasons>
+		<backstoryFilters Inherit="False" IsNull="True"></backstoryFilters>
 		<backstoryFiltersOverride Inherit="False">
 			<li>
 				<categories>
@@ -467,7 +483,7 @@
 		  <li>Simple</li>
 		</techHediffsTags>
 		<techHediffsChance>0.02</techHediffsChance>
-		<apparelTags Inherit="False">
+		<apparelTags Inherit="False" IsNull="True">
 			<!-- Gnome peasants wear nothing else -->
 			<!-- <li>GnomePeasant</li> -->
 		</apparelTags>
@@ -481,71 +497,75 @@
 		<initialResistanceRange>1~4</initialResistanceRange>
 	  </PawnKindDef>
 	  
-		<PawnKindDef ParentName="BasePlayerGnomePawnKind">
-			<defName>GnomeChef</defName>
-			<label>Gnome chef</label>
-			<isFighter>false</isFighter>
-			<combatPower>60</combatPower>
-			<chemicalAddictionChance>0.01</chemicalAddictionChance>
-			<humanPregnancyChance>0.23</humanPregnancyChance>
-			<minGenerationAge>23</minGenerationAge>
-			<maxGenerationAge>54</maxGenerationAge>
-			<apparelMoney>
-				<min>250</min>
-				<max>550</max>
-			</apparelMoney>
-			<apparelTags>
-				<li>GnomeChef</li>
-			</apparelTags>
-			<apparelRequired Inherit="False">
-				<li MayRequire="vanillaexpanded.vappe">VAE_Apparel_ChefsUniform</li>
-				<li MayRequire="vanillaexpanded.vappe">VAE_Headgear_ChefsToque</li>
-			</apparelRequired>
-			<forceNormalGearQuality>true</forceNormalGearQuality>
-			<weaponMoney>
-				<min>250</min>
-				<max>1600</max>
-			</weaponMoney>
-			<specificApparelRequirements>
-				<li>
-					<colorGenerator Class="ColorGenerator_Options">
-						<options>
-							<li>
-								<only>(69,193,69)</only> <!-- Neon green -->
-							</li>
-						</options>
-					</colorGenerator>
-				</li>
-			</specificApparelRequirements>
-			<backstoryCryptosleepCommonality>0.12</backstoryCryptosleepCommonality>
-			<techHediffsMoney>
-				<min>250</min>
-				<max>701</max>
-			</techHediffsMoney>
-			<techHediffsTags>
-				<li>Poor</li>
-			</techHediffsTags>
-			<techHediffsChance>0.02</techHediffsChance>
-			<techHediffsRequired Inherit="False">
-				<li MayRequire="ludeon.rimworld.royalty">GastroAnalyzer</li>
-			</techHediffsRequired>
-			<weaponTags>
-				<li>Knife</li>
-				<li>GnomeChef</li>
-				<li>K4GCleaver</li>
-			</weaponTags>
-			<initialWillRange>0.01~2</initialWillRange>
-			<initialResistanceRange>2~8</initialResistanceRange>
-			<skills Inherit="False">
-				<li Inherit="False">
-					<skill>Cooking</skill>
-					<range>12~20</range>
-				</li>
-			</skills>
-			<!--
-			<requiredWorkTags>
-				<li>Cooking</li>
-			</requiredWorkTags>
-			-->
+	<PawnKindDef Name="TSP_ST_GnomeChef_Base" ParentName="BasePlayerGnomePawnKind" Abstract="True">
+		<race>Alien_ST_Gnome</race>
+		<apparelTags>
+			<li>GnomeChef</li>
+		</apparelTags>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelRequired Inherit="False">
+			<li MayRequire="vanillaexpanded.vappe">VAE_Apparel_ChefsUniform</li>
+			<li MayRequire="vanillaexpanded.vappe">VAE_Headgear_ChefsToque</li>
+		</apparelRequired>
+		<techHediffsRequired Inherit="False">
+			<li MayRequire="ludeon.rimworld.royalty">GastroAnalyzer</li>
+		</techHediffsRequired>
+		<humanPregnancyChance>0.23</humanPregnancyChance>
+		<weaponTags>
+			<li>Knife</li>
+			<li>GnomeChef</li>
+			<li>K4GCleaver</li>
+		</weaponTags>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<only>(69,193,69)</only> <!-- Neon green -->
+						</li>
+					</options>
+				</colorGenerator>
+			</li>
+		</specificApparelRequirements>
+	</PawnKindDef>
+	  
+	<PawnKindDef Name="ST_GnomeChef_Character" ParentName="TSP_ST_GnomeChef_Base">
+		<defName>GnomeChef</defName>
+		<label>Gnome chef</label>
+		<isFighter>false</isFighter>
+		<combatPower>30</combatPower>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<minGenerationAge>23</minGenerationAge>
+		<maxGenerationAge>54</maxGenerationAge>
+		<apparelMoney>
+			<min>250</min>
+			<max>550</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>250</min>
+			<max>1600</max>
+		</weaponMoney>
+		<backstoryCryptosleepCommonality>0.12</backstoryCryptosleepCommonality>
+		<techHediffsMoney>
+			<min>250</min>
+			<max>701</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<initialWillRange>0.01~2</initialWillRange>
+		<initialResistanceRange>2~8</initialResistanceRange>
+		<skills Inherit="False">
+			<li Inherit="False">
+				<skill>Cooking</skill>
+				<range>12~20</range>
+			</li>
+		</skills>
+		<!--
+		<requiredWorkTags>
+			<li>Cooking</li>
+		</requiredWorkTags>
+		-->
 	</PawnKindDef>
 </Defs>

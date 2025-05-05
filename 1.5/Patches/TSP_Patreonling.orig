@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/requiredMemes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<requiredMemes></requiredMemes>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/disallowedMemes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedMemes></disallowedMemes>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/disallowedPrecepts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedPrecepts></disallowedPrecepts>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[defName="PatreonCivil"]/requiredMemes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="PatreonCivil"]</xpath>
+			<success>Always</success>
+			<value>
+				<requiredMemes></requiredMemes>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[defName="PatreonCivil"]/disallowedMemes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="PatreonCivil"]</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedMemes></disallowedMemes>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[defName="PatreonCivil"]/disallowedPrecepts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="PatreonCivil"]</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedPrecepts></disallowedPrecepts>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/FactionDef[defName="PatreonCivil"]/classicIdeo</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/FactionDef[defName="PatreonCivil"]/classicIdeo</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/requiredMemes</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/requiredMemes</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Corporate</li>
+				<li MayRequire="vanillaexpanded.vmemese">VME_Trader</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/disallowedMemes</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/disallowedMemes</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="Sarg.AlphaMemes">AM_NonViolence</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[defName="PatreonCivil"]/requiredMemes</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="PatreonCivil"]/requiredMemes</xpath>
+			<success>Always</success>
+			<value>
+				<!-- <li MayRequire="erdelf.humanoidalienraces,Ludeon.RimWorld.Ideology">HAR_Xenophilia</li> -->
+				<li MayRequire="vanillaexpanded.vmemese">VME_Nationalist</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[defName="PatreonCivil"]/disallowedMemes</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="PatreonCivil"]/disallowedMemes</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="vanillaexpanded.vmemese">VME_Emancipation</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[defName="PatreonCivil"]/disallowedPrecepts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="PatreonCivil"]/disallowedPrecepts</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_Slavery_Forbidden</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+				<li MayRequire="erdelf.HumanoidAlienRaces,Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Abhorrent</li>
+				<li MayRequire="erdelf.HumanoidAlienRaces,Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Horrible</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>

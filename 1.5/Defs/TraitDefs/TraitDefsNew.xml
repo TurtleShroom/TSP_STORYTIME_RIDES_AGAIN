@@ -19,6 +19,13 @@
 					<WorkSpeedGlobal>0.15</WorkSpeedGlobal>
 				</statOffsets>
 				<randomMentalState>Tantrum</randomMentalState>
+				<theOnlyAllowedMentalBreaks>
+					<li>Tantrum</li>
+					<li>BedroomTantrum</li>
+					<li>RunWild</li>
+					<li>SadisticRage</li>
+					<li MayRequire="ludeon.rimworld.anomaly">InsaneRamblings</li>
+				</theOnlyAllowedMentalBreaks>
 				<randomMentalStateMtbDaysMoodCurve>
 				  <points>
 					<li>(0, 45)</li>
@@ -36,7 +43,8 @@
 			<li>ST_Rich</li>
 			<li>TooSmart</li>
 		</conflictingTraits>
-	</TraitDef>	
+	</TraitDef>
+	
 	<ThoughtDef>
 		<defName>FeralThought</defName>
 		<workerClass>ThoughtWorker_AlwaysActive</workerClass>
@@ -82,8 +90,7 @@
 		<degreeDatas>
 			<li>
 				<label>Rincewind</label>
-				<description>"Dead is only for once, but running away is for ever." \n
-			-Noted Runner</description>
+				<description>"Dead is only for once, but running away is for ever." \n -Noted Runner</description>
 				<statOffsets>
 					<MoveSpeed>1</MoveSpeed>
 				</statOffsets>
@@ -92,5 +99,57 @@
 		<conflictingTraits>
 		  <li>SpeedOffset</li>
 		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>TSP_ST_TruePacifist</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Absolute Pacifist</label>
+				<description>Under no pretext will {PAWN_nameDef} personally commit any act of violence against any other living creature, for any reason, including self-defense. {PAWN_pronoun} will instead focus on diplomacy and peaceful resolutions. Furthermore, {PAWN_nameDef} will never engage in a violent Mental Break.</description>
+				<skillGains>
+					<Shooting>-20</Shooting>
+					<Melee>-20</Melee>
+					<Social>4</Social>
+				</skillGains>
+				<statOffsets>
+					<SocialImpact>0.1</SocialImpact>
+				</statOffsets>
+				<theOnlyAllowedMentalBreaks>
+					<li>Binging_Food</li>
+					<li>Wander_Sad</li>
+					<li>Wander_Psychotic</li>
+					<li>Wander_OwnRoom</li>
+					<li>Jailbreaker</li>
+					<li>GiveUpExit</li>
+					<li>Catatonic</li>
+					<li>Binging_DrugMajor</li>
+					<li>Binging_DrugExtreme</li>
+					<li>RunWild</li>
+					<li MayRequire="ludeon.rimworld.anomaly">InsaneRamblings</li>
+					<li MayRequire="ludeon.rimworld.anomaly">EntityLiberator</li>
+					<li MayRequire="ludeon.rimworld.anomaly">TerrifyingHallucinations</li>
+				</theOnlyAllowedMentalBreaks>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Brawler</li>
+			<li>Pyromaniac</li>
+			<li>DislikesMen</li>
+			<li>DislikesWomen</li>
+			<li>Bloodlust</li>
+			<li>Abrasive</li>
+			<li>Psychopath</li>
+			<li>Cannibal</li>
+			<li MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_MadSurgeon</li>
+			<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Slaver</li>
+			<li MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Vengeful</li>
+			<li MayRequire="test.mostlytraits">mostlytraits_gangster</li>
+			<li MayRequire="test.mostlytraits">mostlytrait_bloodthirsty</li>
+		</conflictingTraits>
+		<disabledWorkTags>			
+			<li>Violent</li>			
+		</disabledWorkTags>
 	</TraitDef>
 </Defs>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="ArkLeader"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+				<PawnKindDef ParentName="TSP_ST_PatronPacifist">
+					<defName>TSP_ST_ARK_Ark1_Patreonling_Pacifist</defName>
+					<label>Patronark pacifist</label>
+					<labelPlural>Patreonlings</labelPlural>
+					<race>Ark</race>
+					<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+					<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+					<isFighter>false</isFighter>
+					<trader>false</trader>
+					<combatPower>5</combatPower>
+					<defaultFactionType>PatreonCivil</defaultFactionType>
+					<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+					<chemicalAddictionChance>0.08</chemicalAddictionChance>
+					<apparelMoney>300~1200</apparelMoney>
+					<apparelTags>
+						<li>SurvivalistWear</li>
+						<li>AMC</li>
+						<li>AC</li>
+						<li>AA</li>
+						<li>Robe</li>
+					</apparelTags>
+					<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+					<apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance>
+					<weaponMoney>299~300</weaponMoney>
+					<weaponTags>
+						<li>Toolagri</li>
+					</weaponTags>
+					<combatEnhancingDrugsChance>0</combatEnhancingDrugsChance>
+					<biocodeWeaponChance>0</biocodeWeaponChance>
+					<initialWillRange>0</initialWillRange>
+					<initialResistanceRange>0~1</initialResistanceRange>
+					<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+					<inventoryOptions Inherit="False">
+						<skipChance>0</skipChance>
+						<subOptionsChooseOne Inherit="False">
+							<li Inherit="False">
+								<thingDef>TSP_Patreonling_ID_Card</thingDef>
+								<countRange>1~1</countRange>
+							</li>
+							<!--
+							<li>
+								<thingDef>MedicineArk</thingDef>
+								<countRange>10</countRange>
+							</li>
+							-->
+						</subOptionsChooseOne>
+					</inventoryOptions>
+				</PawnKindDef>
+				
+				<PawnKindDef ParentName="Patreonling_Caravaneer_Master">
+					<defName>TSP_ST_ARK_Ark2_Patreonling</defName>
+					<label>Patronark</label>
+					<labelPlural>Patreonlings</labelPlural>
+					<race>Ark</race>
+					<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+					<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+					<defaultFactionType>PatreonCivil</defaultFactionType>
+					<chemicalAddictionChance>0.05</chemicalAddictionChance>
+					<apparelMoney>200~500</apparelMoney>
+					<apparelTags>
+						<li>AC</li>
+						<li>SurvivalistWear</li>
+						<li>AMC</li>
+						<li>AA</li>
+						<li>Robe</li>
+					</apparelTags>
+					<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+					<techHediffsMoney>50~50</techHediffsMoney>
+					<techHediffsTags>
+						<li>ImplantEmpireCommon</li>
+					</techHediffsTags>
+					<techHediffsChance>0.02</techHediffsChance>
+					<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+					<initialWillRange>0</initialWillRange>
+					<initialResistanceRange>9~15</initialResistanceRange>
+					<inventoryOptions Inherit="False">
+						<skipChance>0</skipChance>
+						<subOptionsChooseOne Inherit="False">
+							<li Inherit="False">
+								<thingDef>TSP_Patreonling_ID_Card</thingDef>
+								<countRange>1~1</countRange>
+							</li>
+						</subOptionsChooseOne>
+					</inventoryOptions>
+				</PawnKindDef>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_Ghoul"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+				<PawnKindDef ParentName="SlaveBase">
+					<defName>TSP_ST_Ghoul_Patreonling</defName>
+					<label>Simp</label>
+					<labelPlural>Patron Simps</labelPlural>
+					<race>HSAU_Ghoul_O</race>
+					<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+					<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+					<backstoryFiltersOverride Inherit="False">
+						<li Inherit="False">
+							<categoriesChildhood Inherit="False">
+								<li>HSAU_BS_FRK_Childhood</li>
+								<li>HSAU_BS_META_Adulthood</li>
+								<!-- <li>HSAU_BS_META_GreenGhoulRebirth</li> -->
+							</categoriesChildhood>
+							<categoriesAdulthood Inherit="False">
+								<li>Brainrot</li>
+								<li>HSAU_BS_META_Adulthood</li>
+							</categoriesAdulthood>
+						</li>
+					</backstoryFiltersOverride>
+					<invNutrition>3</invNutrition>
+					<isFighter>true</isFighter>
+					<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+					<forceNormalGearQuality>true</forceNormalGearQuality>
+					<combatPower>15</combatPower>
+					<gearHealthRange>0.2~1.0</gearHealthRange>
+					<backstoryCryptosleepCommonality Inherit="False">0.13</backstoryCryptosleepCommonality>
+					<apparelAllowHeadgearChance>0.38</apparelAllowHeadgearChance>
+					<invFoodDef>MealNutrientPaste</invFoodDef>
+					<weaponMoney>119~120</weaponMoney>
+					<apparelTags>
+						<li>Glasses</li>
+						<li>Tribal</li>
+						<li>Neolithic</li>
+						<li>ClassicalSimple</li>
+						<li>Medieval</li>
+						<li>MedievalBasic</li>
+						<li>MedievalApparelBasic</li>
+						<li>Barbarian</li>
+						<li>IndustrialBasic</li>
+						<li>Robe</li>
+						<li>Woola</li>
+						<li>Glasses</li>
+						<li>Skirt</li>
+					</apparelTags>
+					<weaponTags>
+						<li>WithTheSteelChair</li>
+						<li>OrientalHandCannon</li>
+						<li>MedievalMelee</li>
+						<li>MedievalMeleeBasic</li>
+						<li>MedievalMeleeDecent</li>
+						<li>MedievalMeleeAdvanced</li>
+						<li>MeleePiercer</li>
+						<li>Mafiamelee</li>
+						<li>BeetMelee</li>
+						<li>BeetRanged</li>
+						<li>SpearMen</li>
+						<li>Lance</li>
+						<li>Toolagri</li>
+					</weaponTags>
+					<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+					<initialWillRange>0</initialWillRange>
+					<initialResistanceRange>0</initialResistanceRange>
+					<!--
+					<minGenerationAge>21</minGenerationAge>
+					<maxGenerationAge>40</maxGenerationAge>
+					-->
+					<inventoryOptions Inherit="False">
+						<skipChance>0</skipChance>
+						<subOptionsChooseOne Inherit="False">
+							<li Inherit="False">
+								<thingDef>TSP_Patreonling_ID_Card</thingDef>
+								<countRange>1~1</countRange>
+							</li>
+						</subOptionsChooseOne>
+					</inventoryOptions>
+					<startingHediffs Inherit="False">
+						<li Inherit="False">
+							<def>HSAU_GhoulHediff</def>
+							<severity>1</severity>
+						</li>
+					</startingHediffs>
+					<!-- <xenotypeSet Inherit="False" IsNull="True"></xenotypeSet> -->
+					<modExtensions>
+						<li Class="HellsingArmsUltimate.PawnKindDef_EXT">
+							<!-- <forcedFirstName>Samuel</forcedFirstName> -->
+							<forcedNickName>Samuel Streamer's Simp</forcedNickName>
+							<!-- <forcedLastName>Streamer</forcedLastName> -->
+							<startingSoulPool>3</startingSoulPool>
+						</li>
+						<!--
+						<li Class="TabulaRasa.DefModExt_PawnKindExtended">
+							<additionalHediffs>
+								<li>
+									<hediff>HSAU_GhoulHediff</hediff>
+									<severityRange>1</severityRange>
+									<weight>1</weight>
+								</li>
+							</additionalHediffs>
+						</li>
+						-->
+					</modExtensions>
+				</PawnKindDef>
+				
+				<PawnKindDef ParentName="Patreonling_Master">
+					<defName>TSP_ST_HSAU_Patroenling_HeckDiver</defName>
+					<label>slop diver</label>
+					<labelPlural>Patreon divers</labelPlural>
+					<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+					<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+					<forcedHairColor>228,217,189</forcedHairColor>
+					<disallowedTraits>
+						<li>Brawler</li>
+					</disallowedTraits>
+					<combatPower>80</combatPower>
+					<gearHealthRange>1.0~1.0</gearHealthRange>
+					<destroyGearOnDrop>false</destroyGearOnDrop>
+					<weaponMoney>1400~5000</weaponMoney>
+					<weaponTags>
+						<li>PeeledHeavy</li>
+						<li>Minigun</li>
+						<li>HSAU_HLS_BloodBlaster</li>
+						<li>Lance</li>
+					</weaponTags>
+					<apparelMoney>3000~4000</apparelMoney>
+					<apparelTags>
+						<li>HSAU_HLS_HellDiverHelm</li>
+						<li>HSAU_HLS_HellDiverArmour</li>
+					</apparelTags>
+					<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+					<apparelRequired>
+						<!-- <li>HSAU_HLS_HellDiverHelm</li> -->
+						<li>HSAU_HLS_HellDiverArmour</li>
+					</apparelRequired>
+					<techHediffsTags>
+						<li>ImplantEmpireCommon</li>
+						<li>Simple</li>
+					</techHediffsTags>
+					<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+					<inventoryOptions Inherit="False">
+						<skipChance>0</skipChance>
+						<subOptionsChooseOne Inherit="False">
+							<li Inherit="False">
+								<thingDef>TSP_Patreonling_ID_Card</thingDef>
+								<countRange>1~1</countRange>
+							</li>
+						</subOptionsChooseOne>
+					</inventoryOptions>
+				</PawnKindDef>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="K4G_Murica_President"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+				<PawnKindDef ParentName="Patreonling_Master">
+					<defName>TSP_ST_K4G_PatreonPresidium</defName>
+					<label>Executive Producer</label>
+					<labelPlural>Producers</labelPlural>
+					<defaultFactionType>PatreonCivil</defaultFactionType>
+					<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+					<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+					<factionLeader>true</factionLeader>
+					<fixedGender>Male</fixedGender>
+					<apparelRequired>
+						<li>Apparel_Pants</li>
+						<li>Apparel_CollarShirt</li>
+						<li MayRequire="wool.uselessclothes">woolsuitpants</li>
+						<li MayRequire="vanillaexpanded.vappe">VAE_Headgear_Sunglasses</li>
+					</apparelRequired>
+					<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+					<inventoryOptions Inherit="False">
+						<skipChance>0</skipChance>
+						<subOptionsChooseOne Inherit="False">
+							<li Inherit="False">
+								<thingDef>TSP_Patreonling_ID_Card</thingDef>
+								<countRange>1~2</countRange>
+							</li>
+						</subOptionsChooseOne>
+					</inventoryOptions>
+					<modExtensions>
+						<li Class="PawnKindExtension.PawnKindExtension" MayRequire="k4g.pawnkindextension,k4g.core">
+							<forcedTattoos>
+								<li>
+									<styleTags>K4GSprayTan</styleTags>
+									<spawnWeight>0.25</spawnWeight>
+									<!--When true, male tattoos only spawn on male pawns, female tattoos on female pawns, any on all pawns, etc.-->
+									<!--When false, any tattoos assigned to the tag will always spawn.-->
+									<respectGenders>true</respectGenders>
+								</li>
+							</forcedTattoos>
+							<forcedHairs>
+								<li>
+									<styleTags>K4GSwoop</styleTags>
+									<spawnWeight>999</spawnWeight>
+									<respectGenders>true</respectGenders>
+								</li>
+								<li>
+									<styleTags>Urban</styleTags>
+									<spawnWeight>1</spawnWeight>
+									<respectGenders>true</respectGenders>
+								</li>
+							</forcedHairs>
+							<forcedBeards>
+								<li>
+									<styleTags>NoBeard</styleTags>
+									<spawnWeight>1</spawnWeight>
+									<respectGenders>true</respectGenders>
+								</li>
+								<li>
+									<styleTags>Mustache</styleTags>
+									<spawnWeight>1</spawnWeight>
+									<respectGenders>true</respectGenders>
+								</li>
+							</forcedBeards>
+						</li>
+					</modExtensions>
+				</PawnKindDef>
+			</value>
+		</match>
+		<!--If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

@@ -2,7 +2,7 @@
 
 <Defs>
   <RulePackDef>
-    <defName>NamerChineseUtility</defName>
+    <defName>ST_NamerChineseUtility</defName>
     <rulePack>
       <rulesFiles>
         <li>ChineseFemaleNames->ST_ChineseNames/ChineseFemaleNames</li>
@@ -15,31 +15,37 @@
         <li>ChineseKingdomNames->ST_ChineseNames/ChineseKingdomNames</li>
         <li>ChineseDynastyDescriptors->ST_ChineseNames/ChineseDynastyDescriptors</li>
       </rulesFiles>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>ChinaZonePack</keyword>
+          <path>ST_ChineseNames/ChineseSettlementNames</path>
+        </li>
+      </rulesRaw>
     </rulePack>
   </RulePackDef>
 
   <RulePackDef>
-    <defName>ChineseFemaleName</defName>
+    <defName>ST_ChineseFemaleName</defName>
 	<include>
-      <li>NamerChineseUtility</li>
+      <li>ST_NamerChineseUtility</li>
     </include>
     <rulePack>
       <rulesStrings>
-		<li>name->[ChineseFemaleNames] '[ChineseCourtesyNamesHead][ChineseCourtesyNamesTail]' [ChineseSurnames]</li>
-		<li>name->[ChineseFemaleNames] [ChineseSurnames]</li>
+		<li>r_name->[ChineseFemaleNames] '[ChineseCourtesyNamesHead][ChineseCourtesyNamesTail]' [ChineseSurnames]</li>
+		<li>r_name->[ChineseFemaleNames] [ChineseSurnames]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
   
   <RulePackDef>
-    <defName>ChineseMaleName</defName>
+    <defName>ST_ChineseMaleName</defName>
 	<include>
-      <li>NamerChineseUtility</li>
+      <li>ST_NamerChineseUtility</li>
     </include>
     <rulePack>
       <rulesStrings>
-		<li>name->[ChineseMaleNames] '[ChineseCourtesyNamesHead][ChineseCourtesyNamesTail]' [ChineseSurnames]</li>
-		<li>name->[ChineseMaleNames] [ChineseSurnames]</li>
+		<li>r_name->[ChineseMaleNames] '[ChineseCourtesyNamesHead][ChineseCourtesyNamesTail]' [ChineseSurnames]</li>
+		<li>r_name->[ChineseMaleNames] [ChineseSurnames]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
@@ -47,9 +53,9 @@
 <!--Faction & Settlement-->
 
   <RulePackDef>
-    <defName>NamerFactionChinese</defName>
+    <defName>ST_NamerFactionChinese</defName>
 	<include>
-      <li>NamerChineseUtility</li>
+      <li>ST_NamerChineseUtility</li>
     </include>
     <rulePack>
       <rulesStrings>
@@ -62,18 +68,21 @@
   </RulePackDef>
 
 		
-  <RulePackDef>
-    <defName>ChineseSettlementName</defName>
-    <rulePack>
-      <rulesStrings>
-        <li>name-&gt;[ChinaZonePack]</li>
-      </rulesStrings>
-      <rulesRaw>
-        <li Class="Rule_File">
-          <keyword>ChinaZonePack</keyword>
-          <path>ST_ChineseNames/ChineseSettlementNames</path>
-        </li>
-      </rulesRaw>
-    </rulePack>
-  </RulePackDef>
+	<RulePackDef>
+		<defName>ST_ChineseSettlementName</defName>
+		<include>
+			<li>ST_NamerChineseUtility</li>
+		</include>
+		<rulePack>
+		  <rulesStrings>
+			<li>name-&gt;[ChinaZonePack]</li>
+		  </rulesStrings>
+		  <rulesRaw>
+			<li Class="Rule_File">
+			  <keyword>ChinaZonePack</keyword>
+			  <path>ST_ChineseNames/ChineseSettlementNames</path>
+			</li>
+		  </rulesRaw>
+		</rulePack>
+	</RulePackDef>
 </Defs>

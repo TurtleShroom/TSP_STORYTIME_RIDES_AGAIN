@@ -1,61 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-  <PawnKindDef Abstract="True" Name="BaseGoblinKind">
-    <race>Alien_ST_Goblin</race>
-    <combatPower>30</combatPower>
-	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-	<isGoodPsychicRitualInvoker MayRequire="ludeon.rimworld.anomaly">true</isGoodPsychicRitualInvoker>
-	<backstoryFilters>
-	  <li>
-		<categories>
-		  <li>GoblinBackstory</li>
-		</categories>
-	  </li>
-	</backstoryFilters>
-	<apparelTags>
-		<li>GoblinWear</li>
-		<li>Medieval</li>
-        <li>MedievalBasic</li>
-		<li>Barbarian</li>
-		<!-- <li>Klan_apparel</li> -->
-		<li>Skirt</li>
-		<li>Glasses</li>
-		<li>School_Thai</li>
-    </apparelTags>
-	<weaponTags>
-		<li>MetalPipeRanged</li>
-		<li>MetalPipe</li>
-		<li>GoblinMelee</li>
-		<li>GoblinRanged</li>
-	</weaponTags>
-    <!-- <isFighter>false</isFighter> -->
-    <!-- <apparelIgnoreSeasons>true</apparelIgnoreSeasons> -->
-    <invNutrition>2</invNutrition>
-	<modExtensions>
-		<!--
-		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
-			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
-				<li MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">
-					<defName MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">ROM_InnsmouthLook_VoiceFishman</defName>
-					<chance MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">100</chance>
-				</li>
-				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
-					<defName MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">ToxicEnvironmentResistance_Partial</defName>
-					<chance MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">7</chance>
-				</li>
-				<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
-					<defName MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">ToxicEnvironmentResistance_Total</defName>
-					<chance MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">1</chance>
-				</li>
-			</genes>
-		</li>
-		-->
-	</modExtensions>
-	<!-- <comps></comps> -->
+	<PawnKindDef Name="BaseGoblinKind" Abstract="True">
+		<race>Alien_ST_Goblin</race>
+		<combatPower>30</combatPower>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelTags>
+			<li>GoblinWear</li>
+			<li>Skirt</li>
+			<li>Glasses</li>
+			<li>School_Thai</li>
+		</apparelTags>
+		<weaponTags>
+			<li>GoblinMelee</li>
+			<li>GoblinRanged</li>
+			<li>DoubleBarreledShotgun</li>
+		</weaponTags>
+		<!-- <isFighter>false</isFighter> -->
+		<invNutrition>2</invNutrition>
+		<initialWillRange>1~4</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		<modExtensions>
+			<!--
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+					<li MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">
+						<defName MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">ROM_InnsmouthLook_VoiceFishman</defName>
+						<chance MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">100</chance>
+					</li>
+					<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+						<defName MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">ToxicEnvironmentResistance_Partial</defName>
+						<chance MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">7</chance>
+					</li>
+					<li MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+						<defName MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">ToxicEnvironmentResistance_Total</defName>
+						<chance MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">1</chance>
+					</li>
+				</genes>
+			</li>
+			-->
+		</modExtensions>
+		<!-- <comps></comps> -->
   </PawnKindDef>
+  
+	<PawnKindDef Name="ST_Goblin_Character" ParentName="BaseGoblinKind" Abstract="True">
+		<race>Alien_ST_Goblin</race>
+		<defaultFactionType>GoblinTown</defaultFactionType>
+		<isGoodPsychicRitualInvoker MayRequire="ludeon.rimworld.anomaly">true</isGoodPsychicRitualInvoker>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>GoblinBackstory</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<apparelTags>
+			<li>Medieval</li>
+			<li>MedievalBasic</li>
+			<li>Barbarian</li>
+		</apparelTags>
+		<weaponTags>
+			<li>MetalPipeRanged</li>
+			<li>MetalPipe</li>
+			<li>GoblinMelee</li>
+			<li>GoblinRanged</li>
+			<li>DoubleBarreledShotgun</li>
+		</weaponTags>
+	</PawnKindDef>
 
-  <PawnKindDef ParentName="BaseGoblinKind">
+  <PawnKindDef ParentName="ST_Goblin_Character">
     <defName>GoblinPeon</defName>
     <label>goblin peon</label>
 	<race>Alien_ST_Goblin</race>
@@ -122,7 +135,7 @@
 	<!-- <comps></comps> -->
   </PawnKindDef>
 
-  <PawnKindDef ParentName="BaseGoblinKind">
+  <PawnKindDef ParentName="ST_Goblin_Character">
     <defName>GoblinRunner</defName>
     <label>goblin runner</label>
     <combatPower>30</combatPower>
@@ -177,7 +190,7 @@
     <initialResistanceRange>2~8</initialResistanceRange>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="BaseGoblinKind">
+  <PawnKindDef ParentName="ST_Goblin_Character">
     <defName>GoblinArcher</defName>
     <label>goblin archer</label>
     <combatPower>80</combatPower>
@@ -226,7 +239,7 @@
     </skills>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="BaseGoblinKind">
+  <PawnKindDef ParentName="ST_Goblin_Character">
     <defName>GoblinTinkerer</defName>
     <label>goblin machinist</label>
     <combatPower>70</combatPower>
@@ -271,7 +284,7 @@
     </skills>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BaseGoblinKind">
+  <PawnKindDef ParentName="ST_Goblin_Character">
     <defName>GoblinWarrior</defName>
     <label>goblin warrior</label>
     <combatPower>70</combatPower>
@@ -310,7 +323,7 @@
     <initialResistanceRange>5~7</initialResistanceRange>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="BaseGoblinKind">
+  <PawnKindDef ParentName="ST_Goblin_Character">
     <defName>GoblinWarlord</defName>
     <label>goblin warlord</label>
     <combatPower>85</combatPower>
@@ -354,7 +367,7 @@
     <initialResistanceRange>18~20</initialResistanceRange>
   </PawnKindDef>
 
-  <PawnKindDef ParentName="BaseGoblinKind">
+  <PawnKindDef ParentName="ST_Goblin_Character">
     <defName>GoblinTrader</defName>
     <label>goblin merchant</label>
     <combatPower>75</combatPower>

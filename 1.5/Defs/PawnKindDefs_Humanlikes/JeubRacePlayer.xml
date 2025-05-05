@@ -1,53 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-  <PawnKindDef Abstract="True" Name="BasePlayerJeubPawnKind">
-    <race>Alien_Jeub</race>
-    <combatPower>50</combatPower>
-	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-	<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-	<maxGenerationAge>35</maxGenerationAge>
-	<combatEnhancingDrugsChance>0.1</combatEnhancingDrugsChance>
-	<combatEnhancingDrugsCount>1~3</combatEnhancingDrugsCount>
-	<isGoodPsychicRitualInvoker MayRequire="ludeon.rimworld.anomaly">true</isGoodPsychicRitualInvoker>
-	<backstoryFilters>
-		<li>
-			<categories>
-				<li>JeubBackstory</li>
-				<li>Madman</li>
-				<li>Vatgrown</li>
-				<li>VatGrown</li>
-			</categories>
-		</li>
-	</backstoryFilters>
-	<invFoodDef>Pemmican</invFoodDef>
-    <!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
-    <isFighter>false</isFighter>
-    <forceNormalGearQuality>true</forceNormalGearQuality>
-	<apparelTags>
-		<li>JeubWear</li>
-		<li>School_Thai</li>
-		<li>SchoolThai</li>
-		<!-- <li>K4GVagrantsBasic</li> -->
-	</apparelTags>
-	<modExtensions>
-		<!--
-		<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
-			<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
-				<li MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">
-					<defName MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">ROM_InnsmouthLook_VoiceFishman</defName>
-					<chance MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">33</chance>
-				</li>
-			</genes>
-		</li>
-		-->
-	</modExtensions>
-  </PawnKindDef>
+	<PawnKindDef Abstract="True" Name="BasePlayerJeubPawnKind">
+		<race>Alien_Jeub</race>
+		<combatPower>25</combatPower>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<maxGenerationAge>35</maxGenerationAge>
+		<isGoodPsychicRitualInvoker MayRequire="ludeon.rimworld.anomaly">true</isGoodPsychicRitualInvoker>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>1~10</initialResistanceRange>
+		<!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
+		<isFighter>false</isFighter>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelTags>
+			<li>JeubWear</li>
+			<li>School_Thai</li>
+			<li>SchoolThai</li>
+			<!-- <li>K4GVagrantsBasic</li> -->
+		</apparelTags>
+		<modExtensions>
+			<!--
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+					<li MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">
+						<defName MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">ROM_InnsmouthLook_VoiceFishman</defName>
+						<chance MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">33</chance>
+					</li>
+				</genes>
+			</li>
+			-->
+		</modExtensions>
+	</PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerJeubPawnKind">
+	<PawnKindDef Name="ST_JeubCharacter" ParentName="BasePlayerJeubPawnKind" Abstract="True">
+		<race>Alien_Jeub</race>
+		<combatEnhancingDrugsChance>0.1</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>1~3</combatEnhancingDrugsCount>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>JeubBackstory</li>
+					<li>Madman</li>
+					<li>Vatgrown</li>
+					<li>VatGrown</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<invFoodDef>Pemmican</invFoodDef>
+		<apparelTags>
+			<li>JeubWear</li>
+			<li>Tribal</li>
+			<li>Medieval</li>
+			<li>MedievalBasic</li>
+			<li>MedievalApparelBasic</li>
+			<li>Jester</li>
+		</apparelTags>
+		<initialWillRange>0.41~1</initialWillRange>
+	</PawnKindDef>
+  
+  <PawnKindDef ParentName="ST_JeubCharacter">
     <defName>PlayerJeub</defName>
     <label>Jeub</label>
-    <chemicalAddictionChance>0.12</chemicalAddictionChance>
+    <chemicalAddictionChance>0.2</chemicalAddictionChance>
 	<isFighter>true</isFighter>
 	<combatPower>75</combatPower>
     <backstoryFilters>
@@ -100,7 +115,7 @@
     <initialResistanceRange>3~4</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerJeubPawnKind">
+  <PawnKindDef ParentName="ST_JeubCharacter">
     <defName>Snaff_HighKing</defName>
     <label>Snaff King</label>
 	<labelFemale>Snaff Queen</labelFemale>
@@ -167,7 +182,7 @@
     <initialResistanceRange>3~10</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerJeubPawnKind">
+  <PawnKindDef ParentName="ST_JeubCharacter">
     <defName>JeubTrader</defName>
     <label>Jeub merchant</label>
     <trader>true</trader>
@@ -202,7 +217,7 @@
     </techHediffsTags>
     <techHediffsChance>0.02</techHediffsChance>
 	<weaponTags>	
-        <li>MedievalMeleeAdvanced</li>
+        <li>MedievalAdvanced</li>
         <li>MedievalMeleeAdvanced</li>
 		<li>MedievalRangedAdvanced</li>
 		<li>MeleePiercer</li>
@@ -256,6 +271,7 @@
     </weaponTags>
     <initialWillRange>1~8</initialWillRange>
     <initialResistanceRange>5~40</initialResistanceRange>
+	<backstoryFilters Inherit="False" IsNull="True"></backstoryFilters>
     <backstoryFiltersOverride Inherit="False">
 		<li>
 			<categories>

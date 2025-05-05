@@ -2,7 +2,7 @@
 
 <Defs>
 	<PawnKindDef Name="SlaveRat_RaiderBase" Abstract="True">
-		<race>Human</race>
+		<!-- <race>Human</race> -->
 		<minGenerationAge Inherit="False">21</minGenerationAge> <!-- They don't field children -->
 		<maxGenerationAge>45</maxGenerationAge>
 		<defaultFactionType>Harriers</defaultFactionType>
@@ -13,6 +13,11 @@
 		<invNutrition>2.55</invNutrition>
 		<initialWillRange>1~2</initialWillRange>
 		<initialResistanceRange>6~10</initialResistanceRange>
+		<combatEnhancingDrugsChance>0.21</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>
+			<min>1</min>
+			<max>1</max>
+		</combatEnhancingDrugsCount>
 		<backstoryFilters>
 			<li>
 				<categories>
@@ -39,7 +44,7 @@
 			<subOptionsChooseOne>
 				<li>
 					<thingDef>ST_KrakenRum</thingDef>
-					<countRange>3~9</countRange>
+					<countRange>1~9</countRange>
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
@@ -99,6 +104,7 @@
   <!-- 도적 집단 -->
 
   <PawnKindDef ParentName="SlaveRat_RaiderBase" Name="SlaveRat_RaiderBanditBase" Abstract="True">
+	<race>Human</race>
     <combatPower>50</combatPower>
 	<maxGenerationAge>58</maxGenerationAge>
     <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
@@ -175,6 +181,7 @@
   <!-- 중무장 도적 집단 -->
   
     <PawnKindDef ParentName="SlaveRat_RaiderBase" Name="SlaveRat_ArmedRaiderBanditBase" Abstract="True">
+		<race>Human</race>
 		<combatEnhancingDrugsChance>0.10</combatEnhancingDrugsChance>
 		<combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
 		<biocodeWeaponChance>0.2</biocodeWeaponChance>

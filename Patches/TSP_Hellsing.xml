@@ -103,4 +103,158 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGenerator</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGenerator</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGenerator</xpath>
+		<!-- If they do, SHUT IT DOWN.? -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGenerator</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_Ghoul"]/nameMaker</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_Ghoul"]/nameMaker</xpath>
+			<value>
+				<nameMaker>HSAU_Ghoul_Namer</nameMaker>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_Ghoul"]</xpath>
+			<value>
+				<nameMaker>HSAU_Ghoul_Namer</nameMaker>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_Ghoul"]/nameMaker</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_Ghoul"]/nameMaker</xpath>
+			<value>
+				<nameMaker>HSAU_Ghoul_Namer</nameMaker>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_Ghoul"]</xpath>
+			<value>
+				<nameMaker>HSAU_Ghoul_Namer</nameMaker>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_GhoulArmed"]/nameMakerFemale</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_GhoulArmed"]/nameMakerFemale</xpath>
+			<value>
+				<nameMakerFemale>HSAU_Ghoul_Namer</nameMakerFemale>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_GhoulArmed"]</xpath>
+			<value>
+				<nameMakerFemale>HSAU_Ghoul_Namer</nameMakerFemale>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_GhoulArmed"]/nameMakerFemale</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_GhoulArmed"]/nameMakerFemale</xpath>
+			<value>
+				<nameMakerFemale>HSAU_Ghoul_Namer</nameMakerFemale>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_FRK_GhoulArmed"]</xpath>
+			<value>
+				<nameMakerFemale>HSAU_Ghoul_Namer</nameMakerFemale>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="HSAU_MLN_ArmouredGhoul"]/nameMakerFemale</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_MLN_ArmouredGhoul"]/nameMakerFemale</xpath>
+			<value>
+				<nameMakerFemale>HSAU_Ghoul_Namer</nameMakerFemale>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_MLN_ArmouredGhoul"]</xpath>
+			<value>
+				<nameMakerFemale>HSAU_Ghoul_Namer</nameMakerFemale>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/PawnKindDef[defName="HSAU_MLN_ArmouredGhoul"]/nameMakerFemale</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_MLN_ArmouredGhoul"]/nameMakerFemale</xpath>
+			<value>
+				<nameMakerFemale>HSAU_Ghoul_Namer</nameMakerFemale>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="HSAU_MLN_ArmouredGhoul"]</xpath>
+			<value>
+				<nameMakerFemale>HSAU_Ghoul_Namer</nameMakerFemale>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

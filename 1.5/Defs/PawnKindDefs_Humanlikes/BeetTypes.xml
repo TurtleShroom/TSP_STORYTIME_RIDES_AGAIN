@@ -1,37 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-  <PawnKindDef Abstract="True" Name="BasePlayerBeetnikhPawnKind">
-    <race>Alien_Beet</race>
-    <backstoryFilters>
-		<li>
-			<categories>
-				<li>BeetnikhBackstory</li>
-				<li>Farmer</li>
-				<li>TribalFarmer</li>
-				<li>MedievalPeasant</li>
-			</categories>
-		</li>
-    </backstoryFilters>
-    <!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
-    <!-- <isFighter>false</isFighter> -->
-    <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
-    <forceNormalGearQuality>true</forceNormalGearQuality>
-	<apparelTags>
-		<li>Medieval</li>
-		<li>MedievalBasic</li>
-		<li>MedievalApparelBasic</li>
-		<li>ST_BeetClothing</li>
-		<li>Barbarian</li>
-		<li>BeetWear</li>
-		<li>School_Thai</li>
-	</apparelTags>
-	<weaponTags>
-		<li>K4GScimitar</li>
-	</weaponTags>
-  </PawnKindDef>
+	<PawnKindDef Abstract="True" Name="BasePlayerBeetnikhPawnKind">
+		<race>Alien_Beet</race>
+		<combatPower>60</combatPower>
+		<!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
+		<!-- <isFighter>false</isFighter> -->
+		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelTags>
+			<li>Medieval</li>
+			<li>MedievalBasic</li>
+			<li>MedievalApparelBasic</li>
+			<li>ST_BeetClothing</li>
+			<li>Barbarian</li>
+			<li>BeetWear</li>
+			<li>School_Thai</li>
+		</apparelTags>
+		<weaponTags>
+			<li>K4GScimitar</li>
+		</weaponTags>
+		<initialWillRange>1~4</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="ST_CivilizedBeet_Character" ParentName="BasePlayerWoodBeetPawnKind" Abstract="True">
+		<race>Alien_Beet</race>
+		<label>Beetnikh citizen</label>
+		<labelPlural>Beetnikh citizens</labelPlural>
+		<defaultFactionType>WoodBeetTribe</defaultFactionType>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>BeetnikhBackstory</li>
+					<li>Farmer</li>
+					<li>TribalFarmer</li>
+					<li>MedievalPeasant</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+	</PawnKindDef>
 
-  <PawnKindDef ParentName="BasePlayerBeetnikhPawnKind">
+  <PawnKindDef ParentName="ST_CivilizedBeet_Character">
     <defName>BeetLeader</defName>
     <label>elite beet warrior</label>
     <chemicalAddictionChance>0.2</chemicalAddictionChance>
@@ -74,7 +84,7 @@
     <initialResistanceRange>10~20</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerBeetnikhPawnKind">
+  <PawnKindDef ParentName="ST_CivilizedBeet_Character">
     <defName>BeetWarrior</defName>
     <label>beet warrior</label>
     <combatPower>30</combatPower>
@@ -117,7 +127,7 @@
     <initialResistanceRange>5~10</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerBeetnikhPawnKind">
+  <PawnKindDef ParentName="ST_CivilizedBeet_Character">
     <defName>BeetTrader</defName>
     <label>beet tradesman</label>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
@@ -163,7 +173,7 @@
     <initialResistanceRange>5~10</initialResistanceRange>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="BasePlayerBeetnikhPawnKind">
+  <PawnKindDef ParentName="ST_CivilizedBeet_Character">
     <defName>BeetArcher</defName>
     <label>beet archer</label>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
@@ -250,6 +260,7 @@
 		<li>CivilizedBeetEmperor</li>
     </backstoryFilters>
 	-->
+	<backstoryFilters Inherit="False" IsNull="True"></backstoryFilters>
     <backstoryFiltersOverride Inherit="False">
 		<li>
 			<categoriesChildhood>
@@ -352,7 +363,7 @@
     </weaponTags>
     <initialWillRange>1~8</initialWillRange>
     <initialResistanceRange>5~40</initialResistanceRange>
-	<!-- <backstoryFilters IsNull="True" Inherit="False"></backstoryFilters> -->
+	<backstoryFilters IsNull="True" Inherit="False"></backstoryFilters>
     <backstoryFiltersOverride Inherit="False">
 		<li>
 			<categories>

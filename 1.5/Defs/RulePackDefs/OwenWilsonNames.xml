@@ -5,6 +5,7 @@
 		<defName>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</defName>
 		<include>
 			<li>GlobalUtility</li>
+			<li>ST_NamerChineseUtility</li>
 		</include>
 		<rulePack>
 			<rulesStrings>
@@ -13,6 +14,8 @@
 				<li>r_name->[OwnWilsonForenames] [OwenWilsonDisplayNames] [OwenWilsonSurnames]</li>
 				-->
 				<li>r_name->[OwnWilsonForenames] '[OwenWilsonDisplayNames] D-[Digit][Digit][Digit][Digit][Digit][Digit]' [OwenWilsonSurnames]</li>
+				<li>r_name->[OwnWilsonForenames] '[OwenWilsonDisplayNames] D-[Digit][Digit][Digit][Digit][Digit][Digit]' [OwenWilsonSurnames][ChineseCourtesyNamesTail]</li>
+				<li>r_name->[OwnWilsonForenames][ChineseCourtesyNamesHead] '[OwenWilsonDisplayNames] D-[Digit][Digit][Digit][Digit][Digit][Digit]' [OwenWilsonSurnames][ChineseCourtesyNamesTail]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
