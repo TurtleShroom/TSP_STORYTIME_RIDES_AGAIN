@@ -20,7 +20,7 @@
 					<label>Beesearch Files (Storytime Mod)</label>
 					<graphicData Inherit="False">
 						<graphicClass>Graphic_Single</graphicClass>
-						<texPath>Things/Pawn/Animal/Bug_Types/Bee/Idr_adbo2</texPath>
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/Idr_adbo</texPath>
 					</graphicData>
 				</ThingDef>
 
@@ -54,9 +54,21 @@
 				
 				<ThingDef ParentName="TSP_Beesearch_Storytime">
 					<defName>TSP_ST_Beesearch_Test</defName>
+					<label>empty Storytime Beesearch folder</label>
+					<description>It appears to be an empty folder.</description>
 					<graphicData Inherit="False">
 						<graphicClass>Graphic_Single</graphicClass>
 						<texPath>Things/Pawn/Animal/Bug_Types/Bee/Idr_adbo2</texPath>
+					</graphicData>
+					<comps Inherit="False"></comps>
+					<thingCategories Inherit="False" IsNull="True"></thingCategories>
+				</ThingDef>
+				
+				<ThingDef ParentName="TSP_Beesearch_Storytime">
+					<defName>TSP_ST_Beesearch_Gnee</defName>
+					<graphicData Inherit="False">
+						<graphicClass>Graphic_Single</graphicClass>
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/Idr_adbo</texPath>
 					</graphicData>
 					<comps>
 						<!--
@@ -74,6 +86,13 @@
 							</resultingBees>
 						</li>
 						-->
+						<li Class="RimBees.CompProperties_BeeResearchData">
+							<firstBee>RB_Bee_Agricultural_Queen</firstBee>
+							<secondBee>RB_Bee_Culinary_Queen</secondBee>
+							<resultingBees>
+								<li>RB_Bee_TSP_ST_Gnee_Basic_Queen</li>
+							</resultingBees>
+						</li>
 					</comps>
 					<thingCategories Inherit="False">
 						<li>TSP_ST_RB_Beesearch_Storytime</li>
