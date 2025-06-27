@@ -4,6 +4,7 @@
 	<!-- UNLEASH THE TRADER JEUBS!! -->
 	<!-- Frog time -->
 	<!-- It has nothing to do with meth I SWEAR -->
+	<!-- He sold out years ago and he's a coward -->
 	<Operation Class="PatchOperationAdd">
 		<success>Always</success>
 		<xpath>/Defs/BiomeDef/allowedPackAnimals</xpath>
@@ -11,15 +12,22 @@
 			<li>Jeub</li>
 			<li>LeviathanFrog</li>
 			<li>Meffalo</li>
+			<li>TSP_ST_ALBARRY_StephenColbert_Frog</li>
 		</value>
 	</Operation>
 	
 	<!-- I love the smell of rocks in the morning -->
+	<Operation Class="PatchOperationRemove">
+		<success>Always</success>
+		<xpath>Defs/BiomeDef/wildAnimals/EvilRock</xpath>
+	</Operation>
+	
+	<!-- The pioneers used to ride these babies for miles -->
 	<Operation Class="PatchOperationAdd">
 		<success>Always</success>
 		<xpath>/Defs/BiomeDef/wildAnimals</xpath>
 		<value>
-			<EvilRock>0.03</EvilRock>
+			<EvilRock>0.05</EvilRock>
 		</value>
 	</Operation>
 	
@@ -38,4 +46,18 @@
 			</value>
 		</match>
     </Operation>
+	
+	<!-- HE SOLD OUT YEARS AGO AND HE'S A COWARD! -->
+	<Operation Class="PatchOperationRemove">
+		<success>Always</success>
+		<xpath>Defs/BiomeDef/wildAnimals/TSP_ST_ALBARRY_StephenColbert_Frog</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/BiomeDef/wildAnimals</xpath>
+		<value>
+			<TSP_ST_ALBARRY_StephenColbert_Frog>0.05</TSP_ST_ALBARRY_StephenColbert_Frog>
+		</value>
+	</Operation>
 </Patch>

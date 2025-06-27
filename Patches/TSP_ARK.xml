@@ -5,6 +5,18 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Nothing"]/thingClass</xpath> <!-- Not actually nothing, Ark spawn -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Nothing"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingClass>ThingWithComps</thingClass>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/ThingDef[defName="Nothing"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/ThingDef[defName="Nothing"]</xpath>
@@ -48,15 +60,18 @@
 			<xpath>/Defs/ThingDef[defName="Nothing"]/comps</xpath>
 			<value>
 				<comps Inherit="False">
+					<li Class="CompProperties_Hatcher">
+						<hatcherDaystoHatch>2</hatcherDaystoHatch>
+						<hatcherPawn>PlayerArk</hatcherPawn>
+					</li>
 					<li Class="CompProperties_Usable">
 						<useJob>UseItem</useJob>
 						<useLabel>Activate!</useLabel>
-						<useDuration>1000</useDuration>
+						<useDuration>510</useDuration>
 					</li>
 					<li Class="StoryTime.CompProperties_SpawnPawn">
 						<compClass>StoryTime.CompUseEffect_SpawnPerson</compClass>
 						<pawnKind>PlayerArk</pawnKind>
-
 					</li>
 					<li Class="CompProperties_UseEffect">
 						<compClass>CompUseEffect_DestroySelf</compClass>
@@ -68,6 +83,80 @@
 						<anomalyKnowledge>1</anomalyKnowledge>
 						<requiresHoldingPlatform>false</requiresHoldingPlatform>
 						<requiresImprisonment>false</requiresImprisonment>
+					</li>
+				</comps>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="humanT"]/thingClass</xpath> <!-- Not actually nothing, Ark spawn -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="humanT"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingClass>ThingWithComps</thingClass>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="humanT"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="humanT"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="humanT"]/thingSetMakerTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="humanT"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingSetMakerTags></thingSetMakerTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="humanT"]</xpath> <!-- Not actually nothing, Ark spawn -->
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="humanT"]/comps</xpath>
+			<value>
+				<comps Inherit="False">
+					<li Class="CompProperties_Usable">
+						<useJob>UseItem</useJob>
+						<useLabel>Activate!</useLabel>
+						<useDuration>90</useDuration>
+					</li>
+					<li Class="StoryTime.CompProperties_SpawnPawn">
+						<compClass>StoryTime.CompUseEffect_SpawnPerson</compClass>
+						<pawnKind>Tribesperson</pawnKind>
+
+					</li>
+					<li Class="CompProperties_UseEffect">
+						<compClass>CompUseEffect_DestroySelf</compClass>
+					</li>
+					<li Class="CompProperties_Studiable" MayRequire="Ludeon.RimWorld.Anomaly">
+						<frequencyTicks>60000</frequencyTicks>
+						<knowledgeCategory>Basic</knowledgeCategory>
+						<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+						<anomalyKnowledge>1</anomalyKnowledge>
+						<requiresHoldingPlatform>false</requiresHoldingPlatform>
+						<requiresImprisonment>false</requiresImprisonment>
+					</li>
+					<li Class="CompProperties_Hatcher">
+						<hatcherDaystoHatch>2</hatcherDaystoHatch>
+						<hatcherPawn>Tribesperson</hatcherPawn>
 					</li>
 				</comps>
 			</value>
@@ -106,13 +195,43 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="humanT"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="humanT"]/tradeTags</xpath>
+			<value>
+				<li>RewardSpecial</li>
+				<li>Artifact</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="humanT"]/thingSetMakerTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="humanT"]/thingSetMakerTags</xpath>
+			<value>
+				<li>AnimalPart</li>
+				<li>RewardSpecial</li>
+				<li>Artifact</li>
+				<li>RewardStandardQualitySuper</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="Nothing"]/statBases</xpath> <!-- Not actually nothing, Ark spawn -->
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Nothing"]/statBases</xpath>
 			<value>
-				<statBases Inherit="False">
+				<statBases>
 					<Mass>20</Mass>
 					<MarketValue>20</MarketValue>
 					<Beauty>1</Beauty>
@@ -120,5 +239,29 @@
 				</statBases>
 			</value>
 		</match>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName="2Ark"]/minGenerationAge</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName="2Ark"]</xpath>
+			<success>Always</success>
+			<value>
+				<minGenerationAge>7</minGenerationAge>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName="PlayerArk"]/minGenerationAge</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName="PlayerArk"]</xpath>
+			<success>Always</success>
+			<value>
+				<minGenerationAge>7</minGenerationAge>
+			</value>
+		</nomatch>
 	</Operation>
 </Patch>
