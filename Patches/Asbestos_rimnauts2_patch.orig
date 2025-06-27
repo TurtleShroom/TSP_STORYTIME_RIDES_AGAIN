@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+	    <mods>
+            <li>RimNauts 2</li>
+	    </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+                
+    <GenStepDef>
+	    <defName>RimNauts2_Asbestos_genstep</defName>
+	    <order>10</order>
+	    <genStep Class="RimNauts2.AsteroidOre.RocksFromGrid">
+            <rock_def_name>Asbestos_Rock</rock_def_name>
+            <ore_def_name>Asbestos_Rock</ore_def_name>
+            <ore_chance_outer>(0.45, 0.55)</ore_chance_outer>
+            <ore_chance_inner>(0.45, 0.55)</ore_chance_inner>
+            <inner_elevation>0.85</inner_elevation>
+            <roof_elevation>0.55</roof_elevation>
+        </genStep>
+    </GenStepDef>
+
+    <MapGeneratorDef ParentName="RimNauts2_Ore_MapGen">
+	    <defName>RimNauts2_Asbestos_mapgen</defName>
+	    <genSteps>
+		    <li>RimNauts2_Asbestos_genstep</li>
+	    </genSteps>
+    </MapGeneratorDef>
+
+    <RimNauts2.Defs.ObjectHolder ParentName="RimNauts2_ObjectHolder_AsteroidOre_Root">
+	    <defName>RimNauts2_ObjectHolder_ExAsteroid_Silver</defName>
+	    <label>asbestos asteroid</label>
+	    <description>An asteroid of pure asbestos.</description>
+	    <map_generator>RimNauts2_Asbestos_mapgen</map_generator>
+	    <texture_paths>
+			<li>asbestos/chunk</li>
+		</texture_paths>
+		<features>true</features>
+        <feature_name>Asbestos</feature_name>
+        <feature_color>(149,159,158)</feature_color>
+    </RimNauts2.Defs.ObjectHolder>
+    
+            </value>
+	    </match>
+    </Operation>
+
+</Patch>

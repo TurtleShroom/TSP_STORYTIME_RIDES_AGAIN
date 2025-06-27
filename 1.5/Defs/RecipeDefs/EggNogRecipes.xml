@@ -14,6 +14,7 @@
     <ingredients>
       <li>
         <filter>
+			<customSummary>eggs</customSummary>
           <categories>
             <li>EggsUnfertilized</li>
 			<li>EggsFertilized</li>
@@ -55,6 +56,7 @@
     <ingredients>
       <li>
         <filter>
+					<customSummary>egg nog batter</customSummary>
 					<thingDefs>
 						<li>RawNog</li>
 					</thingDefs>
@@ -63,13 +65,14 @@
       </li>
 	  <li>
         <filter>
+			<customSummary>milk</customSummary>
 			<thingDefs>
 				<li>Milk</li>
 				<li>ST_Green_Milk</li>
 				<li>ST_GnomeSugar</li>
 				<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
 				<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
-				<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_InsectMilk</li>
+				<li MayRequire="TSP.Isengriff.Storytime">VFEI_InsectMilk</li>
 				<li>BORPA_Milk</li>
 				<li>Rylex_CoconutMilk</li>
 			</thingDefs>
@@ -84,7 +87,7 @@
 				<li>ST_GnomeSugar</li>
 				<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
 				<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
-				<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_InsectMilk</li>
+				<li MayRequire="TSP.Isengriff.Storytime">VFEI_InsectMilk</li>
 				<li>Rylex_CoconutMilk</li>
 				<li>RawNog</li>
 				<li>BORPA_Milk</li>
@@ -178,8 +181,10 @@
       </li>
 	  <li>
         <filter>
+					<customSummary>beer</customSummary>
 					<thingDefs>
 						<li>Beer</li>
+						<li>GnomeBeer</li>
 					</thingDefs>
         </filter>
         <count>5</count>
@@ -189,6 +194,7 @@
 					<thingDefs>
 						<li>RawNog</li>
 						<li>Beer</li>
+						<li>GnomeBeer</li>
 					</thingDefs>
     </fixedIngredientFilter>
     <defaultIngredientFilter>
@@ -210,7 +216,7 @@
   <RecipeDef>
     <defName>MakeProfaneNog</defName>
     <label>Make profane nog.</label>
-    <description>Make Profane Egg Nog.</description>
+    <description>Make Profane Egg Nog out of egg nog batter and Kraken Rum.</description>
     <jobString>Corrupting</jobString>
     <workAmount>400</workAmount>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -269,6 +275,7 @@
     <ingredients>
       <li>
         <filter>
+		
 					<thingDefs>
 						<li>RawNog</li>
 					</thingDefs>
@@ -277,6 +284,7 @@
       </li>
 	  <li>
         <filter>
+					<customSummary>Chemfuel, spices</customSummary>
 					<thingDefs>
 						<li>Chemfuel</li>
 						<li MayRequire="Mlie.SYRHarpy">RawHarpyChilis</li>
@@ -331,6 +339,7 @@
 		<ingredients>
 			<li>
 				<filter>
+					<customSummary>egg nog batter</customSummary>
 					<thingDefs>
 						<li>RawNog</li>
 					</thingDefs>
@@ -339,6 +348,7 @@
 			</li>
 			<li>
 				<filter>
+					<customSummary>honey</customSummary>
 					<categories>
 						<li MayRequire="zal.patchhoney">Honey</li>
 						<li MayRequire="sarg.rimbees">RB_Honeys</li>

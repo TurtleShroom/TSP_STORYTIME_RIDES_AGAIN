@@ -21,7 +21,7 @@
 		<ingestible>
 			<preferability>NeverForNutrition</preferability>
 			<foodType>Processed, Liquor, Kibble</foodType>
-			<joy>1</joy>
+			<joy>1.5</joy>
 			<drugCategory>Hard</drugCategory>
 			<ingestSound>Ingest_Pill</ingestSound>
 			<outcomeDoers>
@@ -59,7 +59,9 @@
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
 		<recipeUsers Inherit="False">
-			<li>FabricationBench</li>	
+			<li>FabricationBench</li>
+			<li MayRequire="owen.ark">OP_MagicTable</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_SoulForge</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -78,7 +80,7 @@
 						<li>Silver</li>
 					</thingDefs>
 				</filter>
-				<count>1500</count>
+				<count>150</count> <!-- Multipled by ten -->
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
