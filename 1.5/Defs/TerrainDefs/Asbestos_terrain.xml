@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <TerrainDef ParentName="FlagstoneBase">
+        <defName>Asbestos_Core_Flagstone</defName>
+        <label>asbestos flagstone</label>
+        <color>(145,157,118)</color>
+		<statBases>
+			<MarketValue>0</MarketValue>
+		</statBases>
+        <costList>
+            <Asbestos_Tile>4</Asbestos_Tile>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="TileStoneBase">
+        <defName>Asbestos_Core_TileStone</defName>
+        <label>asbestos tile</label>
+        <color>(145,157,118)</color>
+		<statBases>
+			<MarketValue>0</MarketValue>
+		</statBases>
+        <costList>
+            <Asbestos_Tile>4</Asbestos_Tile>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="TileMetalBase">
+        <defName>Asbestos_Core_TileMetal</defName>
+        <label>asbestos smooth tile</label>
+        <renderPrecedence>242</renderPrecedence>
+        <description>asbestos tile.</description>
+        <color>(145,157,118)</color>
+        <statBases>
+            <Beauty>4</Beauty>
+            <WorkToBuild>800</WorkToBuild>
+            <Cleanliness>0.6</Cleanliness>
+            <CleaningTimeFactor>0.6</CleaningTimeFactor>
+			<MarketValue>1</MarketValue>
+        </statBases>
+        <costList>
+            <Asbestos_Tile>4</Asbestos_Tile>
+        </costList>
+        <designationHotKey>Misc3</designationHotKey>
+        <tags>
+            <!-- <li>FineFloor</li> -->
+        </tags>
+    </TerrainDef>
+
+    <TerrainDef MayRequire="Ludeon.Rimworld.Royalty" ParentName="FineTileStoneBase">
+        <defName>Asbestos_Royalty_FineTile</defName>
+        <label>file asbestos tile</label>
+        <color>(145,157,118)</color>
+		<statBases>
+			<MarketValue>2</MarketValue>
+		</statBases>
+        <costList>
+            <Asbestos_Tile>20</Asbestos_Tile>
+        </costList>
+        <tags>
+			<li>FineFloor</li>
+        </tags>
+    </TerrainDef>
+
+    <TerrainDef MayRequire="Ludeon.Rimworld.Ideology" ParentName="MorbidStoneTile">
+        <defName>Asbestos_Ideology_TileMorbid</defName>
+        <label>morbid asbestos tile</label>
+        <color>(145,157,118)</color>
+		<statBases>
+			<MarketValue>2</MarketValue>
+		</statBases>
+        <costList>
+            <Asbestos_Tile>20</Asbestos_Tile>
+        </costList>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+    </TerrainDef>
+
+    <TerrainDef MayRequire="Ludeon.Rimworld.Ideology" ParentName="SpikecoreStoneTile">
+        <defName>Asbestos_Ideology_TileSpikecore</defName>
+        <label>asbestos spike core tile</label>
+        <color>(145,157,118)</color>
+		<statBases>
+			<MarketValue>2</MarketValue>
+		</statBases>
+        <costList>
+            <Asbestos_Tile>20</Asbestos_Tile>
+        </costList>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+    </TerrainDef>
+
+    <TerrainDef MayRequire="Ludeon.Rimworld.Ideology" ParentName="TotemicStoneTile">
+        <defName>Asbestos_Ideology_TileTotemic</defName>
+        <label>totemic asbestos tile</label>
+        <color>(145,157,118)</color>
+		<statBases>
+			<MarketValue>2</MarketValue>
+		</statBases>
+        <costList>
+            <Asbestos_Tile>20</Asbestos_Tile>
+        </costList>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+    </TerrainDef>
+</Defs>
