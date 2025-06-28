@@ -69,13 +69,29 @@
         <statBases>
             <Mass>5</Mass>
 			<MarketValue>0.01</MarketValue>
+			<Flammability>0</Flammability>
         </statBases>
-		<!--
+		<stackLimit>70</stackLimit>
 		<stuffProps>
+			<statFactors>
+				<Mass>0.75</Mass>
+				<MaxHitPoints>5</MaxHitPoints>
+				<WorkToBuild>0.5</WorkToBuild>
+				<WorkToMake>0.5</WorkToMake>
+				<Flammability>0</Flammability>
+				<Beauty>1.4</Beauty>
+			</statFactors>
+			<statOffsets>
+				<CancerRate>0.2</CancerRate>
+			</statOffsets>
 			<color>(145,157,118)</color>
 		</stuffProps>
+		<!--
+		<thingCategories Inherit="False">
+			<li>Chunks</li>
+		</thingCategories>
 		-->
-        <soundDrop>ChunkRock_Drop</soundDrop>
+        <soundDrop>ChunkSlag_Drop</soundDrop>
         <butcherProducts>
             <Asbestos_Fiber>50</Asbestos_Fiber>
         </butcherProducts>
@@ -105,6 +121,8 @@
         <smeltable>false</smeltable>
         <healthAffectsPrice>false</healthAffectsPrice>
         <minRewardCount>1000</minRewardCount>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<stackLimit>500</stackLimit>
         <stuffProps>
             <stuffAdjective>asbestine</stuffAdjective>
             <categories>
@@ -118,6 +136,9 @@
                 <MaxHitPoints>4.5</MaxHitPoints>
                 <Beauty>1.5</Beauty>
                 <Mass>0.75</Mass>
+				<WorkToBuild>0.24</WorkToBuild>
+				<WorkToMake>0.34</WorkToMake>
+				<MeleeWeapon_CooldownMultiplier>0.61</MeleeWeapon_CooldownMultiplier>
             </statFactors>
 			<statOffsets>
 				<CancerRate>0.04</CancerRate> <!-- Per item -->
@@ -143,8 +164,8 @@
         </graphicData>
         <useHitPoints>false</useHitPoints>
         <healthAffectsPrice>false</healthAffectsPrice>
-        <soundInteract>ChunkRock_Drop</soundInteract>
-        <soundDrop>ChunkRock_Drop</soundDrop>
+        <soundInteract>ChunkSlag_Drop</soundInteract>
+        <soundDrop>ChunkSlag_Drop</soundDrop>
         <statBases>
             <MarketValue>5</MarketValue>
             <Mass>0.1</Mass>
@@ -155,10 +176,11 @@
             <StuffPower_Insulation_Heat>40</StuffPower_Insulation_Heat>
             <BluntDamageMultiplier>1.6</BluntDamageMultiplier>
         </statBases>
+		<stackLimi>750</stackLimi>
         <thingCategories>
             <li>StoneBlocks</li>
         </thingCategories>
-        <smeltable>true</smeltable>
+        <smeltable>false</smeltable>
         <stuffProps>
             <stuffAdjective>asbestos</stuffAdjective>
             <categories>
@@ -174,8 +196,8 @@
             <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
             <statFactors>
                 <MaxHitPoints>5.6</MaxHitPoints>
-                <WorkToMake>1.6</WorkToMake>
-                <WorkToBuild>1.5</WorkToBuild>
+                <WorkToMake>0.91</WorkToMake>
+                <WorkToBuild>0.71</WorkToBuild>
                 <Beauty>1.3</Beauty>
                 <Flammability>0</Flammability>
                 <MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
@@ -201,6 +223,7 @@
             <graphicClass>Graphic_StackCount</graphicClass>
             <color>(145,157,118)</color>
         </graphicData>
+		<stackLimit>750</stackLimit>
         <comps>
             <li Class="CompProperties_Explosive">
                 <explosiveRadius>12</explosiveRadius>
@@ -283,7 +306,7 @@
 				<li>Asbestos_Tile</li>
 			</disallowedThingDefs>
         </fixedIngredientFilter>
-        <products>
+        <products Inherit="False">
             <Asbestos_Fiber>50</Asbestos_Fiber>
         </products>
     </RecipeDef>
