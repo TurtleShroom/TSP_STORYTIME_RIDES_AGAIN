@@ -23,7 +23,7 @@
             <mineableYield>5</mineableYield>
             <mineableDropChance>1</mineableDropChance>
             <smoothedThing>Asbestos_Smoothed</smoothedThing>
-			<mineableScatterCommonality>1.00</mineableScatterCommonality> <!-- as often as steel, with smaller blotches -->
+			<mineableScatterCommonality>0.34</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>23~64</mineableScatterLumpSizeRange>
 			<claimable>false</claimable>
 			<paintable>true</paintable>
@@ -37,6 +37,7 @@
         <description>A naturally fibrous siliceous mineral. It does take work to polish it so smooth.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
+			<color>(145,157,118)</color>
         </graphicData>
         <statBases>
             <Beauty>3</Beauty>
@@ -63,11 +64,17 @@
             <texPath>asbestos/chunk</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <flipExtraRotation>0</flipExtraRotation>
+			<color>(145,157,118)</color>
         </graphicData>
         <statBases>
             <Mass>5</Mass>
 			<MarketValue>0.01</MarketValue>
         </statBases>
+		<!--
+		<stuffProps>
+			<color>(145,157,118)</color>
+		</stuffProps>
+		-->
         <soundDrop>ChunkRock_Drop</soundDrop>
         <butcherProducts>
             <Asbestos_Fiber>50</Asbestos_Fiber>
