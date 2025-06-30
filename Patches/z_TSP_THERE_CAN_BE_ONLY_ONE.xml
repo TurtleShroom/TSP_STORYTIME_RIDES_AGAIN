@@ -56,21 +56,23 @@
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
-	<!-- These cabbages are pathetic. Send in the real cabbage. -->
+	<!--
+	 These cabbages are pathetic. Send in the real cabbage.
 	<Operation Class="PatchOperationConditional">
-	<!-- DO THE GENTILES KNOW? -->
+		DO THE GENTILES KNOW?
 		<xpath>/Defs/ThingDef[defName="VCE_Cabbage"]</xpath>
-		<!-- If they do, SHUT IT DOWN. -->
+		If they do, SHUT IT DOWN.
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="VCE_Cabbage"]</xpath>
 		</match>
-		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+		If the first XPATH does not exist, the original code stands. All according to plan.
 	</Operation>
+	-->
 	
   <Operation Class="PatchOperationConditional">
     <!-- Does this exist? -->
-    <xpath>/Defs/ThingDef[defName="PlantWildCabbage"]</xpath>
+    <xpath>/Defs/ThingDef[defName="VCE_RawOnion"]</xpath>
     <!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
     <match Class="PatchOperationSequence">
       <!-- <success>Always</success> -->
@@ -158,7 +160,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="PlantWildCabbage"]</xpath>
+	<xpath>/Defs/ThingDef[defName="PlantWildCabbage"]/plant/harvestedThingDef</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
@@ -231,7 +233,7 @@
 	
   <Operation Class="PatchOperationConditional">
     <!-- Does this exist? -->
-    <xpath>/Defs/ThingDef[@Name="VCE_FruitFoodRawBase"]</xpath>
+    <xpath>/Defs/ThingDef[defName="VCE_RawOnion"]</xpath>
     <!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
     <match Class="PatchOperationSequence">
       <!-- <success>Always</success> -->
@@ -531,6 +533,66 @@
 						<count>5</count>
 					</li>
 				</ingredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]/ingredients</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]/ingredients</xpath>
+			<value>
+				<ingredients>
+					<li>
+						<filter>
+							<thingDefs>
+								<li>ST_Cabbage</li>
+							</thingDefs>
+						</filter>
+						<count>20</count>
+					</li>
+					<li>
+						<filter>
+							<thingDefs>
+								<li>VCE_RawSpices</li>
+								<li>HarralanderLeaves</li>
+								<li>LantadymeLeaves</li>
+								<li>RannarLeaves</li>
+								<li>TorstolLeaves</li>
+								<li>ST_MixedHerbs</li>
+							</thingDefs>
+						</filter>
+						<count>5</count>
+					</li>
+				</ingredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]/fixedIngredientFilter</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="AC_PrepareKimchi"]/fixedIngredientFilter</xpath>
+			<value>
+				<fixedIngredientFilter>
+					<thingDefs>
+						<li>ST_Cabbage</li>
+						<li>VCE_RawSpices</li>
+						<li>HarralanderLeaves</li>
+						<li>LantadymeLeaves</li>
+						<li>RannarLeaves</li>
+						<li>TorstolLeaves</li>
+						<li>ST_MixedHerbs</li>
+					</thingDefs>
+				</fixedIngredientFilter>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
@@ -1161,15 +1223,11 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/modExtensions</xpath>
+		<xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/modExtensions/li/baseline</xpath>
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/modExtensions</xpath>
+			<xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/modExtensions/li/baseline</xpath>
 			<value>
-				<modExtensions>
-					<li Class="AlphaCrafts.VariableOutputByIngredient">
-						<baseline>ST_Orange</baseline>
-					</li>
-				</modExtensions>
+				<baseline>ST_Orange</baseline>
 			</value>
 		</match>
 	</Operation>

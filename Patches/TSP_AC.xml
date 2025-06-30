@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/ingredients/li/filter/thingDefs</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/ingredients/li/filter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>ST_CookingApple</li>
+				<li>ST_Lemon</li>
+				<li>ST_Lime</li>
+				<li>ST_Orange</li>
+				<li>TSP_ST_Citron</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/fixedIngredientFilter/thingDefs</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="AC_ZestCitrics"]/fixedIngredientFilter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>ST_CookingApple</li>
+				<li>ST_Lemon</li>
+				<li>ST_Lime</li>
+				<li>ST_Orange</li>
+				<li>TSP_ST_Citron</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="AC_PreserveFruitAsJam"]/ingredients/li/filter/thingDefs</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="AC_PreserveFruitAsJam"]/ingredients/li/filter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>ST_CookingApple</li>
+				<li>ST_Lemon</li>
+				<li>ST_Lime</li>
+				<li>ST_Orange</li>
+				<li>TSP_ST_Citron</li>
+				<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_RawGrapes</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RawGrapes</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="AC_PreserveFruitAsJam"]/fixedIngredientFilter/thingDefs</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="AC_PreserveFruitAsJam"]/fixedIngredientFilter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>ST_CookingApple</li>
+				<li>ST_Lemon</li>
+				<li>ST_Lime</li>
+				<li>ST_Orange</li>
+				<li>TSP_ST_Citron</li>
+				<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_RawGrapes</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RawGrapes</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>
