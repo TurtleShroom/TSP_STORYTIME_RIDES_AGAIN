@@ -25,14 +25,14 @@
         </nomatch>
     </Operation>
 
-	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.royalty">
+	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath MayRequire="ludeon.rimworld.royalty">/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
+		<xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
 		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd" MayRequire="ludeon.rimworld.royalty">
+		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath MayRequire="ludeon.rimworld.royalty">/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
-			<value MayRequire="ludeon.rimworld.royalty">
+			<xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel/tags</xpath>
+			<value>
 				<li>Robe</li>
 				<li>RoyalRobe</li>
 				<li>Medieval</li>
@@ -101,6 +101,10 @@
 				<li>RoyalTier2</li>
 				<li>MF_CorporateTier1</li>
 				<li>MF_CorporateTier2</li>
+				<li>HarrierWear</li>
+				<li>CaravaneerWear</li>
+				<li>SurvivalistWear</li>
+				<li>SlaveRatWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -143,6 +147,10 @@
 				<li>PoorPirate</li>
 				<li>NormalPirate</li>
 				<li>IndustrialBasic</li>
+				<li>SurvivalistWear</li>
+				<li>HarrierWear</li>
+				<li>CaravaneerWear</li>
+				<li>SlaveRatWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -177,6 +185,7 @@
 				<li>RWPGentlemanWear</li>
 				<li>MF_CorporateTier1</li>
 				<li>MF_CorporateTier2</li>
+				<li>BeetnikhWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -209,6 +218,7 @@
 				<li>GoblinWear</li>
 				<li>MF_CorporateTier1</li>
 				<li>MF_CorporateTier2</li>
+				<li>Skirt</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -226,23 +236,7 @@
 				<li>ST_BeetClothing</li>
 				<li>Usa</li>
 				<li>GoblinWear</li>
-			</value>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="weebbandana"]</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="weebbandana"]/apparel/tags</xpath>
-			<value>
-				<li>ST_GnomeClothing</li>
-				<li>JeubWear</li>
-				<li>ST_BeetClothing</li>
-				<li>Usa</li>
-				<li>GoblinWear</li>
+				<li>HarrierWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -274,6 +268,7 @@
 				<li>Usa</li>
 				<li>MF_CorporateTier1</li>
 				<li>MF_CorporateTier2</li>
+				<li>CaravaneerWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -365,6 +360,8 @@
 				<li>president</li>
 				<li>MF_CorporateTier1</li>
 				<li>MF_CorporateTier2</li>
+				<li>CaravaneerWear</li>
+				<li>HarrierWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -399,6 +396,7 @@
 				<li>ST_GnomeClothing</li>
 				<li>JeubWear</li>
 				<li>GoblinWear</li>
+				<li>SurvivalistWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -417,6 +415,8 @@
 				<li>PoorPirate</li>
 				<li>RWPWesternWear</li>
 				<li>GoblinWear</li>
+				<li>SurvivalistWear</li>
+				<li>FrogmanWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -542,7 +542,7 @@
 				<li>King</li>
 				<li>RWPGentlemanWear</li>
 				<li>BeetElite</li>
-				<li>RWPGentlemanWear</li>
+				<li>CaravaneerWear</li>
 				<li>MF_CorporateTier1</li>
 				<li>MF_CorporateTier2</li>
 			</value>
@@ -626,6 +626,10 @@
 				<li>RoyalTier2</li>
 				<li>MF_CorporateTier1</li>
 				<li>MF_CorporateTier2</li>
+				<li>CaravaneerWear</li>
+				<li>HarrierWear</li>
+				<li>SurvivalistWear</li>
+				<li>SlaveRatWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -694,6 +698,7 @@
         <li>GoblinWear</li>
 		<li>MF_CorporateTier1</li>
 		<li>MF_CorporateTier2</li>
+		<li>CaravaneerWear</li>
       </value>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
@@ -733,6 +738,8 @@
         <li>GoblinWear</li>
 		<li>MF_CorporateTier1</li>
 		<li>MF_CorporateTier2</li>
+		<li>HarrierWear</li>
+		<li>CaravaneerWear</li>
       </value>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
@@ -754,6 +761,7 @@
         <li>JeubWear</li>
         <li>GoblinWear</li>
 		<li>RWPMarshalWear</li>
+		<li>CaravaneerWear</li>
       </value>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
@@ -819,6 +827,10 @@
 				<li>RoyalTier2</li>
 				<li>MF_CorporateTier1</li>
 				<li>MF_CorporateTier2</li>
+				<li>CaravaneerWear</li>
+				<li>FrogmanWear</li>
+				<li>RWPGentlemanWear</li>
+				<li>RWPLadiesWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -898,6 +910,7 @@
 				<li>FrogmanWear</li>
 				<li>GoblinWear</li>
 				<li>MF_CorporateTier1</li>
+				<li>CaravaneerWear</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
@@ -926,4 +939,25 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+    <Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+        <xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel/developmentalStageFilter</xpath>
+			<value>
+				<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Apparel_Robe"]/apparel</xpath>
+			<success>Always</success>
+            <value>
+                <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+            </value>
+        </nomatch>
+		<!-- If the original XPATH does not exist, the original code stands. -->
+    </Operation>
 </Patch>
