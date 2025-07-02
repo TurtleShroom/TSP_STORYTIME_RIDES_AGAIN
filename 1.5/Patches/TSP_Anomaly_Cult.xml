@@ -67,7 +67,7 @@
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/ThingDef[defName="Gun_SpineKiller"]/weaponTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Gun_SpineKiller"]/</xpath>
+			<xpath>/Defs/ThingDef[defName="Gun_SpineKiller"]</xpath>
 			<success>Always</success>
 			<value>
 				<weaponTags></weaponTags>
@@ -80,8 +80,8 @@
 		<xpath>/Defs/ThingDef[defName="Gun_SpineKiller"]/weaponTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Gun_SpineKiller"]/weaponTags</xpath>
+			<success>Always</success>
 			<value>
 				<li>PeeledRanged</li>
 				<li>Highthrall</li>
