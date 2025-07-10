@@ -46,9 +46,30 @@
 			<xpath>/Defs/ThingDef[defName="Nothing"]</xpath>
 			<success>Always</success>
 			<value>
-				<ingestible Inherit="False" IsNull="True"></ingestible>
+				<ingestible></ingestible>
 			</value>
 		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Nothing"]/ingestible</xpath> <!-- Not actually nothing, Ark spawn -->
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Nothing"]/ingestible</xpath>
+			<value>
+				<ingestible>
+					<foodType>Corpse</foodType>
+					<preferability>NeverForNutrition</preferability>
+					<ateEvent>AteNutrientPaste</ateEvent>
+					<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+					<ingestSound>Ingest_Pill</ingestSound>
+					<optimalityOffsetHumanlikes>-100</optimalityOffsetHumanlikes>
+					<optimalityOffsetFeedingAnimals>-100</optimalityOffsetFeedingAnimals>
+				</ingestible>
+			</value>
+		</match>
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
@@ -313,7 +334,7 @@
 					</li>
 					<li>
 						<def>HumanlikeAdult</def>
-						<minAge>4</minAge>
+						<minAge>3</minAge>
 					</li>
 				</lifeStageAges>
 			</value>
