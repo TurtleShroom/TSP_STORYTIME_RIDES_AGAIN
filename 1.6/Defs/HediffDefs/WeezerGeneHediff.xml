@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- If the player does not have the "Biotech" Expansion Pack, this Hediff has no effect on the game. -->
+
+<Defs>
+	<HediffDef>
+		<defName>WeezerGene_Hediff</defName>
+		<label>Weezer production</label>
+		<description>This person is blessed by Randy himself, for he is uniquely capable of spawning pure WEEZER.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<defaultLabelColor>(0, 182, 213)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Spawner" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<thingToSpawn>Weezer</thingToSpawn>
+				<spawnCount>5</spawnCount>
+				<spawnIntervalRange>57000~62000</spawnIntervalRange>
+				<spawnMaxAdjacent>30</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<showMessageIfOwned>false</showMessageIfOwned>				
+			</li>
+		</comps>
+	</HediffDef>
+</Defs>

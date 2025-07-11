@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/XenotypeDef[defName="BS_Gnome"]/genes</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/XenotypeDef[defName="BS_Gnome"]/genes</xpath>
+			<value>
+				<genes>
+					<li>GnomeFrame</li>
+					<li>Body_Thin</li>
+					<li>MoveSpeed_Quick</li>
+					<li>MinTemp_SmallIncrease</li>
+					<li>MaxTemp_SmallDecrease</li>
+					<li>Immunity_Strong</li>
+					<li>Robust</li>
+					<li>Pain_Extra</li>
+					<li>BS_AnimalFriend</li>
+					<li>PsychicAbility_Extreme</li>
+					<li>AptitudeTerrible_Mining</li>
+					<li>AptitudeTerrible_Construction</li>
+					<li>AptitudePoor_Crafting</li>
+					<li>AptitudeStrong_Animals</li>
+					<li>AptitudeStrong_Plants</li>
+					<li>AptitudeRemarkable_Cooking</li>
+					<li>AnimalWarcall</li>
+					<li>Fertile</li>
+					<li>BS_ShortPregnancy</li>
+					<li>BS_VerySlowAging</li>
+				</genes>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

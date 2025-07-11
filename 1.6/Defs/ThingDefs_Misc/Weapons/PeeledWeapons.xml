@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Launched_Peeler</defName>
+    <label>peeler</label>
+    <graphicData>
+      <texPath>Things/Items/PeeledWeapons/Peeler</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedPeeler</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>25</speed>
+	  <!-- <flyOverhead>true</flyOverhead> -->
+    </projectile>
+	<!-- <defaultArmorPenetration>0.9</defaultArmorPenetration> -->
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGun">
+    <defName>PeelerLauncher</defName>
+    <label>peeler launcher</label>
+	<techLevel>Spacer</techLevel>
+    <description>HHHHHHHHHHHHHHHH</description>
+    <graphicData>
+      <texPath>Things/Items/PeeledWeapons/RazorLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<weaponTags>
+		<li>PeeledWeapon</li>
+		<li>PeeledRanged</li>
+		<li>Folian</li>
+		<li>Potato Cannon</li>
+		<!-- <li>SpacerGun</li> -->
+    </weaponTags>
+	<weaponClasses>
+		<li>Ranged</li>
+		<li>MeleePiercer</li>
+		<li>RangedLight</li>
+		<li>Peeled</li>
+	</weaponClasses>
+    <soundInteract>Interact_SMG</soundInteract>
+	<generateCommonality>1.5</generateCommonality>
+    <statBases>
+		<MarketValue>800</MarketValue>
+		<Mass>0.2</Mass>
+		<AccuracyTouch>0.5</AccuracyTouch>
+		<AccuracyShort>0.9</AccuracyShort>
+		<AccuracyMedium>0.9</AccuracyMedium>
+		<AccuracyLong>0.4</AccuracyLong>
+		<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+	<!-- <defaultArmorPenetration>0.5</defaultArmorPenetration> -->
+    <tradeability>Sellable</tradeability>
+	<smeltable>true</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+	<stuffCategories Inherit="False">
+		<li>Metallic</li>
+
+		<!-- Mod support -->
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+		<li MayRequire="sarg.rimbees">RB_Waxy</li>
+		<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+    </stuffCategories>
+	<costList>
+		<RawPotatoes>100</RawPotatoes>
+		<ComponentIndustrial>7</ComponentIndustrial>
+	</costList>
+	<recipeMaker Inherit="False">
+		<!-- You cannot make this yourself! -->
+		<unfinishedThingDef>TSP_ST_Unfinished_Stuffed</unfinishedThingDef>
+		<recipeUsers Inherit="False"></recipeUsers>
+	</recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Launched_Peeler</defaultProjectile>
+        <warmupTime>3.2</warmupTime>
+        <range>28</range>
+        <burstShotCount>80</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shot_NeedleGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>16</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li>Poke</li>
+		  <li>Peeler</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Peeler</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+	<equippedStatOffsets>
+		<TerrorSource MayRequire="Ludeon.RimWorld.Ideology">0.1</TerrorSource>
+	</equippedStatOffsets>
+		<tradeTags>
+			<li>Peeled</li>
+		</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeapon">
+    <defName>MeleePeeler</defName>
+    <label>peeler</label>
+    <techLevel>Industrial</techLevel>
+    <description>HHHHHHHHHHHHHHHH</description>
+    <graphicData>
+      <texPath>Things/Items/PeeledWeapons/Peeler</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.7</drawSize>
+    </graphicData>
+	<generateCommonality>1.5</generateCommonality>
+    <uiIconScale>1.6</uiIconScale>
+	<tradeability>Sellable</tradeability>
+	<costStuffCount>40</costStuffCount>
+	<stuffCategories Inherit="False">
+      <li>Metallic</li>
+	  
+	  <!-- Mod support -->
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+      <li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+    </stuffCategories>
+	<recipeMaker Inherit="False">
+		<unfinishedThingDef>TSP_ST_Unfinished_Stuffed</unfinishedThingDef>
+		<!-- You cannot make this yourself! -->
+		<recipeUsers Inherit="False"></recipeUsers>
+	</recipeMaker>
+	<weaponClasses>
+		<li>Melee</li>
+		<li>MeleePiercer</li>
+		<li>Peeled</li>
+	</weaponClasses>
+	<smeltable>true</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+	<thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <weaponTags Inherit="False">
+      <li>PeeledWeapon</li>
+	  <li>Folian</li>
+	  <li>HooliganWeapon</li>
+    </weaponTags>
+	<statBases>
+      <Mass>0.05</Mass>
+	  <MarketValue>300</MarketValue>
+	  <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">0.1</TerrorSource>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Peeler</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>0.4</cooldownTime>
+      </li>
+    </tools>
+	<equippedStatOffsets>
+	</equippedStatOffsets>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<HediffDef ParentName="ChronicDiseaseBase">
+		<defName>TSP_ST_BeanBulborb_BitRot</defName>
+		<label>bit rot</label>
+		<labelNoun>bit rot</labelNoun>
+		<description>This Bean Man's Consciousness and sapience has been affected by bit rot. "Bit rot" refers to the accumulation, over long periods of time, of errors in a machine or storage medium, or the degredation of the machine itself. Normally and independently, these errors and conditions do not harm the integrity of the medium or machine. However, over time, the accumulation of these errors or degredation of material cause it to ultimately be unable to be read, or to be unable to read or write. In a Bean Man, this refers to the Sapient Bean Matrix that gives him human-level sapience. Despite being Glitter World Tech, even perfect machines degrade in an organic body. Bit rot has set in and the abilities of the Bean Man to speak, talk, and think have been impaired in a way very similar to Alzheimers in the brain.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<stages>
+			<li>
+				<label>bit rot</label>
+				<partEfficiencyOffset>-0.15</partEfficiencyOffset>
+				<mentalStateGivers>
+					<li>
+						<mentalState>WanderConfused</mentalState>
+						<mtbDays>13</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<forgetMemoryThoughtMtbDays>4</forgetMemoryThoughtMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Talking</capacity>
+						<offset>-0.3</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+  <HediffDef ParentName="DiseaseBase">
+    <defName>TraumaSavantBulborb</defName>
+    <label>digital savant</label>
+    <labelNoun>damaged hardware</labelNoun>
+    <description>[PAWN_nameDef]'s Sapient Bean Matrix has been severely damaged! This delicate machine gives all Bean Men their sapience. Thankfully, the machine's integrity is somewhat intact, but the damage has caused [PAWN_nameDef] to develop strange savant-like abilities...</description>
+    <hediffClass>HediffWithComps</hediffClass>
+	<everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+		<label>system integrity compromised</label>
+        <opinionOfOthersFactor>30</opinionOfOthersFactor>
+        <partIgnoreMissingHP>true</partIgnoreMissingHP> <!-- to avoid penalties from brain injuries, so manipulation is 100%+ -->
+        <capMods>
+          <li>
+            <capacity>Talking</capacity>
+            <setMax>0</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>2</offset>
+          </li>
+        </capMods>
+    </li>
+    </stages>
+  </HediffDef>
+</Defs>

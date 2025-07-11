@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EggKomodonUnfertilized</defName>
+    <label>komodon egg (unfert.)</label>
+    <description>Unfertilized Komodon egg. It can be eaten raw, but it's much, much better cooked.</description>
+    <graphicData>
+		<color>(120,80,50)</color>
+		<drawSize>2</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+	  <Nutrition>0.8</Nutrition>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggKomodonFertilized</defName>
+    <label>komodon egg (fert.)</label>
+    <description>Fertilized komodon egg. If all goes well, it should hatch into a Komodon hatchling. It can be eaten raw, but it's much better cooked.</description>
+    <graphicData>
+      <color>(190,170,150)</color>
+	  <drawSize>2</drawSize>
+    </graphicData>
+    <statBases>
+		<Nutrition>1</Nutrition>
+		<MarketValue>15</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>15</hatcherDaystoHatch>
+        <hatcherPawn>ST_Exanth_Komodon</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

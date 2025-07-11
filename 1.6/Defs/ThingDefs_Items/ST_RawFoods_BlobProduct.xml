@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	  <ThoughtDef>
+		<defName>ST_AteOoze</defName>
+		<durationDays>1</durationDays>
+		<stages>
+		  <li>
+			<label>drank raw ooze</label>
+			<description>Vile.</description>
+			<baseMoodEffect>-6</baseMoodEffect>
+		  </li>
+		</stages>
+	  </ThoughtDef>
+
+	  <ThingDef ParentName="OrganicProductBase">
+		<defName>ST_GreenOoze</defName>
+		<label>ooze</label>
+		<description>Nutritious ooze extracted from slime. Vile when raw, fine to eat otherwise, and very healthy. Animals love it.</description>
+		<graphicData>
+		  <texPath>Things/Items/Resources/Slimes/Green_Ooze</texPath>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+		  <MarketValue>3.2</MarketValue>
+		  <Mass>0.045</Mass>
+		  <MaxHitPoints>60</MaxHitPoints>
+		  <Flammability>0.2</Flammability>
+		  <Nutrition>0.09</Nutrition>
+		</statBases>
+		<stackLimit>500</stackLimit>
+		<ingestible>
+			<preferability>DesperateOnlyForHumanlikes</preferability>
+			<foodType>AnimalProduct, Fluid, Liquor, Kibble</foodType>
+			<specialThoughtDirect>ST_AteOoze</specialThoughtDirect>
+			<specialThoughtAsIngredient Inherit="False"></specialThoughtAsIngredient> <!-- It tastes just fine when cooked! -->
+			<babiesCanIngest>true</babiesCanIngest>
+			<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>50</optimalityOffsetFeedingAnimals>
+		</ingestible>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<comps Inherit="False">
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>16</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+				<water>0.9</water>
+				<UseForWashing>false</UseForWashing>
+				<SeekForThirst>false</SeekForThirst>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>

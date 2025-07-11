@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="BaseSkeleton">
+    <defName>ST_PlantSkeleton</defName>
+    <label>Plant Skeleton Pirate</label>
+    <description>Once a pirate, this skeleton is part of a pirate crew that willingly gave up its members' souls in exchange for eternal life. Today, they wander the Rim in search of treasure. This skeleton is mostly decayed and is overgrown with plant life, making him significantly slower. The plants keep him alive and make him resistant to blunt attacks, but they can be easily cut and burned.</description>
+    <statBases>
+      <MoveSpeed>2.0</MoveSpeed>
+      <MarketValue>250</MarketValue>
+      <Flammability>5</Flammability>
+	  <ArmorRating_Blunt>0.95</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+      <li>
+        <label>left hand</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hand</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>twig</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+		<!-- <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup> -->
+      </li>
+      <li>
+        <label>switch</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+		<!-- <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup> -->
+      </li>
+      <li>
+		<label>jawbone</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.6</chanceFactor>
+      </li>
+    </tools>
+    <race>
+	  <intelligence>ToolUser</intelligence>
+      <body>TSP_ST_SkeletalMan</body>
+		<deathAction>
+			<workerClass>DeathActionWorker_SmallExplosion</workerClass>
+		</deathAction>
+      <baseBodySize>1</baseBodySize>
+      <baseHungerRate>0</baseHungerRate>
+      <baseHealthScale>1</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+	<comps>
+		<li Class="AnimalBehaviours.CompProperties_LightSustenance" MayRequire="sarg.alphaanimals,oskarpotocki.vanillafactionsexpanded.core"></li>
+	</comps>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseSkeletonKind">
+    <defName>ST_PlantSkeleton</defName>
+    <label>Plant Skeleton Pirate</label>
+    <race>ST_PlantSkeleton</race>
+    <combatPower>25</combatPower>
+	<canArriveManhunter>false</canArriveManhunter>
+    <lifeStages>
+      <li>
+        <label>Plant Skeleton Pirate</label>
+        <labelPlural>Plant Skeleton Pirates</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/Skeletons/PlantSkeleton/PlantSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Other/Skeletons/PlantSkeleton/PlantSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li MayRequire="ludeon.rimworld.anomaly">
+        <label>Plant Skeleton Pirate</label>
+        <labelPlural>Plant Skeleton Pirates</labelPlural>
+        <bodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Other/Skeletons/PlantSkeleton/PlantSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Other/Skeletons/PlantSkeleton/PlantSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+	<weaponMoney>300~600</weaponMoney>
+	<weaponTags>
+      <li>SkeletonMelee</li>
+    </weaponTags>
+    <inventoryOptions>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>CursedCoin</thingDef>
+          <countRange>1~4</countRange>
+        </li>
+        <li>
+          <thingDef>ST_Lemon</thingDef>
+          <countRange>4~15</countRange>
+        </li>
+        <li>
+          <thingDef>ST_Orange</thingDef>
+          <countRange>4~15</countRange>
+        </li>
+        <li>
+          <thingDef>ST_CookingApple</thingDef>
+          <countRange>4~15</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+</Defs>

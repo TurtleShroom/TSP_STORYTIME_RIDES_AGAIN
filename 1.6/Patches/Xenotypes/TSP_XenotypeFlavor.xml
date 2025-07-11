@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
+	<!-- Does this exist? -->
+		<xpath MayRequire="ludeon.rimworld.biotech">/Defs/XenotypeDef[defName="AV_Slavant"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd" MayRequire="ludeon.rimworld.biotech">
+			<xpath MayRequire="ludeon.rimworld.biotech">/Defs</xpath>
+			<success MayRequire="ludeon.rimworld.biotech">Always</success>
+			<value MayRequire="ludeon.rimworld.biotech">
+				<PawnKindDef ParentName="BasePlayerJeubPawnKind">
+					<defName>TSP_AV_XenotypeFlavor_Slavant_Jeub</defName>
+					<race>Alien_Jeub</race>
+					<label>Jeub Slavant</label>
+					<combatPower>10</combatPower>
+					<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+					<combatEnchancingDrugsChance>0.13</combatEnchancingDrugsChance>
+					<combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+					<chemicalAddictionChance>0.22</chemicalAddictionChance>
+					<apparelMoney>350~600</apparelMoney>
+					<backstoryCryptosleepCommonality>0.01</backstoryCryptosleepCommonality>
+					<acceptArrestChanceFactor>999</acceptArrestChanceFactor>
+					<itemQuality>Poor</itemQuality>
+					<apparelTags>
+						<li>Archon</li>
+						<li>EgyptDress</li>
+					</apparelTags>
+					<weaponTags>
+						<li>Toolagri</li>
+					</weaponTags>
+					<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
+						<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
+							<AV_Slavant MayRequire="ludeon.rimworld.biotech">999</AV_Slavant>
+						</xenotypeChances>
+					</xenotypeSet>
+					<useFactionXenotypes>false</useFactionXenotypes>
+					<initialWillRange>0.01~0.12</initialWillRange>
+					<initialResistanceRange>1~8</initialResistanceRange>
+				</PawnKindDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
+	<!-- Does this exist? -->
+		<xpath MayRequire="ludeon.rimworld.biotech">/Defs/XenotypeDef[defName="AG_Mycormorph"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd" MayRequire="ludeon.rimworld.biotech">
+			<xpath MayRequire="ludeon.rimworld.biotech">/Defs</xpath>
+			<success MayRequire="ludeon.rimworld.biotech">Always</success>
+			<value>
+				<PawnKindDef ParentName="BasePlayerJeubPawnKind">
+					<defName>TSP_AG_XenotypeFlavor_Mycomorph_Jeub</defName>
+					<race>Alien_Jeub</race>
+					<label>corrupted fungal Jeub</label>
+					<combatPower>100</combatPower>
+					<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+					<apparelMoney>350~600</apparelMoney>
+					<backstoryCryptosleepCommonality>0.01</backstoryCryptosleepCommonality>
+					<combatEnchancingDrugsChance>0.13</combatEnchancingDrugsChance>
+					<combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+					<chemicalAddictionChance>0.45</chemicalAddictionChance>
+					<itemQuality>Awful</itemQuality>
+					<apparelTags>
+						<li>Archon</li>
+						<li>EgyptDress</li>
+						<li>Robe</li>
+						<li>Cult</li>
+					</apparelTags>
+					<weaponTags>
+						<li>Toolagri</li>
+					</weaponTags>
+					<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
+						<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
+							<AG_Mycormorph MayRequire="ludeon.rimworld.biotech">999</AG_Mycormorph>
+						</xenotypeChances>
+					</xenotypeSet>
+					<useFactionXenotypes>false</useFactionXenotypes>
+					<initialWillRange>2~3</initialWillRange>
+					<initialResistanceRange>6~8</initialResistanceRange>
+				</PawnKindDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
+	<!-- Does this exist? -->
+		<xpath MayRequire="ludeon.rimworld.biotech">/Defs/XenotypeDef[defName="Turn_XenoType_Purslave"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd" MayRequire="ludeon.rimworld.biotech">
+			<xpath MayRequire="ludeon.rimworld.biotech">/Defs</xpath>
+			<success MayRequire="ludeon.rimworld.biotech">Always</success>
+			<value MayRequire="ludeon.rimworld.biotech">
+				<PawnKindDef ParentName="BasePlayerJeubPawnKind">
+					<defName>TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub</defName>
+					<race>Alien_Jeub</race>
+					<label>Jeub slave</label>
+					<combatPower>10</combatPower>
+					<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+					<apparelMoney>350~600</apparelMoney>
+					<backstoryCryptosleepCommonality>0.01</backstoryCryptosleepCommonality>
+					<combatEnchancingDrugsChance>0.13</combatEnchancingDrugsChance>
+					<combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+					<chemicalAddictionChance>0.45</chemicalAddictionChance>
+					<itemQuality>Awful</itemQuality>
+					<apparelTags>
+						<li>Archon</li>
+						<li>EgyptDress</li>
+						<li>Robe</li>
+						<li>Cult</li>
+					</apparelTags>
+					<weaponTags>
+						<li>Toolagri</li>
+					</weaponTags>
+					<xenotypeSet Inherit="False">
+						<xenotypeChances Inherit="False">
+							<Turn_XenoType_Purslave>999</Turn_XenoType_Purslave>
+						</xenotypeChances>
+					</xenotypeSet>
+					<useFactionXenotypes>false</useFactionXenotypes>
+					<initialWillRange>0.1~0.2</initialWillRange>
+					<initialResistanceRange>1~8</initialResistanceRange>
+				</PawnKindDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RecipeDef>
+		<defName>MeltCoins</defName>
+		<label>Melt haunted coins</label>
+		<description>Melt down haunted coins to obtain gold.</description>    
+		<jobString>Melt gold coins.</jobString>
+		<workAmount>1000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<recipeUsers>
+			<li>ElectricSmelter</li>
+			<li MayRequire="owen.ark">OP_MagicTable</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_SoulForge</li>
+		</recipeUsers>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>CursedCoin</li>
+				</thingDefs>
+			</filter>
+			<count>30</count>
+		  </li>
+		 </ingredients>
+		 <fixedIngredientFilter>
+				<thingDefs>
+					<li>CursedCoin</li>
+				</thingDefs>
+		 </fixedIngredientFilter>
+		 <defaultIngredientFilter>
+				<thingDefs>
+					<li>CursedCoin</li>
+				</thingDefs>
+		 </defaultIngredientFilter>
+		 <products>
+			<Gold>55</Gold>
+		</products>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
+	</RecipeDef>
+
+	  
+	<RecipeDef>
+		<defName>MakeCursedCutlass</defName>
+		<label>Forge haunted cutlass</label>
+		<description>Forge a cutlass and imbue it with spiritual power by adding cursed coins.</description>    
+		<jobString>Forge a haunted cutlass.</jobString>
+		<workAmount>12500</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<recipeUsers>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+			<li>TableMachining</li>
+			<li MayRequire="owen.ark">OP_MagicTable</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_SoulForge</li>
+		</recipeUsers>
+		<skillRequirements>
+				<Crafting>10</Crafting>
+		</skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>CursedCoin</li>
+				</thingDefs>
+			</filter>
+			<count>230</count>
+		  </li>
+		  <!--
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Steel</li>
+				</thingDefs>
+			</filter>
+			<count>100</count>
+		  </li>
+		  -->
+		 </ingredients>
+		 <fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>CursedCoin</li>
+			</thingDefs>
+		 </fixedIngredientFilter>
+		 <defaultIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>CursedCoin</li>
+			</thingDefs>
+		 </defaultIngredientFilter>
+		 <products>
+			<CursedCutlass>1</CursedCutlass>
+		</products>
+		<researchPrerequisites>
+			<li>magicPirateCrafting</li>
+		</researchPrerequisites>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeCursedGun</defName>
+		<label>coat assault rifle in haunted gold</label>
+		<description>Coat an assault rifle in haunted gold. Why not?</description>    
+		<jobString>Make a haunted assault rifle.</jobString>
+		<workAmount>15000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<recipeUsers>
+			<li>ElectricSmithy</li>      
+			<li>FueledSmithy</li>
+			<li>TableMachining</li>
+			<li>ElectricSmelter</li>
+			<li MayRequire="owen.ark">OP_MagicTable</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_SoulForge</li>
+		</recipeUsers>
+		<skillRequirements>
+				<Crafting>2</Crafting>
+		</skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>CursedCoin</li>
+				</thingDefs>
+			</filter>
+			<count>15</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>rifles</customSummary>
+				<thingDefs>
+					<li>Gun_AssaultRifle</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		 </ingredients>
+		 <fixedIngredientFilter>
+			<thingDefs>
+				<li>Gun_AssaultRifle</li>
+				<li>CursedCoin</li>
+			</thingDefs>
+		 </fixedIngredientFilter>
+		 <defaultIngredientFilter>
+			<thingDefs>
+				<li>Gun_AssaultRifle</li>
+				<li>CursedCoin</li>
+			</thingDefs>
+		 </defaultIngredientFilter>
+		 <products>
+			<CursedGun>1</CursedGun>
+		</products>
+		<researchPrerequisites>
+			<li>magicPirateCrafting</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>TSP_ST_MakeCursedGun_FromScratch</defName>
+		<label>Make haunted assault rifle from scratch</label>
+		<description>Now that the technology to make assault rifles has been fully understood, let us go further and coat that rifle in haunted gold. Why not?</description>
+		<jobString>Make a haunted assault rifle.</jobString>
+		<workAmount>35000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<researchPrerequisites>
+			<li>magicPirateCrafting</li>
+			<li>PrecisionRifling</li>
+		</researchPrerequisites>
+		<recipeUsers>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+			<li>TableMachining</li>
+			<li MayRequire="owen.ark">OP_MagicTable</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_SoulForge</li>
+		</recipeUsers>
+		<skillRequirements>
+				<Crafting>14</Crafting>
+		</skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>CursedCoin</li>
+				</thingDefs>
+			</filter>
+			<count>100</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>steel, tin, copper, bronze, iron</customSummary>
+				<thingDefs>
+					<li>Steel</li>
+					<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
+					<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
+					<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+					<li MayRequire="mlie.ancientrimcore">AR_Bronze</li>
+					<li MayRequire="mlie.ancientrimcore">AR_Iron</li>
+				</thingDefs>
+			</filter>
+			<count>66</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>components</customSummary>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>13</count>
+		  </li>
+		 </ingredients>
+		 <fixedIngredientFilter>
+			<thingDefs>
+				<li>ComponentIndustrial</li>
+				<li>CursedCoin</li>
+				<li>Steel</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="mlie.ancientrimcore">AR_Bronze</li>
+				<li MayRequire="mlie.ancientrimcore">AR_Iron</li>
+			</thingDefs>
+		 </fixedIngredientFilter>
+		 <defaultIngredientFilter>
+			<thingDefs>
+				<li>CursedCoin</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
+				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="mlie.ancientrimcore">AR_Bronze</li>
+				<li MayRequire="mlie.ancientrimcore">AR_Iron</li>
+			</thingDefs>
+		 </defaultIngredientFilter>
+		 <products>
+			<CursedGun>1</CursedGun>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakePirateCrown</defName>
+		<label>Forge a pirate crown</label>
+		<description>Forge a crown from cursed gold, fit for a pirate king.</description>    
+		<jobString>Make a pirate crown.</jobString>
+		<workAmount>10000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<recipeUsers>
+			<li>ElectricSmithy</li>      
+			<li>FueledSmithy</li>
+			<li>TableMachining</li>
+			<li>ElectricSmelter</li>
+			<li MayRequire="owen.ark">OP_MagicTable</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_SoulForge</li>
+		</recipeUsers>
+		<skillRequirements>
+				<Crafting>6</Crafting>
+		</skillRequirements>
+		<ingredients>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>CursedCoin</li>
+				</thingDefs>
+			</filter>
+			<count>150</count>
+		  </li>
+		 </ingredients>
+		 <fixedIngredientFilter>
+			<thingDefs>
+				<li>CursedCoin</li>
+			</thingDefs>
+		 </fixedIngredientFilter>
+		 <defaultIngredientFilter>
+			<thingDefs>
+				<li>CursedCoin</li>
+			</thingDefs>
+		 </defaultIngredientFilter>
+		 <products>
+			<PirateCrown>1</PirateCrown>
+		</products>
+		<researchPrerequisites>
+			<li>magicPirateCrafting</li>
+		</researchPrerequisites>
+	</RecipeDef>
+</Defs>

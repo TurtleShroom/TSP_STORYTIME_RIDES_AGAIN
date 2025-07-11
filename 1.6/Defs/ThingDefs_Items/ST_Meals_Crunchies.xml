@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="MealBase">
+    <defName>WormCrunchies</defName>
+    <label>Worm Crunchies</label>
+    <description>When something is "crunchy", it refers to foodstuff that makes a muffled grinding (crunching) sound when chewed or pressed. A crunchy food will provide sustained, granular resistence to being chewed. "Crunchies" refer to a baked good, cracker, or other such pastry that is mass produced, consumed in handfuls, and intended to be crunched. They are often sweet. \n \n These crunchies, a Gnome delicacy, are derived from the meat of worms mixed with sugar, baked until hard and dry, and ground up into little snacks. They smell amazing and taste delicious. Consuming Worm Crunchies will provide a boost to a Pawn's Recreation.</description>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/WormCrunchies</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.4</drawSize>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.25</DeteriorationRate>
+      <MarketValue>11</MarketValue>
+      <Mass>0.3</Mass>
+      <WorkToMake>450</WorkToMake>
+      <Nutrition>0.2</Nutrition>
+    </statBases>
+	<stackLimit Inherit="False">150</stackLimit>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>Processed, Meat, CarnivoreAnimal, CarnivoreAnimalStrict</foodType>
+      <joy>0.15</joy>
+      <joyKind>TSP_ST_EatCrunchiesWorm</joyKind>
+	  <maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+	  <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HedCrunchy</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+  
+  <ThingDef ParentName="MealBase">
+    <defName>ChocchipCrunchies</defName>
+    <label>Chocchip Crunchies</label>
+    <description>When something is "crunchy", it refers to foodstuff that makes a muffled grinding (crunching) sound when chewed or pressed. A crunchy food will provide sustained, granular resistence to being chewed. "Crunchies" refer to a baked good, cracker, or other such pastry that is mass produced, consumed in handfuls, and intended to be crunched. They are often sweet. \n \n These crunchies, a Gnome delicacy, are derived from sweet, sweet chocolate and sugar, baked until hard and dry, and ground up into little snacks. Unlike most Gnome crunchies, these can only be made from Gnome Sugar. They smell amazing and taste delicious. Consuming Chocchip Crunchies will provide a boost to a Pawn's Recreation.</description>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/ChocchipCrunchies</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.4</drawSize>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.25</DeteriorationRate>
+      <MarketValue>24</MarketValue>
+      <Mass>0.3</Mass>
+      <WorkToMake>450</WorkToMake>
+      <Nutrition>0.2</Nutrition>
+    </statBases>
+	<stackLimit Inherit="False">150</stackLimit>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>Processed</foodType>
+      <joy>0.15</joy>
+      <joyKind>TSP_ST_EatCrunchiesChocolate</joyKind>
+	  <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+	  <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HedCrunchy</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<tradeTags>
+		<li>GnomeDessert</li>
+		<li>Crunchies</li>
+	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="MealBase">
+    <defName>ToadCrunchies</defName>
+    <label>Toad Crunchies</label>
+    <description>When something is "crunchy", it refers to foodstuff that makes a muffled grinding (crunching) sound when chewed or pressed. A crunchy food will provide sustained, granular resistence to being chewed. "Crunchies" refer to a baked good, cracker, or other such pastry that is mass produced, consumed in handfuls, and intended to be crunched. They are often sweet. \n \n These crunchies, a Gnome delicacy, are derived from the detachable limbs of the Regenerative Toad and sugar, baked until hard and dry, and ground up into little snacks. They smell amazing and taste delicious. Consuming Toad Crunchies will provide a boost to a Pawn's Recreation.</description>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/ToadCrunchies</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.15</drawSize>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.25</DeteriorationRate>
+      <MarketValue>24</MarketValue>
+      <Mass>0.3</Mass>
+      <WorkToMake>450</WorkToMake>
+      <Nutrition>0.25</Nutrition>
+    </statBases>
+	<stackLimit>150</stackLimit>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <foodType>Processed, Meat, CarnivoreAnimal, CarnivoreAnimalStrict</foodType>
+      <joy>0.15</joy>
+      <joyKind>TSP_ST_EatCrunchiesFrog</joyKind>
+	  <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+	  <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HedCrunchy</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<tradeTags>
+		<li>GnomeDessert</li>
+		<li>Crunchies</li>
+	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>TSP_ST_WormCrunchiesRaw</defName>
+    <label>Worm Crunchies mix</label>
+    <description>"Crunchies" refer to a baked good, cracker, or other such pastry that is mass produced, consumed in handfuls, and intended to be crunched. They are often sweet. This crunchies mix is made out of worms and baked goods. It has been dried on a baking sheet and it awaits being ground up in a Grinder.</description>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/WormCrunchiesRaw</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.25</DeteriorationRate>
+      <MarketValue>4</MarketValue>
+      <Mass>0.5</Mass>
+      <WorkToMake>450</WorkToMake>
+      <Nutrition>0.8</Nutrition>
+    </statBases>
+	<stackLimit Inherit="False">150</stackLimit>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+	<comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>0.7</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>TSP_ST_ChocchipCrunchiesRaw</defName>
+    <label>Chocchip Crunchies mix</label>
+    <description>"Crunchies" refer to a baked good, cracker, or other such pastry that is mass produced, consumed in handfuls, and intended to be crunched. They are often sweet. This crunchies mix is made out of chocolate and Gnome Sugar. It has been dried up on a baking sheet and it awaits being ground up in a Grinder.</description>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/ChocchipCrunchiesRaw</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.25</DeteriorationRate>
+      <MarketValue>4</MarketValue>
+      <Mass>0.5</Mass>
+      <WorkToMake>450</WorkToMake>
+    </statBases>
+	<stackLimit Inherit="False">150</stackLimit>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+	<comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>0.7</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>TSP_ST_ToadCrunchiesRaw</defName>
+    <label>Toad Crunchies mix</label>
+    <description>"Crunchies" refer to a baked good, cracker, or other such pastry that is mass produced, consumed in handfuls, and intended to be crunched. They are often sweet. This crunchies mix is comprised of detachable limbs of the Regeneration Toad and baked goods. It has been dried up and it awaits being ground up in a Grinder.</description>
+    <graphicData>
+      <texPath>Things/Items/GnomeFood/ToadCrunchiesRaw</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.25</DeteriorationRate>
+      <MarketValue>4</MarketValue>
+      <Mass>0.5</Mass>
+      <WorkToMake>450</WorkToMake>
+    </statBases>
+	<stackLimit>150</stackLimit>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+	<comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>0.7</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

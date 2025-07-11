@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <FactionDef ParentName="ST_HumanFactionBase">
+    <defName>Jeubscalon</defName>
+    <label>Jeub Hive</label>
+    <description>A Jeub hive. The first known High Jeub to evolve was named Snaff. Snaff came from Rata Jeub, the original home planet of the Jeub species; Snaff is a title which is now borne by every High Jeub ruler. All High Jeubs in the galaxy are his descendents and as the only semi-sane group of Jeubs, they command the non-sapient Jeubs as eusocial servants.</description>
+    <pawnsPlural>Jeubs</pawnsPlural>
+    <settlementGenerationWeight>0.88</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+	<maxConfigurableAtWorldCreation>999</maxConfigurableAtWorldCreation>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canStageAttacks>true</canStageAttacks>
+	<rescueesCanJoin>true</rescueesCanJoin>
+    <factionIconPath>World/Jeubscalon/JeubSettlementLogo</factionIconPath>
+	<settlementTexturePath>World/Jeubscalon/JeubSettlementLogo</settlementTexturePath>
+    <colorSpectrum>
+		<li>(127, 42, 255)</li>
+		<!-- <li>(0.5, 0.001, 0.5)</li> -->
+    </colorSpectrum>
+	<basicMemberKind>PlayerJeub</basicMemberKind>
+	<allowedCultures>
+		<li>ST_JeubCulture</li>
+	</allowedCultures>
+    <requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HighLife</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">STJeubOrigin</li>
+    </requiredMemes>
+	<disallowedMemes>
+		<!-- If you have the Mod -->
+		<li MayRequire="llunak.MorePrecepts">Pacifism</li>
+		<li MayRequire="Qux.factionhippie">PeaceLove</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Vegan</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Republic</li>
+		<li MayRequire="Zezz.Altrumeme">Altruism</li>
+		<li MayRequire="Sarg.AlphaMemes">AM_NonViolence</li>
+		<li MayRequire="Ludeon.RimwWorld.Ideology">SZ_Structure_CultureQiYuan</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Corporate</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HAR_Xenophilia</li>
+	</disallowedMemes>
+	<disallowedPrecepts>
+		<!-- Issues like slavery are also covered by the Jeub Cult Structure -->
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Honorable</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Acceptable</li>
+	</disallowedPrecepts>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Leather_Jeub</li>
+        <li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
+        <li>Plasteel</li>
+      </thingDefs>
+    </apparelStuffFilter>
+	<leaderTitle>Snaff</leaderTitle>
+    <fixedName>Jeubscalon Hive</fixedName>
+    <settlementNameMaker>JeubSettlementName</settlementNameMaker>
+    <techLevel>Medieval</techLevel>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>JeubBackstory</li>
+			</categories>
+		</li>
+    </backstoryFilters>
+    <!--<geneticVariance>0</geneticVariance> -->
+    <caravanTraderKinds>
+      <li>Caravan_Neolithic_BulkGoods</li>
+      <li>Caravan_Neolithic_WarMerchant</li>
+	  <li>WW_Caravan_Outlander_Drugdealer</li>
+	  <li MayRequire="zhrocks11.letstrade">Caravan_Outlander_Drugs</li>
+	  <li MayRequire="zhrocks11.letstrade">Caravan_Neolithic_Odd</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>WW_Visitor_Outlander_Drugdealer</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Neolithic_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-999</min>
+      <max>999</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+		<li>(0,150)</li>
+        <li>(70,900)</li>
+        <li>(400,1000)</li>
+        <li>(900,1500)</li>
+        <li>(10000,11000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li>
+        <!--Constant 1 at all points levels-->
+      </points>
+    </raidCommonalityFromPointsCurve>
+		<xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+			<xenotypeChances MayRequire="Ludeon.RimWorld.Biotech">
+				<BEWH_DPKhorne MayRequire="phonicmas.40kgenes,Ludeon.RimWorld.Biotech">0.01</BEWH_DPKhorne>
+				<BEWH_KhorneMarine MayRequire="phonicmas.40kgenes,Ludeon.RimWorld.Biotech">0.01</BEWH_KhorneMarine>
+				<BEWH_KhorneCultist MayRequire="phonicmas.40kgenes,Ludeon.RimWorld.Biotech">0.02</BEWH_KhorneCultist>
+				<BEWH_NurgleCultist MayRequire="phonicmas.40kgenes,Ludeon.RimWorld.Biotech">0.02</BEWH_NurgleCultist>
+			</xenotypeChances>
+			<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+		</xenotypeSet>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+		<commonality>100</commonality>
+        <options>
+			<PlayerJeub>150</PlayerJeub>
+			<Snaff_HighKing>25</Snaff_HighKing>
+			<Jeub>400</Jeub>
+			<Bat MayRequire="zal.witchinghour">5</Bat>
+			<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">40</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+			<FE_InfectorMan MayRequire="ludeon.rimworld.anomaly,hailuan.flesherode">5</FE_InfectorMan>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+		<commonality>100</commonality>
+        <options>
+			<PlayerJeub>100</PlayerJeub>
+			<Snaff_HighKing>15</Snaff_HighKing>
+			<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">1</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+			<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">1.54</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+			<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">1</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
+			<FE_InfectorMan MayRequire="ludeon.rimworld.anomaly,hailuan.flesherode">5</FE_InfectorMan>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+		<commonality>100</commonality>
+        <traders>
+          <JeubTrader>1</JeubTrader>
+        </traders>
+        <carriers>
+			<Jeub>999</Jeub>
+			<Muffalo>0.001</Muffalo>
+			<Dromedary>0.001</Dromedary>
+			<Elephant>50</Elephant>
+        </carriers>
+        <guards>
+			<PlayerJeub>15</PlayerJeub>
+			<Jeub>400</Jeub>
+			<Snaff_HighKing>1</Snaff_HighKing>
+			<Bat MayRequire="zal.witchinghour">5</Bat>
+			<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">1</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+			<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">1.54</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+			<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">1</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
+			<FE_InfectorMan MayRequire="ludeon.rimworld.anomaly,hailuan.flesherode">1</FE_InfectorMan>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+		<commonality>90</commonality>
+        <options>
+			<JeubCaller>100</JeubCaller>
+			<PlayerJeub>100</PlayerJeub>
+			<Jeub>500</Jeub>
+			<Snaff_HighKing>20</Snaff_HighKing>
+			<Bat MayRequire="zal.witchinghour">1</Bat>
+			<FE_InfectorMan MayRequire="ludeon.rimworld.anomaly,hailuan.flesherode">5</FE_InfectorMan>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+		<commonality>10</commonality>
+        <options>
+			<JeubCaller>100</JeubCaller>
+			<PlayerJeub>1</PlayerJeub>
+			<Jeub>50</Jeub>
+			<Snaff_HighKing>2</Snaff_HighKing>
+			<Bat MayRequire="zal.witchinghour">51</Bat>
+			<FE_InfectorMan MayRequire="ludeon.rimworld.anomaly,hailuan.flesherode">5</FE_InfectorMan>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+		<commonality>100</commonality>
+        <options>
+			<JeubCaller>10</JeubCaller>
+			<Jeub>1000</Jeub>
+			<Snaff_HighKing>1</Snaff_HighKing>
+			<Bat MayRequire="zal.witchinghour">25</Bat>
+			<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">25</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+			<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">25</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+			<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">25</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
+			<FE_InfectorMan MayRequire="ludeon.rimworld.anomaly,hailuan.flesherode">5</FE_InfectorMan>
+        </options>
+      </li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Hunters</kindDef>
+			<commonality>1</commonality>
+			<options>
+				<JeubCaller>10</JeubCaller>
+				<Jeub>190</Jeub>
+				<Bat MayRequire="zal.witchinghour">5</Bat>
+				<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">5</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+				<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">5</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+				<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">5</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
+				<FE_InfectorMan MayRequire="ludeon.rimworld.anomaly,hailuan.flesherode">5</FE_InfectorMan>
+			</options>
+		</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Loggers</kindDef>
+			<commonality>100</commonality>
+			<options>
+				<JeubCaller>10</JeubCaller>
+				<Jeub>190</Jeub>
+				<Bat MayRequire="zal.witchinghour">5</Bat>
+				<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">5</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+				<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">5</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+				<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">5</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
+			</options>
+		</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Farmers</kindDef>
+			<commonality>100</commonality>
+			<options>
+				<JeubCaller>10</JeubCaller>
+				<Jeub>190</Jeub>
+				<Bat MayRequire="zal.witchinghour">5</Bat>
+				<TSP_AV_XenotypeFlavor_Slavant_Jeub MayRequire="veltaris.xenos,ludeon.rimworld.biotech">5</TSP_AV_XenotypeFlavor_Slavant_Jeub>
+				<TSP_AG_XenotypeFlavor_Mycomorph_Jeub MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">5</TSP_AG_XenotypeFlavor_Mycomorph_Jeub>
+				<TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub MayRequire="turnovus.biotech.integratedgenes,ludeon.rimworld.biotech">5</TSP_TURNOVUS_XenotypeFlavor_Purslave_Jeub>
+			</options>
+		</li>
+		<li MayRequire="Ludeon.Rimworld.Ideology">
+			<kindDef>Miners</kindDef>
+			<commonality>300</commonality>
+			<options>
+				<JeubCaller>100</JeubCaller>
+				<Jeub>999</Jeub>
+				<FE_InfectorMan MayRequire="ludeon.rimworld.anomaly,hailuan.flesherode">5</FE_InfectorMan>
+			</options>
+		</li>
+    </pawnGroupMakers>
+	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+    <fixedLeaderKinds>
+      <li>Snaff_HighKing</li>
+    </fixedLeaderKinds>
+	<modExtensions>
+		<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
+			<canSendDeserters MayRequire="oskarpotocki.vfe.empire">true</canSendDeserters>
+			<deserterKind MayRequire="oskarpotocki.vfe.empire">TSP_ST_VFEE_JeubBush_Deserter</deserterKind> <!-- Please clap -->
+		</li>
+		<!--
+		<li Class="JecsTools.FactionSettings">
+			<entrySoundDef>Snaffs_Workshop</entrySoundDef>
+		</li>
+		-->
+	</modExtensions>
+  </FactionDef>
+</Defs>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<TraderKindDef>
+		<defName>TSP_ST_MMT_Caravan_LivingVehicle</defName>
+		<label>dealership</label>
+		<commonality>0.4</commonality>
+		<stockGenerators>
+			<!-- Resources -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>17500~22000</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>14~30</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentSpacer</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>5~6</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Neutroamine</thingDef>
+				<countRange>1~4</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Chemfuel</thingDef>
+				<countRange>300~3500</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Meat_VAEAF_CarFamily</thingDef>
+				<countRange>1300~2500</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>VAEAP_Leather_Car</thingDef>
+				<countRange>2000~4500</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="rimofmadness.callofcthulhu.factions">
+				<thingDef MayRequire="rimofmadness.callofcthulhu.factions">ROM_Gun_Flaregun</thingDef>
+				<countRange MayRequire="rimofmadness.callofcthulhu.factions">0~7</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+				<thingDef MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarWheel</thingDef>
+				<countRange MayRequire="oskarpotocki.vanillavehiclesexpanded">4~45</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+				<thingDef MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarAlternator</thingDef>
+				<countRange MayRequire="oskarpotocki.vanillavehiclesexpanded">0~2</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+				<thingDef MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_EngineBlock</thingDef>
+				<countRange MayRequire="oskarpotocki.vanillavehiclesexpanded">-2~1</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+				<thingDef MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarFuelTank</thingDef>
+				<countRange MayRequire="oskarpotocki.vanillavehiclesexpanded">1~1</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+				<thingDef MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarWiring</thingDef>
+				<countRange MayRequire="oskarpotocki.vanillavehiclesexpanded">0~11</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+				<thingDef MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarBattery</thingDef>
+				<countRange MayRequire="oskarpotocki.vanillavehiclesexpanded">0~4</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+				<thingDef MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarSuspension</thingDef>
+				<countRange MayRequire="oskarpotocki.vanillavehiclesexpanded">0~2</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+				<thingDef MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarExhaust</thingDef>
+				<countRange MayRequire="oskarpotocki.vanillavehiclesexpanded">1~1</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+				<thingDef MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarRadiator</thingDef>
+				<countRange MayRequire="oskarpotocki.vanillavehiclesexpanded">0~1</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+				<thingDef MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarTransmission</thingDef>
+				<countRange MayRequire="oskarpotocki.vanillavehiclesexpanded">0~1</countRange>
+			</li>
+			
+			<!-- Animals -->
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.99</maxWildness>
+				<tradeTagsSell>
+					<li>AnimalVehicle</li>
+				</tradeTagsSell>
+				<tradeTagsBuy>
+					<li>AnimalVehicle</li>
+				</tradeTagsBuy>
+				<kindCountRange>1~13</kindCountRange>
+				<countRange>1~7</countRange>
+			</li>
+
+			<!-- Buying -->
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shard</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Bioferrite</thingDef>
+			</li>
+			<li Class="StockGenerator_BuyExpensiveSimple"></li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>HiTechArmor</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>ST_GnomeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>ST_Poison</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DreadedLaced_CringeWonka_Candy</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>StorytimeDrugs</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>StorytimeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>EggNog</tag>
+			</li>
+
+		</stockGenerators>
+	</TraderKindDef>
+</Defs>

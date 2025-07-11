@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+	<AlienRace.AlienBackstoryDef>
+		<defName>TSP_ST_Backstory_CabbagePatchKid</defName>
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<title>Enlightened Cabbage Farmer</title>
+		<titleShort>cabbage farmer</titleShort>
+		<description>[PAWN_nameDef] grew up as a farmer and developed a fascination for the cabbage plant. When [PAWN_nameDef] accidentally discovered the Cabbage of Power, [PAWN_possessive] life changed forever.</description>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>PlantWork</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Plants>4</Plants>
+			<Crafting>2</Crafting>
+			<Cooking>1</Cooking>
+		</skillGains>
+		<!--
+		<forcedTraitsChance>
+			<li>
+				<options>
+					<li>
+						<defName Degree="1">ShootingAccuracy</defName>
+					</li>
+				</options>
+				<change>10</change>
+			</li>
+			<li>
+				<options>
+					<li>
+						<defName>ST_FillerDummy_Trait</defName>
+					</li>
+				</options>
+				<chance>0</chance>
+			</li>
+		</forcedTraitsChance>
+		-->
+		<spawnCategories>
+			<li>Cabbage</li>
+		</spawnCategories>
+		<linkedBackstory>TSP_ST_Backstory_CabbagePatchGrenadier</linkedBackstory>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>TSP_ST_Backstory_CabbagePatchGrenadier</defName>
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Adulthood</slot>
+		<title>Cabbage of Power Grenadier</title>
+		<titleShort>cabbage grenadier</titleShort>
+		<description>[PAWN_nameDef] has mastered the art of lobbing Cabbage of Power grenades. [PAWN_possessive] ability to throw grenades with deadly precision is unmatched, though it takes [PAWN_possessive] a bit longer to aim. [PAWN_pronoun] is considered a special forces warrior for [PAWN_possessive] Faction. To hone [PAWN_possessive] power, [PAWN_pronoun] will not distract [PAWN_objective]self with any physical labor, nor perform most menial tasks.</description>
+		<linkedBackstory>TSP_ST_Backstory_CabbagePatchKid</linkedBackstory>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>PlantWork</li>
+		</requiredWorkTags>
+		<skillGains>
+			<Shooting>14</Shooting>
+			<Plants>5</Plants>
+			<Cooking>1</Cooking>
+		</skillGains>
+		<forcedTraitsChance>
+			<li>
+				<options>
+					<li>
+						<defName Degree="1">ShootingAccuracy</defName>
+					</li>
+				</options>
+				<chance>100</chance>
+			</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+		</forcedTraitsChance>
+		<spawnCategories>
+			<li>Cabbage</li>
+		</spawnCategories>
+		<workDisables>
+			<li>ManualDumb</li>
+			<li>Animals</li>
+			<!-- <li>Tailoring</li> -->
+			<li>Mining</li>
+			<!-- <li>CraftingSpecific</li> -->
+			<li>Constructing</li>
+		</workDisables>
+	</AlienRace.AlienBackstoryDef>
+</Defs>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="BaseSkeleton">
+    <defName>ST_GunpowderSkeleton</defName>
+    <label>Gunpowder Skeleton Pirate</label>
+    <description>Once a pirate, this skeleton is part of a pirate crew that willingly gave up its members' souls in exchange for eternal life. Today, they wander the Rim in search of treasure. This one is carrying a big red barrel packed with black powder! It is best to kill him before he lights the fuse!</description>
+    <statBases>
+      <MoveSpeed>3.1</MoveSpeed>
+      <MarketValue>250</MarketValue>
+	  <Flammability>3</Flammability>
+	  <MinimumContainmentStrength MayRequire="ludeon.rimworld.anomaly">30</MinimumContainmentStrength>
+    </statBases>
+    <tools>
+      <li>
+        <label>left hand</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hand</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+		<label>jawbone</label>
+        <capacities>
+			<li>Bite</li>
+		  <!-- <li>Burn</li> -->
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <race>
+	  <intelligence>ToolUser</intelligence>
+      <body>TSP_ST_SkeletalMan</body>
+		<deathAction>
+			<workerClass>DeathActionWorker_BigExplosion</workerClass>
+		</deathAction>
+      <baseBodySize>1</baseBodySize>
+      <baseHungerRate>0</baseHungerRate>
+      <baseHealthScale>0.5</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseSkeletonKind">
+    <defName>ST_GunpowderSkeleton</defName>
+    <label>Gunpowder Skeleton Pirate</label>
+    <race>ST_GunpowderSkeleton</race>
+    <combatPower>100</combatPower>
+	<canArriveManhunter>false</canArriveManhunter>
+    <lifeStages>
+      <li>
+        <label>Gunpowder Skeleton Pirate</label>
+        <labelPlural>Gunpowder Skeleton Pirates</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/Skeletons/GunSkeleton/GunSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Other/Skeletons/GunSkeleton/GunSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li MayRequire="ludeon.rimworld.anomaly">
+        <label>Gunpowder Skeleton Pirate</label>
+        <labelPlural>Gunpowder Skeleton Pirates</labelPlural>
+        <bodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Other/Skeletons/GunSkeleton/GunSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Other/Skeletons/GunSkeleton/GunSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+	<weaponMoney>300~600</weaponMoney>
+	<weaponTags>
+		<li>SkeletonBomb</li>
+    </weaponTags>
+    <inventoryOptions>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>CursedCoin</thingDef>
+          <countRange>1~4</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  
+    <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_BarrelBomb</defName>
+    <label>barrel bomb</label>
+    <graphicData>
+      <texPath>Things/Items/PirateWeapons/SkeletonBomb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <explosionRadius>3</explosionRadius>
+      <damageAmountBase>100</damageAmountBase>
+      <explosionDelay>30</explosionDelay>
+      <speed>30</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeapon">
+    <defName>ST_BarrelBomb</defName>
+    <label>barrel bomb</label>
+    <weaponTags>
+       <li>SkeletonBomb</li>
+    </weaponTags>
+    <description>A bomb full of gunpowder.</description>
+    <tradeability>None</tradeability>
+    <graphicData>
+      <texPath>Things/Items/PirateWeapons/SkeletonBomb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <destroyOnDrop>True</destroyOnDrop>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <Mass>8</Mass>
+      <MarketValue>300</MarketValue>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.9</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <forcedMissRadius>0.5</forcedMissRadius>
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_BarrelBomb</defaultProjectile>
+        <warmupTime>4</warmupTime>
+        <range>4.5</range>
+        <burstShotCount>1</burstShotCount>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+      </li>
+    </verbs>
+  </ThingDef>
+  
+</Defs>

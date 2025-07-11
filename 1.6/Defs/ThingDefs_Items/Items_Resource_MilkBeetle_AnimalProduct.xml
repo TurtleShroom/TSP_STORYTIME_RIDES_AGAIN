@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<!-- Insect Milk -->
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>VFEI_InsectMilk</defName>
+		<label>insect milk</label>
+		<description>Milk from a milk beetle. It is thick, rich, and delicious.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/MilkTypes/VFEI_InsectMilk</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stackLimit>250</stackLimit>
+		<statBases>
+			<MarketValue>3.1</MarketValue>
+			<Mass>0.045</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>14</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<foodType>AnimalProduct, Fluid</foodType>
+		</ingestible>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<modExtensions>
+			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+				<water>0.5</water>
+				<UseForWashing>true</UseForWashing>
+				<SeekForThirst>true</SeekForThirst>
+			</li>
+		</modExtensions>
+	</ThingDef>
+  
+	<ThingDef ParentName="EggFertBase">
+		<defName>TSP_VFEI1_MilkBeetle_EggFertilized</defName>
+		<label>milk beetle egg (fert.)</label>
+		<description>A fertilized milk beetle egg. If all goes well, it should hatch into a milk beetle. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+			<color>(183,185,153)</color>
+			<!-- <graphicClass>Graphic_Single</graphicClass> -->
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>4</hatcherDaystoHatch>
+				<hatcherPawn>VFEI1_VatGrown_MilkBeetle</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

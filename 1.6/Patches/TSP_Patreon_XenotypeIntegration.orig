@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/xenotypeSet</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet Inherit="False"></xenotypeSet>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/xenotypeSet</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeChances Inherit="False"></xenotypeChances>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+			<value>
+				<BEWH_TzeentchMarine MayRequire="phonicmas.40kgenes">0.02</BEWH_TzeentchMarine>
+				<BEWH_NurgleMarine MayRequire="phonicmas.40kgenes">0.02</BEWH_NurgleMarine>
+				<BEWH_SlaaneshMarine MayRequire="phonicmas.40kgenes">0.02</BEWH_SlaaneshMarine>
+				<BEWH_KhorneMarine MayRequire="phonicmas.40kgenes">0.02</BEWH_KhorneMarine>
+				<BEWH_ChaosMarine MayRequire="phonicmas.40kgenes">0.012</BEWH_ChaosMarine>
+				<BEWH_DPKhorne MayRequire="phonicmas.40kgenes">0.01</BEWH_DPKhorne>
+				<BEWH_DPNurgle MayRequire="phonicmas.40kgenes">0.01</BEWH_DPNurgle>
+				<BEWH_DPTzeentch MayRequire="phonicmas.40kgenes">0.01</BEWH_DPTzeentch>
+				<BEWH_DPSlaanesh MayRequire="phonicmas.40kgenes">0.001</BEWH_DPSlaanesh>
+				<BEWH_TzeentchCultist MayRequire="phonicmas.40kgenes">0.051</BEWH_TzeentchCultist>
+				<BEWH_NurgleCultist MayRequire="phonicmas.40kgenes">0.051</BEWH_NurgleCultist>
+				<BEWH_SlaaneshCultist MayRequire="phonicmas.40kgenes">0.051</BEWH_SlaaneshCultist>
+				<BEWH_KhorneCultist MayRequire="phonicmas.40kgenes">0.051</BEWH_KhorneCultist>
+				<BEWH_ChaosCultist MayRequire="phonicmas.40kgenes">0.25</BEWH_ChaosCultist>
+				<OE_Tortle MayRequire="obsidiaexpansion.xenos.tortle">0.1</OE_Tortle>
+				<DV_Bogleg MayRequire="det.boglegs">0.25</DV_Bogleg>
+				<MorrowRim_AshlanderXenotype MayRequire="sirmashedpotato.morrowrim.ashlanderxenotype,ludeon.rimworld.biotech">0.021</MorrowRim_AshlanderXenotype>
+				<Weezey MayRequire="TSP.Isengriff.Storytime">0.18</Weezey>
+				<Tallhuman MayRequire="TSP.Isengriff.Storytime">0.08</Tallhuman>
+				<Neco MayRequire="neco.genes">0.04</Neco>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

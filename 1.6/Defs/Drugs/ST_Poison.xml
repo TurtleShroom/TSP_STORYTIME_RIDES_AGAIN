@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>ST_PoisonExtract</defName>
+		<label>toxin extract</label>
+		<description>Concentrated toxin extract synthesized from a toxic plant or animal. Certain groups apply this to weapons or ammunition for use against their enemies. Do not drink it!</description>
+		<graphicData>
+		  <texPath>Things/Items/Resources/Poison</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>4</MarketValue>
+		  <Mass>0.005</Mass>
+		  <Nutrition>0.03</Nutrition>
+		</statBases>
+		<thingCategories>
+			<li>Drugs</li>
+			<!-- <li>ST_Poison</li> -->
+		</thingCategories>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>525</stackLimit>
+		<tickerType>Rare</tickerType>
+		<burnableByRecipe>false</burnableByRecipe>
+		<allowedArchonexusCount>1000</allowedArchonexusCount>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<foodType>Liquor</foodType>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<optimalityOffsetHumanlikes>-999</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-999</optimalityOffsetFeedingAnimals>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>ToxicBuildup</hediffDef>
+					<severity>0.5</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>ST_Poison</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>ST_GoblinPoison</defName>
+		<label>goblin poison</label>
+		<description>A special type of poison cooked up by some sadistic goblin. Designed to inflict as much pain as possible, it also has a greater than normal tendency to cause permanent damage to its victims.</description>
+		<graphicData>
+		  <texPath>Things/Items/Resources/GoblinDrugs/GoblinPoison</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>8.5</MarketValue>
+		  <Mass>0.01</Mass>
+		</statBases>
+		<thingCategories>
+		  <li>Drugs</li>
+		</thingCategories>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>25</stackLimit>
+		<tickerType>Rare</tickerType>
+		<burnableByRecipe>false</burnableByRecipe>
+		<allowedArchonexusCount>1000</allowedArchonexusCount>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<foodType>Liquor</foodType>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<optimalityOffsetHumanlikes>-999</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-999</optimalityOffsetFeedingAnimals>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>ST_GoblinPoisonBuildup</hediffDef>
+				<severity>0.5</severity>
+				<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients">
+				<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>ST_Poison</li>
+			<li>GoblinDrugs</li>
+			<li>StorytimeDrugs</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>

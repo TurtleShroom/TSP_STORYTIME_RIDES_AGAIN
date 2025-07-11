@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- This code was provided by the user 'I Exist', and then butchered and simplified on Dub's Discord chat room by Kyoutaigo -->
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Chocolate"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Chocolate"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">PadCandy</li>
+						<li MayRequire="halloweenparade.velcroboy333">HalloweenCandy</li>
+						<li MayRequire="halloweenparade.velcroboy333">ObakeMarshmallow</li>
+						<li MayRequire="halloweenparade.velcroboy333">PumpkinCookie</li>
+						<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
+						<li MayRequire="neronix17.halloween">O21_Halloween_KitKat</li>
+						<li MayRequire="neronix17.halloween">O21_Halloween_MandM</li>
+						<li MayRequire="zal.witchinghour">Candycorn</li>
+						<li MayRequire="zal.witchinghour">Candiedapple</li>
+						<li MayRequire="zal.witchinghour">Pumpkinbasket</li>
+						<li MayRequire="zal.witchinghour">Smirties</li>
+						<li MayRequire="zal.witchinghour">Waxylips</li>
+						<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Butterscotch</li>
+						<li MayRequire="geodesicdragon.irnbru">DeepFriedChocolate</li>
+						<!--
+						<li MayRequire="thatbartguy.candy">WhiteChocolate</li>
+						<li MayRequire="thatbartguy.candy">CaneCandy</li>
+						-->
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CaneCandy</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">WhiteChocolate</li>
+						<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+						<li MayRequire="argon.expandedmaterials.xmas">EM_CandyCanes</li>
+						<li MayRequire="lat.rimstro">RS_chocomilk</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Chocolate"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">PadCandy</li>
+						<li MayRequire="halloweenparade.velcroboy333">HalloweenCandy</li>
+						<li MayRequire="halloweenparade.velcroboy333">ObakeMarshmallow</li>
+						<li MayRequire="halloweenparade.velcroboy333">PumpkinCookie</li>
+						<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
+						<li MayRequire="neronix17.halloween">O21_Halloween_KitKat</li>
+						<li MayRequire="neronix17.halloween">O21_Halloween_MandM</li>
+						<li MayRequire="zal.witchinghour">Candycorn</li>
+						<li MayRequire="zal.witchinghour">Candiedapple</li>
+						<li MayRequire="zal.witchinghour">Pumpkinbasket</li>
+						<li MayRequire="zal.witchinghour">Smirties</li>
+						<li MayRequire="zal.witchinghour">Waxylips</li>
+						<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Butterscotch</li>
+						<li MayRequire="geodesicdragon.irnbru">DeepFriedChocolate</li>
+						<!--
+						<li MayRequire="thatbartguy.candy">WhiteChocolate</li>
+						<li MayRequire="thatbartguy.candy">CaneCandy</li>
+						-->
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CaneCandy</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">WhiteChocolate</li>
+						<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+						<li MayRequire="argon.expandedmaterials.xmas">EM_CandyCanes</li>
+						<li MayRequire="lat.rimstro">RS_chocomilk</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Chocolate"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">PadCandy</li>
+						<li MayRequire="halloweenparade.velcroboy333">HalloweenCandy</li>
+						<li MayRequire="halloweenparade.velcroboy333">ObakeMarshmallow</li>
+						<li MayRequire="halloweenparade.velcroboy333">PumpkinCookie</li>
+						<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
+						<li MayRequire="neronix17.halloween">O21_Halloween_KitKat</li>
+						<li MayRequire="neronix17.halloween">O21_Halloween_MandM</li>
+						<li MayRequire="zal.witchinghour">Candycorn</li>
+						<li MayRequire="zal.witchinghour">Candiedapple</li>
+						<li MayRequire="zal.witchinghour">Pumpkinbasket</li>
+						<li MayRequire="zal.witchinghour">Smirties</li>
+						<li MayRequire="zal.witchinghour">Waxylips</li>
+						<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Butterscotch</li>
+						<li MayRequire="geodesicdragon.irnbru">DeepFriedChocolate</li>
+						<!--
+						<li MayRequire="thatbartguy.candy">WhiteChocolate</li>
+						<li MayRequire="thatbartguy.candy">CaneCandy</li>
+						-->
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CaneCandy</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">WhiteChocolate</li>
+						<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+						<li MayRequire="lat.rimstro">RS_chocomilk</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="IndustrialChocolateGenerator"]</xpath>
+		<!-- If it does, add this. -->
+		<success>Always</success>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName = "chocolateGenerator" or defName = "IndustrialChocolateGenerator"]/comps/li/fuelFilter/thingDefs</xpath>
+			<value>
+				<li MayRequire="halloweenparade.velcroboy333">HalloweenCandy</li>
+				<li MayRequire="halloweenparade.velcroboy333">ObakeMarshmallow</li>
+				<li MayRequire="halloweenparade.velcroboy333">PumpkinCookie</li>
+				<li MayRequire="TSP.Isengriff.Storytime">PadCandy</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_GnomeSugar</li>
+				<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
+				<li MayRequire="neronix17.halloween">O21_Halloween_KitKat</li>
+				<li MayRequire="neronix17.halloween">O21_Halloween_MandM</li>
+				<li MayRequire="zal.witchinghour">Candycorn</li>
+				<li MayRequire="zal.witchinghour">Candiedapple</li>
+				<li MayRequire="zal.witchinghour">Pumpkinbasket</li>
+				<li MayRequire="zal.witchinghour">Smirties</li>
+				<li MayRequire="zal.witchinghour">Waxylips</li>
+				<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Butterscotch</li>
+				<li MayRequire="geodesicdragon.irnbru">DeepFriedChocolate</li>
+				<!--
+				<li MayRequire="thatbartguy.candy">WhiteChocolate</li>
+				<li MayRequire="thatbartguy.candy">CaneCandy</li>
+				-->
+				<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CaneCandy</li>
+				<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">WhiteChocolate</li>
+				<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+				<li MayRequire="argon.expandedmaterials.xmas">EM_CandyCanes</li>
+				<li MayRequire="lat.rimstro">RS_chocomilk</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/RecipeDef[defName="WonkaRecipe_CompoundGod"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<success>Always</success>
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName = "Recipe_ChocolatetoChocolate" or defName = "Recipe_ChocoGo" or defName = "Recipe_ChocoYo" or defName = "Recipe_ChocoSia" or defName = "Recipe_ChocoWake" or defName = "Recipe_ChocoLeaf" or defName = "Recipe_ChocolateChocofuel" or defName = "Recipe_ChocolatetoChocolate" or defName = "Recipe_ChemfuelChocolateFuel" or defName = "Recipe_Cancer_Bar" or defName = "WonkaStatueBase" or defName = "WonkaRecipe_CompoundGod"]/allowMixingIngredients</xpath>
+			<value>
+				<allowMixingIngredients>true</allowMixingIngredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/RecipeDef[defName="Recipe_Tempered1"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<success>Always</success>
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName = "Recipe_Tempered1" or defName = "Recipe_Tempered2" or defName = "Recipe_Compound1" or defName = "Recipe_Tempered2" or defName = "Recipe_Compound2"]/allowMixingIngredients</xpath>
+			<value>
+				<allowMixingIngredients>true</allowMixingIngredients>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/RecipeDef[defName="WonkaStatueBase"]/allowMixingIngredients</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<success>Always</success>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="WonkaStatueBase"]</xpath>
+			<value>
+				<allowMixingIngredients>true</allowMixingIngredients>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="O21_Halloween_CandyCorn"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<!-- <success>Always</success> -->
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+			<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="RawCorn"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
+						<li MayRequire="zal.witchinghour">Candycorn</li>
+						<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+						<li MayRequire="dajian.chiteaditional.expanded">WorkedRawMaize</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="RawCorn"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
+						<li MayRequire="zal.witchinghour">Candycorn</li>
+						<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+						<li MayRequire="dajian.chiteaditional.expanded">WorkedRawMaize</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="O21_Halloween_CandyCorn"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<success>Always</success>
+					<xpath>/Defs/*//ThingDef[text()="RawCorn"]</xpath>
+					<value>
+						<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
+						<li MayRequire="zal.witchinghour">Candycorn</li>
+						<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+						<li MayRequire="dajian.chiteaditional.expanded">WorkedRawMaize</li>
+					</value>
+				</li>
+				<li Class="PatchOperationInsert">
+					<success>Always</success>
+					<xpath>/Defs/*//li[text()="RawCorn"]</xpath>
+					<value>
+						<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
+						<li MayRequire="zal.witchinghour">Candycorn</li>
+						<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+						<li MayRequire="dajian.chiteaditional.expanded">WorkedRawMaize</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ItemProcessor.CombinationDef[defName="WonkaChocolatetoHighQualityChocolate"]</xpath>
+		<!-- If it does, add this. -->
+		<success>Always</success>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ItemProcessor.CombinationDef[defName="WonkaChocolatetoHighQualityChocolate"]/items</xpath>
+			<value>
+				<li MayRequire="halloweenparade.velcroboy333">HalloweenCandy</li>
+				<li MayRequire="halloweenparade.velcroboy333">ObakeMarshmallow</li>
+				<li MayRequire="halloweenparade.velcroboy333">PumpkinCookie</li>
+				<li MayRequire="TSP.Isengriff.Storytime">PadCandy</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_GnomeSugar</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+				<li MayRequire="sarg.alphabiomes">AB_RawSugarFamewort</li>
+				<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
+				<li MayRequire="neronix17.halloween">O21_Halloween_KitKat</li>
+				<li MayRequire="neronix17.halloween">O21_Halloween_MandM</li>
+				<li MayRequire="zal.witchinghour">Candycorn</li>
+				<li MayRequire="zal.witchinghour">Candiedapple</li>
+				<li MayRequire="zal.witchinghour">Pumpkinbasket</li>
+				<li MayRequire="zal.witchinghour">Smirties</li>
+				<li MayRequire="zal.witchinghour">Waxylips</li>
+				<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Butterscotch</li>
+				<li MayRequire="geodesicdragon.irnbru">DeepFriedChocolate</li>
+				<!--
+				<li MayRequire="thatbartguy.candy">WhiteChocolate</li>
+				<li MayRequire="thatbartguy.candy">CaneCandy</li>
+				-->
+				<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CaneCandy</li>
+				<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">WhiteChocolate</li>
+				<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+				<li MayRequire="argon.expandedmaterials.xmas">EM_CandyCanes</li>
+				<li MayRequire="lat.rimstro">RS_chocomilk</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ItemProcessor.ItemAcceptedDef[defName="Wonka_RefinerFirstItem"]</xpath>
+		<!-- If it does, add this. -->
+		<success>Always</success>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ItemProcessor.ItemAcceptedDef[defName="Wonka_RefinerFirstItem"]/items</xpath>
+			<value>
+				<li MayRequire="halloweenparade.velcroboy333">HalloweenCandy</li>
+				<li MayRequire="halloweenparade.velcroboy333">ObakeMarshmallow</li>
+				<li MayRequire="halloweenparade.velcroboy333">PumpkinCookie</li>
+				<li MayRequire="TSP.Isengriff.Storytime">PadCandy</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_GnomeSugar</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+				<li MayRequire="sarg.alphabiomes">AB_RawSugarFamewort</li>
+				<li MayRequire="neronix17.halloween">O21_Halloween_CandyCorn</li>
+				<li MayRequire="neronix17.halloween">O21_Halloween_KitKat</li>
+				<li MayRequire="neronix17.halloween">O21_Halloween_MandM</li>
+				<li MayRequire="zal.witchinghour">Candycorn</li>
+				<li MayRequire="zal.witchinghour">Candiedapple</li>
+				<li MayRequire="zal.witchinghour">Pumpkinbasket</li>
+				<li MayRequire="zal.witchinghour">Smirties</li>
+				<li MayRequire="zal.witchinghour">Waxylips</li>
+				<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Butterscotch</li>
+				<li MayRequire="geodesicdragon.irnbru">DeepFriedChocolate</li>
+				<!--
+				<li MayRequire="thatbartguy.candy">WhiteChocolate</li>
+				<li MayRequire="thatbartguy.candy">CaneCandy</li>
+				-->
+				<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CaneCandy</li>
+				<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">WhiteChocolate</li>
+				<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+				<li MayRequire="argon.expandedmaterials.xmas">EM_CandyCanes</li>
+				<li MayRequire="lat.rimstro">RS_chocomilk</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="VCE_RawSugar"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCE_RawSugar"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="halloweenparade.velcroboy333">HalloweenCandy</li>
+						<li MayRequire="halloweenparade.velcroboy333">ObakeMarshmallow</li>
+						<li MayRequire="halloweenparade.velcroboy333">PumpkinCookie</li>
+						<li MayRequire="zal.witchinghour">Smirties</li>
+						<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+						<li MayRequire="geodesicdragon.irnbru">DeepFriedChocolate</li>
+						<!--
+						<li MayRequire="thatbartguy.candy">WhiteChocolate</li>
+						<li MayRequire="thatbartguy.candy">CaneCandy</li>
+						-->
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CaneCandy</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">WhiteChocolate</li>
+						<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+						<li MayRequire="argon.expandedmaterials.xmas">EM_CandyCanes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_RawSugar"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="halloweenparade.velcroboy333">HalloweenCandy</li>
+						<li MayRequire="halloweenparade.velcroboy333">ObakeMarshmallow</li>
+						<li MayRequire="halloweenparade.velcroboy333">PumpkinCookie</li>
+						<li MayRequire="zal.witchinghour">Smirties</li>
+						<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+						<li MayRequire="geodesicdragon.irnbru">DeepFriedChocolate</li>
+						<!--
+						<li MayRequire="thatbartguy.candy">WhiteChocolate</li>
+						<li MayRequire="thatbartguy.candy">CaneCandy</li>
+						-->
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CaneCandy</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">WhiteChocolate</li>
+						<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+						<li MayRequire="argon.expandedmaterials.xmas">EM_CandyCanes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_RawSugar"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="halloweenparade.velcroboy333">HalloweenCandy</li>
+						<li MayRequire="halloweenparade.velcroboy333">ObakeMarshmallow</li>
+						<li MayRequire="halloweenparade.velcroboy333">PumpkinCookie</li>
+						<li MayRequire="zal.witchinghour">Smirties</li>
+						<li MayRequire="zal.witchinghour">Suspiciouschocolate</li>
+						<!-- <li MayRequire="geodesicdragon.irnbru">DeepFriedChocolate</li> -->
+						<!--
+						<li MayRequire="thatbartguy.candy">WhiteChocolate</li>
+						<li MayRequire="thatbartguy.candy">CaneCandy</li>
+						-->
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CaneCandy</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">WhiteChocolate</li>
+						<li MayRequire="xrushha.spookworld">SW_Sweets</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Cook_RS_chocomilk"]/ingredients/li/filter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Cook_RS_chocomilk"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName = "Cook_RS_Berrymilk"]/ingredients/li/filter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Cook_RS_Berrymilk"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+		
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="RS_chocomilk"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName = "Cook_RS_chocomilk" or defName = "Cook_RS_Berrymilk"]/ingredients/li/filter/disallowedThingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs>
+					<li>RS_LogisticsBox</li>
+					<li>RS_Berrymilk</li>
+					<li>RS_chocomilk</li>
+				</disallowedThingDefs>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>

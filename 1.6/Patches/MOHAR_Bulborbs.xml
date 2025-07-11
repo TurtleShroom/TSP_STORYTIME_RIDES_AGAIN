@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+	<!-- Is this Mod installed? -->
+		<mods>
+			<li>MoHAR framework</li>
+		</mods>
+		<!-- If it is, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/HediffDef[defName=Hediff_RouletteBeanManBuildup]/comps</xpath>
+			<success>Always</success>
+			<value>
+				<li Class="MoharHediffs.HediffCompProperties_HediffRandom">
+					<hediffPool>
+						<!--Common 10-->
+						<li>ST_Bean_Dirt</li>	
+						<li>ST_Bean_Blueberry</li>	
+						<li>ST_Bean_Earwax</li>	
+						<li>ST_Bean_Soap</li>	
+						<li>ST_Bean_TuttiFrutti</li>	
+						<li>ST_Bean_Sausage</li>
+						<li>ST_Bean_Marshmallow</li>	
+						<li>ST_Bean_EggNog_Utility</li>
+						<li>ST_Bean_Vinegar</li>
+						
+						<!--Uncommon 7-->
+						<li>ST_Bean_Burrito_Utility</li>
+						<li>ST_Bean_PadCandy_Utility</li>
+						<li>ST_Bean_Pepsi_Utility</li>			
+						<li>ST_Bean_Grass</li>	
+						<li>ST_Bean_Worm</li>
+						<li>ST_Bean_Vomit</li>
+						<li>ST_Bean_Banana</li>	
+						<li>ST_Bean_Gold</li>
+						
+						<!--Rare 5-->
+						<li>ST_Bean_Bogey</li>
+						<li>ST_Bean_Tongue</li>
+						<li>ST_Bean_Antibiotic</li>
+						
+						<!--Ultra-Rare 3-->
+						<li>ST_Bean_Bean</li>
+					</hediffPool>
+					<weights>
+						<!--Common 10-->
+						<li>10</li>
+						<li>10</li>
+						<li>10</li>					
+						<li>10</li>					
+						<li>10</li>
+						<li>10</li>		
+						<li>10</li>
+						<li>10</li>		
+						<li>10</li>	
+						
+						<!--Uncommon 7-->
+						<li>7</li>
+						<li>7</li>
+						<li>7</li>	
+						<li>7</li>	
+						<li>7</li>
+						<li>7</li>
+						<li>7</li>
+						<li>7</li>
+						
+						<!--Rare 5-->
+						<li>5</li>
+						<li>5</li>
+						<li>5</li>
+						
+						<!--Ultra-Rare 3-->
+						<li>3</li>	
+						
+						<!--Legendary 1-->
+					</weights>
+				</li>
+			</value>
+		</match>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationFindMod">
+	<!-- Is this Mod installed? -->
+		<mods>
+			<li>MoHAR framework</li>
+		</mods>
+		<!-- If it is, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+					<!--Egg Nog-->
+
+					<HediffDef>
+						<defName>ST_Bean_EggNog_Utility</defName>
+						<hediffClass>HediffWithComps</hediffClass>
+						<description>You shouldn't be seeing this.</description>
+						<label>Egg Nog Utility</label>
+						<stages>
+							<li>
+								<label>Common</label>
+								<becomeVisible>false</becomeVisible>
+							</li>
+						</stages>
+						<comps>
+							<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+								<hediffAndBodypart>
+									<li>
+										<hediff>ST_Bean_EggNog</hediff>
+									</li>
+									<li>
+										<hediff>HediffEggNog</hediff>
+									</li>
+								</hediffAndBodypart>
+								<debug>true</debug>
+							</li>
+						</comps>
+					</HediffDef>
+
+					<HediffDef>
+						<defName>ST_Bean_EggNog</defName>
+						<label>Roulette Beans: Egg Nog</label>
+						<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled an egg nog flavored jelly bean! It's like Christmas came early! \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Simulates the high of Egg Nog without risking addiction or satisfying Drug Needs.</description>
+						<initialSeverity>1</initialSeverity>
+						<defaultLabelColor>(231,231,231)</defaultLabelColor>      	
+						<hediffClass>HediffWithComps</hediffClass>
+						<isBad>false</isBad>
+						<comps>
+							<li Class="HediffCompProperties_Disappears">
+								<disappearsAfterTicks>20000</disappearsAfterTicks>
+								<showRemainingTime>True</showRemainingTime>
+							</li>
+						</comps>
+						<stages>
+							<li>
+								<label>Common</label>
+								<minSeverity>0</minSeverity>
+							</li>
+						</stages>
+					</HediffDef>
+					
+										
+										
+										
+					<!--Beefy Five Layer Burrito-->
+
+						<HediffDef>
+							<defName>ST_Bean_Burrito_Utility</defName>
+							<hediffClass>HediffWithComps</hediffClass>
+							<description>You shouldn't be seeing this.</description>
+							<label>Burrito Utility</label>
+							<stages>
+								<li>
+									<label>Uncommon</label>
+									<becomeVisible>false</becomeVisible>
+								</li>
+							</stages>
+							<comps>
+								<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+									<hediffAndBodypart>
+										<li>
+											<hediff>ST_Bean_Burrito</hediff>
+										</li>
+										<li>
+											<hediff>ST_Actually_Sour_Cream_Is_Delicious</hediff>
+										</li>
+									</hediffAndBodypart>
+									<debug>true</debug>
+								</li>
+							</comps>
+						</HediffDef>
+
+						<HediffDef>
+							<defName>ST_Bean_Burrito</defName>
+							<label>Roulette Beans: Burrito</label>
+							<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a jelly bean that tastes akin to a Meaty Five Layered Burrito! \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Simulates the effect of a Beefy Five Layer Burrito.</description>
+							<initialSeverity>1</initialSeverity>
+							<defaultLabelColor>(231,175,0)</defaultLabelColor>      	
+							<hediffClass>HediffWithComps</hediffClass>
+							<isBad>false</isBad>
+							<comps>
+								<li Class="HediffCompProperties_Disappears">
+									<disappearsAfterTicks>60000</disappearsAfterTicks>
+									<showRemainingTime>True</showRemainingTime>
+								</li>
+							</comps>
+							<stages>
+								<li>
+									<label>Uncommon</label>
+									<minSeverity>0</minSeverity>
+								</li>
+							</stages>
+						</HediffDef>  
+					  
+						<!--D-Pad Candy-->
+
+						<HediffDef>
+							<defName>ST_Bean_PadCandy_Utility</defName>
+							<hediffClass>HediffWithComps</hediffClass>
+							<description>You shouldn't be seeing this.</description>
+							<label>Directional Pad Candy Utility</label>
+							<stages>
+								<li>
+									<label>Uncommon</label>
+									<becomeVisible>false</becomeVisible>
+								</li>
+							</stages>
+							<comps>
+								<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+									<hediffAndBodypart>
+										<li>
+											<hediff>ST_Bean_PadCandy</hediff>
+										</li>
+										<li>
+											<hediff>ST_AteCandy_DPAD</hediff>
+										</li>
+									</hediffAndBodypart>
+									<debug>true</debug>
+								</li>
+							</comps>
+						</HediffDef>
+
+						<HediffDef>
+							<defName>ST_Bean_PadCandy</defName>
+							<label>Roulette Beans: D-Pad Candy</label>
+							<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a jelly bean that tastes akin to Directional Pad Candies! They don't taste any better in this form than normal. \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Simulates the effect of eating Directional Pad Candy.</description>
+							<initialSeverity>1</initialSeverity>
+							<defaultLabelColor>(203, 195, 227)</defaultLabelColor>      	
+							<hediffClass>HediffWithComps</hediffClass>
+							<isBad>false</isBad>
+							<comps>
+								<li Class="HediffCompProperties_Disappears">
+									<disappearsAfterTicks>60000</disappearsAfterTicks>
+									<showRemainingTime>True</showRemainingTime>
+								</li>
+							</comps>
+							<stages>
+								<li>
+									<label>Uncommon</label>
+									<minSeverity>0</minSeverity>
+								</li>
+							</stages>
+						</HediffDef>    
+					  
+					<!--Pepsi-->
+
+						<HediffDef>
+							<defName>ST_Bean_Pepsi_Utility</defName>
+							<hediffClass>HediffWithComps</hediffClass>
+							<description>You shouldn't be seeing this.</description>
+							<label>Pepsi Sucks</label>
+							<stages>
+								<li>
+									<label>Coke is Better</label>
+									<becomeVisible>false</becomeVisible>
+								</li>
+							</stages>
+							<comps>
+								<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+									<hediffAndBodypart>
+										<li>
+											<hediff>ST_Bean_Pepsi</hediff>
+										</li>
+										<li>
+											<hediff>ST_HedPepsi</hediff>
+										</li>
+									</hediffAndBodypart>
+									<debug>true</debug>
+								</li>
+							</comps>
+						</HediffDef>
+
+						<HediffDef>
+							<defName>ST_Bean_Pepsi</defName>
+							<label>Roulette Beans: Pepsi</label>
+							<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a Pepsi flavored jelly bean! {PAWN_pronoun} should have had a Coke instead! \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Simulates the effect of drinking Pepsi from a Pepsi Frog.</description>
+							<initialSeverity>1</initialSeverity>
+							<defaultLabelColor>(118,94,70)</defaultLabelColor>      	
+							<hediffClass>HediffWithComps</hediffClass>
+							<isBad>true</isBad>
+							<comps>
+								<li Class="HediffCompProperties_Disappears">
+									<disappearsAfterTicks>30000</disappearsAfterTicks>
+									<showRemainingTime>True</showRemainingTime>
+								</li>
+							</comps>
+							<stages>
+								<li>
+									<label>Uncommon</label>
+									<minSeverity>0</minSeverity>
+								</li>
+							</stages>
+						</HediffDef>
+						
+						
+						<!--Worm-->
+
+							<HediffDef>
+								<defName>ST_Bean_Worm</defName>
+								<label>Roulette Beans: Worm</label>
+								<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a worm flavored jelly bean! Not only did it taste like raw worms, worms seem to have been aroused by {PAWN_NameDef}'s pheremonies and are digging upwards to see him! \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Worms will periodically crawl out of the ground around this Pawn.</description>
+								<initialSeverity>1</initialSeverity>
+								<defaultLabelColor>(255,182,193)</defaultLabelColor>      	
+								<hediffClass>HediffWithComps</hediffClass>
+								<isBad>false</isBad>
+								<comps>
+									<li Class="HediffCompProperties_Disappears">
+										<disappearsAfterTicks>300000</disappearsAfterTicks>
+										<showRemainingTime>True</showRemainingTime>
+									</li>
+									<li Class="MoharHediffs.HediffCompProperties_Spawner">
+										<thingToSpawn>ST_Worm</thingToSpawn>
+										<spawnCount>15</spawnCount>
+										<minDaysB4Next>0.5</minDaysB4Next>
+										<maxDaysB4Next>1.5</maxDaysB4Next>
+										<graceDays>0.15</graceDays>
+										<spawnForbidden>false</spawnForbidden>
+										<spawnVerb>spreading pheremones</spawnVerb>			
+									</li>
+								</comps>
+								<stages>
+									  <li>
+										<label>Uncommon</label>
+										<minSeverity>0</minSeverity>	
+									  </li>
+								</stages>
+							</HediffDef>
+
+							<ThoughtDef>
+								<defName>ST_BeanThought_Worm</defName>
+								<workerClass>ThoughtWorker_Hediff</workerClass>
+								<hediff>ST_Bean_Worm</hediff>
+								<stages>
+								  <li>
+									<label>Neutral Bean Roulette Outcome: Worm</label>
+									<description>My breath smells like worms, and the worms think I smell like them. Maybe that's how I found them in my bed...</description>
+									<baseMoodEffect>-3</baseMoodEffect>
+								  </li>
+								</stages>
+						  </ThoughtDef>
+						  
+						  
+						  
+						  
+							<!--Banana-->
+							
+						<HediffDef>
+							<defName>TSP_ST_BananaMilk_Utility</defName>
+							<hediffClass>HediffWithComps</hediffClass>
+							<description>You shouldn't be seeing this.</description>
+							<label>Banana Milk Utility</label>
+							<stages>
+								<li>
+									<label>Uncommon</label>
+									<becomeVisible>false</becomeVisible>
+								</li>
+							</stages>
+							<comps>
+								<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+									<hediffAndBodypart>
+										<li>
+											<hediff>ST_Bean_Banana</hediff>
+										</li>
+										<li>
+											<hediff>ST_Hed_SpecialBananaMilk</hediff>
+										</li>
+									</hediffAndBodypart>
+									<debug>true</debug>
+								</li>
+							</comps>
+						</HediffDef>
+
+							<HediffDef>
+								<defName>ST_Bean_Banana</defName>
+								<label>Roulette Beans: Banana Milk</label>
+								<description>{PAWN_NameDef} tried {PAWN_possessive} luck and rolled a Banana Milk flavored jelly bean! Delicious! \n\n&lt;color=#F27893&gt;Bean effect:&lt;/color&gt; Simulates the effect of drinking Banana Milk.</description>
+								<initialSeverity>1</initialSeverity>
+								<defaultLabelColor>(255, 225, 53)</defaultLabelColor>      	
+								<hediffClass>HediffWithComps</hediffClass>
+								<isBad>false</isBad>
+								<comps>
+									<li Class="HediffCompProperties_Disappears">
+										<disappearsAfterTicks>60000</disappearsAfterTicks>
+										<showRemainingTime>True</showRemainingTime>
+									</li>
+								</comps>
+								<stages>
+									  <li>
+										<label>Uncommon</label>
+										<minSeverity>0</minSeverity>	
+									  </li>
+								</stages>
+							</HediffDef>
+			</value>
+		</match>
+	</Operation>
+	
+	
+	
+	
+
+</Patch>

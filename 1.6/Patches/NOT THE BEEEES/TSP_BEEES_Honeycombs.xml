@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- GNOME BEES -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="RB_Temperate_Honeycomb"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<ThingDef ParentName="RB_CombBase">
+					<defName>TSP_ST_RB_Gnomb_Basic</defName>
+					<label>basic Gnome Bee honeycomb</label>
+					<description>Colliqually know as a "Gnomb", this is a honeycomb produced by Gnome Bees. Gnome Bee honeycombs can be procesed in a Honey Extractor to get Gnome Honey and Brittle Beeswax. More advanced honeycombs from selectively bred Gnome Bees exist, but this honeycomb is considered the original and simplest iteration. \n \n Remember, to extract from Gnombs, one must also research the Gnome Knowledge Research Project!</description>
+					<descriptionHyperlinks>
+						<ResearchProjectDef>ST_GnomeCulture</ResearchProjectDef>
+						<ThingDef>RB_Bee_TSP_ST_Gnee_Basic_Queen</ThingDef>
+						<ThingDef>RB_Bee_TSP_ST_Gnee_Basic_Drone</ThingDef>
+						<!-- <ThingDef>TSP_ST_RB_Gnomb_Basic</ThingDef> -->
+						<RecipeDef>TSP_ST_RB_CentrifugeGnee1Comb</RecipeDef>
+						<ThingDef>TSP_ST_GnomeHoney</ThingDef>
+						<ThingDef>TSP_ST_RB_WildHive_Gnome</ThingDef>
+						<RecipeDef>TSP_ST_RB_Gneehive_Extract</RecipeDef>
+						<ThingDef MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</ThingDef>
+					</descriptionHyperlinks>
+					<graphicData Inherit="False">
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/Gnomb</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+						<color>(69,193,69)</color>
+					</graphicData>	
+					<butcherProducts>
+						<TSP_ST_GnomeHoney>9</TSP_ST_GnomeHoney>
+						<RB_Brittlewax>7</RB_Brittlewax>
+					</butcherProducts>
+				</ThingDef>
+				
+				<RecipeDef>
+					<defName>TSP_ST_RB_CentrifugeGnee1Comb</defName>
+					<label>extract from Basic Gnome Bee honeycomb</label>
+					<description>Extracts honey and beeswax from a basic Gnome Bee honeycomb. \n \n Remember, to extract from Gnombs, one must also research the Gnome Knowledge Research Project!</description>
+					<descriptionHyperlinks>
+						<ResearchProjectDef>ST_GnomeCulture</ResearchProjectDef>
+						<ThingDef>RB_Bee_TSP_ST_Gnee_Basic_Queen</ThingDef>
+						<ThingDef>RB_Bee_TSP_ST_Gnee_Basic_Drone</ThingDef>
+						<ThingDef>TSP_ST_RB_Gnomb_Basic</ThingDef>
+						<!-- <RecipeDef>TSP_ST_RB_CentrifugeGnee1Comb</RecipeDef> -->
+						<ThingDef>TSP_ST_GnomeHoney</ThingDef>
+						<ThingDef>TSP_ST_RB_WildHive_Gnome</ThingDef>
+						<RecipeDef>TSP_ST_RB_Gneehive_Extract</RecipeDef>
+						<ThingDef MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</ThingDef>
+					</descriptionHyperlinks>
+					<uiIconThing>TSP_ST_GnomeHoney</uiIconThing>
+					<jobString>Extracting honey and wax</jobString>
+					<effectWorking>Cremate</effectWorking>
+					<soundWorking>Recipe_Cremate</soundWorking>
+					<workAmount>900</workAmount>
+					<recipeUsers>
+						<li>RB_Honey_Centrifuge</li>
+						<li>RB_Advanced_Honey_Centrifuge</li>
+						<li>GnomeTable</li>
+						<li MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</li>
+					</recipeUsers>	
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>TSP_ST_RB_Gnomb_Basic</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>TSP_ST_RB_Gnomb_Basic</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<specialProducts>
+						<li>Butchery</li>
+					</specialProducts>
+					<skillRequirements>
+						<Cooking>1</Cooking>
+					</skillRequirements>
+					<researchPrerequisites>
+						<li>ST_GnomeCulture</li>
+						<li>RB_BasicBeekeeping</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	
+	<!-- OTHER ST BEES -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="RB_Temperate_Honeycomb"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<ThingDef ParentName="RB_CombBase">
+					<defName>TSP_ST_RB_Lore1_Honeycomb</defName>
+					<label>lore honeycomb</label>
+					<description>Honeycombs are hexagonal structures formed by the beeswax excretions of bees for the purpose of storing and feeding their larvae (babies), housing future wax, and, of course, shelving their honey. Lore honeycombs are compiled by Storyteller Bees. Storyteller Bees dedicated most of their beeswax to honeycomb purposes, as all bees do, but they are unique in their literate queen's passion to compile actual, legible writings! To do this, small amount of beeswax is diverted from the hive to the queen, and turned into parchment. Wild Storyteller hives are not capable of giving their queen much parchment (as most beeswax goes to the hive), so their libraries are sparse. However, domesticated Storyteller Bees are given an external, unlimited source of parchment with which they can compile entire volumes of information. That information has little use to beekeepers, but when a Storyteller Bee is crossed with bees of other classes, that information is used by the bees' intermixing to produce wildly exotic hybrids that can create inconceivable amounts of varied resources.\n \n Processing lore honeycombs produces White Beeswax, White Honey, and a miniscule amount of Adaptive Honey.</description>
+					<descriptionHyperlinks>
+						<ThingDef>RB_Bee_TSP_ST_StorytellerBase_Queen</ThingDef>
+						<ThingDef>RB_Bee_TSP_ST_StorytellerBase_Drone</ThingDef>
+						<!-- <ThingDef>TSP_ST_RB_Lore1_Honeycomb</ThingDef> -->
+						<RecipeDef>TSP_ST_RB_CentrifugeLore1Comb</RecipeDef>
+						<ThingDef>RB_WhiteHoney</ThingDef>
+						<ThingDef>RB_WhiteBeeswax</ThingDef>
+						<ThingDef MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</ThingDef>
+					</descriptionHyperlinks>
+					<graphicData Inherit="False">
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/TSP_ST_LoreComb1</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData>	
+					<butcherProducts>
+						<RB_WhiteHoney>3</RB_WhiteHoney>
+						<RB_WhiteBeeswax>4</RB_WhiteBeeswax>
+						<RB_AdaptiveHoney>1</RB_AdaptiveHoney>
+					</butcherProducts>
+				</ThingDef>
+				
+				<RecipeDef>
+					<defName>TSP_ST_RB_CentrifugeLore1Comb</defName>
+					<label>extract from lore honeycomb (Storyteller Bees)</label>
+					<description>Extracts honey and beeswax from a Storyteller Bee honeycomb.</description>
+					<descriptionHyperlinks>
+						<ThingDef>RB_Bee_TSP_ST_StorytellerBase_Queen</ThingDef>
+						<ThingDef>RB_Bee_TSP_ST_StorytellerBase_Drone</ThingDef>
+						<ThingDef>TSP_ST_RB_Lore1_Honeycomb</ThingDef>
+						<ThingDef>RB_WhiteHoney</ThingDef>
+						<ThingDef>RB_WhiteBeeswax</ThingDef>
+						<ThingDef MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</ThingDef>
+					</descriptionHyperlinks>
+					<uiIconThing>TSP_ST_RB_Lore1_Honeycomb</uiIconThing>
+					<jobString>Extracting honey and wax</jobString>
+					<effectWorking>Cremate</effectWorking>
+					<soundWorking>Recipe_Cremate</soundWorking>
+					<workAmount>900</workAmount>
+					<recipeUsers>
+						<li>RB_Honey_Centrifuge</li>
+						<li>RB_Advanced_Honey_Centrifuge</li>
+						<li>GnomeTable</li>
+						<li MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</li>
+					</recipeUsers>	
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>TSP_ST_RB_Lore1_Honeycomb</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>TSP_ST_RB_Lore1_Honeycomb</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<specialProducts>
+						<li>Butchery</li>
+					</specialProducts>
+					<skillRequirements></skillRequirements>
+					<researchPrerequisites>
+						<li>RB_BasicBeekeeping</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

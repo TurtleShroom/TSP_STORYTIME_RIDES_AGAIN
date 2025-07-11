@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<PawnKindDef Name="Patreonling_Master" Abstract="True">
+		<race>Human</race>
+		<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>25</combatPower>
+		<label>Patreonling</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+		<apparelMoney>550~950</apparelMoney>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>Glasses</li>
+			<li>Skirt</li>
+			<li>Robe</li>
+			<li>VFEM2_Trader</li>
+		</apparelTags>
+		<weaponTags>
+			<li>WithTheSteelChair</li>
+			<li>OrientalHandCannon</li>
+		</weaponTags>
+		<techHediffsTags>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<apparelRequired>
+			<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_Apparel_Chaperon</li>
+		</apparelRequired>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>2~13</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SurvivalistBase" Name="Patreonling_Survivalist_Master" Abstract="True">
+		<defaultFactionType>PatreonCivil</defaultFactionType>
+		<label>Patreonling</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>45</combatPower>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+		<apparelMoney>550~950</apparelMoney>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>Glasses</li>
+			<li>Skirt</li>
+			<li>Robe</li>
+			<li>VFEM2_Trader</li>
+		</apparelTags>
+		<weaponTags>
+			<li>WithTheSteelChair</li>
+			<li>OrientalHandCannon</li>
+			<li>MetalPipeRanged</li>
+			<li>MetalPipe</li>
+		</weaponTags>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>2~13</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SlaveRat_RaiderBase" Name="Patreonling_Raider_Master" Abstract="True">
+		<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>45</combatPower>
+		<label>Patreonling</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+		<apparelMoney>550~950</apparelMoney>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>Glasses</li>
+			<li>Skirt</li>
+			<li>Robe</li>
+			<li>VFEM2_Trader</li>
+		</apparelTags>
+		<weaponTags>
+			<li>WithTheSteelChair</li>
+			<li>OrientalHandCannon</li>
+		</weaponTags>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>2~13</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="CaravanBase" Name="Patreonling_Caravaneer_Master" Abstract="True">
+		<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>35</combatPower>
+		<label>Patreonling</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+		<apparelMoney>550~950</apparelMoney>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>Glasses</li>
+			<li>Skirt</li>
+			<li>Robe</li>
+			<li>VFEM2_Trader</li>
+		</apparelTags>
+		<weaponTags>
+			<li>WithTheSteelChair</li>
+			<li>OrientalHandCannon</li>
+		</weaponTags>
+		<apparelRequired>
+			<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_Apparel_Chaperon</li>
+		</apparelRequired>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>2~13</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="BasePlayerFrogPersonPawnKind" Name="Patreonling_Frogman_Master" Abstract="True">
+		<race>Alien_FrogPerson</race>
+    	<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>50</combatPower>
+		<label>Patreonling</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+		<apparelMoney>550~950</apparelMoney>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>Glasses</li>
+			<li>Skirt</li>
+			<li>Robe</li>
+			<li>VFEM2_Trader</li>
+		</apparelTags>
+		<weaponTags>
+			<li>WithTheSteelChair</li>
+			<li>OrientalHandCannon</li>
+		</weaponTags>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>2~13</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="BasePlayerJeubPawnKind" Name="Patreonling_Jeub_Master" Abstract="True">
+		<race>Alien_Jeub</race>
+    	<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>35</combatPower>
+		<label>Patreonling</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<apparelMoney>550~950</apparelMoney>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>Glasses</li>
+			<li>Skirt</li>
+			<li>Robe</li>
+			<li>VFEM2_Trader</li>
+		</apparelTags>
+		<weaponTags>
+			<li>WithTheSteelChair</li>
+			<li>OrientalHandCannon</li>
+		</weaponTags>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>2~13</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="BaseGoblinKind" Name="Patreonling_Goblin_Master" Abstract="True">
+		<race>Alien_ST_Goblin</race>
+    	<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>35</combatPower>
+		<label>Patreonling</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+		<apparelMoney>550~950</apparelMoney>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>Glasses</li>
+			<li>Skirt</li>
+			<li>Robe</li>
+			<li>VFEM2_Trader</li>
+		</apparelTags>
+		<weaponTags>
+			<li>WithTheSteelChair</li>
+			<li>OrientalHandCannon</li>
+		</weaponTags>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>2~13</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="BasePlayerWoodBeetPawnKind" Name="Patreonling_Beet_Master" Abstract="True">
+		<race>Alien_Beet</race>
+    	<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>50</combatPower>
+		<label>Patreonling</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+		<apparelMoney>550~950</apparelMoney>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>Glasses</li>
+			<li>Skirt</li>
+			<li>Robe</li>
+			<li>VFEM2_Trader</li>
+		</apparelTags>
+		<weaponTags>
+			<li>WithTheSteelChair</li>
+			<li>OrientalHandCannon</li>
+		</weaponTags>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>2~13</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="BasePlayerBeanManPawnKind" Name="Patreonling_Bulborb_Master" Abstract="True">
+		<race>Alien_BeanMan</race>
+    	<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>50</combatPower>
+		<label>Patreonling</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+		<apparelMoney>550~950</apparelMoney>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>Glasses</li>
+			<li>Skirt</li>
+			<li>Robe</li>
+			<li>VFEM2_Trader</li>
+		</apparelTags>
+		<weaponTags>
+			<li>WithTheSteelChair</li>
+			<li>OrientalHandCannon</li>
+		</weaponTags>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>2~13</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="TSP_ST_GnomeChef_Base" Name="Patreonling_Gnome_Master" Abstract="True">
+		<race>Alien_ST_Gnome</race>
+    	<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>50</combatPower>
+		<label>Patreonling mini-man</label>
+		<labelPlural>Patreonling mini-men</labelPlural>
+		<gearHealthRange>1.0~1.0</gearHealthRange>
+		<apparelMoney>550~950</apparelMoney>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>Glasses</li>
+			<li>Skirt</li>
+			<li>Robe</li>
+			<li>VFEM2_Trader</li>
+		</apparelTags>
+		<weaponTags>
+			<li>WithTheSteelChair</li>
+			<li>OrientalHandCannon</li>
+		</weaponTags>
+		<apparelRequired>
+			<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_Apparel_Chaperon</li>
+		</apparelRequired>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>2~13</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	
+	
+	
+	<PawnKindDef ParentName="Patreonling_Raider_Master">
+		<defName>TSP_ST_Patreonling_Raider</defName>
+		<race>Human</race>
+		<label>Patreonling skirmisher</label>
+		<labelPlural>patron skirmishers</labelPlural>
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="Patreonling_Caravaneer_Master">
+		<defName>TSP_ST_Patreonling_Caravaneer</defName>
+		<race>Human</race>
+		<label>Patreonling traveler</label>
+		<labelPlural>patron travelers</labelPlural>
+		<trader>true</trader>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<apparelRequired Inherit="False">
+			<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_Apparel_Chaperon</li>
+		</apparelRequired>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="Patreonling_Survivalist_Master">
+		<defName>TSP_ST_Patreonling_Survivalist</defName>
+		<race>Human</race>
+		<label>Patreonling scrounger</label>
+		<labelPlural>scroungers</labelPlural>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<weaponTags>
+			<li>Revolver</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="Partreonling_Frogman_Base" ParentName="Patreonling_Frogman_Master">
+		<defName>TSP_ST_Patreonling_Frogman</defName>
+		<race>Alien_FrogPerson</race>
+		<label>Patreonling frogman</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="Partreonling_BeanBulborb_Base" ParentName="Patreonling_Bulborb_Master">
+		<defName>TSP_ST_Patreonling_BeanBulborb</defName>
+		<race>Alien_BeanMan</race>
+		<label>Patreonbean Bulborb</label>
+		<labelPlural>Patreonbeans</labelPlural>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="Partreonling_Beeet_Base" ParentName="Patreonling_Beet_Master">
+		<defName>TSP_ST_Patreonling_Beet</defName>
+		<race>Alien_Beet</race>
+		<label>Patreonling Beet</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="Patreonling_Goblin_Base" ParentName="Patreonling_Goblin_Master">
+		<defName>TSP_ST_Patreonling_Goblin</defName>
+		<race>Alien_ST_Goblin</race>
+		<label>Patreonling goblin</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="Patreonling_Jeub_Base" ParentName="Patreonling_Jeub_Master">
+		<defName>TSP_ST_Patreonling_Jeub</defName>
+		<race>Alien_Jeub</race>
+		<label>Patreonling goblin</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<apparelTags>
+			<li>HSAU_HLS_CountHeadgearWig</li>
+			<li>HSAU_HLS_CountTrappings</li>
+		</apparelTags>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="Patreonling_Gnome_Base" ParentName="TSP_ST_GnomeChef_Base">
+		<defName>TSP_ST_Patreonling_Gnome</defName>
+		<race>Alien_ST_Gnome</race>
+		<label>Patreonling gnome</label>
+		<labelPlural>Patreonlings</labelPlural>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="TSP_ST_PatronPacifist" ParentName="Patreonling_Survivalist_Master">
+		<defName>TSP_ST_Patreonling_Pacifist</defName>
+		<race>Human</race>
+		<label>Patreonling pacifist</label>
+		<labelPlural>patron pacifists</labelPlural>
+		<combatPower>5</combatPower>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<isFighter>true</isFighter>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
+		<apparelTags>
+			<li>HSAU_HLS_CountHeadgearWig</li>
+			<!-- <li>HSAU_HLS_CountTrappings</li> -->
+		</apparelTags>
+		<weaponTags Inherit="False">
+			<li>Toolagri</li>
+		</weaponTags>
+		<forcedTraits Inherit="False">
+			<!-- <AM_Ahimsa MayRequire="sarg.alphamemes">0</AM_Ahimsa> --> <!-- Vow of Nonviolence -->
+			<TSP_ST_TruePacifist>0</TSP_ST_TruePacifist>
+		</forcedTraits>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MercenaryGunnerBase">
+		<defName>TSP_ST_Patreonling_Gunman</defName>
+		<race>Human</race>
+		<label>Patreonling gunman</label>
+		<labelPlural>patron gunmen</labelPlural>
+		<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>35</combatPower>
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
+		<combatEnhancingDrugsChance>0.11</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount Inherit="False">
+			<min>1</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<weaponMoney>500~900</weaponMoney>
+		<apparelTags>
+			<li>HSAU_HLS_CountHeadgearWig</li>
+			<li>HSAU_HLS_CountTrappings</li>
+		</apparelTags>
+		<weaponTags>
+			<li>RangedIndustrial</li>
+			<li>Gun</li>
+		</weaponTags>
+		<apparelRequired Inherit="False">
+			<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_Apparel_Chaperon</li>
+		</apparelRequired>
+		<skills Inherit="False">
+			<li>
+				<skill>Shooting</skill>
+				<range>6~9</range>
+			</li>
+		</skills>
+		<initialWillRange>2~3</initialWillRange>
+		<initialResistanceRange>3~10</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="Patreonling_Master">
+		<defName>TSP_ST_Patreonling_Marksman</defName>
+		<race>Alien_BeanMan</race>
+		<label>Patreonling Bulborb marksman</label>
+		<labelPlural>patron marksmen Bulborbs</labelPlural>
+		<defaultFactionType>PatreonCivil</defaultFactionType>
+		<nameMaker>TSP_ST_NamerPatreons_Boy</nameMaker>
+		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
+		<combatPower>45</combatPower>
+		<chemicalAddictionChance>0.11</chemicalAddictionChance>
+		<combatEnhancingDrugsChance>0.4</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount Inherit="False">
+			<min>1</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<weaponMoney>1600~2600</weaponMoney>
+		<apparelTags>
+			<li>HSAU_HLS_CountHeadgearWig</li>
+			<li>HSAU_HLS_CountTrappings</li>
+		</apparelTags>
+		<weaponTags Inherit="False">
+			<li>SniperRifle</li>
+		</weaponTags>
+		<apparelRequired Inherit="False">
+			<!-- <li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_Apparel_Chaperon</li> -->
+		</apparelRequired>
+		<skills Inherit="False">
+			<li>
+				<skill>Shooting</skill>
+				<range>9~12</range>
+			</li>
+		</skills>
+		<initialWillRange>3~6</initialWillRange>
+		<initialResistanceRange>5~12</initialResistanceRange>
+		<inventoryOptions Inherit="False">
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne Inherit="False">
+				<li Inherit="False">
+					<thingDef>TSP_Patreonling_ID_Card</thingDef>
+					<countRange>1~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+</Defs>

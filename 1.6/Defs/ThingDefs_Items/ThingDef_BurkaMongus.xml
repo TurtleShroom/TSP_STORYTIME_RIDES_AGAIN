@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2572934327 -->
+	<ThingDef ParentName="ApparelMakeableBase">
+		<defName>Apparel_D4egonBurkaMongus</defName>
+		<label>burqamongus</label>
+		<description>A large garment that conceals the wearer's entire head and body while keeping some resistance to cold, heat and damage.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/BurkaMongus/BurkaMongus</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Cutout</shaderType>
+		</graphicData>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+			<li>Stony</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToMake>16000</WorkToMake>
+			<MarketValue>300</MarketValue>
+			<Mass>1</Mass>
+			<StuffEffectMultiplierArmor>1</StuffEffectMultiplierArmor>
+			<Insulation_Cold>150</Insulation_Cold>
+			<Insulation_Heat>150</Insulation_Heat>
+			<EquipDelay>6</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+		<ToxicResistance>-0.5</ToxicResistance>
+		<MoveSpeed>0.2</MoveSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+				<li>UpperHead</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/BurkaMongus/BurkaMongus</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<!-- <shellCoversHead>true</shellCoversHead> -->
+			<blocksAddedPartWoundGraphics>true</blocksAddedPartWoundGraphics>
+			<parentTagDef>ApparelBody</parentTagDef>
+			<renderSkipFlags>
+				<li>Head</li>
+			</renderSkipFlags>
+			<layers>
+				<li>Overhead</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<!-- <li>Spacer</li> -->
+				<li>EVA</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+				<li>Slave</li>
+			</defaultOutfitTags>
+			<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel"></colorGenerator>
+		<comps></comps>
+	</ThingDef>
+</Defs>

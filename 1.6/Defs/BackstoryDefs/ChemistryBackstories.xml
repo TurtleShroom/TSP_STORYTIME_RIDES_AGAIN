@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<!-- Outlander -->
+  <AlienRace.AlienBackstoryDef>
+    <defName>ST_Chemist</defName>
+    <title>chemist</title>
+    <titleShort>chemist</titleShort>
+    <description>[PAWN_nameDef] was a trained chemist on an Urb-World. [PAWN_pronoun] learned much about synthesizing useful materials from various chemicals.</description>
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <skillGains>
+      <Intellectual>6</Intellectual>
+      <Crafting>4</Crafting>
+    </skillGains>
+	<spawnCategories>
+		<li>Offworld</li>
+		<li>Outlander</li>
+		<li>Scientist</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>ST_PlantEnthusiast</defName>
+    <title>plant enthusiast</title>
+    <titleShort>plant enthusiast</titleShort>
+    <description>Growing up, [PAWN_nameDef] enjoyed going out into the woods near [PAWN_possessive] home to collect various nice-smelling plants.</description>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+	  <Plants>3</Plants>
+    </skillGains>
+	<spawnCategories>
+		<li>Offworld</li>
+		<li>Outlander</li>
+		<li>Medieval</li>
+		<li>Scientist</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>ESCP_DunmerBackstory_Childhood</li>
+		<li>ESCP_FalmerBackstory_Childhood</li>
+		<li>ESCP_AltmerBackstory_Childhood</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+
+<!-- Pirate -->
+  <AlienRace.AlienBackstoryDef>
+    <defName>ST_BreakingBad</defName>
+    <title>Ex-Chemistry Teacher</title>
+    <titleShort>kingpin</titleShort>
+    <description>[PAWN_nameDef] was once an innocent chemistry teacher on an Urb-World known for a large black market. When he fell ill, he started applying [PAWN_possessive] knowledge to make drugs to raise money for a Healer Mech Serum. When [PAWN_nameDef] finally got one, [PAWN_pronoun] found that [PAWN_pronoun] loved making drugs, hurting people, and getting rich. From then on, [PAWN_nameDef] grew more and more powerful until becoming a kingpin of a vast drug empire.</description>
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <skillGains>
+      <Intellectual>8</Intellectual>
+	  <Crafting>3</Crafting>
+      <Shooting>3</Shooting>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>Psychopath</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>Greedy</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName Degree="2">DrugDesire</defName>
+				</li>
+			</options>
+			<chance>10</chance>
+		</li>
+	</forcedTraitsChance>
+	<spawnCategories>
+		<li>Pirate</li>
+		<li>Sadist</li>
+		<li>Madman</li>
+		<li>Scientist</li>
+		<li>Offworld</li>
+		<li>ESCP_BosmerBackstory_Adulthood</li> <!-- Fargoth is a GIGA-CHAD now! -->
+		<li>ESCP_AyleidBackstory_Adulthood</li>
+		<li>Skinhead</li>
+		<li>OwenWilson</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef>
+    <defName>ST_ChemistrySet</defName>
+    <title>chemistry kid</title>
+    <titleShort>chemistry kid</titleShort>
+    <description>[PAWN_nameDef] got a chemistry set for [PAWN_possessive] birthday. Unfortunately, [PAWN_pronoun] accidentally discovered how to make Flake, and then took it, so it was taken away by [PAWN_possessive] parents.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>3</Intellectual>
+	  <Crafting>1</Crafting>
+    </skillGains>
+	<spawnCategories>
+		<li>Pirate</li>
+		<li>Scientist</li>
+		<li>Offworld</li>
+		<li>Outlander</li>
+		<li>ESCP_AltmerBackstory_Childhood</li>
+		<li>ESCP_DunmerBackstory_Childhood</li>
+		<li>ESCP_AyleidBackstory_Childhood</li>
+		<li>Skinhead</li>
+		<li>Antifa</li>
+		<li>OwenWilson</li>
+	</spawnCategories>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName Degree="2">DrugDesire</defName>
+				</li>
+			</options>
+			<chance>1</chance>
+		</li>
+	</forcedTraitsChance>
+  </AlienRace.AlienBackstoryDef>
+
+	<!-- Tribal -->
+  <AlienRace.AlienBackstoryDef>
+    <defName>ST_HerbExpert</defName>
+    <title>herbologist</title>
+    <titleShort>herbologist</titleShort>
+    <description>[PAWN_nameDef] collected medicinal herbs for [PAWN_possessive] tribe, an important role in a society as poor as [PAWN_possessive] was.</description>
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <skillGains>
+      <Plants>4</Plants>
+	  <Medicine>3</Medicine>
+    </skillGains>
+	<spawnCategories>
+		<li>Tribal</li>
+		<li>TribalFarmer</li>
+		<li>ArgonianBackstory</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>ESCP_FalmerBackstory_Childhood</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+</Defs>

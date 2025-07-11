@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ProcessorFramework.ProcessDef>
+		<defName>TSP_ST_VFEM_UniversalProcessor_GnomeWine_Lime</defName>
+		<thingDef>TSP_ST_VFEM_GnomeWine_Lime</thingDef>
+		<ingredientFilter>
+			<thingDefs>
+				<li>TSP_ST_VFEM_GnomeWine_LimeMust</li>
+			</thingDefs>
+		</ingredientFilter>
+		<!-- <processDays>3</processDays> --> <!-- in days, a day is 60,000 ticks -->
+		<capacityFactor>2.5</capacityFactor>
+		<usesTemperature>true</usesTemperature>
+		<temperatureSafe>-25.0~80</temperatureSafe> <!-- -13 to 176 degrees Farenheit -->
+		<temperatureIdeal>10.0~26.67</temperatureIdeal> <!-- 50 to 80.006 degrees Farenheit -->
+		<ruinedPerDegreePerHour>0.01</ruinedPerDegreePerHour>
+		<speedBelowSafe>0.25</speedBelowSafe>
+		<speedAboveSafe>0.5</speedAboveSafe>
+		<sunFactor>1.0~1.0</sunFactor>
+		<rainFactor>1.0~1.0</rainFactor>
+		<snowFactor>1.0~1.0</snowFactor>
+		<windFactor>1.0~1.0</windFactor>
+		<unpoweredFactor>0.0</unpoweredFactor>
+		<unfueledFactor>0.0</unfueledFactor>
+		<powerUseFactor>0</powerUseFactor>
+		<fuelUseFactor>0</fuelUseFactor>
+		<filledGraphicSuffix></filledGraphicSuffix>
+		<usesQuality>true</usesQuality>
+		<qualityDays>(1, 2, 6, 13, 20, 30, 70)</qualityDays>
+		<color>(69,193,69)</color> <!-- 0-255 or 0.0-1.0 -->
+		<customLabel>lime gnone wine</customLabel>
+		<destroyChance>0.0</destroyChance>
+		<bonusOutputs>
+			<Horse>(0.001, 1)</Horse>
+		</bonusOutputs>
+	</ProcessorFramework.ProcessDef>
+</Defs>

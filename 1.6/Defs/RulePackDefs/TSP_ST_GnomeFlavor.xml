@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RulePackDef>
+		<defName>TSP_ST_NamerGnomeUtility</defName>
+		<include>
+			<li>GlobalUtility</li>
+			<li>PuffleNamer</li>
+			<li>GnomeSettlementName</li>
+			<li>GnomeMaleName</li>
+			<li>GnomeFemaleName</li>
+			<li>ST_NamerElfoidMale</li>
+			<li>ST_NamerElfoidFemale</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>name(p=6)->[GnomeMaleList] [GnomeFamilyList]</li>
+				<li>name(p=1)->[GnomeMaleList] [Puffle] [GnomeFamilyList]</li>
+				<li>name(p=5)->[GnomeFemaleList] [GnomeFamilyList]</li>
+				<li>name(p=1)->[GnomeFemaleList] [Puffle] [GnomeFamilyList]</li>
+				<li>name(p=0.01)->[Puffle] [Puffle] [GnomeFamilyList]</li>
+				<li>name(p=1)->[GnomePack]</li>
+				<li>name(p=1)->[Puffle] [GnomePack]</li>
+				<li>name(p=1)->[GnomeFamilyList]</li>
+				<li>name(p=0.5)->[ST_ElfMaleList] [ST_ElfFamilyList]</li>
+				<li>name(p=0.5)->[ST_ElfFemaleList] [ST_ElfFamilyList]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<!--
+				<li Class="Rule_File">
+					<keyword>GnomeMaleList</keyword>
+					<path>GnomeNames/GnomeMale</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>GnomeFemaleList</keyword>
+					<path>GnomeNames/GnomeFemale</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>GnomeFamilyList</keyword>
+					<path>GnomeNames/GnomeLastNames</path>
+				</li>
+				-->
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>TSP_ST_NamerPersonGnome</defName>
+		<include>
+			<li>GnomeMaleName</li>
+			<li>GnomeFemaleName</li>
+			<li>GnomeFamilyList</li>
+			<li>PuffleNamer</li>
+			<li>ST_NamerElfoidMale</li>
+			<li>ST_NamerElfoidFemale</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>name(p=6)->[GnomeMaleList] [GnomeFamilyList]</li>
+				<li>name(p=1)->[GnomeMaleList] [Puffle] [GnomeFamilyList]</li>
+				<li>name(p=5)->[GnomeFemaleList] [GnomeFamilyList]</li>
+				<li>name(p=1)->[GnomeFemaleList] [Puffle] [GnomeFamilyList]</li>
+				<li>name(p=0)->[Puffle] [Puffle] [GnomeFamilyList]</li>
+				<li>name(p=0.5)->[ST_ElfMaleList] [ST_ElfFamilyList]</li>
+				<li>name(p=0.5)->[ST_ElfFemaleList] [ST_ElfFamilyList]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>GnomeMaleList</keyword>
+					<path>GnomeNames/GnomeMale</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>GnomeFemaleList</keyword>
+					<path>GnomeNames/GnomeFemale</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>GnomeFamilyList</keyword>
+					<path>GnomeNames/GnomeLastNames</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>ST_ElfMaleList</keyword>
+					<path>ST_ElfNames/ST_ElfMaleNames</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>ST_ElfFamilyList</keyword>
+					<path>ST_ElfNames/ST_ElfFamilyNames</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+</Defs>

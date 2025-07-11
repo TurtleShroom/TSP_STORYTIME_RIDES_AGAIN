@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RulePackDef>
+		<defName>TSP_ST_HSAU_UniqueNamer_Pip_OwenWilson</defName>
+		<include>
+			<li>GlobalUtility</li>
+			<li>ST_NamerChineseUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<!--
+				<li>r_name->Owen 'Owen Wilson' Wilson</li>
+				<li>r_name->[OwnWilsonForenames] [OwenWilsonDisplayNames] [OwenWilsonSurnames]</li>
+				-->
+				<li>r_name->[OwnWilsonForenames] '[OwenWilsonDisplayNames] D-[Digit][Digit][Digit][Digit][Digit][Digit]' [OwenWilsonSurnames]</li>
+				<li>r_name->[OwnWilsonForenames] '[OwenWilsonDisplayNames] D-[Digit][Digit][Digit][Digit][Digit][Digit]' [OwenWilsonSurnames][ChineseCourtesyNamesTail]</li>
+				<li>r_name->[OwnWilsonForenames][ChineseCourtesyNamesHead] '[OwenWilsonDisplayNames] D-[Digit][Digit][Digit][Digit][Digit][Digit]' [OwenWilsonSurnames][ChineseCourtesyNamesTail]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>OwnWilsonForenames</keyword>
+					<path>OwenWilsonNames/OwenWilsonNames_Forenames</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>OwenWilsonSurnames</keyword>
+					<path>OwenWilsonNames/OwenWilsonNames_Surnames</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>OwenWilsonDisplayNames</keyword>
+					<path>OwenWilsonNames/OwenWilsonNames_Display</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+</Defs>

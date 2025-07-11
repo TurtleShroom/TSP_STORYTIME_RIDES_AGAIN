@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<HediffDef>
+		<defName>HedGoblin</defName>
+		<label>Racial Trait: Goblin</label>
+		<description>Goblins are real, but many don't know this because of how stealthy they can be. They are also talented foragers. Goblins uniquely boast four ears capable of swivelling like a cat's ears, allowing them to detect sounds from a greater distance, and know immediately where the sound originates.</description>
+		<initialSeverity>1</initialSeverity>
+		<defaultLabelColor>(0.47,0.87,0.47)</defaultLabelColor>      	
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+		  <li>
+			<becomeVisible>false</becomeVisible>
+			<statOffsets>
+				  <MeleeDodgeChance>10</MeleeDodgeChance>
+				  <HuntingStealth>2</HuntingStealth>
+				  <ForagedNutritionPerDay>0.35</ForagedNutritionPerDay>
+				  <SocialImpact>-0.2</SocialImpact>	  
+				  <PawnBeauty>-1</PawnBeauty>	  
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Hearing</capacity>
+					<offset>1</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.1</offset>
+				</li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+</Defs>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Birds don't have boobs. -->
+<Defs>
+	<ThingDef Name="TSP_WW_DrugBase" ParentName="DrugBase" Abstract="True">
+		<statBases>
+			<Nutrition>1</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<preferability>DesperateOnly</preferability>
+			<joy>0.5</joy>
+			<joyKind>TSP_WW_EatDrugs_Classification</joyKind>
+			<baseIngestTicks>720</baseIngestTicks>
+			<nurseable>false</nurseable>
+			<drugCategory>Hard</drugCategory>
+			<ingestSound>Ingest_Pill</ingestSound>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Consume {0}</ingestCommandString>
+			<ingestReportString>Consuming {0}.</ingestReportString>
+			<ingestReportStringEat>Consuming {0}.</ingestReportStringEat>
+			<useEatingSpeedStat>true</useEatingSpeedStat>
+			<tableDesired>false</tableDesired>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.27,0,0.08)</offset>
+					<behind>true</behind>
+				</northDefault>
+				<east>
+					<offset>(0.45,0,0.08)</offset>
+				</east>
+				<south>
+					<offset>(0.27,0,0.08)</offset>
+				</south>
+				<west>
+					<offset>(-0.50,0,0.08)</offset>
+					<flip>false</flip>
+				</west>
+			</ingestHoldOffsetStanding>
+		</ingestible>
+		<tradeTags>
+			<li>StorytimeDrugs</li>
+			<li>WinkworldDrugs</li>
+			<li>Drugs</li>
+		</tradeTags>
+	</ThingDef>
+
+	<RecipeDef Name="TSP_WW_DrugRecipe_Base" Abstract="True">
+		<workAmount>475</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<unfinishedThingDef>TSP_ST_WW_Unfinished</unfinishedThingDef>
+		<!--
+		<ingredients>
+			<li>
+				<filter>
+					<categories></categories>
+					<thingDefs></thingDefs>
+				</filter>
+				<count></count>
+			</li>
+			<li>
+				<filter>
+					<categories></categories>
+					<thingDefs></thingDefs>
+				</filter>
+				<count></count>
+			</li>
+			<li>
+				<filter>
+					<categories></categories>
+					<thingDefs></thingDefs>
+				</filter>
+				<count></count>
+			</li>
+		</ingredients>
+		-->
+		<!--
+		<fixedIngredientFilter>
+			<categories></categories>
+			<thingDefs></thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories></categories>
+			<thingDefs></thingDefs>
+		</defaultIngredientFilter>
+		-->
+		<!--
+			<products></products>
+		-->
+		<recipeUsers>
+			<li>DrugLab</li>
+			<li MayRequire="zal.witchinghour">Cauldron</li>
+			<li MayRequire="mlie.warhammerfimir">FimirBrewingCauldron</li>
+			<li MayRequire="mlie.capraracemod">CACauldron</li>
+			<li MayRequire="bbbbilly.hobotoughlife">HoboBarrel</li>
+			<!-- <li MayRequire="TSP.Isengriff.Storytime">GnomeTable</li> -->
+		</recipeUsers>
+		<researchPrerequisites>
+			<!-- <li>WingDrugs</li> -->
+		</researchPrerequisites>
+	</RecipeDef>
+
+	<RecipeDef ParentName="TSP_WW_DrugRecipe_Base">
+		<defName>TSP_WW_MakeHighwing</defName>
+		<label>formulate Highwing</label>
+		<description>By mixing Flake or Yayo with food and feathers, the secrets of Highwing can be unlocked!</description>
+		<jobString>assembling Highwing</jobString>
+		<workAmount>300</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>bird skin, feathers</customSummary>
+				  <thingDefs>
+					<li>Leather_Bird</li>
+					<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoHideFeathery</li>
+					<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoFeather</li>
+					<li MayRequire="tarojun.morishep.onioftherim">OotR_OniFeathers</li>
+				  </thingDefs>
+				</filter>
+				<count>5</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>meat, cheeses</customSummary>
+			  <categories>
+				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			  </categories>
+			  <thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+			  </thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>Flake, Yayo</customSummary>
+			  <thingDefs>
+				<li>Flake</li>
+				<li>Yayo</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li>Leather_Bird</li>
+				<li>Flake</li>
+				<li>Yayo</li>
+				<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoHideFeathery</li>
+				<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoFeather</li>
+				<li MayRequire="tarojun.morishep.onioftherim">OotR_OniFeathers</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li>Leather_Bird</li>
+				<li>Flake</li>
+				<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoHideFeathery</li>
+				<li MayRequire="biomesteam.biomesprehistoric">BMT_DinoFeather</li>
+				<li MayRequire="tarojun.morishep.onioftherim">OotR_OniFeathers</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<researchPrerequisites>
+			<li>PsychiteRefining</li>
+		</researchPrerequisites>
+		<products>
+			<Highwing>12</Highwing>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_WW_DrugRecipe_Base">
+		<defName>TSP_WW_MakeHeavenDust</defName>
+		<label>formulate Heaven Dust</label>
+		<description>By mixing Flake or Yayo with food and Psychoid Leaves, the secrets of Heaven Dust can be unlocked!</description>
+		<jobString>making Heaven Dust</jobString>
+		<workAmount>300</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+		  <li>
+			<filter>
+				<customSummary>meat, cheeses</customSummary>
+			  <categories>
+				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			  </categories>
+			  <thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+			  </thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>Flake, Yayo</customSummary>
+			  <thingDefs>
+				<li>Flake</li>
+				<li>Yayo</li>
+			  </thingDefs>
+			</filter>
+			<count>3</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>Psychoid Leaves</customSummary>
+			  <thingDefs>
+				<li>PsychoidLeaves</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			  </thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li>PsychoidLeaves</li>
+				<li>Flake</li>
+				<li>Yayo</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li>PsychoidLeaves</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<researchPrerequisites>
+			<!-- <li>PsychiteRefiningWW</li> -->
+			<li>PsychiteRefining</li>
+		</researchPrerequisites>
+		<products>
+			<WW_HeavenDust>12</WW_HeavenDust>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_WW_DrugRecipe_Base">
+		<defName>TSP_WW_Dragonal</defName>
+		<label>formulate Dragonal</label>
+		<description>By mixing food, Wake Up, and Chemfuel, the secrets of Dragonal can be unlocked!</description>
+		<jobString>making Dragonal</jobString>
+		<workAmount>300</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+		  <li>
+			<filter>
+				<customSummary>meat, cheeses</customSummary>
+			  <categories>
+				<li>MeatRaw</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+			  </categories>
+			  <thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+			  </thingDefs>
+			  <disallowedThingDefs>
+				<li>RawCorn</li>
+				<li>RawRice</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+			  </disallowedThingDefs>
+			</filter>
+			<count>15</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>corn, rice, flour</customSummary>
+			  <thingDefs>
+				<li>RawCorn</li>
+				<li>RawRice</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+			  </thingDefs>
+			</filter>
+			<count>20</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>Wake-Up</customSummary>
+				<thingDefs>
+					<li>WakeUp</li>
+					<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>Chemfuel</customSummary>
+			  <thingDefs>
+				<li>Chemfuel</li>
+			  </thingDefs>
+			</filter>
+			<count>15</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li>Chemfuel</li>
+				<li>RawCorn</li>
+				<li>RawRice</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li>Chemfuel</li>
+				<li>RawCorn</li>
+				<li>RawRice</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
+				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<products>
+			<Dragonal>20</Dragonal>
+		</products>
+		<researchPrerequisites>
+			<li>PsychiteRefining</li>
+			<li>WakeUpProduction</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_WW_DrugRecipe_Base">
+		<defName>TSP_WW_Diagen</defName>
+		<label>formulate Diagen</label>
+		<description>By mixing food, Psychoid Leaves, and Go Juice, the secrets of Diagen can be unlocked!</description>
+		<jobString>making Dragonal</jobString>
+		<workAmount>300</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+		  <li>
+			<filter>
+				<customSummary>meat, cheeses</customSummary>
+			  <categories>
+				<li>MeatRaw</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+			  </categories>
+			  <thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+			  </thingDefs>
+			</filter>
+			<count>20</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>Go-Juice</customSummary>
+			  <thingDefs>
+				<li>GoJuice</li>
+			  </thingDefs>
+			</filter>
+			<count>2</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>Psychoid Leaves</customSummary>
+			  <thingDefs>
+				<li>PsychoidLeaves</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			  </thingDefs>
+			</filter>
+			<count>6</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li>GoJuice</li>
+				<li>PsychoidLeaves</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li>GoJuice</li>
+				<li>PsychoidLeaves</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<researchPrerequisites>
+			<li>PsychiteRefining</li>
+			<li>GoJuiceProduction</li>
+		</researchPrerequisites>
+		<products>
+			<Diagen>12</Diagen>
+		</products>
+	</RecipeDef>
+</Defs>

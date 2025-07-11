@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<DesignatorDropdownGroupDef>
+		<defName>Floor_STGems</defName>
+		<label>Storytime gem tile</label>
+	</DesignatorDropdownGroupDef>
+  
+	<TerrainDef Abstract="True" ParentName="TileStorytimeBase" Name="TileStorytimeGemTileBase">
+		<texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+		<designatorDropdown>Floor_STMetals</designatorDropdown>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<tags>
+			<li>FineFloor</li>
+		</tags>
+	</TerrainDef>
+</Defs>
+ 

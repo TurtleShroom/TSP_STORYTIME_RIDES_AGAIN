@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+  <!--========== BORPA leather ============-->
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_Borpa</defName>
+    <label>Borpaskin</label>
+    <description>A textile made from the skin of a Borpa. It is soft to the touch in addition to being moist like a normal frog's skin.</description>
+    <graphicData>
+      <color>(34,177,76)</color>
+    </graphicData>
+	 <statBases>
+      <MarketValue>2</MarketValue>
+      <StuffPower_Armor_Sharp>0.86</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.25</StuffPower_Armor_Blunt>
+      <StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>23</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(34,177,76)</color>
+      <commonality>0.08</commonality>
+      <statFactors>
+        <MaxHitPoints>1.1</MaxHitPoints>
+        <Beauty>0.5</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
+    <!--========== SNORPA leather ============-->
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_SnorpaHide</defName>
+    <label>snorpa hide</label>
+    <description>The hardened, chitinous hide of a Snorpa. It's like a flexible shell. It is durable but not very insulating.</description>
+    <graphicData>
+      <color>(189,125,89)</color>
+    </graphicData>
+	 <statBases>
+      <MarketValue>6</MarketValue>
+      <StuffPower_Armor_Sharp>1.02</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.35</StuffPower_Armor_Blunt>
+      <StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>5</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(189,125,89)</color>
+      <commonality>0.075</commonality>
+	  <categories>
+		<li>Leathery</li>
+		
+		<!-- Mod support -->
+		<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+	  </categories>
+      <statFactors>
+        <MaxHitPoints>1.8</MaxHitPoints>
+        <Beauty>0.6</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <!--========== ACRID BORPA leather ============-->
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_AcridBorpa</defName>
+    <label>Acrid Borpaskin</label>
+    <description>A tough textile from an Acrid Borpa, which is highly resistant to sharp attacks. It is covered in slime, making it less flammable.</description>
+    <graphicData>
+      <color>(159,59,162)</color>
+    </graphicData>
+	 <statBases>
+      <MarketValue>4</MarketValue>
+      <StuffPower_Armor_Sharp>0.93</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.30</StuffPower_Armor_Blunt>
+      <StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>35</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(159,59,162)</color>
+      <commonality>0.075</commonality>
+      <statFactors>
+        <MaxHitPoints>1.5</MaxHitPoints>
+        <Beauty>0.2</Beauty>
+		<Flammability>0.9</Flammability>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
+  <!--======== KACHORPA STEEL ============-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>BORPA_KachorpaSteel</defName>
+    <label>Kachorpa steel</label>
+    <description>A shiny red metal that a Kachorpa can be "sheared" for. It can be used for everything that steel can, except it is more beautiful and sharper, but less protective. Legends warn of living in environments surrounded by this metal. Your dreams could be invaded and wake you every night with a terrible scream - KACHOW!</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Steel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <color>(221,18,0)</color>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+      <Mass>0.45</Mass>
+      <StuffPower_Armor_Sharp>0.83</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.38</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.50</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.05</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.97</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <slagDef>BORPA_ChunkKachorpaSlag</slagDef>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <deepCommonality>0.02</deepCommonality>
+    <deepCountPerPortion>45</deepCountPerPortion>
+    <deepLumpSizeRange>13~21</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+		
+		<!-- Mod support -->
+		<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0.025</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(221,18,0)</color>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>0.98</MaxHitPoints>
+        <Beauty>1.5</Beauty>
+        <Flammability>0.4</Flammability>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+</Defs>

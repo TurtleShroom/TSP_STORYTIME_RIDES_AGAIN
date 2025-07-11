@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RulePackDef>
+		<defName>TSP_ST_JeubPlaceFlavor_PlaceMakerCommon</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>place_personalWeapon(p=0)->U Jeub</li>
+				<li>place_massWeapon(p=0)->U Jeub</li>
+				<li>seismicDevice(p=0)->U Jeub</li>
+				<li>anEMPAttack(p=0)->U Jeub</li>
+				<li>place_summary(p=0)->U Jeub</li>
+				<li>place_community(p=0)->U-Jueb</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<PlaceDef>
+		<defName></defName>
+		<tags>
+			<li>ST_OriginJeub</li>
+		</tags>
+		<placeRules>
+			<include>
+				<li MayRequire="Ludeon.RimWorld.Ideology">TSP_ST_JeubPlaceFlavor_PlaceMakerCommon</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">IdeoDescriptionGlobal</li>
+				<li>TSP_ST_NamerPerson_Jeub</li>
+				<li>JeubMaleName</li>
+				<li>JeubFemaleName</li>
+				<li>JeubSettlementName</li>
+			</include>
+			<rulesStrings>
+				<li>place_name->Rata Jeub</li>
+				<li>place_adjective->Rata Jeub</li>
+				<li>place_community->hives</li>
+				<li>place_community->nests</li>
+				<li>place_summary->the home planet for the Jeub species</li>
+				<li>place_job->slave</li>
+				<li>place_job->servant</li>
+				<li>place_job->livestock</li>
+				<li>place_powerCenter->Skelk plantation</li>
+				<li>place_powerCenter->Skelk mine</li>
+				<li>place_powerCenter->Skelk factory</li>
+				<li>place_powerCenter->Skelk manor</li>
+				<li>place_massWeapon->a swarm of feral Jeubs</li>
+				<li>place_massWeapon->a massive Jeub uprising</li>
+				<li>place_massWeapon->a Jeub swarm</li>
+				<li>place_personalWeapon->fangs</li>
+				<li>place_personalWeapon->ears</li>
+				<li>place_personalWeapon->bravery</li>
+				<li>place_foeLeader->High Skelk</li>
+				<li>place_foeLeader->Skelk overlord</li>
+				<li>place_foeSoldiers->Skelks</li>
+				<li>place_foeSoldiers->large amounts of Skelks</li>
+			</rulesStrings>
+		</placeRules>
+	</PlaceDef>
+</Defs>

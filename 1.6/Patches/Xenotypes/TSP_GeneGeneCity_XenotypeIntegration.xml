@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/FactionDef[defName="GeneCityExurbs"]/xenotypeSet/xenotypeChances</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[defName="GeneCityExurbs"]/xenotypeSet/xenotypeChances</xpath>
+			<value>
+				<Tallhuman MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech">0.08</Tallhuman>
+				<Weezey MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech">0.08</Weezey>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

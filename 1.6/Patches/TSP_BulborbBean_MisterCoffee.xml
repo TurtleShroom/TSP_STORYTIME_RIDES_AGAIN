@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="MRCOFFEE"]</xpath>
+		<!-- If it does, insert this as an additional entry in the same bracket. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="MRCOFFEE"]/comps/li/fuelFilter/thingDefs</xpath>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+				<li MayRequire="scar.teancookies">scar_RawCoffee</li>
+				<li MayRequire="mlie.tropickapprainforestmod">CK_RawJitterBerries</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

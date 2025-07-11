@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>TSP_ST_Unfinished</defName>
+		<label>unfinished Storytime object</label>
+		<description>This item will soon become something very special!</description>
+		<graphicData>
+			<texPath>Things/Items/Books/YellowBook</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories Inherit="False"></stuffCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>TSP_ST_Unfinished_Stuffed</defName>
+		<label>unfinished stuffed Storytime object</label>
+		<description>This item will soon become something very special! It is made with love, and various Stuff materials!</description>
+		<graphicData>
+			<texPath>Things/Items/Books/woodcutterBook</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+			<li>Stony</li>
+			<li>Metallic</li>
+			<li>Woody</li>
+
+			<!-- Mod support -->
+			<li MayRequire="TaosChagic.Igloo">Snowy</li>
+			<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+			<li MayRequire="Dubwise.Rimefeller">Composite</li>
+			<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+			<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+			<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+			<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+			<li MayRequire="sarg.rimbees">RB_Waxy</li>
+			<li MayRequire="eltwofour.mantodeanrace">L24_Stuff_MantodeanOrganic</li>
+			<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+			<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
+			<li MayRequire="gguake.race.vivi">VV_Wax</li>
+		</stuffCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>TSP_ST_WW_Unfinished</defName>
+		<label>unfinished Wing Corp drug</label>
+		<description>Wing Corp offers a diverse array of powerful drugs, stimulants, and poisons for one to make. This item, when completed, will yield such a drug.</description>
+		<graphicData>
+			<texPath>Things/Items/Books/hippieBook</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories Inherit="False"></stuffCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>TSP_ST_UnfinishedFrog</defName>
+		<label>unfinished Dried Frog Pills</label>
+		<description>The ingredients needed to make Dried Frog Pills, ground up and ready to encapsulate.</description>
+		<graphicData>
+			<texPath>Things/Items/Books/creepypastaBook</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories Inherit="False"></stuffCategories>
+	</ThingDef>
+</Defs>

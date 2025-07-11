@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If it does, insert this as a sibling entry in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes/li[text()="RB_BeekeepingWork"]</xpath>
+			<value>
+				<li MayRequire="ludeon.rimworld.biotech,tsp.zal.patchhoney2">TSP_DoctorBees_Work</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If it does, insert this as a sibling entry in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes/li[text()="RB_BeekeepingWork"]</xpath>
+			<value>
+				<li MayRequire="ludeon.rimworld.biotech,tsp.zal.patchhoney2">TSP_DoctorBees_Work</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If it does, insert this as a sibling entry in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes/li[text()="ApiniHoneyMaker"]</xpath>
+			<value>
+				<li MayRequire="ludeon.rimworld.biotech,tsp.zal.patchhoney2">TSP_DoctorBees_Work</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If it does, insert this as a sibling entry in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes/li[text()="VV_Gathering"]</xpath>
+			<value>
+				<li MayRequire="ludeon.rimworld.biotech,tsp.zal.patchhoney2">TSP_DoctorBees_Work</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If they does, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes/li[text()="RB_BeekeepingWork"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If they does, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechWorkTypePriorities/RB_BeekeepingWork</xpath>
+		</match>
+		<!-- If th1e first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If they does, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechWorkTypePriorities/VV_Gathering</xpath>
+		</match>
+		<!-- If th1e first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If they does, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes/li[text()="VV_Gathering"]</xpath>
+		</match>
+		<!-- If th1e first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If they does, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechWorkTypePriorities/VV_Gathering</xpath>
+		</match>
+		<!-- If th1e first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If they does, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes/li[text()="ApiniHoneyMaker"]</xpath>
+		</match>
+		<!-- If th1e first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/WorkTypeDef[defName="TSP_DoctorBees_Work"]</xpath>
+		<!-- If they does, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/race/mechWorkTypePriorities/ApiniHoneyMaker</xpath>
+		</match>
+		<!-- If th1e first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+</Patch>

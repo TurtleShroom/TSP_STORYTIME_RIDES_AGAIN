@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<AlienRace.AlienBackstoryDef Name="GnomeBackstories" Abstract="True">
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>GnomeBackstory</li>
+		</spawnCategories>
+		<!--
+		<passions Inherit="False">
+			<li>
+				<skill>Cooking</skill>
+				<xp>1</xp>
+			</li>
+		</passions>
+		-->
+	</AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="GnomeBackstories">
+    <defName>Gnome_Child</defName>
+    <title>Gnome Child</title>
+	<titleShort>Gnome</titleShort>
+    <description>[PAWN_nameDef] grew up in a community of gnomes. Like all gnome children, [PAWN_pronoun] had a deep connection to nature and takes delight in cooking. Even now, [PAWN_pronoun] is attuned to all living things.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>1</Social>
+	  <Animals>3</Animals>
+	  <Plants>3</Plants>
+    </skillGains>
+	<spawnCategories Inherit="False">
+      <li>GnomeBackstory</li>
+	  <li>GnobleBackstory</li>
+	  <li>GnobleChildhood</li>
+    </spawnCategories>
+	<!--
+	<passions Inherit="False">
+		<li>
+			<skill>Cooking</skill>
+			<xp>1</xp>
+		</li>
+	</passions>
+	-->
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="GnomeBackstories">
+    <defName>Gnome_Chef</defName>
+    <title>Gnome Chef</title>
+	<titleShort>chef</titleShort>
+    <description>[PAWN_nameDef] practiced the art of gnome cooking.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Cooking>7</Cooking>
+    </skillGains>
+	<!--
+	<passions Inherit="False">
+		<li>
+			<skill>Cooking</skill>
+			<xp>2</xp>
+		</li>
+	</passions>
+	-->
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="GnomeBackstories">
+    <defName>Gnome_Glider</defName>
+    <title>Glider Pilot</title>
+	<titleShort>glider pilot</titleShort>
+    <description>[PAWN_nameDef] flew gnome gliders all across the land. [PAWN_pronoun] had many adventures along the way.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+	  <Shooting>3</Shooting>
+	  <Intellectual>2</Intellectual>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="GnomeBackstories">
+    <defName>Gnome_Soldier</defName>
+    <title>Gnome Soldier</title>
+	<titleShort>levy</titleShort>
+    <description>[PAWN_nameDef] served in the gnome army. [PAWN_pronoun] defended the gnome homeland from many foes.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>3</Melee>
+	  <Shooting>3</Shooting>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="GnomeBackstories">
+    <defName>Gnome_Noble</defName>
+    <title>Gnoble</title>
+	<titleShort>Gnoble</titleShort>
+    <description>[PAWN_nameDef] was among the highest in the social hierarchy of the gnomes. [PAWN_pronoun] never had to do manual labor.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>6</Melee>
+	  <Social>3</Social>
+	  <Crafting>3</Crafting>
+	  <Cooking>3</Cooking>
+    </skillGains>
+	<workDisables>
+	  <li>ManualDumb</li>
+    </workDisables>
+	<spawnCategories Inherit="False">
+      <li>GnobleBackstory</li>
+    </spawnCategories>
+	<!--
+	<passions Inherit="False">
+		<li>
+			<skill>Cooking</skill>
+			<xp>2</xp>
+		</li>
+	</passions>
+	-->
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="GnomeBackstories">
+    <defName>Gnome_Froggy</defName>
+    <title>Frog Handler</title>
+	<titleShort>frog handler</titleShort>
+    <description>[PAWN_nameDef] was in charge of gathering the frogs in the gnome stronghold's ponds.[PAWN_pronoun] acquired a deep respect for the amphibians during this time.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Animals>5</Animals>
+	  <Cooking>2</Cooking>
+    </skillGains>
+	<!--
+	<workDisables>
+	  <li>PlantWork</li>
+    </workDisables>
+	-->
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="GnomeBackstories">
+    <defName>Gnome_Crafter</defName>
+    <title>Gnome Tailor</title>
+	<titleShort>tailor</titleShort>
+    <description>[PAWN_nameDef] owned a small clothing store, where [PAWN_pronoun] made [PAWN_possessive] own clothes for sale.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Crafting>6</Crafting>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="GnomeBackstories">
+    <defName>Gnome_Ambassador</defName>
+    <title>Ambassador</title>
+	<titleFemale>Ambassatrix</titleFemale>
+	<titleShort>ambassador</titleShort>
+    <description>[PAWN_nameDef] served as an ambassador from a gnome stronghold to many foreign lands. This gave [PAWN_pronoun] a knowledge of other lands that most gnomes lack.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>8</Social>
+	  <Intellectual>2</Intellectual>
+    </skillGains>
+	<!--
+	<passions Inherit="False">
+		<li>
+			<skill>Social</skill>
+			<xp>1</xp>
+		</li>
+		<li>
+			<skill>Cooking</skill>
+			<xp>1</xp>
+		</li>
+	</passions>
+	-->
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="GnomeBackstories">
+    <defName>Gnome_Engineer</defName>
+    <title>Gnome Engineer</title> 
+	<titleShort>engineer</titleShort>
+    <description>[PAWN_nameDef] developed new machines to serve the gnome people.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Crafting>4</Crafting>
+	  <Construction>4</Construction>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="GnomeBackstories">
+    <defName>Gnome_Sage</defName>
+    <title>Gnome Sage</title>
+	<titleShort>Sage</titleShort>
+    <description>[PAWN_nameDef] was a Gnome Sage, which is a Gnome who is deeply connected to the world's life force.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Plants>8</Plants>
+	  <Animals>4</Animals>
+    </skillGains>
+	<!--
+	<passions Inherit="False">
+		<li>
+			<skill>Plants</skill>
+			<xp>2</xp>
+		</li>
+		<li>
+			<skill>Animals</skill>
+			<xp>1</xp>
+		</li>
+	</passions>
+	-->
+  </AlienRace.AlienBackstoryDef>
+</Defs>

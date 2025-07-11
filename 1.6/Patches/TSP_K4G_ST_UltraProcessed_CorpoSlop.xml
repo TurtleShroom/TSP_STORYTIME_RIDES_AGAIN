@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="K4G_CookFastFood"]/researchPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="K4G_CookFastFood"]</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites Inherit="False"></researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="K4G_CookFastFoodBulk"]/researchPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="K4G_CookFastFoodBulk"]</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites Inherit="False"></researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ResearchProjectDef[defName="VCE_DeepFrying"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName = "K4G_CookFastFood" or defName = "K4G_CookFastFoodBulk"]/researchPrerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites Inherit="False">
+					<li MayRequire="vanillaexpanded.vcooke">VCE_DeepFrying</li>
+				</researchPrerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_DeepFrier"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName = "K4G_CookFastFood" or defName = "K4G_CookFastFoodBulk"]/recipeUsers</xpath>
+			<success>Always</success>
+			<value>
+				<recipeUsers Inherit="False">
+					<li MayRequire="vanillaexpanded.vcooke">VCE_DeepFrier</li>
+					<li MayRequire="zal.witchinghour">Cauldron</li>
+					<li MayRequire="mlie.capraracemod">CACauldron</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+				</recipeUsers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="K4G_FastFood"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<RecipeDef ParentName="CookMealBase">
+					<defName>TSP_ST_K4G_CorpoSlop</defName>
+					<label>formulate ultra-processed corpo-slop from toxins</label>
+					<description>Refine the worst ingredients into the best tasting, ultra-processed meals in the galaxy. These are full of preservatives, strange chemicals, dyes, and other mysterious slop... but it tastes... so..... gooooood............</description>
+					<jobString>Terrifying RFK2.</jobString>
+					<workSpeedStat>CookSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_CookMeal</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients Inherit="False">
+						<li>
+							<filter>
+								<customSummary>waste, toxins</customSummary>
+								<categories>
+									<!--
+									<li MayRequire="dubwise.dubsbadhygiene">Waste</li>
+									<li MayRequire="tsp.bathroomhumor">DZ_TurdProductRaw</li>
+									<li MayRequire="vanillaexpanded.recycling">VRecyclingE_SpecializedPacks</li>
+									<li MayRequire="wpm.jerry">WPM_barrelcategory</li>
+									-->
+								</categories>
+								<thingDefs Inherit="False">
+									<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
+									<li MayRequire="vanillaexpanded.recycling">VRecyclingE_Trash</li>
+									<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+									<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
+									<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
+									<li MayRequire="TSP.Isengriff.Storytime">GoblinCrack</li>
+									<li MayRequire="TSP.Isengriff.Storytime">WW_HeavenDust</li>
+									<li MayRequire="TSP.Isengriff.Storytime">ST_ProfaneNog</li>
+									<li MayRequire="TSP.Isengriff.Storytime">WerefrogBlood</li>
+									<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
+								</thingDefs>
+								<disallowedCategories>
+									<li>FoodMeals</li>
+								</disallowedCategories>
+								<disallowedThingDefs>
+									<li MayRequire="ludeon.rimworld.biotech">Wastepack</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>20</count>
+						</li>
+					</ingredients>
+					<products>
+						<K4G_FastFood>1</K4G_FastFood>
+					</products>
+					<fixedIngredientFilter Inherit="False">
+						<categories>
+							<!--
+							<li MayRequire="dubwise.dubsbadhygiene">Waste</li>
+							<li MayRequire="tsp.bathroomhumor">DZ_TurdProductRaw</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_SpecializedPacks</li>
+							<li MayRequire="wpm.jerry">WPM_barrelcategory</li>
+							-->
+						</categories>
+						<thingDefs Inherit="False">
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_Trash</li>
+							<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
+							<li MayRequire="TSP.Isengriff.Storytime">GoblinCrack</li>
+							<li MayRequire="TSP.Isengriff.Storytime">WW_HeavenDust</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_ProfaneNog</li>
+							<li MayRequire="TSP.Isengriff.Storytime">WerefrogBlood</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
+						</thingDefs>
+						<disallowedThingDefs>
+							<li MayRequire="ludeon.rimworld.biotech">Wastepack</li>
+						</disallowedThingDefs>
+						<disallowedCategories>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_SpecializedPacks</li>
+							<li MayRequire="wpm.jerry">WPM_barrelcategory</li>
+							<li MayRequire="tsp.bathroomhumor">DZ_TurdProductRaw</li>
+							<li MayRequire="dubwise.dubsbadhygiene">Waste</li>
+							<li>FoodMeals</li>
+						</disallowedCategories>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter Inherit="False">
+						<categories></categories>
+						<thingDefs>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_Trash</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
+						</thingDefs>
+						<disallowedCategories>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_SpecializedPacks</li>
+							<li MayRequire="wpm.jerry">WPM_barrelcategory</li>
+							<li MayRequire="tsp.bathroomhumor">DZ_TurdProductRaw</li>
+							<li MayRequire="dubwise.dubsbadhygiene">Waste</li>
+						</disallowedCategories>
+						<disallowedThingDefs>
+							<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
+							<li MayRequire="TSP.Isengriff.Storytime">GoblinCrack</li>
+							<li MayRequire="TSP.Isengriff.Storytime">WW_HeavenDust</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_ProfaneNog</li>
+							<li MayRequire="TSP.Isengriff.Storytime">WerefrogBlood</li>
+						</disallowedThingDefs>
+					</defaultIngredientFilter>
+					<recipeUsers>
+						<li>ElectricStove</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_DeepFrier</li>
+						<li MayRequire="zal.witchinghour">Cauldron</li>
+						<li MayRequire="mlie.capraracemod">CACauldron</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+					</recipeUsers>
+					<researchPrerequisites Inherit="False">
+						<li MayRequire="vanillaexpanded.vcooke">VCE_DeepFrying</li>
+					</researchPrerequisites>
+					<workSkill>Cooking</workSkill>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_DeepFrier"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName="TSP_ST_K4G_CorpoSlop"]/recipeUsers</xpath>
+			<success>Always</success>
+			<value>
+				<recipeUsers Inherit="False">
+					<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					<li MayRequire="vanillaexpanded.vcooke">VCE_DeepFrier</li>
+					<li MayRequire="zal.witchinghour">Cauldron</li>
+					<li MayRequire="mlie.capraracemod">CACauldron</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+				</recipeUsers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>

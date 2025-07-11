@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="TSP_WW_DrugBase">
+		<defName>D_OWC</defName>
+		<label>Determination</label>
+		<description>This drug was first produced after studying the regenerative capabilities of Phoenix Owlcats on a distant glitterworld. The families of scientists who worked on the project still live in abundance, as their predecessors came up with an ingenious scheme - designating for the public the method of the drug as sparing. They blocked the endless cell division triggered by the drug's mechanites, causing themselves a continuous stream of buyers, since you can only get the effect of it once in a lifetime. \n \n No matter how much money a person spends, he will receive extra lives only once. Such was the ideology of the scientists of the distant Glitter World, which allowed them to receive a stable income and power on their planet. \n \n Any inhabitant of the galaxy (even from any Rim World) can apply via the console built into the fabrication bench and by paying a one-time subscription to the program, he will receive a program for mechanites and instructions on how to reprogram the material to obtain this premium product. Become like your favorite pet and the mascot of our company, and use your new abilities wisely, as there will be no refund! \n \n \n Sincerely yours, \n ███Corp</description>
+		<graphicData>
+			<texPath>Things/Items/Drugs/D_OWC</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>1500</MarketValue>
+			<Mass>0.01</Mass>
+			<Nutrition>3</Nutrition>
+		</statBases>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<foodType>Processed, Liquor, Kibble</foodType>
+			<joy>1.5</joy>
+			<drugCategory>Hard</drugCategory>
+			<ingestSound>Ingest_Pill</ingestSound>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="sarg.alphaanimals">
+					<hediffDef MayRequire="sarg.alphaanimals">AA_Resurrection</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<techLevel>Ultra</techLevel>
+		<tradeability>None</tradeability>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>1.00</min>
+					<max>1.00</max>
+				</overdoseSeverityOffset>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>StorytimeDrugs</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<RecipeDef ParentName="TSP_WW_DrugRecipe_Base">
+		<defName>MakeD_OWC</defName>
+		<label>dispense Determination</label>
+		<description>Due to a deal struck eons ago in the Core Worlds, every Fabrication Bench comes with a special slot, from which a program sold by ███Corp reprograms Luciferium pieces into Determination. Spice up one's life with just one thousand five hundred pieces of silver (plus transactions fee)!</description>
+		<jobString>processing transaction</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<!-- <workSkill>Crafting</workSkill> -->
+		<effectWorking>Cook</effectWorking>
+		<workAmount>1</workAmount>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<recipeUsers Inherit="False">
+			<li>FabricationBench</li>
+			<li MayRequire="owen.ark">OP_MagicTable</li>
+			<li MayRequire="baskerville.hellsingarmsultimate">HSAU_SoulForge</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Luciferium</li>
+						<li MayRequire="lolxy.starcraftcore.1">Quartz</li>
+						<li MayRequire="lolxy.starcraftcore.1">Minerals</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>150</count> <!-- Multipled by ten -->
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Luciferium</li>
+				<li>Silver</li>
+				<li MayRequire="lolxy.starcraftcore.1">Minerals</li>
+				<li MayRequire="lolxy.starcraftcore.1">Quartz</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<D_OWC>1</D_OWC>
+		</products>
+		<researchPrerequisites>
+			<li>Fabrication</li>
+		</researchPrerequisites>
+	</RecipeDef>
+</Defs>

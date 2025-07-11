@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="RoughPlantBase">
+		<defName>ST_ShreddedCoconut</defName>
+		<label>shredded coconut</label>
+		<description>The flesh of coconuts, shredded into delicious seasonings. Foods baring it have an added sweetness that goes fantastic on top of seafood.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/Condiments/ShreddedCoconut</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1.15</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.2</MarketValue>
+			<Flammability>2</Flammability>
+			<Nutrition>0.02</Nutrition>
+		</statBases>
+		<stackLimit>750</stackLimit>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>PlantFoodRaw</li>
+			<li MayRequire="vanillaexpanded.vcooke" Inherit="False">VCE_Condiments</li>
+		</thingCategories>
+		<ingestible>
+			<foodType>VegetableOrFruit, Plant, VegetarianRoughAnimal, VegetarianAnimal</foodType>
+			<specialThoughtDirect>TSP_ST_ShreddedCoconut_Direct</specialThoughtDirect>
+			<specialThoughtAsIngredient>TSP_ST_DoesCoconutShrimpHaveCoconuts_Thought</specialThoughtAsIngredient>
+			<babiesCanIngest>true</babiesCanIngest>
+		</ingestible>
+		<modExtensions>
+			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+				<water>0.19</water>
+				<UseForWashing>false</UseForWashing>
+				<SeekForThirst>false</SeekForThirst>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>  
+    

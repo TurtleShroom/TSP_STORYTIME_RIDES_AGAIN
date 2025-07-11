@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AlienRace.AlienBackstoryDef Name="FrogBackstories" Abstract="True">
+	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+	<!--
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+	-->
+	<spawnCategories>
+      <li>FrogPersonBackstory</li>
+    </spawnCategories>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>Buglover</defName>
+				</li>
+				<li MayRequire="higgs.cozarkian.entomophagy">
+					<defName MayRequire="higgs.cozarkian.entomophagy">Entomophagous</defName>
+				</li>
+			</options>
+			<count>1</count>
+			<chance>18</chance>
+		</li>
+	</forcedTraitsChance>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_Flycatcher</defName>
+    <title>bug catcher</title>
+	<titleShort>bug catcher</titleShort>
+    <description>[PAWN_nameDef] caught insects along with many others from [PAWN_possessive] tribe, an important task in the community. </description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Cooking>5</Cooking>
+	  <Shooting>2</Shooting>
+    </skillGains>
+	<spawnCategories Inherit="False">
+		<li>FrogPersonBackstory</li>
+		<li>InsectsRelated</li>
+		<li>TribalHunter</li>
+		<li>TribalFarmer</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>ESCP_DunmerBackstory_Childhood</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_ChiefsTadpole</defName>
+    <title>Chief's Tadpole</title>
+	<titleShort>chief's child</titleShort>
+    <description>[PAWN_nameDef] was the child of [PAWN_possessive] tribe's chief.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>6</Social>
+      <Intellectual>3</Intellectual>
+    </skillGains>
+	<workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_TransformedDruid</defName>
+    <title>Transformed Druid</title>
+	<titleShort>ex-druid</titleShort>
+    <description>[PAWN_nameDef] was once a druid who reached a great age before deciding to transform into a frogman and start over with his life. [PAWN_pronoun] retained much of [PAWN_possessive] wisdom.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+		<Intellectual>10</Intellectual>
+	</skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName Degree="-1">HAR_Xenophobia</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+	</forcedTraitsChance>
+	<requiredWorkTags>
+		<li>Social</li>
+		<li>Intellectual</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_SwampChild</defName>
+    <title>Lost Tadpole</title>
+	<titleShort>runaway</titleShort>
+    <description>[PAWN_nameDef] swam away from the tadpole pond while no one was looking, and was forced to grow up alone among the frogs of the swamp.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>3</Melee>
+	  <Animals>5</Animals>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_WarriorTrainee</defName>
+    <title>Warrior Trainee</title>
+	<titleShort>trainee</titleShort>
+    <description>[PAWN_nameDef] spent [PAWN_possessive] childhood training to become one of [PAWN_possessive] tribe's elite warriors.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>6</Melee>
+	  <Shooting>6</Shooting>
+    </skillGains>
+	<workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+ 
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_Alchemist</defName>
+    <title>Frog Alchemist</title>
+	<titleShort>insect alchemist</titleShort>
+    <description>[PAWN_nameDef] practiced the art of frog alchemy, transmuting ingredients into insect meat to aid his people.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Crafting>3</Crafting>
+	  <Intellectual>5</Intellectual>
+    </skillGains>
+	<spawnCategories Inherit="False">
+		<li>FrogPersonBackstory</li>
+		<li>Scientist</li>
+		<li>Tribal</li>
+		<li>InsectsRelated</li>
+		<li>ESCP_BosmerBackstory_Adulthood</li>
+		<li>ESCP_DunmerBackstory_Adulthood</li>
+		<li>ESCP_DunmerTelvanniBackstory_Adulthood</li>
+		<li>ESCP_BosmerBackstory_Childhood</li>
+		<li>ArgonianBackstory</li>
+	</spawnCategories>
+	<requiredWorkTags>
+		<li>Intellectual</li>
+	</requiredWorkTags>
+	<forcedTraitsChance Inherit="False">
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+		<li>
+			<options>
+					<li MayRequire="higgs.cozarkian.entomophagy">
+						<defName MayRequire="higgs.cozarkian.entomophagy">Entomophagous</defName>
+					</li>
+					<li>
+						<defName>Buglover</defName>
+					</li>
+			</options>
+			<count>1</count>
+			<chance>75</chance>
+		</li>
+	</forcedTraitsChance>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_FrogKeeper</defName>
+    <title>Frog Keeper</title>
+	<titleShort>frog keeper</titleShort>
+    <description>[PAWN_nameDef] tended to [PAWN_possessive] tribe's army of tamed frogs.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Animals>6</Animals>
+    </skillGains>
+	<spawnCategories>
+		<li>FrogPersonBackstory</li>
+		<li>ESCP_BosmerBackstory_Adulthood</li>
+		<li>ArgonianBackstory</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_Chieftain</defName>
+    <title>Frog Chieftain</title> 
+	<titleShort>chieftan</titleShort>
+    <description>[PAWN_nameDef] was a notable leader of [PAWN_possessive] tribe.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>8</Social>
+    </skillGains>
+	<workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_FrogPoacher</defName>
+    <title>Sapient Frog Poacher</title> 
+	<titleShort>cannibal poacher</titleShort>
+    <description>[PAWN_nameDef] abandoned [PAWN_possessive] tribe and survived by killing and eating the non-sapient frogs of the swamp, a horrible crime in Frogman society. [PAWN_pronoun] eventually developed a taste for much smarter frogs...</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Shooting>5</Shooting>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<defName>Cannibal</defName>
+			</options>
+			<chance>100</chance>
+		</li>
+    </forcedTraitsChance>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_TadpoleTender</defName>
+    <title>Tadpole Tender</title>
+	<titleShort>babysitter</titleShort>
+    <description>[PAWN_nameDef] watched the young tadpoles, keeping them safe from predators and the environment until they were able to survive on their own.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Animals>2</Animals>
+	  <Social>2</Social>
+    </skillGains>
+	<requiredWorkTags>
+		<li>Caring</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_Warrior</defName>
+    <title>Frog Warrior</title>
+	<titleShort>warrior</titleShort>
+    <description>[PAWN_nameDef] protected the tribe as an elite warrior.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Shooting>5</Shooting>
+	  <Melee>5</Melee>
+    </skillGains>
+	<workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_FlyChef</defName>
+    <title>entomophage cook</title>
+	<titleShort>Fly Chef</titleShort>
+    <description>[PAWN_nameDef] cooked insect meat into delicious meals such as fly quiche, fly cake, and fly soup.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Cooking>8</Cooking>
+    </skillGains>
+	<forcedTraitsChance Inherit="False">
+		<li>
+			<options>
+				<li>
+					<defName>Buglover</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+	</forcedTraitsChance>
+	<spawnCategories>
+		<li>FrogPersonBackstory</li>
+		<li>InsectsRelated</li>
+		<li>ESCP_DunmerBackstory_Adulthood</li>
+		<li>ESCP_BosmerBackstory_Adulthood</li>
+		<li>GnomeBackstory</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>  
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_Puppeteer</defName>
+    <title>Puppeteer</title>
+	<titleShort>puppeteer</titleShort>
+    <description>Growing up, [PAWN_nameDef] was passionate about making and playing with puppets. [PAWN_pronoun] would frequently operate puppets to entertain [PAWN_possessive] fellow children.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>4</Social>
+	  <Crafting>2</Crafting>
+    </skillGains>
+	<spawnCategories>
+		<li>Outsider</li>
+		<li>Outlander</li>
+		<li>FrogPersonBackstory</li>
+		<li>ESCP_FalmerBackstory_Childhood</li>
+		<li>ESCP_AltmerBackstory_Childhood</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>  
+  
+  <AlienRace.AlienBackstoryDef ParentName="FrogBackstories">
+    <defName>Frog_FrogSupremecist</defName>
+    <title>Frog Supremecist</title>
+	<titleShort>supremacist</titleShort>
+    <description>[PAWN_nameDef] believes that frogmen are the greatest race in the universe, and superior to all others.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>-5</Social>
+	  <Melee>5</Melee>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName Degree="1">HAR_Xenophobia</defName> <!-- No MAYREQUIRE because it is built in with HAR, which is a dependency -->
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+	</forcedTraitsChance>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+</Defs>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseSkeleton">
+    <defName>ST_GunSkeleton</defName>
+    <label>Gun Skeleton Pirate</label>
+    <description>Once a pirate, this skeleton is part of a pirate crew that willingly gave up its members' souls in exchange for eternal life. Today, they wander the Rim in search of treasure. As he did in life, this skeleton just straight-up packs heat. Simple as.</description>
+    <statBases>
+      <MoveSpeed>3.0</MoveSpeed>
+      <MarketValue>250</MarketValue>
+	  <Flammability>0.5</Flammability>
+	  <MinimumContainmentStrength MayRequire="ludeon.rimworld.anomaly">30</MinimumContainmentStrength>
+    </statBases>
+    <tools>
+      <li>
+        <label>left hand</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hand</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+		<label>jawbone</label>
+        <capacities>
+          <li>Bite</li>
+		  <!-- <li>Burn</li> -->
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <race>
+	  <intelligence>ToolUser</intelligence>
+      <body>TSP_ST_SkeletalMan</body>
+		<deathAction>
+			<workerClass>DeathActionWorker_SmallExplosion</workerClass>
+		</deathAction>
+      <baseBodySize>1</baseBodySize>
+      <baseHungerRate>0</baseHungerRate>
+      <baseHealthScale>0.6</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseSkeletonKind">
+    <defName>ST_GunSkeleton</defName>
+    <label>Gun Skeleton Pirate</label>
+    <race>ST_GunSkeleton</race>
+    <combatPower>100</combatPower>
+	<canArriveManhunter>false</canArriveManhunter>
+	<destroyGearOnDrop>true</destroyGearOnDrop>
+    <lifeStages>
+      <li>
+        <label>Gun Skeleton Pirate</label>
+        <labelPlural>Gun Skeleton Pirates</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/Skeletons/GunSkeleton/GunSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Other/Skeletons/GunSkeleton/GunSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li MayRequire="ludeon.rimworld.anomaly">
+        <label>Gun Skeleton Pirate</label>
+        <labelPlural>Gun Skeleton Pirates</labelPlural>
+        <bodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Other/Skeletons/GunSkeleton/GunSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Other/Skeletons/GunSkeleton/GunSkeleton</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+	<weaponMoney>275~15000</weaponMoney>
+	<weaponTags>
+		<li>SkeletonCrypto</li>
+		<li>CryptoRanged</li>
+		<li>GunAdvanced</li>
+		<li>IndustrialMilitaryAdvanced</li>
+		<li>SkeletonRanged</li>
+		<li>SpacerGun</li>
+		<li>RangedHeavy</li>
+		<li>GunHeavy</li>
+		<li>MechanoidGunHeavy</li>
+		<li>SamuraiRangedHeavy</li>
+		<li>Rifle</li>
+		<li>RWPRifle</li>
+		<li>Enclave</li>
+		<li>Revolver</li>
+		<li>BoS</li>
+		<li>Gun</li>
+    </weaponTags>
+    <inventoryOptions>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>CursedCoin</thingDef>
+          <countRange>1~6</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+</Defs>

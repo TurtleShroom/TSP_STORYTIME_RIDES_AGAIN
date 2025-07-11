@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<HediffDef>
+		<defName>Hediff_CoconutFrog</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>When a coconut frog is killed, its remaining cysts that naturally grow to forms that are identical to coconuts will then sprout, forming a coconut tree.</description>
+		<label>coconut cysts</label>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		<comps>
+			<li Class="StoryTime.HediffCompProperties_CoconutDeath">
+				<targetCoconut>Rylex_Tree_CoconutPalm</targetCoconut>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>ST_LivingCoconut</defName>
+		<label>coconut frog</label>
+		<description>Genetically engineered using the same basic process as a tomato frog, the coconut frog grows cysts that, when cut, are totally indistinguishable from real coconuts. These cysts provide it with significant natural armor. When a coconut frog is killed, its remaining cysts that naturally grow into forms identical to coconuts will sprout into a coconut tree.</description>
+		<statBases>
+			<MoveSpeed>1.5</MoveSpeed>
+			<MarketValue>150</MarketValue>
+			<ComfyTemperatureMin>5</ComfyTemperatureMin>
+			<ComfyTemperatureMax>45</ComfyTemperatureMax>
+			<LeatherAmount>30</LeatherAmount>
+			<MeatAmount>30</MeatAmount>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ToxicResistance>1</ToxicResistance>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<Flammability>1</Flammability>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+		</statBases>
+		<uiIconPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</uiIconPath>
+		<uiIconScale>1.25</uiIconScale>
+		<tools>
+			<li>
+				<label>front-left hand</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+			<li>
+				<label>front-right hand</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+			<li>
+				<label>vomerine teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>1</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<thinkTreeMain>Animal</thinkTreeMain>
+			<thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+			<bloodDef>Filth_Sand</bloodDef>
+			<wildBiomes Inherit="False">
+				<!-- RimWorld.Core -->
+				<!-- VANILLA RENDITION -->
+
+				<BorealForest>0</BorealForest>
+
+				<Tundra>0</Tundra>
+
+				<ColdBog>0</ColdBog>
+
+				<IceSheet>0</IceSheet>
+
+				<SeaIce>0</SeaIce>
+
+				<TemperateForest>0.001</TemperateForest>
+
+				<TemperateSwamp>0.01</TemperateSwamp>
+
+				<TropicalRainforest>0.2</TropicalRainforest>
+
+				<TropicalSwamp>0.1</TropicalSwamp>
+
+				<AridShrubland>0.001</AridShrubland>
+
+				<Desert>0</Desert>
+
+				<ExtremeDesert>0</ExtremeDesert>
+
+
+
+
+
+				<!-- ___________________ -->			
+				<!-- Mod Biomes -->
+				<!-- ___________________ -->
+
+				<!-- sarg.alphabiomes -->
+				<!-- ALPHA BIOMES -->
+
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.2</AB_FeraliskInfestedJungle>
+
+				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.001</AB_GallatrossGraveyard>
+
+				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.001</AB_GelatinousSuperorganism>
+
+				<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">0</AB_MechanoidIntrusion>
+
+				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.03</AB_MycoticJungle>
+
+				<AB_OcularForest MayRequire="sarg.alphabiomes">0.001</AB_OcularForest>
+
+				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0</AB_PropaneLakes>
+
+				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0</AB_PyroclasticConflagration>
+
+				<AB_RockyCrags MayRequire="sarg.alphabiomes">0</AB_RockyCrags>
+
+				<AB_TarPits MayRequire="sarg.alphabiomes">0.05</AB_TarPits>
+
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.06</AB_MiasmicMangrove>
+
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.001</AB_IdyllicMeadows>
+
+
+
+
+				<!-- ___________________ -->
+
+				<!-- BiomesTeam.Oasis -->
+				<!-- CHROMATIC OASIS -->
+
+				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.2</BMT_ChromaticOasis>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.AdvancedBiomes -->
+				<!-- ADVANCED BIOMES -->
+
+				<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.001</PoisonForest>
+
+				<Savanna MayRequire="Mlie.AdvancedBiomes">0</Savanna>
+
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.05</Volcano>
+
+				<Wasteland MayRequire="Mlie.AdvancedBiomes">0</Wasteland>
+
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.08</Wetland>
+
+
+				<!-- ___________________ -->
+
+				<!-- zylle.MoreVanillaBiomes -->
+				<!-- More Vanilla Biomes -->
+
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_AlpineMeadow>
+
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.08</ZBiome_CloudForest>
+
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.2</ZBiome_CoastalDunes>
+
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.2</ZBiome_DesertOasis>
+
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_Grasslands>
+
+				<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">0</ZBiome_Iceberg_NoBeach>
+
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.09</ZBiome_Marsh>
+
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">1</ZBiome_Sandbar_NoBeach>
+				
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0</ZBiome_GlacialShield>
+				
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_Badlands>
+
+
+				<!-- ___________________ -->
+
+				<!-- Mlie.NaturesPrettySweet -->
+				<!-- NATURE IS PRETTY SWEET -->
+
+				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.01</TKKN_VolcanicFlow>
+
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_RedwoodForest>
+
+				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_Grasslands> <!-- PRAIRIE -->
+
+				<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_Savanna>
+
+				<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">0</TKKN_Desert> <!-- SALT FIELDS -->
+
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.2</TKKN_Oasis>			
+
+
+				<!-- ___________________ -->
+
+				<!-- Heis.Edo.Themed.Expansion -->
+				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+
+				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.009</HSBambooForest>
+
+
+				<!-- _________________ -->
+
+				<!-- BiomesTeam.BiomesIslands -->
+				<!-- BIOMES ISLANDS -->
+
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.2</BiomesIslands_Atoll>
+
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_BorealIsland>
+
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_DesertIsland>
+
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_DesertArchipelago>
+
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TemperateIsland>
+
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TemperateArchipelago>
+
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.25</BiomesIslands_TropicalIsland>
+
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.25</BiomesIslands_TropicalArchipelago>
+
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TundraIsland>
+
+
+
+				<!-- ___________________ -->
+
+				<!-- reel.FrozenForest -->
+				<!-- WINTER TAIGA -->
+
+				<WinterTaiga MayRequire="reel.FrozenForest">0</WinterTaiga>
+
+
+
+				<!-- __________________ -->
+
+				<!-- SirMashedPotato.MorrowRim -->
+				<!-- "MORROWIND" MOD -->
+
+				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0</MorrowRim_Ashlands>
+
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0</MorrowRim_BlightedAshlands>
+
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.02</MorrowRim_AshSwamp>
+
+				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0.08</MorrowRim_VolcanicAshlands>
+
+
+
+				<!-- ___________________ -->
+
+				<!-- pphhyy.gulden -->
+				<!-- FOREST OF GOLD -->
+
+				<TemperateGuldenForest MayRequire="pphhyy.gulden">0.001</TemperateGuldenForest>
+
+				<LotRE_MallornForest MayRequire="lordoftherims.elves">0.01</LotRE_MallornForest>
+
+
+				<!-- ___________________ -->
+
+				<!-- deemainiac.securecontainrimworld -->
+				<!-- SCP FOUNDATION -->
+
+				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0</SCR_SCP610Biome>
+
+
+
+				<!-- _________________ -->
+
+				<!-- regrowth.botr.volcanicicesheet -->
+				<!-- VOLCANIC ICE SHEET -->
+
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.001</RG-VIS_VulcanicIceSheet> <!-- Make me, Helixian. MAKE ME. -->
+				
+				
+				
+				<!-- _________________ -->
+				
+				<!-- ironscruff.primordialgeysers -->
+				<!-- PRIMORDIAL GEYSERS -->
+				
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.008</IronScruff_PrimordialGeysers>
+			</wildBiomes>
+			<body>ST_FrogLike</body>
+			<petness>0</petness>
+			<needsRest>true</needsRest>
+			<hasGenders>true</hasGenders>
+			<baseBodySize>1</baseBodySize>
+			<baseHungerRate>0.4</baseHungerRate>
+			<baseHealthScale>3</baseHealthScale>
+			<gestationPeriodDays>80</gestationPeriodDays>
+			<nameOnTameChance>1</nameOnTameChance>
+			<trainability>Intermediate</trainability>
+			<Wildness>0.4</Wildness>
+			<nuzzleMtbHours>19</nuzzleMtbHours>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+			<useMeatFrom>ST_BullFrog</useMeatFrom>
+			<leatherDef>Rylex_Coconut</leatherDef>
+			<foodType>VegetarianAnimal, VegetarianRoughAnimal, Plant, Fluid, Meal, Kibble</foodType>
+			<lifeExpectancy>20</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>CoconutAngry</soundDeath>
+					<soundAngry>Frog_Angry</soundAngry> 
+					<soundCall>CoconutNeutral</soundCall>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.096</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>CoconutAngry</soundDeath>
+					<soundAngry>Frog_Angry</soundAngry> 
+					<soundCall>CoconutNeutral</soundCall>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.45</minAge>
+					<soundWounded>CoconutAngry</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>CoconutNeutral</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>CoconutAngry</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>CoconutAngry</soundMeleeHitBuilding>
+			<soundMeleeMiss>CoconutNeutral</soundMeleeMiss>      
+			<nameGenerator>FrogNamerMale</nameGenerator>
+			<nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
+		</race>
+		<tradeTags>
+			<li>AnimalExotic</li>
+			<li>StorytimeAnimalRare</li>
+			<li>AnimalFrog</li>
+		</tradeTags>
+		<thingCategories Inherit="False">
+			<li>Animals</li>
+		</thingCategories>
+		<recipes>
+			<li>Euthanize</li>
+			<li>Anesthetize</li>
+		</recipes>   
+		<comps>
+			<li Class="StoryTime.CompProperties_Tomato">
+				<tomatoDef>Rylex_Coconut</tomatoDef>
+				<tomatoIntervalDays>1</tomatoIntervalDays>
+				<tomatoAmount>5</tomatoAmount>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<hediffname>Hediff_CoconutFrog</hediffname>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<needsDiggableTerrain>true</needsDiggableTerrain>
+				<gizmoImage>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</gizmoImage>
+				<gizmoLabel>ST_WoodFrog_CommandLabel</gizmoLabel>
+				<gizmoDesc>ST_WoodFrog_CommandDesc</gizmoDesc>
+				<defToChangeTo>Rylex_Tree_CoconutPalm</defToChangeTo>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRoleSecondary</li>
+					<li>ST_FrogRarity</li>
+				</statToAdd>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<li>ST_FrogFoodProduction</li>
+					<li>ST_MeleeTank</li>
+					<li>ST_FrogRare</li>
+				</statValues>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<li>ST_FrogProductionDesc</li>
+					<li>ST_MeleeTankDesc</li>
+					<li>ST_FrogRareDesc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+	</ThingDef>
+  
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>ST_LivingCoconut</defName>
+		<label>coconut frog</label>
+		<race>ST_LivingCoconut</race>
+		<combatPower>100</combatPower>
+		<ecoSystemWeight>30</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<labelPlural>living coconuts</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Frog_Types/Tomato_Frog/TomatoFrog</texPath>
+					<drawSize>0.6</drawSize>
+					<color Inherit="False">(65, 65, 1)</color>
+					<shadowData>
+						<volume>(0.25, 0.3, 0.25)</volume>
+						<offset>(0,0,0)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</texPath>
+					<drawSize>1.25</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<labelPlural>living coconuts</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Frog_Types/Tomato_Frog/TomatoFrog</texPath>
+					<drawSize>0.8</drawSize>
+					<color Inherit="False">(65, 65, 1)</color>
+					<shadowData>
+						<volume>(0.25, 0.3, 0.25)</volume>
+						<offset>(0,0,0)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</texPath>
+					<drawSize>1.25</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<labelPlural>living coconuts</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Frog_Types/Tomato_Frog/TomatoFrog</texPath>
+					<drawSize>1</drawSize>
+					<color Inherit="False">(65, 65, 1)</color>
+					<shadowData>
+						<volume>(0.25, 0.3, 0.25)</volume>
+						<offset>(0,0,0)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</texPath>
+					<drawSize>1.25</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>  
+</Defs>

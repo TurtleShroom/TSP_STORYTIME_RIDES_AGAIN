@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraderKindDef>
+    <defName>Orbital_Pizza</defName>
+    <label>pizza trader</label>
+    <orbital>true</orbital>
+    <stockGenerators>  
+		<!-- Resources -->
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>ST_WormPizza</thingDef>
+			<countRange>20~190</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>ST_CheesePizza</thingDef>
+			<countRange>25~80</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>ST_MeatPizza</thingDef>
+			<countRange>2~90</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>ST_VegetablePizza</thingDef>
+			<countRange>2~90</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>ST_ProcessedCheese</thingDef>
+			<countRange>50~400</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>TomatoCyst</thingDef>
+			<countRange>80~200</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="vanillaexpanded.vplantse">
+			<thingDef MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</thingDef>
+			<countRange MayRequire="vanillaexpanded.vplantse">100~200</countRange>
+		</li>
+		<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vcooke">
+			<categoryDef MayRequire="vanillaexpanded.vcooke">VCE_Cheese</categoryDef>
+			<thingDefCountRange MayRequire="vanillaexpanded.vcooke">1~5</thingDefCountRange>
+			<countRange MayRequire="vanillaexpanded.vcooke">50~200</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.ingredienttime">
+			<thingDef MayRequire="onekimchiman.ingredienttime">O_TomatoSauce</thingDef>
+			<countRange MayRequire="onekimchiman.ingredienttime">80~200</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_BoringPizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">100~200</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_CheesePizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">10~60</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_PepperoniPizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">10~60</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_CombinationPizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">2~30</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_BaconPizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">2~30</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_BulgogiPizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">10~70</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_VeggiePizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">10~40</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_SteakPizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">2~30</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_MeatBallPizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">2~40</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_BoomratPizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">10~50</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="onekimchiman.pizzatime">
+			<thingDef MayRequire="onekimchiman.pizzatime">O_AmbrosiaPizza</thingDef>
+			<countRange MayRequire="onekimchiman.pizzatime">0~2</countRange>
+		</li>
+		<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly"><thingDef>Shard</thingDef></li>
+		<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly"><thingDef>Bioferrite</thingDef></li>
+    </stockGenerators>
+  </TraderKindDef>
+
+</Defs>

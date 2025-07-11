@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="BaseSkeleton">
+    <defName>ST_SkeletonCaptain</defName>
+    <label>Skeleton Captain</label>
+    <description>This skeleton was once a local charter's captain in a Pirate Faction crew, who willingly exchanged their souls in exchange for the ability to plunder for all of time. As in life, he still possesses his extraordinary power, intellect, and combat prowess.</description>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+      <MarketValue>2600</MarketValue>
+	  <Flammability>0</Flammability>
+	  <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+	  <MeatAmount Inherit="False">150</MeatAmount>
+	  <HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">1.52</HSAU_SoulRendSensitivity> <!-- The captain's power is immense and terrifying. -->
+	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_SanctusSensitivity>
+	  <MinimumContainmentStrength MayRequire="ludeon.rimworld.anomaly">85</MinimumContainmentStrength>
+    </statBases>
+    <tools>
+      <li>
+        <label>left hand</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hand</label>
+        <capacities>
+          <li>Blunt</li>
+		  <li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+		<label>jawbone</label>
+        <capacities>
+          <li>Bite</li>
+		  <li MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_Psychic</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+    </tools>
+		<verbs>
+			<li>
+				<!-- <verbClass>Verb_Shoot</verbClass> -->
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<accuracyTouch>1</accuracyTouch>
+				<accuracyShort>0.9</accuracyShort>
+				<accuracyMedium>0.61</accuracyMedium>
+				<accuracyLong>0.3</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ST_SkeletonBlast</defaultProjectile>
+				<warmupTime>1.08</warmupTime>
+				<burstShotCount>3</burstShotCount>
+				<minRange>5</minRange>
+				<range>25</range>				
+				<soundCast>Shot_NeedleGun</soundCast>
+				<muzzleFlashScale>13</muzzleFlashScale>
+				<label>ethereal skeleton blast</label>
+				<requireLineOfSight>true</requireLineOfSight>
+				<commonality>1</commonality>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+    <race>
+	  <intelligence>ToolUser</intelligence>
+      <body>TSP_ST_SkeletalMan</body>
+		<deathAction>
+			<workerClass>DeathActionWorker_SmallExplosion</workerClass>
+		</deathAction>
+	  <!-- <deathActionWorkerClass>TorannMagic.DeathWorker_Skeletal</deathActionWorkerClass> -->
+      <baseBodySize>2</baseBodySize>
+      <baseHungerRate>0</baseHungerRate>
+      <baseHealthScale>4</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+	<butcherProducts Inherit="False">
+		<BoneItem MayRequire="sihv.rombones">206</BoneItem>
+		<ST_PirateHat>1</ST_PirateHat>
+		<ST_KrakenRum>35</ST_KrakenRum>
+	</butcherProducts>
+	<comps Inherit="False">
+		<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<hediffname>HedSTUndead</hediffname>
+			<hediffseverity>1</hediffseverity>
+		</li>
+		<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<makeNonFleeingToo>true</makeNonFleeingToo>
+		</li>
+		<li Class="CompProperties_ProducesBioferrite" MayRequire="ludeon.rimworld.anomaly">
+			<bioferriteDensity>4</bioferriteDensity>
+		</li>
+		<li Class="CompProperties_Studiable" MayRequire="ludeon.rimworld.anomaly">
+			<frequencyTicks>55000</frequencyTicks>
+			<knowledgeCategory>Advanced</knowledgeCategory>
+			<anomalyKnowledge>4</anomalyKnowledge>
+			<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+			<requiresHoldingPlatform>true</requiresHoldingPlatform>
+		</li>
+		<li Class="CompProperties_HoldingPlatformTarget" MayRequire="ludeon.rimworld.anomaly">
+			<baseEscapeIntervalMtbDays>20</baseEscapeIntervalMtbDays>
+			<lookForTargetOnEscape>true</lookForTargetOnEscape>
+		</li>
+	</comps>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseSkeletonKind">
+    <defName>ST_SkeletonCaptain</defName>
+    <label>Skeleton Captain</label>
+    <race>ST_SkeletonCaptain</race>
+    <combatPower>200</combatPower>
+	<destroyGearOnDrop>true</destroyGearOnDrop>
+	<biocodeWeaponChance Inherit="False">0</biocodeWeaponChance>
+    <lifeStages>
+      <li>
+        <label>Skeleton Captain</label>
+        <labelPlural>Skeleton Captains</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/Skeletons/SkeletonCaptain/SkeletonCaptain</texPath>
+          <drawSize>2.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Humanlike/Apparel/PirateClothing/Tricorn/Tricorn</texPath>
+          <drawSize>3.05</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li MayRequire="ludeon.rimworld.anomaly">
+        <label>Skeleton Captain</label>
+        <labelPlural>Skeleton Captains</labelPlural>
+        <bodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Other/Skeletons/SkeletonCaptain/SkeletonCaptain</texPath>
+          <drawSize>2.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData MayRequire="ludeon.rimworld.anomaly">
+          <texPath>Things/Pawn/Humanlike/Apparel/PirateClothing/Tricorn/Tricorn</texPath>
+          <drawSize>3.05</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+	<weaponMoney>13000~22000</weaponMoney>
+	<weaponTags>
+		<li>SkeletonCaptain</li>
+		<li>IndustrialRangedHeavy</li>
+		<li>IndustrialHeavy</li>
+    </weaponTags>
+    <inventoryOptions>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>CursedCoin</thingDef>
+          <countRange>25~60</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+  
+  
+	<ThingDef ParentName="BaseBullet">
+		<defName>ST_SkeletonBlast</defName>
+		<label>ethereal blast</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Projectiles/TSP_ST_LoadedFemur</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Thump</damageDef>
+			<explosionRadius>3</explosionRadius>
+			<damageAmountBase>18</damageAmountBase>
+			<stoppingPower>25</stoppingPower>
+			<speed>166</speed>
+			<explosionDelay>90</explosionDelay>
+		</projectile>
+  </ThingDef>
+</Defs>

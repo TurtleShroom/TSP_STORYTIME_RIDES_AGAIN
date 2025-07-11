@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<!--===================== Misc =====================-->
+
+	<BodyPartDef>
+		<defName>VAEAF_Wheel</defName>
+		<label>car wheel</label>
+		<labelShort>wheel</labelShort>
+		<hitPoints>20</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<!--
+		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarWheel</spawnThingOnRemoved>
+		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
+		-->
+		<tags>
+			<li>MovingLimbSegment</li>
+			<li>MovingLimbDigit</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef Abstract="True" Name="VAEAF_Chassis">
+		<labelShort>chassis</labelShort>
+		<destroyableByDamage>false</destroyableByDamage>
+		<canSuggestAmputation>false</canSuggestAmputation>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<delicate>false</delicate>
+		<skinCovered>false</skinCovered>
+		<pawnGeneratorCanAmputate>false</pawnGeneratorCanAmputate>
+		<solid>true</solid>
+		<alive>false</alive>
+		<canScarify>true</canScarify>
+		<bleedRate>0</bleedRate>
+		<conceptual>false</conceptual>
+	</BodyPartDef>
+	
+	<BodyPartDef ParentName="VAEAF_Chassis">
+		<defName>TSP_VAEAF_ChassisCore</defName>
+		<label>chassis</label>
+		<hitPoints>350</hitPoints>
+		<conceptual>true</conceptual>
+		<tags></tags>
+	</BodyPartDef>
+
+	<BodyPartDef ParentName="VAEAF_Chassis">
+		<defName>VAEAF_ChassisFrontal</defName>
+		<label>frontal chassis</label>
+		<hitPoints>50</hitPoints>
+		<conceptual>false</conceptual>
+		<tags>
+			<li>Spine</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef ParentName="VAEAF_Chassis">
+		<defName>VAEAF_ChassisCentral</defName>
+		<label>central chassis</label>
+		<hitPoints>50</hitPoints>
+		<conceptual>false</conceptual>
+		<tags>
+			<li>Spine</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef ParentName="VAEAF_Chassis">
+		<defName>VAEAF_ChassisRear</defName>
+		<label>rear chassis</label>
+		<hitPoints>50</hitPoints>
+		<tags>
+			<li>Spine</li>
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>VAEAF_FrontGrille</defName>
+		<label>front grille</label>
+		<hitPoints>40</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<frostbiteVulnerability>0.001</frostbiteVulnerability>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<alive>false</alive>
+		<tags>
+			<li>BreathingPathway</li>
+			<li>BreathingSourceCage</li>
+			<!-- <li>Neck</li> -->
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>VAEAF_OnBoardComputer</defName>
+		<label>on-board computer</label>
+		<labelShort>brains</labelShort>
+		<hitPoints>10</hitPoints>
+		<permanentInjuryChanceFactor>0.5</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<delicate>true</delicate>
+		<!--
+		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarAlternator</spawnThingOnRemoved>
+		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
+		-->
+		<tags>
+			<li>ConsciousnessSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>VAEAF_Motor</defName>
+		<label>motor</label>
+		<hitPoints>88</hitPoints>
+		<permanentInjuryChanceFactor>0.5</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<alive>false</alive>
+		<delicate>true</delicate>
+		<bleedRate>2</bleedRate>
+		<!--
+		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_EngineBlock</spawnThingOnRemoved>
+		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
+		-->
+		<tags>
+			<li>BloodPumpingSource</li>
+			<li>BloodFiltrationLiver</li> <!-- Circulating oil to lubricate -->
+			<li>BloodFiltrationKidney</li> <!-- Combustion creates exhaust, expelled as waste -->
+			<li>MetabolismSource</li> <!-- Consumes the fuel -->
+			<li>EatingPathway</li> <!-- Fuel sent to pistons -->
+			<li>BreathingSourceCage</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>VAEAF_FuelTank</defName>
+		<label>fuel tank</label>
+		<hitPoints>30</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<alive>false</alive>
+		<socketed>true</socketed>
+		<bleedRate>15</bleedRate>
+		<!--
+		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarFuelTank</spawnThingOnRemoved>
+		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
+		-->
+		<tags>
+			<li>EatingSource</li> <!-- Input of gasoline -->
+			<li>BloodFiltrationSource</li> <!-- Closest to pathway -->
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>VAEAF_FrontLights</defName>
+		<label>front lights</label>
+		<labelShort>headlights</labelShort>
+		<hitPoints>8</hitPoints>
+		<frostbiteVulnerability>1</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0.15</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<socketed>true</socketed>
+		<delicate>true</delicate>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>SightSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>VAEAF_Radio</defName>
+		<label>radio</label>
+		<hitPoints>10</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<socketed>true</socketed>
+		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+		<canSuggestAmputation>true</canSuggestAmputation>
+		<bleedRate>0</bleedRate>
+		<!--
+		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarWiring</spawnThingOnRemoved>
+		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
+		-->
+		<tags>
+			<li>TalkingSource</li>
+			<li>HearingSource</li>
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>VAEAF_Alarm</defName>
+		<label>alarm</label>
+		<destroyableByDamage>true</destroyableByDamage>
+		<hitPoints>10</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<socketed>true</socketed>
+		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+		<canSuggestAmputation>true</canSuggestAmputation>
+		<bleedRate>0</bleedRate>
+		<!--
+		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarWiring</spawnThingOnRemoved>
+		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
+		-->
+		<tags>
+			<li>TalkingSource</li>
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>TSP_VAEAF_Battery</defName>
+		<label>battery</label>
+		<hitPoints>10</hitPoints>
+		<frostbiteVulnerability>0.5</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0.1</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<alive>false</alive>
+		<bleedRate>0.6</bleedRate>
+		<delicate>true</delicate>
+		<pawnGeneratorCanAmputate>false</pawnGeneratorCanAmputate>
+		<canSuggestAmputation>true</canSuggestAmputation> <!-- This incapacitates the car -->
+		<!--
+		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarBattery</spawnThingOnRemoved>
+		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
+		-->
+		<tags>
+			<li>ManipulationLimbCore</li> <!-- The vehicle cannot move without the battery! -->
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>TSP_VAEAF_Suspension</defName>
+		<label>suspension</label>
+		<hitPoints>10</hitPoints>
+		<destroyableByDamage>false</destroyableByDamage>
+		<frostbiteVulnerability>0.5</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<delicate>false</delicate>
+		<!--
+		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarSuspension</spawnThingOnRemoved>
+		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
+		-->
+		<tags>
+			<li>MovingLimbSegment</li>
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>TSP_VAEAF_Exhaust</defName>
+		<label>exhaust port</label>
+		<hitPoints>10</hitPoints>
+		<destroyableByDamage>true</destroyableByDamage>
+		<frostbiteVulnerability>1</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<delicate>false</delicate>
+		<!--
+		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarExhaust</spawnThingOnRemoved>
+		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
+		-->
+		<tags>
+			<li>BreathingPathway</li>
+			<li>BloodFiltrationKidney</li> <!-- Combustion creates exhaust, expelled as waste -->
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>TSP_VAEAF_Carburetor</defName>
+		<label>carburetor</label>
+		<hitPoints>20</hitPoints>
+		<destroyableByDamage>true</destroyableByDamage>
+		<frostbiteVulnerability>0.4</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0.1</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<alive>false</alive>
+		<bleedRate>3</bleedRate>
+		<delicate>true</delicate>
+		<!-- <spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarRadiator</spawnThingOnRemoved> --> <!-- Well, not really, but close enough to serve this purpose in the game. -->
+		<!-- <forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable> -->
+		<tags>
+			<li>BreathingSource</li>
+			<li>BloodFiltrationSource</li> <!-- Mixing the oxygen and gas -->
+			<li>BreathingPathway</li>
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>TSP_VAEAF_Transmission</defName>
+		<label>transmission</label>
+		<hitPoints>10</hitPoints>
+		<destroyableByDamage>true</destroyableByDamage>
+		<frostbiteVulnerability>0.4</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>false</solid>
+		<alive>false</alive>
+		<delicate>true</delicate>
+		<bleedRate>2</bleedRate>
+		<!--
+		<spawnThingOnRemoved MayRequire="oskarpotocki.vanillavehiclesexpanded">VVE_CarTransmission</spawnThingOnRemoved>
+		<forceAlwaysRemovable MayRequire="oskarpotocki.vanillavehiclesexpanded">true</forceAlwaysRemovable>
+		-->
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
+</Defs>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<FactionDef>
+		<defName>STBosses</defName>
+		<label>Bosses</label>
+		<description>Over whom are these Pawns the boss? Randy only knows...</description>
+		<pawnSingular>boss</pawnSingular>
+		<pawnsPlural>bosses</pawnsPlural>
+		<settlementGenerationWeight>0</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxCountAtGameStart>1</maxCountAtGameStart>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canStageAttacks>false</canStageAttacks>
+		<fixedName>Bosses</fixedName>
+		<configurationListOrderPriority>2000</configurationListOrderPriority>
+		<canPsychicRitualSiege>false</canPsychicRitualSiege>
+		<raidLootValueFromPointsCurve>
+			<points>
+				<li>(0, 0)</li>
+			</points>
+		</raidLootValueFromPointsCurve>
+		<!-- <categoryTag>UnknownFaction</categoryTag> -->
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(0, 0)</li> <!-- Will never raid... -->
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<humanlikeFaction>false</humanlikeFaction>
+		<hidden>true</hidden>
+		<raidsForbidden>true</raidsForbidden>
+		<autoFlee>true</autoFlee>
+		<canUseAvoidGrid>true</canUseAvoidGrid>
+		<hostileToFactionlessHumanlikes>false</hostileToFactionlessHumanlikes>
+		<techLevel>Industrial</techLevel>
+		<permanentEnemy>true</permanentEnemy>
+		<factionIconPath>World/Bosses/TSP_ST_BossLogo</factionIconPath>
+		<allowedArrivalTemperatureRange>
+			<min>-999</min>
+			<max>999</max>
+		</allowedArrivalTemperatureRange>
+		<modExtensions>
+			<li Class="VFEEmpire.FactionExtension_Deserters" MayRequire="oskarpotocki.vfe.empire">
+				<canSendDeserters MayRequire="oskarpotocki.vfe.empire">false</canSendDeserters>
+				<!-- <deserterKind MayRequire="oskarpotocki.vfe.empire">TSP_ST_VFEE_PirateDeserter</deserterKind> -->
+			</li>
+		</modExtensions>
+	</FactionDef>
+</Defs>

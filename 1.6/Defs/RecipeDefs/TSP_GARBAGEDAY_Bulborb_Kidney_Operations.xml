@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--
+		■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ BODY PART RECIPIES ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  
+		■■■■■■■■■■■■■■■■■■■■■■■■■■■ ORIGINAL BY GARBAGE DAY - KWVR_Parts_GiantHeart ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+		■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ BODY PART ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+	-->
+    
+	<!-- 
+		<tags>
+		  <li>ConsciousnessSource</li>
+		  <li>BreathingSource</li>
+		  <li>BloodPumpingSource</li>
+		  <li>BloodFiltrationSource</li>
+		  <li>HearingSource</li>
+		  <li>MetabolismSource</li>
+		  <li>BreathingPathway</li>
+		  <li>EatingPathway</li>
+		  <li>TalkingPathway</li>
+		</tags>
+		
+		<canSuggestAmputation>true</canSuggestAmputation>
+		<spawnThingOnRemoved>MEAT_THING_ENLARGEDHEART_DEF</spawnThingOnRemoved>
+	  </BodyPartDef>
+	-->
+  
+  <!--■■■ RECIPE DEF ■■■■■■■■■■■■■■■■■■■■■■■-->
+  <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+    <defName>TSP_ST_Enchant_Kidney_Master</defName>
+    <label>enchant Master Kidney</label>
+    <description>Install a Kidney into the bean cavity of a Bean Man. Any functioning Kidney will be accepted and converted by the Sapient Bean Matrix into an unique Kidney "Bean" organ. Bean Men have Master and Slave kidneys, the former being more vital than the latter. This will transplant a Master Kidney.</description>
+    <descriptionHyperlinks><ThingDef>Kidney</ThingDef></descriptionHyperlinks>
+    <jobString>enchanting the inner bean matrix with kidneys that aren't beans</jobString>
+    <deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>6</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Kidney</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Kidney</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>TSP_ST_BeanBulborb_KidneyBean_Master</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+    <defName>TSP_ST_Enchant_Kidney_Slave</defName>
+    <label>enchant Slave Kidney</label>
+    <description>Install a Kidney into the thorax of a Bean Man. Any functioning Kidney will be accepted and converted by the Sapient Bean Matrix into an unique Kidney "Bean" organ. Thanks to their Sapient Bean Matrices, Bean Men have Master and Slave Kidneys, the former being more vital than the latter. This will transplant a Slave Kidney.</description>
+    <descriptionHyperlinks><ThingDef>Kidney</ThingDef></descriptionHyperlinks>
+    <jobString>enchanting the outer bean matrix with kidneys that aren't beans</jobString>
+    <deathOnFailedSurgeryChance>0.02</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>6</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Kidney</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Kidney</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>TSP_ST_BeanBulborb_KidneyBean_Slave</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+
+</Defs>

@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_Trash"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef>
+					<defName>TSP_VFERC_PoisonExtract_To_ReactChem</defName>
+					<label>recycle poison extract into reactive chemicals</label>
+					<description>Dextoxify and purify the chemicals in poisons, creating Reactive Chem-Packs as byproducts.</description>
+					<recipeUsers>
+						<li>VRecyclingE_RecyclingWorkbench</li>
+						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
+					</recipeUsers>
+					<jobString>Recycling waste into reactive chemicals</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Machining</soundWorking>
+					<workAmount>2000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+									<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+								</thingDefs>
+							</filter>
+							<count>50</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+						</thingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<VRecyclingE_ReactiveChempack>2</VRecyclingE_ReactiveChempack>
+						<VRecyclingE_Trash>5</VRecyclingE_Trash>
+					</products>
+					<workSkill>Crafting</workSkill>
+					<!-- <displayPriority>0</displayPriority> -->
+					<researchPrerequisites>
+						<li>VRecyclingE_BasicRecycling</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			
+				<RecipeDef>
+					<defName>TSP_VFERC_PoisonExtract_To_ReclaimedBiofuel</defName>
+					<label>recycle poison extract into reclaimed bio-fuel</label>
+					<description>Dextoxify and purify the chemicals in poisons, creating Reclaimed Bio-Packs.</description>
+					<recipeUsers>
+						<li>VRecyclingE_RecyclingWorkbench</li>
+						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
+					</recipeUsers>
+					<jobString>Recycling waste into reclaimed bio-fuel</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Machining</soundWorking>
+					<workAmount>2000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+									<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+									<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+								</thingDefs>
+							</filter>
+							<count>25</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+							<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+						</thingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<VRecyclingE_ReclaimedBiopack>2</VRecyclingE_ReclaimedBiopack>
+						<VRecyclingE_Trash>6</VRecyclingE_Trash>
+						<Minerals MayRequire="lolxy.starcraftcore.1">5</Minerals>
+					</products>
+					<workSkill>Crafting</workSkill>
+					<!-- <displayPriority>0</displayPriority> -->
+					<researchPrerequisites>
+						<li>VRecyclingE_BasicRecycling</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			
+				<RecipeDef>
+					<defName>TSP_VFERC_PoisonExtract_To_VolatileToxin</defName>
+					<label>recycle poison extract into condensed volatile toxins</label>
+					<description>Amplify the lethality of the poison to produce Volatile Tox-Packs!</description>
+					<recipeUsers>
+						<li>VRecyclingE_RecyclingWorkbench</li>
+						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
+					</recipeUsers>
+					<jobString>Recycling waste into Volatile Tox-Packs</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Machining</soundWorking>
+					<workAmount>2000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+									<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+								</thingDefs>
+							</filter>
+							<count>40</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+						</thingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<VRecyclingE_VolatileToxpack>2</VRecyclingE_VolatileToxpack>
+						<VRecyclingE_Trash>5</VRecyclingE_Trash>
+					</products>
+					<workSkill>Crafting</workSkill>
+					<!-- <displayPriority>0</displayPriority> -->
+					<researchPrerequisites>
+						<li>VRecyclingE_ComplexRecycling</li>
+					</researchPrerequisites>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_VFERC_PoisonExtract_To_Trash</defName>
+					<label>Safely dispose of toxins</label>
+					<description>Remove the chemicals responsible for the poisons, leaving simple waste behind.</description>
+					<recipeUsers>
+						<li>VRecyclingE_RecyclingWorkbench</li>
+						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
+						<li>CraftingSpot</li>
+						<li>ButcherSpot</li>
+						<!-- <li>TableButcher</li> -->
+					</recipeUsers>
+					<jobString>Safely disposing of poison extracts</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Machining</soundWorking>
+					<workAmount>400</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+									<li>ST_GoblinPoison</li>
+									<li>ST_NightFrog_Venom</li>
+									<li>GoblinCrack</li>
+									<li>WW_HeavenDust</li>
+									<li>ST_ProfaneNog</li>
+									<li>WerefrogBlood</li>
+									<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+								</thingDefs>
+							</filter>
+							<count>20</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li>ST_GoblinPoison</li>
+							<li>ST_NightFrog_Venom</li>
+							<li>GoblinCrack</li>
+							<li>WW_HeavenDust</li>
+							<li>ST_ProfaneNog</li>
+							<li>WerefrogBlood</li>
+							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li>ST_NightFrog_Venom</li>
+						</thingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<VRecyclingE_Trash>6</VRecyclingE_Trash>
+						<Minerals MayRequire="lolxy.starcraftcore.1">8</Minerals>
+					</products>
+					<workSkill>Crafting</workSkill>
+					<!-- <displayPriority>0</displayPriority> -->
+					<researchPrerequisites>
+						<!-- <li>VRecyclingE_BasicRecycling</li> -->
+						<li>Smithing</li>
+					</researchPrerequisites>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_VFERC_MakeNuclearWaste</defName>
+					<label>Spawn Radioactive Isotope Packs from Night Frog Venom and Drugs</label>
+					<description>What the... how? How does mixing drugs and Night Frog Venom make nuclear waste? HOW?!</description>
+					<recipeUsers>
+						<li>VRecyclingE_RecyclingWorkbench</li>
+						<li>VRecyclingE_ElectricRecyclingWorkbench</li>
+						<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_AlchemicalWorkbench</li>
+						<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_AlchemicalWorkbench_Electric</li>
+					</recipeUsers>
+					<jobString>What the heck?</jobString>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Machining</soundWorking>
+					<workAmount>7000</workAmount>
+					<ingredients>
+						<li>
+							<filter>
+								<customSummary>goblin poison, diagen, dragonal, goblin psychite, heaven dust, highwing, hard lemonade, Botox, foggy egg nog, profane egg nog, Kraken Rum, Werefrog blood</customSummary>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+									<li>ST_GoblinPoison</li>
+									<li>Diagen</li>
+									<li>Dragonal</li>
+									<li>GoblinCrack</li>
+									<li>WW_HeavenDust</li>
+									<li>Highwing</li>
+									<li>ST_MikesLemonade</li>
+									<li>BotoxFruit</li>
+									<li>BotoxPowder</li>
+									<li>ST_FogNog</li>
+									<li>ST_ProfaneNog</li>
+									<li>RawNog</li>
+									<li>ST_KrakenRum</li>
+									<li>WerefrogBlood</li>
+									<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+									<li MayRequire="lolxy.starcraftcore.1">Minerals</li>
+									<li MayRequire="lolxy.starcraftcore.1">Quartz</li>
+								</thingDefs>
+							</filter>
+							<count>15</count>
+						</li>
+						<li>
+							<filter>
+								<customSummary>Night Frog venom</customSummary>
+								<thingDefs>
+									<li>ST_NightFrog_Venom</li>
+								</thingDefs>
+							</filter>
+							<count>7</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li>ST_GoblinPoison</li>
+							<li>ST_NightFrog_Venom</li>
+							<li>Diagen</li>
+							<li>Dragonal</li>
+							<li>GoblinCrack</li>
+							<li>WW_HeavenDust</li>
+							<li>Highwing</li>
+							<li>ST_MikesLemonade</li>
+							<li>BotoxFruit</li>
+							<li>BotoxPowder</li>
+							<li>ST_FogNog</li>
+							<li>ST_ProfaneNog</li>
+							<li>RawNog</li>
+							<li>ST_KrakenRum</li>
+							<li>WerefrogBlood</li>
+							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+							<li MayRequire="lolxy.starcraftcore.1">Minerals</li>
+							<li MayRequire="lolxy.starcraftcore.1">Quartz</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter>
+						<thingDefs>
+							<li>ST_GoblinPoison</li>
+							<li>ST_NightFrog_Venom</li>
+							<li>GoblinCrack</li>
+							<li>WW_HeavenDust</li>
+							<li>Highwing</li>
+							<li>ST_MikesLemonade</li>
+							<li>BotoxFruit</li>
+							<li>ST_ProfaneNog</li>
+							<li>ST_KrakenRum</li>
+							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+							<li MayRequire="lolxy.starcraftcore.1">Minerals</li>
+							<li MayRequire="lolxy.starcraftcore.1">Quartz</li>
+						</thingDefs>
+						<disallowedThingDefs>
+							<li>ST_PoisonExtract</li>
+							<li>RawNog</li>
+						</disallowedThingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<VRecyclingE_RadioactiveIsotopack>2</VRecyclingE_RadioactiveIsotopack>
+						<VRecyclingE_Trash>13</VRecyclingE_Trash>
+					</products>
+					<workSkill>Crafting</workSkill>
+					<!-- <displayPriority>0</displayPriority> -->
+					<researchPrerequisites>
+						<li>VRecyclingE_ComplexRecycling</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/recipeUsers</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
+			<value>
+				<recipeUsers></recipeUsers>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/recipeUsers</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/recipeUsers</xpath>
+			<value>
+				<recipeUsers Inherit="False">
+					<li>TableMachining</li>
+					<li>FueledSmithy</li>
+					<li>ElectricSmithy</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+				</recipeUsers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_WasteCrate"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VRecyclingE_WasteCrate"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+			<value>
+				<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional" MayRequire="vanillaexpanded.recycling">
+	<!-- Does this exist? -->
+		<xpath MayRequire="vanillaexpanded.recycling">/Defs/ThingCategoryDef[defName="WPM_barrelcategory"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace" MayRequire="vanillaexpanded.recycling">
+			<success MayRequire="vanillaexpanded.recycling">Always</success>
+			<xpath MayRequire="vanillaexpanded.recycling">/Defs/ThingCategoryDef[defName="WPM_barrelcategory"]/parent</xpath>
+			<value MayRequire="vanillaexpanded.recycling">
+				<parent>VRecyclingE_SpecializedPacks</parent>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ResearchProjectDef[defName="ContainToxicWaste"]/baseCost</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ResearchProjectDef[defName="ContainToxicWaste"]/baseCost</xpath>
+			<value>
+				<baseCost>100</baseCost>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_RecyclingWorkbench"]/recipes</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName = "VRecyclingE_ElectricRecyclingWorkbench" or defName = "VRecyclingE_RecyclingWorkbench"]/recipes</xpath>
+			<value>
+				<li MayRequire="wpm.jerry">Make_toxicwastebarrel</li>
+				<li MayRequire="wpm.jerry">Make_untoxicwastebarrel</li>
+				<li MayRequire="wpm.jerry">Make_reactivewastebarrel</li>
+				<li MayRequire="wpm.jerry">Make_unreactivewastebarrel</li>
+				<li MayRequire="wpm.jerry">Recycle_WastebarrelIntoChembarrel</li>
+				<li MayRequire="wpm.jerry">Recycle_ChembarrelIntoChemfuel</li>
+				<li MayRequire="wpm.jerry">Make_isoto_barrel</li>
+				<li MayRequire="wpm.jerry">Make_unisoto_barrel</li>
+				<li MayRequire="wpm.jerry">Recycle_IsotobarrelIntoUranium</li>
+				<li MayRequire="wpm.jerry">Make_toxbarrel</li>
+				<li MayRequire="wpm.jerry">Make_untoxbarrel</li>
+				<li MayRequire="wpm.jerry">Recycle_WastebarrelIntotoxbarrel</li>
+				<li MayRequire="wpm.jerry">Recycle_BreakDownToxbarrel</li>
+				<li MayRequire="wpm.jerry">Make_trashbale</li>
+				<li MayRequire="wpm.jerry">Unmake_trashbale</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="Make_toxicwastebarrel"]/recipeUsers</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="Make_toxicwastebarrel"]/recipeUsers</xpath>
+			<value>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="Make_untoxicwastebarrel"]/recipeUsers</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="Make_untoxicwastebarrel"]/recipeUsers</xpath>
+			<value>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

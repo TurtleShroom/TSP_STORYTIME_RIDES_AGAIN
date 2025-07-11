@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RecipeDef>
+		<defName>WW_Make_Sloodge</defName>
+		<label>make sloodge</label>
+		<description>Sloodge is a preserved combination of animal products and plant food. It tastes bland, but unlike Kibble, Pawns will not be offended if they eat it. It lasts a very long time without refrigeration, and has just enough nutrients to be worth eating.</description>
+		<jobString>Making sloodge.</jobString>
+		<workAmount>1000</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>animal products</customSummary>
+					<categories>
+						<li>AnimalProductRaw</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>WW_Sloodge</li>
+					</disallowedThingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>
+			<li>
+				<filter>
+					<customSummary>vegetarian</customSummary>
+					<thingDefs>
+						<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+					</thingDefs>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>WW_Sloodge</li>
+					</disallowedThingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>
+		</ingredients>
+		<products>
+			<WW_Sloodge>30</WW_Sloodge>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+				<li>AnimalProductRaw</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>WW_Sloodge</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+				<li>AnimalProductRaw</li>
+			</categories>
+			<thingDefs>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>Meat_Human</li>
+				<li>Meat_Megaspider</li>
+				<li>WW_Sloodge</li>
+			</disallowedThingDefs>
+			<disallowedCategories>
+				<li>EggsFertilized</li>
+			</disallowedCategories>
+		</defaultIngredientFilter>
+		<workSkill>Cooking</workSkill>
+		<!-- <researchPrerequisite>WW_Sloodge</researchPrerequisite> -->
+		<researchPrerequisites>
+			<!-- <li>WW_Sloodge</li> -->
+			<li>advancedCooking</li>
+		</researchPrerequisites>
+		<displayPriority>1440</displayPriority>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>WW_Make_SloodgeBulk</defName>
+		<label>make sloodge in bulk (x70)</label>
+		<description>Sloodge is a preserved combination of animal products and plant food. Tastes bland, but not offensive. It lasts a very long time without refrigeration, and has just enough nutrients to be worth eating.</description>
+		<jobString>Making bulk sloodge.</jobString>
+		<workAmount>2800</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>animal products</customSummary>
+					<categories>
+						<li>AnimalProductRaw</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>WW_Sloodge</li>
+					</disallowedThingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<customSummary>vegetarian</customSummary>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+					<thingDefs>
+						<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+					</thingDefs>
+					<disallowedThingDefs>
+						<li>WW_Sloodge</li>
+					</disallowedThingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<WW_Sloodge>70</WW_Sloodge>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+				<li>AnimalProductRaw</li>
+			</categories>
+			<thingDefs>
+				<li>Kibble</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>WW_Sloodge</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+				<li>AnimalProductRaw</li>
+			</categories>
+			<thingDefs>
+				<li>Kibble</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>Meat_Human</li>
+				<li>Meat_Megaspider</li>
+				<li>WW_Sloodge</li>
+			</disallowedThingDefs>
+			<disallowedCategories>
+				<li>EggsFertilized</li>
+			</disallowedCategories>
+		</defaultIngredientFilter>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisites>
+			<!-- <li>WW_Sloodge</li> -->
+			<li>advancedCooking</li>
+		</researchPrerequisites>
+		<!-- <researchPrerequisite>WW_Sloodge</researchPrerequisite> -->
+		<displayPriority>1450</displayPriority>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>TSP_WW_Make_Sloodge_SuperBulk</defName>
+		<label>make sloodge in bulk (x140)</label>
+		<description>Sloodge is a preserved combination of animal products and plant food. Tastes bland, but not offensive. It lasts a very long time without refrigeration, and has just enough nutrients to be worth eating.</description>
+		<jobString>Making bulk sloodge.</jobString>
+		<workAmount>3750</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>animal products</customSummary>
+					<categories>
+						<li>AnimalProductRaw</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>WW_Sloodge</li>
+					</disallowedThingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<customSummary>vegetarian</customSummary>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+					<thingDefs>
+						<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+					</thingDefs>
+					<disallowedThingDefs>
+						<li>WW_Sloodge</li>
+					</disallowedThingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<products>
+			<WW_Sloodge>140</WW_Sloodge>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+				<li>AnimalProductRaw</li>
+			</categories>
+			<thingDefs>
+				<li>Kibble</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>WW_Sloodge</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+				<li>AnimalProductRaw</li>
+			</categories>
+			<thingDefs>
+				<li>Kibble</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>Meat_Human</li>
+				<li>Meat_Megaspider</li>
+				<li>WW_Sloodge</li>
+			</disallowedThingDefs>
+			<disallowedCategories>
+				<li>EggsFertilized</li>
+			</disallowedCategories>
+		</defaultIngredientFilter>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisites>
+			<!-- <li>WW_Sloodge</li> -->
+			<li>advancedCooking</li>
+		</researchPrerequisites>
+		<displayPriority>1450</displayPriority>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>TSP_WW_Make_Sloodge_SuperDuperBulk</defName>
+		<label>make sloodge in bulk (x220)</label>
+		<description>Sloodge is a preserved combination of animal products and plant food. Tastes bland, but not offensive. It lasts a very long time without refrigeration, and has just enough nutrients to be worth eating.</description>
+		<jobString>Making bulk sloodge.</jobString>
+		<workAmount>4000</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>animal products</customSummary>
+					<categories>
+						<li>AnimalProductRaw</li>
+					</categories>
+					<disallowedThingDefs>
+						<li>WW_Sloodge</li>
+					</disallowedThingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<customSummary>vegetarian</customSummary>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+					<thingDefs>
+						<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+					</thingDefs>
+					<disallowedThingDefs>
+						<li>WW_Sloodge</li>
+					</disallowedThingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<products>
+			<WW_Sloodge>140</WW_Sloodge>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+				<li>AnimalProductRaw</li>
+			</categories>
+			<thingDefs>
+				<li>Kibble</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>WW_Sloodge</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>
+				<li>AnimalProductRaw</li>
+			</categories>
+			<thingDefs>
+				<li>Kibble</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>Meat_Human</li>
+				<li>Meat_Megaspider</li>
+				<li>WW_Sloodge</li>
+			</disallowedThingDefs>
+			<disallowedCategories>
+				<li>EggsFertilized</li>
+			</disallowedCategories>
+		</defaultIngredientFilter>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisites>
+			<!-- <li>WW_Sloodge</li> -->
+			<li>advancedCooking</li>
+		</researchPrerequisites>
+		<displayPriority>1450</displayPriority>
+	</RecipeDef>
+</Defs>

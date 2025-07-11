@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ResearchProjectDef>
+		<defName>advancedCooking</defName>
+		<label>specialty dishes</label>
+		<description>Acquire the advanced knowledge to cook new, exciting, delicious meals.</description>
+		<tab>StoryTime</tab>
+		<baseCost>500</baseCost>
+		<techLevel>Medieval</techLevel>
+ 		<researchViewX>0</researchViewX>
+		<researchViewY>0.75</researchViewY>
+		<tags>
+			<li>TSP_GnomeStart</li>
+		</tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->the exciting and delicious specialty dishes</li>
+				<li>subject_story->eagerly worked to unlock the secrets of incredible dishes, such as burritos, Fuh, and lemon bars</li>
+				<li>subject_story->unleashed the power of Storytime delicacies</li>
+				<li>subject_gerund->cooking Lemon Bars, Fuh, and much more</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>cabbageCultivation</defName>
+		<label>cabbage cultivation</label>
+		<description>Learn how to plant cabbages.</description>
+		<tab>StoryTime</tab>
+		<baseCost>20</baseCost>
+		<techLevel>Neolithic</techLevel>
+ 		<researchViewX>0</researchViewX>
+		<researchViewY>3</researchViewY>
+		<tags>
+			<li>TribalStart</li>
+			<li MayRequire="Mlie.AncientRimCore">RomanStart</li>
+			<li MayRequire="oskarpotocki.vfe.classical">ClassicalStart</li>
+			<li>TSP_StorytimeMasterStart</li>
+			<li>TSP_GnomeStart</li>
+		</tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->the art and science of planting cabbages</li>
+				<li>subject->the peace and tranquility of tending and growing cabbages</li>
+				<li>subject_story->came to understand the simple beauty of the cabbage</li>
+				<li>subject_story->articulated the glories of the cole crops</li>
+				<li>subject_story->found peace and tranquility in growing cabbages</li>
+				<li>subject_gerund->knowing the peace and tranqulity of tending and growing cabbages</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>cabbageCrafting</defName>
+		<label>cabbage crafting</label>
+		<description>Learn how to utilize cabbages as grenade weapons with obscene power.</description>
+		<tab>StoryTime</tab>
+		<baseCost>5000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>cabbageCultivation</li>
+			<li>Fabrication</li>
+		</prerequisites>
+ 		<researchViewX>1</researchViewX>
+		<researchViewY>3</researchViewY>
+		<tags>
+			<li MayRequire="wvc.sergkart.ultraexpansion">WVC_UltraTechBase</li>
+		</tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->the Cabbage, Destroyer of Worlds</li>
+				<li>subject->the obscene power of cabbage bombs</li>
+				<li>subject_story->accidentally discovered how to make cabbages expolode</li>
+				<li>subject_story->made the ultimate cole grenade</li>
+				<li>subject_story->turned men into slaw</li>
+				<li>subject_gerund->chopping enemies into coleslaw with bombs</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+ 
+ 	<ResearchProjectDef>
+		<defName>ST_GnomeCulture</defName>
+		<label>gnome knowledge</label>
+		<description>Learn the basic culture and cuisine of the Gnome peoples.</description>
+		<discoveredLetterTitle>Gnome Knowledge Unlocked: How to Use Gnome Root Poppies</discoveredLetterTitle>
+		<discoveredLetterText>Congratulations on researching Gnome Knowledge! You have begun your first foray into the amazing culinary and aristic endeavors of this ancient, gnoble subspecies of man. You will need a Grinder or other grinding pestle for many of these recipes, so make sure you install one! \n \n Of particular interest to any chef is the Gnome Root poppy. When harvested, Gnome Root poppies can be ground at a Grinder or Gnome Table. \n Grinding Gnome Root poppies yields special Plant Matter called "gnome flour", which is used in baking and the gourmet Gnome Cuisine for which Gnome culture is famous. Gnome flour is not traditionally used for general cooking purposes, but this is possible by reassigning it as "gnome meal". \n \n If you wish for your gnome flour to be used identically to all other plant-based ingredients (and vice-versa, to reserve it back), use the "Designate Gnome Flour" series of "recipes", which are found at any place used to grind Gnome Root poppies.</discoveredLetterText>
+		<tab>StoryTime</tab>
+		<baseCost>500</baseCost>
+		<techLevel>Medieval</techLevel>
+ 		<researchViewX>0</researchViewX>
+		<researchViewY>1.5</researchViewY>
+		<tags>
+			<li>TSP_GnomeStart</li>
+		</tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject(p=2)->Gnome high culture</li>
+				<li>subject->Gnome agriculture</li>
+				<li>subject->the Gnome Root poppies</li>
+				<li>subject->the Gnome Cloth</li>
+				<li>subject->the Gnome Flour</li>
+				<li>subject->the Gnome Meal</li>
+				<li>subject->worm charming</li>
+				<li>subject->worm thumping</li>
+				<li>subject->Gnome wardrobe</li>
+				<li>subject->the Mini-Man merchandise</li>
+				<li>subject_story->explored the beautiful culture of the Gnomes</li>
+				<li>subject_story->learned the secrets of Gnome harvesting</li>
+				<li>subject_story->paved the way to cooking Gnomed delicacies</li>
+				<li>subject_gerund->getting Gnome'd</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+ 
+  	<ResearchProjectDef>
+		<defName>gnomeCooking</defName>
+		<label>gnome cooking</label>
+		<description>Learn how to make gourmet gnome dishes! No electricity required!</description>
+		<tab>StoryTime</tab>
+		<baseCost>900</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>ST_GnomeCulture</li>
+			<li>advancedCooking</li>
+		</prerequisites>
+ 		<researchViewX>1</researchViewX>
+		<researchViewY>1.5</researchViewY>
+		<tags>
+			<li>TSP_GnomeStart</li>
+		</tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->the cuisine of Gnomes</li>
+				<li>subject->the Gnome delicacies</li>
+				<li>subject_story->embarked on true culinary prowess with Gnome feasts</li>
+				<li>subject_story->indugled in Gnome delicacies</li>
+				<li>subject_story->patronized the Gnome banquet</li>
+				<li>subject_gerund->cooking Gnome meals</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>gnomeCocktails</defName>
+		<label>Gnome cocktails</label>
+		<description>Learn how to make Gnome cocktails.</description>
+		<tab>StoryTime</tab>
+		<baseCost>500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>gnomeCooking</li>
+			<li>nogAlchemy</li>
+			<li>Brewing</li>
+		</prerequisites>
+ 		<researchViewX>2</researchViewX>
+		<researchViewY>1.5</researchViewY>
+		<tags>
+			<li>TSP_GnomeStart</li>
+		</tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->Gnome mixology</li>
+				<li>subject->the Gnome party life</li>
+				<li>subject_story->made strong cocktails with Gnome ingredients</li>
+				<li>subject_story->nursed a Gnome cocktail</li>
+				<li>subject_story->patronized the Gnome taverns</li>
+				<li>subject_gerund->mixing Gnome cocktails</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<!--
+	<ResearchProjectDef>
+		<defName>advancedBrewing</defName>
+		<label>Egg Nog and other powerful brews</label>
+		<description>Learn how to make more powerful brews.</description>
+		<tab>StoryTime</tab>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+ 		<researchViewX>0</researchViewX>
+		<researchViewY>3.75</researchViewY>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+    </ResearchProjectDef>
+	-->
+	
+	<ResearchProjectDef>
+		<defName>pizzaTime</defName>
+		<label>pizza cooking</label>
+		<description>Make it pizza time, all the time. \n \n The term "pizza" has existed for approximately four thousand four hundred years and is actually a German word, from "pizzo", generated by the Gothics and Lombards that controlled northern Italy in the time period. Though its literal translation is "bite", its actual and contexual use roughly translated to "mouthful of bread" or "bite [a] piece of bread", and was their answer to the Italian word "pita (bread)". \n \n Old Earth historians have maintained that what is now called pizza was invented over three thousand six hundred years ago. Interestingly, Old Earth Italians consumed pizza with a knife and fork, not by hand.</description>
+		<tab>StoryTime</tab>
+		<baseCost>300</baseCost>
+		<techLevel>Medieval</techLevel>
+ 		<researchViewX>1</researchViewX>
+		<researchViewY>0.75</researchViewY>
+		<prerequisites>
+			<li>advancedCooking</li>
+		</prerequisites>
+		<tags>
+			<li>TSP_GnomeStart</li>
+		</tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->the pizza</li>
+				<li>subject->the pizza pies</li>
+				<li>subject->the pizza slices</li>
+				<li>subject_story->baked pizza</li>
+				<li>subject_story->tossed the dough for pizza</li>
+				<li>subject_story->smothered pizza in the best toppings</li>
+				<li>subject_gerund->baking pizza</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>nogAlchemy</defName>
+		<label>Egg Nog and other powerful brews</label>
+		<description>Learn to craft both mundane and exotic egg nog flavors at the brewery, as well as other delicious, powerful, and unique spirits.</description>
+		<tab>StoryTime</tab>
+		<baseCost>700</baseCost>
+		<techLevel>Medieval</techLevel> <!-- Egg nog was invented in the twelfth century -->
+ 		<researchViewX>0</researchViewX>
+		<researchViewY>3.75</researchViewY>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+		<tags>
+			<li>TSP_GnomeStart</li>
+		</tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->egg nog</li>
+				<li>subject->festive holiday drinks</li>
+				<li>subject->Kraken Rum</li>
+				<li>subject_story->fixing egg nog and other powerful brews</li>
+				<li>subject_story->mixed eggs and fermented them</li>
+				<li>subject_story->celebrated with Egg Nog</li>
+				<li>subject_story->plundered some Kraken Rum</li>
+				<li>subject_gerund->mixing powerful brews</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>pirateCrafting</defName>
+		<label>pirate crafting</label>
+		<description>Learn how to make basic pirate gear.</description>
+		<tab>StoryTime</tab>
+		<baseCost>400</baseCost>
+		<techLevel>Medieval</techLevel>
+ 		<researchViewX>0</researchViewX>
+		<researchViewY>2.25</researchViewY>
+		<prerequisites>
+			<li>LongBlades</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->Golden Age pirate gear</li>
+				<li>subject_story->hunted for the booty with cutlasses</li>
+				<li>subject_story->imitated Golden Age Pirate clothing</li>
+				<li>subject_story->studied the booty</li>
+				<li>subject_gerund->crafting pirate swords</li>
+				<li>subject_gerund->crafting pirate arms</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>pirateGunsmithing</defName>
+		<label>pirate gunsmithing</label>
+		<description>Learn how to make pirate guns.</description>
+		<tab>StoryTime</tab>
+		<baseCost>200</baseCost>
+		<techLevel>Medieval</techLevel>
+ 		<researchViewX>1</researchViewX>
+		<researchViewY>2.25</researchViewY>
+		<prerequisites>
+			<!-- <li>Smithing</li> -->
+			<li>pirateCrafting</li>
+		</prerequisites>
+		<tags></tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->antique black powder rifles</li>
+				<li>subject->flintlock pistols and blunderbusses</li>
+				<li>subject_story->assembled a blunderbuss</li>
+				<li>subject_story->fashioned a flintlock pistol</li>
+				<li>subject_gerund->vintage gun smithing</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>magicPirateCrafting</defName>
+		<label>cursed pirate crafting</label>
+		<description>Learn how to make powerful, magical Artifacts using cursed golden coins.</description>
+		<tab>StoryTime</tab>
+		<baseCost>2500</baseCost>
+		<techLevel>Industrial</techLevel>
+ 		<researchViewX>2</researchViewX>
+		<researchViewY>2.25</researchViewY>
+		<!--
+		<knowledgeCost MayRequire="ludeon.rimworld.anomaly">3</knowledgeCost>
+		<knowledgeCategory MayRequire="ludeon.rimworld.anomaly">Basic</knowledgeCategory>
+		-->
+		<prerequisites>
+			<li>pirateGunsmithing</li>
+			<li>Machining</li>
+		</prerequisites>
+		<tags></tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->cursed pirate coins</li>
+				<li>subject->cursed gold</li>
+				<li>subject->the Haunted Cutlass</li>
+				<li>subject->the Haunted Assault Rifle</li>
+				<li>subject_story->cursed a gun</li>
+				<li>subject_story->cursed a sword</li>
+				<li>subject_story->melted down haunted gold</li>
+				<li>subject_story->plundered haunted coins</li>
+				<li>subject_gerund->creating cursed artifacts</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>alloyCrafting</defName>
+		<label>industrial blast furnace alloying</label>
+		<description>Learn how to mix metals into stronger forms.</description>
+		<tab>StoryTime</tab>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+ 		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
+		<prerequisites>
+			<li>Smithing</li>
+			<li MayRequire="mlie.ancientrimcore">AR_Project_Metal_II</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->the smelted alloys</li>
+				<li>subject->metal smelting</li>
+				<li>subject->the industrial blast furnace</li>
+				<li>subject_story->engaged in alloy smelting</li>
+				<li>subject_story->melted metals in a blast furnace</li>
+				<li>subject_story->melted down metal alloys</li>
+				<li>subject_story->ground metal alloy mixes</li>
+				<li>subject_gerund->industrial blast furnace alloying</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>beanManCrafting</defName>
+		<label>legume Bulborb ascendancy</label>
+		<description>Learn how to cybernetically enhance Bulborbs into Bean Men by the miraculous power of beans.</description>
+		<tab>StoryTime</tab>
+		<baseCost>300</baseCost>
+		<techLevel>Ultra</techLevel> <!-- Canonical Glitter World level -->
+ 		<researchViewX>2</researchViewX>
+		<researchViewY>0</researchViewY>
+		<prerequisites>
+			<li>Machining</li>
+		</prerequisites>
+		<tags>
+			<li>TSP_BulborbStart</li>
+		</tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->the ascended Bulborbs</li>
+				<li>subject->the Sapient Bean Matrix</li>
+				<li>subject->the Bean Men</li>
+				<li>subject->the Bean Pit</li>
+				<li>subject_story->threw a Sapient Bean Matrix into a Bean Pit</li>
+				<li>subject_story->fused a Bulborb with beans</li>
+				<li>subject_story->enlightened a grub dog</li>
+				<li>subject_story->glorified a Bulborb</li>
+				<li>subject_story->birthed a Bean Man</li>
+				<li>subject_gerund->transcending the Bulborbs into Bean Men</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>beetCulture</defName>
+		<label>advanced neolithic beet weaponry</label>
+		<description>Learn how to make Wood Beet weapons. Wood Beet weapons are similar to ordinary clubs and bows, except that they are far, far more powerful.</description>
+		<tab>StoryTime</tab>
+		<baseCost>100</baseCost>
+		<techLevel>Neolithic</techLevel>
+ 		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+		<tags>
+			<li>TSP_BeetStart</li>
+		</tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->the Wood Beet weapons</li>
+				<li>subject->the Double Trouble Spiked Club</li>
+				<li>subject->the Beet Slingshot</li>
+				<li>subject->the Wood Beet melee weapons</li>
+				<li>subject_story->made a spiked club with two ends</li>
+				<li>subject_story->crafted an overly powerful slingshot</li>
+				<li>subject_gerund->producing Wood Beet weaponry</li>
+			</rulesStrings>
+		</generalRules>
+    </ResearchProjectDef>
+	
+	<!--
+	<ResearchProjectDef>
+		<defName>STAlchemy</defName>
+		<label>alchemy</label>
+		<description>Acquire the advanced knowledge to make potions.</description>
+		<tab>StoryTime</tab>
+		<baseCost>1200</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>advancedCooking</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1.5</researchViewY>
+		<tags></tags>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->the secrets of equivalent exchange</li>
+				<li>subject->potions</li>
+				<li>subject->ED... WARD...</li>
+				<li>subject->homunculus</li>
+				<li>subject_story->made a potion</li>
+				<li>subject_story->fused a dog and a man</li>
+				<li>subject_gerund->brewing potions</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+	-->
+</Defs>

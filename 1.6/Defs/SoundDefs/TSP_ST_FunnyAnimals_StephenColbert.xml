@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Al Barry's Stephen Colbert Skits -->
+<!-- https://www.youtube.com/watch?v=CeYEGMUUmnc -->
+<!--
+	NORMAL 1 = "I sold out years ago and I'm a coward."
+	NORMAL 2 = "Wow, I sold out years ago and I'm a coward!"
+	
+	ANGRY 1 = "I SOLD OUT YEARS AGO AND I'M A COWARD!"
+	STRUCK 1 = "WOW, DONALD TRUMP JUST SLAPPED ME TOO!"
+-->
+
+<Defs>
+	<SoundDef>
+		<defName>TSP_ST_ALBARRY_StephenColbert_Frog_Call</defName>
+		<context>MapOnly</context>
+		<eventNames></eventNames>
+		<maxVoices>5</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous> 
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal1</clipPath>
+					</li>
+					<!--
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal2</clipPath>
+					</li>
+					-->
+				</grains>
+				<volumeRange>
+					<min>45</min>
+					<max>55</max>
+				</volumeRange>      
+				<pitchRange>
+					<min>0.97</min>
+					<max>1.0</max>
+				</pitchRange>      
+				<distRange>
+					<min>0</min>        
+					<max>75</max>
+				</distRange>      
+				<!-- <repeatMode>NeverTwice</repeatMode> -->
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>TSP_ALBARRY_StephenColbert_Struck</defName>
+		<context>MapOnly</context>
+		<eventNames></eventNames>
+		<maxVoices>4</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous> 
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_struck1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>60</max>
+				</volumeRange>      
+				<pitchRange>
+					<min>0.59</min>
+					<max>1.0</max>
+				</pitchRange>      
+				<distRange>
+					<min>0</min>        
+					<max>50</max>
+				</distRange>      
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>TSP_ALBARRY_StephenColbert_Angry</defName>
+		<context>MapOnly</context>
+		<eventNames></eventNames>
+		<maxVoices>5</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous> 
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_angry1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>60</min>
+					<max>75</max>
+				</volumeRange>      
+				<pitchRange>
+					<min>0.9</min>
+					<max>1.0</max>
+				</pitchRange>      
+				<distRange>
+					<min>0</min>        
+					<max>60</max>
+				</distRange>      
+				<!-- <repeatMode>NeverTwice</repeatMode> -->
+				<sustainLoop>True</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>TSP_ALBARRY_StephenColbert_Death</defName>  
+		<context>MapOnly</context>
+		<eventNames></eventNames>
+		<maxVoices>10</maxVoices>
+		<maxSimultaneous>10</maxSimultaneous> 
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_angry1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>65~75</volumeRange>      
+				<pitchRange>0.9~1</pitchRange>      
+				<distRange>0~400</distRange>
+				<repeatMode>NeverTwice</repeatMode>	
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>TSP_ALBARRY_StephenColbert_Miss</defName>  
+		<context>MapOnly</context>
+		<eventNames></eventNames>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous> 
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_struck1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_angry1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>5~15</volumeRange>      
+				<pitchRange>0.25~1.5</pitchRange>      
+				<distRange>0~20</distRange>
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>

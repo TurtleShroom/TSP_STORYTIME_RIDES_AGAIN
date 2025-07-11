@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<PawnKindDef Abstract="True" Name="BasePlayerJeubPawnKind">
+		<race>Alien_Jeub</race>
+		<combatPower>25</combatPower>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<maxGenerationAge>35</maxGenerationAge>
+		<isGoodPsychicRitualInvoker MayRequire="ludeon.rimworld.anomaly">true</isGoodPsychicRitualInvoker>
+		<initialWillRange>1~2</initialWillRange>
+		<initialResistanceRange>1~10</initialResistanceRange>
+		<!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
+		<isFighter>true</isFighter>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelTags>
+			<li>JeubWear</li>
+			<li>School_Thai</li>
+			<li>SchoolThai</li>
+			<!-- <li>K4GVagrantsBasic</li> -->
+		</apparelTags>
+		<modExtensions>
+			<!--
+			<li Class="JecsTools.PawnKindGeneExtension" MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+				<genes MayRequire="ludeon.rimworld.biotech,jecrell.jecstools">
+					<li MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">
+						<defName MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">ROM_InnsmouthLook_VoiceFishman</defName>
+						<chance MayRequire="rimofmadness.callofcthulhu.factions,jecrell.jecstools">33</chance>
+					</li>
+				</genes>
+			</li>
+			-->
+		</modExtensions>
+	</PawnKindDef>
+  
+	<PawnKindDef Name="ST_JeubCharacter" ParentName="BasePlayerJeubPawnKind" Abstract="True">
+		<race>Alien_Jeub</race>
+		<combatEnhancingDrugsChance>0.1</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>1~3</combatEnhancingDrugsCount>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>JeubBackstory</li>
+					<li>Madman</li>
+					<li>Vatgrown</li>
+					<li>VatGrown</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<invFoodDef>Pemmican</invFoodDef>
+		<apparelTags>
+			<li>JeubWear</li>
+			<li>Tribal</li>
+			<li>Medieval</li>
+			<li>MedievalBasic</li>
+			<li>MedievalApparelBasic</li>
+			<li>Jester</li>
+		</apparelTags>
+		<initialWillRange>0.41~1</initialWillRange>
+	</PawnKindDef>
+  
+  <PawnKindDef ParentName="ST_JeubCharacter">
+    <defName>PlayerJeub</defName>
+    <label>Jeub</label>
+    <chemicalAddictionChance>0.2</chemicalAddictionChance>
+	<isFighter>true</isFighter>
+	<combatPower>75</combatPower>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>JeubBackstory</li>
+			</categories>
+		</li>
+    </backstoryFilters>
+    <apparelMoney>
+      <min>700</min>
+      <max>2000</max>
+    </apparelMoney>
+	<apparelTags>
+		<li>JeubWear</li>
+		<li>Tribal</li>
+		<li>Medieval</li>
+		<li>MedievalApparelBasic</li>
+        <li>MedievalBasic</li>
+		<li>MedievalAdvanced</li>
+		<li>Jester</li>
+		<li>Western</li>
+    </apparelTags>
+	<weaponMoney>
+		<min>90</min>
+		<max>500</max>
+    </weaponMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>51</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+	<weaponTags>
+		<li>JeubMelee</li>
+		<li>JeubRanged</li>
+		<li>MedievalMelee</li>
+		<li>MedievalMeleeDecent</li>
+        <li>MedievalRanged</li>
+		<li>MedievalRangedDecent</li>
+		<li>MedievalRangedAdvanced</li>
+		<li>NeolithicRangedChief</li>
+		<li>Dagger</li>
+		<li>MeleePiercer</li>
+    </weaponTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>3~4</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="ST_JeubCharacter">
+    <defName>Snaff_HighKing</defName>
+    <label>Snaff King</label>
+	<labelFemale>Snaff Queen</labelFemale>
+    <defaultFactionType>Jeubscalon</defaultFactionType>
+    <factionLeader>true</factionLeader>
+    <chemicalAddictionChance>0.5</chemicalAddictionChance>
+	<minGenerationAge>23</minGenerationAge> <!-- Prevents bug when Children are allowed to spawn in V1.3 via Mods causing the trade caravan to pump out massive errors -->
+	<maxGenerationAge>39</maxGenerationAge>
+	<backstoryFilters>
+		<li>
+			<categoriesChildhood>
+				<li>ImperialNoble</li>
+				<li>ImperialFighter</li>
+			</categoriesChildhood>
+		</li>
+	</backstoryFilters>
+    <apparelTags>
+		<li>JeubWear</li>
+		<li>Tribal</li>
+		<li>MedievalArmorElite</li>
+		<li>King</li>
+		<li>MedievalApparelNoble</li>
+		<li>Medieval</li>
+		<li>MedievalBasic</li>
+		<li>Royal</li>
+		<li>RoyalTier1</li>
+		<li>RoyalTier2</li>
+		<li>Cape</li>
+    </apparelTags>
+	<apparelRequired>
+		<li>Apparel_CrownStellic</li>
+	</apparelRequired>
+    <apparelMoney>
+      <min>1000</min>
+      <max>10000</max>
+    </apparelMoney>
+	<weaponMoney>
+		<min>500</min>
+		<max>5000</max>
+    </weaponMoney>
+    <backstoryCryptosleepCommonality>0.13</backstoryCryptosleepCommonality>
+    <techHediffsMoney>
+      <min>250</min>
+      <max>4000</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+	  <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.33</techHediffsChance>
+	<weaponTags>
+		<li>Gun</li>
+		<li>SimpleGun</li>
+		<li>Revolver</li>
+		<li>MedievalMeleeDecent</li>
+        <li>MedievalMeleeAdvanced</li>
+		<li>MedievalRangedAdvanced</li>
+		<li>MedievalHeavy</li>
+		<li>MedievalRanged</li>
+		<li>MedievalRangedHeavy</li>
+		<li>MeleePiercer</li>
+    </weaponTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>3~10</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="ST_JeubCharacter">
+    <defName>JeubTrader</defName>
+    <label>Jeub merchant</label>
+    <trader>true</trader>
+    <defaultFactionType>Jeubscalon</defaultFactionType>
+    <chemicalAddictionChance>0.15</chemicalAddictionChance>
+	<combatEnhancingDrugsChance>1</combatEnhancingDrugsChance>
+	<combatEnhancingDrugsCount>1~3</combatEnhancingDrugsCount>
+	<minGenerationAge>31</minGenerationAge>
+    <apparelMoney>
+      <min>250</min>
+      <max>600</max>
+    </apparelMoney>
+	<apparelTags>
+		<li>JeubWear</li>
+		<li>Tribal</li>
+		<li>Medieval</li>
+        <li>MedievalBasic</li>
+		<li>MedievalApparelBasic</li>
+		<li>Jester</li>
+    </apparelTags>
+    <weaponMoney>
+		<min>1000</min>
+		<max>3500</max>
+    </weaponMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>51</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+	<weaponTags>	
+        <li>MedievalAdvanced</li>
+        <li>MedievalMeleeAdvanced</li>
+		<li>MedievalRangedAdvanced</li>
+		<li>MeleePiercer</li>
+		<li>Lance</li>
+    </weaponTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>3~10</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>TSP_ST_JeubCabbageinator</defName>
+    <label>cabbage grenadier</label>
+	<race>Alien_Jeub</race>
+    <combatPower>90</combatPower>
+    <chemicalAddictionChance>0.35</chemicalAddictionChance>
+	<isFighter>true</isFighter>
+	<forceNormalGearQuality>true</forceNormalGearQuality>
+	<combatEnhancingDrugsChance>1</combatEnhancingDrugsChance>
+	<combatEnhancingDrugsCount>1~3</combatEnhancingDrugsCount>
+    <apparelMoney>
+      <min>100</min>
+      <max>1750</max>
+    </apparelMoney>
+	<apparelTags>
+		<li>JeubWear</li>
+		<li>Tribal</li>
+        <li>Medieval</li>
+		<li>MedievalBasic</li>
+		<li>MedievalApparelBasic</li>
+		<li>MedievalArmorBasic</li>
+		<li>MedievalArmorDecent</li>
+		<li>MedievalAdvanced</li>
+		<li>RWPGentlemanWear</li>
+		<li>Western</li>
+    </apparelTags>
+	<weaponMoney>
+         <min>7500</min>
+         <max>20000</max>
+    </weaponMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>500</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.12</techHediffsChance>
+	<weaponTags Inherit="False">
+		<li>CabbageWarrior</li>
+    </weaponTags>
+    <initialWillRange>1~8</initialWillRange>
+    <initialResistanceRange>5~40</initialResistanceRange>
+	<backstoryFilters Inherit="False" IsNull="True"></backstoryFilters>
+    <backstoryFiltersOverride Inherit="False">
+		<li>
+			<categories>
+				<li>Cabbage</li>
+			</categories>
+		</li>
+    </backstoryFiltersOverride>
+	<destroyGearOnDrop>true</destroyGearOnDrop>
+  </PawnKindDef>
+</Defs>

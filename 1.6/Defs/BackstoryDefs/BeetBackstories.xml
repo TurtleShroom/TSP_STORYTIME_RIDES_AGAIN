@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <AlienRace.AlienBackstoryDef Name="BeetnikhBackstories" Abstract="True">
+	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Fat</bodyTypeFemale>
+	<spawnCategories>
+      <li>BeetnikhBackstory</li>
+    </spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
+    <defName>BeetHerderChild</defName>
+    <title>Young Herdsman</title>
+	<titleShort>herdsman</titleShort>
+    <description>[PAWN_nameDef] helped herd the livestock that lived on his family's homestead. It was a lonely upbringing.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>-3</Social>
+	  <Animals>4</Animals>
+	  <Shooting>1</Shooting>
+    </skillGains>
+	<spawnCategories>
+      <li>BeetnikhBackstory</li>
+	  <li>Farmer</li>
+	  <li>TribalFarmer</li>
+	  <li>Outsider</li>
+	  <li>Outlander</li>
+    </spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
+    <defName>BeetFisherChild</defName>
+    <title>Young Fisherman</title>
+	<titleShort>fisherman</titleShort>
+    <description>[PAWN_nameDef] lived in town and helped catch fish. Everybody liked [PAWN_pronoun] when  landed a big one.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Social>6</Social>
+	  <Animals>2</Animals>
+	  <Cooking>3</Cooking>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+		<li MayRequire="VanillaExpanded.VCEF">
+			<options MayRequire="VanillaExpanded.VCEF">
+				<li MayRequire="VanillaExpanded.VCEF">
+					<defName MayRequire="VanillaExpanded.VCEF">VCEF_Fisherman</defName>
+				</li>
+			</options>
+			<chance MayRequire="VanillaExpanded.VCEF">100</chance>
+		</li>
+    </forcedTraitsChance>
+	<spawnCategories>
+		<li>BeetnikhBackstory</li>
+		<li>Farmer</li>
+		<li>TribalHunter</li>
+		<li>Hunter</li>
+		<li>Outlander</li>
+		<li>Tribal</li>
+		<li>Farmer</li>
+		<li>TribalFarmer</li>
+		<li>Medieval</li>
+		<li>ESCP_MaormerBackstory_Adulthood</li>
+		<li>ESCP_MaormerPirate_SeaVipers_Backstory</li>
+		<li>ESCP_MaormerPirate_StormSharks_Backstory</li>
+		<li>ESCP_MaormerPirate_KeelCutter_Backstory</li>
+		<li>ESCP_MaormerPirate_BlueVenom_Backstory</li>
+		<li>ESCP_MaormerPirate_WakeWalkers_Backstory</li>
+		<li>ESCP_MaormerPirate_Dreadsails_Backstory</li>
+		<li>ESCP_MaormerMageBackstory_Adulthood</li>
+    </spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
+    <defName>BeetSchoolChild</defName>
+    <title>Schoolboy</title>
+	<titleFemale>Schoolgirl</titleFemale>
+	<titleShort>student</titleShort>
+    <description>[PAWN_nameDef]'s family was well off enough that [PAWN_pronoun] was able to attend school instead of helping out around the house.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Intellectual>6</Intellectual>
+	  <Social>3</Social>
+    </skillGains>
+	<spawnCategories Inherit="False">
+      <li>BeetnikhBackstory</li>
+	  <li>CivilizedBeetEmperor</li>
+    </spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
+    <defName>BeetCulturalExchange</defName>
+    <title>Exchange Student</title>
+	<titleShort>exchange victim</titleShort>
+    <description>[PAWN_nameDef] joined a program of cultural exchange with their savage wood beet cousins. This ended poorly.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Melee>3</Melee>
+	  <Shooting>1</Shooting>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName Degree="2">DrugDesire</defName>
+				</li>
+			</options>
+			<count>1</count>
+			<chance>100</chance>
+		</li>
+    </forcedTraitsChance>
+	<workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
+    <defName>BeetFarmer</defName>
+    <title>Beet Farmer</title>
+	<titleShort>beet farmer</titleShort>
+    <description>[PAWN_nameDef] quietly farmed beets. Not the sapient kind, though.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+	  <Plants>5</Plants>
+	  <Cooking>3</Cooking>
+    </skillGains>
+	<spawnCategories>
+		<li>BeetnikhBackstory</li>
+		<li>OniBackstory</li>
+		<li>Farmer</li>
+		<li>TribalFarmer</li>
+		<li>WoodBeetBackstory</li>
+		<li>Tribal</li>
+		<li>Outlander</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
+    <defName>BeetShaman</defName>
+    <title>Beet Shaman</title>
+	<titleShort>shaman</titleShort>
+    <description>[PAWN_nameDef] was a member of the elite group who communed with the spirits of nature.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>6</Social>
+	  <Intellectual>6</Intellectual>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
+    <defName>BeetGuard</defName>
+    <title>Guardsman</title>
+	<titleShort>guardsman</titleShort>
+    <description>[PAWN_nameDef] worked as a guard in one of his Faction's local realms, protecting the citizenry from pirates and drunkards.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>6</Melee>
+	  <Shooting>3</Shooting>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
+		<defName>BeetAlcoholic</defName>
+		<title>Vicious Drunkard</title>
+		<titleShort>drunkard</titleShort>
+		<description>[PAWN_nameDef] can't stop drinking alcohol. This has made [PAWN_objective] violent and dangerous to society.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+		  <Social>-6</Social>
+		  <Melee>5</Melee>
+		</skillGains>
+		<forcedTraitsChance>
+			<!--
+			<li>
+				<options>
+					<li>
+						<defName Degree="2">DrugDesire</defName>
+					</li>
+				</options>
+				<change>100</change>
+			</li>
+			-->
+			<li>
+				<options>
+					<li>
+						<defName>ST_FillerDummy_Trait</defName>
+					</li>
+				</options>
+				<!-- <count>1</count> -->
+				<chance>0</chance>
+			</li>
+			<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
+				<options MayRequire="vanillaexpanded.vanillatraitsexpanded">
+					<li MayRequire="vanillaexpanded.vanillatraitsexpanded">
+						<defName MayRequire="vanillaexpanded.vanillatraitsexpanded">VTE_Lush</defName>
+					</li>
+				</options>
+				<chance MayRequire="vanillaexpanded.vanillatraitsexpanded">100</chance>
+			</li>
+			<li>
+				<options>
+					<li>
+						<defName>Bloodlust</defName>
+					</li>
+					<li>
+						<defName>Brawler</defName>
+					</li>
+				</options>
+				<chance>100</chance>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<forcedHediffs>
+		  <li>AlcoholAddiction</li>
+		</forcedHediffs>
+		<workDisables>
+		  <li>Caring</li>
+		  <li>Intellectual</li>
+		  <li>ManualSkilled</li>
+		</workDisables>
+		<disallowedTraits></disallowedTraits>
+		<spawnCategories>
+		  <li>WoodBeetBackstory</li>
+		  <li>Outsider</li>
+		  <li>Madman</li>
+		  <li>Pirate</li>
+		  <li>Offworld</li>
+		  <li>Outlander</li>
+		  <li>JeubBackstory</li>
+		  <li>Sadist</li>
+		  <li>ImperialFighter</li>
+		  <li>ESCP_DunmerGreatHouse_Telvanni_Adulthood</li>
+		  <li>ESCP_DunmerBackstory_Adulthood</li>
+		  <li>ESCP_OrismerBackstory_Adulthood</li>
+		  <li>ESCP_DunmerSlaveBackstory_Adulthood</li>
+		  <li>ESCP_DunmerDresBackstory_Adulthood</li>
+		</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef>
+		<!-- Only applies to a civilized Beetnikh nobleman -->
+		<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+		<bodyTypeMale Inherit="False">Fat</bodyTypeMale>
+		<bodyTypeFemale Inherit="False">Fat</bodyTypeFemale>
+		<defName>BeetEmperor</defName>
+		<title>Beet Emperor</title>
+		<titleFemale>Beet Empress</titleFemale>
+		<titleShort>Beet Emperor</titleShort>
+		<description>Thanks to [PAWN_possessive] spectacular military prowess, [PAWN_nameDef] somehow managed to become the ruler of a great Beetnikh realm. Considering how stupid [PAWN_pronoun] is at governing, [PAWN_pronoun] cannot do it alone. [PAWN_nameDef] is surrounded by a host of advisors that do most of the peacetime work.</description>
+		<slot>Adulthood</slot>
+		<skillGains Inherit="False">
+		  <Melee>12</Melee>
+		  <Shooting>8</Shooting>
+		  <Social>12</Social>
+		</skillGains>
+		<workDisables>
+			<li>Animals</li>
+			<!-- <li>Tailoring</li> -->
+			<li>Crafting</li>
+			<li>Mining</li>
+			<li>Constructing</li>
+			<li>Cooking</li>
+			<li>Intellectual</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Social</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<spawnCategories Inherit="False">
+		  <li>CivilizedBeetEmperor</li>
+		</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
+    <defName>BeetHerder</defName>
+    <title>Beet Shepherd</title>
+	<titleShort>shepherd</titleShort>
+    <description>[PAWN_nameDef] herded sheep around his ancestral homestead. It was boring.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+	  <Social>-5</Social>
+	  <Animals>5</Animals>
+	  <Shooting>1</Shooting>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="BeetnikhBackstories">
+    <defName>BeetTownsperson</defName>
+    <title>Beet Townsman</title>
+	<titleShort>townsman</titleShort>
+    <description>[PAWN_nameDef] lived with other Beets in a small village, doing various odd tasks for pay.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Construction>2</Construction>
+	  <Crafting>2</Crafting>
+	  <Cooking>2</Cooking>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+</Defs>

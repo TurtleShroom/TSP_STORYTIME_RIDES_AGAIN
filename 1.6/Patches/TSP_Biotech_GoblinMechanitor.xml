@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/removeOnRedressIfNotOfKind</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/removeOnRedressIfNotOfKind</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
+	<!-- Does this exist? -->
+		<xpath>/Defs/HediffDef[defName="MechlinkImplant"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+			  <PawnKindDef ParentName="MechanitorBase" MayRequire="ludeon.rimworld.biotech">
+				<defName MayRequire="ludeon.rimworld.biotech">GoblinGenius</defName>
+				<label MayRequire="ludeon.rimworld.biotech">goblin elite</label>
+				<race MayRequire="ludeon.rimworld.biotech">Alien_ST_Goblin</race>
+				<combatPower MayRequire="ludeon.rimworld.biotech">170</combatPower>
+				<factionLeader MayRequire="ludeon.rimworld.biotech">true</factionLeader>
+				<defaultFactionType MayRequire="ludeon.rimworld.biotech">GoblinTown</defaultFactionType>
+				<chemicalAddictionChance MayRequire="ludeon.rimworld.biotech">0.03</chemicalAddictionChance>
+				<apparelMoney MayRequire="ludeon.rimworld.biotech" Inherit="False">
+				  <min>1250</min>
+				  <max>3500</max>
+				</apparelMoney>
+				<apparelTags MayRequire="ludeon.rimworld.biotech">
+					<li>IndustrialBasic</li>
+					<li>IndustrialAdvanced</li>
+					<li>IndustrialMilitary</li>
+					<li>IndustrialMilitaryAdvanced</li>
+					<li>GoblinWear</li>
+					<li>Cape</li>
+				</apparelTags>
+				<apparelRequired MayRequire="ludeon.rimworld.biotech" Inherit="False">
+					<li MayRequire="vanillaexpanded.vappe">VAE_Apparel_LabCoat</li>
+				</apparelRequired>
+				<weaponMoney MayRequire="ludeon.rimworld.biotech" Inherit="False">
+					 <min>1200</min>
+					 <max>2000</max>
+				</weaponMoney>
+				<backstoryCryptosleepCommonality MayRequire="ludeon.rimworld.biotech">0.054</backstoryCryptosleepCommonality>
+				<techHediffsMoney MayRequire="ludeon.rimworld.biotech" Inherit="False">
+				  <min>1500</min>
+				  <max>5000</max>
+				</techHediffsMoney>
+				<!--
+				<techHediffsTags MayRequire="ludeon.rimworld.biotech">
+				  <li MayRequire="ludeon.rimworld.biotech">Mechanitor</li>
+				</techHediffsTags>
+				-->
+				<techHediffsRequired MayRequire="ludeon.rimworld.biotech">
+				  <li MayRequire="ludeon.rimworld.biotech">Mechlink</li>
+				  <li MayRequire="ludeon.rimworld.biotech">DeathAcidifier</li>
+				</techHediffsRequired>
+				<biocodeWeaponChance>1</biocodeWeaponChance>
+				<techHediffsChance>0.5</techHediffsChance>
+				<weaponTags MayRequire="ludeon.rimworld.biotech">
+					<li>GoblinTech</li>
+					<li>GoblinAdvanced</li>
+					<li>GoblinGenius</li>
+				</weaponTags>
+				<initialWillRange>21~24</initialWillRange>
+				<initialResistanceRange>48~101</initialResistanceRange>
+				<skills MayRequire="ludeon.rimworld.biotech">
+				  <li MayRequire="ludeon.rimworld.biotech">
+					<skill>Intellectual</skill>
+					<range>6~18</range>
+				  </li>
+				  <li MayRequire="ludeon.rimworld.biotech">
+					<skill>Crafting</skill>
+					<range>6~9</range>
+				  </li>
+				</skills>
+					<disallowedTraits>
+						<li>Wimp</li>
+						<li>Nudist</li>
+						<li>BodyPurist</li>
+						<li>ST_SemiFeral</li>
+						<li>Cannibal</li>
+						<li>ST_Stupid</li>
+					</disallowedTraits>
+			  </PawnKindDef>
+			</value>
+		</match>
+	</Operation>
+</Patch>

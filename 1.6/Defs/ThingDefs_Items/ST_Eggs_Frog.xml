@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>PeeperEggUnfertilized</defName>
+		<label>spring peeper egg (unfert.)</label>
+		<description>An unfertilized chorus frog egg. Spring peeper frogs are engineered to lay eggs more than once a day, but they are not as nutritious as most eggs. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue Inherit="False">0.8</MarketValue>
+			<Nutrition Inherit="False">0.04</Nutrition>
+			<Mass Inherit="False">0.009</Mass>
+		</statBases>
+		<stackLimit>100</stackLimit>
+		<!--
+		<comps Inherit="False">
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>15</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+				<disableIfHatcher>true</disableIfHatcher>
+			</li>
+		</comps>
+		-->
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>PeeperEggFertilized</defName>
+		<label>spring peeper egg (fert.)</label>
+		<description>A fertilized chorus frog egg. If all goes well, it should hatch into a spring peeper tadpole. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>4.5</MarketValue>
+			<Nutrition Inherit="False">0.3</Nutrition>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>7</hatcherDaystoHatch>
+				<hatcherPawn>SpringPeeper</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>BullfrogEggUnfertilized</defName>
+		<label>embittered bullfrog egg (unfert.)</label>
+		<description>An unfertilized embittered bullfrog egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>5.0</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>BullfrogEggFertilized</defName>
+		<label>embittered bullfrog egg (fert.)</label>
+		<description>A fertilized embittered bullfrog egg. If all goes well, it should hatch into an embittered bullfrog tadpole. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>3</hatcherDaystoHatch>
+				<hatcherPawn>ST_BullFrog</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>TomatoFrogEggUnfertilized</defName>
+		<label>tomato frog egg (unfert.)</label>
+		<description>An unfertilized tomato frog egg. It can be eaten raw, but it's much, much better cooked. It tastes like ketchup.</description>
+		<graphicData>
+			<color>(255,16,17)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>TomatoFrogEggFertilized</defName>
+		<label>tomato frog egg (fert.)</label>
+		<description>A fertilized tomato frog egg. If all goes well, it should hatch into a tomato frog tadpole. It can be eaten raw, but it's much better cooked. Even when raw, it still takes like ketchup.</description>
+		<graphicData>
+			<color>(255,16,17)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>3</hatcherDaystoHatch>
+				<hatcherPawn>TomatoFrog</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>BudgettFrogEggUnfertilized</defName>
+		<label>Grand Budgett's frog egg (unfert.)</label>
+		<description>An unfertilized Grand Budgett's frog egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+		<color>(254,216,177)</color>
+		</graphicData>
+			<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>BudgettFrogEggFertilized</defName>
+		<label>Grand Budgett's frog egg (fert.)</label>
+		<description>A fertilized Grand Budgett's frog egg. If all goes well, it should hatch into a Grand Budgett's frog tadpole. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>3</hatcherDaystoHatch>
+				<hatcherPawn>BudgettFrog</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>TreeFrogEggUnfertilized</defName>
+		<label>tree frog egg (unfert.)</label>
+		<description>An unfertilized bullet tree frog egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="EggFertBase">
+		<defName>TreeFrogEggFertilized</defName>
+		<label>bullet tree frog egg (fert.)</label>
+		<description>A fertilized bullet tree frog egg. If all goes well, it should hatch into a bullet tree frog tadpole. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+		<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>3</hatcherDaystoHatch>
+				<hatcherPawn>ST_TreeFrog</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>PoisonDartEggUnFertilized</defName>
+		<label>poison dart frog egg (unfert.)</label>
+		<description>An unfertilized poison dart frog egg. It can be eaten raw, but it's much, much better cooked. Unlike the frogs themselves, consumption bares no elevated risk of food poisoning, let alone death.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="EggFertBase">
+		<defName>PoisonDartEggFertilized</defName>
+		<label>poison dart frog egg (fert.)</label>
+		<description>A fertilized poison dart frog egg. If all goes well, it should hatch into a poison dart frog tadpole. It can be eaten raw, but it's much better cooked. Unlike the frogs themselves, consumption of this egg and the poison dart frog within bares no elevated risk of food poisoning, let alone death.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>8.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>3</hatcherDaystoHatch>
+				<hatcherPawn>PoisonDartFrog</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>ToadEggUnfertilized</defName>
+		<label>Regenerative Toad egg (unfert.)</label>
+		<description>An unfertilized Regenerative Toad egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="EggFertBase">
+		<defName>ToadEggFertilized</defName>
+		<label>Regenerative Toad egg (fert.)</label>
+		<description>A fertilized Regenerative Toad egg. If all goes well, it should hatch into a Regenerative Toad tadpole. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>6</hatcherDaystoHatch>
+				<hatcherPawn>ST_Toad</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<!--
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>CyberToadEggUnfertilized</defName>
+		<label>Cyber Frog egg (unfert.)</label>
+		<description>An unfertilized Cyber Frog egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(102,102,105)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>3</MarketValue>
+		</statBases>
+	</ThingDef>
+	-->
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>CyberToadEggFertilized</defName>
+		<label>Cyber Frog egg (fert.)</label>
+		<description>A fertilized Cyber Frog egg. If all goes well, it should hatch into a Cyber Frog tadpole. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<color>(102,102,105)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>26</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>9</hatcherDaystoHatch>
+				<hatcherPawn>CyberFrogDocile</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>  
+
+	<!--
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>WoodFrogEggUnfertilized</defName>
+		<label>wood frog egg (unfert.)</label>
+		<description>An unfertilized wood frog egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+	</ThingDef>
+	-->
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>WoodFrogEggFertilized</defName>
+		<label>Wood Pseudo-Frog seed</label>
+		<description>A Wood Pesudo-Frog seed. If all goes well, it should germinate into a Wood Pseudo-Frog seedling. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>34</MarketValue>
+			<Nutrition Inherit="False">0.5</Nutrition>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>3</hatcherDaystoHatch>
+				<hatcherPawn>ST_WoodFrog</hatcherPawn>
+			</li>
+			<!--
+			<li Class="CompProperties_TemperatureRuinable" Inherit="False">
+				<minSafeTemperature Inherit="False">-5</minSafeTemperature>
+				<maxSafeTemperature Inherit="False">100</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+			-->
+		</comps>
+		<ingestible>
+			<foodType Inherit="False">Seed, Plant, VegetarianAnimal, VegetarianRoughAnimal, DendrovoreAnimal, Tree, Kibble</foodType>
+		</ingestible>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>LeviathanFrogEggUnfertilized</defName>
+		<label>leviathan frog egg (unfert.)</label>
+		<description>An unfertilized leviathan frog egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>10.0</MarketValue>
+			<Nutrition Inherit="False">0.8</Nutrition>
+		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>LeviathanFrogEggFertilized</defName>
+		<label>leviathan frog egg (fert.)</label>
+		<description>A fertilized leviathan frog egg. If all goes well, it should hatch into a leviathan frog tadpole. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>30.0</MarketValue>
+			<Nutrition Inherit="False">1</Nutrition>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>17</hatcherDaystoHatch>
+				<hatcherPawn>LeviathanFrog</hatcherPawn>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>6</minSafeTemperature>
+				<maxSafeTemperature>90</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef> 
+
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>JudasFrogEggUnfertilized</defName>
+		<label>Judas' frog egg (unfert.)</label>
+		<description>An unfertilized Judas' frog egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>JudasFrogEggFertilized</defName>
+		<label>Judas' frog egg (fert.)</label>
+		<description>A fertilized Judas' frog egg. If all goes well, it should hatch into a Judas' frog nymph. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>3</hatcherDaystoHatch>
+				<hatcherPawn>JudasFrog</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>FireToadEggUnfertilized</defName>
+		<label>fire-bellied toad egg (unfert.)</label>
+		<description>An unfertilized fire-bellied toad egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>UnfertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>FireToadEggFertilized</defName>
+		<label>fire-bellied toad egg (fert.)</label>
+		<description>A fertilized fire-bellied toad egg. If all goes well, it should hatch into a fire-bellied toad tadpole. It can be eaten raw, but it's much better cooked. The fiery abilities of the fire-bellied toad within make the egg impossible to spoil due to temperature.</description>
+		<graphicData>
+			<color>(254,216,177)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps Inherit="False">
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>3</hatcherDaystoHatch>
+				<hatcherPawn>FireBelliedToad</hatcherPawn>
+			</li>
+			<!-- The egg naturally keeps itself warm -->
+			<!--
+			<li Class="CompProperties_TemperatureRuinable" Inherit="False">
+				<minSafeTemperature Inherit="False">-200</minSafeTemperature>
+				<maxSafeTemperature Inherit="False">200</maxSafeTemperature>
+				<progressPerDegreePerTick>0</progressPerDegreePerTick>
+			</li>
+			-->
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>TSP_ST_BloodFrogEgg_Fertilized</defName>
+		<label>blood frog egg (fert.)</label>
+		<description>A fertilized engorged Frogglobin egg. If all goes well, it should hatch into an engorged Frogglobin tadpole. It is completely inedible.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(255,16,17)</color>
+		</graphicData>
+		<statBases Inherit="False">
+			<MarketValue>17</MarketValue>
+			<!-- <Nutrition Inherit="False">0</Nutrition> -->
+			<!-- <Nutrition IsNull="True" Inherit="False"></Nutrition> -->
+			<Mass>0.15</Mass>
+		</statBases>
+		<ingestible IsNull="True" Inherit="False"></ingestible>
+		<!--
+		<ingestible>
+			<foodType>None</foodType>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+		-->
+		<thingCategories Inherit="False">
+			<li>EggsFertilized</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-5</minSafeTemperature>
+				<maxSafeTemperature>90</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>9</hatcherDaystoHatch>
+				<hatcherPawn>BloodFrog</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>FertilizedFrogEgg</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>

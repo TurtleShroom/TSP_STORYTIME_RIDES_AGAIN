@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<PawnKindDef Abstract="True" Name="BasePlayerGnomePawnKind">
+		<race>Alien_ST_Gnome</race>
+		<!-- <baseRecruitDifficulty>0.75</baseRecruitDifficulty> -->
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelColor>(69,193,69)</apparelColor>
+		<favoriteColor>(69,193,69)</favoriteColor>
+		<invNutrition>4</invNutrition>
+		<apparelTags>
+			<li>ST_GnomeClothing</li>
+			<li>GnomeWear</li>
+		</apparelTags>
+		<requiredWorkTags>
+			<li>Cooking</li>
+		</requiredWorkTags>
+		<combatPower>45</combatPower>
+		<initialWillRange>1~4</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="ST_Character_Gnome" ParentName="BasePlayerGnomePawnKind" Abstract="True">
+		<race>Alien_ST_Gnome</race>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Farmer</li>
+					<li>TribalFarmer</li>
+					<li>GnomeBackstory</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<isFighter>true</isFighter>
+		<invFoodDef>TangledToadLegs</invFoodDef>
+		<apparelTags>
+			<li>ST_GnomeClothing</li>
+			<li>Medieval</li>
+			<li>MedievalBasic</li>
+			<li>MedievalApparelBasic</li>
+			<li>MedievalApparel</li>
+			<li>Classical</li>
+		</apparelTags>
+		<specificApparelRequirements>
+			<!-- Relocated to ensure Weezer Albums stay blue -->
+			<!--
+			<li>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<only>(69,193,69)</only>  Neon green 
+						</li>
+					</options>
+				</colorGenerator>
+			</li>
+			-->
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<stuff>Gnome_Cloth</stuff>
+			</li>
+			<li>
+				<bodyPartGroup>Legs</bodyPartGroup>
+				<stuff>Gnome_Cloth</stuff>
+			</li>
+		</specificApparelRequirements>
+		<combatPower>10</combatPower>
+		<initialWillRange>1~4</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+  
+  <PawnKindDef ParentName="ST_Character_Gnome">
+    <defName>PlayerGnome</defName>
+    <label>Gnome colonist</label>
+	<!--
+	<backstoryFilters>
+		<li>Farmer</li>
+		<li>GnomeBackstory</li>
+	</backstoryFilters>
+	-->
+    <combatPower>50</combatPower>
+    <!-- <defaultFactionType>PlayerColony</defaultFactionType> -->
+    <chemicalAddictionChance>0.09</chemicalAddictionChance>
+    <apparelMoney>
+      <min>400</min>
+      <max>600</max>
+    </apparelMoney>
+	<apparelTags>
+        <li>ST_GnomeClothing</li>
+		<li>Medieval</li>
+		<li>MedievalBasic</li>
+		<li>MedievalDecent</li>
+		<li>MedievalApparelBasic</li>
+		<li>Classical</li>
+    </apparelTags>
+	<apparelRequired Inherit="False">
+		<li Inherit="False">GnomeShirt</li>
+		<li Inherit="False">GnomePants</li>
+	</apparelRequired>
+	<weaponMoney>
+         <min>250</min>
+         <max>2500</max>
+    </weaponMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>50</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+	<weaponTags>
+		<li>Lance</li>
+		<li>MedievalHeavy</li>
+		<li>GnomeWeapon</li>
+		<li>GnomeRanged</li>
+		<li>GnomeMelee</li>
+		<li>SimpleGun</li>
+		<li>Revolver</li>
+    </weaponTags>
+    <initialWillRange>1~2</initialWillRange>
+    <initialResistanceRange>6~20</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="ST_Character_Gnome">
+    <defName>GnomeArcher</defName>
+    <label>Gnome archer</label>
+    <combatPower>50</combatPower>
+    <chemicalAddictionChance>0.01</chemicalAddictionChance>
+	<isFighter>true</isFighter>
+    <apparelMoney>
+      <min>250</min>
+      <max>420</max>
+    </apparelMoney>
+	<apparelTags>
+        <li>ST_GnomeClothing</li>
+    </apparelTags>
+	<specificApparelRequirements>
+		<li>
+			<colorGenerator Class="ColorGenerator_Options">
+				<options>
+					<li>
+						<only>(69,193,69)</only> <!-- Neon green -->
+					</li>
+				</options>
+			</colorGenerator>
+		</li>
+	</specificApparelRequirements>
+	<weaponMoney>
+         <min>100</min>
+         <max>500</max>
+    </weaponMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>50</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+	<weaponTags>
+		<li>GnomeRanged</li>
+		<li>BowMen</li>
+		<li>MedievalRangedBasic</li>
+		<li>MedievalRangedDecent</li>
+		<li>MedievalRangedAdvanced</li>
+		<li>NeolithicRangedDecent</li>
+		<li>NeolithicRangedAdvanced</li>
+		<li>NeolithicRangedHeavy</li>
+    </weaponTags>
+    <initialWillRange>1~4</initialWillRange>
+    <initialResistanceRange>3~16</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="ST_Character_Gnome">
+    <defName>GnomeWarrior</defName>
+    <label>Gnome warrior</label>
+	<isFighter>true</isFighter>
+    <combatPower>60</combatPower>
+    <chemicalAddictionChance>0.01</chemicalAddictionChance>
+    <apparelMoney>
+      <min>250</min>
+      <max>450</max>
+    </apparelMoney>
+	<apparelTags>
+        <li>ST_GnomeClothing</li>
+    </apparelTags>
+	<weaponMoney>
+         <min>250</min>
+         <max>3600</max>
+    </weaponMoney>
+	<specificApparelRequirements>
+		<li>
+			<colorGenerator Class="ColorGenerator_Options">
+				<options>
+					<li>
+						<only>(69,193,69)</only> <!-- Neon green -->
+					</li>
+				</options>
+			</colorGenerator>
+		</li>
+	</specificApparelRequirements>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>50</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+	<weaponTags>
+		<li>GnomeMelee</li>
+		<li>MedievalMeleeBasic</li>
+		<li>MedievalMeleeDecent</li>
+		<li>IndustrialMeleeBasic</li>
+		<li>MedievalHeavy</li>
+		<li>Lance</li>
+    </weaponTags>
+    <initialWillRange>1~4</initialWillRange>
+    <initialResistanceRange>3~16</initialResistanceRange>
+  </PawnKindDef>
+  
+	<PawnKindDef ParentName="ST_Character_Gnome">
+		<defName>GnomeTrader</defName>
+		<label>Gnome tradesman</label>
+		<trader>true</trader>
+		<isFighter>true</isFighter>
+		<combatPower>80</combatPower>
+		<defaultFactionType>TreeGnomeEmpire</defaultFactionType>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<minGenerationAge>24</minGenerationAge> <!-- Prevents bug when Children are allowed to spawn in V1.3 via Mods causing the trade caravan to pump out massive errors -->
+		<apparelMoney>
+		  <min>550</min>
+		  <max>5000</max>
+		</apparelMoney>
+		<apparelTags>
+			<li>ST_GnomeClothing</li>
+			<li>Cape</li>
+		</apparelTags>
+		<specificApparelRequirements Inherit="False">
+		  <li>
+			<bodyPartGroup Inherit="False">UpperHead</bodyPartGroup>
+			<stuff Inherit="False">Weezer</stuff>
+		  </li>
+		  <!--
+		  <li>
+			<bodyPartGroup>Torso</bodyPartGroup>
+			<requiredTag>Robe</requiredTag>
+			<stuff>Gnome_Cloth</stuff>
+		  </li>
+		  -->
+		  <li Inherit="False">
+			<bodyPartGroup Inherit="False">Torso</bodyPartGroup>
+			<stuff Inherit="False">Weezer</stuff>
+		  </li>
+		  <li>
+			<bodyPartGroup>Legs</bodyPartGroup>
+			<stuff>Gnome_Cloth</stuff>
+		  </li>
+		</specificApparelRequirements>
+		<weaponMoney>
+			 <min>50</min>
+			 <max>3600</max>
+		</weaponMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsMoney>
+		  <min>50</min>
+		  <max>50</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+		  <li>Poor</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<weaponTags>
+			<li>MedievalMeleeDecent</li>
+			<li>GnomeRanged</li>
+			<li>BowMen</li>
+			<li>SpearMen</li>
+			<li>Spear</li>
+		</weaponTags>
+		<initialWillRange>1~4</initialWillRange>
+		<initialResistanceRange>5~20</initialResistanceRange>
+	</PawnKindDef>
+  
+  <PawnKindDef>
+    <defName>TSP_ST_GnomeCabbageinator</defName>
+    <label>cabbage grenadier</label>
+	<race>Alien_ST_Gnome</race>
+	<isFighter>true</isFighter>
+    <combatPower>250</combatPower>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <apparelMoney>
+      <min>220</min>
+      <max>1750</max>
+    </apparelMoney>
+	<apparelTags>
+        <li>ST_GnomeClothing</li>
+		<li>MedievalArmorBasic</li>
+		<li>MedievalArmorDecent</li>
+		<li>MedievalArmorAdvanced</li>
+		<li>MedievalAdvanced</li>
+    </apparelTags>
+	<weaponMoney>
+         <min>10000</min>
+         <max>20000</max>
+    </weaponMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>50</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+	<weaponTags Inherit="False">
+		<li>CabbageWarrior</li>
+    </weaponTags>
+    <initialWillRange>1~8</initialWillRange>
+    <initialResistanceRange>7~40</initialResistanceRange>
+    <backstoryFiltersOverride Inherit="False">
+		<li>
+			<categories>
+				<li>Cabbage</li>
+			</categories>
+		</li>
+    </backstoryFiltersOverride>
+	<destroyGearOnDrop>true</destroyGearOnDrop>
+  </PawnKindDef>
+  
+  <PawnKindDef>
+    <defName>GnomeKing</defName>
+    <label>Gnoble King</label>
+	<labelFemale>Gnoble Queen</labelFemale>
+	<race>Alien_ST_Gnome</race>
+	<combatPower>80</combatPower>
+    <defaultFactionType>TreeGnomeEmpire</defaultFactionType>
+    <factionLeader>true</factionLeader>
+    <chemicalAddictionChance>0.01</chemicalAddictionChance>
+	<!-- <apparelColor>(69,193,69)</apparelColor> --> <!-- Weezer albums are blue -->
+	<skinColorOverride>255,235,225</skinColorOverride>
+	<minGenerationAge>24</minGenerationAge> <!-- Prevents bug when Children are allowed to spawn in V1.3 via Mods causing the trade caravan to pump out massive errors -->
+	<specificApparelRequirements Inherit="False">
+      <li>
+        <bodyPartGroup Inherit="False">UpperHead</bodyPartGroup>
+        <stuff Inherit="False">Weezer</stuff>
+      </li>
+	  <!--
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <requiredTag>Robe</requiredTag>
+		<stuff>Gnome_Cloth</stuff>
+      </li>
+	  -->
+      <li Inherit="False">
+        <bodyPartGroup Inherit="False">Torso</bodyPartGroup>
+        <stuff Inherit="False">Weezer</stuff>
+      </li>
+      <li>
+        <bodyPartGroup>Legs</bodyPartGroup>
+        <stuff>Gnome_Cloth</stuff>
+      </li>
+	</specificApparelRequirements>
+    <apparelTags Inherit="False">
+      <!-- <li>MedievalArmorElite</li> -->
+	  <li>King</li>
+	  <li>Royal</li>
+	  <li>RoyalTier1</li>
+	  <li>RoyalTier2</li>
+	  <li>RoyalTier3</li>
+	  <li>Medieval</li>
+	  <li>MedievalBasic</li>
+	  <li>MedievalAdvanced</li>
+	  <li>MedievalApparelNoble</li>
+	  <li>IndustrialBasic</li>
+	  <li>Cape</li>
+	  <li>Robe</li>
+	  <li>RoyalRobe</li>
+	  <li>Gnoble</li>
+	  <li>ST_GnomeClothing</li>
+    </apparelTags>
+	<apparelRequired Inherit="False">
+		<li>Apparel_Crown</li>
+	</apparelRequired>
+    <apparelMoney>
+      <min>3000</min>
+      <max>6000</max>
+    </apparelMoney>
+	<weaponMoney>
+         <min>3000</min>
+         <max>6000</max>
+    </weaponMoney>
+    <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>50</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+	<weaponTags>
+		<li>Barbarian</li>
+        <li>GnomeMelee</li>
+		<li>MedievalHeavy</li>
+		<li>MedievalRangeDecent</li>
+		<li>MedievalRangeAdvanced</li>
+		<li>SimpleGun</li>
+    </weaponTags>
+    <initialWillRange>0.5~6</initialWillRange>
+    <initialResistanceRange>15~60</initialResistanceRange>
+	<backstoryFilters Inherit="False" IsNull="True"></backstoryFilters>
+    <backstoryFiltersOverride Inherit="False">
+		<li>
+			<categoriesChildhood>
+				<li>GnobleBackstory</li>
+				<li>ImperialNoble</li>
+				<li>ImperialRoyal</li>
+			</categoriesChildhood>
+		</li>
+		<li>
+			<categoriesAdulthood>
+				<li>GnobleBackstory</li>
+			</categoriesAdulthood>
+		</li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+  
+	<PawnKindDef>
+		<defName>TSP_ST_GnomePeasant</defName>
+		<label>Gnome peasant</label>
+		<labelPlural>Gnome peasants</labelPlural>
+		<race>Alien_ST_Gnome</race>
+		<combatPower>10</combatPower>
+		<!-- <defaultFactionType>TreeGnomeEmpire</defaultFactionType> -->
+		<apparelIgnoreSeasons Inherit="False">true</apparelIgnoreSeasons>
+		<backstoryFilters Inherit="False" IsNull="True"></backstoryFilters>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categories>
+					<li Inherit="False">GnomeBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.06</chemicalAddictionChance>
+		<apparelMoney Inherit="False"> <!-- They wear nothing else but the apparel below -->
+			<min Inherit="False">99999</min>
+			<max Inherit="False">99999</max>
+		</apparelMoney>
+		<!--
+		<specificApparelRequirements Inherit="False">
+		  <li>
+			<colorGenerator Class="ColorGenerator_Options">
+			  <options>
+				<li>
+					<only>(69,193,69)</only> Neon green
+				</li>
+			  </options>
+			</colorGenerator>
+		  </li>
+		</specificApparelRequirements>
+		-->
+		<apparelRequired Inherit="False">
+			<li Inherit="False">ST_GnomeHat</li>
+			<li Inherit="False">GnomeGoggles</li>
+			<li Inherit="False">GnomeShirt</li>
+			<li Inherit="False">GnomePants</li>
+		</apparelRequired>
+		<weaponMoney>
+			<min>200</min>
+			<max>400</max>
+		</weaponMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsMoney>
+		  <min>50</min>
+		  <max>150</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+		  <li>Poor</li>
+		  <li>Simple</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<apparelTags Inherit="False" IsNull="True">
+			<!-- Gnome peasants wear nothing else -->
+			<!-- <li>GnomePeasant</li> -->
+		</apparelTags>
+		<weaponTags>
+			<li>GnomeSimpleMelee</li>
+			<li>GnomeMelee</li>
+			<li>GnomeRanged</li>
+			<li>Toolagri</li>
+		</weaponTags>
+		<initialWillRange>0.25~1</initialWillRange>
+		<initialResistanceRange>1~4</initialResistanceRange>
+	  </PawnKindDef>
+	  
+	<PawnKindDef Name="TSP_ST_GnomeChef_Base" ParentName="BasePlayerGnomePawnKind" Abstract="True">
+		<race>Alien_ST_Gnome</race>
+		<apparelTags>
+			<li>GnomeChef</li>
+		</apparelTags>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelRequired Inherit="False">
+			<li MayRequire="vanillaexpanded.vappe">VAE_Apparel_ChefsUniform</li>
+			<li MayRequire="vanillaexpanded.vappe">VAE_Headgear_ChefsToque</li>
+		</apparelRequired>
+		<techHediffsRequired Inherit="False">
+			<li MayRequire="ludeon.rimworld.royalty">GastroAnalyzer</li>
+		</techHediffsRequired>
+		<humanPregnancyChance>0.23</humanPregnancyChance>
+		<weaponTags>
+			<li>Knife</li>
+			<li>GnomeChef</li>
+			<li>K4GCleaver</li>
+		</weaponTags>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<only>(69,193,69)</only> <!-- Neon green -->
+						</li>
+					</options>
+				</colorGenerator>
+			</li>
+		</specificApparelRequirements>
+	</PawnKindDef>
+	  
+	<PawnKindDef Name="ST_GnomeChef_Character" ParentName="TSP_ST_GnomeChef_Base">
+		<defName>GnomeChef</defName>
+		<label>Gnome chef</label>
+		<isFighter>true</isFighter>
+		<combatPower>30</combatPower>
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<minGenerationAge>23</minGenerationAge>
+		<maxGenerationAge>54</maxGenerationAge>
+		<apparelMoney>
+			<min>250</min>
+			<max>550</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>250</min>
+			<max>1600</max>
+		</weaponMoney>
+		<backstoryCryptosleepCommonality>0.12</backstoryCryptosleepCommonality>
+		<techHediffsMoney>
+			<min>250</min>
+			<max>701</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<initialWillRange>0.01~2</initialWillRange>
+		<initialResistanceRange>2~8</initialResistanceRange>
+		<skills Inherit="False">
+			<li Inherit="False">
+				<skill>Cooking</skill>
+				<range>12~20</range>
+			</li>
+		</skills>
+		<!--
+		<requiredWorkTags>
+			<li>Cooking</li>
+		</requiredWorkTags>
+		-->
+	</PawnKindDef>
+</Defs>

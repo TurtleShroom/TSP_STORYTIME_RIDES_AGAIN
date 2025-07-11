@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <AlienRace.ThingDef_AlienRace ParentName="ST_Frogman">
+        <defName>Forg_Forg</defName>
+        <label>Forg</label>
+        <description>A forg!</description>
+        <alienRace>
+			<styleSettings Inherit="False">
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+            <graphicPaths Inherit="False">
+				<body>Forgs/Body/</body>
+				<head>Things/Pawn/Humanlike/BeanMan/Head/</head>
+				<skeleton>Things/Pawn/Animal/Toad/FrogCorpse</skeleton>
+            </graphicPaths>
+
+
+            <generalSettings>
+                <maleGenderProbability>0.5</maleGenderProbability>
+                <immuneToAge>false</immuneToAge>
+                <humanRecipeImport>true</humanRecipeImport>
+
+                <!-- <forcedRaceTraitEntries></forcedRaceTraitEntries> -->
+
+            <maxDamageForSocialfight>1</maxDamageForSocialfight>
+
+            <allowHumanBios>true</allowHumanBios>
+
+			<immuneToXenophobia>false</immuneToXenophobia>
+
+            <minAgeForAdulthood>14</minAgeForAdulthood>
+
+				<notXenophobistTowards Inherit="False">
+					<li>Human</li>
+					<li>Alien_FrogPerson</li>
+					<li>Forg_Duo</li>
+				</notXenophobistTowards>
+
+            <alienPartGenerator>
+				<headTypes Inherit="False">
+					<li>BeanMan_Narrow_Normal</li>
+				</headTypes>
+
+                <bodyTypes Inherit="False">
+					<li>Fat</li>
+                </bodyTypes>
+
+				<!--
+                <useGenderedHeads>false</useGenderedHeads>
+                <useGenderedBodies>false</useGenderedBodies>
+				
+
+                <colorChannels>
+                    
+                </colorChannels>
+
+                <bodyAddons>
+                
+                </bodyAddons>
+				-->
+            </alienPartGenerator>
+			<!--
+			<raceGenes MayRequire="ludeon.rimworld.biotech">
+				<li MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">
+					<defName MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">AG_FrogVoice</defName>
+					<chance MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">999</chance>
+				</li>
+			</raceGenes>
+			-->
+        </generalSettings>
+		
+
+			<thoughtSettings>
+				<replacerList>
+					<!-- Frogmen LOVE insect meat! They will always seek it out and enjoy it! -->
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatDirect</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeat_Loved</replacer>
+					</li>
+					<li MayRequire="ludeon.rimworld.ideology">
+						<original MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient</original>
+						<replacer MayRequire="ludeon.rimworld.ideology">AteInsectMeatAsIngredient_Loved</replacer>
+					</li>
+				</replacerList>
+			
+				<cannotReceiveThoughtsAtAll>false</cannotReceiveThoughtsAtAll>
+				
+				<cannotReceiveThoughts>
+					<li>Naked</li>
+					<li>ApparelDamaged</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Memory</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Memory</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Female</li>
+					
+					<!-- If they are not in a bug worshipping cult, they will ALWAYS enjoy eating insects. -->
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeat_Sacrilegious</li>
+					<li MayRequire="VanillaExpanded.VMemesE">VME_AteInsectMeatAsIngredient_Sacrilegious</li>
+				</cannotReceiveThoughts>
+				
+				<canStillReceiveThoughts>
+				</canStillReceiveThoughts>
+				
+				<restrictedThoughts>
+				</restrictedThoughts>
+				
+				<butcherThoughtGeneral><!-- my Race reacts to all racese -->
+				</butcherThoughtGeneral>
+				
+				<ateThoughtGeneral><!-- my Race reacts to all racese -->
+				</ateThoughtGeneral>
+				
+				<butcherThoughtSpecific><!-- my Race reacts to a certain race -->
+				</butcherThoughtSpecific>
+				
+				<ateThoughtSpecific><!--  my Race reacts to a certain race -->
+				</ateThoughtSpecific>
+		</thoughtSettings>
+
+        <relationSettings><!--  chance factor for my Race to spawn with these relationships 1 would be Normal Human chance -->
+				<relationChanceModifierLover>1</relationChanceModifierLover>
+				<relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+				<relationChanceModifierFiance>1</relationChanceModifierFiance>
+				<relationChanceModifierSpouse>1</relationChanceModifierSpouse>
+				<relationChanceModifierExSpouse>1</relationChanceModifierExSpouse>
+
+				<relationChanceModifierParent>1</relationChanceModifierParent>
+				<relationChanceModifierChild>1</relationChanceModifierChild>
+				<relationChanceModifierSibling>1</relationChanceModifierSibling>
+				
+				<renamer><!-- rename (Label) relationships for my Race -->
+				</renamer>
+		</relationSettings>
+
+    		<raceRestriction>
+					<blackEndoCategories>
+						<li>Head</li>
+						<li>Melanin</li> <!-- Can get an overridden skin color, but will always be a natural born green Pawn otherwise -->
+					</blackEndoCategories>
+					<blackGeneTags>
+						<!-- <li>BodyType</li> -->
+						<li>Ears</li>
+						<li>AG_Heads</li>
+						<li>Heads</li>
+						<li>Head</li>
+						<li>Fur</li>
+						<li>AG_Bodies</li>
+						<li>Bodies</li>
+						<li>Body</li>
+					</blackGeneTags>		
+					<researchList> <!-- only my race -->
+					</researchList>
+					
+					<!-- all the below Lists use the same format -->
+					<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel><!-- my race is limited -->
+					<apparelList>
+					</apparelList>
+					
+					<whiteApparelList><!-- if limtied not to these -->
+					</whiteApparelList>
+					
+					<onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons><!-- my race is limited -->
+					<weaponList>
+					</weaponList>
+					<whiteWeaponList>
+					</whiteWeaponList>
+					
+					<onlyDoRaceRestrictedRecipes>false</onlyDoRaceRestrictedRecipes><!-- my race is limited -->
+					<recipeList>
+					</recipeList>
+					<whiteRecipeList>
+					</whiteRecipeList>
+					
+					<onlyGetRaceRestrictedTraits>false</onlyGetRaceRestrictedTraits><!-- my race is limited -->
+					<traitList>
+					</traitList>
+					<whiteTraitList>
+					</whiteTraitList>
+
+					<onlyEatRaceRestrictedFood>false</onlyEatRaceRestrictedFood><!-- my race is limited -->
+					<foodList>
+					</foodList>
+					<whiteFoodList>
+					</whiteFoodList>
+					
+					<onlyBuildRaceRestrictedBuildings>false</onlyBuildRaceRestrictedBuildings><!-- my race is limited -->
+					<buildingList>
+					</buildingList>
+					<whiteBuildingList>
+					</whiteBuildingList>
+					
+					<!-- <onlyDoRaceRestrictedPlants>false</onlyDoRaceRestrictedPlants> // does not work my race is limited -->
+					<plantList>
+					</plantList>
+					<whitePlantList>
+					</whitePlantList>
+					
+					
+					<conceptList><!--when they get my race trigger --><!-- I don't understand this one -->
+					</conceptList>
+					
+					<workGiverList>
+					</workGiverList>
+					
+					<whiteReproductionList>
+						<li>Forg_Duo</li> <!-- Wait a minute, which Forg goes to town? -->
+						<li>Forg_Forg</li>
+						<li>Alien_FrogPerson</li>
+					</whiteReproductionList>
+			</raceRestriction>
+
+			<compatibility>
+				<!-- this is not really used for the most part but it allows other mods using C# to filter things related to your race -->
+				<isFlesh>true</isFlesh>
+				<isSentient>true</isSentient> 
+				<hasBlood>true</hasBlood>
+			</compatibility>
+		</alienRace>
+        <comps>
+			<!--
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<hediffname>HedFrogMan</hediffname>
+			</li>
+			-->
+        </comps>
+		<!-- Below is no longer HAR specific code and can be found in Vanilla -->
+		<race>
+			<!-- Basically human taken straight from Core Humans mostly -->
+			<!-- Choose your own values  -->
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<renderTree>Humanlike</renderTree>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>7500</lifeExpectancy>
+			<useMeatFrom>Alien_FrogPerson</useMeatFrom>
+			<leatherDef>Leather_Frog</leatherDef>
+			<bloodDef>Filth_Blood</bloodDef>
+			<nameCategory>HumanStandard</nameCategory>
+			<nameGenerator>FrogPersonMaleName</nameGenerator>
+			<nameGeneratorFemale>FrogPersonFemaleName</nameGeneratorFemale>
+			<body>ST_FrogLike</body>
+			<baseBodySize>0.85</baseBodySize>
+			<baseHealthScale>3</baseHealthScale>
+			<foodType>OmnivoreRoughAnimal, Meal, Processed, Fluid, Liquor, Kibble</foodType>
+			<gestationPeriodDays>45</gestationPeriodDays>
+			<meatMarketValue>0.8</meatMarketValue>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+			<knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
+			<litterSizeCurve Inherit="False">
+				<!-- how many babies are made unused in vanilla for humanlikes -->
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0.02)</li>
+					<li>(3.5, 0.03)</li>
+					<li>(4, 0.04)</li>
+					<li>(5, 0)</li>
+				</points>
+			</litterSizeCurve>
+				<!-- These affect stats and if your Race is ready to Lay eggs or be milked if you set that up in the LifeStage, it also determins when your Race is Sexualy Mature and can Reproduce which is not used by Humanlikes in Vanilla -->
+			<lifeStageAges Inherit="False">
+				<li Inherit="False">
+					<def>HumanlikeBaby</def>
+					<minAge>0</minAge>
+				</li>
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
+					<def>FrogPersonBabyStage</def>
+					<minAge>0.001</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+				<li Inherit="False">
+					<def>HumanlikeChild</def>
+					<minAge>0.9999</minAge>
+					<soundWounded>TSP_Bulborb_SnortDwarf</soundWounded>
+					<soundDeath>TSP_Bulborb_DeathDwarf</soundDeath>
+					<soundAngry>TSP_BulborbSqueal</soundAngry>
+				</li>
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
+					<def>FrogPersonChildStage</def>
+					<minAge>1</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+					<def>HumanlikePreTeenager</def>
+					<minAge>11.999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+				<li Inherit="False">
+					<def>HumanlikeTeenager</def>
+					<minAge>11.9999</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
+					<def>FrogPersonTeenStage</def>
+					<minAge>12</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False">
+					<def>HumanlikeAdult</def>
+					<minAge>14</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
+					<def>FrogPersonAdultStage</def>
+					<minAge>14.001</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+                <li Inherit="False" Class="AlienRace.LifeStageAgeAlien">
+					<def>forgChild</def>
+					<minAge>14.003</minAge>
+					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+					<soundDeath>Pawn_Iguana_Death</soundDeath>
+					<soundCall>Pawn_Iguana_Call</soundCall>
+					<soundAngry>Frog_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<ageGenerationCurve>
+				<!-- these values must be less than your youngest pawnkind and greater than your oldest pawn kind of this Race -->
+				<points>
+					<li>(0,0)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(0.001,43)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(8,86)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(12.5,18)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+					<li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0)</li>  
+					<li MayRequire="Ludeon.Rimworld.Biotech">(13,0)</li>      
+					<li MayRequire="Ludeon.Rimworld.Biotech">(13.001,12)</li> <!-- End exclude -->
+					<li MayRequire="Ludeon.Rimworld.Biotech">(13.999,13)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(14.001,10)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(16,100)</li>
+					<li>(18,50)</li>
+					<li>(19.9,250)</li>
+					<li>(20,125)</li>
+					<li>(40,250)</li>
+					<li>(50,100)</li>
+					<li>(60,20)</li>
+					<li>(70,18)</li>
+					<li>(80,1)</li>
+					<li>(90,0)</li>
+					<li>(100,0)</li>
+					<li>(1000,25)</li>
+					<li>(1410,1)</li>
+					<li>(7499,10)</li>
+					<li>(7500,0.001)</li>
+					<li>(8000,0)</li>
+					<li>(10000,0)</li>
+				</points>
+			</ageGenerationCurve>
+			<hediffGiverSets>
+					<li>OrganicStandard</li>
+					<li>Human</li>
+			</hediffGiverSets>
+					
+		</race>
+
+		<statBases>
+			<!-- These are the Human stats you should use your own refer to the Core files in = \RimWorld\Data\Core\Defs\Stats -->
+			<!-- Some stats are Inherited from the parent such as BasePawn commented below are the stats that are inherited -->
+			<MarketValue>750</MarketValue>
+			<MoveSpeed>5.7</MoveSpeed>
+			<ComfyTemperatureMin>8</ComfyTemperatureMin>
+			<ComfyTemperatureMax>60</ComfyTemperatureMax>
+			<LeatherAmount>25</LeatherAmount>
+			<RoyalFavorValue>3</RoyalFavorValue>
+			<Flammability>0.8</Flammability>
+			<IncomingDamageFactor>0.6</IncomingDamageFactor>
+			<AimingDelayFactor>0.6</AimingDelayFactor>
+			<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+			<ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      		<ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+      		<PsychicSensitivity>0.60</PsychicSensitivity>
+			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">-1</HSAU_GhoulismSusceptibility>
+			<ToxicResistance>0.9</ToxicResistance>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">0.78</ToxicEnvironmentResistance>
+		</statBases>
+		
+		<tools Inherit="False">
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>1</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.07</chanceFactor>
+				<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+				<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>1</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.4</chanceFactor>
+			</li>
+		</tools>
+		
+		<recipes>
+		<!-- Just a normal list of recipes mostly not needed if using <humanRecipeImport>true</humanRecipeImport> asdie from adding non human recipes  -->
+		  <li>InstallArchotechEye</li>
+		  <li>InstallArchotechArm</li>
+		  <li>InstallArchotechLeg</li>
+		  <li>InstallPowerClaw</li>
+		  <li>InstallBionicEye</li>
+		  <li>InstallBionicArm</li>
+		  <li>InstallBionicLeg</li>
+		  <li>InstallBionicSpine</li>
+		  <li>InstallBionicHeart</li>
+		  <li>InstallBionicStomach</li>
+		  <li>InstallBionicEar</li>
+		  <li>InstallSimpleProstheticArm</li>
+		  <li>InstallSimpleProstheticLeg</li>
+		  <li>InstallSimpleProstheticHeart</li>
+		  <li>InstallCochlearImplant</li>
+		  <li>InstallPegLeg</li>
+		  <li>InstallWoodenFoot</li>
+		  <li>InstallDenture</li>
+		  <li>InstallJoywire</li>
+		  <li>InstallPainstopper</li>
+		  <li>InstallNaturalHeart</li>
+		  <li>InstallNaturalLung</li>
+		  <li>InstallNaturalKidney</li>
+		  <li>InstallNaturalLiver</li>
+		  <li>ExciseCarcinoma</li>
+		  <li>AdministerMechSerumHealer</li>
+		  <li>RemoveBodyPart</li>
+		  <li>Euthanize</li>
+		  <li>Anesthetize</li>
+		  <li>CureScaria</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">Vasectomy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ReverseVasectomy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">TubalLigation</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ExtractOvum</li>
+		  <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+		  <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ExtractHemogenPack</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">BloodTransfusion</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantXenogerm</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">ImplantIUD</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">RemoveIUD</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech">TerminatePregnancy</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech,kathanon.ivfequality">kathanon_IVFEquality_ExtractSample</li>
+		  <li MayRequire="Ludeon.Rimworld.Biotech,kathanon.ivfequality">kathanon_IVFEquality_Insemination</li>
+		</recipes>
+		
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRarity</li>
+				</statToAdd>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<li>TSP_ST_FrogSapient</li>
+					<li>ST_FrogCommon</li>
+				</statValues>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<li>TSP_ST_FrogSapientDesc</li>
+					<li>ST_FrogCommonDesc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

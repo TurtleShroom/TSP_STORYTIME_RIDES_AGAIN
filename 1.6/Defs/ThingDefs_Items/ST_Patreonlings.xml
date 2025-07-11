@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<!-- Inspiration for ID card taken from Chinese Factions Mod -->
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>TSP_Patreonling_ID_Card</defName>
+		<label>Patreon Card</label>
+		<description>This card identifies its barer as a Patreonling, that is, a servant and devotee of Samuel Streamer. It fetches a decent price at the market due to its exclusivity and beauty.</description>
+		<graphicData>
+			<texPath>Things/Relics/TSP_Patreonling_ID_Card</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.6,0.6)</drawSize>	  
+		</graphicData>
+		<resourceReadoutPriority>First</resourceReadoutPriority>
+		<soundInteract>Silver_Drop</soundInteract>
+		<soundDrop>Silver_Drop</soundDrop>
+		<useHitPoints>true</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
+		<smeltable>true</smeltable>
+		<statBases>
+			<MarketValue>29</MarketValue>
+			<Mass>0.001</Mass>
+			<MaxHitPoints>500</MaxHitPoints>	  
+			<Flammability>1</Flammability>	  
+			<Beauty>5</Beauty>
+			<Cleanliness>1</Cleanliness>
+		</statBases>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>	
+		<smallVolume>true</smallVolume>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Patreonling</li>
+			<li>Art</li>
+		</tradeTags>
+		<smeltProducts>
+			<CursedCoin>2</CursedCoin>
+		</smeltProducts>
+	</ThingDef>
+	
+	
+	<!-- Code for apparel utility taken from Vivi Mod -->
+	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=3241577976 -->
+	
+	<ThingDef ParentName="ApparelNoQualityBase">
+		<defName>TSP_ST_Patreonling_UtilitySign</defName>
+		<label>Samuel Streamer picket sign</label>
+		<description>A beautiful sign board proclaiming the barer's love and allegiance for Samuel Streamer. People who carry it around inexplicably become extremely sexy and better able to tame polar bears and other animals. It is a must have for any Samuel Streamer fan!</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Equipment/TSP_Patreonling_Sign/TSP_Patreonling_Sign</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1</MarketValue>
+			<Beauty>20</Beauty>
+			<SellPriceFactor>30</SellPriceFactor>
+			<Mass>0.001</Mass>
+		</statBases>
+		<equippedStatOffsets>
+			<Beauty>3</Beauty>
+			<PawnBeauty>3</PawnBeauty>
+			<TameAnimalChance>0.2</TameAnimalChance>
+			<CarryingCapacity>0.05</CarryingCapacity>
+			<SocialImpact>0.1</SocialImpact>
+		</equippedStatOffsets>
+		<tradeability>All</tradeability>
+		<apparel>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>ST_Jewelry</li>
+			</layers>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<tags Inherit="False">
+				<li>Patreonling</li>
+			</tags>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/Equipment/TSP_Patreonling_Sign/TSP_Patreonling_Sign</wornGraphicPath>
+			<wornGraphicData>
+				<!-- <renderUtilityAsPack>true</renderUtilityAsPack> -->
+				<north>
+					<offset>(0,-0.3)</offset>
+				</north>
+				<south>
+					<offset>(-0.2,-0.3)</offset>
+					<thin>
+						<offset>(-0.2,-0.3)</offset>
+					</thin>
+					<hulk>
+						<offset>(-0.2,-0.3)</offset>
+					</hulk>
+					<fat>
+						<offset>(-0.2,-0.3)</offset>
+					</fat>
+					<male>
+						<offset>(-0.2,-0.3)</offset>
+					</male>
+					<female>
+						<offset>(-0.2,-0.3)</offset>
+					</female>
+					<!--
+					<child MayRequire="ludeon.rimworld.biotech">
+						<offset>(0.3,0)</offset>
+					</child>
+					<baby MayRequire="ludeon.rimworld.biotech">
+						<offset>(0.3,0)</offset>
+					</baby>
+					-->
+				</south>
+				<east>
+					<offset>(-0.5,-0.15)</offset>
+					<thin>
+						<offset>(0.05,0)</offset>
+					</thin>
+					<hulk>
+						<offset>(-0.15,0)</offset>
+					</hulk>
+					<fat>
+						<offset>(-0.20,0)</offset>
+					</fat>
+					<male>
+						<offset>(-0.20,0)</offset>
+					</male>
+					<female>
+						<offset>(-0.20,0)</offset>
+					</female>
+					<!--
+					<child MayRequire="ludeon.rimworld.biotech">
+						<offset>(0.05,0)</offset>
+					</child>
+					<baby MayRequire="ludeon.rimworld.biotech">
+						<offset>(0.05,0)</offset>
+					</baby>
+					-->
+				</east>
+				<west>
+					<offset>(0.7,-0.1)</offset>
+					<thin>
+						<offset>(-0.05,0)</offset>
+					</thin>
+					<hulk>
+						<offset>(0.15,0)</offset>
+					</hulk>
+					<fat>
+						<offset>(0.20,0)</offset>
+					</fat>
+					<male>
+						<offset>(0.20,0)</offset>
+					</male>
+					<female>
+						<offset>(0.20,0)</offset>
+					</female>
+					<!--
+					<child MayRequire="ludeon.rimworld.biotech">
+						<offset>(0.05,0)</offset>
+					</child>
+					<baby MayRequire="ludeon.rimworld.biotech">
+						<offset>(0.05,0)</offset>
+					</baby>
+					-->
+				</west>
+				<male>
+					<scale>(1.0,1.0)</scale>
+				</male>
+				<female>
+					<scale>(1.0,1.0)</scale>
+				</female>
+				<thin>
+					<scale>(1.0,1.0)</scale>
+				</thin>
+				<hulk>
+					<scale>(1.2,1.2)</scale>
+				</hulk>
+				<fat>
+					<scale>(1.2,1.2)</scale>
+				</fat>
+				<!--
+				<child MayRequire="ludeon.rimworld.biotech">
+					<scale>(1.0,1.0)</scale>
+				</child>
+				<baby MayRequire="ludeon.rimworld.biotech">
+					<scale>(1.0,1.0)</scale>
+				</baby>
+				-->
+			</wornGraphicData>
+		</apparel>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<smeltProducts>
+			<CursedCoin>8</CursedCoin>
+		</smeltProducts>
+		<tradeTags>
+			<li>Patreonling</li>
+			<li>Art</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>

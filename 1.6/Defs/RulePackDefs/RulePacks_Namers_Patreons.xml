@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<!-- Pirate Patreons -->
+	
+	<RulePackDef>
+		<defName>NamerPatreonsUtility</defName>
+		<include>
+			<li>PuffleNamer</li>
+			<li>ST_NamerChineseUtility</li>				
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>stein->stein</li>
+				<li>stein->berg</li>
+				<li>stein->baum</li>
+				<li>stein->witz</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>PatreonNamesGirl->SamuelStreamer_PatreonNames/Patreonling_Forenames_Girl</li>
+				<li>PatreonNamesBoy->SamuelStreamer_PatreonNames/Patreonling_Forenames_Boy</li>
+				<li>PatreonNamesUnisex->SamuelStreamer_PatreonNames/Patreonling_Forenames_Unisex</li>
+				<li>PatreonLastNames->SamuelStreamer_PatreonNames/Patreonling_Surnames</li>
+				<li>PatreonNames->SamuelStreamer_PatreonNames/PatreonNames</li> 
+				<!-- PatreonNames TXT should be the file you need to update and should be located in the mod folder at "Languages/English/Strings/SamuelStreamer_PatreonNames" -->
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerPatreons</defName>
+		<include>
+			<li>NamerPatreonsUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[PatreonNames]</li>
+				<li>stein->stein</li>
+				<li>stein->berg</li>
+				<li>stein->baum</li>
+				<li>stein->witz</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>PatreonNamesGirl->SamuelStreamer_PatreonNames/Patreonling_Forenames_Girl</li>
+				<li>PatreonNamesBoy->SamuelStreamer_PatreonNames/Patreonling_Forenames_Boy</li>
+				<li>PatreonNamesUnisex->SamuelStreamer_PatreonNames/Patreonling_Forenames_Unisex</li>
+				<li>PatreonLastNames->SamuelStreamer_PatreonNames/Patreonling_Surnames</li>
+				<li>PatreonNames->SamuelStreamer_PatreonNames/PatreonNames</li> 
+				<!-- PatreonNames TXT should be the file you need to update and should be located in the mod folder at "Languages/English/Strings/SamuelStreamer_PatreonNames" -->
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerFactionPatreons</defName>
+		<include>
+			<li>NamerPatreonsUtility</li>
+			<!-- <li>PuffleNamer</li> -->
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name(p=25)->The Patreonlings</li>
+				<li>r_name(p=5)->[Puffle] Patrons</li>
+				<li>r_name->The [AnimalBadass]s of [PatreonNames]</li>
+				<li>r_name->The [PersonBadass]s of [PatreonNames]</li>
+				<li>r_name->The [PatreonNames] [groupname]</li>
+				<li>r_name->The [PatreonNames] [Enemy]s</li>
+				<li>r_name->The [AdjectiveBadass] [PatreonNames]</li>
+				<li>r_name->The [PersonAlly] of [PatreonNames]</li>
+				<li>r_name->The Eaters of [PatreonNames]</li>
+				<li>r_name->[PatreonNames]'s [Enemy]s</li>
+				<li>r_name->[PatreonNames]'s [AnimalBadass]s</li>
+				<li>r_name->[PatreonNames]'s [Weapon]s</li>
+				<li>r_name->[PatreonNames] [groupname]</li>
+				<li>r_name->[PatreonNames]'s [ColorBadass] [Weapon]s</li>
+				<li>r_name->[PatreonNames]'s [ColorBadass] [AnimalBadass]s</li>
+				<li>r_name->[PatreonNames]'s [ColorBadass] [PersonBadass]s</li>
+				<li>r_name->[PatreonNames]'s [ColorBadass] [Enemy]s</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>groupname->Words/Nouns/GroupNames</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerSettlementPatreons</defName>
+		<include>
+			<li>NamerPatreons</li>
+			<li>ST_NamerChineseUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name(p=4)->[patreontown_combo]</li>
+				<li>r_name(p=2)->[PatreonNames] [ChinaZonePack]</li>
+				<li>r_name(p=2)->[PatreonNamesUnisex] [ChinaZonePack]</li>
+				<li>r_name->[PatreonNames]-of-[townname_wordgen]</li>
+
+				<li>patreontown_combo->[PatreonNames] [geography]</li>
+				<li>patreontown_combo->[PatreonNames]'s [geography]</li>
+				<li>patreontown_combo->[PatreonNames]'s [ConceptBadass] [geography]</li>
+				<li>patreontown_combo->[PatreonNames]'s [ConceptBadass]'s [geography]</li>
+				<li>patreontown_combo->[PatreonNames]'s [Enemy]'s [geography]</li>
+				<li>patreontown_combo->[PatreonNames]'s [Enemy] [geography]</li>
+				<li>patreontown_combo->[PatreonNames]'s [Weapon]'s [geography]</li>
+				<li>patreontown_combo->[PatreonNames]'s [Weapon] [geography]</li>
+				<li>patreontown_combo->[PatreonNames]'s [ColorBadass] [geography]</li>
+				<li>geography->[TerrainFeature]</li>
+				<li>geography->[Community]</li>
+				<li>geography->[Puffle]</li>
+				<li>townname_wordgen(p=2)->[SylE][townendevil]</li>
+				<li>townname_wordgen(p=2)->[SylE][SylE][townendevil]</li>
+				<li>townname_wordgen(p=2)->[SylE][SylE][SylE][townendevil]</li>
+				<li>townendevil->vast</li>
+				<li>townendevil->varg</li>
+				<li>townendevil->vix</li>
+				<li>townendevil->tor</li>
+				<li>townendevil->tear</li>
+				<li>townendevil->cut</li>
+				<li>townendevil->lop</li>
+				<li>townendevil->oze</li>
+				<li>townendevil->ozzle</li>
+				<li>townendevil->latch</li>
+				<li>townendevil->lock</li>
+				<li>townendevil->burn</li>
+				<li>townendevil->sear</li>
+				<li>townendevil->shank</li>
+				<li>townendevil->hurt</li>
+				<li>townendevil->vash</li>
+				<li>townendevil->warg</li>
+				<li>townendevil->wug</li>
+				<li>townendevil->thot</li>
+				<li>townendevil->thard</li>
+				<li>townendevil->thad</li>
+				<li>townendevil->ville</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>TSP_ST_NamerPatreons_Boy</defName>
+		<include>
+			<li>NamerPatreonsUtility</li>
+			<li>ST_NamerChineseUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name(p=1)->[PatreonNamesBoy] '[PatreonNames]' [PatreonLastNames]</li>
+				<li>r_name(p=1.2)->[PatreonNamesBoy] '[PatreonNames]' [PatreonLastNames][stein]</li>
+				<li>r_name(p=0.9)->[PatreonNamesBoy] '[PatreonNames]' [PatreonLastNames][ChineseCourtesyNamesTail]</li>
+				<li>r_name(p=0.25)->[PatreonNamesBoy] '[PatreonNames]' [PatreonLastNames][townendevil]</li>
+				<li>r_name(p=0.1)->[Puffle] 'PatreonNames' [PatreonLastNames]sworth</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+  
+	<RulePackDef>
+		<defName>TSP_ST_NamerPatreons_Girl</defName>
+		<include>
+			<li>NamerPatreonsUtility</li>
+			<li>ST_NamerChineseUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name(p=1)->[PatreonNamesGirl] '[PatreonNames]' [PatreonLastNames]</li>
+				<li>r_name(p=1.2)->[PatreonNamesGirl] '[PatreonNames]' [PatreonLastNames][stein]</li>
+				<li>r_name(p=0.9)->[PatreonNamesGirl] '[PatreonNames]' [PatreonLastNames][ChineseCourtesyNamesTail]</li>
+				<li>r_name(p=0.2)->[PatreonNamesGirl] '[PatreonNames]' [PatreonLastNames][townendevil]</li>
+				<li>r_name(p=0.1)->[Puffle] 'PatreonNames' [PatreonLastNames]sworth</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+</Defs>

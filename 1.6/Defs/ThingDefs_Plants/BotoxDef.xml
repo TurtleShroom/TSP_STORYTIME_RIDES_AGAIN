@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="PlantBase">
+		<defName>Plant_Botox</defName>
+		<label>Botox Plant</label>
+		<description>A strange plant that grows little flesh colored fruits. Created by Glitter World technology, the inside of these fruits are engineered to attract &lt;i>Clostridium botulinum&lt;/i> bacteria. What is called Botox is actually the toxic spores of the Botox bacterium; this substance is officially called "BOtulinum TOXins". By the time the fruit is ripe, the bacteria within have successfully produced large amounts of concentrated Botox through their spores.</description>
+		<statBases>
+		  <MaxHitPoints>85</MaxHitPoints>
+		  <Nutrition>0.1</Nutrition>
+			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">0.78</Mashed_Ashlands_AshResistance>
+			<VV_MinGrowthPlantGatherable MayRequire="gguake.race.vivi">0.31</VV_MinGrowthPlantGatherable>
+			<VV_PlantGatherCooldown MayRequire="gguake.race.vivi">6</VV_PlantGatherCooldown>
+			<VV_PlantHoneyGatherYield MayRequire="gguake.race.vivi">0.48</VV_PlantHoneyGatherYield>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/Botox</texPath>
+		  <graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible/>
+		<plant>
+		  <growDays>7</growDays>
+		  <dieIfLeafless>true</dieIfLeafless>
+		  <harvestTag>Standard</harvestTag>
+		  <harvestedThingDef>BotoxFruit</harvestedThingDef>
+		  <harvestYield>15</harvestYield>
+		  <sowTags>
+			<li>Ground</li>
+			<li>Hydroponic</li>
+		  </sowTags>
+		  <topWindExposure>0.1</topWindExposure>
+		  <immatureGraphicPath>Things/Plants/BotoxImmature</immatureGraphicPath>
+		  <visualSizeRange>0.4~1.2</visualSizeRange>
+		  <wildOrder>2</wildOrder>
+		</plant>
+		<comps>
+			<li Class="VVRace.CompProperties_RepeatGatherable" MayRequire="gguake.race.vivi"></li>
+		</comps>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <ThingDef ParentName="PlantBase">
+    <defName>ST_Plant_Sugar</defName>
+    <label>Gnome Sugarcane plant</label>
+    <description>A special form of sugarcane, domesticated by Gnomes and distinct from ordinary sugar by both its purity and its color.</description>
+    <statBases>
+		<MaxHitPoints>85</MaxHitPoints>
+		<Nutrition>0.1</Nutrition>
+		<VV_MinGrowthPlantGatherable MayRequire="gguake.race.vivi">0.5</VV_MinGrowthPlantGatherable>
+		<VV_PlantGatherCooldown MayRequire="gguake.race.vivi">0.5</VV_PlantGatherCooldown>
+		<VV_PlantHoneyGatherYield MayRequire="gguake.race.vivi">2</VV_PlantHoneyGatherYield>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plants/SugarPlant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible/>
+    <plant>
+      <growDays>20</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>ST_GnomeSugar</harvestedThingDef>
+      <harvestYield>40</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+	  <sowResearchPrerequisites>
+        <li>gnomeCooking</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>Things/Plants/SugarPlant</immatureGraphicPath>
+      <visualSizeRange>0.6~1.3</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+	<comps>
+		<li Class="VVRace.CompProperties_RepeatGatherable" MayRequire="gguake.race.vivi"></li>
+	</comps>
+  </ThingDef>
+</Defs>

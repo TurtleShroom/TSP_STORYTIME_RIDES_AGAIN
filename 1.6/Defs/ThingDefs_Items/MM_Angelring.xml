@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <!-- Angelring -->
+
+	<ThingDef Name="AngelringMakeableBase" ParentName="BodyPartProstheticBase" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+			<unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+			<researchPrerequisites>
+				<li>Prosthetics</li>
+				<li MayRequire="wvc.sergkart.core">WVC_BionicTech_Torture</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<modExtensions>
+			<li Class="NightmareCore.ThingModExtension_DisplayableItem" MayRequire="nightmare.core,nightmare.museums"></li>
+		</modExtensions>
+	</ThingDef>
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>Angelring</defName>
+		<label>Angelring</label>
+		<labelNoun>an Angelring</labelNoun>
+		<description>The pain increases sharply and the sentiment becomes negative... but at least the user becomes sexy!</description>
+		<removeOnQuestLodgers>true</removeOnQuestLodgers>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<isBad>true</isBad>
+		<makesSickThought>false</makesSickThought>
+		<displayWound>true</displayWound>
+		<keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<descriptionHyperlinks>
+			<ThingDef>Angelring</ThingDef>
+		</descriptionHyperlinks>
+		<stages>
+			<li>
+				<!-- <baseOpinionOffset>30</baseOpinionOffset> -->
+				<tale>MentalStateBerserk</tale>
+				<painOffset>0.5</painOffset>
+				<forgetMemoryThoughtMtbDays>2</forgetMemoryThoughtMtbDays>
+				<statFactors>
+					<PawnBeauty>1.05</PawnBeauty>
+				</statFactors>
+				<statOffsets>
+					<PawnBeauty>5</PawnBeauty>
+					<PsychicSensitivity>2</PsychicSensitivity>
+					<PainShockThreshold>0.46</PainShockThreshold>
+					<Fertility MayRequire="Ludeon.RimWorld.Biotech">1</Fertility>
+				</statOffsets>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>Angelring</spawnThingOnRemoved>
+	</HediffDef>
+
+  <ThingDef ParentName="AngelringMakeableBase">
+    <defName>Angelring</defName>
+    <label>Angelring</label>
+    <description>A torture device worn by the residents of the town that say they are closest to heaven. Masochists love it and most who wear it do it either to enjoy the pain or as a test of religious discipline. Anyone who has it installed becomes irresistably sexy at the cost of mind-crushing pain.</description>
+    <descriptionHyperlinks>
+		<RecipeDef>InstallAngelring</RecipeDef>
+		<HediffDef>Angelring</HediffDef>
+	</descriptionHyperlinks>
+    <costList>
+      <!-- <Steel>20</Steel> -->
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <techHediffsTags>
+      <!-- <li>Torture</li> -->
+    </techHediffsTags>
+    <recipeMaker>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallAngelring</defName>
+    <label>install Angelring</label>
+    <description>Install an Angelring.</description>
+    <descriptionHyperlinks>
+		<ThingDef>Angelring</ThingDef>
+	</descriptionHyperlinks>
+    <jobString>Installing Angelring.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Angelring</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Angelring</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Angelring</addsHediff>
+  </RecipeDef>
+
+
+  <ThingSetMakerDef>
+    <defName>AngelRing</defName>
+    <root Class="ThingSetMaker_Sum">
+      <options>
+        <!-- Misc. items -->
+        <li>
+          <chance>0.5</chance>
+          <thingSetMaker Class="ThingSetMaker_Count">
+            <fixedParams>
+              <qualityGenerator>Trader</qualityGenerator>
+              <filter>
+                <thingDefs>
+                  <li>Angelring</li>
+                </thingDefs>
+				<!--
+                <thingSetMakerTagsToAllow>
+                  <li>SingleUseWeapon</li>
+                  <li>SkillNeurotrainer</li>
+                </thingSetMakerTagsToAllow>
+				-->
+              </filter>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+      </options>
+    </root>
+  </ThingSetMakerDef>
+
+
+  <ThoughtDef>
+    <defName>Angelring</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>Angelring</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Angelring</label>
+        <description>Zeee... deh...... desculus... agyagyagyagya!</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+    </stages>
+	<nullifyingTraits>
+		<li>Ascetic</li>
+		<li>Masochist</li>
+		<li>BodyPurist</li>
+	</nullifyingTraits>
+	<nullifyingPrecepts MayRequire="Ludeon.RimWorld.Ideology">
+		<li MayRequire="Ludeon.RimWorld.Ideology">Pain_Idealized</li>
+		<li MayRequire="vanillaexpanded.vmemese,Ludeon.RimWorld.Ideology">VME_Pain_DontCare</li>
+	</nullifyingPrecepts>
+	<neverNullifyIfAnyTrait>
+		<li>Wimp</li>
+	</neverNullifyIfAnyTrait>
+  </ThoughtDef>
+
+	<ThougtDef>
+		<defName>TSP_Angelring_Satisfied</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>Angelring</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Closer to Heaven</label>
+				<description>I really wanted to include a MOD element. I AM SO SATISFIED!!</description>
+				<baseMoodEffect>30</baseMoodEffect>
+			</li>
+		</stages>
+		<requiredTraits>
+			<li>Masochist</li>
+		</requiredTraits>
+	</ThougtDef>
+	
+	<ThougtDef>
+		<defName>TSP_Angelring_Ascetic</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>Angelring</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Closer to Heaven</label>
+				<description>I really wanted to include a MOD element. It hurts like heck, but I am donning something that is making me into a better person.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+		<requiredTraits>
+			<li>Ascetic</li>
+		</requiredTraits>
+	</ThougtDef>
+	
+	<ThougtDef>
+		<defName>TSP_Angelring_Purist</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>Angelring</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>brain violated</label>
+				<description>AAAAAAAAAAAAAAAAAAAAAAAAGGGGGGHHHHHHHHHHHHHH!!!!!!!!!!!!!</description>
+				<baseMoodEffect>-200</baseMoodEffect>
+			</li>
+		</stages>
+		<requiredTraits>
+			<li>BodyPurist</li>
+		</requiredTraits>
+	</ThougtDef>
+</Defs>

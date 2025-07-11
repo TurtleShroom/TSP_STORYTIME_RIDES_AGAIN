@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<TraderKindDef>
+		<defName>WW_Caravan_Outlander_Drugdealer</defName>
+		<label>drug dealer</label>
+		<stockGenerators>
+			<!-- Resources -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>5000~12000</countRange>
+			</li>
+
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>13~23</countRange>
+			</li>
+
+			<!-- Drugs -->
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+				<thingDefCountRange>20~30</thingDefCountRange>
+				<totalPriceRange>400~1000</totalPriceRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Highwing</thingDef>
+				<countRange>13~23</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>WW_HeavenDust</thingDef>
+				<countRange>13~23</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Diagen</thingDef>
+				<countRange>13~23</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Dragonal</thingDef>
+				<countRange>7~13</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>BotoxFruit</thingDef>
+				<countRange>17~23</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>BotoxPowder</thingDef>
+				<countRange>7~13</countRange>
+			</li>
+
+			<!-- Apparel -->
+			<li Class="StockGenerator_MarketValue">
+				<tradeTag>Clothing</tradeTag>
+				<countRange>3~6</countRange>
+			</li>
+
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ST_Lime</thingDef>
+				<countRange>33~73</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="gorm.knockout">
+				<thingDef MayRequire="gorm.knockout">Knockout</thingDef>
+				<countRange MayRequire="gorm.knockout">11~34</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Tag">
+				<tradeTag>StorytimeDrugs</tradeTag>
+				<thingDefCountRange>11~22</thingDefCountRange>
+				<countRange>4~45</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Tag">
+				<tradeTag>ST_Poison</tradeTag>
+				<thingDefCountRange>11~22</thingDefCountRange>
+				<countRange>24~45</countRange>
+			</li>
+
+			<!-- Implants -->
+			<!-- none -->
+
+			<!-- Buildings -->
+			<!-- none -->
+
+			<!-- Exotic -->
+			<!-- none -->
+
+			<!-- Slaves -->
+			<!-- none -->
+
+			<!-- Animals -->
+			<!-- none -->
+
+			<!-- Buying -->
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shell_Deadlife</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>VoidSculpture</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Shard</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>Bioferrite</thingDef>
+			</li>
+			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
+				<thingDef>RevenantSpine</thingDef>
+			</li>
+			<li Class="StockGenerator_BuyExpensiveSimple"></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeFlour</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Worm</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>WormRaw</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeBatta</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeMeat</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeVegetarian</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>GnomeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="mo.decorationsluxury">
+				<tag MayRequire="mo.decorationsluxury">MO_Luxury</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
+				<tag MayRequire="sirmashedpotato.morrowrim.alcoholremade">DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
+				<tag MayRequire="sirmashedpotato.ashlands">DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>ST_GnomeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DunmerBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>ST_Poison</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>DreadedLaced_CringeWonka_Candy</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>StorytimeDrugs</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>StorytimeBooze</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>EggNog</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>WinkworldDrugs</tag>
+			</li>
+		</stockGenerators>
+	</TraderKindDef>
+
+	<!--======================================================================================-->
+</Defs>

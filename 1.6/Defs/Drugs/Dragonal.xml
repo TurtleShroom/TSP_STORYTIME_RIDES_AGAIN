@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="TSP_WW_DrugBase">
+    <defName>Dragonal</defName>
+    <label>Dragonal pill</label>
+    <description>A dangerous pill developed by Wing Corp, made originally to be the cure all to any pain one has. \n\n\The most obvious downside is the fact that after use, prolonged failure of repeated use begins to rapidly decay the mental state and brain of a consumer, going insane and dying. \nHowever, the benefits of near complete pain tolerance and the other properties of the pill can't be ignored either.</description>
+    <possessionCount>5</possessionCount>
+    <descriptionHyperlinks>
+      <HediffDef>DragonalHigh</HediffDef>
+      <HediffDef>DragonalAddiction</HediffDef>
+	  <RecipeDef>TSP_WW_Dragonal</RecipeDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Items/Drug/Dragonal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>450</WorkToMake>
+      <MarketValue>11</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>6</DeteriorationRate>
+      <Flammability>1.3</Flammability>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+		<ingestCommandString>Take {0}</ingestCommandString>
+		<ingestReportString>Ingesting {0}.</ingestReportString>
+		<ingestReportStringEat>Consuming {0}.</ingestReportStringEat>
+		<joy>0.80</joy>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>DragonalHigh</hediffDef>
+			  <severity>0.5</severity>
+			  <toleranceChemical>Dragonal</toleranceChemical>
+			</li>
+			<li Class="IngestionOutcomeDoer_OffsetNeed">
+			  <need>Rest</need>
+			  <offset>0.0748</offset>
+			  <!-- <toleranceChemical>Highwing</toleranceChemical> -->
+			</li>
+			<li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+			  <offset>0.15</offset>
+			</li>
+		  </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Dragonal</chemical>
+        <addictiveness>0.30</addictiveness>
+        <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+        <needLevelOffset>2</needLevelOffset>
+        <listOrder>20</listOrder>
+      </li>
+    </comps>
+    <allowedArchonexusCount>5000</allowedArchonexusCount>
+	<tradeTags>
+		<li>StorytimeDrugs</li>
+		<li>WinkworldDrugs</li>
+	</tradeTags>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DragonalHigh</defName>
+    <label>empowered by dragonal</label>
+    <labelNoun>Dragonal resistance</labelNoun>
+    <description>Active Dragonal in the bloodstream, granting the pain tolerance of a dragon! \nIf grown dependant on Dragonal, the victim will go insane without continued use.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.05</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+		<li>
+          <painFactor>0.01</painFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.35</offset>
+            </li>
+            <li>
+              <capacity>Sight</capacity>
+              <offset>0.35</offset>
+            </li>
+            <li>
+              <capacity>BloodPumping</capacity>
+              <offset>1</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>DragonalHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>DragonalHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>strengthed by dragonal</label>
+        <description>I can do ANYTHING!</description>
+        <baseMoodEffect>80</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>DragonalTolerance</defName>
+    <label>Dragonal tolerance</label>
+    <description>The Dragonal is starting to have less of an effect... more will be needed...</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Dragonal</chemical>
+      </li>
+    </comps>
+  </HediffDef> 
+
+  <ChemicalDef>
+    <defName>Dragonal</defName>
+    <label>dragonal</label>
+    <addictionHediff>DragonalAddiction</addictionHediff>
+    <canBinge>false</canBinge>
+    <generateAddictionGenes>true</generateAddictionGenes>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Dragonal</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Dragonal</label>
+    <description>This Pawn has taken too much Dragonal and has passed the point of no return; he must now continue to use the drug or risk going insane.</description>
+    <listPriority>25</listPriority>
+	<fallPerDay>0.15</fallPerDay>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>DragonalAddiction</defName>
+    <label>Dragonal dependence</label>
+    <description>This Pawn's body has grown too dependant on the use of Dragonal. To this Pawn, feeling the world without its effects is maddening.
+\nWithout Dragonal, the victim will go insane and eventually die.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_Dragonal</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0333</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+		<painOffset>0.4</painOffset>
+        <lifeThreatening>true</lifeThreatening>
+        <deathMtbDays>29</deathMtbDays>
+        <mtbDeathDestroysBrain>false</mtbDeathDestroysBrain>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.40</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.25</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>4</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>DragonalWithdrawl</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>DragonalAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>Dragonal withdrawal</label>
+        <description>It all aches... everything aches...</description>
+        <baseMoodEffect>-80</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

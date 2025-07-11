@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RecipeDef>
+		<defName>ST_Make_LemonBar</defName>
+		<label>make lemon bar</label>
+		<description>Bake a lemon bar.</description>
+		<jobString>Baking</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<ingredients>
+		  <li>
+			<filter>
+				<customSummary>sugar, sweeteners</customSummary>
+				<thingDefs>
+					<li>ST_GnomeSugar</li>
+					<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+					<li MayRequire="herbs.plants">RawMint</li>
+				</thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>lemons</customSummary>
+				<thingDefs>
+					<li>ST_Lemon</li>
+				</thingDefs>
+			</filter>
+			<count>20</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_GnomeSugar</li>
+				<li>ST_Lemon</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+				<li MayRequire="herbs.plants">RawMint</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>ST_GnomeSugar</li>
+				<li>ST_Lemon</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+				<li MayRequire="herbs.plants">RawMint</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+				<li>GnomeTable</li>
+				<li MayRequire="morishep.tarojun.onioftherim">OotR_GroundOven</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li>advancedCooking</li>
+		</researchPrerequisites>
+		<products>
+			<ST_LemonBar>5</ST_LemonBar>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>TSP_ST_Make_LimeBar</defName>
+		<label>make lime bar</label>
+		<description>Bake a lime bar.</description>
+		<jobString>Baking</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<ingredients>
+		  <li>
+			<filter>
+				<customSummary>sugar, sweeteners</customSummary>
+				<thingDefs>
+					<li>ST_GnomeSugar</li>
+					<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+					<li MayRequire="herbs.plants">RawMint</li>
+				</thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>limes</customSummary>
+				<thingDefs>
+					<li>ST_Lime</li>
+				</thingDefs>
+			</filter>
+			<count>20</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_GnomeSugar</li>
+				<li>ST_Lemon</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+				<li MayRequire="herbs.plants">RawMint</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>ST_GnomeSugar</li>
+				<li>ST_Lemon</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+				<li MayRequire="herbs.plants">RawMint</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+				<li>ElectricStove</li>
+				<li>FueledStove</li>
+				<li>GnomeTable</li>
+				<li MayRequire="morishep.tarojun.onioftherim">OotR_GroundOven</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li>advancedCooking</li>
+		</researchPrerequisites>
+		<products>
+			<ST_LimeBar>5</ST_LimeBar>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>Make_Butterscotch</defName>
+		<label>make butterscotch</label>
+		<description>Make butterscotch.</description>
+		<jobString>Making.</jobString>
+		<workAmount>600</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
+		<ingredients>
+		  <li>
+			<filter>
+				<customSummary>sugar, sweeteners</customSummary>
+				<thingDefs>
+					<li>ST_GnomeSugar</li>
+					<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+					<li MayRequire="herbs.plants">RawMint</li>
+				</thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		  <li>
+			<filter>
+				<customSummary>milk</customSummary>
+			  <thingDefs>
+				<li>Milk</li>
+				<li>ST_Green_Milk</li>
+				<li>Rylex_CoconutMilk</li>
+				<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+				<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+				<li MayRequire="TSP.Isengriff.Storytime">VFEI_InsectMilk</li>
+				<li MayRequire="aratocat.wonderland">Chocofuel</li>
+				<li>BORPA_Milk</li>
+			  </thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ST_GnomeSugar</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+				<li>Milk</li>
+				<li>ST_Green_Milk</li>
+				<li>Rylex_CoconutMilk</li>
+				<li MayRequire="sarg.alphaanimals">AA_BlueMilk</li>
+				<li MayRequire="sarg.alphaanimals">AA_GowMilk</li>
+				<li MayRequire="TSP.Isengriff.Storytime">VFEI_InsectMilk</li>
+				<li MayRequire="aratocat.wonderland">Chocofuel</li>
+				<li MayRequire="herbs.plants">RawMint</li>
+				<li>BORPA_Milk</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>ST_GnomeSugar</li>
+				<li MayRequire="vanillaexpanded.vcooke">VCE_RawSugar</li>
+				<li>Milk</li>
+				<li>ST_Green_Milk</li>
+				<li>Rylex_CoconutMilk</li>
+				<li>BORPA_Milk</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<recipeUsers>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li>GnomeTable</li>
+			<li>ManualGrinder</li>
+			<li>ElectricGrinder</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li>advancedCooking</li>
+		</researchPrerequisites>
+		<products>
+			<ST_Butterscotch>6</ST_Butterscotch>
+		</products>
+	</RecipeDef>
+</Defs>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="BasePawn" Name="ST_MiracleAnimal" Abstract="True">
+		<statBases>
+			<MeatAmount>100</MeatAmount>
+			<LeatherAmount>100</LeatherAmount>
+			<ToxicResistance>1</ToxicResistance>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">1</ToxicEnvironmentResistance>
+			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
+		</statBases>
+		<race>
+			<giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
+			<thinkTreeMain>Animal</thinkTreeMain>
+			<thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+			<hasGenders>true</hasGenders>
+			<nameGenerator>NamerAnimalGenericMale</nameGenerator>
+			<nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
+			<trainability>Advanced</trainability>
+			<hediffGiverSets>
+				<li>ST_IchorBeing</li>
+			</hediffGiverSets>
+		</race>
+		<thingCategories>
+		  <li>Animals</li>
+		</thingCategories>
+		<recipes>
+		  <li>ExciseCarcinoma</li>
+		  <li>AdministerMechSerumHealer</li>
+		  <li>RemoveBodyPart</li>
+		  <li>Euthanize</li>
+		  <li>Anesthetize</li>
+		  <li>CureScaria</li>
+		  <li>Sterilize</li>
+		  <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+		</recipes>
+		<modExtensions>
+			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="ST_MiracleAnimal">
+		<defName>FlyingFrog</defName>
+		<label>Flying Frog</label>
+		<description>No one can truly describe a Transcendant World, in which a fully realized Archotech Intelligence has completely incorporated a planet or solar system into itself. Upon their ascensions, these worlds fall silent, but there is one notable exception. The Archotech governing the Transcendant World of Poobah continues to send out cargo ships on one-way journeys. These ships have been recorded for centuries and already seeded much of the galaxy even before they were discovered. Contact with these ships is impossible, and any attempts to impede their travel result in hostility. \n \n The ship's contents are always the same. Inside the Archotech ship is a frog forged by means indecipherable by man. Dubbed the Flying Frog, it flies around on its little cloud for reasons unknown. Flying frogs can be convinced to join your colony and will from time to time clone itself using Archotech technology. It will occasionally use its Archotech powers to heal allies that stand near it.</description>
+		<statBases>
+		  <MoveSpeed>5.5</MoveSpeed>
+		  <MarketValue>200</MarketValue>
+		  <ComfyTemperatureMin>-600</ComfyTemperatureMin>
+		  <ComfyTemperatureMax>600</ComfyTemperatureMax>
+		  <FilthRate>0</FilthRate>
+		</statBases>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_NoFilth" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
+			<li Class="AnimalBehaviours.CompProperties_Regeneration" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<rateInTicks>100</rateInTicks>
+			</li>	
+			<li Class="AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_AsexualReproduction" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<reproductionIntervalDays>30</reproductionIntervalDays>
+				<customString>Cloning in:</customString>
+			</li>			
+			<li Class="AnimalBehaviours.CompProperties_PassiveRegenerator" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<radius>5</radius>
+				<needsToBeTamed>true</needsToBeTamed>
+				<tickInterval>600</tickInterval>	
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="vanillaracesexpanded.archon">
+				<hediffname MayRequire="vanillaracesexpanded.archon">VRE_Transcendent</hediffname>
+				<hediffseverity MayRequire="vanillaracesexpanded.archon">1</hediffseverity>
+			</li>
+		</comps>
+		<tools>
+		  <li>
+			<label>left claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>12</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<label>right claw</label>
+			<capacities>
+			  <li>Scratch</li>
+			</capacities>
+			<power>12</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>19</power>
+			<cooldownTime>2.6</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.7</chanceFactor>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>14</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <body>ST_FrogLike</body>
+		  <nameGenerator>FrogNamerMale</nameGenerator>
+		  <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
+		  <bloodDef>ST_Filth_IchorBlood</bloodDef>
+		  <baseBodySize>0.35</baseBodySize>
+		  <baseHealthScale>4</baseHealthScale>
+		  <baseHungerRate>0</baseHungerRate>
+		  <foodType>Kibble</foodType> <!-- You have to give it food in order to tame it, for some reason -->
+		  <leatherDef>Leather_Frog</leatherDef>
+		  <Wildness>0</Wildness>
+		  <trainability>Advanced</trainability>
+		  <useMeatFrom>ST_BullFrog</useMeatFrom>
+		  <petness>0.5</petness>
+		  <lifeExpectancy>13000</lifeExpectancy>
+		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
+		  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0</minAge>
+			  <soundWounded>Pawn_Iguana_Wounded</soundWounded>
+			  <soundDeath>Pawn_Iguana_Death</soundDeath>
+			  <soundCall>Pawn_Iguana_Call</soundCall>
+			  <soundAngry>Frog_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+		  <li>AnimalExotic</li>
+		  <li>AnimalFrogRare</li>
+		  <li>StorytimeAnimalRare</li>
+		</tradeTags>
+		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRarity</li>
+				</statToAdd>
+				<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<li>ST_FrogDivine</li>
+					<li>ST_FrogLegendary</li>
+				</statValues>
+				<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<li>ST_FrogDivineDesc</li>
+					<li>ST_FrogLegendaryDesc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	  
+	  
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>FlyingFrog</defName>
+		<label>transcendant Flying Frog</label>
+		<race>FlyingFrog</race>
+		<canArriveManhunter>false</canArriveManhunter>
+		<combatPower>40</combatPower>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<minGenerationAge Inherit="False">40</minGenerationAge>
+		<maxGenerationAge Inherit="False">1800</maxGenerationAge>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/Frog_Types/Flying_Frog/FlyingFrog</texPath>
+			  <drawSize>0.8</drawSize>
+			  <shadowData>
+				<volume>(0.25, 0.25, 0.25)</volume>
+				<offset>(0,0,0)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/Toad/FrogCorpse</texPath>
+			  <drawSize>0.9</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

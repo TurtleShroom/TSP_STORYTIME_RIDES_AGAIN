@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AlienRace.AlienBackstoryDef Name="PirateBackstories" Abstract="True">
+	<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+	<spawnCategories>
+      <li>PirateBackstory</li>
+    </spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_CabinBoy</defName>
+    <title>Cabin Boy</title>
+	<titleShort>Cabin Boy</titleShort>
+    <description>[PAWN_nameDef] was born on a space pirate ship. [PAWN_pronoun] spent [PAWN_possessive] childhood doing various small jobs around the ship, where [PAWN_pronoun] became something of a mascot for the crewmen.</description>
+    <slot>Childhood</slot>
+	<spawnCategories>
+      <li>PirateBackstory</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>4</Social>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_Shipwrecked</defName>
+    <title>Shipwrecked</title>
+	<titleShort>castaway</titleShort>
+    <description>[PAWN_nameDef] was on a pirate spaceship that was destroyed in a battle. [PAWN_pronoun] was the only survivor, crashing down somewhere on a forsaken Rim World, where [PAWN_pronoun] had to fend for [PAWN_objective]self for years before being rescued by a Golden Age pirate chapter. </description>
+    <slot>Childhood</slot>
+    <skillGains>
+	  <Animals>3</Animals>
+	  <Plants>6</Plants>
+	  <Cooking>3</Cooking>
+	  <Crafting>3</Crafting>
+	  <Social>-4</Social>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_Cadet</defName>
+    <title>Navy Cadet</title>
+	<titleShort>cadet</titleShort>
+    <description>[PAWN_nameDef] enlisted in a spacefaring country's navy at a young age, where [PAWN_pronoun] received an education as well as combat training. [PAWN_pronoun] exited the service as an adult.</description>
+    <slot>Childhood</slot>
+	<spawnCategories>
+      <li>PirateBackstory</li>
+	  <li>Pirate</li>
+	  <li>Offworld</li>
+	  <li>ImperialFighter</li>
+	  <li>ImperialCommon</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>2</Melee>
+	  <Shooting>4</Shooting>
+	  <Intellectual>3</Intellectual>
+    </skillGains>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_EscapedSlave</defName>
+    <title>Escaped Slave</title>
+	<titleShort>escapee</titleShort>
+    <description>Born to a minor slave owning clan, [PAWN_nameDef] was abducted from [PAWN_possessive] home as a teenager and enslaved by space pirates. When [PAWN_possessive] captors were themselves killed by pirates, [PAWN_pronoun] joined the pirate crew that liberated [PAWN_objective], and followed them when they settled as a Golden Age chapter.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Mining>3</Mining>
+	  <Animals>3</Animals>
+	  <Plants>3</Plants>
+    </skillGains>
+    <workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+  </AlienRace.AlienBackstoryDef>  
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_PirateChild</defName>
+    <title>Captain's Child</title>
+	<titleShort>captain's child</titleShort>
+    <description>[PAWN_nameDef] was born on a pirate spaceship as the illegitimate child of a pirate captain. [PAWN_possessive] father kept [PAWN_objective] on the ship and spared no expense in [PAWN_possessive] upbringing, regardless of whether or not [PAWN_pronoun] ultimately decided to become a pirate [PAWN_objective]self.</description>
+	<bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+	<spawnCategories>
+      <li>PirateBackstory</li>
+	  <li>Offworld</li>
+	  <li>Pirate</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>6</Intellectual>
+	  <Social>6</Social>
+	  <Melee>3</Melee>
+    </skillGains>
+	<workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+	<requiredWorkTags>
+		<li>Social</li>
+		<li>Violent</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>  
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_ChildTreasure</defName>
+    <title>Young Treasure Hunter</title>
+	<titleShort>treasure hunter</titleShort>
+    <description>On [PAWN_posessive] home world, [PAWN_nameDef] found a treasure map as a child and spent [PAWN_possessive] whole childhood trying to find the treasure. [PAWN_nameDef] failed, but [PAWN_pronoun] eventually ran across some space pirates and joined them instead. [PAWN_pronoun] would later leave that to join Golden Age pirates, due to nostalgia for [PAWN_possessive] youth.</description>
+    <slot>Childhood</slot>
+    <skillGains>
+      <Mining>5</Mining>
+	  <Intellectual>2</Intellectual>
+    </skillGains>
+	<requiredWorkTags>
+		<li>Mining</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_PirateCook</defName>
+    <title>Pirate Cook</title>
+	<titleShort>galley chef</titleShort>
+    <description>[PAWN_nameDef] was the only chef on board [PAWN_possessive] pirate spaceship. Most of [PAWN_possessive] time was spent cooking for the crew. [PAWN_pronoun] transferred these skills on land when [PAWN_pronoun] joined some Golden Age pirates.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Cooking>6</Cooking>
+    </skillGains>
+	<requiredWorkTags>
+		<li>Cooking</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_PirateOfficer</defName>
+    <title>Pirate Officer</title>
+	<titleShort>officer</titleShort>
+    <description>[PAWN_nameDef] was among the high ranking officers of [PAWN_possessive] space pirate crew, and became accustomed to giving orders. Seeking a bigger challenge than flying around space in a can, [PAWN_nameDef] touched down on a Rim World and formed [PAWN_possessive] own Golden Age pirate chapter.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+	  <Social>5</Social>
+	  <Shooting>5</Shooting>
+	  <Intellectual>1</Intellectual>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>Abrasive</defName>
+				</li>
+			</options>
+			<count>1</count>
+			<chance>100</chance>
+		</li>
+    </forcedTraitsChance>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_CursedPirate</defName>
+    <title>Cursed</title>
+	<titleShort>cursed</titleShort>
+    <description>During a raid, [PAWN_nameDef] came into possession of a great treasure. Unbeknownst to [PAWN_objective], it was cursed! [PAWN_nameDef] spent many years stuck as an undead lifeform before managing to break the curse. This time has had some residual effects on [PAWN_possessive] body and mind.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+	  <Melee>9</Melee>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>Bloodlust</defName>
+				</li>
+				<li>
+					<defName>Tough</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>100</chance>
+		</li>
+    </forcedTraitsChance>
+	<spawnCategories>
+		<li>OwenWilson</li>
+	</spawnCategories>
+		<workDisables>
+			<li>Social</li>
+		</workDisables>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_TreasureHunter</defName>
+    <title>Treasure Hunter</title>
+	<titleShort>treasure hunter</titleShort>
+    <description>Unlike most Golden Age pirates, [PAWN_nameDef] never set foot on a spaceship. Rather, [PAWN_pronoun] spent most of [PAWN_possessive] adult life searching for a hidden treasure on this Rim World without success. When a local Golden Age pirate chapter offered [PAWN_objective] a chance to attain vast treasures, [PAWN_pronoun] immediately jumped on the opportunity.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Mining>8</Mining>
+	  <Social>-3</Social>
+    </skillGains>
+	<requiredWorkTags>
+		<li>Mining</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_Marooned</defName>
+    <title>Marooned</title>
+	<titleShort>marooned</titleShort>
+    <description>[PAWN_nameDef] was captain of a pirate spaceship until being overthrown in a mutiny by [PAWN_possessive] first mate. The mutineers proceeded to abandon [PAWN_objective] on some far-flung Rim World, where [PAWN_pronoun] survived for months until a Golden Age pirate chapter rescued [PAWN_objective]. By the time [PAWN_possessive] remaining loyal crewmen took back the spaceship, [PAWN_nameDef] was presumed dead.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+		<Plants>7</Plants>
+		<Cooking>5</Cooking>
+		<Medicine>1</Medicine>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName Degree="-1">Nerves</defName>
+				</li>
+			</options>
+			<chance>90</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+    </forcedTraitsChance>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_Mutineer</defName>
+    <title>Mutineer</title>
+	<titleShort>mutineer</titleShort>
+    <description>[PAWN_nameDef] was once the first mate on a spaceship. He led a mutiny against the captain of [PAWN_possessive] crew, taking his place as leader. [PAWN_nameDef] then marooned the captain by ejecting him onto a Rim World, cruelly leaving him to die. When the captain's supporters retook the ship, [PAWN_nameDef] stole as much loot as [PAWN_pronoun] could and ejected [PAWN_objective]self onto the nearest habitable planet.</description>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>PirateBackstory</li>
+	  <li>Pirate</li>
+	  <li>Raider</li>
+	  <li>Offworld</li>
+	  <li>Sadist</li>
+	  <li>TTancon_Standard</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>3</Social>      
+	  <Melee>6</Melee>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>Psychopath</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+    </forcedTraitsChance>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_ShipDoctor</defName>
+    <title>Pirate Doctor</title> 
+	<titleShort>herbalist</titleShort>
+    <description>[PAWN_nameDef] served as the chief medical expert of a crew of space pirates. Before [PAWN_nameDef] joined, [PAWN_pronoun] had no formal training and relied primarily on herbal remedies and other folk knowledge. Since [PAWN_pronoun] was not seeking to broaden [PAWN_pronoun] skills beyond traditional medicine at the time, [PAWN_pronoun] was replaced with a more open-minded, scientific doctor. His skills were perfect for the shoestring budget of Golden Age pirates, however.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>4</Medicine>
+	  <Plants>2</Plants>
+	  <Cooking>2</Cooking>
+    </skillGains>
+	<requiredWorkTags>
+		<li>Caring</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef>
+    <defName>ST_GentlemanPirate</defName>
+    <title>Gentleman Corsair</title> 
+	<titleFemale>Lady-Corsair</titleFemale>
+	<titleShort>honorable ex-corsair</titleShort>
+	<bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <description>[PAWN_nameDef] was once a captain of a crew of space pirates. Despite being a thief, [PAWN_pronoun] became well known for [PAWN_possessive] mercy and civility to [PAWN_possessive] foes, as well as for [PAWN_possessive] surprising intelligence and craftiness. Though [PAWN_nameDef] has since gone straight and touched down on this Rim World, [PAWN_pronoun] remains a skilled fighter.</description>
+    <slot>Adulthood</slot>
+	<spawnCategories Inherit="False">
+		<li>Offworld</li>
+		<li>Outlander</li>
+    </spawnCategories>
+    <skillGains>
+		<Intellectual>3</Intellectual>
+		<Social>4</Social>
+		<Melee>5</Melee>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>Kind</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+	</forcedTraitsChance>
+	<disallowedTraits>
+		<Abrasive>0</Abrasive>
+		<Cannibal>0</Cannibal>
+		<Psychopath>0</Psychopath>
+		<Bloodlust>0</Bloodlust>
+		<Wimp>0</Wimp>
+	</disallowedTraits>
+	<requiredWorkTags>
+		<li>Violent</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_Shanghaied</defName>
+    <title>Shanghaied</title>
+	<titleShort>Shanghaied</titleShort>
+    <description>Unlike most Golden Age pirates, [PAWN_nameDef] has never set foot on a spacer's pirate ship, having grown up on this Rim World. This is because [PAWN_pronoun] was kidnapped by Golden Age pirates while passed out on drugs, after which [PAWN_pronoun] was forced to join the crew. [PAWN_pronoun] came to love [PAWN_possessive] new job and never left.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>-2</Social>
+	  <Intellectual>-2</Intellectual>
+	  <Melee>-3</Melee>
+	  <Shooting>-1</Shooting>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName Degree="1">DrugDesire</defName>
+				</li>
+				<li>
+					<defName Degree="2">DrugDesire</defName>
+				</li>
+			</options>
+			<count>1</count>
+			<chance>100</chance>
+		</li>
+		<li>
+			<options>
+				<li>
+					<defName>ST_FillerDummy_Trait</defName>
+				</li>
+			</options>
+			<!-- <count>1</count> -->
+			<chance>0</chance>
+		</li>
+    </forcedTraitsChance>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_NavyTraitor</defName>
+    <title>Navy Traitor</title>
+	<titleShort>deserter</titleShort>
+    <description>[PAWN_nameDef] served in a spacefaring navy for a few years before deciding the life wasn't for [PAWN_objective]. [PAWN_pronoun] jumped ship at port and joined up with a space pirate crew. After that, [PAWN_nameDef] headed off at a terrestrial smuggler's port and joined up with a Golden Age crew.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Intellectual>2</Intellectual>
+	  <Shooting>2</Shooting>
+    </skillGains>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_HurdyGurdy</defName>
+    <title>Hurdy Gurdy Player</title>
+	<titleShort>musician</titleShort>
+	<bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <description>[PAWN_nameDef] was a musician hired by spacefarers, meant to comfort and boost morale in the long voyages of space. [PAWN_pronoun] specialized playing an ancient Old Earth machine called the Hurdy Gurdy, which is akin to a violin, but with a hand-cranked apparatus and keyboard controlling its notes' pitch instead of a bow. The ship's crew loved [PAWN_objective] and [PAWN_pronoun] rarely had to do any real work around the ship.</description>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+		<li>PirateBackstory</li>
+		<li>Pirate</li>
+		<li>Offworld</li>
+		<li>Uncommon</li>
+		<li>ESCP_MaormerBackstory_Adulthood</li>
+		<li>ESCP_MaormerPirate_SeaVipers_Backstory</li>
+		<li>ESCP_MaormerPirate_StormSharks_Backstory</li>
+		<li>ESCP_MaormerPirate_KeelCutter_Backstory</li>
+		<li>ESCP_MaormerPirate_BlueVenom_Backstory</li>
+		<li>ESCP_MaormerPirate_WakeWalkers_Backstory</li>
+		<li>ESCP_MaormerPirate_Dreadsails_Backstory</li>
+		<li>ESCP_MaormerLeviathanBackstory_Adulthood</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>10</Social>
+    </skillGains>
+	<workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+	<requiredWorkTags Inherit="False">
+		<li>Social</li>
+	</requiredWorkTags>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_Smuggler</defName>
+    <title>Smuggler</title>
+	<titleShort>smuggler</titleShort>
+    <description>[PAWN_nameDef] used to be a space pirate who smuggled goods across the stars. This required a lot of fast talking and fast sailing to avoid arrest. Eventually, [PAWN_pronoun] grew tired of that life and settled down with some Golden Age pirates, taking [PAWN_possessive] invaluable spacer skills with [PAWN_objective].</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>4</Social>
+	  <Animals>4</Animals>
+	  <Intellectual>1</Intellectual>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>Nimble</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+    </forcedTraitsChance>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_ArmsDealer</defName>
+    <title>Vintage Pirate Arms Dealer</title>
+	<titleShort>antique gunsmith</titleShort>
+    <description>[PAWN_nameDef] built and sold ancient guns and other millinea-old weapons to anyone with enough Silver to buy them. Though obsolete, [PAWN_nameDef]'s work was considered amongst the best in [PAWN_possessive] solar system. Even spacer pirates were known to use [PAWN_possessive] cutlasses for hand-to-hand combat when boarding a spaceship.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Crafting>8</Crafting>
+    </skillGains>
+	<requiredWorkTags Inherit="False">
+		<li>Crafting</li>
+	</requiredWorkTags>
+	<spawnCategories>
+		<li>OwenWilson</li>
+		<li>Outlander</li>
+		<li>ESCP_MaormerBackstory_Adulthood</li>
+		<li>ESCP_MaormerLeviathanBackstory_Adulthood</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_Boarder</defName>
+    <title>Boarder</title>
+	<titleShort>boarder</titleShort>
+    <description>Before landing on a Rim World, [PAWN_nameDef] was a space pirate. [PAWN_pronoun] always volunteered to join boarding parties when attacking another ship. In spite of [PAWN_possessive] spacesuit, [PAWN_pronoun] was a terrifying opponent and by far the ship's best fighter. [PAWN_nameDef] continues to excel at this while planet-side.</description>
+    <slot>Adulthood</slot>
+	<spawnCategories>
+      <li>PirateBackstory</li>
+	  <li>Pirate</li>
+	  <li>Raider</li>
+	  <li>Offworld</li>
+	  <li>OwenWilson</li>
+	  <li>Cult</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>10</Melee>
+    </skillGains>
+	<forcedTraitsChance>
+		<li>
+			<options>
+				<li>
+					<defName>Brawler</defName>
+				</li>
+			</options>
+			<chance>100</chance>
+		</li>
+    </forcedTraitsChance>
+  </AlienRace.AlienBackstoryDef>
+ 
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_Cannoneer</defName>
+    <title>Cannoneer</title>
+	<titleShort>artilleryman</titleShort>
+    <description>[PAWN_nameDef] was in charge of manning the rail gun cannons on a pirate spaceship. [PAWN_pronoun] was known as quite the marksman. Those skills transferred effortlessly onto the Rim when [PAWN_pronoun] left after a falling out with [PAWN_possessive] space pirate captain.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Shooting>12</Shooting>
+    </skillGains>
+	<spawnCategories>
+		<li>PirateBackstory</li>
+		<li>Pirate</li>
+		<li>Raider</li>
+		<li>Offworld</li>
+		<li>ImperialFighter</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>
+  
+  <AlienRace.AlienBackstoryDef ParentName="PirateBackstories">
+    <defName>ST_TerrestrialCannoneer</defName>
+    <title>Cannoneer</title>
+	<titleShort>artilleryman</titleShort>
+    <description>[PAWN_nameDef] was in charge of manning the artillery in the navy of [PAWN_posessive] homeland. [PAWN_pronoun] was known as quite the marksman.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Shooting>6</Shooting>
+    </skillGains>
+	<spawnCategories>
+		<li>PirateBackstory</li>
+		<!-- <li>Pirate</li> -->
+		<li>Medieval</li>
+		<li>Hunter</li>
+		<li>Classical</li>
+		<li>ImperialFighter</li>
+	</spawnCategories>
+  </AlienRace.AlienBackstoryDef>  
+</Defs>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<!-- Code derived entirely, and courtesy of, the Oni Mod -->
+	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=1632244750 -->
+	<HediffDef>
+		<defName>TSP_ST_Jeub_Ears</defName>
+		<label>Jeub Ears</label>
+		<description>Whereas most animals' outer ears are bendable and comprised of cartilage, the cartilage on a Jeub's ear only exists at the tips. This is because the base of the Jeub ear leading into the ear canal is actually solid bone. This makes a Jeub skeleton instantly recognizable.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.4, 1, 0.4)</defaultLabelColor>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<!-- <scenarioCanAdd>false</scenarioCanAdd> -->
+		<stages>
+			<li>
+				<label>enhanced Jeub hearing</label>
+				<becomeVisible>false</becomeVisible>
+				<capMods>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+				<makeImmuneTo>
+					<li>DrugOverdose</li>
+					<li>Animal_Plague</li>
+					<li MayRequire="SirMashedPotato.MorrowRim">MorrowRim_Corprus</li>
+				</makeImmuneTo>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

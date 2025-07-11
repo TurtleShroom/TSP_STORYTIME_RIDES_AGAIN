@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <HediffDef>
+        <defName>AsbestosFiber_Exposure</defName>
+        <description>Exposed to asbestos fiber.</description>
+        <label>asbestos exposure</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <minSeverity>0</minSeverity>
+        <initialSeverity>1</initialSeverity>
+        <maxSeverity>1</maxSeverity>
+        <stages>
+            <li>
+                <painFactor>1.1</painFactor>
+                <painOffset>0.18</painOffset>
+                <socialFightChanceFactor>4</socialFightChanceFactor>
+                <statOffsets>
+                    <CancerRate>0.25</CancerRate>
+                </statOffsets>
+                <statFactors>
+                    <MeleeDamageFactor>0.9</MeleeDamageFactor>
+                    <StaggerDurationFactor>2</StaggerDurationFactor>
+                    <MentalBreakThreshold>1.25</MentalBreakThreshold>
+                    <MoveSpeed>0.8</MoveSpeed>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Breathing</capacity>
+                        <postFactor>0.95</postFactor>
+                    </li>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <postFactor>0.05</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>600000~900000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_GiveHediffLungRot">
+                <hediffDef>AsbestosFiber_Illness_Lung</hediffDef>
+                <mtbCheckDuration>600</mtbCheckDuration>
+                <minSeverity>0.6</minSeverity>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="DiseaseBase">
+        <defName>AsbestosFiber_Illness_Lung</defName>
+        <label>asbestine lung damage</label>
+        <description>Lungs are damaged due to asbestos fibers inhaled.</description>
+        <descriptionShort>Asbestos lung damage.</descriptionShort>
+        <hediffClass>HediffWithComps</hediffClass>
+        <makesSickThought>true</makesSickThought>
+        <minSeverity>0.001</minSeverity>
+        <initialSeverity>0.001</initialSeverity>
+        <stages>
+            <li>
+                <label>initial</label>
+                <painOffset>0.13</painOffset>
+                <capMods>
+                    <li>
+                        <capacity>Breathing</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <LifespanFactor>0.97</LifespanFactor>
+                    <CancerRate>6</CancerRate>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>0.4</minSeverity>
+                <label>medium stage</label>
+                <painOffset>0.25</painOffset>
+                <socialFightChanceFactor>0</socialFightChanceFactor>
+                <capMods>
+                    <li>
+                        <capacity>Breathing</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <LifespanFactor>0.9</LifespanFactor>
+                    <CancerRate>8</CancerRate>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>0.8</minSeverity>
+                <label>terminal</label>
+                <lifeThreatening>true</lifeThreatening>
+                <painOffset>0.52</painOffset>
+                <socialFightChanceFactor>0</socialFightChanceFactor>
+                <capMods>
+                    <li>
+                        <capacity>Breathing</capacity>
+                        <postFactor>0.5</postFactor>
+                        <setMax>0.5</setMax>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>0.6</postFactor>
+                        <setMax>0.31</setMax>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <LifespanFactor>0.3</LifespanFactor>
+                    <CancerRate>10</CancerRate>
+                </statFactors>
+            </li>
+        </stages>
+        <tendable>true</tendable>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>0.1</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_TendDuration">
+                <severityPerDayTended>-0.02</severityPerDayTended>
+                <baseTendDurationHours>48</baseTendDurationHours>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>

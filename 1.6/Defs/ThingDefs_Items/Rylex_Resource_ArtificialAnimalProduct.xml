@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>Rylex_CoconutMilk</defName>
+    <label>coconut milk</label>
+    <description>Coconut meat that has been processed to create a thick, mildly sweet, plant-based "milk" that can be substituted for real milk.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Milk</texPath>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>3.5</MarketValue>
+      <Mass>0.045</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.08</Nutrition>
+      <FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>VegetableOrFruit, Plant, VegetarianRoughAnimal, VegetarianAnimal, AnimalProduct, Fluid</foodType>
+	  <babiesCanIngest MayRequire="ludeon.rimworld.biotech">true</babiesCanIngest>
+    </ingestible>
+    <thingCategories>
+		<li>AnimalProductRaw</li>
+		<li>PlantFoodRaw</li>
+		<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+    </thingCategories>
+	<modExtensions>
+			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+				<water>0.9</water>
+				<UseForWashing>true</UseForWashing>
+				<SeekForThirst>false</SeekForThirst>
+			</li>
+	</modExtensions>
+  </ThingDef>
+</Defs>

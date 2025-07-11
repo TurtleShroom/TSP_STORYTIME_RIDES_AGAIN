@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="BasePawn" Name="BaseSkeleton" Abstract="True">
+	<thingClass>Pawn</thingClass>
+	<category>Pawn</category>
+	<selectable>true</selectable>
+	<tickerType>Normal</tickerType>
+	<altitudeLayer>Pawn</altitudeLayer>
+    <statBases>
+      <PsychicSensitivity>10</PsychicSensitivity>
+      <ToxicResistance>1</ToxicResistance>
+	  <ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">1</ToxicEnvironmentResistance>
+      <Flammability>0.2</Flammability>
+      <ComfyTemperatureMin>-420</ComfyTemperatureMin>
+      <ComfyTemperatureMax>420</ComfyTemperatureMax>
+	  <LeatherAmount>0</LeatherAmount>
+	  <MeatAmount>100</MeatAmount>
+	  <PainShockThreshold>1</PainShockThreshold>
+	  <BoneAmount MayRequire="sihv.rombones" Inherit="False">206</BoneAmount> <!-- Human skeletons always yield the same bones as their skeleton contains -->
+	  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
+	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_SanctusSensitivity>
+	  <MinimumContainmentStrength MayRequire="ludeon.rimworld.anomaly">17</MinimumContainmentStrength>
+    </statBases>
+    <race>
+		<giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
+		<needsRest>false</needsRest>
+		<thinkTreeMain>SkeletonPirate</thinkTreeMain>
+		<!-- <thinkTreeConstant>SkeletonPirate</thinkTreeConstant> -->
+		<hasGenders>true</hasGenders>
+		<foodType>None</foodType>
+		<lifeExpectancy>2000</lifeExpectancy>
+		<bloodDef>Filth_CorpseBile</bloodDef>
+		<bloodSmearDef>Filth_CorpseBile</bloodSmearDef>
+		<specificMeatDef>TSP_ST_SkeletalMarrow</specificMeatDef>
+		<meatColor>(45,44,39)</meatColor>
+		<body>TSP_ST_SkeletalMan</body>
+		<fleshType MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_StrangeFlesh</fleshType>
+		<canOpenFactionlessDoors>true</canOpenFactionlessDoors>
+		<isImmuneToInfections>true</isImmuneToInfections>
+		<lifeStageAges>
+			<li>
+				<def>TSP_ST_SkeletonAge_Undead</def>
+				<minAge>0</minAge>
+			</li>
+			<li MayRequire="ludeon.rimworld.anomaly">
+				<def>EntityFullyFormed</def>
+				<minAge>0.001</minAge>
+			</li>
+		</lifeStageAges>
+    </race>
+	<!-- <receivesSignals>true</receivesSignals> -->
+	<comps>
+		<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<hediffname>HedSTUndead</hediffname>
+			<hediffseverity>1</hediffseverity>
+		</li>
+		<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<makeNonFleeingToo>true</makeNonFleeingToo>
+		</li>
+		<li MayRequire="oskarpotocki.vanillafactionsexpanded.core" Class="AnimalBehaviours.CompProperties_DiseaseEventImmunity"></li>
+		<li Class="CompProperties_ProducesBioferrite" MayRequire="ludeon.rimworld.anomaly">
+			<bioferriteDensity>2</bioferriteDensity>
+		</li>
+		<li Class="CompProperties_Studiable" MayRequire="ludeon.rimworld.anomaly">
+			<frequencyTicks>45000</frequencyTicks>
+			<knowledgeCategory>Basic</knowledgeCategory>
+			<anomalyKnowledge>1.5</anomalyKnowledge>
+			<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+			<requiresHoldingPlatform>true</requiresHoldingPlatform>
+		</li>
+		<li Class="CompProperties_HoldingPlatformTarget" MayRequire="ludeon.rimworld.anomaly">
+			<baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
+			<lookForTargetOnEscape>false</lookForTargetOnEscape>
+		</li>
+		<!--
+		<li Class="WVC_XenotypesAndGenes.CompProperties_InitialHediff" MayRequire="wvc.sergkart.races.biotech">
+			<hediffDefs MayRequire="wvc.sergkart.races.biotech">
+			  <li MayRequire="wvc.sergkart.races.biotech">WVC_XenotypesAndGenes_NoBleedNoPainNoPoisoning</li>
+			</hediffDefs>
+		</li>
+		-->
+	</comps>
+	<!--
+	<butcherProducts>
+		<BoneItem MayRequire="sihv.rombones">206</BoneItem>
+	</butcherProducts>
+	-->
+	<tradeTags>
+		<li>AnimalInsectSpace</li> <!-- Skeletons don't breathe -->
+		<li>EVA</li>
+		<!-- <li>Skeleton</li> -->
+	</tradeTags>
+	
+	<modExtensions>
+		<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+			<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+		</li>
+		<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+			<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+	<ThingDef ParentName="AnimalThingBase" Name="TSP_ST_RetardSkeleton_Base" Abstract="True">
+		<thingClass>Pawn</thingClass>
+		<category>Pawn</category>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Pawn</altitudeLayer>
+		<statBases>
+			<PsychicSensitivity>10</PsychicSensitivity>
+			<ToxicResistance>1</ToxicResistance>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">1</ToxicEnvironmentResistance>
+			<Flammability>0.2</Flammability>
+			<ComfyTemperatureMin>-420</ComfyTemperatureMin>
+			<ComfyTemperatureMax>420</ComfyTemperatureMax>
+			<LeatherAmount>0</LeatherAmount>
+			<MeatAmount>100</MeatAmount>
+			<PainShockThreshold>1</PainShockThreshold>
+			<BoneAmount MayRequire="sihv.rombones" Inherit="False">206</BoneAmount> <!-- Human skeletons always yield the same bones as their skeleton contains -->
+			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
+			<HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_SanctusSensitivity>
+		</statBases>
+		<race>
+			<thinkTreeMain Inherit="False">Animal</thinkTreeMain>
+			<thinkTreeConstant Inherit="False">AnimalConstant</thinkTreeConstant>
+			<intelligence Inherit="False">Animal</intelligence>
+			<trainability Inherit="False">Advanced</trainability>
+			<giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
+			<needsRest>false</needsRest>
+			<hasGenders>true</hasGenders>
+			<lifeExpectancy>2000</lifeExpectancy>
+			<bloodDef>Filth_CorpseBile</bloodDef>
+			<bloodSmearDef>Filth_CorpseBile</bloodSmearDef>
+			<specificMeatDef>TSP_ST_SkeletalMarrow</specificMeatDef>
+			<meatColor>(45,44,39)</meatColor>
+			<fleshType MayRequire="rimofmadness.CallofCthulhuCosmicHorrors">ROM_StrangeFlesh</fleshType>
+			<baseHungerRate>0</baseHungerRate>
+			<foodType Inherit="False">None, OmnivoreHuman, Kibble</foodType> <!-- You have to be able to feed an animal to tame it, apparently. -->
+			<body Inherit="False">TSP_ST_SkeletalMan</body>
+			<lifeStageAges Inherit="False">
+				<li>
+					<def>TSP_ST_SkeletonAge_Undead</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<!-- <receivesSignals>true</receivesSignals> -->
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<hediffname>HedSTUndead</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+			<li Class="CompProperties_ProducesBioferrite" MayRequire="ludeon.rimworld.anomaly">
+				<bioferriteDensity>1</bioferriteDensity>
+			</li>
+		</comps>
+		<!--
+		<butcherProducts>
+			<BoneItem MayRequire="sihv.rombones">206</BoneItem>
+		</butcherProducts>
+		-->
+		<tradeTags>
+			<li>AnimalInsectSpace</li> <!-- Skeletons don't breathe -->
+			<li>EVA</li>
+			<li>DocileSkeleton</li>
+			<li>Skeleton</li>
+			<li>AnimalExotic</li>
+		</tradeTags>
+
+		<modExtensions>
+			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
+				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
+			</li>
+			<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
+				<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
+			</li>
+		</modExtensions>
+	</ThingDef>
+  
+	<PawnKindDef Name="BaseSkeletonKind" Abstract="True">
+		<defaultFactionType>Skeleton_Pirates</defaultFactionType>
+		<canArriveManhunter>false</canArriveManhunter>
+		<aiAvoidCover>false</aiAvoidCover>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<allowOldAgeInjuries>false</allowOldAgeInjuries>
+		<wildGroupSize>2</wildGroupSize>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<maxGenerationAge>400</maxGenerationAge>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="BaseSkeletonKindAsShambler" Abstract="True">
+		<defaultFactionType>Skeleton_Pirates</defaultFactionType>
+		<canArriveManhunter>false</canArriveManhunter>
+		<aiAvoidCover>false</aiAvoidCover>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<allowOldAgeInjuries>false</allowOldAgeInjuries>
+		<wildGroupSize>2</wildGroupSize>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<maxGenerationAge>400</maxGenerationAge>
+		<mutant MayRequire="ludeon.rimworld.anomaly">TSP_ST_Shambler_SkeletalPirate</mutant>
+	</PawnKindDef>
+</Defs>

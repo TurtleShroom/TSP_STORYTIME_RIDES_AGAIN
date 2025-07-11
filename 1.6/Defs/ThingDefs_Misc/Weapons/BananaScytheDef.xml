@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<!--
+	The original text to this weapon was: "An accurate recreation of one of the legendary Ancient Weapons crafted by Colin after his victory over Allah in the Jeub-Muslim War.". I have removed this because it breaks immersion and I don't like RL religions in this game.
+	
+	It is pleasing to know that Isengriff hates Islam as much as me.
+	-->
+	<ThingDef ParentName="BaseWeapon">
+		<defName>BananaScythe</defName>
+		<label>Banana Scythe</label>
+		<description>The Banana Scythe is a strange weapon, originally crafted by Snaff Colin, who is worshipped by Jeubs as the Lord of Eternal Alchemy. This is a rare example of a replica successfully embued with its power. As its name implies, it is shaped like a golden scythe with a head in the shape of a banana. Uniquely, however, any person cursed by its magic, or killed by its blade, will have their body converted atom by atom into a special banana, killing them instantly. Those who would stand against its wielder would do well to be cautious, for death is perhaps not the worst fate one may suffer...</description>
+		<graphicData>
+			<texPath>Things/Items/Weapons/RareWeapons/AncientWeapons/BananaScythe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.9</drawSize>
+		</graphicData>
+		<techLevel>Ultra</techLevel>
+		<thingCategories>
+		  <li>Artifacts</li>
+		</thingCategories>
+		<weaponClasses>
+		  <li>Melee</li>
+		  <li>MeleePiercer</li>
+		  <li>Ultratech</li>
+		</weaponClasses>
+		<relicChance>0.5</relicChance>
+		<statBases>
+		  <Mass>10</Mass>
+		</statBases>
+		<weaponTags>
+		  <li>AncientWeapon</li>
+		  <li>RelicWeapon</li>
+		</weaponTags>
+		<tradeTags>
+			<li>VBY_Treasure</li>
+		</tradeTags>
+		<tools>
+		  <li>
+			<label>edge</label>
+			<capacities>
+			  <li>BananaScytheCleave</li>
+			</capacities>
+			<power>14</power>
+			<cooldownTime>0.8</cooldownTime>
+		  </li>
+		</tools>
+		<equippedAngleOffset>-15</equippedAngleOffset>
+		<comps>
+			<li MayRequire="carnysenpai.enableoversizedweapons">
+				<compClass MayRequire="carnysenpai.enableoversizedweapons">CompOversizedWeapon.CompOversizedWeapon</compClass>
+			</li>
+		</comps>
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+	</ThingDef>
+</Defs>

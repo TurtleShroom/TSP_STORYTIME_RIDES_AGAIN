@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RecipeDef>
+		<defName>Rylex_ProcessCoconuts</defName>
+		<label>grind coconut milk (x35)</label>
+		<description>Process raw coconuts into coconut milk. Coconut milk can be used as a subsititue for animal milk.</description>
+		<jobString>grinding coconut milk</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>1500</workAmount>
+		<recipeUsers>
+			<li MayRequire="vanillaexpanded.vplantsemore,vanillaexpanded.vcooke">VCE_VegMilkExtractor</li>
+			<li>ManualGrinder</li>	
+			<li>ElectricGrinder</li>			
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>coconuts</customSummary>
+					<thingDefs>
+						<li>Rylex_Coconut</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Rylex_Coconut</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Rylex_CoconutMilk>35</Rylex_CoconutMilk>
+		</products>
+		<skillRequirements>
+			<Cooking>1</Cooking>
+		</skillRequirements>
+		<researchPrerequisites>
+			<li MayRequire="vanillaexpanded.vplantsemore,vanillaexpanded.vcooke">VCE_VegMilkExtraction</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>Rylex_ProcessCoconuts_Bulk</defName>
+		<label>grind coconut milk (x75)</label>
+		<description>Process raw coconuts into coconut milk. Coconut milk can be used as a subsititue for animal milk.</description>
+		<jobString>grinding coconut milk</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>3000</workAmount>
+		<recipeUsers>
+			<li MayRequire="vanillaexpanded.vplantsemore,vanillaexpanded.vcooke">VCE_VegMilkExtractor</li>
+			<li>ManualGrinder</li>	
+			<li>ElectricGrinder</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>coconuts</customSummary>
+					<thingDefs>
+						<li>Rylex_Coconut</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Rylex_Coconut</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Rylex_CoconutMilk>75</Rylex_CoconutMilk>
+		</products>
+		<researchPrerequisites>
+			<li MayRequire="vanillaexpanded.vplantsemore,vanillaexpanded.vcooke">VCE_VegMilkExtraction</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Cooking>3</Cooking>
+		</skillRequirements>
+	</RecipeDef>
+</Defs>

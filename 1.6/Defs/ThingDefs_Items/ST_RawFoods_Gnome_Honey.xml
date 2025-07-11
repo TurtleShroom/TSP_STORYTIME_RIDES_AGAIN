@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>TSP_ST_GnomeHoney</defName>
+		<label>Gnome honey</label>
+		<description>Honey is the sugary product created by bees from the nectar of flowers, chewed, vomited, and processed into a delicious, nutritious product that cannot ever rot when under seal. This specific type of honey comes from the exotic Gnome cuisine, created by specially bred Gnees (short for Gnome Beees) for general consumption. It is a delicacy and a delight to taste, and is very popular outside of Gnome culture.</description>
+		<descriptionHyperlinks>
+			<ResearchProjectDef>ST_GnomeCulture</ResearchProjectDef>
+			<ThingDef MayRequire="sarg.rimbees">RB_Bee_TSP_ST_Gnee_Basic_Queen</ThingDef>
+			<ThingDef MayRequire="sarg.rimbees">RB_Bee_TSP_ST_Gnee_Basic_Drone</ThingDef>
+			<ThingDef MayRequire="sarg.rimbees">TSP_ST_RB_Gnomb_Basic</ThingDef>
+			<RecipeDef MayRequire="sarg.rimbees">TSP_ST_RB_CentrifugeGnee1Comb</RecipeDef>
+			<!-- <ThingDef>TSP_ST_GnomeHoney</ThingDef> -->
+			<ThingDef MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Items/GnomeFood/GnomeHoney</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<uiIconPath>Things/Items/GnomeFood/GnomeHoney/GnomeHoney_a</uiIconPath>
+		<statBases>
+			<MarketValue>2</MarketValue>
+			<Nutrition>0.06</Nutrition>
+			<Mass>0.02</Mass>
+			<FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<ingestible>
+			<foodType>AnimalProduct, Processed, VegetarianAnimal, OmnivoreHuman, Kibble</foodType>
+			<preferability>RawTasty</preferability>
+			<!--
+			<joy>0.03</joy>
+			<joyKind>Gluttonous</joyKind>
+			-->
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<canAutoSelectAsFoodForCaravan>true</canAutoSelectAsFoodForCaravan>
+			<babiesCanIngest>true</babiesCanIngest>
+			<optimalityOffsetHumanlikes>1</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>1</optimalityOffsetFeedingAnimals>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="gguake.race.vivi">
+					<hediffDef>VV_ViviGrowthBoost</hediffDef>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="gguake.race.vivi">
+					<hediffDef>VV_RoyalJelly</hediffDef>
+					<severity>0.31</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stackLimit>1000</stackLimit>
+		<thingCategories>
+			<li MayRequire="sarg.rimbees">RB_Honeys</li>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<comps>
+			<li Class="VVRace.CompProperties_Honey" Inherit="False" MayRequire="gguake.race.vivi"></li>
+		</comps>
+		<tradeTags>
+			<li>Honey</li>
+			<li>GnomeHoney</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>

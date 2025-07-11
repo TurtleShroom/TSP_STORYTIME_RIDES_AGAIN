@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <LifeStageDef>
+    <defName>BeanManBabyStage</defName>
+    <label>larva</label>
+	<reproductive>false</reproductive>
+	<foodMaxFactor>4</foodMaxFactor>
+    <bodySizeFactor>0.2</bodySizeFactor>
+    <healthScaleFactor>0.2</healthScaleFactor>
+    <hungerRateFactor>0.37</hungerRateFactor>
+    <marketValueFactor>0.5</marketValueFactor>
+	<visible>true</visible>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+    <canSleepWhenStarving>false</canSleepWhenStarving>
+	<canVoluntarilySleep>true</canVoluntarilySleep> <!-- Babies fall asleep randomly when they're tired. -->
+	<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Bulborbs just fall asleep randomly and they're cool with it. -->
+	<!-- <workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass> -->
+	<alwaysDowned>false</alwaysDowned>
+	<developmentalStage>Child</developmentalStage>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeChild</workerClass>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeanManSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.81</drawSize>
+    </silhouetteGraphicData>
+    <involuntarySleepMTBDaysFromRest>
+      <points>
+        <li>(.00, 0)</li>
+        <li>(.01, .01)</li>
+        <li>(.15, .166)</li>
+        <li>(.30, 1)</li>
+        <li>(.59, 10)</li>
+        <li>(.60, Infinity)</li>
+      </points>
+    </involuntarySleepMTBDaysFromRest>
+  </LifeStageDef>
+  
+  <LifeStageDef>
+    <defName>BeanManChildStage</defName>
+    <label>nymph</label>
+	<reproductive>false</reproductive>
+	<canSleepWhenStarving>false</canSleepWhenStarving>
+	<foodMaxFactor>4</foodMaxFactor>
+    <bodySizeFactor>0.5</bodySizeFactor>
+    <healthScaleFactor>1</healthScaleFactor>
+    <hungerRateFactor>0.7</hungerRateFactor>
+    <marketValueFactor>0.9</marketValueFactor>
+	<visible>true</visible>
+	<!-- <developmentalStage>Adult</developmentalStage> -->
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+	<claimable>true</claimable>
+	<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Bulborbs just fall asleep randomly and they're cool with it. -->
+	<canVoluntarilySleep>true</canVoluntarilySleep>
+	<alwaysDowned>false</alwaysDowned>
+    <statFactors>
+      <MoveSpeed>0.9</MoveSpeed>
+    </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeanManSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+    <involuntarySleepMTBDaysFromRest>
+      <points>
+        <li>(.00, 0)</li>
+        <li>(.01, .01)</li>
+        <li>(.15, .166)</li>
+        <li>(.30, 1)</li>
+        <li>(.59, 10)</li>
+        <li>(.60, Infinity)</li>
+      </points>
+    </involuntarySleepMTBDaysFromRest>
+  </LifeStageDef>
+  
+  <LifeStageDef>
+    <defName>BeanManTeenStage</defName>
+    <label>child-eye</label>
+	<foodMaxFactor>4</foodMaxFactor>
+	<canSleepWhenStarving>false</canSleepWhenStarving>
+    <healthScaleFactor>2</healthScaleFactor>
+    <hungerRateFactor>1</hungerRateFactor>
+    <visible>true</visible>
+    <reproductive>false</reproductive>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<claimable>true</claimable>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+	<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Bulborbs just fall asleep randomly and they're cool with it. -->
+	<canVoluntarilySleep>true</canVoluntarilySleep>
+    <statFactors>
+      <MoveSpeed>1</MoveSpeed>
+    </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeanManSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+    <involuntarySleepMTBDaysFromRest>
+      <points>
+        <li>(.00, 0)</li>
+        <li>(.01, .01)</li>
+        <li>(.15, .166)</li>
+        <li>(.30, 1)</li>
+        <li>(.59, 10)</li>
+        <li>(.60, Infinity)</li>
+      </points>
+    </involuntarySleepMTBDaysFromRest>
+  </LifeStageDef>
+  
+  <LifeStageDef>
+    <defName>BeanManAdultStage</defName>
+    <hungerRateFactor>1</hungerRateFactor>
+	<healthScaleFactor>2</healthScaleFactor>
+	<foodMaxFactor>4</foodMaxFactor>
+    <label>imago</label>
+    <visible>true</visible>
+    <reproductive>false</reproductive>
+	<canSleepWhenStarving>false</canSleepWhenStarving>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+	<claimable>true</claimable>
+	<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Bulborbs just fall asleep randomly and they're cool with it. -->
+	<canVoluntarilySleep>true</canVoluntarilySleep>
+    <statFactors>
+      <MoveSpeed>1</MoveSpeed>
+    </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeanManSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+  </LifeStageDef>
+  
+  <LifeStageDef>
+    <defName>BeanManMatureAdultStage</defName>
+    <hungerRateFactor>1</hungerRateFactor>
+	<foodMaxFactor>4</foodMaxFactor>
+	<healthScaleFactor>3</healthScaleFactor>
+    <label>imago</label>
+    <visible>false</visible>
+    <reproductive>false</reproductive>
+	<canSleepWhenStarving>false</canSleepWhenStarving>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+	<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Bulborbs just fall asleep randomly and they're cool with it. -->
+	<canVoluntarilySleep>true</canVoluntarilySleep>
+    <statFactors>
+      <MoveSpeed>1</MoveSpeed>
+    </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeanManSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+  </LifeStageDef>
+
+  <LifeStageDef>
+    <defName>TSP_ST_BeanManElderStage</defName>
+    <hungerRateFactor>1</hungerRateFactor>
+	<foodMaxFactor>4</foodMaxFactor>
+	<healthScaleFactor>4</healthScaleFactor>
+    <label>elderly</label>
+    <visible>false</visible>
+    <reproductive>false</reproductive>
+	<canSleepWhenStarving>false</canSleepWhenStarving>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+	<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Bulborbs just fall asleep randomly and they're cool with it. -->
+	<canVoluntarilySleep>true</canVoluntarilySleep>
+    <statFactors>
+      <MoveSpeed>1</MoveSpeed>
+    </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeanManSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+  </LifeStageDef>
+
+  <LifeStageDef>
+    <defName>TSP_ST_BeanManSuperElderStage</defName>
+    <hungerRateFactor>1</hungerRateFactor>
+	<foodMaxFactor>4</foodMaxFactor>
+	<healthScaleFactor>5</healthScaleFactor>
+    <label>ancient</label>
+    <visible>true</visible>
+    <reproductive>false</reproductive>
+	<canSleepWhenStarving>false</canSleepWhenStarving>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+	<canVoluntarilySleep>true</canVoluntarilySleep>
+	<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Bulborbs just fall asleep randomly and they're cool with it. -->
+    <statFactors>
+      <MoveSpeed>1</MoveSpeed>
+    </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeanManSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+  </LifeStageDef>
+
+  <LifeStageDef>
+    <defName>TSP_ST_BeanManMiyamoto</defName>
+    <hungerRateFactor>0.5</hungerRateFactor>
+	<foodMaxFactor>6</foodMaxFactor>
+	<healthScaleFactor>6</healthScaleFactor>
+    <label>Miyamoto</label>
+    <visible>false</visible>
+    <reproductive>false</reproductive>
+	<canSleepWhenStarving>false</canSleepWhenStarving>
+	<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+	<canSleepWhileHeld>true</canSleepWhileHeld>
+	<canVoluntarilySleep>true</canVoluntarilySleep>
+	<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent> <!-- Bulborbs just fall asleep randomly and they're cool with it. -->
+    <statFactors>
+      <MoveSpeed>2</MoveSpeed>
+    </statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/BeanManSilhouette</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
+  </LifeStageDef>
+</Defs>

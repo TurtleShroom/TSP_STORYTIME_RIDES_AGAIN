@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- MASTER BEE DEFINITION, CATEGORIZATION, DATA -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="RB_Bee_Temperate_Queen"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<ThingDef ParentName="RB_BeeBase" Name="TSP_ST_RB_BEE" Abstract="True">
+					<descriptionHyperlinks></descriptionHyperlinks>
+					<statBases>
+						<MarketValue>0.14</MarketValue>
+						<Mass>0.0041</Mass>
+						<DeteriorationRate>3</DeteriorationRate>
+						<Flammability>2</Flammability>
+					</statBases>
+					<stackLimit>300</stackLimit>
+					<tradeability>All</tradeability>
+					<graphicData Inherit="False">
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/ST_Bee_south</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData>
+					<thingCategories Inherit="False">
+						<li>TSP_ST_RB_GneeCategory</li>
+					</thingCategories>
+					<comps Inherit="False">
+						<li Class="CompProperties_Forbiddable"></li>
+						<li Class="RimBees.CompProperties_TempRuinableAndDestroy" Inherit="False">
+							<minSafeTemperature>-17.7778</minSafeTemperature> <!-- Zero degrees Farenheit -->
+							<maxSafeTemperature>36.1111</maxSafeTemperature> <!-- Ninety-seven degrees Farenheit -->
+							<progressPerDegreePerTick>0.000045</progressPerDegreePerTick>
+						</li>
+						<li>
+							<compClass>RimBees.CompDangerBee</compClass>
+						</li>
+					</comps>
+				</ThingDef>
+				
+				<ThingCategoryDef>
+					<defName>TSP_ST_RB_GneeCategory</defName>
+					<label>Storytime Bees</label>
+					<parent>RB_BeesAndQueens</parent>
+					<iconPath>Things/Pawn/Animal/Bug_Types/Bee/ST_Bee_south</iconPath>
+				</ThingCategoryDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<!-- GNOME BEE BRANCH -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="RB_Bee_Temperate_Queen"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<ThingDef ParentName="TSP_ST_RB_BEE" Name="TSP_ST_RB_BEE_Gnee" Abstract="True">
+					<!-- <label>Gnome Bee</label> -->
+					<descriptionHyperlinks>
+						<ResearchProjectDef>ST_GnomeCulture</ResearchProjectDef>
+					</descriptionHyperlinks>
+					<statBases>
+						<MarketValue>0.14</MarketValue>
+						<Mass>0.0041</Mass>
+						<DeteriorationRate>3</DeteriorationRate>
+						<Flammability>2</Flammability>
+					</statBases>
+					<stackLimit>300</stackLimit>
+					<tradeability>All</tradeability>
+					<graphicData Inherit="False">
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/ST_Bee_south</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData>
+					<thingCategories Inherit="False">
+						<li>TSP_ST_RB_GneeCategory</li>
+					</thingCategories>
+					<comps Inherit="False">
+						<li Class="CompProperties_Forbiddable"></li>
+						<li Class="RimBees.CompProperties_TempRuinableAndDestroy" Inherit="False">
+							<minSafeTemperature>-17.7778</minSafeTemperature> <!-- Zero degrees Farenheit -->
+							<maxSafeTemperature>36.1111</maxSafeTemperature> <!-- Ninety-seven degrees Farenheit -->
+							<progressPerDegreePerTick>0.000045</progressPerDegreePerTick>
+						</li>
+						<li>
+							<compClass>RimBees.CompDangerBee</compClass>
+						</li>
+					</comps>
+				</ThingDef>
+				
+				<!-- BASE BEES -->
+				<!-- Basic Gnees: the source of all further Gnome specializations -->
+				<ThingDef ParentName="TSP_ST_RB_BEE_Gnee" Name="TSP_ST_RB_BEE_Gnome_Basic" Abstract="True">
+					<!-- <label>Gnome Bee</label> -->
+					<description>Gnomes are masters of the culinary arts and agricultural science, but what most do not know is that they also have incredible beekeeping prowess. Gnees, short for Gnome Bees, are special bees engineered to serve them and produce all sorts of wonderous goods, as well as a special Gnome Honey, which they consider a delicacy. These Gnees are basic Gnome Bees; their honeycombs will produce nothing but Gnome Honey and Brittle Beeswax. \n\n\n\n\n Bee Traits: \n\n 	Production time: 23.88 hours \n 	Works at Night: No \n 	Works When Raining: Yes \n 	Unusual Sources Needed: No \n 	Minimum Temperature: 0ºF (-17.7778ºC) \n 	Maximum temperature: 97ºF (36.1111ºC)</description>
+					<!--
+					<graphicData Inherit="False">
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/ST_Bee_south</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData>
+					-->
+					<comps>			
+						<li Class="RimBees.CompProperties_Bees" Inherit="False">
+							<species>Gnee</species>
+							<comb>TSP_ST_RB_Gnomb_Basic</comb>
+							<combtimedays>0.955</combtimedays>
+							<nocturnal>false</nocturnal> <!-- Works at night -->
+							<pluviophile>true</pluviophile> <!-- Works in the rain -->
+							<weirdplantneeded>no</weirdplantneeded>
+							<tempMin>-17.7778</tempMin> <!-- Zero degrees Farenheit -->
+							<tempMax>36.1111</tempMax> <!-- Ninety-seven degrees Farenheit -->
+						</li>   
+					</comps>
+				</ThingDef>
+				
+				<ThingDef ParentName="TSP_ST_RB_BEE_Gnome_Basic">
+					<defName>RB_Bee_TSP_ST_Gnee_Basic_Queen</defName>
+					<label>Gnee Gnoble, basic (queen)</label>
+					<descriptionHyperlinks>
+						<!-- <ThingDef>RB_Bee_TSP_ST_Gnee_Basic_Queen</ThingDef> -->
+						<ThingDef>RB_Bee_TSP_ST_Gnee_Basic_Drone</ThingDef>
+						<ThingDef>TSP_ST_RB_Gnomb_Basic</ThingDef>
+						<RecipeDef>TSP_ST_RB_CentrifugeGnee1Comb</RecipeDef>
+						<ThingDef>TSP_ST_RB_WildHive_Gnome</ThingDef>
+						<RecipeDef>TSP_ST_RB_Gneehive_Extract</RecipeDef>
+						<ThingDef MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</ThingDef>
+					</descriptionHyperlinks>
+					<graphicData Inherit="False">
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/ST_Bee_Gnome_Queen</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData> 		
+				</ThingDef>
+				
+				<ThingDef ParentName="TSP_ST_RB_BEE_Gnome_Basic">
+					<defName>RB_Bee_TSP_ST_Gnee_Basic_Drone</defName>
+					<descriptionHyperlinks>
+						<ThingDef>RB_Bee_TSP_ST_Gnee_Basic_Queen</ThingDef>
+						<ThingDef>RB_Bee_TSP_ST_Gnee_Basic_Drone</ThingDef>
+						<ThingDef>TSP_ST_RB_Gnomb_Basic</ThingDef>
+						<RecipeDef>TSP_ST_RB_CentrifugeGnee1Comb</RecipeDef>
+						<ThingDef>TSP_ST_RB_WildHive_Gnome</ThingDef>
+						<RecipeDef>TSP_ST_RB_Gneehive_Extract</RecipeDef>
+						<ThingDef MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</ThingDef>
+					</descriptionHyperlinks>
+					<label>Gnee Gnone, basic (drone)</label>
+					<graphicData Inherit="False">
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/ST_Bee_Gnome_Drone</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData> 		
+				</ThingDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	
+	
+	<!-- OTHER BEES FOR THE STORYTIME MOD, NON-GNOME -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="RB_Bee_Temperate_Queen"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<ThingDef ParentName="TSP_ST_RB_BEE" Name="TSP_ST_RB_BEE_Storytime_Basic" Abstract="True">
+					<!-- <label>Gnome Bee</label> -->
+					<description>Storyteller Bees are anomalous bees that developed a passion for the lore and rich history of the Galactic Rim, particular among civilizations such as Jeubs, Beets, Goblins, and Frogs. Especially frogs. They are focused on specific topics, disparate in nature and connected, their writings say, by one "Module". It is not known who or what created Storyteller Bees, but most entomologists believe that the fact that they are capable of actually writing things down and recording history indicates an Archotech origin. \n \n They are led by their queen, who distracts herself from the duties of reproduction by compiling information on beeswax parchment. In addition to their duties of gathering nectar to make beeswax and honey, Storyteller drones travel their home planet, relaying new information that she can compile into her expansive volumes of lore books. Indeed, no Storyteller Queen is seen without stacks of parchment: how bees have mastered making paper from wax is unknown. \n \n For Storyteller Bees to compile information on a scale usable by men, they must have a stash of beeswax stored near them. Obviously, they produce their own wax, but most of that is dedicated to honeycombs, leaving the queen (in the wild) little left with which to make parchment. By giving them a stack of beeswax nearby, Domesticated Storyteller hives have no such limitation. \n \n When harvested, Storyteller Bees produce White Beeswax White Honey, and a small amount of Adaptive Honey; their information can be exploited to create more advanced, bio-engineered bees. \n\n\n\n\n Bee Traits: \n\n 	Production time: 19.2 hours \n 	Works at Night: No \n 	Works When Raining: No \n 	Unusual Sources Needed: Standard Alpha Bees Mod Beeswax \n 	Minimum Temperature: 0ºF (-17.7778ºC) \n 	Maximum temperature: 97ºF (36.1111ºC)</description>
+					<descriptionHyperlinks>
+						<ThingDef>RB_Beeswax</ThingDef>
+					</descriptionHyperlinks>
+					<!--
+					<graphicData Inherit="False">
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/ST_Bee_south</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData>
+					-->
+					<comps>			
+						<li Class="RimBees.CompProperties_Bees" Inherit="False">
+							<species>Storyteller</species>
+							<comb>TSP_ST_RB_Lore1_Honeycomb</comb>
+							<combtimedays>0.8</combtimedays>
+							<nocturnal>false</nocturnal> <!-- Works at night -->
+							<pluviophile>false</pluviophile> <!-- Works in the rain -->
+							<weirdplantneeded>RB_Beeswax</weirdplantneeded>
+							<tempMin>-17.7778</tempMin> <!-- Zero degrees Farenheit -->
+							<tempMax>36.1111</tempMax> <!-- Ninety-seven degrees Farenheit -->
+						</li>   
+					</comps>
+				</ThingDef>
+				
+				<!-- WHEN UPDATED TO V1.5, STORYTELLER BEES WILL BE CREATED BY COMBINING BEES AND BOOKS!! -->
+				
+				<ThingDef ParentName="TSP_ST_RB_BEE_Storytime_Basic">
+					<defName>RB_Bee_TSP_ST_StorytellerBase_Queen</defName>
+					<label>Storyteller queen</label>
+					<descriptionHyperlinks>
+						<!-- <ThingDef>RB_Bee_TSP_ST_StorytellerBase_Queen</ThingDef> -->
+						<ThingDef>RB_Bee_TSP_ST_StorytellerBase_Drone</ThingDef>
+						<ThingDef>TSP_ST_RB_Lore1_Honeycomb</ThingDef>
+						<RecipeDef>TSP_ST_RB_CentrifugeLore1Comb</RecipeDef>
+						<ThingDef MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</ThingDef>
+					</descriptionHyperlinks>
+					<graphicData Inherit="False">
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/ST_Bee_Storytime_Base_Queen</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData> 		
+				</ThingDef>
+				
+				<ThingDef ParentName="TSP_ST_RB_BEE_Storytime_Basic">
+					<defName>RB_Bee_TSP_ST_StorytellerBase_Drone</defName>
+					<descriptionHyperlinks>
+						<ThingDef>RB_Bee_TSP_ST_StorytellerBase_Queen</ThingDef>
+						<!-- <ThingDef>RB_Bee_TSP_ST_StorytellerBase_Drone</ThingDef> -->
+						<ThingDef>TSP_ST_RB_Lore1_Honeycomb</ThingDef>
+						<RecipeDef>TSP_ST_RB_CentrifugeLore1Comb</RecipeDef>
+						<ThingDef MayRequire="tsp.zal.patchhoney2">TSP_LaymanHoneyMachine</ThingDef>
+					</descriptionHyperlinks>
+					<label>Storyteller drone</label>
+					<graphicData Inherit="False">
+						<texPath>Things/Pawn/Animal/Bug_Types/Bee/ST_Bee_Storytime_Base_Drone</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData> 		
+				</ThingDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
