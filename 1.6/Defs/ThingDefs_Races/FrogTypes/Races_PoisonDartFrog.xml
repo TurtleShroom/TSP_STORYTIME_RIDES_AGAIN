@@ -34,6 +34,7 @@
 		  <ComfyTemperatureMin>-60</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>60</ComfyTemperatureMax>
 		  <ToxicResistance>1</ToxicResistance> <!-- Resistant to itself -->
+		  <Wildness>0.8</Wildness>
 		  <ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">0.2</ToxicEnvironmentResistance> <!-- Rainforest creatures are very sensitive to pollution! -->
 		  <Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">0.1</Mashed_Ashlands_AshResistance>
 		</statBases>
@@ -45,7 +46,7 @@
 				<eggLayIntervalDays>8</eggLayIntervalDays>
 				<eggCountRange>1~3</eggCountRange>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<resourceDef>ST_PoisonExtract</resourceDef>
 				<gatheringIntervalDays>2</gatheringIntervalDays>
 				<resourceAmount>15</resourceAmount>
@@ -59,7 +60,7 @@
 			  <li>ST_PoisonDart</li>
 			</capacities>
 			<power>4</power>
-			<cooldownTime>0.7</cooldownTime>
+			<cooldownTime>0.5</cooldownTime>
 			<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
 			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			<chanceFactor>1</chanceFactor>
@@ -70,7 +71,7 @@
 			  <li>ST_PoisonDart</li>
 			</capacities>
 			<power>4</power>
-			<cooldownTime>0.7</cooldownTime>
+			<cooldownTime>0.5</cooldownTime>
 			<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
 			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			<chanceFactor>1</chanceFactor>
@@ -80,8 +81,8 @@
 			<capacities>
 			  <li>ST_PoisonDart</li>
 			</capacities>
-			<power>6</power>
-			<cooldownTime>0.9</cooldownTime>
+			<power>14</power>
+			<cooldownTime>0.7</cooldownTime>
 			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			<chanceFactor>1</chanceFactor>
@@ -317,7 +318,6 @@
       <baseHungerRate>0.3</baseHungerRate>
       <foodType>OmnivoreRoughAnimal, VegetarianRoughAnimal, CarnivoreAnimal, Kibble</foodType>
       <leatherDef>Leather_Frog</leatherDef>
-      <Wildness>0.8</Wildness>
       <trainability>Intermediate</trainability>
       <manhunterOnTameFailChance>0.33</manhunterOnTameFailChance>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
@@ -356,7 +356,7 @@
 		<li>StorytimeAnimal</li>
     </tradeTags>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>

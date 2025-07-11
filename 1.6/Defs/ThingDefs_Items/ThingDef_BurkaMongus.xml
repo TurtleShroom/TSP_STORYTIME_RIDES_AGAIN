@@ -5,14 +5,14 @@
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_D4egonBurkaMongus</defName>
 		<label>burqamongus</label>
-		<description>A large garment that conceals the wearer's entire head and body while keeping some resistance to cold, heat and damage.</description>
+		<description>A large garment that conceals the wearer's entire head and body while keeping absurd resistance to cold and heat. However, it proves virtually no protection from damage and doubles as a space suit!</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Pawn/Humanlike/Apparel/BurkaMongus/BurkaMongus</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>Cutout</shaderType>
 		</graphicData>
-		<costStuffCount>100</costStuffCount>
+		<costStuffCount>1000</costStuffCount>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -20,24 +20,26 @@
 			<li>Metallic</li>
 		</stuffCategories>
 		<costList>
-			<ComponentSpacer>1</ComponentSpacer>
+			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
 		<thingCategories>
 			<li>Apparel</li>
+			<li>ApparelArmor</li>
 		</thingCategories>
 		<statBases>
 			<MaxHitPoints>1000</MaxHitPoints>
-			<WorkToMake>16000</WorkToMake>
+			<WorkToMake>60000</WorkToMake> <!-- Full day -->
 			<MarketValue>300</MarketValue>
 			<Mass>1</Mass>
-			<StuffEffectMultiplierArmor>1</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 			<Insulation_Cold>150</Insulation_Cold>
 			<Insulation_Heat>150</Insulation_Heat>
 			<EquipDelay>6</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-		<ToxicResistance>-0.5</ToxicResistance>
-		<MoveSpeed>0.2</MoveSpeed>
+			<ToxicResistance>1</ToxicResistance>
+			<MoveSpeed>0.52</MoveSpeed>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">2</VacuumResistance>
 		</equippedStatOffsets>
 		<apparel>
 			<bodyPartGroups>
@@ -48,6 +50,8 @@
 				<li>Torso</li>
 				<li>Legs</li>
 				<li>Arms</li>
+				<li>Feet</li>
+				<li>Hands</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/BurkaMongus/BurkaMongus</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -64,14 +68,31 @@
 			<tags>
 				<!-- <li>Spacer</li> -->
 				<li>EVA</li>
+				<li>SpacerMilitary</li>
 			</tags>
 			<defaultOutfitTags>
-				<li>Worker</li>
 				<li>Soldier</li>
 				<li>Slave</li>
+				<li MayRequire="ludeon.rimworld.odyssey">Spacefarer</li>
 			</defaultOutfitTags>
 			<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
 		</apparel>
+		<recipeMaker>
+			<!-- <researchPrerequisite MayRequire="ludeon.rimworld.odyssey">OrbitalTech</researchPrerequisite> -->
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<displayPriority>235</displayPriority>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<immuneToToxGasExposure>true</immuneToToxGasExposure>
+			<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+			<canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+				<li>TableMachining</li>
+			</recipeUsers>
+		</recipeMaker>
 		<colorGenerator Class="ColorGenerator_StandardApparel"></colorGenerator>
 		<comps></comps>
 	</ThingDef>

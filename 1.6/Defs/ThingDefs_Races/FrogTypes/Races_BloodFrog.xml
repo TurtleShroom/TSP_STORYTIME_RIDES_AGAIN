@@ -45,6 +45,7 @@
       <ComfyTemperatureMax>37</ComfyTemperatureMax>
 	  <MeatAmount>30</MeatAmount>
 	  <LeatherAmount>5</LeatherAmount>
+	  <Wildness>0</Wildness>
     </statBases>
 	<comps>
 		<li Class="CompProperties_EggLayer">
@@ -60,7 +61,7 @@
 			<tomatoAmount MayRequire="ludeon.rimworld.biotech">1</tomatoAmount>
 		</li>
 		<!-- These frogs are so fragile that the player should be allowed to intervene at any time to move them. -->
-		<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+		<li Class="VEF.AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<makeNonFleeingToo>true</makeNonFleeingToo>
 		</li>
     </comps>
@@ -315,7 +316,6 @@
 	  <!-- <specificMeatDef MayRequire="ludeon.rimworld.biotech">HemogenPack</specificMeatDef> -->
 	  <!-- <specificMeatDef MayRequire="baskerville.hellsingarmsultimate">HSAU_BloodPouch</specificMeatDef> -->
       <leatherDef>Leather_Frog</leatherDef>
-      <Wildness>0.1</Wildness>
       <trainability>Intermediate</trainability>
       <lifeExpectancy>8</lifeExpectancy>
 	  <roamMtbDays>3</roamMtbDays>
@@ -368,7 +368,7 @@
 		<li MayRequire="baskerville.hellsingarmsultimate" Inherit="False">HSAU_Operation_ExtractBlood</li>
 	</recipes>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRarity</li>

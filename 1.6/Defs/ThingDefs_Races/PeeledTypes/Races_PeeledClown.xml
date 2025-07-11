@@ -11,16 +11,32 @@
       <ComfyTemperatureMax>110</ComfyTemperatureMax>
 	  <MeatAmount>90</MeatAmount>
 	  <LeatherAmount>90</LeatherAmount>
+	  <Wildness>1</Wildness>
 	  <TerrorSource MayRequire="Ludeon.RimWorld.Ideology">1</TerrorSource>
+	  <VacuumResistance MayRequire="ludeon.rimworld.odyssey">1</VacuumResistance>
+	  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
+	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_SanctusSensitivity>
+	  <HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_SoulRendSensitivity> <!-- Peeled Ones have no souls -->
     </statBases>
     <race>
-      <needsRest>false</needsRest>
-      <hasGenders>false</hasGenders>
-      <foodType>None</foodType>
-      <lifeExpectancy>15</lifeExpectancy>
-	  <hediffGiverSets>
-        <li>OrganicStandard</li>
-      </hediffGiverSets>
+		<alwaysAwake>true</alwaysAwake>
+		<needsRest>false</needsRest>
+		<hasGenders>false</hasGenders>
+		<foodType>None</foodType>
+		<hasCorpse>true</hasCorpse>
+		<lifeExpectancy>15</lifeExpectancy>
+		<hediffGiverSets>
+			<li>OrganicStandard</li>
+		</hediffGiverSets>
+		<nameGenerator MayRequire="Ludeon.RimWorld.Biotech">NamerMech</nameGenerator>
+		<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+		<soundCallIntervalFriendlyFactor>0</soundCallIntervalFriendlyFactor>
+		<wildBiomes MayRequire="kentington.saveourship2" Inherit="False">
+			<Space MayRequire="ludeon.rimworld.odyssey">0.001</Space>
+			<Space MayRequire="ludeon.rimworld.odyssey">0.0051</Space>
+			<Scarlands MayRequire="ludeon.rimworld.odyssey">0.257</Scarlands> <!-- Nuclear weapons fallout zone -->
+			<OuterSpaceBiome MayRequire="kentington.saveourship2">0.0021</OuterSpaceBiome>
+		</wildBiomes>
     </race>
 	<tradeTags>
 		<li>AnimalInsect</li>
@@ -151,4 +167,57 @@
     </weaponTags>
   </PawnKindDef>
   
+  <PawnKindDef ParentName="BasePeeledKind">
+    <defName>TSP_PeeledClown_WithGun</defName>
+    <label>Peeled Clown</label>
+    <race>PeeledClown</race>
+    <combatPower>50</combatPower>
+	<ecoSystemWeight>0</ecoSystemWeight>
+	<maxGenerationAge>7</maxGenerationAge>
+    <lifeStages Inherit="False">
+      <li>
+        <label>Peeled Clown</label>
+        <labelPlural>Peeled Clowns</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/PeeledClown/PeeledClown/PeeledClown</texPath>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Items/DemonPotatoes</texPath>
+          <drawSize>2.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+	<weaponMoney>1000~3000</weaponMoney>
+	<weaponTags>
+      <li>PeeledRanged</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="BasePeeledKind">
+    <defName>TSP_PeeledClown_WithMelee</defName>
+    <label>Peeled Clown</label>
+    <race>PeeledClown</race>
+    <combatPower>30</combatPower>
+	<ecoSystemWeight>0</ecoSystemWeight>
+	<maxGenerationAge>7</maxGenerationAge>
+    <lifeStages Inherit="False">
+      <li>
+        <label>Peeled Clown</label>
+        <labelPlural>Peeled Clowns</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Other/PeeledClown/PeeledClown/PeeledClown</texPath>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Items/DemonPotatoes</texPath>
+          <drawSize>2.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+	<weaponMoney>1000~3000</weaponMoney>
+	<weaponTags>
+      <li>PeeledMelee</li>
+    </weaponTags>
+  </PawnKindDef>
 </Defs>

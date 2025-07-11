@@ -35,6 +35,7 @@
 			<Flammability>1</Flammability>
 			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<Wildness>0</Wildness>
 		</statBases>
 		<uiIconPath>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</uiIconPath>
 		<uiIconScale>1.25</uiIconScale>
@@ -321,7 +322,6 @@
 			<gestationPeriodDays>80</gestationPeriodDays>
 			<nameOnTameChance>1</nameOnTameChance>
 			<trainability>Intermediate</trainability>
-			<Wildness>0.4</Wildness>
 			<nuzzleMtbHours>19</nuzzleMtbHours>
 			<manhunterOnDamageChance>1</manhunterOnDamageChance>
 			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
@@ -364,6 +364,7 @@
 		<tradeTags>
 			<li>AnimalExotic</li>
 			<li>StorytimeAnimalRare</li>
+			<li>AnimalFarm</li>
 			<li>AnimalFrog</li>
 		</tradeTags>
 		<thingCategories Inherit="False">
@@ -379,10 +380,10 @@
 				<tomatoIntervalDays>1</tomatoIntervalDays>
 				<tomatoAmount>5</tomatoAmount>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<hediffname>Hediff_CoconutFrog</hediffname>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<needsDiggableTerrain>true</needsDiggableTerrain>
 				<gizmoImage>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</gizmoImage>
 				<gizmoLabel>ST_WoodFrog_CommandLabel</gizmoLabel>
@@ -391,7 +392,7 @@
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>

@@ -14,6 +14,7 @@
 			<MarketValue>100</MarketValue>
 			<FilthRate>2</FilthRate>
 			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">0.85</Mashed_Ashlands_AshResistance>
+			<Wildness>0.06</Wildness>
 		</statBases>
 		<comps>
 		  <li Class="CompProperties_Milkable">
@@ -64,7 +65,6 @@
 		  <baseHealthScale>1.25</baseHealthScale>
 		  <foodType>VegetarianRoughAnimal, Kibble</foodType>
 		  <leatherDef>Leather_Borpa</leatherDef>
-		  <Wildness>0.06</Wildness>
 		  <trainability>Intermediate</trainability>
 		  <meatLabel>borpa salami</meatLabel>
 		  <useMeatFrom>ST_BullFrog</useMeatFrom>
@@ -347,7 +347,7 @@
 		  <li>Borpa</li>
 		</tradeTags>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>
@@ -494,6 +494,7 @@
 		<MarketValue>1000</MarketValue>
 		<FilthRate>5</FilthRate>
 		<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
+		<Wildness>0.8</Wildness>
     </statBases>
     <tools>
 	<li>
@@ -579,7 +580,6 @@
       <baseHealthScale>3</baseHealthScale>
       <foodType>CarnivoreAnimalStrict, Corpse, Meat, Fluid, Liquor, Kibble</foodType>
       <leatherDef>Leather_AcridBorpa</leatherDef>
-      <Wildness>0.8</Wildness>
       <trainability>Advanced</trainability>
       <useMeatFrom>ST_BullFrog</useMeatFrom>
       <gestationPeriodDays>25</gestationPeriodDays>
@@ -850,7 +850,7 @@
 	  <li>AnimalFighter</li>
     </tradeTags>
 	<comps>
-		<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+		<li Class="VEF.AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<resourceDef>ST_NightFrog_Venom</resourceDef>
 			<gatheringIntervalDays>3</gatheringIntervalDays>
 			<resourceAmount>5</resourceAmount>
@@ -858,7 +858,7 @@
 		</li>
 	</comps>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>
@@ -946,322 +946,322 @@
   	<!-- ======================= Snorpa =============================== -->
 
 	<ThingDef ParentName="AnimalThingBase">
-    <defName>BORPA_Snorpa</defName>
-    <label>snorpa</label>
-    <description>These large snail-like creatures love to roam the forests of the rim. Their shells and hide are extremely durable. While they are friendly to human contact and generally docile, they use their powerful jaws to defend themselves from aggression.</description>
-    <statBases>
-      <MoveSpeed>2.0</MoveSpeed>
-      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
-	  <ComfyTemperatureMax>65</ComfyTemperatureMax>
-      <MarketValue>1000</MarketValue>
-	   <FilthRate>6</FilthRate>
-		<ArmorRating_Sharp>.9</ArmorRating_Sharp>
-		<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
-		<ArmorRating_Heat>0.25</ArmorRating_Heat>
-		<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
-    </statBases>
-    <comps></comps>
-    <tools>
-      <li>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>25</power>
-        <cooldownTime>3</cooldownTime>
-        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <label>foot</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>15</power>
-        <cooldownTime>4</cooldownTime>
-        <linkedBodyPartsGroup>BORPA_FootAttackTool</linkedBodyPartsGroup>
-		<chanceFactor>0.5</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>BORPA_SnorpaBodyDef</body>
-      <predator>false</predator>
-	  <herdAnimal>true</herdAnimal>
-      <baseBodySize>3.5</baseBodySize>
-      <baseHungerRate>1.00</baseHungerRate>
-      <baseHealthScale>2.5</baseHealthScale>
-      <foodType>VegetarianRoughAnimal, DendrovoreAnimal, Kibble</foodType>
-      <leatherDef>Leather_SnorpaHide</leatherDef>
-      <Wildness>0.85</Wildness>
-      <trainability>Intermediate</trainability>
-      <meatLabel>snoracargot</meatLabel>
-	  <specificMeatDef MayRequire="biomesteam.biomescore">BMT_GastropodMeat</specificMeatDef>
-      <gestationPeriodDays>24</gestationPeriodDays>
-      <lifeExpectancy>150</lifeExpectancy>
-      <manhunterOnDamageChance>0.95</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
-      <lifeStageAges>
-        <li>
-          <def>AnimalBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>AnimalJuvenile</def>
-          <minAge>0.15</minAge>
-        </li>
-        <li>
-          <def>AnimalAdult</def>
-          <minAge>0.3</minAge>
-          <soundWounded>Pawn_Snorpa_Pain</soundWounded>
-          <soundDeath>Pawn_Snorpa_Death</soundDeath>
-          <soundCall>Pawn_Snorpa_Call</soundCall>
-          <soundAngry>Pawn_Snorpa_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
-		<wildBiomes Inherit="False">
-				<BorealForest>0.08</BorealForest>
-				<TemperateForest>0.08</TemperateForest>
-				<TropicalRainforest>0.08</TropicalRainforest>
-				<TropicalSwamp>0.2</TropicalSwamp>
-				<AridShrubland>0.05</AridShrubland>
-				<Desert>0.01</Desert>
-				<ExtremeDesert>0.01</ExtremeDesert>
-				
-				<!-- RimWorld.Core -->
-				<!-- VANILLA RENDITION -->
+		<defName>BORPA_Snorpa</defName>
+		<label>snorpa</label>
+		<description>These large snail-like creatures love to roam the forests of the rim. Their shells and hide are extremely durable. While they are friendly to human contact and generally docile, they use their powerful jaws to defend themselves from aggression.</description>
+		<statBases>
+			<MoveSpeed>2.0</MoveSpeed>
+			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+			<ComfyTemperatureMax>65</ComfyTemperatureMax>
+			<MarketValue>1000</MarketValue>
+			<FilthRate>6</FilthRate>
+			<ArmorRating_Sharp>.9</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+			<Wildness>0.1</Wildness>
+			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
+		</statBases>
+		<comps></comps>
+		<tools>
+		  <li>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>25</power>
+			<cooldownTime>3</cooldownTime>
+			<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+		  </li>
+		  <li>
+			<label>foot</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>15</power>
+			<cooldownTime>4</cooldownTime>
+			<linkedBodyPartsGroup>BORPA_FootAttackTool</linkedBodyPartsGroup>
+			<chanceFactor>0.5</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <body>BORPA_SnorpaBodyDef</body>
+		  <predator>false</predator>
+		  <herdAnimal>true</herdAnimal>
+		  <baseBodySize>3.5</baseBodySize>
+		  <baseHungerRate>1.00</baseHungerRate>
+		  <baseHealthScale>2.5</baseHealthScale>
+		  <foodType>VegetarianRoughAnimal, DendrovoreAnimal, Kibble</foodType>
+		  <leatherDef>Leather_SnorpaHide</leatherDef>
+		  <trainability>Intermediate</trainability>
+		  <meatLabel>snoracargot</meatLabel>
+		  <specificMeatDef MayRequire="biomesteam.biomescore">BMT_GastropodMeat</specificMeatDef>
+		  <gestationPeriodDays>24</gestationPeriodDays>
+		  <lifeExpectancy>150</lifeExpectancy>
+		  <manhunterOnDamageChance>0.95</manhunterOnDamageChance>
+		  <manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>AnimalJuvenile</def>
+			  <minAge>0.15</minAge>
+			</li>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0.3</minAge>
+			  <soundWounded>Pawn_Snorpa_Pain</soundWounded>
+			  <soundDeath>Pawn_Snorpa_Death</soundDeath>
+			  <soundCall>Pawn_Snorpa_Call</soundCall>
+			  <soundAngry>Pawn_Snorpa_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<wildBiomes Inherit="False">
+					<BorealForest>0.08</BorealForest>
+					<TemperateForest>0.08</TemperateForest>
+					<TropicalRainforest>0.08</TropicalRainforest>
+					<TropicalSwamp>0.2</TropicalSwamp>
+					<AridShrubland>0.05</AridShrubland>
+					<Desert>0.01</Desert>
+					<ExtremeDesert>0.01</ExtremeDesert>
+					
+					<!-- RimWorld.Core -->
+					<!-- VANILLA RENDITION -->
 
-				<Tundra>0</Tundra>
+					<Tundra>0</Tundra>
 
-				<ColdBog>0</ColdBog>
+					<ColdBog>0</ColdBog>
 
-				<IceSheet>0</IceSheet>
+					<IceSheet>0</IceSheet>
 
-				<SeaIce>0</SeaIce>
+					<SeaIce>0</SeaIce>
 
-				<TemperateSwamp>0.2</TemperateSwamp>
+					<TemperateSwamp>0.2</TemperateSwamp>
 
 
 
 
-				<!-- ___________________ -->			
-				<!-- Mod Biomes -->
-				<!-- ___________________ -->
+					<!-- ___________________ -->			
+					<!-- Mod Biomes -->
+					<!-- ___________________ -->
 
-				<!-- sarg.alphabiomes -->
-				<!-- ALPHA BIOMES -->
+					<!-- sarg.alphabiomes -->
+					<!-- ALPHA BIOMES -->
 
-				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.18</AB_FeraliskInfestedJungle>
+					<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.18</AB_FeraliskInfestedJungle>
 
-				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.035</AB_GallatrossGraveyard>
+					<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.035</AB_GallatrossGraveyard>
 
-				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.25</AB_GelatinousSuperorganism>
+					<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.25</AB_GelatinousSuperorganism>
 
-				<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">0.001</AB_MechanoidIntrusion>
+					<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">0.001</AB_MechanoidIntrusion>
 
-				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.2</AB_MycoticJungle>
+					<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.2</AB_MycoticJungle>
 
-				<AB_OcularForest MayRequire="sarg.alphabiomes">0.33</AB_OcularForest>
+					<AB_OcularForest MayRequire="sarg.alphabiomes">0.33</AB_OcularForest>
 
-				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0</AB_PropaneLakes>
+					<AB_PropaneLakes MayRequire="sarg.alphabiomes">0</AB_PropaneLakes>
 
-				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.33</AB_PyroclasticConflagration>
+					<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0.33</AB_PyroclasticConflagration>
 
-				<AB_RockyCrags MayRequire="sarg.alphabiomes">0.1</AB_RockyCrags>
+					<AB_RockyCrags MayRequire="sarg.alphabiomes">0.1</AB_RockyCrags>
 
-				<AB_TarPits MayRequire="sarg.alphabiomes">0.04</AB_TarPits>
+					<AB_TarPits MayRequire="sarg.alphabiomes">0.04</AB_TarPits>
 
-				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.33</AB_MiasmicMangrove>
+					<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.33</AB_MiasmicMangrove>
 
-				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.5</AB_IdyllicMeadows>
+					<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.5</AB_IdyllicMeadows>
 
 
 
-				<!-- ___________________ -->
+					<!-- ___________________ -->
 
-				<!-- BiomesTeam.Oasis -->
-				<!-- CHROMATIC OASIS -->
+					<!-- BiomesTeam.Oasis -->
+					<!-- CHROMATIC OASIS -->
 
-				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0</BMT_ChromaticOasis>
+					<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0</BMT_ChromaticOasis>
 
 
 
-				<!-- ___________________ -->
+					<!-- ___________________ -->
 
-				<!-- Mlie.AdvancedBiomes -->
-				<!-- ADVANCED BIOMES -->
+					<!-- Mlie.AdvancedBiomes -->
+					<!-- ADVANCED BIOMES -->
 
-				<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.01</PoisonForest>
+					<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.01</PoisonForest>
 
-				<Savanna MayRequire="Mlie.AdvancedBiomes">0.08</Savanna>
+					<Savanna MayRequire="Mlie.AdvancedBiomes">0.08</Savanna>
 
-				<Volcano MayRequire="Mlie.AdvancedBiomes">0.08</Volcano>
+					<Volcano MayRequire="Mlie.AdvancedBiomes">0.08</Volcano>
 
-				<Wasteland MayRequire="Mlie.AdvancedBiomes">0.04</Wasteland>
+					<Wasteland MayRequire="Mlie.AdvancedBiomes">0.04</Wasteland>
 
-				<Wetland MayRequire="Mlie.AdvancedBiomes">0.11</Wetland>
+					<Wetland MayRequire="Mlie.AdvancedBiomes">0.11</Wetland>
 
 
-				<!-- ___________________ -->
+					<!-- ___________________ -->
 
-				<!-- zylle.MoreVanillaBiomes -->
-				<!-- More Vanilla Biomes -->
+					<!-- zylle.MoreVanillaBiomes -->
+					<!-- More Vanilla Biomes -->
 
-				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.04</ZBiome_AlpineMeadow>
+					<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.04</ZBiome_AlpineMeadow>
 
-				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.04</ZBiome_CloudForest>
+					<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.04</ZBiome_CloudForest>
 
-				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_CoastalDunes>
+					<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_CoastalDunes>
 
-				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.08</ZBiome_DesertOasis>
+					<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.08</ZBiome_DesertOasis>
 
-				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.08</ZBiome_Grasslands>
+					<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.08</ZBiome_Grasslands>
 
-				<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.08</ZBiome_Iceberg_NoBeach>
+					<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.08</ZBiome_Iceberg_NoBeach>
 
-				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.11</ZBiome_Marsh>
+					<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.11</ZBiome_Marsh>
 
-				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.04</ZBiome_Sandbar_NoBeach>
-				
-				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_GlacialShield>
-				
-				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.33</ZBiome_Badlands>
+					<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.04</ZBiome_Sandbar_NoBeach>
+					
+					<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_GlacialShield>
+					
+					<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.33</ZBiome_Badlands>
 
 
-				<!-- ___________________ -->
+					<!-- ___________________ -->
 
-				<!-- Mlie.NaturesPrettySweet -->
-				<!-- NATURE IS PRETTY SWEET -->
+					<!-- Mlie.NaturesPrettySweet -->
+					<!-- NATURE IS PRETTY SWEET -->
 
-				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.07</TKKN_VolcanicFlow>
+					<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.07</TKKN_VolcanicFlow>
 
-				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.12</TKKN_RedwoodForest>
+					<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.12</TKKN_RedwoodForest>
 
-				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">00.8</TKKN_Grasslands> <!-- PRAIRIE -->
+					<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">00.8</TKKN_Grasslands> <!-- PRAIRIE -->
 
-				<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.08</TKKN_Savanna>
+					<TKKN_Savanna MayRequire="Mlie.NaturesPrettySweet">0.08</TKKN_Savanna>
 
-				<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">0</TKKN_Desert> <!-- SALT FIELDS -->
+					<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">0</TKKN_Desert> <!-- SALT FIELDS -->
 
-				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.08</TKKN_Oasis>			
+					<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.08</TKKN_Oasis>			
 
 
-				<!-- ___________________ -->
+					<!-- ___________________ -->
 
-				<!-- Heis.Edo.Themed.Expansion -->
-				<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
+					<!-- Heis.Edo.Themed.Expansion -->
+					<!-- HISTORICALLY ACCURATE WEEABOO MOD -->
 
-				<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.14</HSBambooForest>
+					<HSBambooForest MayRequire="Heis.Edo.Themed.Expansion">0.14</HSBambooForest>
 
 
-				<!-- _________________ -->
+					<!-- _________________ -->
 
-				<!-- BiomesTeam.BiomesIslands -->
-				<!-- BIOMES ISLANDS -->
+					<!-- BiomesTeam.BiomesIslands -->
+					<!-- BIOMES ISLANDS -->
 
-				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.1</BiomesIslands_Atoll>
+					<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.1</BiomesIslands_Atoll>
 
-				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_BorealIsland>
+					<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.04</BiomesIslands_BorealIsland>
 
-				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_DesertIsland>
+					<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_DesertIsland>
 
-				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_DesertArchipelago>
+					<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_DesertArchipelago>
 
-				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TemperateIsland>
+					<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.05</BiomesIslands_TemperateIsland>
 
-				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TemperateArchipelago>
+					<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.07</BiomesIslands_TemperateArchipelago>
 
-				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.18</BiomesIslands_TropicalIsland>
+					<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.18</BiomesIslands_TropicalIsland>
 
-				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.18</BiomesIslands_TropicalArchipelago>
+					<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.18</BiomesIslands_TropicalArchipelago>
 
-				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_TundraIsland>
-				
-				
-				
-				<!-- _________________ -->
+					<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_TundraIsland>
+					
+					
+					
+					<!-- _________________ -->
 
-				<!-- BiomesTeam.BiomesCaverns -->
-				<!-- BIOMES CAVERNS -->
-				
-				<BMT_CrystalCaverns MayRequire="BiomesTeam.BiomesCaverns">0.33</BMT_CrystalCaverns>
-				
-				<BMT_EarthenDepths MayRequire="BiomesTeam.BiomesCaverns">0.001</BMT_EarthenDepths>
-				
-				<BMT_FungalForest MayRequire="BiomesTeam.BiomesCaverns">0.5</BMT_FungalForest>
-				
+					<!-- BiomesTeam.BiomesCaverns -->
+					<!-- BIOMES CAVERNS -->
+					
+					<BMT_CrystalCaverns MayRequire="BiomesTeam.BiomesCaverns">0.33</BMT_CrystalCaverns>
+					
+					<BMT_EarthenDepths MayRequire="BiomesTeam.BiomesCaverns">0.001</BMT_EarthenDepths>
+					
+					<BMT_FungalForest MayRequire="BiomesTeam.BiomesCaverns">0.5</BMT_FungalForest>
+					
 
 
-				<!-- ___________________ -->
+					<!-- ___________________ -->
 
-				<!-- reel.FrozenForest -->
-				<!-- WINTER TAIGA -->
+					<!-- reel.FrozenForest -->
+					<!-- WINTER TAIGA -->
 
-				<WinterTaiga MayRequire="reel.FrozenForest">0.087</WinterTaiga>
+					<WinterTaiga MayRequire="reel.FrozenForest">0.087</WinterTaiga>
 
 
-				<!-- __________________ -->
+					<!-- __________________ -->
 
-				<!-- SirMashedPotato.MorrowRim -->
-				<!-- "MORROWIND" MOD -->
+					<!-- SirMashedPotato.MorrowRim -->
+					<!-- "MORROWIND" MOD -->
 
-				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.15</MorrowRim_Ashlands>
+					<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.15</MorrowRim_Ashlands>
 
-				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.04</MorrowRim_BlightedAshlands>
+					<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.04</MorrowRim_BlightedAshlands>
 
-				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.15</MorrowRim_AshSwamp>
+					<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.15</MorrowRim_AshSwamp>
 
-				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0.08</MorrowRim_VolcanicAshlands>
+					<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0.08</MorrowRim_VolcanicAshlands>
 
 
-				<!-- ___________________ -->
+					<!-- ___________________ -->
 
-				<!-- pphhyy.gulden -->
-				<!-- FOREST OF GOLD -->
+					<!-- pphhyy.gulden -->
+					<!-- FOREST OF GOLD -->
 
-				<TemperateGuldenForest MayRequire="pphhyy.gulden">0.08</TemperateGuldenForest>
+					<TemperateGuldenForest MayRequire="pphhyy.gulden">0.08</TemperateGuldenForest>
 
-				<LotRE_MallornForest MayRequire="lordoftherims.elves">0.08</LotRE_MallornForest>
+					<LotRE_MallornForest MayRequire="lordoftherims.elves">0.08</LotRE_MallornForest>
 
 
-				<!-- ___________________ -->
+					<!-- ___________________ -->
 
-				<!-- deemainiac.securecontainrimworld -->
-				<!-- SCP FOUNDATION -->
+					<!-- deemainiac.securecontainrimworld -->
+					<!-- SCP FOUNDATION -->
 
-				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0.001</SCR_SCP610Biome>
+					<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0.001</SCR_SCP610Biome>
 
 
-				<!-- _________________ -->
+					<!-- _________________ -->
 
-				<!-- regrowth.botr.volcanicicesheet -->
-				<!-- VOLCANIC ICE SHEET -->
+					<!-- regrowth.botr.volcanicicesheet -->
+					<!-- VOLCANIC ICE SHEET -->
 
-				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.01</RG-VIS_VulcanicIceSheet>
-				
-				
-				<!-- _________________ -->
-				
-				<!-- ironscruff.primordialgeysers -->
-				<!-- PRIMORDIAL GEYSERS -->
-				
+					<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.01</RG-VIS_VulcanicIceSheet>
+					
+					
+					<!-- _________________ -->
+					
+					<!-- ironscruff.primordialgeysers -->
+					<!-- PRIMORDIAL GEYSERS -->
+					
 
-				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.2</IronScruff_PrimordialGeysers>
+					<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.2</IronScruff_PrimordialGeysers>
 
 
-				<!-- _________________ -->
-				
-				<!-- mlie.rfpermafrost -->
-				<!-- PERMAFROST ZONE -->
+					<!-- _________________ -->
+					
+					<!-- mlie.rfpermafrost -->
+					<!-- PERMAFROST ZONE -->
 
-				<Permafrost MayRequire="mlie.rfpermafrost">0.01</Permafrost>
-		</wildBiomes>
-    </race>
-    <tradeTags>
-      <li>AnimalUncommon</li>
-	  <li>StorytimeAnimal</li>
-	  <li>Borpa</li>
-    </tradeTags>
+					<Permafrost MayRequire="mlie.rfpermafrost">0.01</Permafrost>
+			</wildBiomes>
+		</race>
+		<tradeTags>
+		  <li>AnimalUncommon</li>
+		  <li>StorytimeAnimal</li>
+		  <li>Borpa</li>
+		</tradeTags>
   </ThingDef>
 
 	<PawnKindDef ParentName="AnimalKindBase">
@@ -1336,6 +1336,7 @@
 		<CaravanRidingSpeedFactor>4</CaravanRidingSpeedFactor>
 		<MeatAmount>5</MeatAmount>
 		<LeatherAmount>100</LeatherAmount>
+		<Wildness>0.75</Wildness>
 		<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
     </statBases>
     <comps>
@@ -1351,8 +1352,8 @@
 		<ripIntervalDays>1</ripIntervalDays>
 		<legAmount>4</legAmount>
 	  </li>
-	  <li Class="AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li> <!-- NOTHING SLOWS THIS SUCKER DOWN! HE IS SPEED! -->
-		<li Class="AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+	  <li Class="VEF.AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li> <!-- NOTHING SLOWS THIS SUCKER DOWN! HE IS SPEED! -->
+		<li Class="VEF.AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<gender MayRequire="oskarpotocki.vanillafactionsexpanded.core">Male</gender>
 		</li>
     </comps>
@@ -1676,7 +1677,7 @@
 		<BORPA_KachorpaSteel>20</BORPA_KachorpaSteel>
 	</butcherProducts>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>
@@ -1791,6 +1792,7 @@
 			<MeatAmount>666</MeatAmount>
 			<LeatherAmount>666</LeatherAmount>
 			<Mass>666</Mass>
+			<Wildness>1</Wildness>
 			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
 			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">-1</HSAU_GhoulismSusceptibility>
 			<HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">2</HSAU_SanctusSensitivity>
@@ -1823,11 +1825,11 @@
 		  <baseBodySize>2</baseBodySize>
 		  <baseHungerRate>0</baseHungerRate>
 		  <baseHealthScale>50</baseHealthScale>
-		  <Wildness>1</Wildness>
 		  <intelligence>ToolUser</intelligence>
 		  <lifeExpectancy>10000</lifeExpectancy>
 		  <specificMeatDef>TSP_ST_Borpa_JohnBorpaSteak</specificMeatDef>
 		  <leatherDef>Gold</leatherDef>
+		  <forceGender>Male</forceGender>
 		  <lifeStageAges>
 			<li>
 			  <def>AnimalAdult</def>
@@ -1843,16 +1845,18 @@
 		  <soundMeleeMiss>Pawn_Borpa_Call</soundMeleeMiss>
 		</race>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
-			<li Class="AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
+			<!--
+			<li Class="VEF.AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<gender MayRequire="oskarpotocki.vanillafactionsexpanded.core">Male</gender>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_ChangeWeather" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			-->
+			<li Class="VEF.AnimalBehaviours.CompProperties_ChangeWeather" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<weatherDef>Rain</weatherDef>
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>

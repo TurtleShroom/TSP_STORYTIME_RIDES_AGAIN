@@ -17,6 +17,7 @@
 	  <LeatherAmount>0</LeatherAmount>
 	  <MeatAmount>100</MeatAmount>
 	  <PainShockThreshold>1</PainShockThreshold>
+	  <VacuumResistance MayRequire="ludeon.rimworld.odyssey">1</VacuumResistance>
 	  <BoneAmount MayRequire="sihv.rombones" Inherit="False">206</BoneAmount> <!-- Human skeletons always yield the same bones as their skeleton contains -->
 	  <HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
 	  <HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_SanctusSensitivity>
@@ -51,14 +52,14 @@
     </race>
 	<!-- <receivesSignals>true</receivesSignals> -->
 	<comps>
-		<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+		<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 			<hediffname>HedSTUndead</hediffname>
 			<hediffseverity>1</hediffseverity>
 		</li>
-		<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+		<li Class="VEF.AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<makeNonFleeingToo>true</makeNonFleeingToo>
 		</li>
-		<li MayRequire="oskarpotocki.vanillafactionsexpanded.core" Class="AnimalBehaviours.CompProperties_DiseaseEventImmunity"></li>
+		<li MayRequire="oskarpotocki.vanillafactionsexpanded.core" Class="VEF.AnimalBehaviours.CompProperties_DiseaseEventImmunity"></li>
 		<li Class="CompProperties_ProducesBioferrite" MayRequire="ludeon.rimworld.anomaly">
 			<bioferriteDensity>2</bioferriteDensity>
 		</li>
@@ -118,6 +119,7 @@
 			<LeatherAmount>0</LeatherAmount>
 			<MeatAmount>100</MeatAmount>
 			<PainShockThreshold>1</PainShockThreshold>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">1</VacuumResistance>
 			<BoneAmount MayRequire="sihv.rombones" Inherit="False">206</BoneAmount> <!-- Human skeletons always yield the same bones as their skeleton contains -->
 			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate">0.1</HSAU_GhoulismSusceptibility>
 			<HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_SanctusSensitivity>
@@ -151,11 +153,11 @@
 		</race>
 		<!-- <receivesSignals>true</receivesSignals> -->
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<hediffname>HedSTUndead</hediffname>
 				<hediffseverity>1</hediffseverity>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
 			</li>
 			<li Class="CompProperties_ProducesBioferrite" MayRequire="ludeon.rimworld.anomaly">

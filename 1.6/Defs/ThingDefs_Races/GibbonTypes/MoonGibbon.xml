@@ -11,15 +11,17 @@
 			<ComfyTemperatureMin>-300</ComfyTemperatureMin>
 			<ComfyTemperatureMax>200</ComfyTemperatureMax>
 			<ToxicResistance>1</ToxicResistance>
+			<Wildness>0</Wildness>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">1</VacuumResistance>
 			<ToxicEnvironmentResistance  MayRequire="Ludeon.Rimworld.Biotech">1</ToxicEnvironmentResistance> <!-- Literally wears a spacesuit -->
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_ThoughtEffecter" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_ThoughtEffecter" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<radius>8</radius>
 				<tickInterval>500</tickInterval>
 				<thoughtDef>MoonGibbonThought</thoughtDef>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
 			</li>
 		</comps>
@@ -56,8 +58,11 @@
 		</tools>
 		<race>
 			<wildBiomes MayRequire="kentington.saveourship2" Inherit="False">
+				<Space MayRequire="ludeon.rimworld.odyssey">0.001</Space>
+				<Space MayRequire="ludeon.rimworld.odyssey">0.0051</Space>
 				<OuterSpaceBiome MayRequire="kentington.saveourship2">0.001</OuterSpaceBiome>
 			</wildBiomes>
+			<!-- <canFlyInVacuum MayRequire="ludeon.rimworld.odyssey">true</canFlyInVacuum> -->
 		  <body>ST_Ape</body>
 		  <baseBodySize>0.55</baseBodySize>
 		  <baseHealthScale>1</baseHealthScale>
@@ -65,9 +70,8 @@
 		  <foodType>OmnivoreRoughAnimal, Meat, Processed, Kibble</foodType>
 		  <useMeatFrom>Monkey</useMeatFrom>
 		  <leatherDef>Leather_Gibbon</leatherDef>
-		  <Wildness>0.1</Wildness>
 		  <trainability>Advanced</trainability>
-		  <petness>0.85</petness>
+		  <petness>1</petness>
 		  <lifeExpectancy>30</lifeExpectancy>
 		  <lifeStageAges>
 			<li>

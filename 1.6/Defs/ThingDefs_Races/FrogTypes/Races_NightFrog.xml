@@ -32,7 +32,8 @@
       <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
 	  <!-- <ArmorRating_Lick>1</ArmorRating_Lick> -->
 	  <ToxicResistance>1</ToxicResistance> <!-- Resistant to itself -->
-      <ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+	  <Wildness>0.8</Wildness>
+      <ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">0.1</ToxicEnvironmentResistance>
     </statBases>
 	<comps>
 		<li Class="CompProperties_EggLayer">
@@ -42,7 +43,7 @@
 			<eggLayIntervalDays>15</eggLayIntervalDays>
 			<eggCountRange>1</eggCountRange>
 		</li>
-		<li Class="AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+		<li Class="VEF.AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<resourceDef>ST_NightFrog_Venom</resourceDef>
 			<gatheringIntervalDays>4</gatheringIntervalDays>
 			<resourceAmount>25</resourceAmount>
@@ -348,7 +349,6 @@
       <baseHungerRate>1</baseHungerRate>
       <foodType>CarnivoreAnimal, CarnivoreAnimalStrict, Corpse, Kibble</foodType>
       <leatherDef>Leather_NightFrog</leatherDef>
-      <Wildness>0.8</Wildness>
       <trainability>Advanced</trainability>
       <useMeatFrom>ST_BullFrog</useMeatFrom>
       <petness>0.1</petness>
@@ -380,7 +380,7 @@
       <li>AnimalExotic</li>
     </tradeTags>
 	<modExtensions>
-		<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+		<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<li>ST_FrogRole</li>
 				<li>ST_FrogRoleSecondary</li>

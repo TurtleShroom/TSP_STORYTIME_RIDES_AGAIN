@@ -10,12 +10,14 @@
 		  <MarketValue>100</MarketValue>
 		  <ComfyTemperatureMin>-60</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>60</ComfyTemperatureMax>
+		  <Wildness>0</Wildness>
 		</statBases>
 		<comps>
 		  <li Class="CompProperties_Milkable">
 			<milkDef>ST_Pepsi</milkDef>
 			<milkIntervalDays>1</milkIntervalDays>
 			<milkAmount>4</milkAmount>
+			<milkFemaleOnly>false</milkFemaleOnly>
 		  </li>
 		  <li Class="CompProperties_EggLayer">
 			<eggUnfertilizedDef>PepsiFrogEggUnfertilized</eggUnfertilizedDef>
@@ -298,9 +300,8 @@
 		  <baseBodySize>0.15</baseBodySize>
 		  <baseHealthScale>0.20</baseHealthScale>
 		  <baseHungerRate>0.25</baseHungerRate>
-		  <foodType>OmnivoreRoughAnimal</foodType>
+		  <foodType>OmnivoreRoughAnimal, Liquor, Fluid, Kibble</foodType>
 		  <leatherDef>Leather_Frog</leatherDef>
-		  <Wildness>0.1</Wildness>
 		  <trainability>Intermediate</trainability>
 		  <useMeatFrom>ST_BullFrog</useMeatFrom>
 		  <petness>0.78</petness>
@@ -339,7 +340,7 @@
 			<TSP_Pepsi MayRequire="tsp.misterravenface.colapepsi">12</TSP_Pepsi>
 		</butcherProducts>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRarity</li>

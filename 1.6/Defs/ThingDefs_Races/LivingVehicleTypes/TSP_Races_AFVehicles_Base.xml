@@ -3,6 +3,7 @@
 <Defs>
 	<ThingDef Name="TSP_VFEAAF_CarMaster" ParentName="AnimalThingBase" Abstract="True">
 		<statBases>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.9</VacuumResistance>
 			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
 		</statBases>
 		<race>
@@ -56,6 +57,9 @@
 			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+			<wildBiomes>
+				<Scarlands MayRequire="ludeon.rimworld.odyssey">0.7</Scarlands> <!-- Nuclear weapons fallout zone -->
+			</wildBiomes>
 		</race>
 		<comps>
 			<li Class="CompProperties_Milkable">

@@ -10,6 +10,7 @@
       <MarketValue>100</MarketValue>
       <ComfyTemperatureMin>-9</ComfyTemperatureMin> <!-- Realistic frog temperatures -->
       <ComfyTemperatureMax>39</ComfyTemperatureMax>
+	  <Wildness>0</Wildness>
     </statBases>
 	<comps>
 	  <li Class="CompProperties_EggLayer">
@@ -249,10 +250,9 @@
       <baseBodySize>0.08</baseBodySize>
       <baseHealthScale>0.5</baseHealthScale>
       <baseHungerRate>0.1</baseHungerRate>
-      <foodType>OmnivoreRoughAnimal</foodType>
+      <foodType>OmnivoreRoughAnimal, Kibble</foodType>
       <leatherDef>Leather_Frog</leatherDef>
 	  <useMeatFrom>ST_BullFrog</useMeatFrom>
-      <Wildness>0</Wildness>
 	  <mateMtbHours>720</mateMtbHours> <!-- Semi-annually -->
       <nuzzleMtbHours>2</nuzzleMtbHours>
       <trainability>Intermediate</trainability>
@@ -292,7 +292,7 @@
 		<li>StorytimeAnimal</li>
     </tradeTags>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>

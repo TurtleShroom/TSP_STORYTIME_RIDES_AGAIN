@@ -67,6 +67,7 @@
       <MarketValue>100</MarketValue>
       <ComfyTemperatureMin>-60</ComfyTemperatureMin>
       <ComfyTemperatureMax>60</ComfyTemperatureMax>
+	  <Wildness>0.5</Wildness>
     </statBases>
 	<comps>
 	  <li Class="CompProperties_EggLayer">
@@ -340,13 +341,15 @@
       <foodType>OmnivoreRoughAnimal</foodType>
       <leatherDef>Leather_Frog</leatherDef>
 	  <useMeatFrom>ST_BullFrog</useMeatFrom>
-      <Wildness>0.5</Wildness>
       <nuzzleMtbHours>6</nuzzleMtbHours>
       <trainability>Intermediate</trainability>
       <petness>0.4</petness>
       <lifeExpectancy>4</lifeExpectancy>
 		<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
 		<manhunterOnDamageChance>1</manhunterOnDamageChance> <!-- RL Budgett's Frogs are extremely aggressive -->
+		<specialTrainables MayRequire="ludeon.rimworld.odyssey">
+			<li MayRequire="ludeon.rimworld.odyssey">WarTrumpet</li> <!-- REEEEE!!! -->
+		</specialTrainables>
 		<lifeStageAges>
 			<li>
 				<def>AnimalBaby</def>
@@ -361,7 +364,7 @@
 			<li>
 				<def>AnimalAdult</def>
 				<minAge>0.25</minAge>
-				<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+				<soundWounded>Frog_Angry</soundWounded>
 				<soundDeath>Pawn_Iguana_Death</soundDeath>
 				<soundCall>Pawn_Iguana_Call</soundCall>
 				<soundAngry>Frog_Angry</soundAngry>
@@ -378,7 +381,7 @@
 		<li>StorytimeAnimal</li>
     </tradeTags>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRarity</li>

@@ -12,6 +12,7 @@
 			<ComfyTemperatureMax>51</ComfyTemperatureMax>
 			<MeatAmount>7</MeatAmount>
 			<LeatherAmount>0</LeatherAmount>
+			<Wildness>0.15</Wildness>
 		</statBases>
 		<comps>
 			<li Class="StoryTime.CompProperties_Wood">
@@ -35,14 +36,14 @@
 				<eggCountRange>1~2</eggCountRange>
 				<eggLayFemaleOnly>false</eggLayFemaleOnly>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<needsDiggableTerrain>true</needsDiggableTerrain>
 				<gizmoImage>Things/Plant/TreeOak/TreeOakA</gizmoImage>
 				<gizmoLabel>ST_WoodFrog_CommandLabel</gizmoLabel>
 				<gizmoDesc>ST_WoodFrog_CommandDesc</gizmoDesc>
 				<defToChangeTo>Plant_TreeOak</defToChangeTo>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_LightSustenance" MayRequire="sarg.alphaanimals,oskarpotocki.vanillafactionsexpanded.core"></li>
+			<li Class="VEF.AnimalBehaviours.CompProperties_LightSustenance" MayRequire="sarg.alphaanimals,oskarpotocki.vanillafactionsexpanded.core"></li>
 		</comps>
 		<tools>
 		  <li>
@@ -322,7 +323,6 @@
 		  <foodType>OmnivoreRoughAnimal</foodType>
 		  <specificMeatDef>WoodLog</specificMeatDef>
 		  <leatherDef>WoodLog</leatherDef>
-		  <Wildness>0.8</Wildness>
 		  <trainability>Intermediate</trainability>
 		  <petness>0.1</petness>
 		  <lifeExpectancy>120</lifeExpectancy>
@@ -350,6 +350,7 @@
 		  <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
 		</race>
 		<tradeTags>
+			<li>AnimalFarm</li>
 			<li>AnimalFrog</li>
 			<li>AnimalExotic</li>
 		</tradeTags>
@@ -357,7 +358,7 @@
 			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
 			</li>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRarity</li>

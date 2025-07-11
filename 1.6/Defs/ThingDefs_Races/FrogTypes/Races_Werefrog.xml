@@ -15,7 +15,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>Werefrog</defName>
 		<label>Werefrog</label>
-		<description>Half man, half frog, all evil. Whatever soul this creature once had has gone to the afterlife, leaving an abomination that is ravenous, mindless, and pitiless. Watch out for its bite.</description>	
+		<description>Half man, half frog, all evil. Whatever soul this creature once had has gone to the afterlife, leaving an undead abomination that is ravenous, mindless, and pitiless. Watch out for its bite.</description>	
 		<descriptionHyperlinks>
 			<thingDef>WerefrogBlood</thingDef>
 		</descriptionHyperlinks>
@@ -25,6 +25,7 @@
 			<MarketValue>450</MarketValue>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<Wildness>1</Wildness>
 			<HSAU_GhoulismSusceptibility MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.5</HSAU_GhoulismSusceptibility>
 			<HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.4</HSAU_SanctusSensitivity> <!-- Same as the Mod's werewolves -->
 			<HSAU_SoulRendSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0</HSAU_SoulRendSensitivity> <!-- Werefrogs have no souls, the soul of their former form is long gone -->
@@ -72,15 +73,19 @@
 			</li>
 		</tools>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_Regeneration" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Regeneration" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<rateInTicks>60</rateInTicks>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_DoesntFlee" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
+			<li Class="VEF.AnimalBehaviours.CompProperties_DoesntFlee" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<hediffname>HedSTUndead</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li>
 		</comps>
 		<race>
 			<body>FrogPersonBody</body>
 			<baseBodySize>1.25</baseBodySize>
-			<baseHealthScale>2</baseHealthScale>
+			<baseHealthScale>3</baseHealthScale>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
 			<needsRest>false</needsRest>
 			<leatherDef>Leather_Frog</leatherDef>
@@ -91,7 +96,6 @@
 			<baseHungerRate>1.25</baseHungerRate>
 			<predator>true</predator>
 			<maxPreyBodySize>10</maxPreyBodySize>
-			<Wildness>1</Wildness>
 			<intelligence Inherit="False">ToolUser</intelligence>
 			<lifeStageAges>
 				<li>
@@ -118,7 +122,7 @@
 			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
 			</li>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRarity</li>
@@ -139,7 +143,7 @@
 		<defName>Werefrog</defName>
 		<label>Werefrog</label>
 		<race>Werefrog</race>
-		<combatPower>100</combatPower>
+		<combatPower>80</combatPower>
 		<canArriveManhunter>true</canArriveManhunter>
 		<ecoSystemWeight>0</ecoSystemWeight>
 		<defaultFactionType>Werefrogs</defaultFactionType>
@@ -170,7 +174,7 @@
 		<defName>ManFrog</defName>
 		<label>man-frog</label>
 		<race>Werefrog</race>
-		<combatPower>160</combatPower>
+		<combatPower>110</combatPower>
 		<canArriveManhunter>true</canArriveManhunter>
 		<ecoSystemWeight>0</ecoSystemWeight>
 		<defaultFactionType>Werefrogs</defaultFactionType>

@@ -14,15 +14,16 @@
 			<MoveSpeed>9.0</MoveSpeed>
 			<MarketValue>650</MarketValue>
 			<ComfyTemperatureMin>-60</ComfyTemperatureMin>
+			<Wildness>0.8</Wildness>
 			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_CauseIncident" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_CauseIncident" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<checkingInterval>100000</checkingInterval>
 				<requiresTamed>false</requiresTamed>
 				<incidentToCause>Jeub_Swarm</incidentToCause>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
 			</li>
 		</comps>
@@ -279,10 +280,12 @@
 		  <gestationPeriodDays>1</gestationPeriodDays>
 		  <nameOnTameChance>1</nameOnTameChance>
 		  <trainability>Advanced</trainability>
-		  <Wildness>0.8</Wildness>
 		  <nuzzleMtbHours>12</nuzzleMtbHours>
 		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+		<specialTrainables MayRequire="ludeon.rimworld.odyssey">
+			<li MayRequire="ludeon.rimworld.odyssey">WarTrumpet</li> <!-- IT LITERALLY BLOWS A TRUMPET! -->
+		</specialTrainables>
 		  <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>

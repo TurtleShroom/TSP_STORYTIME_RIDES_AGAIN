@@ -10,6 +10,7 @@
       <MarketValue>300</MarketValue>
       <ComfyTemperatureMin>-20</ComfyTemperatureMin>
       <FilthRate>10</FilthRate>
+	  <Wildness>0</Wildness>
 	  <Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">0.3</Mashed_Ashlands_AshResistance>
     </statBases>
     <comps>
@@ -18,10 +19,12 @@
 			<milkIntervalDays>1</milkIntervalDays>
 			<milkAmount>10</milkAmount>
 		</li>
-		<li Class="AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+		<!--
+		<li Class="VEF.AnimalBehaviours.CompProperties_FixedGender" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<gender>Female</gender>
 		</li>
-		<li Class="AnimalBehaviours.CompProperties_AsexualReproduction" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+		-->
+		<li Class="VEF.AnimalBehaviours.CompProperties_AsexualReproduction" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<reproductionIntervalDays>9</reproductionIntervalDays>
 			<customString>Budding in: </customString>
 		</li>
@@ -75,11 +78,11 @@
       <baseHungerRate>0.4</baseHungerRate>
       <foodType>VegetarianRoughAnimal</foodType>
       <leatherDef>Leather_Frog</leatherDef>
-      <Wildness>0</Wildness>
       <roamMtbDays>2</roamMtbDays>
       <trainability>None</trainability>
       <useMeatFrom>Cow</useMeatFrom>
       <lifeExpectancy>15</lifeExpectancy>
+	  <forceGender>Female</forceGender>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -313,7 +316,7 @@
 		<li>AnimalFrog</li>
 	</tradeTags>
 	<modExtensions>
-		<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+		<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<li>ST_FrogRole</li>
 				<li>ST_FrogRarity</li>

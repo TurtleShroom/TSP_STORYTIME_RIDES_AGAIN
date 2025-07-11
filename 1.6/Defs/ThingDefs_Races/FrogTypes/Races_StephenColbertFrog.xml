@@ -11,12 +11,13 @@
 			<ComfyTemperatureMin>-200</ComfyTemperatureMin> <!-- Realistic frog temperatures -->
 			<ComfyTemperatureMax>200</ComfyTemperatureMax>
 			<MeatAmount>200</MeatAmount>
+			<Wildness>0</Wildness>
 		</statBases>
 		<comps>
 			<li Class="CompProperties_EggLayer">
 				<eggUnfertilizedDef>TSP_ST_ALBARRY_StephenColbert_Frog_Egg_Unfertilized</eggUnfertilizedDef>
 				<eggFertilizedDef>TSP_ST_ALBARRY_StephenColbert_Frog_Egg_Fertilized</eggFertilizedDef>
-				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggFertilizationCountMax>2</eggFertilizationCountMax>
 				<eggLayIntervalDays>6</eggLayIntervalDays>
 				<eggCountRange>1</eggCountRange>
 			</li>
@@ -50,7 +51,6 @@
 			<foodType>VegetableOrFruit, VegetarianRoughAnimal, Seed, Plant, Kibble</foodType>
 			<useMeatFrom>ST_BullFrog</useMeatFrom>
 			<useLeatherFrom>ST_BullFrog</useLeatherFrom>
-			<Wildness>0</Wildness>
 			<trainability>None</trainability>
 			<petness>0.5</petness>
 			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
@@ -93,7 +93,7 @@
 			<li>StorytimeAnimal</li>
 		</tradeTags>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>

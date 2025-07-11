@@ -23,7 +23,8 @@
 						<!-- <ArmorRating_Lick>1</ArmorRating_Lick> -->
 						<ToxicResistance>2</ToxicResistance> <!-- Resistant to itself -->
 						<ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">2</ToxicEnvironmentResistance>
-						<Radiation>0</Radiation>
+						<Radiation MayRequire="dubwise.rimatomics">0</Radiation>
+						<Wildness>0.8</Wildness>
 					</statBases>
 					<comps Inherit="False">
 						<li Class="CompProperties_EggLayer">
@@ -33,7 +34,7 @@
 							<eggLayIntervalDays>15</eggLayIntervalDays>
 							<eggCountRange>1~10</eggCountRange>
 						</li>
-						<li Class="CompProperties_Milkable">
+						<li Class="CompProperties_Milkable" MayRequire="dubwise.rimatomics">
 							<milkDef>UraniumPellets</milkDef>
 							<milkIntervalDays>2</milkIntervalDays>
 							<milkAmount>10</milkAmount>
@@ -91,7 +92,10 @@
 
 								<ExtremeDesert>0.01</ExtremeDesert>
 
-
+								
+								<!-- Ludeon.RimWorld.Odyssey -->
+								<!-- VANILLA RENDITION: ODYSSEY EXPANSION PACK -->
+								<Scarlands MayRequire="ludeon.rimworld.odyssey">1</Scarlands> <!-- Nuclear weapons fallout zone -->
 
 
 
@@ -192,7 +196,6 @@
 							<baseHungerRate>0.77</baseHungerRate>
 							<foodType>CarnivoreAnimal, CarnivoreAnimalStrict, Corpse, AnimalProduct, Processed, Meal, OmnivoreRoughAnimal, Kibble</foodType>
 							<leatherDef>Leather_NightFrog</leatherDef>
-							<Wildness>0.8</Wildness>
 							<trainability>Advanced</trainability>
 							<useMeatFrom>ST_BullFrog</useMeatFrom>
 							<petness>0.1</petness>
@@ -224,7 +227,7 @@
 						<li>AnimalExotic</li>
 					</tradeTags>
 					<modExtensions>
-						<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+						<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 							<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 								<li>ST_FrogRole</li>
 								<li>ST_FrogRoleSecondary</li>
@@ -316,7 +319,7 @@
 								<hediffDef>ToxicBuildup</hediffDef>
 								<severity>0.3</severity>
 							</li>
-							<li Class="IngestionOutcomeDoer_GiveHediff">
+							<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="dubwise.rimatomics">
 								<hediffDef>RimatomicsRadiation</hediffDef>
 								<severity>0.03</severity>
 							</li>

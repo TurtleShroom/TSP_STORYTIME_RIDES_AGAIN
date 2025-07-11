@@ -15,6 +15,7 @@
 			<MarketValue>250</MarketValue>
 			<ComfyTemperatureMin>-75</ComfyTemperatureMin>
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
+			<Wildness>0.3</Wildness>
 			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
 		</statBases>
 		<tools>
@@ -269,7 +270,6 @@
 			  <gestationPeriodDays>2</gestationPeriodDays>
 			  <nameOnTameChance>1</nameOnTameChance>
 			  <trainability>Advanced</trainability>
-			  <Wildness>0.3</Wildness>
 			  <packAnimal>true</packAnimal>
 			  <nuzzleMtbHours>12</nuzzleMtbHours>
 			  <manhunterOnDamageChance>1</manhunterOnDamageChance>
@@ -277,10 +277,10 @@
 			  <litterSizeCurve Inherit="False">
 				<points>
 				  <li>(0.5, 0)</li>
-				  <li>(1, 4)</li>
+				  <li>(1, 0.5)</li>
 				  <li>(2, 2.7)</li>
 				  <li>(3, 2.7)</li>
-				  <li>(4, 0.15)</li>
+				  <li>(4, 1)</li>
 				</points>
 			  </litterSizeCurve>
 			  <lifeExpectancy>60</lifeExpectancy>
@@ -324,7 +324,7 @@
 			  <li>AnimalJeub</li>
 			</tradeTags>
 			<comps>
-				<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<li Class="VEF.AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<makeNonFleeingToo>true</makeNonFleeingToo>
 				</li>
 			</comps>

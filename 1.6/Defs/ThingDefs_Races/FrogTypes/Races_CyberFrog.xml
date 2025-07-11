@@ -18,6 +18,8 @@
 		  <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
 		  <PsychicSensitivity Inherit="False">4</PsychicSensitivity>
 		  <ToxicResistance>0.9</ToxicResistance>
+		  <!-- <Wildness>0</Wildness> -->
+		  <VacuumResistance MayRequire="ludeon.rimworld.odyssey">1</VacuumResistance>
 		  <ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">0.9</ToxicEnvironmentResistance>
 		  <BandwidthCost MayRequire="Ludeon.Rimworld.Biotech">0</BandwidthCost>
 		  <ControlTakingTime MayRequire="Ludeon.Rimworld.Biotech">34</ControlTakingTime>
@@ -38,7 +40,7 @@
 			</li>
 			-->
 			<!--
-			<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
 			</li>
 			-->
@@ -110,6 +112,7 @@
 				<li MayRequire="orion.hospitality">Diplomat</li>
 				<li MayRequire="sera.apinialienrace">ApiniHoneyMaker</li>
 				<li MayRequire="dubwise.rimefeller">RimefellerCrafting</li>
+				<li MayRequire="ludeon.rimworld.biotech,tsp.zal.patchhoney2">TSP_DoctorBees_Work</li>
 			</mechEnabledWorkTypes>
 			<mechWorkTypePriorities>
 				<BasicWorker>3</BasicWorker>
@@ -147,10 +150,7 @@
 		  <leatherDef>Leather_Frog</leatherDef>
 		  <mechWeightClass MayRequire="Ludeon.Rimworld.Biotech">Light</mechWeightClass>
 		  <trainability>None</trainability> <!-- It's already trained! -->
-		  <!--
-			<Wildness>0</Wildness>
-			<petness>1</petness>
-		   -->
+		  <!-- <petness>1</petness> -->
 		  <lifeExpectancy>200</lifeExpectancy>
 		  <hasGenders>true</hasGenders>
 		  <lifeStageAges>
@@ -189,7 +189,7 @@
 			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
 			</li>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRoleSecondary</li>					
@@ -286,6 +286,8 @@
       <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
       <PsychicSensitivity>0</PsychicSensitivity>
 	  <ToxicResistance>0.9</ToxicResistance>
+	  <Wildness>0.2</Wildness>
+	  <VacuumResistance MayRequire="ludeon.rimworld.odyssey">1</VacuumResistance>
 	  <ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">0.9</ToxicEnvironmentResistance>
 	  <Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">0.9</Mashed_Ashlands_AshResistance>
     </statBases>
@@ -298,7 +300,7 @@
 			<eggCountRange>1</eggCountRange>
 			<eggLayFemaleOnly>true</eggLayFemaleOnly>
 		</li>
-		<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+		<li Class="VEF.AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<makeNonFleeingToo>true</makeNonFleeingToo>
 		</li>
 		<!--
@@ -586,7 +588,6 @@
       <foodType Inherit="False">OmnivoreRoughAnimal, VegetarianRoughAnimal, Kibble</foodType>
 	  <useMeatFrom>ST_BullFrog</useMeatFrom>
       <leatherDef>Leather_Frog</leatherDef>
-      <Wildness>0.1</Wildness>
       <trainability>Advanced</trainability>
       <petness>1</petness>
       <lifeExpectancy>999</lifeExpectancy>
@@ -629,7 +630,7 @@
 		<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 			<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
 		</li>
-		<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+		<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<li>ST_FrogRole</li>
 				<li>ST_FrogRoleSecondary</li>					

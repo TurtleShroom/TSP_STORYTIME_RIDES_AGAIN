@@ -8,6 +8,7 @@
 			<ToxicResistance>1</ToxicResistance>
 			<ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">1</ToxicEnvironmentResistance>
 			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">1</VacuumResistance>
 		</statBases>
 		<race>
 			<giveNonToolUserBeatFireVerb>true</giveNonToolUserBeatFireVerb>
@@ -17,6 +18,8 @@
 			<nameGenerator>NamerAnimalGenericMale</nameGenerator>
 			<nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
 			<trainability>Advanced</trainability>
+			<canOpenFactionlessDoors>true</canOpenFactionlessDoors>
+			<isImmuneToInfections>true</isImmuneToInfections>
 			<hediffGiverSets>
 				<li>ST_IchorBeing</li>
 			</hediffGiverSets>
@@ -46,29 +49,32 @@
 		<label>Flying Frog</label>
 		<description>No one can truly describe a Transcendant World, in which a fully realized Archotech Intelligence has completely incorporated a planet or solar system into itself. Upon their ascensions, these worlds fall silent, but there is one notable exception. The Archotech governing the Transcendant World of Poobah continues to send out cargo ships on one-way journeys. These ships have been recorded for centuries and already seeded much of the galaxy even before they were discovered. Contact with these ships is impossible, and any attempts to impede their travel result in hostility. \n \n The ship's contents are always the same. Inside the Archotech ship is a frog forged by means indecipherable by man. Dubbed the Flying Frog, it flies around on its little cloud for reasons unknown. Flying frogs can be convinced to join your colony and will from time to time clone itself using Archotech technology. It will occasionally use its Archotech powers to heal allies that stand near it.</description>
 		<statBases>
-		  <MoveSpeed>5.5</MoveSpeed>
-		  <MarketValue>200</MarketValue>
-		  <ComfyTemperatureMin>-600</ComfyTemperatureMin>
-		  <ComfyTemperatureMax>600</ComfyTemperatureMax>
-		  <FilthRate>0</FilthRate>
+			<MoveSpeed>5.5</MoveSpeed>
+			<MarketValue>200</MarketValue>
+			<ComfyTemperatureMin>-600</ComfyTemperatureMin>
+			<ComfyTemperatureMax>600</ComfyTemperatureMax>
+			<FilthRate>0</FilthRate>
+			<Wildness>0</Wildness>
+			<MaxFlightTime MayRequire="ludeon.rimworld.odyssey">600</MaxFlightTime>
+			<FlightCooldown MayRequire="ludeon.rimworld.odyssey">1</FlightCooldown>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_NoFilth" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
-			<li Class="AnimalBehaviours.CompProperties_Regeneration" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_NoFilth" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
+			<li Class="VEF.AnimalBehaviours.CompProperties_Regeneration" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<rateInTicks>100</rateInTicks>
 			</li>	
-			<li Class="AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_AsexualReproduction" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_AsexualReproduction" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<reproductionIntervalDays>30</reproductionIntervalDays>
 				<customString>Cloning in:</customString>
 			</li>			
-			<li Class="AnimalBehaviours.CompProperties_PassiveRegenerator" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_PassiveRegenerator" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<radius>5</radius>
 				<needsToBeTamed>true</needsToBeTamed>
 				<tickInterval>600</tickInterval>	
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="vanillaracesexpanded.archon">
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="vanillaracesexpanded.archon">
 				<hediffname MayRequire="vanillaracesexpanded.archon">VRE_Transcendent</hediffname>
 				<hediffseverity MayRequire="vanillaracesexpanded.archon">1</hediffseverity>
 			</li>
@@ -123,13 +129,16 @@
 		  <baseHungerRate>0</baseHungerRate>
 		  <foodType>Kibble</foodType> <!-- You have to give it food in order to tame it, for some reason -->
 		  <leatherDef>Leather_Frog</leatherDef>
-		  <Wildness>0</Wildness>
 		  <trainability>Advanced</trainability>
 		  <useMeatFrom>ST_BullFrog</useMeatFrom>
 		  <petness>0.5</petness>
 		  <lifeExpectancy>13000</lifeExpectancy>
 		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+			<flightStartChanceOnJobStart MayRequire="ludeon.rimworld.odyssey">0.75</flightStartChanceOnJobStart>
+			<canFlyIntoMap MayRequire="ludeon.rimworld.odyssey">false</canFlyIntoMap>
+			<canLeaveMapFlying MayRequire="ludeon.rimworld.odyssey">false</canLeaveMapFlying>
+			<canFlyInVacuum MayRequire="ludeon.rimworld.odyssey">true</canFlyInVacuum>
 		  <lifeStageAges>
 			<li>
 			  <def>AnimalAdult</def>
@@ -150,7 +159,7 @@
 		  <li>StorytimeAnimalRare</li>
 		</tradeTags>
 		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<li>ST_FrogRole</li>
 					<li>ST_FrogRarity</li>

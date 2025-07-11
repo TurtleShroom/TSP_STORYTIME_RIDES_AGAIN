@@ -11,6 +11,7 @@
 		  <ComfyTemperatureMin>-60</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>60</ComfyTemperatureMax>
 		  <MeleeDodgeChance>40</MeleeDodgeChance>
+		  <Wildness>0.5</Wildness>
 		</statBases>
 		<comps>
 		  <li Class="CompProperties_EggLayer">
@@ -20,12 +21,12 @@
 			<eggLayIntervalDays>5</eggLayIntervalDays>
 			<eggCountRange>1</eggCountRange>
 		  </li>
-			<li Class="AnimalBehaviours.CompProperties_ThoughtEffecter" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_ThoughtEffecter" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<radius>15</radius>
 				<tickInterval>2500</tickInterval>
 				<thoughtDef>ST_GainerThought</thoughtDef>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<hediffname>ST_GainerFrog</hediffname>
 			</li>
 		</comps>
@@ -302,9 +303,8 @@
 		  <baseBodySize>0.12</baseBodySize>
 		  <baseHealthScale>0.15</baseHealthScale>
 		  <baseHungerRate>0.12</baseHungerRate>
-		  <foodType>OmnivoreRoughAnimal</foodType>
+		  <foodType>OmnivoreRoughAnimal, Kibble</foodType>
 		  <leatherDef>Leather_Frog</leatherDef>
-		  <Wildness>0.5</Wildness>
 		  <nuzzleMtbHours>120</nuzzleMtbHours>
 		  <trainability>Intermediate</trainability>
 		  <useMeatFrom>ST_BullFrog</useMeatFrom>
@@ -335,7 +335,7 @@
 		  <li>AnimalUncommon</li>
 		</tradeTags>
 			<modExtensions>
-				<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<statToAdd>
 						<li>ST_FrogRole</li>
 						<li>ST_FrogRarity</li>	
