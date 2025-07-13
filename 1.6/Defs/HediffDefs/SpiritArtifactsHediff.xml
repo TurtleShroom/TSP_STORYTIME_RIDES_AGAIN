@@ -27,6 +27,9 @@
 				<InjuryHealingFactor>0.3</InjuryHealingFactor>
 				<VacuumResistance MayRequire="ludeon.rimworld.odyssey">1</VacuumResistance>
 			</statOffsets>
+			<disablesNeeds>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_Corruption</li>
+			</disablesNeeds>
 		  </li>
 		</stages>
 		<tags>
@@ -44,20 +47,6 @@
 		<isBad>true</isBad>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<!-- If you have the Hellsing Mod, this is considered a Hediff related to that Mod, as follows, using the Hellsing Mod code -->
-		<disablesNeeds>
-			<li>Rest</li>
-			<li>Joy</li>
-			<li>Beauty</li>
-			<li>Comfort</li>
-			<li>Outdoors</li>
-			<li>Indoors</li>
-			<li>RoomSize</li>
-			<li MayRequire="Ludeon.RimWorld.Royalty">Authority</li>
-			<li MayRequire="VanillaExpanded.VMemesE">VME_Anonymity</li>
-			<li MayRequire="VanillaExpanded.VMemesE">VME_Corruption</li>
-			<li MayRequire="dubwise.dubsbadhygiene">Hygiene</li>
-			<li MayRequire="dubwise.dubsbadhygiene">DBHThirst</li>
-		</disablesNeeds>
 		<comps>
 			<li Class="HediffCompProperties_HealPermanentWounds" MayRequire="baskerville.hellsingarmsultimate"></li>
 		</comps>
@@ -84,9 +73,23 @@
 				<li MayRequire="kentington.saveourship2">VacuumDamageHediff</li>
 			</makeImmuneTo>
 			<statOffsets>
-				<HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.8</HSAU_SanctusSensitivity>
-				<VacuumResistance MayRequire="ludeon.rimworld.odyssey">1</VacuumResistance>
+				<HSAU_SanctusSensitivity MayRequire="baskerville.hellsingarmsultimate" Inherit="False">0.38</HSAU_SanctusSensitivity>
+				<VacuumResistance MayRequire="ludeon.rimworld.odyssey">2</VacuumResistance>
 			</statOffsets>
+			<disablesNeeds>
+				<li>Rest</li>
+				<li>Joy</li>
+				<li>Beauty</li>
+				<li>Comfort</li>
+				<li>Outdoors</li>
+				<li>Indoors</li>
+				<li>RoomSize</li>
+				<li MayRequire="Ludeon.RimWorld.Royalty">Authority</li>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_Anonymity</li>
+				<li MayRequire="VanillaExpanded.VMemesE">VME_Corruption</li>
+				<li MayRequire="dubwise.dubsbadhygiene">Hygiene</li>
+				<li MayRequire="dubwise.dubsbadhygiene">DBHThirst</li>
+			</disablesNeeds>
 		  </li>
 		</stages>
 		<tags>

@@ -105,20 +105,20 @@
   
   
     <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_BarrelBomb</defName>
-    <label>barrel bomb</label>
-    <graphicData>
-      <texPath>Things/Items/PirateWeapons/SkeletonBomb</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
-      <damageDef>Bomb</damageDef>
-      <explosionRadius>3</explosionRadius>
-      <damageAmountBase>100</damageAmountBase>
-      <explosionDelay>30</explosionDelay>
-      <speed>30</speed>
-    </projectile>
+		<defName>Bullet_BarrelBomb</defName>
+		<label>barrel bomb</label>
+		<graphicData>
+		  <texPath>Things/Items/PirateWeapons/SkeletonBomb</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+		  <damageDef>Bomb</damageDef>
+		  <explosionRadius>3</explosionRadius>
+		  <damageAmountBase>100</damageAmountBase>
+		  <explosionDelay>30</explosionDelay>
+		  <speed>30</speed>
+		</projectile>
   </ThingDef>
 
   <ThingDef ParentName="BaseWeapon">
@@ -128,7 +128,7 @@
        <li>SkeletonBomb</li>
     </weaponTags>
     <description>A bomb full of gunpowder.</description>
-    <tradeability>None</tradeability>
+    <tradeability>All</tradeability>
     <graphicData>
       <texPath>Things/Items/PirateWeapons/SkeletonBomb</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -147,7 +147,7 @@
     </statBases>
     <verbs>
       <li>
-        <forcedMissRadius>0.5</forcedMissRadius>
+        <!-- <forcedMissRadius>0.5</forcedMissRadius> -->
         <verbClass>Verb_ShootOneUse</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_BarrelBomb</defaultProjectile>

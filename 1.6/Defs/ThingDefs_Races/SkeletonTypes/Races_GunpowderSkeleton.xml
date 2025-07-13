@@ -63,6 +63,7 @@
     <race>ST_GunpowderSkeleton</race>
     <combatPower>100</combatPower>
 	<canArriveManhunter>false</canArriveManhunter>
+	<isGoodBreacher>true</isGoodBreacher>
     <lifeStages>
       <li>
         <label>Gunpowder Skeleton Pirate</label>
@@ -105,21 +106,21 @@
   
   
     <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_BarrelBomb</defName>
-    <label>barrel bomb</label>
-    <graphicData>
-      <texPath>Things/Items/PirateWeapons/SkeletonBomb</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
-      <damageDef>Bomb</damageDef>
-      <explosionRadius>3</explosionRadius>
-      <damageAmountBase>100</damageAmountBase>
-      <explosionDelay>30</explosionDelay>
-      <speed>30</speed>
-    </projectile>
-  </ThingDef>
+		<defName>Bullet_BarrelBomb</defName>
+		<label>barrel bomb</label>
+		<graphicData>
+		  <texPath>Things/Items/PirateWeapons/SkeletonBomb</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+		  <damageDef>Bomb</damageDef>
+		  <explosionRadius>3</explosionRadius>
+		  <damageAmountBase>100</damageAmountBase>
+		  <explosionDelay>30</explosionDelay>
+		  <speed>30</speed>
+		</projectile>
+	</ThingDef>
 
   <ThingDef ParentName="BaseWeapon">
     <defName>ST_BarrelBomb</defName>
@@ -147,12 +148,12 @@
     </statBases>
     <verbs>
       <li>
-        <forcedMissRadius>0.5</forcedMissRadius>
+        <!-- <forcedMissRadius>0.5</forcedMissRadius> -->
         <verbClass>Verb_ShootOneUse</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_BarrelBomb</defaultProjectile>
         <warmupTime>4</warmupTime>
-        <range>4.5</range>
+        <range>9</range>
         <burstShotCount>1</burstShotCount>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
       </li>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
-	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
-	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<race>Alien_Jeub</race>
+			</value>
+		</match>
+		<!-- If it DOES, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]</xpath>
 			<success>Always</success>
@@ -15,6 +22,8 @@
 		</nomatch>
 	</Operation>
 	
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
 		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet</xpath>

@@ -52,6 +52,11 @@
 		<ideoName>Cult of Owen Wilson</ideoName>
 		<ideoDescription>Wow! It's the Cult of Owen Wilson! These fierce fighters sent from the gods spread from base to base, lecturing those they encounter about their lord and saviour Owen Cunningham Wilson through the use of bullets. Unbelievable!</ideoDescription>
 		<hiddenIdeo>false</hiddenIdeo>
+		<styles>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">Horaxian</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Morbid</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Techist</li>
+		</styles>
 		<deityPresets>
 			<li>
 				<nameType>
@@ -62,7 +67,11 @@
 				<iconPath>Things/OwenWilson</iconPath>
 			</li>
 		</deityPresets>
-		<permanentEnemy>true</permanentEnemy>
+		<!-- <permanentEnemy>true</permanentEnemy> -->
+		<permanentEnemyToEveryoneExcept>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">Entities</li>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">HoraxCult</li>
+		</permanentEnemyToEveryoneExcept>
 		<factionNameMaker>NamerOwenBase</factionNameMaker>
 		<settlementNameMaker>NamerOwenFactionBase</settlementNameMaker>
 		<techLevel>Ultra</techLevel>
