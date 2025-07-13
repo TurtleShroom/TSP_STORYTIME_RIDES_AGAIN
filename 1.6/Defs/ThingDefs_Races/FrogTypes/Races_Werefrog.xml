@@ -12,7 +12,7 @@
 		</additionalHediffs>
 	</DamageDef>
 
-	<ThingDef ParentName="AnimalThingBase">
+	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>Werefrog</defName>
 		<label>Werefrog</label>
 		<description>Half man, half frog, all evil. Whatever soul this creature once had has gone to the afterlife, leaving an undead abomination that is ravenous, mindless, and pitiless. Watch out for its bite.</description>	
@@ -97,17 +97,17 @@
 			<predator>true</predator>
 			<maxPreyBodySize>10</maxPreyBodySize>
 			<intelligence Inherit="False">ToolUser</intelligence>
-			<lifeStageAges>
+			<lifeStageAges Inherit="False">
 				<li>
 					<def>FrogPersonAdultStage</def>
 					<minAge>0</minAge>
-					  <soundWounded>Frog_Angry</soundWounded>
-					  <soundDeath>Frog_Angry</soundDeath>
-					  <soundCall>Frog_Angry</soundCall>
-					  <soundAngry>Frog_Angry</soundAngry>
+					  <soundWounded>ST_Frog_Angry</soundWounded>
+					  <soundDeath>ST_Frog_Angry</soundDeath>
+					  <soundCall>ST_Frog_Angry</soundCall>
+					  <soundAngry>ST_Frog_Angry</soundAngry>
 				</li>
 			</lifeStageAges>
-			<soundMeleeHitPawn>Frog_Angry</soundMeleeHitPawn>
+			<soundMeleeHitPawn>ST_Frog_Angry</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
 			<wildBiomes Inherit="False">
@@ -170,7 +170,7 @@
 		</lifeStages>
 	</PawnKindDef>
 
-	<PawnKindDef ParentName="AnimalKindBase">
+	<PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
 		<defName>ManFrog</defName>
 		<label>man-frog</label>
 		<race>Werefrog</race>

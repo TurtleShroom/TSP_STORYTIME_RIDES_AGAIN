@@ -3,7 +3,7 @@
 <Defs>
 	<!-- ======================= Borpa =============================== -->
 
-	<ThingDef ParentName="AnimalThingBase">
+	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>BORPA_Borpa</defName>
 		<label>borpa</label>
 		<description>A spinning frog that ruined a bald man's life. It is a curious creature that allows itself to be tamed and milked by humans. It greatly enjoys the company of its master and other Borpas.</description>
@@ -72,7 +72,7 @@
 		  <lifeExpectancy>35</lifeExpectancy>
 		  <manhunterOnDamageChance>0.1</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
-		  <lifeStageAges>
+		  <lifeStageAges Inherit="False">
 			<li>
 			  <def>AnimalBaby</def>
 			  <minAge>0</minAge>
@@ -369,7 +369,7 @@
 			</li>
 		</modExtensions>
   </ThingDef>
-	 <PawnKindDef ParentName="AnimalKindBase">
+	 <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
 	
 		<defName>BORPA_Borpa</defName>
 		<label>Borpa</label>
@@ -478,7 +478,7 @@
 	<!-- Acrid Borpa -->
 	
 	
-  <ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
     <defName>BORPA_AcridBorpa</defName>
     <label>acrid borpa</label>
     <description>A mutated Borpa crossed with a Night Frog. It infects and kills those it hunts with toxins that are excreted from its tongue and hands.</description>
@@ -586,7 +586,7 @@
       <lifeExpectancy>45</lifeExpectancy>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.75</manhunterOnTameFailChance>
-      <lifeStageAges>
+      <lifeStageAges Inherit="False">
         <li>
           <def>AnimalBaby</def>
           <minAge>0</minAge>
@@ -882,7 +882,7 @@
   </ThingDef>
   
    
- <PawnKindDef ParentName="AnimalKindBase">
+ <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
     <defName>BORPA_AcridBorpa</defName>
     <label>acrid borpa</label>
     <race>BORPA_AcridBorpa</race>
@@ -945,7 +945,7 @@
   
   	<!-- ======================= Snorpa =============================== -->
 
-	<ThingDef ParentName="AnimalThingBase">
+	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>BORPA_Snorpa</defName>
 		<label>snorpa</label>
 		<description>These large snail-like creatures love to roam the forests of the rim. Their shells and hide are extremely durable. While they are friendly to human contact and generally docile, they use their powerful jaws to defend themselves from aggression.</description>
@@ -993,12 +993,13 @@
 		  <leatherDef>Leather_SnorpaHide</leatherDef>
 		  <trainability>Intermediate</trainability>
 		  <meatLabel>snoracargot</meatLabel>
+		  <useMeatFrom Inherit="False"></useMeatFrom>
 		  <specificMeatDef MayRequire="biomesteam.biomescore">BMT_GastropodMeat</specificMeatDef>
 		  <gestationPeriodDays>24</gestationPeriodDays>
 		  <lifeExpectancy>150</lifeExpectancy>
 		  <manhunterOnDamageChance>0.95</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
-		  <lifeStageAges>
+		  <lifeStageAges Inherit="False">
 			<li>
 			  <def>AnimalBaby</def>
 			  <minAge>0</minAge>
@@ -1264,7 +1265,7 @@
 		</tradeTags>
   </ThingDef>
 
-	<PawnKindDef ParentName="AnimalKindBase">
+	<PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
 		<defName>BORPA_Snorpa</defName>
 		<label>snorpa</label>
 		<race>BORPA_Snorpa</race>
@@ -1323,7 +1324,7 @@
  
   	<!-- ======================= Kachorpa  =============================== -->
 
-	<ThingDef ParentName="AnimalThingBase">
+	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
     <defName>BORPA_Kachorpa</defName>
     <label>kachorpa</label>
     <description>KACHOW! These experimental Borpa variants were created to make the ultimate racer, and as such are partially mechanical! Forty-two losers were created in the process. Kachorpas shed their excess chassis regularly, but they need a little help in getting it off, which is a painless affair. After all, rust is bad for your image when you're this fast! \n \n As a side-effect to the creation of these creatures, liquor and fluids were found to be the only way to continually fuel a Kachorpa, until recently. It seems the Kachorpa have now adapted to also eating raw flesh, probably due to the lack of liquor available in the wild, or maybe that is just because of an insatiable thirst to KACHOW.</description>
@@ -1407,8 +1408,9 @@
 	  <leatherDef MayRequire="vanillaexpanded.afvehicles">VAEAP_Leather_Car</leatherDef>
 	  -->
 	  <leatherDef>Leather_Borpa</leatherDef>
+	  <useMeatFrom Inherit="False"></useMeatFrom>
 	  <specificMeatDef>BORPA_KachorpaSteel</specificMeatDef>
-      <lifeStageAges>
+      <lifeStageAges Inherit="False">
         <li>
           <def>AnimalBaby</def>
           <minAge>0</minAge>
@@ -1701,7 +1703,7 @@
   
   
   
-	<PawnKindDef ParentName="AnimalKindBase">	
+	<PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">	
 		<defName>BORPA_Kachorpa</defName>
 		<label>kachorpa</label>
 		<race>BORPA_Kachorpa</race>
@@ -1771,7 +1773,7 @@
  
 	<!-- ======================= John Borpa =============================== -->
 
-	<ThingDef ParentName="AnimalThingBase">
+	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>BORPA_JohnBorpa</defName>
 		<label>John Borpa</label>
 		<description>A magnificent demon. Wielding an unique spear, John Borpa only wishes to torture you and your colony. \n \n He has nearly unlimited health. His armor is profound. He does not eat. He does not sleep. He walks. The only thing that can be done in his presence is to lock one's doors and wait for him to leave, which he will do after a day or two. \n \n Legends say that if a John Borpa is successfully killed, processing his body will yield enough food to sustain a colony for years.</description>
@@ -1826,10 +1828,11 @@
 		  <baseHealthScale>50</baseHealthScale>
 		  <intelligence>ToolUser</intelligence>
 		  <lifeExpectancy>10000</lifeExpectancy>
+		  <useMeatFrom Inherit="False"></useMeatFrom>
 		  <specificMeatDef>TSP_ST_Borpa_JohnBorpaSteak</specificMeatDef>
 		  <leatherDef>Gold</leatherDef>
 		  <forceGender>Male</forceGender>
-		  <lifeStageAges>
+		  <lifeStageAges Inherit="False">
 			<li>
 			  <def>AnimalAdult</def>
 			  <minAge>0</minAge>
@@ -1879,7 +1882,7 @@
   </ThingDef>
   
   
-  <PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
     <defName>BORPA_JohnBorpa</defName>
     <label>John Borpa</label>
     <race>BORPA_JohnBorpa</race>

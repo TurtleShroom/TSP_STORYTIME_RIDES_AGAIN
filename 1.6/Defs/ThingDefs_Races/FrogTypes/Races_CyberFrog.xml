@@ -48,7 +48,7 @@
 			<li Class="CompProperties_WakeUpDormant">
 				<wakeUpOnDamage>true</wakeUpOnDamage>
 				<!-- <anyColonistCloseCheckRadius>3</anyColonistCloseCheckRadius> -->
-				<wakeUpSound>Frog_Angry</wakeUpSound>
+				<wakeUpSound>ST_Frog_Angry</wakeUpSound>
 			</li>
 			<li Class="CompProperties_OverseerSubject" MayRequire="Ludeon.Rimworld.Biotech">
 				<needsOverseerEffect>MechUncontrolled</needsOverseerEffect>
@@ -153,7 +153,7 @@
 		  <!-- <petness>1</petness> -->
 		  <lifeExpectancy>200</lifeExpectancy>
 		  <hasGenders>true</hasGenders>
-		  <lifeStageAges>
+		  <lifeStageAges Inherit="False">
 			<li>
 			  <def>MechanoidFullyFormed</def>
 			  <minAge>0</minAge>
@@ -168,7 +168,7 @@
 			  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
 			  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
 			  <soundCall>Pawn_Iguana_Call</soundCall>
-			  <soundAngry>Frog_Angry</soundAngry>
+			  <soundAngry>ST_Frog_Angry</soundAngry>
 			</li>
 		  </lifeStageAges>
 		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -594,7 +594,7 @@
 	  <hasGenders>true</hasGenders>
 	  <manhunterOnDamageChance>1</manhunterOnDamageChance>
 	  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
-      <lifeStageAges>
+      <lifeStageAges Inherit="False">
         <li>
           <def>AnimalBaby</def>
           <minAge>0</minAge>
@@ -609,7 +609,7 @@
           <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
           <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
 		  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
-          <soundAngry>Frog_Angry</soundAngry>
+          <soundAngry>ST_Frog_Angry</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -652,7 +652,7 @@
   </ThingDef>
   
   
-  <PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
     <defName>CyberFrogDocile</defName>
     <label>Cyber Frog</label>
     <race>CyberFrogDocile</race>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-  <ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
     <defName>SpringPeeper</defName>
     <label>Spring Peeper frog</label>
     <description>Spring Peepers are a type of chorus frog that makes a distinct, cute peeping sound. Modern Spring Peepers have all been genetically engineered and domesticated to be a pet and companion to man, as well as to provide a near-endless source of cheap eggs. As a drawback, however, they are more infertile than most frogs and usually only mate a few times in their lives. They are extremely friendly and docile; they will never fight back if attacked in the wild.</description>
@@ -260,7 +260,7 @@
       <lifeExpectancy>3</lifeExpectancy>
       <manhunterOnDamageChance>0</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
-		<lifeStageAges>
+		<lifeStageAges Inherit="False">
 			<li>
 				<def>AnimalBaby</def>
 				<minAge>0</minAge>
@@ -277,7 +277,7 @@
 				<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 				<soundDeath>Peeper_Peep</soundDeath>
 				<soundCall>Peeper_Peep</soundCall>
-				<soundAngry>Frog_Angry</soundAngry>
+				<soundAngry>ST_Frog_Angry</soundAngry>
 			</li>
 		</lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -314,7 +314,7 @@
   </ThingDef>
   
   
-  <PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
     <defName>SpringPeeper</defName>
     <label>Spring Peeper frog</label>
     <race>SpringPeeper</race>

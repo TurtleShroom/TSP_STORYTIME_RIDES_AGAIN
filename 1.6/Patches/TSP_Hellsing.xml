@@ -2,6 +2,31 @@
 
 <Patch>
 	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="BloodFrog"]/race/specificMeatDef</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/race/specificMeatDef</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="HSAU_BloodPouch"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<specificMeatDef>HSAU_BloodPouch</specificMeatDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="HSAU_BloodPouch"]</xpath>
 		<!-- If it does, do this replacement. -->
@@ -9,7 +34,21 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="BloodFrog"]/race/useMeatFrom</xpath>
 			<value>
-				<specificMeatDef>HSAU_BloodPouch</specificMeatDef>
+				<useMeatFrom Inherit="False"></useMeatFrom>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="HemogenPack"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/comps/li/eggUnfertilizedDef</xpath>
+			<value>
+				<eggUnfertilizedDef>HemogenPack</eggUnfertilizedDef>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -21,13 +60,29 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="BloodFrog"]/statBases/MeatAmount</xpath>
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/comps/li/eggUnfertilizedDef</xpath>
 			<value>
-				<MeatAmount>4</MeatAmount>
+				<eggUnfertilizedDef>HSAU_BloodPouch</eggUnfertilizedDef>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<!--
+	<Operation Class="PatchOperationConditional">
+	 Does this exist?
+		<xpath>/Defs/ThingDef[defName="HSAU_BloodPouch"]</xpath>
+		If it does, do this replacement.
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="BloodFrog"]/statBases/MeatAmount</xpath>
+			<value>
+				<MeatAmount>7</MeatAmount>
+			</value>
+		</match>
+		If the first XPATH does not exist, the original code stands.
+	</Operation>
+	-->
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
@@ -37,7 +92,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="BloodFrog"]/statBases/MarketValue</xpath>
 			<value>
-				<MarketValue>500</MarketValue>
+				<MarketValue>485</MarketValue>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -71,7 +126,7 @@
 						<eggFertilizedDef>TSP_ST_BloodFrogEgg_Fertilized</eggFertilizedDef>
 						<eggFertilizationCountMax>1</eggFertilizationCountMax>
 						<eggLayIntervalDays>15</eggLayIntervalDays>
-						<eggCountRange>2</eggCountRange>
+						<eggCountRange>2~2</eggCountRange>
 					</li>
 					<li Class="StoryTime.CompProperties_Tomato" MayRequire="baskerville.hellsingarmsultimate">
 						<tomatoDef MayRequire="baskerville.hellsingarmsultimate">HSAU_BloodPouch</tomatoDef>
@@ -117,13 +172,57 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGenerator</xpath>
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGeneratorFemale</xpath>
 		<!-- If they do, SHUT IT DOWN.? -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGenerator</xpath>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGeneratorFemale</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGenerator</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGenerator</xpath>
+			<value>
+				<nameGenerator>TSP_ST_NamerPatreons_Boy</nameGenerator>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race</xpath>
+			<value>
+				<nameGenerator>TSP_ST_NamerPatreons_Boy</nameGenerator>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGeneratorFemale</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race/nameGeneratorFemale</xpath>
+			<value>
+				<nameGeneratorFemale>TSP_ST_NamerPatreons_Girl</nameGeneratorFemale>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="GhoulBaseRace"]/race</xpath>
+			<value>
+				<nameGeneratorFemale>TSP_ST_NamerPatreons_Girl</nameGeneratorFemale>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">

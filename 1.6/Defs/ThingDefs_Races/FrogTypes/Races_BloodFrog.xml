@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<DamageDef Name="BloodExplosion">
-		<defName>BloodExplosion</defName>
+	<DamageDef Name="FrogBloodExplosion">
+		<defName>ST_FrogBloodExplosion</defName>
 		<label>engorged amphibious detonation</label>
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
@@ -34,7 +34,7 @@
 		<soundExplosion>FrogPop</soundExplosion>
 	</DamageDef>
  
-   <ThingDef ParentName="AnimalThingBase">
+   <ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
     <defName>BloodFrog</defName>
     <label>engorged Frogglobin</label>
     <description>The engorged Frogglobin looks like an overfilled water balloon, except instead of water, it's blood, and instead of a balloon, it's a frog. \n This engorged frog is an abomination of nature, created for a noble cause. Its existence was intended to completely eliminate the need for all blood donations by creating an animal capable of generating and transporting convertible blood of sapient beings inside it, without any possibility of rejection in any known sapient lifeform. \n \n While this was a success, no genetic modification isolates only one gene, hence its danger. An unintended consequence of this modification caused the Frogglobin to be as fragile as tissue paper, and any attempt to penetrate  or hit it will cause it to immediately explode violently; while it causes a painless, instant death for the frog, anyone near it will not be so lucky. The laboratory was shut down after a massive explosion, and the engorged frogs got away. Thankfully, Frogglobins are extremely docile and will never attack unless provoked.</description>
@@ -321,14 +321,14 @@
 	  <roamMtbDays>3</roamMtbDays>
 	  <manhunterOnDamageChance>0</manhunterOnDamageChance>
 	  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
-      <lifeStageAges>
+      <lifeStageAges Inherit="False">
         <li>
           <def>AnimalBaby</def>
           <minAge>0</minAge>
           <soundWounded>FrogPop</soundWounded>
           <soundDeath>FrogPop</soundDeath>
           <soundCall>Pawn_Iguana_Call</soundCall>
-          <soundAngry>Frog_Angry</soundAngry>
+          <soundAngry>ST_Frog_Angry</soundAngry>
         </li>
         <li>
           <def>AnimalJuvenile</def>
@@ -336,7 +336,7 @@
           <soundWounded>FrogPop</soundWounded>
           <soundDeath>FrogPop</soundDeath>
           <soundCall>Pawn_Iguana_Call</soundCall>
-          <soundAngry>Frog_Angry</soundAngry>
+          <soundAngry>ST_Frog_Angry</soundAngry>
         </li>
         <li>
           <def>AnimalAdult</def>
@@ -344,7 +344,7 @@
           <soundWounded>FrogPop</soundWounded>
           <soundDeath>FrogPop</soundDeath>
           <soundCall>Pawn_Iguana_Call</soundCall>
-          <soundAngry>Frog_Angry</soundAngry>
+          <soundAngry>ST_Frog_Angry</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>FrogPop</soundMeleeHitPawn>
@@ -386,7 +386,7 @@
   </ThingDef>
   
   
-  <PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
     <defName>BloodFrog</defName>
     <label>engorged Frogglobin</label>
     <race>BloodFrog</race>

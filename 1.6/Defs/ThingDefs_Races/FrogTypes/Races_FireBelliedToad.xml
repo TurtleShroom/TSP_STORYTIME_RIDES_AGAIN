@@ -17,7 +17,7 @@
 		</projectile>
 	</ThingDef>	
   
-  <ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>FireBelliedToad</defName>
 		<label>fire-bellied toad</label>
 		<description>In the ever-expanding attempts to fight back the Insectoid nightmare, creative solutions have consistently been proposed all across the galaxy. One of these is the Fire-Bellied Toad, which is simply a toad that literally shoots fire. Fire-Bellied Toads carry a natural internal heating system, making them able to survive in any environment, no matter how hot or how cold. \n \n A toad is a type of frog with dry, leathery skin, (usually) short legs, and large bumps on their back. They are divided into the "true toads", which all come from the taxnomic family &lt;i>Bufonidae&lt;/i> , and the nine species of "false toads", the latter endemic only to Old Earth's Chile and Thailand. The fire-bellied toad falls under the former, as a true Bufonidae toad.</description>
@@ -333,7 +333,7 @@
       <trainability>Intermediate</trainability>
       <petness>0.4</petness>
       <lifeExpectancy>15</lifeExpectancy>
-      <lifeStageAges>
+      <lifeStageAges Inherit="False">
         <li>
           <def>AnimalBaby</def>
           <minAge>0</minAge>
@@ -348,7 +348,7 @@
           <soundWounded>Pawn_Iguana_Wounded</soundWounded>
           <soundDeath>Pawn_Iguana_Death</soundDeath>
           <soundCall>Pawn_Iguana_Call</soundCall>
-          <soundAngry>Frog_Angry</soundAngry>
+          <soundAngry>ST_Frog_Angry</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -384,7 +384,7 @@
   </ThingDef>
   
   
-  <PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
     <defName>FireBelliedToad</defName>
     <label>Fire-Bellied Toad</label>
     <race>FireBelliedToad</race>

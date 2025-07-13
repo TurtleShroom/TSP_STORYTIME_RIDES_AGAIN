@@ -18,7 +18,7 @@
 		</comps>
 	</HediffDef>
 
-	<ThingDef ParentName="AnimalThingBase">
+	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>ST_LivingCoconut</defName>
 		<label>coconut frog</label>
 		<description>Genetically engineered using the same basic process as a tomato frog, the coconut frog grows cysts that, when cut, are totally indistinguishable from real coconuts. These cysts provide it with significant natural armor. When a coconut frog is killed, its remaining cysts that naturally grow into forms identical to coconuts will sprout into a coconut tree.</description>
@@ -329,13 +329,13 @@
 			<leatherDef>Rylex_Coconut</leatherDef>
 			<foodType>VegetarianAnimal, VegetarianRoughAnimal, Plant, Fluid, Meal, Kibble</foodType>
 			<lifeExpectancy>20</lifeExpectancy>
-			<lifeStageAges>
+			<lifeStageAges Inherit="False">
 				<li>
 					<def>AnimalBaby</def>
 					<minAge>0</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>CoconutAngry</soundDeath>
-					<soundAngry>Frog_Angry</soundAngry> 
+					<soundAngry>ST_Frog_Angry</soundAngry> 
 					<soundCall>CoconutNeutral</soundCall>
 				</li>
 				<li>
@@ -343,7 +343,7 @@
 					<minAge>0.096</minAge>
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>CoconutAngry</soundDeath>
-					<soundAngry>Frog_Angry</soundAngry> 
+					<soundAngry>ST_Frog_Angry</soundAngry> 
 					<soundCall>CoconutNeutral</soundCall>
 				</li>
 				<li>
@@ -352,7 +352,7 @@
 					<soundWounded>CoconutAngry</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
 					<soundCall>CoconutNeutral</soundCall>
-					<soundAngry>Frog_Angry</soundAngry>
+					<soundAngry>ST_Frog_Angry</soundAngry>
 				</li>
 			</lifeStageAges>
 			<soundMeleeHitPawn>CoconutAngry</soundMeleeHitPawn>
@@ -412,7 +412,7 @@
 		</modExtensions>
 	</ThingDef>
   
-	<PawnKindDef ParentName="AnimalKindBase">
+	<PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
 		<defName>ST_LivingCoconut</defName>
 		<label>coconut frog</label>
 		<race>ST_LivingCoconut</race>

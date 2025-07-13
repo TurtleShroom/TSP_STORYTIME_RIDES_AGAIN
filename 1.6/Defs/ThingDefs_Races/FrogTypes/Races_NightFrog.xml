@@ -16,7 +16,7 @@
 	</ThingDef>
 
  
-  <ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
     <defName>NightFrog</defName>
     <label>Night Frog</label>
     <description>These black frogs haunt the night, hunting their prey by licking them with their venomous tongues. Their tongues secrete a lethal venom that paralyzes their prey and leaves them helpless. Alone among all known species of frog, these creatures are the only frogs to be obligate carnovores, and have been known to hunt men.</description>
@@ -353,7 +353,7 @@
       <useMeatFrom>ST_BullFrog</useMeatFrom>
       <petness>0.1</petness>
       <lifeExpectancy>34</lifeExpectancy>
-      <lifeStageAges>
+      <lifeStageAges Inherit="False">
         <li>
           <def>AnimalBaby</def>
           <minAge>0</minAge>
@@ -368,7 +368,7 @@
           <soundWounded>Pawn_Iguana_Wounded</soundWounded>
           <soundDeath>Pawn_Iguana_Death</soundDeath>
           <soundCall>Pawn_Iguana_Call</soundCall>
-          <soundAngry>Frog_Angry_Deep</soundAngry>
+          <soundAngry>ST_Frog_Angry_Deep</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -403,7 +403,7 @@
 	</modExtensions>
   </ThingDef>
   
-  <PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
     <defName>NightFrog</defName>
     <label>Night Frog</label>
     <race>NightFrog</race>

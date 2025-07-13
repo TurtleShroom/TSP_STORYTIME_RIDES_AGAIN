@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<ThingDef ParentName="AnimalThingBase">
+	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>TSP_ST_ALBARRY_StephenColbert_Frog</defName>
 		<label>Stephen Colbert frog</label>
 		<description>The Stephen Colbert frog sold out years ago and he's a coward. Who Stephen Colbert was and what he did has been lost to the millinea, but whatever he did must have been absolutely horrific for someone to engineer a frog solely to permanently shame his decisions. Stephen Colbert frogs are an abominable chimera of a frog and human-like DNA, designed to create a frog with a face designed to insult Stephen Colbert. He sold out year's ago and he's a coward. Stephen Colbert frogs are stupid and weak, good only for eating, because they all sold out years ago and are cowards.</description>
@@ -56,14 +56,14 @@
 			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
 			<manhunterOnDamageChance>0</manhunterOnDamageChance>
 			<lifeExpectancy>61</lifeExpectancy>
-			<lifeStageAges>
+			<lifeStageAges Inherit="False">
 				<li>
 					<def>AnimalBaby</def>
 					<minAge>0</minAge>
 					<soundWounded>TSP_ALBARRY_StephenColbert_Struck</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
 					<soundCall>TSP_ST_ALBARRY_StephenColbert_Frog_Call</soundCall>
-					<soundAngry>Frog_Angry</soundAngry>
+					<soundAngry>ST_Frog_Angry</soundAngry>
 				</li>
 				<li>
 					<def>AnimalJuvenile</def>
@@ -114,7 +114,7 @@
 	</ThingDef>
 
 
-	<PawnKindDef ParentName="AnimalKindBase">
+	<PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
 		<defName>TSP_ST_ALBARRY_StephenColbert_Frog</defName>
 		<label>Stephen Colbert frog</label>
 		<labelFemale>Stephanie Colbert frog</labelFemale>

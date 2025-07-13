@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<ThingDef ParentName="AnimalThingBase">
+	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>PepsiFrog</defName>
 		<label>Pepsi Frog</label>
 		<description>This frog seems to be the product of some strange genetic experiment by a soda corporation. Unlike most frogs, though, female Pepsi frogs produce milk like mammals. This milk is extremely strange however, as it has the exact texture, appearance, and taste of the ancient drink known as 'Pepsi'. It is even naturally carbonated!</description>
@@ -306,7 +306,7 @@
 		  <useMeatFrom>ST_BullFrog</useMeatFrom>
 		  <petness>0.78</petness>
 		  <lifeExpectancy>4</lifeExpectancy>
-		  <lifeStageAges>
+		  <lifeStageAges Inherit="False">
 			<li>
 			  <def>AnimalBaby</def>
 			  <minAge>0</minAge>
@@ -321,7 +321,7 @@
 			  <soundWounded>Pawn_Iguana_Wounded</soundWounded>
 			  <soundDeath>Pawn_Iguana_Death</soundDeath>
 			  <soundCall>Pawn_Iguana_Call</soundCall>
-			  <soundAngry>Frog_Angry</soundAngry>
+			  <soundAngry>ST_Frog_Angry</soundAngry>
 			</li>
 		  </lifeStageAges>
 		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -358,7 +358,7 @@
 	</ThingDef>
 	  
 	  
-	  <PawnKindDef ParentName="AnimalKindBase">
+	  <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
 		<defName>PepsiFrog</defName>
 		<label>Pepsi Frog</label>
 		<race>PepsiFrog</race>

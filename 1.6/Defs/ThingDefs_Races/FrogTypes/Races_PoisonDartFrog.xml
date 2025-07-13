@@ -24,7 +24,7 @@
 
 
 
-	<ThingDef ParentName="AnimalThingBase">
+	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>PoisonDartFrog</defName>
 		<label>poison dart frog</label>
 		<description>"Probably shouldn't touch this." \n \n Poison dart frogs refer to a group of frogs sorted under the taxnomic family of &lt;i>Dendrobatidae&lt;/i>. All poison dart frogs are members of this taxonomic family. Their name dates back to the earliest settlements in Old Earth's western hemisphere. Ancient humans would coat their blow guns, arrows, and javelins in the lethal secretions that ooze out of a poison dart frog's glandular skin. \n \n Poison dart frogs are the textbook example of what scientists call "aposematism". Aposematism is when an animal warns predators it is lethal by being stunningly colored in neon hues, or otherwise made to appear conspicuous. Potential predators recognize that and avoid it accordingly. (From the twenty-first until the late twenty-second centuries, humans with certain extremist ideologies practiced the same concept through the dying of their hair.) \n \n When one's bare skin comes into contact with the secretions of a poison dart frog, exit the area and kiss one's backside goodbye. This particular poison dart frog, colored a brilliant purple, has a poisonous touch that is not instantaneously lethal. However, because it attacks using its body as a blunt object, anyone facing one in battle will be repeatedly exposed. This will not have pretty consequences. \n \n DO NOT ENGAGE POISON DART FROGS IN MELEE COMBAT.</description>
@@ -325,16 +325,16 @@
 	  <predator>false</predator> <!-- Poison dart frogs do not hunt for prey beyond little insects and algae -->
 	  <canBePredatorPrey>false</canBePredatorPrey> <!-- In RL, only one creature- a type of snake -can actually eat a poison dart frog. NO ONE is going to fight this sucker in melee. -->
       <lifeExpectancy>8</lifeExpectancy>
-		<lifeStageAges>
+		<lifeStageAges Inherit="False">
 			<li>
 				<def>AnimalBaby</def>
 				<minAge>0</minAge>
-				<soundAngry>Frog_Angry</soundAngry>
+				<soundAngry>ST_Frog_Angry</soundAngry>
 			</li>
 			<li>
 				<def>AnimalJuvenile</def>
 				<minAge>0.094</minAge>
-				<soundAngry>Frog_Angry</soundAngry>
+				<soundAngry>ST_Frog_Angry</soundAngry>
 			</li>
 			<li>
 				<def>AnimalAdult</def>
@@ -342,7 +342,7 @@
 				<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 				<soundDeath>Pawn_Iguana_Death</soundDeath>
 				<soundCall>Pawn_Iguana_Call</soundCall>
-				<soundAngry>Frog_Angry</soundAngry>
+				<soundAngry>ST_Frog_Angry</soundAngry>
 			</li>
 		</lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -378,7 +378,7 @@
   </ThingDef>
   
   
-  <PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
     <defName>PoisonDartFrog</defName>
     <label>poison dart frog</label>
     <race>PoisonDartFrog</race>

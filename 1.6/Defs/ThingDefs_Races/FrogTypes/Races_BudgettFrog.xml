@@ -58,7 +58,7 @@
   </ThingDef>
 
  
-  <ThingDef ParentName="AnimalThingBase">
+  <ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
     <defName>BudgettFrog</defName>
     <label>Grand Budgett's frog</label>
     <description>The Grand Budgett's frog is an aggressive, genetically modified amphibian directly descended from &lt;i>Lepidobatrachus laevis&lt;/i>, the Old Earth Budgett's frog. Like base line Budgett's frogs, the Grand Buddget's frog is also known as the "Wednesday frog" (a term dating back thousands of years) and is extremely aggressive. Their huge head makes up one-third of their body. When threatened, a normal Budgett's frog will always attack and will attempt to make themselves look larger. If this fails, they will attempt to corner their enemy while making an extremely loud REEEEEEEEEEEEEEEEE- \n \n Aaagh! Not the ears! \n \n It is this screech that differentiates a Grand Budgett's frog from its original form. Geneticists engineered the Grand Budgett's frog as a weapon, causing it to deploy sound-based attacks. This was used as a cheap, quickly reproducing attack against the hostile, virgin wilderness of habitable planets on the Rim (and later, against Insectoids and Mechanoids). \n This high-gain, concentrated  REEEEEEEEEEEEEEEEE-ing vibrates sound waves forward like a directional antenna. Anyone within the direct line of the REEEEEEE will experience physical pain as if they were struck by a kinetic object in motion. The health effects are almost equivalent to being shot. Grand Budgett's frogs are artificially engineered to resist heat and cold.</description>
@@ -132,7 +132,7 @@
 				<burstShotCount>7</burstShotCount>
 				<minRange>1</minRange>
 				<range>25</range>				
-				<soundCast>Frog_Angry</soundCast>
+				<soundCast>ST_Frog_Angry</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 				<label>sonic blast</label>
 				<commonality>1</commonality>
@@ -350,24 +350,24 @@
 		<specialTrainables MayRequire="ludeon.rimworld.odyssey">
 			<li MayRequire="ludeon.rimworld.odyssey">WarTrumpet</li> <!-- REEEEE!!! -->
 		</specialTrainables>
-		<lifeStageAges>
+		<lifeStageAges Inherit="False">
 			<li>
 				<def>AnimalBaby</def>
 				<minAge>0</minAge>
-				<soundAngry>Frog_Angry</soundAngry>
+				<soundAngry>ST_Frog_Angry</soundAngry>
 			</li>
 			<li>
 				<def>AnimalJuvenile</def>
 				<minAge>0.091</minAge>
-				<soundAngry>Frog_Angry</soundAngry>
+				<soundAngry>ST_Frog_Angry</soundAngry>
 			</li>
 			<li>
 				<def>AnimalAdult</def>
 				<minAge>0.25</minAge>
-				<soundWounded>Frog_Angry</soundWounded>
+				<soundWounded>ST_Frog_Angry</soundWounded>
 				<soundDeath>Pawn_Iguana_Death</soundDeath>
 				<soundCall>Pawn_Iguana_Call</soundCall>
-				<soundAngry>Frog_Angry</soundAngry>
+				<soundAngry>ST_Frog_Angry</soundAngry>
 			</li>
 		</lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -400,7 +400,7 @@
   </ThingDef>
   
   
-  <PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
     <defName>BudgettFrog</defName>
     <label>Grand Budgett's frog</label>
     <race>BudgettFrog</race>

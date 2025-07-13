@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef Name="TSP_ST_AnimalFrog_ThingBase" ParentName="AnimalThingBase" Abstract="True">
+		<race>
+			<body>ST_FrogLike</body>
+			<nameGenerator>FrogNamerMale</nameGenerator>
+			<nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
+			<foodType>OmnivoreRoughAnimal, Kibble</foodType>
+			<!-- <meatLabel>frog meat</meatLabel> -->
+			<useMeatFrom>ST_BullFrog</useMeatFrom>
+			<leatherDef>Leather_Frog</leatherDef>
+			<waterSeeker MayRequire="ludeon.rimworld.odyssey">true</waterSeeker>
+			<waterCellCost MayRequire="ludeon.rimworld.odyssey">1</waterCellCost>
+		</race>
+		<tradeTags>
+			<li>AnimalFrog</li>
+			<li>StorytimeAnimal</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<PawnKindDef Name="TSP_ST_Frog_Pawn_Base" ParentName="AnimalKindBase" Abstract="True">
+		<combatPower>15</combatPower>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<moveSpeedFactorByTerrainTag MayRequire="ludeon.rimworld.odyssey">
+		  <li MayRequire="ludeon.rimworld.odyssey">
+			<key MayRequire="ludeon.rimworld.odyssey">Water</key>
+			<value MayRequire="ludeon.rimworld.odyssey">1.25</value>
+		  </li>
+		</moveSpeedFactorByTerrainTag>
+	</PawnKindDef>
+</Defs>

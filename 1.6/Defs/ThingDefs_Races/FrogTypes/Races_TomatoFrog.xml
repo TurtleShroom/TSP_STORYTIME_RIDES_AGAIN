@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<ThingDef ParentName="AnimalThingBase">
+	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>TomatoFrog</defName>
 		<label>tomato frog</label>
 		<description>A red frog. Its name comes from the bio-engineered, edible cysts that grow on its back, which look and taste like tomatoes. These can painlessly be cut off of the frog when fully grown. Tomato frogs are more resistent to hot temperatures than most frogs.</description>
@@ -293,7 +293,7 @@
 		  <lifeExpectancy>8</lifeExpectancy>
 		  <manhunterOnDamageChance>0.3</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
-			<lifeStageAges>
+			<lifeStageAges Inherit="False">
 				<li>
 					<def>AnimalBaby</def>
 					<minAge>0</minAge>
@@ -308,7 +308,7 @@
 					<soundWounded>Pawn_Iguana_Wounded</soundWounded>
 					<soundDeath>Pawn_Iguana_Death</soundDeath>
 					<soundCall>Pawn_Iguana_Call</soundCall>
-					<soundAngry>Frog_Angry</soundAngry>
+					<soundAngry>ST_Frog_Angry</soundAngry>
 				</li>
 			</lifeStageAges>
 		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -341,7 +341,7 @@
   </ThingDef>
   
   
-  <PawnKindDef ParentName="AnimalKindBase">
+  <PawnKindDef ParentName="TSP_ST_Frog_Pawn_Base">
     <defName>TomatoFrog</defName>
     <label>Tomato Frog</label>
     <race>TomatoFrog</race>
