@@ -62,11 +62,11 @@
 						<li MayRequire="Ludeon.Rimworld.Biotech">Child</li>
 					</bodyTypes>
 					<bodyAddons></bodyAddons>
-					<customDrawSize>(0.5, 0.5)</customDrawSize>
-					<customHeadDrawSize>(0.87, 0.87)</customHeadDrawSize>
+					<customDrawSize>(0.55, 0.55)</customDrawSize>
+					<customHeadDrawSize>(0.875, 0.875)</customHeadDrawSize>
 					<customPortraitDrawSize>(0.91, 0.91)</customPortraitDrawSize>
 					<customPortraitHeadDrawSize>(0.92, 0.92)</customPortraitHeadDrawSize>
-					<headOffset>(0.0, -0.016)</headOffset>
+					<headOffset>(-0.001, -0.0156)</headOffset>
 					<colorChannels>
 						<li>
 							<name>skin</name>
@@ -176,11 +176,49 @@
 				<head>
 					<!-- <path>Things/Pawn/Humanlike/Heads/</path> -->
 					<extendedGraphics>
-						<HeadType For="Male_NarrowPointy">
+						<Age For="HumanlikeBaby">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Child</path>
+							<!-- nested settings can go here -->
+						</Age>
+						<Age For="HumanlikeChild">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Child</path>
+							<!-- nested settings can go here -->
+						</Age>
+						<HeadType For="Male_AverageNormal">
 							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Male_Normal_Average</path>
 						</HeadType>
-						<HeadType For="Female_NarrowPointy">
+						<HeadType For="Male_NarrowPointy">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
+						</HeadType>
+						<HeadType For="Male_AveragePointy">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Male_Normal_Average</path>
+						</HeadType>
+						<HeadType For="Male_AverageWide">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Male_Normal_Wide</path>
+						</HeadType>
+						<HeadType For="Male_NarrowNormal">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
+						</HeadType>
+						<HeadType For="Male_NarrowWide">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
+						</HeadType>
+						<HeadType For="Male_AverageNormal">
 							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Female_Normal_Average</path>
+						</HeadType>
+						<HeadType For="Female_NarrowPointy">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
+						</HeadType>
+						<HeadType For="Female_AveragePointy">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Female_Normal_Average</path>
+						</HeadType>
+						<HeadType For="Female_AverageWide">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Female_Normal_Wide</path>
+						</HeadType>
+						<HeadType For="Female_NarrowNormal">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
+						</HeadType>
+						<HeadType For="Female_NarrowWide">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
 						</HeadType>
 					</extendedGraphics>
 				</head>
@@ -256,6 +294,7 @@
 					<key>HairDef</key>
 					<value>
 						<hasStyle>true</hasStyle>
+						<genderRespected>true</genderRespected>
 					</value>
 				</li>
 				<li>
@@ -267,6 +306,7 @@
 							<li>Moustache</li>
 							<li>NoBeard</li>
 						</bannedTags>
+						<genderRespected>true</genderRespected>
 						<!-- options for BeardDef usage -->
 					</value>
 				</li>
@@ -280,6 +320,20 @@
 					<li MayRequire="sera.apinialienrace">ApiniMake_NectarAny</li>
 					<li MayRequire="sera.apinialienrace">ApiniMake_BulkNectarAny</li>
 				</whiteRecipeList>
+				<blackGeneTags MayRequire="Ludeon.RimWorld.Biotech">
+					<li>Furskin</li>
+					<li>AG_Body</li>
+					<li>AG_BodyType</li>
+					<li>AG_Bodies</li>
+					<li>Head</li>
+					<li>AG_Heads</li>
+					<li>Fur</li>
+				</blackGeneTags>
+				<blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
+					<li>Jaw</li>
+					<li>Head</li>
+					<li>BodyType</li>
+				</blackEndoCategories>
 			</raceRestriction>
 		</alienRace>
 		<statBases>
@@ -372,15 +426,15 @@
 			<body>GnomeBody</body>
 			<baseBodySize>0.5</baseBodySize>
 			<baseHealthScale>0.75</baseHealthScale>
-			<baseHungerRate>0.7</baseHungerRate>
+			<baseHungerRate>1.01</baseHungerRate>
 			<foodType>Meat, VegetableOrFruit, OmnivoreHuman, Fluid, Processed, Meal, Liquor, Kibble</foodType>
-			<gestationPeriodDays>30</gestationPeriodDays>
+			<gestationPeriodDays>10</gestationPeriodDays>
 			<litterSizeCurve>
 				<points>
 					<li>(0.5, 0)</li>
 					<li>(1, 0.01)</li>
 					<li>(1.01, 1)</li>
-					<li>(2, 0.5)</li>
+					<li>(2, 0.85)</li>
 					<li>(3.5, 0.1)</li>
 				</points>
 			</litterSizeCurve>
@@ -412,7 +466,7 @@
 				<Doctor>14</Doctor>
 				<PatientBedRest>0</PatientBedRest>
 				<Childcare MayRequire="Ludeon.Rimworld.Biotech">0</Childcare>
-				<BasicWorker>3</BasicWorker>
+				<BasicWorker>2</BasicWorker>
 				<Warden>18</Warden>
 				<Handling>7</Handling>
 				<Cooking>0</Cooking>
@@ -440,12 +494,12 @@
 				<points>
 					<li>(0,0)</li>
 					<li MayRequire="Ludeon.Rimworld.Biotech">(0.001,0.43)</li>
-					<li MayRequire="Ludeon.Rimworld.Biotech">(8,26)</li>
-					<li MayRequire="Ludeon.Rimworld.Biotech">(12.5,48)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+					<li MayRequire="Ludeon.Rimworld.Biotech">(8,6)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(12.5,0)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
 					<li MayRequire="Ludeon.Rimworld.Biotech">(12.51,0)</li>  
 					<li MayRequire="Ludeon.Rimworld.Biotech">(13,1)</li>      
-					<li MayRequire="Ludeon.Rimworld.Biotech">(13.001,52)</li><!-- End exclude -->
-					<li MayRequire="Ludeon.Rimworld.Biotech">(13.999,50)</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">(13.001,0)</li><!-- End exclude -->
+					<li MayRequire="Ludeon.Rimworld.Biotech">(13.999,0)</li>
 					<li MayRequire="Ludeon.Rimworld.Biotech">(14,0)</li>
 					<li MayRequire="Ludeon.Rimworld.Biotech">(14.001,0)</li>
 					<li>(16,10)</li>

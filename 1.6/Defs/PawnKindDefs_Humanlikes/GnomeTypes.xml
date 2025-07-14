@@ -69,7 +69,7 @@
 		<initialResistanceRange>5~10</initialResistanceRange>
 	</PawnKindDef>
   
-  <PawnKindDef ParentName="ST_Character_Gnome">
+  <PawnKindDef ParentName="BasePlayerGnomePawnKind">
     <defName>PlayerGnome</defName>
     <label>Gnome colonist</label>
 	<!--
@@ -437,7 +437,7 @@
 		<combatPower>10</combatPower>
 		<!-- <defaultFactionType>TreeGnomeEmpire</defaultFactionType> -->
 		<apparelIgnoreSeasons Inherit="False">true</apparelIgnoreSeasons>
-		<backstoryFilters Inherit="False" IsNull="True"></backstoryFilters>
+		<!-- <backstoryFilters Inherit="False" IsNull="True"></backstoryFilters> -->
 		<backstoryFiltersOverride Inherit="False">
 			<li>
 				<categories>
@@ -447,22 +447,9 @@
 		</backstoryFiltersOverride>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
 		<apparelMoney Inherit="False"> <!-- They wear nothing else but the apparel below -->
-			<min Inherit="False">99999</min>
-			<max Inherit="False">99999</max>
+			<min Inherit="False">0</min>
+			<max Inherit="False">0</max>
 		</apparelMoney>
-		<!--
-		<specificApparelRequirements Inherit="False">
-		  <li>
-			<colorGenerator Class="ColorGenerator_Options">
-			  <options>
-				<li>
-					<only>(69,193,69)</only> Neon green
-				</li>
-			  </options>
-			</colorGenerator>
-		  </li>
-		</specificApparelRequirements>
-		-->
 		<apparelRequired Inherit="False">
 			<li Inherit="False">ST_GnomeHat</li>
 			<li Inherit="False">GnomeGoggles</li>

@@ -176,11 +176,49 @@
 				<head>
 					<!-- <path>Things/Pawn/Humanlike/Heads/</path> -->
 					<extendedGraphics>
-						<HeadType For="Male_NarrowPointy">
+						<Age For="HumanlikeBaby">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Child</path>
+							<!-- nested settings can go here -->
+						</Age>
+						<Age For="HumanlikeChild">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Child</path>
+							<!-- nested settings can go here -->
+						</Age>
+						<HeadType For="Male_AverageNormal">
 							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Male_Normal_Average</path>
 						</HeadType>
-						<HeadType For="Female_NarrowPointy">
+						<HeadType For="Male_NarrowPointy">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
+						</HeadType>
+						<HeadType For="Male_AveragePointy">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Male_Normal_Average</path>
+						</HeadType>
+						<HeadType For="Male_AverageWide">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Male_Normal_Wide</path>
+						</HeadType>
+						<HeadType For="Male_NarrowNormal">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
+						</HeadType>
+						<HeadType For="Male_NarrowWide">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
+						</HeadType>
+						<HeadType For="Male_AverageNormal">
 							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Female_Normal_Average</path>
+						</HeadType>
+						<HeadType For="Female_NarrowPointy">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
+						</HeadType>
+						<HeadType For="Female_AveragePointy">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Female_Normal_Average</path>
+						</HeadType>
+						<HeadType For="Female_AverageWide">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Female_Normal_Wide</path>
+						</HeadType>
+						<HeadType For="Female_NarrowNormal">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
+						</HeadType>
+						<HeadType For="Female_NarrowWide">
+							<path>Things/Pawn/Humanlike/Buster/Children/Heads/Unisex_Narrow</path>
 						</HeadType>
 					</extendedGraphics>
 				</head>
@@ -280,6 +318,20 @@
 					<li MayRequire="sera.apinialienrace">ApiniMake_NectarAny</li>
 					<li MayRequire="sera.apinialienrace">ApiniMake_BulkNectarAny</li>
 				</whiteRecipeList>
+				<blackGeneTags MayRequire="Ludeon.RimWorld.Biotech">
+					<li>Furskin</li>
+					<li>AG_Body</li>
+					<li>AG_BodyType</li>
+					<li>AG_Bodies</li>
+					<li>Head</li>
+					<li>AG_Heads</li>
+					<li>Fur</li>
+				</blackGeneTags>
+				<blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
+					<li>Jaw</li>
+					<li>Head</li>
+					<li>BodyType</li>
+				</blackEndoCategories>
 			</raceRestriction>
 		</alienRace>
 		<statBases>

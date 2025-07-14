@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- This code was provided by the user 'I Exist', and then butchered and simplified on Dub's Discord chat room by Kyoutaigo -->
+
+<Patch>
+	<!--
+	<Operation Class="PatchOperationConditional">
+	 Does this exist?
+		<xpath>/Defs/ThingDef[defName="VCE_Cheese"]</xpath>
+		If it does, LET'S FASTING GOOOOOOOOOO!!!
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCE_Cheese"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_Cheese"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_Cheese"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	-->
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="ST_ProcessedCheese"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ST_ProcessedCheese"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="ST_ProcessedCheese"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="ST_ProcessedCheese"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
