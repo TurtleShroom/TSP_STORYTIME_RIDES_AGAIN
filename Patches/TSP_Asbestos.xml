@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]/stockGenerators</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]</xpath>
+			<success>Always</success>
+			<value>
+				<stockGenerators></stockGenerators>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]/stockGenerators</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd"> 
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Fiber</thingDef>
+					<countRange>35~50</countRange>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Mining"]/stockGenerators</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd"> 
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Mining"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Fiber</thingDef>
+					<countRange>40~75</countRange>
+				</li>
+				
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Tile</thingDef>
+					<countRange>-1~25</countRange>
+				</li>
+				
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Shell</thingDef>
+					<countRange>0~5</countRange>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd"> 
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Fiber</thingDef>
+					<countRange>4000~7500</countRange>
+				</li>
+				
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Tile</thingDef>
+					<countRange>100~205</countRange>
+				</li>
+				
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Shell</thingDef>
+					<countRange>0~1</countRange>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Mining"]/stockGenerators</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd"> 
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Orbital_Mining"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Fiber</thingDef>
+					<countRange>4000~7500</countRange>
+				</li>
+				
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Tile</thingDef>
+					<countRange>100~205</countRange>
+				</li>
+				
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Shell</thingDef>
+					<countRange>25~50</countRange>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]/stockGenerators</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd"> 
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_SingleDef" MayRequire="tsp.isengriff.storytime">
+					<thingDef>Asbestos_Fiber</thingDef>
+					<countRange>35~50</countRange>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

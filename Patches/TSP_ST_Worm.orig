@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ST_Worm"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ST_Worm"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="ST_Worm"]/thingCategories</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="ST_Worm"]/thingCategories</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories Inherit="False">
+					<li>MeatRaw</li>
+				</thingCategories>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

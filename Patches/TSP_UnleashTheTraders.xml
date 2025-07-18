@@ -60,4 +60,18 @@
 			<TSP_ST_ALBARRY_StephenColbert_Frog>0.05</TSP_ST_ALBARRY_StephenColbert_Frog>
 		</value>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TraderKindDef[defName="Base_Outlander_Standard"]</xpath>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TraderKindDef[defName = * and not(defName = "Empire_Caravan_TributeCollector")]/stockGenerators</xpath>
+			<value>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>TSP_ST_Asbestos</tag>
+				</li>
+			</value>
+		</match>
+	</Operation>
 </Patch>

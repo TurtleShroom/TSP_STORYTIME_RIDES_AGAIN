@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="BaseInsect">
+		<defName>TSP_ST_WormGenerator_Mothership</defName>
+		<label>Worm Sign</label>
+		<description>Worms are any of the various slender, soft-bodied animals that live by burrowing underground, swimming in water, or as parasites. They have cylindrical, tube-like bodies and have no limbs. Notably, the most abundant creature called a "worm" are the creatures of the Annelid taxonomic phylum, all of which are segmented. The most famous of these are the earthworms, which were among the earliest creatures seeded by man in planets across the galaxy, some by accident.</description>
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<ToxicEnvironmentResistance MayRequire="ludeon.rimworld.biotech">1</ToxicEnvironmentResistance>
+			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
+		</statBases>
+		<tools>
+			<li>
+				<label>sign post</label>
+				<capacities>
+					<li>Poke</li>
+					<li>Stab</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>sign BOARD</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+		</tools>
+		<race>
+			<body>ST_Rock</body>
+			<baseBodySize>0.19</baseBodySize>
+			<baseHungerRate>0</baseHungerRate>
+			<baseHealthScale>1</baseHealthScale>
+			<fleshType>Insectoid</fleshType>
+			<bloodDef>Filth_BloodInsect</bloodDef>
+			<meatColor>(160,168,139)</meatColor>
+			<meatMarketValue>0.01</meatMarketValue>
+			<foodType>Corpse</foodType>
+			<specificMeatDef>ST_Worm</specificMeatDef>
+			<leatherDef>ST_Worm</leatherDef>
+			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0</manhunterOnDamageChance>
+			<alwaysAwake>true</alwaysAwake>
+			<needsRest>false</needsRest>
+			<hasGenders>false</hasGenders>
+			<baseBodySize>0.1</baseBodySize>
+			<baseHungerRate>0</baseHungerRate>
+			<baseHealthScale>100</baseHealthScale>
+			<lifeExpectancy>5000</lifeExpectancy>
+			<roamMtbDays>0.2</roamMtbDays>
+			<predator>false</predator> <!-- Doesn't need sustinance -->
+			<canBePredatorPrey>false</canBePredatorPrey> <!-- Inedible -->
+			<hasCorpse>false</hasCorpse>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>ChunkRock_Drop</soundWounded>
+					<soundCall>ChunkRock_Drop</soundCall>
+					<soundDeath>ChunkRock_Drop</soundDeath>
+					<soundAngry>ChunkRock_Drop</soundAngry> 
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn Inherit="False">ChunkRock_Drop</soundMeleeHitPawn>
+			<soundMeleeHitBuilding Inherit="False">ChunkRock_Drop</soundMeleeHitBuilding>
+			<soundMeleeMiss Inherit="False">ChunkRock_Drop</soundMeleeMiss>   
+		</race>
+		<ingredient>
+			<mergeCompatibilityTags>
+				<li>InsectMeat</li>
+			</mergeCompatibilityTags>
+		</ingredient>
+		<tradeTags Inherit="False"></tradeTags>
+		<thingCategories Inherit="False"></thingCategories>
+	</ThingDef>
+</Defs>
