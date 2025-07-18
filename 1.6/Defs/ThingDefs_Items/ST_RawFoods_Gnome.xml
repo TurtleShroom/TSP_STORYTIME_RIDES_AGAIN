@@ -16,7 +16,7 @@
 			<Nutrition>0.015</Nutrition> 
 		</statBases>
 		<smallVolume>true</smallVolume>
-		<stackLimit>1000</stackLimit>
+		<stackLimit>1750</stackLimit>
 		<comps>
 		  <li Class="CompProperties_Rottable">
 			<daysToRotStart>20</daysToRotStart>
@@ -29,11 +29,15 @@
 		<ingestible>
 			<preferability>DesperateOnlyForHumanlikes</preferability>
 			<foodType Inherit="False">Meat, CarnivoreAnimal, CarnivoreAnimalStrict, OmnivoreAnimal, OmnivoreRoughAnimal, OmnivoreHuman, Corpse, Kibble</foodType>
+			<ateEvent Inherit="False">AteInsectMeatDirect</ateEvent>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>
 			<optimalityOffsetHumanlikes>-20</optimalityOffsetHumanlikes>
 			<optimalityOffsetFeedingAnimals>25</optimalityOffsetFeedingAnimals>
+			<sourceDef Inherit="False">TSP_ST_WormGenerator_Mothership</sourceDef>
 		</ingestible>
 		<ingredient>
-			<mergeCompatibilityTags MayRequire="Ludeon.RimWorld.Ideology">
+			<mergeCompatibilityTags>
 				<li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li> <!-- Not actually insects, but they give the same reaction if you suggest eating them. -->
 			</mergeCompatibilityTags>
 		</ingredient>

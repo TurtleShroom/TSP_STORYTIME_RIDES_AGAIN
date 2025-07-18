@@ -147,7 +147,7 @@
 			<xpath MayRequire="romyashi.toxins">/Defs/ThingDef[defName="Romy_Toxipod"]/plant/sowResearchPrerequisites</xpath>
 			<value MayRequire="romyashi.toxins">
 				<sowResearchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 				</sowResearchPrerequisites>
 			</value>
 		</match>
@@ -164,7 +164,7 @@
 			<value>
 				<researchPrerequisites Inherit="False">
 					<li>ToxGas</li>
-					<!-- <li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li> -->
+					<!-- <li MayRequire="TSP.BathroomHumor">WasteContainment</li> -->
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ComplexRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -774,7 +774,7 @@
 			<xpath>/Defs/ThingDef[defName="WasteCanister"]</xpath>
 			<success>Always</success>
 			<value>
-				<stacklimit>725</stacklimit>
+				<stackLimit>725</stackLimit>
 			</value>
 		</nomatch>
 	</Operation>
@@ -906,7 +906,7 @@
 			<value>
 				<researchPrerequisites>
 					<li>StandardMechtech</li>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 				</researchPrerequisites>
 			</value>
 		</match>
@@ -958,7 +958,7 @@
 			<value>
 				<researchPrerequisites>
 					<li>HighMechtech</li>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 				</researchPrerequisites>
 			</value>
 		</match>
@@ -1010,7 +1010,7 @@
 			<value>
 				<researchPrerequisites>
 					<li>StandardMechtech</li>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 				</researchPrerequisites>
 			</value>
 		</match>
@@ -1079,7 +1079,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName = "PolutionPoweredGenerator" or defName = "PortablePolutionPoweredGenerator" or defName = "IndustrialPolutionPoweredGenerator"]/comps/li/fuelFilter/thingDefs</xpath>
 			<value>
-				<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+				<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
 				<li MayRequire="dubwise.dubsbadhygiene">BedPan</li>
@@ -1099,7 +1099,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName = "EW_WasteTap" or defName = "EW_WasteBin"]/building/fixedStorageSettings/filter/thingDefs</xpath>
 			<value>
-				<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+				<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
 				<li MayRequire="dubwise.dubsbadhygiene">BedPan</li>
@@ -1120,7 +1120,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName = "EW_WasteTap" or defName = "EW_WasteBin"]/building/defaultStorageSettings/filter/thingDefs</xpath>
 			<value>
-				<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+				<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
 				<!-- <li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li> -->
 				<li MayRequire="dubwise.dubsbadhygiene">BedPan</li>
@@ -1154,7 +1154,7 @@
 						<fuelFilter>
 							<thingDefs>
 								<li>Wastepack</li>
-								<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+								<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 								<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
 								<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
 								<li MayRequire="dubwise.dubsbadhygiene">BedPan</li>
@@ -1269,7 +1269,7 @@
 			<success>Always</success>
 			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]/prerequisites</xpath>
 			<value>
-				<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+				<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 				<!-- <li MayRequire="ludeon.rimworld.biotech">ToxGas</li> -->
 			</value>
 		</match>
@@ -1287,14 +1287,14 @@
 					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Wastepack"]</xpath>
 					<success>Always</success>
 					<value>
-						<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+						<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
 					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Wastepack"]</xpath>
 					<success>Always</success>
 					<value>
-						<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+						<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 					</value>
 				</li>
 			</operations>
@@ -1351,7 +1351,7 @@
 			<xpath>/Defs/ResearchProjectDef[defName="ToxifierGenerator"]/prerequisites</xpath>
 			<value>
 				<prerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
 					<li>Electricity</li>
 				</prerequisites>
@@ -1369,7 +1369,7 @@
 			<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
 			<value>
 				<prerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li>Machining</li>
 				</prerequisites>
 			</value>
@@ -1388,7 +1388,7 @@
 				<prerequisites>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 					<li MayRequire="bazel.toxgenplus.2">WasteUtility</li>
-					<!-- <li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li> -->
+					<!-- <li MayRequire="TSP.BathroomHumor">WasteContainment</li> -->
 					<!-- <li MayRequire="ludeon.rimworld.biotech">ToxGas</li> -->
 					<!-- <li>Electricity</li> -->
 				</prerequisites>
@@ -1795,7 +1795,7 @@
 			<value>
 				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_Trash</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
-				<li MayRequire="punkyroo.containtoxicwaste">WasteCanister</li>
+				<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_NightFrog_Venom</li>
 				<li MayRequire="dubwise.dubsbadhygiene">BedPan</li>
@@ -1993,7 +1993,7 @@
 			<xpath>/Defs/RecipeDef[defName="BIN-I"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="ludeon.rimworld.biotech">BasicMechtech</li>
 				</researchPrerequisites>
 			</value>
@@ -2010,7 +2010,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_reactivewastebarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2021,7 +2021,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_reactivewastebarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2038,7 +2038,7 @@
 			<xpath>/Defs/RecipeDef[defName="Recycle_ChembarrelIntoChemfuel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2049,7 +2049,7 @@
 			<xpath>/Defs/RecipeDef[defName="Recycle_ChembarrelIntoChemfuel"]</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2066,7 +2066,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_unreactivewastebarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2077,7 +2077,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_unreactivewastebarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2094,7 +2094,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_isoto_barrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2105,7 +2105,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_isoto_barrel"]</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2122,7 +2122,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_unisoto_barrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2133,7 +2133,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_unisoto_barrel"]</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2150,7 +2150,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_untoxicwastebarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2161,7 +2161,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_untoxicwastebarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2178,7 +2178,7 @@
 			<xpath>/Defs/RecipeDef[defName="Recycle_WastebarrelIntotoxbarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2189,7 +2189,7 @@
 			<xpath>/Defs/RecipeDef[defName="Recycle_WastebarrelIntotoxbarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2206,7 +2206,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_toxicwastebarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2217,7 +2217,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_toxicwastebarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2234,7 +2234,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_toxbarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2245,7 +2245,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_toxbarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2262,7 +2262,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_untoxbarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -2273,7 +2273,7 @@
 			<xpath>/Defs/RecipeDef[defName="Make_untoxbarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
-					<li MayRequire="punkyroo.containtoxicwaste">WasteContainment</li>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 				</researchPrerequisites>
 			</value>

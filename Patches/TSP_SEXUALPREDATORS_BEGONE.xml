@@ -443,4 +443,48 @@
 			</value>
 		</nomatch>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]/apparel</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]</xpath>
+			<value>
+				<apparel></apparel>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]/apparel</xpath>
+			<value>
+				<gender>Female</gender>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]/apparel</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]</xpath>
+			<value>
+				<apparel></apparel>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]/apparel/gender</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]/apparel</xpath>
+			<value>
+				<gender>Female</gender>
+			</value>
+		</nomatch>
+	</Operation>
 </Patch>

@@ -74,22 +74,24 @@
  <ThingDef ParentName="ResourceBase">
     <defName>Flesh_Brick</defName>
     <label>Flesh Brick</label>
-    <description>Meat that has been reshaped into a rectangular shape, baked, and then sealed to prevent rot. It can be used to build anything that needs stone, and has an amazing, marbled red coloring. In ordinary circumstances, this would be beautiful, but people still see something slightly "off" about it.</description>
+    <description>Meat that has been reshaped into a rectangular shape, baked, and then sealed to prevent rot. It can be used to build anything that needs stone, and has an amazing, marbled red coloring. Flesh bricks are brittle, making structures built with them about fifty percent weaker, and they serve as poor materials blunt instruments, so do not use them to make clubs. In ordinary circumstances, this would be beautiful, but people still see something slightly "off" about it, making anything made out of flesh bricks twenty percent less beautiful than other items.</description>
     <graphicData>
       <texPath>Things/Items/Resources/MeatBrick</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
 	  <color>(165,42,42)</color>
     </graphicData>
-    <useHitPoints>false</useHitPoints>
+    <useHitPoints>true</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
     <soundInteract>Corpse_Drop</soundInteract>
     <soundDrop>Corpse_Drop</soundDrop>
     <statBases>
-      <MarketValue>1</MarketValue>
-      <Mass>0.5</Mass>
-      <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
-      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
-      <BluntDamageMultiplier>0.5</BluntDamageMultiplier>
+		<MaxHitPoints>60</MaxHitPoints>
+		<MarketValue>1</MarketValue>
+		<Mass>0.07</Mass>
+		<Flammability>0.6</Flammability>
+		<StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
+		<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+		<BluntDamageMultiplier>0.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
       <li>ResourcesRaw</li>
@@ -113,11 +115,11 @@
         <Beauty>-0.5</Beauty>
       </statOffsets>
       <statFactors>
-        <MaxHitPoints>0.5</MaxHitPoints>
+        <MaxHitPoints>0.56</MaxHitPoints>
         <WorkToMake>0.7</WorkToMake>
         <WorkToBuild>0.8</WorkToBuild>
-        <Beauty>-0.2</Beauty>
-        <Flammability>0</Flammability>
+        <Beauty>0.8</Beauty> <!-- Beauty is decreased by twenty percent -->
+        <Flammability>0.6</Flammability>
         <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
       </statFactors>
     </stuffProps>
@@ -137,8 +139,9 @@
       <Flesh_Brick>4</Flesh_Brick>
     </costList>
 	<statBases>
-      <WorkToBuild>50</WorkToBuild>
-      <Beauty>-2</Beauty>
+		<MarketValue>0</MarketValue>
+		<WorkToBuild>50</WorkToBuild>
+		<Beauty>-2</Beauty>
     </statBases>
   </TerrainDef>
   

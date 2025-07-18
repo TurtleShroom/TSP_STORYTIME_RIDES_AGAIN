@@ -33,9 +33,11 @@
 				<categories>
 					<li>Offworld</li>
 					<li>HSAU_BS_FRK_Childhood</li>
-					<li>ESCP_GenericBackstory_ChildhoodSkoomaAddict</li>
 					<li>HSAU_Backstory_AlucardYouth</li>
 				</categories>
+				<categoriesChildhood MayRequire="escp.racetools">
+					<li MayRequire="escp.racetools">ESCP_GenericBackstory_ChildhoodSkoomaAddict</li>
+				</categoriesChildhood>
 				<commonality>1</commonality>
 			</li>
 			<li>
@@ -66,7 +68,7 @@
 					<li>HSAU_BS_MLN_ChildhoodGerman</li>
 					<li>HSAU_BS_MLN_ChildhoodEarth</li>
 					<li>HSAU_BS_FRK_Childhood</li>
-					<li>ESCP_GenericBackstory_ChildhoodSkoomaAddict</li>
+					<li MayRequire="escp.racetools">ESCP_GenericBackstory_ChildhoodSkoomaAddict</li>
 				</categoriesChildhood>
 				<commonality>2.33</commonality>
 			</li>
@@ -126,7 +128,6 @@
 					<TSP_ST_Patreonling_Jeub>20</TSP_ST_Patreonling_Jeub>
 					<TSP_ST_Patreonling_Gnome>20</TSP_ST_Patreonling_Gnome>
 					<TSP_ST_Patreonling_Marksman>10</TSP_ST_Patreonling_Marksman>
-					<!-- <TSP_ST_Patreonling_Pacifist>1</TSP_ST_Patreonling_Pacifist> -->
 					<Villager>1</Villager>
 					<Town_Guard>10</Town_Guard>
 					<Grenadier_Destructive>5</Grenadier_Destructive>
@@ -134,7 +135,6 @@
 					<Mercenary_Gunner>5</Mercenary_Gunner>
 					<Mercenary_Elite>10</Mercenary_Elite>
 					<Town_Councilman>1</Town_Councilman>
-					<!-- <TSP_ST_ARK_Ark1_Patreonling_Pacifist MayRequire="owen.ark">1</TSP_ST_ARK_Ark1_Patreonling_Pacifist> -->
 					<TSP_ST_ARK_Ark2_Patreonling MayRequire="owen.ark">15</TSP_ST_ARK_Ark2_Patreonling>
 					<TSP_ST_Ghoul_Patreonling MayRequire="baskerville.hellsingarmsultimate">10</TSP_ST_Ghoul_Patreonling>
 					<TSP_ST_HSAU_Patroenling_HeckDiver MayRequire="baskerville.hellsingarmsultimate">8</TSP_ST_HSAU_Patroenling_HeckDiver>
@@ -154,7 +154,7 @@
 					<Grenadier_Destructive>25</Grenadier_Destructive>
 					<Mercenary_Elite>1</Mercenary_Elite>
 					<Bear_Polar>425</Bear_Polar>
-					<JE_PerfectlyNormalJoris MayRequire="sarg.jorisexperience">235</JE_PerfectlyNormalJoris>
+					<JE_PerfectlyNormalJoris MayRequire="sarg.jorisexperience">300</JE_PerfectlyNormalJoris>
 					<VFEM2_Trader MayRequire="oskarpotocki.vfe.medieval2">10</VFEM2_Trader>
 					<VFEM2_Merchant MayRequire="oskarpotocki.vfe.medieval2">10</VFEM2_Merchant>
 				</options>
@@ -196,7 +196,18 @@
 				</options>
 			</li>
 			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>35</commonality>
+				<options>
+					<VFEM2_Merchant MayRequire="oskarpotocki.vfe.medieval2">100</VFEM2_Merchant>
+					<JE_PerfectlyNormalJoris MayRequire="sarg.jorisexperience">35</JE_PerfectlyNormalJoris>
+					<VFEM2_Merchant MayRequire="oskarpotocki.vfe.medieval2">10</VFEM2_Merchant>
+					<Bear_Polar>1</Bear_Polar>
+				</options>
+			</li>
+			<li>
 				<kindDef>Peaceful</kindDef>
+				<commonality>100</commonality>
 				<options>
 					<TSP_ST_Patreonling_Pacifist>20</TSP_ST_Patreonling_Pacifist>
 					<Villager>10</Villager>
@@ -224,11 +235,19 @@
 				</options>
 			</li>
 			<li>
+				<kindDef>Peaceful</kindDef>
+				<commonality>15</commonality>
+				<options>
+					<TSP_ST_Patreonling_Pacifist>1</TSP_ST_Patreonling_Pacifist>
+					<TSP_ST_ARK_Ark1_Patreonling_Pacifist MayRequire="owen.ark">1</TSP_ST_ARK_Ark1_Patreonling_Pacifist>
+				</options>
+			</li>
+			<li>
 				<kindDef>Trader</kindDef>
+				<commonality>100</commonality>
 				<traders>
 					<Town_Trader>1</Town_Trader>
 					<VFEM2_Trader MayRequire="oskarpotocki.vfe.medieval2">100</VFEM2_Trader>
-					<VFEM2_Merchant MayRequire="oskarpotocki.vfe.medieval2">100</VFEM2_Merchant>
 				</traders>
 				<carriers>
 					<Muffalo>0.001</Muffalo>
@@ -248,6 +267,24 @@
 					<JE_PerfectlyNormalJoris MayRequire="sarg.jorisexperience">50</JE_PerfectlyNormalJoris>
 					<VFEM2_Trader MayRequire="oskarpotocki.vfe.medieval2">18</VFEM2_Trader>
 					<VFEM2_Merchant MayRequire="oskarpotocki.vfe.medieval2">18</VFEM2_Merchant>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<commonality>100</commonality>
+				<traders>
+					<Town_Trader>1</Town_Trader>
+					<VFEM2_Trader MayRequire="oskarpotocki.vfe.medieval2">100</VFEM2_Trader>
+				</traders>
+				<carriers>
+					<Muffalo>0.001</Muffalo>
+					<Elephant>2000</Elephant>
+				</carriers>
+				<guards>
+					<Bear_Polar>500</Bear_Polar>
+					<JE_PerfectlyNormalJoris MayRequire="sarg.jorisexperience">500</JE_PerfectlyNormalJoris>
+					<VFEM2_Trader MayRequire="oskarpotocki.vfe.medieval2">0.01</VFEM2_Trader>
+					<VFEM2_Merchant MayRequire="oskarpotocki.vfe.medieval2">0.01</VFEM2_Merchant>
 				</guards>
 			</li>
 			<li>
@@ -409,9 +446,9 @@
 				<BEWH_KhorneCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.051</BEWH_KhorneCultist>
 				<BEWH_ChaosCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.2</BEWH_ChaosCultist>
 				<OE_Tortle MayRequire="obsidiaexpansion.xenos.tortle,ludeon.rimworld.biotech" Inherit="False">0.1</OE_Tortle>
-				<DV_Bogleg MayRequire="det.boglegs,ludeon.rimworld.biotech">0.2</DV_Bogleg>
+				<DV_Bogleg MayRequire="det.boglegs,ludeon.rimworld.biotech">0.12</DV_Bogleg>
 				<MorrowRim_AshlanderXenotype MayRequire="sirmashedpotato.morrowrim.ashlanderxenotype,ludeon.rimworld.biotech">0.021</MorrowRim_AshlanderXenotype>
-				<Weezey MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech" Inherit="False">0.18</Weezey>
+				<Weezey MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech" Inherit="False">0.1</Weezey>
 				<Tallhuman MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech" Inherit="False">0.08</Tallhuman>
 				<Neco MayRequire="neco.genes,ludeon.rimworld.biotech">0.04</Neco>
 			</xenotypeChances>

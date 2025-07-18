@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<ThingDef ParentName="BasePawn" Name="ST_MiracleAnimal" Abstract="True">
+	<ThingDef ParentName="KomodonBasePawn" Name="ST_MiracleAnimal" Abstract="True">
 		<statBases>
 			<MeatAmount>100</MeatAmount>
 			<LeatherAmount>100</LeatherAmount>
@@ -23,6 +23,9 @@
 			<hediffGiverSets>
 				<li>ST_IchorBeing</li>
 			</hediffGiverSets>
+			<specialTrainables>
+				<li MayRequire="Ludeon.RimWorld.Odyssey">AttackTarget</li>
+			</specialTrainables>
 		</race>
 		<thingCategories>
 		  <li>Animals</li>
@@ -37,6 +40,17 @@
 		  <li>Sterilize</li>
 		  <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
 		</recipes>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.CompProperties_NoFilth" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
+			<li Class="VEF.AnimalBehaviours.CompProperties_Regeneration" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+				<rateInTicks>100</rateInTicks>
+			</li>	
+			<li Class="VEF.AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="vanillaracesexpanded.archon">
+				<hediffname MayRequire="vanillaracesexpanded.archon">VRE_Transcendent</hediffname>
+				<hediffseverity MayRequire="vanillaracesexpanded.archon">1</hediffseverity>
+			</li>
+		</comps>
 		<modExtensions>
 			<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 				<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
@@ -59,12 +73,6 @@
 			<FlightCooldown MayRequire="ludeon.rimworld.odyssey">1</FlightCooldown>
 		</statBases>
 		<comps>
-			<li Class="VEF.AnimalBehaviours.CompProperties_NoFilth" MayRequire="oskarpotocki.vanillafactionsexpanded.core"></li>
-			<li Class="VEF.AnimalBehaviours.CompProperties_Regeneration" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-				<rateInTicks>100</rateInTicks>
-			</li>	
-			<li Class="VEF.AnimalBehaviours.CompProperties_Floating" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-			</li>
 			<li Class="VEF.AnimalBehaviours.CompProperties_AsexualReproduction" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<reproductionIntervalDays>30</reproductionIntervalDays>
 				<customString>Cloning in:</customString>
@@ -73,10 +81,6 @@
 				<radius>5</radius>
 				<needsToBeTamed>true</needsToBeTamed>
 				<tickInterval>600</tickInterval>	
-			</li>
-			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="vanillaracesexpanded.archon">
-				<hediffname MayRequire="vanillaracesexpanded.archon">VRE_Transcendent</hediffname>
-				<hediffseverity MayRequire="vanillaracesexpanded.archon">1</hediffseverity>
 			</li>
 		</comps>
 		<tools>

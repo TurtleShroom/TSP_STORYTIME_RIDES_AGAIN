@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[@Name="VCE_CookHauteMealBase"]/recipeUsers</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[@Name="VCE_CookHauteMealBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<recipeUsers></recipeUsers>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[@Name="VCE_CookHauteMealBase"]/recipeUsers</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[@Name="VCE_CookHauteMealBase"]/recipeUsers</xpath>
+			<value>
+				<li>GnomeTable</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[@Name="CookMealLuxuryBase"]/recipeUsers</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[@Name="CookMealLuxuryBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<recipeUsers></recipeUsers>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[@Name="CookMealLuxuryBase"]/recipeUsers</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[@Name="CookMealLuxuryBase"]/recipeUsers</xpath>
+			<value>
+				<li>GnomeTable</li>
+				<li MayRequire="vanillaexpanded.vcookehaute">VCE_ElectricHauteSection</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
