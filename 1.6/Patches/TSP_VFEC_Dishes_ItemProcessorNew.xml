@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- The SYR Universal Processor Mod is better!! -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_Cheese"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOO! -->
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<PipeSystem.ProcessDef>
+							<defName>TSP_ST_CHEESE_BORPA_CHEESE_PROCESS</defName>
+							<label>CHEESE BORPA CHEESE</label>
+							<description>Turns Borpa Milk into Borpa Cheese! Borpa cheese matures faster than most cheeses, at the cost of it taking more Borpa milk to make less cheese. It tastes divine.</description>
+							<labelOverride>Fifty Borpa Milk to fifteen BORPA CHEESE</labelOverride>
+							<!-- <priorityInBillList>0</priorityInBillList> -->
+							<spawnOnInteractionCell>true</spawnOnInteractionCell>
+							<useIngredients>true</useIngredients>
+							<ingredients>
+								<li>
+									<thing>BORPA_Milk</thing>
+									<countNeeded>50</countNeeded>
+								</li>
+							</ingredients>
+							<ticksQuality>
+								<li>60000</li> <!-- AWFUL = One day -->
+								<li>180000</li> <!-- POOR = Three days -->
+								<li>300000</li> <!-- NORMAL = Five days -->
+								<li>960000</li> <!-- GOOD = Sixteen days -->
+								<li>1800000</li> <!-- EXCELLENT = Thirty days -->
+								<li>2220000</li> <!-- MASTERPIECE = Thirty-seven days -->
+								<li>2580000</li> <!-- LEGENDARY = Forty-seven days -->
+							</ticksQuality>
+							<results>
+								<li>
+									<thing>VCE_Cheese</thing>
+									<count>15</count>
+								</li>
+							</results>
+							<stopAtQuality>false</stopAtQuality>
+							<allowExtractAtCurrentQuality>true</allowExtractAtCurrentQuality>
+							<autoExtract>false</autoExtract>
+							<temperatureRuinable>false</temperatureRuinable>
+						</PipeSystem.ProcessDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<PipeSystem.ProcessDef>
+							<defName>TSP_ST_VFEC_GeckoGouda_Combination</defName>
+							<label>Gecko Gouda Cheese</label>
+							<description>Turns Green Milk into Gecko Gouda Cheese! Gecko Gouda Cheese matures faster than most cheeses, at the cost of it taking more Green Milk to make less cheese. It tastes very, very similar to gouda cheese made from milk, hence its name.</description>
+							<labelOverride>Fifty Green Milk to fifteen Gecko Gouda Cheese</labelOverride>
+							<!-- <priorityInBillList>0</priorityInBillList> -->
+							<spawnOnInteractionCell>true</spawnOnInteractionCell>
+							<useIngredients>true</useIngredients>
+							<ingredients>
+								<li>
+									<thing>ST_Green_Milk</thing>
+									<countNeeded>50</countNeeded>
+								</li>
+							</ingredients>
+							<ticksQuality>
+								<li>60000</li> <!-- AWFUL = One day -->
+								<li>180000</li> <!-- POOR = Three days -->
+								<li>300000</li> <!-- NORMAL = Five days -->
+								<li>960000</li> <!-- GOOD = Sixteen days -->
+								<li>1800000</li> <!-- EXCELLENT = Thirty days -->
+								<li>2220000</li> <!-- MASTERPIECE = Thirty-seven days -->
+								<li>2580000</li> <!-- LEGENDARY = Forty-seven days -->
+							</ticksQuality>
+							<results>
+								<li>
+									<thing>TSP_ST_VFEC_GreenCheese</thing>
+									<count>15</count>
+								</li>
+							</results>
+							<stopAtQuality>false</stopAtQuality>
+							<allowExtractAtCurrentQuality>true</allowExtractAtCurrentQuality>
+							<autoExtract>false</autoExtract>
+							<temperatureRuinable>false</temperatureRuinable>
+						</PipeSystem.ProcessDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName= "VCE_CheesePress"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
+					<value>
+						<li>TSP_ST_CHEESE_BORPA_CHEESE_PROCESS</li>
+						<li>TSP_ST_VFEC_GeckoGouda_Combination</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<success>Always</success>
+					<value>
+						<PipeSystem.ProcessDef>
+							<defName>TSP_ST_SOUP_BORPA_SOUP_PROCESS</defName>
+							<label>SOUP BORPA SOUP</label>
+							<description>Cook raw Borpa Eye Soup into ten instances of lavish Borpa Eye Soup.</description>
+							<labelOverride>Cook Borpa Eye Soup</labelOverride>
+							<spawnOnInteractionCell>true</spawnOnInteractionCell>
+							<autoExtract>false</autoExtract>
+							<useIngredients>true</useIngredients>
+							<transfersIngredientList>true</transfersIngredientList>
+							<!-- <priorityInBillList>2</priorityInBillList> -->
+							<ingredients>
+								<li>
+									<thing>TSP_ST_VFEC_Soup_BorpaEye_Soup_Raw</thing>
+									<countNeeded>1</countNeeded>
+								</li>
+							</ingredients>
+							<ticks>105000</ticks> <!-- Should be 1.75 days -->
+							<results>
+								<li>
+									<thing>TSP_ST_SOUP_BORPA_EYE_SOUP</thing>
+									<count>10</count>
+								</li>
+							</results>
+							<noPowerDestroysProgress>true</noPowerDestroysProgress>
+							<noPowerDestroysMessage>VCE_SoupFailurePower</noPowerDestroysMessage>
+							<noPowerDestroysInitialWarning>VCE_SoupFailurePowerWarning</noPowerDestroysInitialWarning>
+							<rareTicksToDestroy>80</rareTicksToDestroy>
+							<destroyIngredientsOnStart>true</destroyIngredientsOnStart>
+						</PipeSystem.ProcessDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VCE_ElectricPot"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
+					<value>
+						<li>TSP_ST_SOUP_BORPA_SOUP_PROCESS</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

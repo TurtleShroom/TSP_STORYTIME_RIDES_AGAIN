@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_Cheese"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOO! -->
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!--
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ItemProcessor.CombinationDef>
+							<defName>TSP_ST_CHEESE_BORPA_CHEESE_PROCESS</defName>
+							<building>VCE_CheesePress</building>
+							<items>
+								<li>BORPA_Milk</li>
+							</items>	
+							<amount>
+								<li>50</li>
+							</amount>
+							<result>TSP_ST_VFEC_BORPA_CHEESE</result>	
+							<yield>10</yield>
+							<useQualityIncreasing>true</useQualityIncreasing>
+							<awfulQualityAgeDaysThreshold>1</awfulQualityAgeDaysThreshold>
+							<poorQualityAgeDaysThreshold>3</poorQualityAgeDaysThreshold>
+							<normalQualityAgeDaysThreshold>6</normalQualityAgeDaysThreshold>
+							<goodQualityAgeDaysThreshold>25</goodQualityAgeDaysThreshold>
+							<excellentQualityAgeDaysThreshold>30</excellentQualityAgeDaysThreshold>
+							<masterworkQualityAgeDaysThreshold>35</masterworkQualityAgeDaysThreshold>
+							<legendaryQualityAgeDaysThreshold>40</legendaryQualityAgeDaysThreshold>
+						</ItemProcessor.CombinationDef>
+					</value>
+				</li>
+				-->
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="MealBase">
+							<defName>TSP_ST_VFEC_BORPA_CHEESE</defName>
+							<label>Borpa cheese</label>
+							<description>Cheese formulated from the natural secretions of the skin of the Borpa. Borpa cheese matures faster than most cheeses, at the cost of it taking more Borpa milk to make less cheese. It tastes divine.</description>
+							<graphicData>
+								<texPath>Things/Items/Resources/Cheese/TSP_BorpaCheese</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<tradeability>All</tradeability>
+							<stackLimit>250</stackLimit>
+							<statBases>
+								<MarketValue>8</MarketValue>
+								<Nutrition>0.2</Nutrition>
+							</statBases>
+							<thingCategories Inherit="False">
+								<li>VCE_Cheese</li>
+							</thingCategories>
+							<ingestible>
+								<preferability>MealLavish</preferability>
+								<ingestEffect>EatMeat</ingestEffect>
+								<ingestSound>Meal_Eat</ingestSound>
+								<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+							</ingestible>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>110</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li>
+									<compClass>CompQuality</compClass>
+								</li>
+								<li Class="VEF.Cooking.CompProperties_StackByQuality"></li>
+								<li Class="VEF.Cooking.CompProperties_IngestedThoughtFromQuality">
+									<ingestedThought>VCE_AteCheese</ingestedThought>
+								</li>
+								<!--
+								<li Class="VanillaCookingExpanded.CompProperties_StackByQuality"></li>
+								<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+									<ingestedThought>VCE_AteCheese</ingestedThought>
+								</li>
+								-->
+							</comps>
+						</ThingDef>
+					</value>
+				</li>
+				
+				<!--
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/ItemProcessor.ItemAcceptedDef[defName = "IP_CheesePressFirstItem"]/items</xpath>
+					<value>
+						<li>BORPA_Milk</li>
+					</value>
+				</li>
+				-->
+				
+				<!--
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ItemProcessor.CombinationDef>
+							<defName>TSP_ST_VFEC_GeckoGouda_Combination</defName>
+							<building>VCE_CheesePress</building>
+							<items>
+								<li>ST_Green_Milk</li>
+							</items>	
+							<amount>
+								<li>50</li>
+							</amount>
+							<result>TSP_ST_VFEC_GreenCheese</result>	
+							<yield>10</yield>
+							<useQualityIncreasing>true</useQualityIncreasing>
+							<awfulQualityAgeDaysThreshold>1</awfulQualityAgeDaysThreshold>
+							<poorQualityAgeDaysThreshold>3</poorQualityAgeDaysThreshold>
+							<normalQualityAgeDaysThreshold>6</normalQualityAgeDaysThreshold>
+							<goodQualityAgeDaysThreshold>25</goodQualityAgeDaysThreshold>
+							<excellentQualityAgeDaysThreshold>30</excellentQualityAgeDaysThreshold>
+							<masterworkQualityAgeDaysThreshold>35</masterworkQualityAgeDaysThreshold>
+							<legendaryQualityAgeDaysThreshold>40</legendaryQualityAgeDaysThreshold>
+						</ItemProcessor.CombinationDef>
+					</value>
+				</li>
+				-->
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="MealBase">
+							<defName>TSP_ST_VFEC_GreenCheese</defName>
+							<label>Gecko gouda cheese</label>
+							<description>Cheese formulated from the milky pus extracted from the tail of an Engorged Leopard Gecko. Gecko gouda cheese matures faster than most cheeses, at the cost of it taking more Green Milk to make less cheese. It tastes very, very similar to gouda cheese made from milk, hence its name.</description>
+							<graphicData>
+								<texPath>Things/Items/Resources/Cheese/GoatGouda</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<tradeability>All</tradeability>
+							<stackLimit>250</stackLimit>
+							<statBases>
+								<MarketValue>8</MarketValue>
+								<Nutrition>0.2</Nutrition>
+							</statBases>
+							<thingCategories Inherit="False">
+								<li>VCE_Cheese</li>
+							</thingCategories>
+							<ingestible>
+								<preferability>MealLavish</preferability>
+								<ingestEffect>EatMeat</ingestEffect>
+								<ingestSound>Meal_Eat</ingestSound>
+								<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+							</ingestible>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>110</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li>
+									<compClass>CompQuality</compClass>
+								</li>
+								<li Class="VEF.Cooking.CompProperties_StackByQuality"></li>
+								<li Class="VEF.Cooking.CompProperties_IngestedThoughtFromQuality">
+									<ingestedThought>VCE_AteCheese</ingestedThought>
+								</li>
+								<!-- <li Class="VanillaCookingExpanded.CompProperties_StackByQuality" -->
+								<!--
+								<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
+									<ingestedThought>VCE_AteCheese</ingestedThought>
+								</li>
+								-->
+							</comps>
+						</ThingDef>
+					</value>
+				</li>
+				
+				<!--
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/ItemProcessor.ItemAcceptedDef[defName = "IP_CheesePressFirstItem"]/items</xpath>
+					<value>
+						<li>ST_Green_Milk</li>
+					</value>
+				</li>
+				-->
+				
+				<!--
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ItemProcessor.CombinationDef>
+							<defName>TSP_ST_SOUP_BORPA_SOUP_PROCESS</defName>
+							<building>VCE_ElectricPot</building>
+							<items>
+								<li>TSP_ST_VFEC_Soup_BorpaEye_Soup_Raw</li>
+							</items>	
+							<amount>
+								<li>1</li>
+							</amount>
+							<result>TSP_ST_SOUP_BORPA_EYE_SOUP</result>	
+							<yield>15</yield>
+							<useQualityIncreasing>false</useQualityIncreasing>
+							<singleTimeIfNotQualityIncreasing>1.75</singleTimeIfNotQualityIncreasing>
+						</ItemProcessor.CombinationDef>
+					</value>
+				</li>
+				-->
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="ResourceBase">
+							<defName>TSP_ST_VFEC_Soup_BorpaEye_Soup_Raw</defName>
+							<label>uncooked Borpa eye soup</label>
+							<description>The raw ingredients for the lavish Borpa eye soup. It must be inserted onto a cooking pot to be slow-cooked until it is ready to serve.</description>
+							<descriptionHyperlinks>
+								<ThingDef>TSP_ST_SOUP_BORPA_EYE_SOUP</ThingDef>
+							</descriptionHyperlinks>
+							<graphicData>
+								<texPath>Things/Item/Special/TSP_VFEC_BorpaEye_Soup_Uncooked</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+							</graphicData>
+							<tickerType>Rare</tickerType>
+							<statBases>
+								<DeteriorationRate>4</DeteriorationRate>
+								<MarketValue>4</MarketValue>
+								<Mass>4</Mass>
+								<WorkToMake>2450</WorkToMake>
+							</statBases>
+							<stackLimit Inherit="False">150</stackLimit>
+							<thingCategories Inherit="False">
+								<li MayRequire="vanillaexpanded.vcooke">VCE_UncookedSoups</li>
+							</thingCategories>
+							<comps>
+								<li Class="CompProperties_Rottable">
+									<daysToRotStart>4</daysToRotStart>
+									<rotDestroys>true</rotDestroys>
+								</li>
+								<li Class="CompProperties_Ingredients">
+									<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+								</li>
+							</comps>
+						</ThingDef>
+					</value>
+				</li>
+						
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="MealBase">
+							<defName>TSP_ST_SOUP_BORPA_EYE_SOUP</defName>
+							<label>Borpa eye soup</label>
+							<description>Meme lords all across the galaxy love to post edits and jokes about the lovable Borpa and its goofy eyes. What is less discussed, however, is how tasty those eyes are. When carefully prepared, the eyes produce a rich, flavorful base for a wonderful soup. Soup is the strong broth and liquid food that is prepared generally by boiling ingredients of some kind in water. Soup is traditionally served as a first course before a meat entree, but in this case, it is its own main course. Indeed, the lavish, indulgent flavors and aromas of Borpa eye soup are a delicacy on the Galactic Rim and Core Worlds alike.</description>
+							<descriptionHyperlinks>
+								<ThingDef>TSP_ST_VFEC_Soup_BorpaEye_Soup_Raw</ThingDef>
+							</descriptionHyperlinks>
+							<graphicData>
+								<texPath>Things/Item/Special/TSP_VFEC_BorpaEye_Soup_Cooked</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<drawSize>1.15</drawSize>
+							</graphicData>
+							<statBases>
+								<DeteriorationRate>4</DeteriorationRate>
+								<MarketValue>75</MarketValue>
+								<Mass>0.44</Mass>
+								<WorkToMake>2450</WorkToMake>
+								<Nutrition>1</Nutrition>
+							</statBases>
+							<ingestible>
+								<preferability>MealLavish</preferability>
+								<foodType>Meat, CarnivoreAnimal, OmnivoreHuman, OmnivoreAnimal, OmnivoreRoughAnimal, AnimalProduct, Meal, Processed</foodType>
+								<ingestEffect>EatVegetarian</ingestEffect>
+								<ingestSound>Ingest_Drink</ingestSound>
+								<!--
+								<joy>0.2</joy>
+								<joyKind>Gluttonous</joyKind>
+								-->
+								<outcomeDoers>
+									<li Class="IngestionOutcomeDoer_GiveHediff">
+										<hediffDef>TSP_ST_VFEC_Ate_BorpaEye_Soup</hediffDef>
+										<severity>1</severity>
+									</li>
+								</outcomeDoers>
+							</ingestible>
+							<thingCategories></thingCategories>
+							<comps>
+								<li Class="CompProperties_Ingredients">
+									<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+								</li>
+							</comps>
+							<tradeTags></tradeTags>
+							<modExtensions>
+								<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+									<water>2</water>
+									<UseForWashing>false</UseForWashing>
+									<SeekForThirst>false</SeekForThirst>
+								</li>
+							</modExtensions>
+						</ThingDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<RecipeDef>
+							<defName>TSP_ST_VFEC_Soup_BorpaEye_Soup_Recipe</defName>
+							<label>make Borpa eye soup</label>
+							<description>Soup is the strong broth and liquid food that is prepared generally by boiling ingredients of some kind in water. Borpa eye soup relies on Borpa eyes as the base for its broth stock, which flavors what goes in with it into a source of fine, heavenly cuisine. The lavish, indulgent flavors and aromas of Borpa eye soup are a delicacy on the Galactic Rim and Core Worlds alike. The product of this Recipe needs to be inserted in a soup pot to be slowly cooked to perfection.</description>
+							<jobString>Making Borpa eye soup.</jobString>
+							<workAmount>2450</workAmount>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<recipeUsers>
+								<li>FueledStove</li>
+								<li>ElectricStove</li>
+								<li>GnomeTable</li>
+								<li MayRequire="vanillaexpanded.vcooke,tsp.velcroboy333.medievalfestival.banquet">VBY_Spit_Roast</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>BORPA_BorpaEye</li>
+										</thingDefs>
+									</filter>
+									<count>0.41</count> <!-- Six Borpa Eyes -->
+								</li>
+								<li>
+									<filter>
+										<categories>
+											<li>MeatRaw</li>
+											<li>PlantFoodRaw</li>
+											<li>AnimalProductRaw</li>
+										</categories>
+									</filter>
+									<count>2</count>
+								</li>
+							</ingredients>
+							<products>
+								<TSP_ST_VFEC_Soup_BorpaEye_Soup_Raw>1</TSP_ST_VFEC_Soup_BorpaEye_Soup_Raw>
+							</products>
+							<fixedIngredientFilter>
+								<categories>
+									<li>MeatRaw</li>
+									<li>PlantFoodRaw</li>
+									<li>AnimalProductRaw</li>
+								</categories>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>MeatRaw</li>
+									<li>PlantFoodRaw</li>
+									<li>AnimalProductRaw</li>
+								</categories>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>WW_Sloodge</li>
+									<li MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</li>
+								</disallowedThingDefs>
+								<disallowedCategories>
+									<li>EggsFertilized</li>
+								</disallowedCategories>
+							</defaultIngredientFilter>
+							<workSkill>Cooking</workSkill>
+							<researchPrerequisites>
+								<li MayRequire="vanillaexpanded.vcooke">VCE_SoupCooking</li>
+								<li>advancedCooking</li>
+							</researchPrerequisites>
+						</RecipeDef>
+						
+						<RecipeDef>
+							<defName>TSP_ST_VFEC_Soup_BorpaEye_Soup_Bulk_Recipe</defName>
+							<label>make Borpa eye soup in bulk (x4)</label>
+							<description>Soup is the strong broth and liquid food that is prepared generally by boiling ingredients of some kind in water. Borpa eye soup relies on Borpa eyes as the base for its broth stock, which flavors what goes in with it into a source of fine, heavenly cuisine. The lavish, indulgent flavors and aromas of Borpa eye soup are a delicacy on the Galactic Rim and Core Worlds alike. The product of this Recipe needs to be inserted in a soup pot to be slowly cooked to perfection.</description>
+							<jobString>Making Borpa eye soup.</jobString>
+							<workAmount>3855</workAmount>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<recipeUsers>
+								<li>FueledStove</li>
+								<li>ElectricStove</li>
+								<li>GnomeTable</li>
+								<li MayRequire="vanillaexpanded.vcooke,tsp.velcroboy333.medievalfestival.banquet">VBY_Spit_Roast</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>BORPA_BorpaEye</li>
+										</thingDefs>
+									</filter>
+									<count>0.68</count> <!-- Ten Borpa Eyes -->
+								</li>
+								<li>
+									<filter>
+										<categories>
+											<li>MeatRaw</li>
+										</categories>
+									</filter>
+									<count>1</count>
+								</li>
+								<li>
+									<filter>
+										<categories>
+											<li>PlantFoodRaw</li>
+										</categories>
+									</filter>
+									<count>1</count>
+								</li>
+								<li>
+									<filter>
+										<categories>
+											<li>AnimalProductRaw</li>
+										</categories>
+									</filter>
+									<count>1</count>
+								</li>
+							</ingredients>
+							<products>
+								<TSP_ST_VFEC_Soup_BorpaEye_Soup_Raw>4</TSP_ST_VFEC_Soup_BorpaEye_Soup_Raw>
+							</products>
+							<fixedIngredientFilter>
+								<categories>
+									<li>MeatRaw</li>
+									<li>PlantFoodRaw</li>
+									<li>AnimalProductRaw</li>
+								</categories>
+								<thingDefs>
+									<li>BORPA_BorpaEye</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>MeatRaw</li>
+									<li>PlantFoodRaw</li>
+									<li>AnimalProductRaw</li>
+								</categories>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>WW_Sloodge</li>
+									<li MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</li>
+								</disallowedThingDefs>
+								<disallowedCategories>
+									<li>EggsFertilized</li>
+								</disallowedCategories>
+								<thingDefs>
+									<li>BORPA_BorpaEye</li>
+								</thingDefs>
+							</defaultIngredientFilter>
+							<workSkill>Cooking</workSkill>
+							<researchPrerequisites>
+								<li MayRequire="vanillaexpanded.vcooke">VCE_SoupCooking</li>
+								<li>advancedCooking</li>
+							</researchPrerequisites>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<HediffDef>
+							<defName>TSP_ST_VFEC_Ate_BorpaEye_Soup</defName>
+							<label>Ate Borpa Eye Soup</label>
+							<description>Ate Borpa eye soup!</description>		
+							<initialSeverity>1</initialSeverity>
+							<defaultLabelColor>(0,128,128)</defaultLabelColor>
+							<hediffClass>HediffWithComps</hediffClass>
+							<isBad>false</isBad>
+							<scenarioCanAdd>false</scenarioCanAdd>
+							<everCurableByItem>false</everCurableByItem>
+							<comps>
+								<li Class="HediffCompProperties_SeverityPerDay">
+									<severityPerDay>-1.0</severityPerDay>
+									<showHoursToRecover>true</showHoursToRecover>
+								</li>
+								<li Class="HediffCompProperties_Disappears">
+									<disappearsAfterTicks>
+										<min>60050</min>
+										<max>60100</max>
+									</disappearsAfterTicks>
+								</li>
+							</comps>
+							<stages>
+								<li>
+									<minSeverity>0</minSeverity>
+									<label>feels good, man</label>
+									<capMods>
+										<li>
+											<capacity>Sight</capacity>
+											<offset>2</offset>
+										</li>
+										<li>
+											<capacity>Moving</capacity>
+											<offset>0.2</offset>
+										</li>
+									</capMods>
+									<statOffsets>
+										<MoveSpeed>3</MoveSpeed>
+									</statOffsets>
+								</li>
+							</stages>
+							<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+						</HediffDef>
+					  
+						<ThoughtDef>
+							<defName>TSP_VFEC_Ate_BorpaEye_Soup_Hediff_Bonus</defName>
+							<workerClass>ThoughtWorker_Hediff</workerClass>
+							<hediff>TSP_ST_VFEC_Ate_BorpaEye_Soup</hediff>
+							<stages>
+							  <li>
+								<label>Ate Borpa Eye Soup</label>
+								<description>Borpa eye soup tastes incredible! I love this delicious delicacy! Feels good, man!</description>
+								<baseMoodEffect>15</baseMoodEffect>
+							  </li>
+							</stages>
+						</ThoughtDef>
+					</value>
+				</li>
+				
+				<!--
+				<li Class="PatchOperationAdd"> 
+					<success>Always</success>
+					<xpath>/Defs/ItemProcessor.ItemAcceptedDef[defName = "IP_ElectricPotFirstItem"]/items</xpath>
+					<value>
+						<li>TSP_ST_VFEC_Soup_BorpaEye_Soup_Raw</li>
+					</value>
+				</li>
+				-->
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+
