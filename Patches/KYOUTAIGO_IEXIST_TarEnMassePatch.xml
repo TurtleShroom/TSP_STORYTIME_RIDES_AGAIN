@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Tar"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_Tar"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+						<li MayRequire="sumika.nanohana">PlantOil</li>
+						<li MayRequire="lyinlen.crusaderwhale">CW_WhaleOil</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Coal</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_Tar"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+						<li MayRequire="sumika.nanohana">PlantOil</li>
+						<li MayRequire="lyinlen.crusaderwhale">CW_WhaleOil</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Coal</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_Tar"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+						<li MayRequire="sumika.nanohana">PlantOil</li>
+						<li MayRequire="lyinlen.crusaderwhale">CW_WhaleOil</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Coal</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_Tar"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+						<li MayRequire="sumika.nanohana">PlantOil</li>
+						<li MayRequire="lyinlen.crusaderwhale">CW_WhaleOil</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Coal</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_Tar"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+						<li MayRequire="sumika.nanohana">PlantOil</li>
+						<li MayRequire="lyinlen.crusaderwhale">CW_WhaleOil</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Coal</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_Tar"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+						<li MayRequire="sumika.nanohana">PlantOil</li>
+						<li MayRequire="lyinlen.crusaderwhale">CW_WhaleOil</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Coal</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/ThingDef/comps/li/fuelFilter/thingDefs/li[text()="DankPyon_Tar"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+						<li MayRequire="sumika.nanohana">PlantOil</li>
+						<li MayRequire="lyinlen.crusaderwhale">CW_WhaleOil</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Coal</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_Coal"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+						<li MayRequire="sumika.nanohana">PlantOil</li>
+						<li MayRequire="lyinlen.crusaderwhale">CW_WhaleOil</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Tar</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_Coal"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+						<li MayRequire="sumika.nanohana">PlantOil</li>
+						<li MayRequire="lyinlen.crusaderwhale">CW_WhaleOil</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Tar</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_Coal"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+						<li MayRequire="sumika.nanohana">PlantOil</li>
+						<li MayRequire="lyinlen.crusaderwhale">CW_WhaleOil</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Tar</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/ThingDef/comps/li/fuelFilter/thingDefs/li[text()="DankPyon_Coal"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>Chemfuel</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/ThingDef/comps/li/fuelFilter/thingDefs/li[text()="Chemfuel"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Coal</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

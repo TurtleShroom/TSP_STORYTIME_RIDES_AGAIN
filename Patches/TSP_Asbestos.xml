@@ -129,4 +129,75 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TerrainDef[defName="VFEM2_Matting_Burned"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd"> 
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<TerrainDef ParentName="FloorBase">
+					<defName>TSP_ST_VFEM2_Matting_Asbestos</defName>
+					<label>asbestine matting</label>
+					<description>Rough matting made from interwoven asbestos fibers. It's rustic, cozy, and boosts the beauty of the room it's in. Unlike most carpet, asbestine matting is never, ever flammable.</description>
+					<texturePath>Terrains/Matting</texturePath>
+					<color>(145,157,118)</color>
+					<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+					<burnedDef>VFEM2_Matting_Burned</burnedDef>
+					<!-- <designatorDropdown>VFEM2_Floor_Matting</designatorDropdown> -->
+					<costList>
+						<Asbestos_Fiber>5</Asbestos_Fiber>
+					</costList>
+					<tags>
+						<li>Floor</li>
+					</tags>
+					<researchPrerequisites>
+						<li>VFEM2_MedievalArchitecture</li>
+					</researchPrerequisites>
+					<statBases>
+						<MarketValue>0</MarketValue>
+						<Beauty>2</Beauty>
+						<Flammability>0</Flammability>
+						<WorkToBuild>800</WorkToBuild>
+						<CleaningTimeFactor>1.05</CleaningTimeFactor>
+					</statBases>
+					<uiOrder>1999</uiOrder>
+					<!-- <renderPrecedenceStart>200</renderPrecedenceStart> -->
+				</TerrainDef>
+				
+				<TerrainDef ParentName="FloorBase">
+					<defName>TSP_ST_VFEM2_Matting_Asbestos_Deluxe</defName>
+					<label>fine asbestine matting</label>
+					<description>Luxurious, beautifull patterned matting made from interwoven asbestine fibers. It's rustic, cozy, and greatly boosts the beauty of the room it's in. Unlike most carpet, asbestine matting is never, ever flammable.</description>
+					<ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+					<burnedDef>VFEM2_Matting_Burned</burnedDef>
+					<!-- <designatorDropdown>VFEM2_Floor_Matting</designatorDropdown> -->
+					<texturePath>Terrains/FineMatting</texturePath>
+					<color>(145,157,118)</color>
+					<costList>
+						<Asbestos_Fiber>20</Asbestos_Fiber>
+					</costList>
+					<tags>
+						<li>Floor</li>
+						<li>FloorFine</li>
+					</tags>
+					<researchPrerequisites>
+						<li>VFEM2_MedievalArchitecture</li>
+					</researchPrerequisites>
+					<statBases>
+						<MarketValue>1</MarketValue>
+						<Beauty>4</Beauty>
+						<Flammability>0</Flammability>
+						<WorkToBuild>990</WorkToBuild>
+						<CleaningTimeFactor>1.05</CleaningTimeFactor>
+					</statBases>
+					<uiOrder>1999</uiOrder>
+					<!-- <renderPrecedenceStart>200</renderPrecedenceStart> -->
+				</TerrainDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

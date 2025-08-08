@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="EMWH_ChemInjector_GoJuice"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<!-- EMWH_ChemInjector_EggNog -->
+				<HediffDef ParentName="ImplantHediffBase">
+					<defName>TSP_ST_EMWH_ChemInjector_EggNog_Hediff</defName>
+					<hediffClass>MIM40kFactions.Cybernetics.Hediff_ChemInjector</hediffClass>
+					<!-- <defaultLabelColor>(153, 17, 21)</defaultLabelColor> -->
+					<label>festive Chem-Injector - EggNog</label>
+					<labelNoun>a blessing from Nog Man</labelNoun>
+					<description>An automatic internal pump and storage apparatus that directly release chemicals or hormones into the blood stream. Many who rely on pharmacological boosts in combat have taken this implant, allowing them to inject themselves as needed with the chemicals they crave. Some absolute mad lad figured out he could feed himself egg nog this way. How festive!</description>
+					<descriptionHyperlinks>
+						<ThingDef>TSP_ST_EMWH_ChemInjector_EggNog_Item</ThingDef>
+						<ThingDef>ST_EggNog</ThingDef>
+						<HediffDef>HediffEggNog</HediffDef>
+						<HediffDef>EggNogAddiction</HediffDef>
+						<RecipeDef>TSP_ST_Install_EMWH_ChemInjector_EggNog_InstallImplant</RecipeDef>
+					</descriptionHyperlinks>
+					<spawnThingOnRemoved>TSP_ST_EMWH_ChemInjector_EggNog_Item</spawnThingOnRemoved>
+					<tags>
+						<li>EMWH_ChemInjector_EggNog</li>
+					</tags>
+					<comps>
+						<li Class="HediffCompProperties_ReactOnDamage">
+							<damageDefIncoming>EMP</damageDefIncoming>
+							<createHediff>BrainShock</createHediff>
+						</li>
+						<li Class="MIM40kFactions.Cybernetics.HediffCompProperties_GiveDrugHediffs">
+							<hediffHigh>
+								<hediffDef>HediffEggNog</hediffDef>
+							</hediffHigh>
+							<hediffAddiction>
+								<hediffDef>EggNogAddiction</hediffDef>
+							</hediffAddiction>
+						</li>
+					</comps>
+					<modExtensions>
+						<li Class="MIM40kFactions.Cybernetics.ChemInjectorExtension">
+							<chemicalThingDef>ST_EggNog</chemicalThingDef>
+							<drugHighHediffDef>HediffEggNog</drugHighHediffDef>
+							<chemical>EggNogChemical</chemical>
+							<addictiveness>0.05</addictiveness>
+							<!-- <minToleranceToAddict>0</minToleranceToAddict> -->
+							<existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
+							<needLevelOffset>2</needLevelOffset>
+							<isCombatEnhancingDrug>true</isCombatEnhancingDrug>				
+						</li>
+					</modExtensions>
+				</HediffDef>
+
+				<ThingDef ParentName="EMWH_CyberneticsThingKindBase">
+					<defName>TSP_ST_EMWH_ChemInjector_EggNog_Item</defName>
+					<label>festive Chem-Injector - EggNog</label>
+					<description>A chem injector - Go-juice. Many Heretics who rely on pharmacological boosts in combat have taken this implant, allowing them to inject themselves as needed with the chemicals they crave.</description>
+					<descriptionHyperlinks>
+						<HediffDef>TSP_ST_EMWH_ChemInjector_EggNog_Hediff</HediffDef>
+						<ThingDef>ST_EggNog</ThingDef>
+						<HediffDef>HediffEggNog</HediffDef>
+						<HediffDef>EggNogAddiction</HediffDef>
+						<RecipeDef>TSP_ST_Install_EMWH_ChemInjector_EggNog_InstallImplant</RecipeDef>
+					</descriptionHyperlinks>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>nogAlchemy</li>
+						</researchPrerequisites>
+					</recipeMaker>
+					<costList>
+						<ST_EggNog>90</ST_EggNog>
+						<Plasteel>10</Plasteel>
+						<ComponentIndustrial>25</ComponentIndustrial>
+					</costList>
+					<thingSetMakerTags>
+						<li>RewardStandardLowFreq</li>
+					</thingSetMakerTags>
+					<statBases>
+						<MarketValue>5000</MarketValue>
+						<Mass>0.3</Mass>
+					</statBases>
+					<techHediffsTags>
+						<li>EMWH_ChemInjector_EggNog</li>
+					</techHediffsTags>
+					<tradeTags>
+						<li>EggNog</li>
+					</tradeTags>
+				</ThingDef>
+
+				<RecipeDef ParentName="SurgeryInstallImplantBase">
+					<defName>TSP_ST_Install_EMWH_ChemInjector_EggNog_InstallImplant</defName>
+					<label>install festive Chem-Injector - EggNog</label>
+					<description>Nog Man would be pleased.</description>
+					<descriptionHyperlinks>
+						<ThingDef>TSP_ST_EMWH_ChemInjector_EggNog_Item</ThingDef>
+						<ThingDef>ST_EggNog</ThingDef>
+						<HediffDef>HediffEggNog</HediffDef>
+						<HediffDef>EggNogAddiction</HediffDef>
+						<HediffDef>TSP_ST_EMWH_ChemInjector_EggNog_Hediff</HediffDef>
+					</descriptionHyperlinks>
+					<jobString>Pleasing Nog Man with brain implants.</jobString>
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>TSP_ST_EMWH_ChemInjector_EggNog_Item</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<thingDefs>
+							<li>TSP_ST_EMWH_ChemInjector_EggNog_Item</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<appliedOnFixedBodyParts>
+						<li>Brain</li>
+						<li>Stomach</li>
+					</appliedOnFixedBodyParts>
+					<addsHediff>TSP_ST_EMWH_ChemInjector_EggNog_Hediff</addsHediff>
+					<researchPrerequisites>
+						<li>nogAlchemy</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="EMWH_ChemInjector_GoJuice"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Human"]/recipes</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">TSP_ST_Install_EMWH_ChemInjector_EggNog_InstallImplant</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_BladeTines</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_GoJuice</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_Alcohol</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_Ambrosia</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_Flake</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_Yayo</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_WakeUp</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_SmokeleafJoint</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="EMWH_ChemInjector_GoJuice"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[@Name="AnimalBase"]/recipes</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">TSP_ST_Install_EMWH_ChemInjector_EggNog_InstallImplant</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_BladeTines</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_GoJuice</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_Alcohol</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_Ambrosia</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_Flake</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_Yayo</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_WakeUp</li>
+				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">InstallEMWH_ChemInjector_SmokeleafJoint</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

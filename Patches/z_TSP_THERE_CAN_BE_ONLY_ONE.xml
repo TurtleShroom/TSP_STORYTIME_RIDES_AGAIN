@@ -181,7 +181,7 @@
 			<xpath>/Defs/PipeSystem.ProcessDef[defName="AC_CabbageIntoSauerkraut"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
-					<li>cabbageCultivation</li>
+					<!-- <li>cabbageCultivation</li> -->
 					<li>advancedCooking</li>
 					<!-- <li MayRequire="sarg.alphacrafts">AC_ArtisanalFermentation</li> -->
 				</researchPrerequisites>
@@ -1324,4 +1324,293 @@
 			</value>
 		</nomatch>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/BiomeDef/wildPlants/DankPyon_Tree_Lemon</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/BiomeDef/wildPlants/DankPyon_Tree_Lemon</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/BiomeDef/wildPlants/DankPyon_Plant_Cabbages</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/BiomeDef/wildPlants/DankPyon_Plant_Cabbages</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DankPyon_Plant_Cabbages"]/plant/harvestedThingDef</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_Plant_Cabbages"]/plant/harvestedThingDef</xpath>
+			<success>Always</success>
+			<value>
+				<harvestedThingDef>ST_Cabbage</harvestedThingDef>
+			</value>
+		</match>
+		<!--If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DankPyon_Tree_Lemon"]/plant/harvestedThingDef</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_Tree_Lemon"]/plant/harvestedThingDef</xpath>
+			<success>Always</success>
+			<value>
+				<harvestedThingDef>ST_Lemon</harvestedThingDef>
+			</value>
+		</match>
+		<!--If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="DankPyon_Plant_Cabbages"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="DankPyon_Plant_Cabbages"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="DankPyon_Tree_Lemon"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="DankPyon_Tree_Lemon"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef/plant/sowTags</xpath>
+		<!-- If it does, insert this in the same bracket as the XPATH. -->
+		<match Class="PatchOperationInsert">
+			<xpath>/Defs/ThingDef/plant/sowTags/li[text()="DankPyon_VinePost"]</xpath>
+			<success>Always</success>
+			<value>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</value>
+		</match>
+		<!--If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+  <Operation Class="PatchOperationConditional">
+    <!-- Does this exist? -->
+    <xpath>/Defs/ThingDef[defName="DankPyon_RawMulberry"]</xpath>
+    <!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+    <match Class="PatchOperationSequence">
+      <!-- <success>Always</success> -->
+      <operations>
+        <li Class="PatchOperationInsert">
+          <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawCabbages"]</xpath>
+          <success>Always</success>
+          <value>
+            <li>ST_Cabbage</li>
+          </value>
+        </li>
+        <li Class="PatchOperationInsert">
+          <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawCabbages"]</xpath>
+          <success>Always</success>
+          <value>
+			<li>ST_Cabbage</li>
+          </value>
+        </li>
+        <li Class="PatchOperationInsert">
+          <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawCabbages"]</xpath>
+          <success>Always</success>
+          <value>
+			<li>ST_Cabbage</li>
+          </value>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>/Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="DankPyon_RawCabbages"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>/Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="DankPyon_RawCabbages"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawCabbages"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawCabbages"]</xpath>
+		</li>
+		<li Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/costList/DankPyon_RawCabbages</xpath>
+			<value>
+				<ST_Cabbage>12</ST_Cabbage>
+			</value>
+		</li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>/Defs/ThingDef[defName="DankPyon_RawCabbages"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <success>Always</success>
+          <xpath>/Defs</xpath>
+          <value>
+				<ThingDef ParentName="BaseFilth">
+					<defName>DankPyon_RawCabbages</defName>
+					<label>Medieval Overhaul cabbage (ERROR)</label>
+					<category>Filth</category>
+					<description>The Storytime Rides Again Mod adds cabbages to the game, and removes the version of the cabbage from the Medieval Overhaul Mod. If this faggotry is ever encountered in the game as an item, you are seeing an error. Please report it to TurtleShroom.</description>
+					<graphicData>
+						<texPath>Things/Item/Resource/PlantFoodRaw/RawCabbage</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+					</graphicData>
+					<altitudeLayer>Filth</altitudeLayer>
+					<selectable>true</selectable>
+					<statBases>
+						<Flammability>0</Flammability>
+					</statBases>
+					<filth Inherit="False">
+						<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+						<disappearsInDays>0.001~0.05</disappearsInDays>
+						<rainWashes>true</rainWashes>
+						<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+						<canFilthAttach>false</canFilthAttach>
+						<cleaningSound Inherit="False">Vomit</cleaningSound>
+					</filth>
+				</ThingDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  
+  
+  <Operation Class="PatchOperationConditional">
+    <!-- Does this exist? -->
+    <xpath>/Defs/ThingDef[defName="DankPyon_RawMulberry"]</xpath>
+    <!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+    <match Class="PatchOperationSequence">
+      <!-- <success>Always</success> -->
+      <operations>
+        <li Class="PatchOperationInsert">
+          <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawLemons"]</xpath>
+          <success>Always</success>
+          <value>
+            <li>ST_Lemon</li>
+          </value>
+        </li>
+        <li Class="PatchOperationInsert">
+          <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawLemons"]</xpath>
+          <success>Always</success>
+          <value>
+			<li>ST_Lemon</li>
+          </value>
+        </li>
+        <li Class="PatchOperationInsert">
+          <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawLemons"]</xpath>
+          <success>Always</success>
+          <value>
+			<li>ST_Lemon</li>
+          </value>
+        </li>
+        <li Class="PatchOperationInsert">
+          <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawLemons"]</xpath>
+          <success>Always</success>
+          <value>
+			<li>ST_Lemon</li>
+          </value>
+        </li>
+        <li Class="PatchOperationInsert">
+          <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawLemons"]</xpath>
+          <success>Always</success>
+          <value>
+			<li>ST_Lemon</li>
+            <li MayRequire="vanillaexpanded.vbrewe">VBE_Gin</li>
+			<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
+          </value>
+        </li>
+        <li Class="PatchOperationInsert">
+          <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawLemons"]</xpath>
+          <success>Always</success>
+          <value>
+			<li>ST_Lemon</li>
+			<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
+          </value>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>/Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="DankPyon_RawLemons"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>/Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="DankPyon_RawLemons"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawLemons"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawLemons"]</xpath>
+        </li>
+		<li Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef/costList/DankPyon_RawLemons</xpath>
+			<value>
+				<ST_Lemon>5</ST_Lemon>
+			</value>
+		</li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>/Defs/ThingDef[defName="DankPyon_RawLemons"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <success>Always</success>
+          <xpath>/Defs</xpath>
+          <value>
+            <!-- Now we add it back -->
+            <ThingDef ParentName="BaseFilth">
+              <defName>DankPyon_RawLemons</defName>
+              <label>Medieval Overhaul Lemon (ERROR)</label>
+              <description>The TurtleShroom Storytime Mod removes the Medieval Overhaul Mod's lemons. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+              <selectable>true</selectable>
+              <statBases>
+                <MarketValue>0</MarketValue>
+                <Beauty>0</Beauty>
+                <Cleanliness>1</Cleanliness>
+              </statBases>
+				<graphicData>
+					<texPath>Things/Items/Resources/Fruits/Lemon</texPath>
+					<graphicClass>Graphic_StackCount</graphicClass>
+				</graphicData>
+              <filth>
+                <ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+                <disappearsInDays>0.001~0.05</disappearsInDays>
+                <rainWashes>true</rainWashes>
+                <cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+                <canFilthAttach>false</canFilthAttach>
+                <cleaningSound>Vomit</cleaningSound>
+              </filth>
+            </ThingDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
 </Patch>

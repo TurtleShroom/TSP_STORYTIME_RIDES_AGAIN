@@ -20,7 +20,11 @@
 						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
 						<li MayRequire="zoura3025.megabees">MegabeeTallow</li>
 						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
 						<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
 					</value>
 				</li>
 				
@@ -34,7 +38,11 @@
 						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
 						<li MayRequire="zoura3025.megabees">MegabeeTallow</li>
 						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
 						<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
 					</value>
 				</li>
 				
@@ -46,6 +54,7 @@
 						<li MayRequire="sarg.alphaanimals,sarg.alphabiomes">AB_BumbledroneFood</li>
 						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
 						<li MayRequire="zoura3025.megabees">MegabeeTallow</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
 					</value>
 				</li>
 			</operations>
@@ -65,6 +74,9 @@
 					<value>
 						<li MayRequire="eltwofour.mantodeanrace">L24_Manto_RoyalJelly</li>
 						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
 					</value>
 				</li>
 				
@@ -74,6 +86,9 @@
 					<value>
 						<li MayRequire="eltwofour.mantodeanrace">L24_Manto_RoyalJelly</li>
 						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
 					</value>
 				</li>
 				
@@ -83,6 +98,196 @@
 					<value>
 						<li MayRequire="eltwofour.mantodeanrace">L24_Manto_RoyalJelly</li>
 						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="VFEI2_RoyalInsectJelly"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VFEI2_RoyalInsectJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="eltwofour.mantodeanrace">L24_Manto_RoyalJelly</li>
+						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VFEI2_RoyalInsectJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="eltwofour.mantodeanrace">L24_Manto_RoyalJelly</li>
+						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VFEI2_RoyalInsectJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="eltwofour.mantodeanrace">L24_Manto_RoyalJelly</li>
+						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="ApiniJelly"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ApiniJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="eltwofour.mantodeanrace">L24_Manto_RoyalJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="ApiniJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="eltwofour.mantodeanrace">L24_Manto_RoyalJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="ApiniJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="eltwofour.mantodeanrace">L24_Manto_RoyalJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="L24_Manto_RoyalJelly"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="L24_Manto_RoyalJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="L24_Manto_RoyalJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
+						<li MayRequire="gguake.race.vivi">VV_RoyalJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+						<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="L24_Manto_RoyalJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="L24_Manto_MantodeanJelly"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="L24_Manto_MantodeanJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="sarg.alphaanimals,sarg.alphabiomes">AB_BumbledroneFood</li>
+						<li MayRequire="zoura3025.megabees">MegabeeTallow</li>
+						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="L24_Manto_MantodeanJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="eltwofour.mantodeanrace">L24_Manto_MantodeanJelly</li>
+						<li MayRequire="sarg.alphaanimals,sarg.alphabiomes">AB_BumbledroneFood</li>
+						<li MayRequire="zoura3025.megabees">MegabeeTallow</li>
+						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="L24_Manto_MantodeanJelly"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="zoura3025.megabees">MegabeeTallow</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_HornetJelly</li>
+						<li MayRequire="fizzy.drinkies.stellunia">FD_JellySyrup</li>
 					</value>
 				</li>
 			</operations>

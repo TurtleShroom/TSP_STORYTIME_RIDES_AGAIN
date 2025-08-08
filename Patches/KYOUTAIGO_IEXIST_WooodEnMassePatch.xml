@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- This code was provided by the user 'I Exist', and then butchered and simplified on Dub's Discord chat room by Kyoutaigo -->
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="WoodLog"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="WoodLog"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="tsp.bathroomhumor">DungLog</li>
+						<li MayRequire="sihv.rombones">BoneItem</li>
+						<li MayRequire="sarg.alphabiomes">AB_Propane</li>
+						<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
+						<li MayRequire="manure.public.velcroboy333">VBY_ManureDry</li>
+						<li MayRequire="goudaquiche.lighterthanfast">LTF_SlugDew</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CandyLog</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CandyLogBlue</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CandyLogGreen</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="WoodLog"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="tsp.bathroomhumor">DungLog</li>
+						<li MayRequire="sihv.rombones">BoneItem</li>
+						<li MayRequire="sarg.alphabiomes">AB_Propane</li>
+						<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
+						<li MayRequire="manure.public.velcroboy333">VBY_ManureDry</li>
+						<li MayRequire="goudaquiche.lighterthanfast">LTF_SlugDew</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CandyLog</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CandyLogBlue</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CandyLogGreen</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="WoodLog"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="tsp.bathroomhumor">DungLog</li>
+						<li MayRequire="sihv.rombones">BoneItem</li>
+						<li MayRequire="sarg.alphabiomes">AB_Propane</li>
+						<li MayRequire="syrchalis.harpy">RawHarpyChilis</li>
+						<li MayRequire="manure.public.velcroboy333">VBY_ManureDry</li>
+						<li MayRequire="goudaquiche.lighterthanfast">LTF_SlugDew</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CandyLog</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CandyLogBlue</li>
+						<li MayRequire="tsp.velcroboy333.medievalfestival.banquet">CandyLogGreen</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

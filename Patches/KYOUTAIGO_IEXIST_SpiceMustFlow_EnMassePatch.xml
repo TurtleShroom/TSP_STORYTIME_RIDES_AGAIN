@@ -3,9 +3,339 @@
 <!-- This code was provided by the user 'I Exist', and then butchered and simplified on Dub's Discord chat room by Kyoutaigo -->
 
 <Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/ingredients/li/filter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/fixedIngredientsFilter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/fixedIngredientsFilter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/ingredients/li/filter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/fixedIngredientsFilter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/fixedIngredientsFilter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpiceBulk"]/ingredients/li/filter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpiceBulk"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpiceBulk"]/fixedIngredientsFilter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpiceBulk"]/fixedIngredientsFilter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	
+	
+	
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/ingredients/li/filter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/fixedIngredientsFilter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/fixedIngredientsFilter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/ingredients/li/filter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/fixedIngredientsFilter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/fixedIngredientsFilter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/ingredients/li/filter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/fixedIngredientsFilter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallow"]/fixedIngredientsFilter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	
+	
+
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/ingredients/li/filter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/fixedIngredientsFilter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/fixedIngredientsFilter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/ingredients/li/filter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/fixedIngredientsFilter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/fixedIngredientsFilter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/ingredients/li/filter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/fixedIngredientsFilter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="DankPyon_MakeTallowBulk"]/fixedIngredientsFilter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	
+
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="VCE_RawSpices"]</xpath>
+		<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/ingredients/li/filter/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dajian.chiteaditional.expanded">DaJianThings_TiaoWeiLiao</li> <!-- Oriental spice category -->
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/fixedIngredientFilter/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dajian.chiteaditional.expanded">DaJianThings_TiaoWeiLiao</li> <!-- Oriental spice category -->
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/ingredients/li/filter/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dajian.chiteaditional.expanded">DaJianThings_TiaoWeiLiao</li> <!-- Oriental spice category -->
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/ingredients/li/filter/disallowedThingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">DaJian_LaoGanMa</li> <!-- John Cena puts that (&%^*(%*(% on EVERYTHING -->
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">DaJian_LaoGanMa</li> <!-- John Cena puts that (&%^*(%*(% on EVERYTHING -->
+					</value>
+				</li>
+				
+				
+				
+				
+				
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpiceBulk"]/ingredients/li/filter/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dajian.chiteaditional.expanded">DaJianThings_TiaoWeiLiao</li> <!-- Oriental spice category -->
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpiceBulk"]/fixedIngredientFilter/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dajian.chiteaditional.expanded">DaJianThings_TiaoWeiLiao</li> <!-- Oriental spice category -->
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpiceBulk"]/ingredients/li/filter/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dajian.chiteaditional.expanded">DaJianThings_TiaoWeiLiao</li> <!-- Oriental spice category -->
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/ingredients/li/filter/disallowedThingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">DaJian_LaoGanMa</li> <!-- John Cena puts that (&%^*(%*(% on EVERYTHING -->
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DankPyon_MakeSpice"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">DaJian_LaoGanMa</li> <!-- John Cena puts that (&%^*(%*(% on EVERYTHING -->
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+
+
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_RawSpices"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
@@ -16,6 +346,8 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
 						<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 					</value>
 				</li>
 				
@@ -25,6 +357,8 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
 						<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 					</value>
 				</li>
 				
@@ -34,14 +368,29 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
 						<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 					</value>
 				</li>
-				
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="ST_MixedHerbs"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
 				<li Class="PatchOperationInsert">
 					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ST_MixedHerbs"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 					</value>
 				</li>
 				
@@ -50,6 +399,8 @@
 					<success>Always</success>
 					<value>
 						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 					</value>
 				</li>
 				
@@ -58,9 +409,63 @@
 					<success>Always</success>
 					<value>
 						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 					</value>
 				</li>
 			</operations>
 		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DankPyon_Spices"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_Spices"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
+						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_Spices"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
+						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_Spices"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
+						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_Spices"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
+						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+					</value>
+				</li>			
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 </Patch>

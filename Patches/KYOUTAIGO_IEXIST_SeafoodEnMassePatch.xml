@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- This code was provided by the user 'I Exist', and then butchered and simplified on Dub's Discord chat room by Kyoutaigo -->
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Snails"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Snails"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="biomesteam.biomescore">BMT_GastropodMeat</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<!-- <li MayRequire="TSP.Isengriff.Storytime">Meat_BORPA_Snorpa</li> -->
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Snails"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="biomesteam.biomescore">BMT_GastropodMeat</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<!-- <li MayRequire="TSP.Isengriff.Storytime">Meat_BORPA_Snorpa</li> -->
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Snails"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="biomesteam.biomescore">BMT_GastropodMeat</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<!-- <li MayRequire="TSP.Isengriff.Storytime">Meat_BORPA_Snorpa</li> -->
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Shrimp"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Shrimp"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_Shrimp</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crayfish</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Shrimp</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<!-- <li MayRequire="vanillaexpanded.vcef">VCEF_RawShrimp</li> -->
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Shrimp"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_Shrimp</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crayfish</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<!-- <li MayRequire="vanillaexpanded.vcef">VCEF_RawShrimp</li> -->
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Shrimp"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_Shrimp</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crayfish</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<!-- <li MayRequire="vanillaexpanded.vcef">VCEF_RawShrimp</li> -->
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="VCEF_RawShrimp"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCEF_RawShrimp"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_Shrimp</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crayfish</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Shrimp</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCEF_RawShrimp"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_Shrimp</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crayfish</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Shrimp</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCEF_RawShrimp"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_Shrimp</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crayfish</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Shrimp</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="ST_Clam"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ST_Clam"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Clams</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Mussels</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Oysters</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Scallops</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="ST_Clam"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Clams</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Mussels</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Oysters</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Scallops</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="ST_Clam"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Clams</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Mussels</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Oysters</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Scallops</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Clams"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Clams"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_Clam</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Mussels</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Oysters</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Scallops</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Clams"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_Clam</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Mussels</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Oysters</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Scallops</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Clams"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_Clam</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Mussels</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Oysters</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Scallops</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Crab"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Crab"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Crab"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Crab"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="BiomesIslands_RimCrab"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Meat_BiomesIslands_RimCrab"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Meat_BiomesIslands_RimCrab"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Meat_BiomesIslands_RimCrab"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Crayfish"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Crayfish"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="sirmashedpotato.morrowrim,vanillaexpanded.vcef">MorrowRim_RawCrayfish</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Crayfish"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="sirmashedpotato.morrowrim,vanillaexpanded.vcef">MorrowRim_RawCrayfish</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Crayfish"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="sirmashedpotato.morrowrim,vanillaexpanded.vcef">MorrowRim_RawCrayfish</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="VCEF_CrayfishItem"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCEF_CrayfishItem"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crayfish</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="sirmashedpotato.morrowrim,vanillaexpanded.vcef">MorrowRim_RawCrayfish</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCEF_CrayfishItem"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crayfish</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="sirmashedpotato.morrowrim,vanillaexpanded.vcef">MorrowRim_RawCrayfish</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCEF_CrayfishItem"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crayfish</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="sirmashedpotato.morrowrim,vanillaexpanded.vcef">MorrowRim_RawCrayfish</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="VCEF_RawEel"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCEF_RawEel"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_SlimyEel</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_LavaEel</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_SacredEel</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCEF_RawEel"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_SlimyEel</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_LavaEel</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_SacredEel</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCEF_RawEel"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_SlimyEel</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_LavaEel</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_SacredEel</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="VCEF_RawTuna"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCEF_RawTuna"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
+						<li MayRequire="ssm9906.thettanconrace">TT_Milk</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCEF_RawTuna"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
+						<li MayRequire="ssm9906.thettanconrace">TT_Milk</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCEF_RawTuna"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="ssm9906.thettanconrace">TT_TunaCan</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="TT_TunaCan"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="TT_TunaCan"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="delmaintweaks.vefishing">VCEF_RawTuna</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="TT_TunaCan"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="delmaintweaks.vefishing">VCEF_RawTuna</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="TT_TunaCan"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="delmaintweaks.vefishing">VCEF_RawTuna</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="Crab_RangoonCatch"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Crab_RangoonCatch"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="sirmashedpotato.morrowrim,vanillaexpanded.vcef">MorrowRim_RawCrayfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Crab_RangoonCatch"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="taeeril.crabaddon">Crab_RangoonCatch</li>
+						<li MayRequire="sirmashedpotato.morrowrim,vanillaexpanded.vcef">MorrowRim_RawCrayfish</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Crab_RangoonCatch"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_DarkCrab</li>
+						<li MayRequire="biomesteam.biomesislands">Meat_BiomesIslands_RimCrab</li>
+						<li MayRequire="vanillaexpanded.vcefxtrafish">Crab</li>
+						<li MayRequire="vanillaexpanded.vmemese,vanillaexpanded.vcef">VCEF_CrayfishItem</li>
+						<li MayRequire="TSP.Isengriff.FishingExpanded.Split">ST_VariegatedLardfish</li>
+						<li MayRequire="sirmashedpotato.morrowrim,vanillaexpanded.vcef">MorrowRim_RawCrayfish</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

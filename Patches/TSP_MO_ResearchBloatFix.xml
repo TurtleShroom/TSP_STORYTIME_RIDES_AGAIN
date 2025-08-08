@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DankPyon_RoxHorn"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOO!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- BASIC COOKING -->
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ResearchProjectDef/prerequisites/li[text()="DankPyon_BasicCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/researchPrerequisites/li[text()="DankPyon_BasicCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipeMaker/researchPrerequisites/li[text()="DankPyon_BasicCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/researchPrerequisites/li[text()="DankPyon_BasicCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/TerrainDef/researchPrerequisites/li[text()="DankPyon_BasicCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[researchPrerequisite="DankPyon_BasicCooking"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites></researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipeMaker[researchPrerequisite="DankPyon_BasicCooking"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites></researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/TerrainDef[researchPrerequisite="DankPyon_BasicCooking"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites></researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ResearchProjectDef[defName="DankPyon_BasicCooking"]</xpath>
+				</li>
+				
+				
+				
+				<!-- INTERMEDIATE COOKING -->
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ResearchProjectDef/prerequisites/li[text()="DankPyon_IntermediateCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/researchPrerequisites/li[text()="DankPyon_IntermediateCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipeMaker/researchPrerequisites/li[text()="DankPyon_IntermediateCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/researchPrerequisites/li[text()="DankPyon_IntermediateCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/TerrainDef/researchPrerequisites/li[text()="DankPyon_IntermediateCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[researchPrerequisite="DankPyon_IntermediateCooking"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites></researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipeMaker[researchPrerequisite="DankPyon_IntermediateCooking"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites></researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/TerrainDef[researchPrerequisite="DankPyon_IntermediateCooking"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites></researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ResearchProjectDef[defName="DankPyon_IntermediateCooking"]</xpath>
+				</li>
+				
+				
+				
+				<!-- ADVANCED COOKING -->
+				<li Class="PatchOperationInsert">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipeMaker/researchPrerequisites/li[text()="DankPyon_AdvancedCooking"]</xpath>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">advancedCooking</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/researchPrerequisites/li[text()="DankPyon_AdvancedCooking"]</xpath>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">advancedCooking</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/researchPrerequisites/li[text()="DankPyon_AdvancedCooking"]</xpath>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">advancedCooking</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<success>Always</success>
+					<xpath>/Defs/TerrainDef/researchPrerequisites/li[text()="DankPyon_AdvancedCooking"]</xpath>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">advancedCooking</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ResearchProjectDef/prerequisites/li[text()="DankPyon_AdvancedCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/researchPrerequisites/li[text()="DankPyon_AdvancedCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipeMaker/researchPrerequisites/li[text()="DankPyon_AdvancedCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/researchPrerequisites/li[text()="DankPyon_AdvancedCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/TerrainDef/researchPrerequisites/li[text()="DankPyon_AdvancedCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[researchPrerequisite="DankPyon_AdvancedCooking"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites>
+							<li MayRequire="TSP.Isengriff.Storytime">advancedCooking</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipeMaker[researchPrerequisite="DankPyon_AdvancedCooking"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites>
+							<li MayRequire="TSP.Isengriff.Storytime">advancedCooking</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/TerrainDef[researchPrerequisite="DankPyon_AdvancedCooking"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites>
+							<li MayRequire="TSP.Isengriff.Storytime">advancedCooking</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ResearchProjectDef[defName="DankPyon_AdvancedCooking"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[starts-with(@Name, "CookMealFine")]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[starts-with(@Name, "CookMealLavish")]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[@Name="CookMealFine"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[@Name="CookMealLavish"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="VCE_CookMealGourmet"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[contains(defName, "VCE_CookBakeFine")]/researchPrerequisites</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[contains(defName, "VCE_CookBakeLavish")]/researchPrerequisites</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[contains(defName, "VCE_CookBakeLavish")]/researchPrerequisites</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[contains(defName, "VCE_CookGrillFine")]/researchPrerequisites</xpath>
+					<value>
+						<researchPrerequisites>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Grilling</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[contains(defName, "VCE_CookGrillLavish")]/researchPrerequisites</xpath>
+					<value>
+						<researchPrerequisites>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Grilling</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[contains(defName, "VCE_CookGrillGourmet")]/researchPrerequisites</xpath>
+					<value>
+						<researchPrerequisites>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_Grilling</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[starts-with(@Name, "VCE_CookDessertFine")]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[starts-with(@Name, "VCE_CookDessertLavish")]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[starts-with(@Name, "VCE_CookDessertGourmet")]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[@Name="VCE_CookDessertMealBase"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[@Name="VCE_CookComplexDessertMealBase"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[@Name="VCE_CookGourmetDessertMealBase"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="VCE_CookDessertFine"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="VCE_CookDessertLavish"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="VCE_CookDessertGourmet"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="VCE_CookDessertFineBulk"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="VCE_CookDessertLavishBulk"]/researchPrerequisite</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="VCE_CookSoupFine"]/researchPrerequisites</xpath>
+					<value>
+						<researchPrerequisites>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_SoupCooking</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="VCE_CookSoupLavish"]/researchPrerequisites</xpath>
+					<value>
+						<researchPrerequisites>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_SoupCooking</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace" MayRequire="vanillaexpanded.vcooke">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef[defName="VCE_CookSoupGourmet"]/researchPrerequisites</xpath>
+					<value>
+						<researchPrerequisites>
+							<li MayRequire="vanillaexpanded.vcooke">VCE_SoupCooking</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+		<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ResearchProjectDef[defName="VFEM2_Matchlocks"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOO!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationInsert">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipeMaker/researchPrerequisites/li[text()="DankPyon_Gunpowder"]</xpath>
+					<value>
+						<li>VFEM2_Matchlocks</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/researchPrerequisites/li[text()="DankPyon_Gunpowder"]</xpath>
+					<value>
+						<li>VFEM2_Matchlocks</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/researchPrerequisites/li[text()="DankPyon_Gunpowder"]</xpath>
+					<value>
+						<li>VFEM2_Matchlocks</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<success>Always</success>
+					<xpath>/Defs/TerrainDef/researchPrerequisites/li[text()="DankPyon_Gunpowder"]</xpath>
+					<value>
+						<li>VFEM2_Matchlocks</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ResearchProjectDef/prerequisites/li[text()="DankPyon_Gunpowder"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/researchPrerequisites/li[text()="DankPyon_Gunpowder"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipeMaker/researchPrerequisites/li[text()="DankPyon_Gunpowder"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/researchPrerequisites/li[text()="DankPyon_Gunpowder"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/TerrainDef/researchPrerequisites/li[text()="DankPyon_Gunpowder"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[researchPrerequisite="DankPyon_Gunpowder"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFEM2_Matchlocks</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipeMaker[researchPrerequisite="DankPyon_Gunpowder"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFEM2_Matchlocks</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/TerrainDef[researchPrerequisite="DankPyon_Gunpowder"]/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFEM2_Matchlocks</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]</xpath>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ResearchProjectDef[defName="advancedCooking"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_Schematic_AdvancedCooking"]/comps/li/doers</xpath>
+			<success>Always</success>
+			<value>
+				<doers>
+					<li Class="MedievalOverhaul.BookOutcomeProperties_GainResearchDefinable">
+						<researchProjects>
+							<li>
+								<researchProject>advancedCooking</researchProject>
+								<gainMultiplier>3</gainMultiplier>
+							</li>
+							<li>
+								<researchProject>DrugProduction</researchProject>
+								<gainMultiplier>1</gainMultiplier>
+							</li>
+						</researchProjects>
+					</li>
+				</doers>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>

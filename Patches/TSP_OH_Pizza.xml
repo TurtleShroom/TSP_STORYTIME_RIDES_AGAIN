@@ -1,6 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]/recipes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]</xpath>
+			<success>Always</success>
+			<value>
+				<recipes></recipes>
+			</value>
+		</nomatch>
+	</Operation>
+
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/RecipeDef[defName="MakeBoringPizza"]/researchPrerequisite</xpath>
@@ -193,13 +219,14 @@
 				<ingredients>
 					<li>
 						<filter>
+							<customSummary>milk</customSummary>
 							<thingDefs>
 								<li>Milk</li>
 								<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
 								<li MayRequire="TSP.Isengriff.Storytime">ST_GreenOoze</li>
 							</thingDefs>
 						</filter>
-						<count>2</count>
+						<count>4.5</count>
 					</li>
 				</ingredients>
 			</value>
@@ -218,34 +245,79 @@
 				<ingredients>
 					<li>
 						<filter>
+							<customSummary>milk</customSummary>
 							<thingDefs>
 								<li>Milk</li>
 								<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
 								<li MayRequire="TSP.Isengriff.Storytime">ST_GreenOoze</li>
 							</thingDefs>
 						</filter>
-						<count>4</count>
+						<count>8</count>
 					</li>
 				</ingredients>
 			</value>
 		</match>
 	</Operation>
 	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
-		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName = "MakeCheese" or defName = "MakeCheeseBulk"]/fixedIngredientFilter</xpath>
+		<xpath>/Defs/RecipeDef[defName="MakeCheese"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="MakeCheese"]</xpath>
 			<success>Always</success>
 			<value>
-				<fixedIngredientFilter>
-					<thingDefs>
-						<li>Milk</li>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
-						<li MayRequire="TSP.Isengriff.Storytime">ST_GreenOoze</li>
-					</thingDefs>
-				</fixedIngredientFilter>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="MakeCheese"]/fixedIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="MakeCheese"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="MakeCheeseBulk"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="MakeCheeseBulk"]</xpath>
+			<success>Always</success>
+			<value>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="MakeCheeseBulk"]/fixedIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="MakeCheeseBulk"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/RecipeDef[defName="MakeCheese"]/fixedIngredientFilter/thingDefs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName = "MakeCheese" or defName = "MakeCheeseBulk"]/fixedIngredientFilter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>Milk</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_GreenOoze</li>
 			</value>
 		</match>
 	</Operation>
@@ -261,14 +333,75 @@
 				<tradeability>All</tradeability>
 			</value>
 		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName = "MakeCheese" or defName = "MakeCheeseBulk"]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "O_Cheese" or defName = "O_TomatoSauce" or defName = "O_GrainFlour"]/tradeability</xpath>
+			<success>Always</success>
+			<value>
+				<tradeability>All</tradeability>
+			</value>
+		</match>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/RecipeDef[defName="MakeCheese"]/researchPrerequisite</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>/Defs/RecipeDef[defName="MakeCheese"]/researchPrerequisite</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/RecipeDef[defName="MakeCheeseBulk"]/researchPrerequisite</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>/Defs/RecipeDef[defName="MakeCheeseBulk"]/researchPrerequisite</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="MakeCheese"]/researchPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="MakeCheese"]</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites></researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="MakeCheeseBulk"]/researchPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="MakeCheeseBulk"]</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites></researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ResearchProjectDef[defName="VCE_CheeseMaking"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "MakeCheese" or defName = "MakeCheeseBulk"]/researchPrerequisites</xpath>
 			<success>Always</success>
 			<value>
 				<researchPrerequisites Inherit="False">
@@ -280,20 +413,20 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="O_Cheese"]</xpath>
+		<xpath>/Defs/ThingDef[defName="O_Cheese"]/statBases/MarketValue</xpath>
 		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
+		<match Class="PatchOperationReplace">
 			<xpath>/Defs/RecipeDef[defName="O_Cheese"]/statBases/MarketValue</xpath>
 			<success>Always</success>
 			<value>
-				<MarketValue>4</MarketValue>
+				<MarketValue>3</MarketValue>
 			</value>
 		</match>
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="O_TomatoSauce"]</xpath>
+		<xpath>/Defs/ThingDef[defName="O_TomatoSauce"]/statBases/MarketValue</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[defName="O_TomatoSauce"]/statBases/MarketValue</xpath>
@@ -306,7 +439,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="O_GrainFlour"]</xpath>
+		<xpath>/Defs/ThingDef[defName="O_GrainFlour"]/statBases/MarketValue</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/ThingDef[defName="O_GrainFlour"]/statBases/MarketValue</xpath>
@@ -319,7 +452,7 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="vanillaexpanded.vcooke">
 	<!-- Does this exist? -->
-	<xpath MayRequire="vanillaexpanded.vcooke">/Defs/ThingDef[defName="O_Cheese"]</xpath>
+	<xpath MayRequire="vanillaexpanded.vcooke">/Defs/ThingCategoryDef[defName="O_Cheese"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace" MayRequire="vanillaexpanded.vcooke">
 			<success>Always</success>
@@ -557,32 +690,6 @@
 				<li MayRequire="morishep.tarojun.onioftherim">OotR_GroundOven</li>
 			</value>
 		</match>
-	</Operation>
-	
-	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
-	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]/comps</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]</xpath>
-			<success>Always</success>
-			<value>
-				<comps></comps>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]/recipes</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="OotR_GroundOven"]</xpath>
-			<success>Always</success>
-			<value>
-				<recipes></recipes>
-			</value>
-		</nomatch>
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
