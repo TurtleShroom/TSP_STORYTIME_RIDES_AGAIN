@@ -48,7 +48,7 @@
             <isNaturalRock>false</isNaturalRock>
             <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
             <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
-            <smoothedThing Inherit="False" IsNull="True"></smoothedThing> <!--Asbestos_Rock</smoothedThing>-->
+            <smoothedThing Inherit="False" IsNull="True"></smoothedThing> <!-- <smoothedThing>Asbestos_Rock</smoothedThing> -->
             <paintable>true</paintable>
 			<claimable>true</claimable>
         </building>
@@ -101,10 +101,11 @@
     <ThingDef ParentName="WoolBase">
         <defName>Asbestos_Fiber</defName>
         <label>asbestos fiber</label>
-        <description>A natural mineral fiber, strong, heat-resistant, non-flammable, but be aware of its potential hazards.</description>
+        <description>A natural mineral fiber that is strong, heat-resistant, and non-flammable, but be aware of its potential hazards.</description>
         <graphicData>
             <texPath>asbestos/fiber</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+			<flipExtraRotation>7</flipExtraRotation>
             <color>(145,157,118)</color>
         </graphicData>
         <statBases>
@@ -161,10 +162,11 @@
     <ThingDef ParentName="ResourceBase">
         <defName>Asbestos_Tile</defName>
         <label>asbestos tile</label>
-        <description>An easy-to-make, low cost building material made of asbestos.</description>
+        <description>An easy-to-make, low cost building material made of asbestos, with stronger stones or metals buttressing its fragility.</description>
         <graphicData>
             <texPath>Things/Item/Resource/StoneBlocks</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
+			<flipExtraRotation>7</flipExtraRotation>
             <color>(145,157,118)</color>
         </graphicData>
         <useHitPoints>false</useHitPoints>
@@ -434,6 +436,7 @@
         <ingredients>
             <li>
                 <filter>
+					<customSummary>asbestos</customSummary>
                     <thingDefs>
                         <li>Asbestos_Fiber</li>
                     </thingDefs>
@@ -450,6 +453,7 @@
             </li>
             <li>
                 <filter>
+					<customSummary>stone blocks, steel, iron</customSummary>
 					<categories>
 						<li>StoneBlocks</li>
 						<li>ST_AlloyMetals</li>
@@ -462,6 +466,7 @@
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
                     </thingDefs>
 					<disallowedThingDefs>
 						<li>Asbestos_Tile</li>
@@ -485,6 +490,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
             </thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Tile</li>
@@ -503,6 +509,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
 			</thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Chunk</li>
@@ -533,6 +540,7 @@
         <ingredients>
             <li>
                 <filter>
+					<customSummary>asbestos</customSummary>
                     <thingDefs>
                         <li>Asbestos_Fiber</li>
                     </thingDefs>
@@ -549,6 +557,7 @@
             </li>
             <li>
                 <filter>
+					<customSummary>stone blocks, steel, iron</customSummary>
 					<categories>
 						<li>StoneBlocks</li>
 						<li>ST_AlloyMetals</li>
@@ -561,6 +570,7 @@
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
                     </thingDefs>
 					<disallowedThingDefs>
 						<li>Asbestos_Tile</li>
@@ -584,6 +594,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
             </thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Tile</li>
@@ -602,6 +613,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
 			</thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Chunk</li>
@@ -632,6 +644,7 @@
         <ingredients>
             <li>
                 <filter>
+					<customSummary>asbestos</customSummary>
                     <thingDefs>
                         <li>Asbestos_Fiber</li>
                     </thingDefs>
@@ -648,6 +661,7 @@
             </li>
             <li>
                 <filter>
+					<customSummary>stone blocks, steel, iron</customSummary>
 					<categories>
 						<li>StoneBlocks</li>
 						<li>ST_AlloyMetals</li>
@@ -660,6 +674,7 @@
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
                     </thingDefs>
 					<disallowedThingDefs>
 						<li>Asbestos_Tile</li>
@@ -683,6 +698,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
             </thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Tile</li>
@@ -701,6 +717,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
 			</thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Chunk</li>
@@ -731,6 +748,7 @@
         <ingredients>
             <li>
                 <filter>
+					<customSummary>asbestos</customSummary>
                     <thingDefs>
                         <li>Asbestos_Fiber</li>
                     </thingDefs>
@@ -747,6 +765,7 @@
             </li>
             <li>
                 <filter>
+					<customSummary>stone blocks, steel, iron</customSummary>
 					<categories>
 						<li>StoneBlocks</li>
 						<li>ST_AlloyMetals</li>
@@ -759,6 +778,7 @@
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
                     </thingDefs>
 					<disallowedThingDefs>
 						<li>Asbestos_Tile</li>
@@ -782,6 +802,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
             </thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Tile</li>
@@ -800,6 +821,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
 			</thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Chunk</li>
@@ -830,6 +852,7 @@
         <ingredients>
             <li>
                 <filter>
+					<customSummary>asbestos</customSummary>
                     <thingDefs>
                         <li>Asbestos_Fiber</li>
                     </thingDefs>
@@ -846,6 +869,7 @@
             </li>
             <li>
                 <filter>
+					<customSummary>stone blocks, steel, iron</customSummary>
 					<categories>
 						<li>StoneBlocks</li>
 						<li>ST_AlloyMetals</li>
@@ -858,6 +882,7 @@
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
                     </thingDefs>
 					<disallowedThingDefs>
 						<li>Asbestos_Tile</li>
@@ -881,6 +906,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
             </thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Tile</li>
@@ -899,6 +925,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
 			</thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Chunk</li>
@@ -929,6 +956,7 @@
         <ingredients>
             <li>
                 <filter>
+					<customSummary>asbestos</customSummary>
                     <thingDefs>
                         <li>Asbestos_Fiber</li>
                     </thingDefs>
@@ -945,6 +973,7 @@
             </li>
             <li>
                 <filter>
+					<customSummary>stone blocks, steel, iron</customSummary>
 					<categories>
 						<li>StoneBlocks</li>
 						<li>ST_AlloyMetals</li>
@@ -957,6 +986,7 @@
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 						<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
                     </thingDefs>
 					<disallowedThingDefs>
 						<li>Asbestos_Tile</li>
@@ -980,6 +1010,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
             </thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Tile</li>
@@ -998,6 +1029,7 @@
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Copper</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Tin</li>
 				<li MayRequire="tsp.isengriff.bronzecoppertin.split">ST_Bronze</li>
+				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
 			</thingDefs>
 			<disallowedThingDefs>
 				<li>Asbestos_Chunk</li>

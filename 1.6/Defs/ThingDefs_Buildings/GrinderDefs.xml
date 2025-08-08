@@ -69,9 +69,11 @@
 			<li MayRequire="lat.rimstro">RS_KitchenHood</li>
 		</linkableFacilities>
         </li>
-      <li>
-        <compClass>CompReportWorkSpeed</compClass>
-      </li>
+		<!--
+		  <li>
+			<compClass>CompReportWorkSpeed</compClass>
+		  </li>
+		-->
     </comps>
 	<recipes>
 		<li MayRequire="vanillaexpanded.vcooke">VCE_MakeSalt</li>
@@ -172,6 +174,22 @@
 		<li MayRequire="wpm.jerry">Unmake_trashbale</li>
 		<li MayRequire="grubious.soylentgreen">Make_SoylentGreen</li>
 		<li MayRequire="grubious.soylentgreen">Make_SoylentGreenBulk</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMinchedmeat5</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMinchedmeat25</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMinchedmeat75</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMinchedmeat150</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMinchedmeat300</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMixVegetables5</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMixVegetables25</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMixVegetables75</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMixVegetables150</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMixVegetables300</li>
+		<!-- <li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftFlour_Manual</li> -->
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftFlour</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftFlourBulk</li>
+		<!-- <li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftSugar_Manual</li> -->
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftSugar</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftSugarBulk</li>
 		<li>TSP_ST_HerbaRoll</li>
 		<li>TSP_ST_SpikedButterscotch_Wort_Recipe</li>
 		<li>Make_Kibble</li>
@@ -183,7 +201,7 @@
 	</recipes>
     <!-- <designationHotKey>Misc8</designationHotKey> -->
     <placeWorkers>
-      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+      <!-- <li>PlaceWorker_PreventInteractionSpotOverlap</li> -->
     </placeWorkers>
 	<modExtensions>
 		<li Class="VEF.Buildings.RecipeInheritanceExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
@@ -192,6 +210,7 @@
 				<li MayRequire="mlie.vanillalikewheat">QuernLowTech</li>
 				<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
 				<li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Millstone</li>
 			</inheritRecipesFrom>
 		</li>
 	</modExtensions>
@@ -346,6 +365,22 @@
 		<li MayRequire="wpm.jerry">Unmake_trashbale</li>
 		<li MayRequire="grubious.soylentgreen">Make_SoylentGreen</li>
 		<li MayRequire="grubious.soylentgreen">Make_SoylentGreenBulk</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMinchedmeat5</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMinchedmeat25</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMinchedmeat75</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMinchedmeat150</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMinchedmeat300</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMixVegetables5</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMixVegetables25</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMixVegetables75</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMixVegetables150</li>
+		<li MayRequire="setugetukalily.mamv">RC_MakeMixVegetables300</li>
+		<!-- <li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftFlour_Manual</li> -->
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftFlour</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftFlourBulk</li>
+		<!-- <li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftSugar_Manual</li> -->
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftSugar</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CraftSugarBulk</li>
 		<li>TSP_ST_HerbaRoll</li>
 		<li>TSP_ST_SpikedButterscotch_Wort_Recipe</li>
 		<li>Make_Kibble</li>
@@ -361,8 +396,8 @@
         <shortCircuitInRain>false</shortCircuitInRain>
         <basePowerConsumption>30</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable"></li>
+      <li Class="CompProperties_Breakdownable"></li>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
 			<li>ToolCabinet</li>
@@ -376,13 +411,15 @@
 			<li MayRequire="lat.rimstro">RS_KitchenHood</li>
         </linkableFacilities>
       </li>
+	  <!--
       <li>
         <compClass>CompReportWorkSpeed</compClass>
       </li>
+	  -->
     </comps>
     <!-- <designationHotKey>Misc8</designationHotKey> -->
     <placeWorkers>
-      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+      <!-- <li>PlaceWorker_PreventInteractionSpotOverlap</li> -->
     </placeWorkers>
     <researchPrerequisites>
       <li>Electricity</li>
@@ -394,6 +431,7 @@
 				<li MayRequire="mlie.vanillalikewheat">QuernLowTech</li>
 				<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
 				<li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Millstone</li>
 			</inheritRecipesFrom>
 		</li>
 	</modExtensions>

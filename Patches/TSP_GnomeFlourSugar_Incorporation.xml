@@ -14,7 +14,7 @@
 	
 	<!--
 	<Operation Class="PatchOperationConditional">
-	Does this exist?
+	 Does this exist?
 		<xpath>/Defs/ThingDef[defName="VCE_Flour"]</xpath>
 		If it does, add this.
 		<match Class="PatchOperationAdd">
@@ -187,7 +187,7 @@
 			<xpath>/Defs</xpath>
 			<value>
 				<RecipeDef ParentName="VCE_CookGourmetBakeMealBase">
-					<defName>VCE_CookBakeGourmet</defName>
+					<defName>TSP_ST_VCE_CookBakeGourmet_Bulk</defName>
 					<label>cook gourmet bake x8</label>
 					<description>Cook eight culinary works of art, characterized by refined, even elaborate preparation and presentation of an aesthetically balanced, baked good.\n\nThis recipe does not allow mixed ingredients.</description>
 					<jobString>Cooking gourmet bake x8.</jobString>
@@ -200,10 +200,10 @@
 						<li>ElectricStove</li>	
 						<li>FueledStove</li>			
 					</recipeUsers>
-
 					<ingredients>
 						<li>
 							<filter>
+								<customSummary>meat, animal products</customSummary>
 								<categories>
 									<li>MeatRaw</li>
 									<li>AnimalProductRaw</li>
@@ -213,14 +213,20 @@
 						</li>
 						<li>
 							<filter>
+								<customSummary>vegetarian</customSummary>
 								<categories>
 									<li>PlantFoodRaw</li>
 								</categories>
+								<thingDefs>
+									<li>ST_Lime</li>
+									<li>TSP_ST_Citron</li>
+								</thingDefs>
 							</filter>
 							<count>2</count>
 						</li>
 						<li>
 							<filter>
+								<customSummary>condiments, gourmet ingredients</customSummary>
 								<categories>
 									<li>VCE_Condiments</li>
 								</categories>
@@ -229,6 +235,7 @@
 						</li>
 						<li>
 							<filter>
+								<customSummary>flour</customSummary>
 								<thingDefs>
 									<li>VCE_Flour</li>
 									<li>GnomeFlour</li>
@@ -262,6 +269,8 @@
 				<li>ST_CookingApple</li>
 				<li>ST_Lemon</li>
 				<li>ST_Orange</li>
+				<li>ST_Lime</li>
+				<li>TSP_ST_Citron</li>
 				<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
@@ -283,6 +292,8 @@
 				<li>ST_CookingApple</li>
 				<li>ST_Lemon</li>
 				<li>ST_Orange</li>
+				<li>ST_Lime</li>
+				<li>TSP_ST_Citron</li>
 				<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
@@ -304,6 +315,8 @@
 				<li>ST_CookingApple</li>
 				<li>ST_Lemon</li>
 				<li>ST_Orange</li>
+				<li>ST_Lime</li>
+				<li>TSP_ST_Citron</li>
 				<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
@@ -325,6 +338,8 @@
 				<li>ST_CookingApple</li>
 				<li>ST_Lemon</li>
 				<li>ST_Orange</li>
+				<li>ST_Lime</li>
+				<li>TSP_ST_Citron</li>
 				<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
@@ -346,6 +361,8 @@
 				<li>ST_CookingApple</li>
 				<li>ST_Lemon</li>
 				<li>ST_Orange</li>
+				<li>ST_Lime</li>
+				<li>TSP_ST_Citron</li>
 				<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>
@@ -367,6 +384,8 @@
 				<li>ST_CookingApple</li>
 				<li>ST_Lemon</li>
 				<li>ST_Orange</li>
+				<li>ST_Lime</li>
+				<li>TSP_ST_Citron</li>
 				<li MayRequire="GarbageDayIsHereToStay.Watermelons.GDIHTSWM">RAW_WATERMELON_RESOURCE_DEF</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Bananas</li>
 				<li MayRequire="BiomesTeam.BiomesIslands">BiomesIslands_Oranges</li>

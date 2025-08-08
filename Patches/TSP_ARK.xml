@@ -81,6 +81,11 @@
 			<xpath>/Defs/ThingDef[defName="Nothing"]/comps</xpath>
 			<value>
 				<comps Inherit="False">
+					<li Class="CompProperties_Usable">
+						<useJob>UseItem</useJob>
+						<useLabel>Activate!</useLabel>
+						<useDuration>510</useDuration>
+					</li>
 					<li Class="CompProperties_Hatcher">
 						<hatcherDaystoHatch>2</hatcherDaystoHatch>
 						<hatcherPawn>PlayerArk</hatcherPawn>
@@ -88,11 +93,6 @@
 					<li Class="StoryTime.CompProperties_SpawnPawn">
 						<compClass>StoryTime.CompUseEffect_SpawnPerson</compClass>
 						<pawnKind>PlayerArk</pawnKind>
-					</li>
-					<li Class="CompProperties_Usable">
-						<useJob>UseItem</useJob>
-						<useLabel>Activate!</useLabel>
-						<useDuration>510</useDuration>
 					</li>
 					<li Class="CompProperties_UseEffect">
 						<compClass>CompUseEffect_DestroySelf</compClass>
@@ -326,11 +326,11 @@
 					</li>
 					<li MayRequire="Ludeon.RimWorld.Biotech">
 						<def>HumanlikePreTeenager</def>
-						<minAge>1</minAge>
+						<minAge>0.1</minAge>
 					</li>
 					<li>
 						<def>HumanlikeTeenager</def>
-						<minAge>2</minAge>
+						<minAge>1</minAge>
 					</li>
 					<li>
 						<def>HumanlikeAdult</def>
