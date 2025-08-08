@@ -4,7 +4,7 @@
 	<ThingDef ParentName="TSP_ST_AnimalFrog_ThingBase">
 		<defName>PepsiFrog</defName>
 		<label>Pepsi Frog</label>
-		<description>This frog seems to be the product of some strange genetic experiment by a soda corporation. Unlike most frogs, though, female Pepsi frogs produce milk like mammals. This milk is extremely strange however, as it has the exact texture, appearance, and taste of the ancient drink known as 'Pepsi'. It is even naturally carbonated!</description>
+		<description>This frog seems to be the product of some strange genetic experiment by a soda corporation. Unlike most frogs, though, female Pepsi frogs produce milk like mammals. This milk is extremely strange however, as it has the exact texture, appearance, and taste of the ancient drink known as 'Pepsi'. It is even naturally carbonated! Pepsi frogs thrive in cold environments, particularly swampy ones.</description>
 		<statBases>
 		  <MoveSpeed>4.0</MoveSpeed>
 		  <MarketValue>100</MarketValue>
@@ -74,52 +74,64 @@
 
 				<BorealForest>0.001</BorealForest>
 
-				<Tundra>0.05</Tundra>
+				<Tundra>0.1</Tundra>
 
-				<ColdBog>0.1</ColdBog>
+				<ColdBog>0.41</ColdBog>
 
-				<IceSheet>0.05</IceSheet>
+				<IceSheet>0.15</IceSheet>
 
 				<SeaIce>0.001</SeaIce>
 
-				<TemperateForest>0.006</TemperateForest>
+				<TemperateForest>0.0016</TemperateForest>
 
 				<TemperateSwamp>0.02</TemperateSwamp>
 
-				<TropicalRainforest>0.008</TropicalRainforest>
+				<TropicalRainforest>0.001</TropicalRainforest>
 
-				<TropicalSwamp>0.008</TropicalSwamp>
+				<TropicalSwamp>0.0018</TropicalSwamp>
 
 				<AridShrubland>0.001</AridShrubland>
 
 				<Desert>0</Desert>
 
-				<ExtremeDesert>0</ExtremeDesert>
+				<ExtremeDesert>0</ExtremeDesert>			
 
 
+				<!-- Ludeon.RimWorld.Odyssey -->
+				<!-- VANILLA RENDITION: ODYSSEY EXPANSION PACK -->
+				
+				<GlacialPlain MayRequire="Ludeon.RimWorld.Odyssey">0.1</GlacialPlain>
+				
+				<Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.01</Glowforest>
+				
+				<Grasslands MayRequire="Ludeon.RimWorld.Odyssey">0.01</Grasslands>
+				
+				<LavaField MayRequire="Ludeon.RimWorld.Odyssey">0.01</LavaField>
+				
+				<Scarlands MayRequire="Ludeon.RimWorld.Odyssey">0.001</Scarlands> <!-- Nuclear weapons fallout zone -->
 
 
 
 				<!-- ___________________ -->			
-				<!-- Mod Biomes -->
+				<!--	Mod Biomes	-->
 				<!-- ___________________ -->
 
 				<!-- sarg.alphabiomes -->
 				<!-- ALPHA BIOMES -->
 
-				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.001</AB_FeraliskInfestedJungle>
+				<AB_FeraliskInfestedJungle MayRequire="sarg.alphabiomes">0.002</AB_FeraliskInfestedJungle>
 
 				<AB_GallatrossGraveyard MayRequire="sarg.alphabiomes">0.001</AB_GallatrossGraveyard>
 
-				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.1</AB_GelatinousSuperorganism>
+				<AB_GelatinousSuperorganism MayRequire="sarg.alphabiomes">0.001</AB_GelatinousSuperorganism>
 
-				<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">0</AB_MechanoidIntrusion>
+				<AB_MechanoidIntrusion MayRequire="sarg.alphabiomes">0.001</AB_MechanoidIntrusion>
 
 				<AB_MycoticJungle MayRequire="sarg.alphabiomes">0.001</AB_MycoticJungle>
 
-				<AB_OcularForest MayRequire="sarg.alphabiomes">0.02</AB_OcularForest>
+				<AB_OcularForest MayRequire="sarg.alphabiomes">0.21</AB_OcularForest>
 
-				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0.1</AB_PropaneLakes>
+				<AB_PropaneLakes MayRequire="sarg.alphabiomes">0.051</AB_PropaneLakes>
 
 				<AB_PyroclasticConflagration MayRequire="sarg.alphabiomes">0</AB_PyroclasticConflagration>
 
@@ -127,10 +139,9 @@
 
 				<AB_TarPits MayRequire="sarg.alphabiomes">0.001</AB_TarPits>
 
-				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0.001</AB_MiasmicMangrove>
+				<AB_MiasmicMangrove MayRequire="sarg.alphabiomes">0</AB_MiasmicMangrove>
 
-				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.1</AB_IdyllicMeadows>
-
+				<AB_IdyllicMeadows MayRequire="sarg.alphabiomes">0.01</AB_IdyllicMeadows>
 
 
 
@@ -142,20 +153,21 @@
 				<BMT_ChromaticOasis MayRequire="BiomesTeam.Oasis">0.001</BMT_ChromaticOasis>
 
 
+
 				<!-- ___________________ -->
 
 				<!-- Mlie.AdvancedBiomes -->
 				<!-- ADVANCED BIOMES -->
 
-				<PoisonForest MayRequire="Mlie.AdvancedBiomes">0</PoisonForest>
+				<PoisonForest MayRequire="Mlie.AdvancedBiomes">0.041</PoisonForest>
 
-				<Savanna MayRequire="Mlie.AdvancedBiomes">0.001</Savanna>
+				<Savanna MayRequire="Mlie.AdvancedBiomes">0.01</Savanna>
 
-				<Volcano MayRequire="Mlie.AdvancedBiomes">0</Volcano>
+				<Volcano MayRequire="Mlie.AdvancedBiomes">0.001</Volcano>
 
-				<Wasteland MayRequire="Mlie.AdvancedBiomes">0.07</Wasteland>
+				<Wasteland MayRequire="Mlie.AdvancedBiomes">0.01</Wasteland>
 
-				<Wetland MayRequire="Mlie.AdvancedBiomes">0.02</Wetland>
+				<Wetland MayRequire="Mlie.AdvancedBiomes">0.0.1</Wetland>
 
 
 				<!-- ___________________ -->
@@ -165,23 +177,23 @@
 
 				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_AlpineMeadow>
 
-				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_CloudForest>
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.02</ZBiome_CloudForest>
 
-				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.02</ZBiome_CoastalDunes>
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_CoastalDunes>
 
-				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_DesertOasis>
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_DesertOasis>
 
-				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_Grasslands>
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_Grasslands>
 
-				<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.001</ZBiome_Iceberg_NoBeach>
+				<ZBiome_Iceberg_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.031</ZBiome_Iceberg_NoBeach>
 
 				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.02</ZBiome_Marsh>
 
-				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.03</ZBiome_Sandbar_NoBeach>
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.002</ZBiome_Sandbar_NoBeach>
 				
-				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.15</ZBiome_GlacialShield>
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_GlacialShield>
 				
-				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.07</ZBiome_Badlands>
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.01</ZBiome_Badlands>
 
 
 				<!-- ___________________ -->
@@ -191,7 +203,7 @@
 
 				<TKKN_VolcanicFlow MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_VolcanicFlow>
 
-				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.01</TKKN_RedwoodForest>
+				<TKKN_RedwoodForest MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_RedwoodForest>
 
 				<TKKN_Grasslands MayRequire="Mlie.NaturesPrettySweet">0.01</TKKN_Grasslands> <!-- PRAIRIE -->
 
@@ -199,7 +211,7 @@
 
 				<TKKN_Desert MayRequire="Mlie.NaturesPrettySweet">0</TKKN_Desert> <!-- SALT FIELDS -->
 
-				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.02</TKKN_Oasis>			
+				<TKKN_Oasis MayRequire="Mlie.NaturesPrettySweet">0.001</TKKN_Oasis>			
 
 
 				<!-- ___________________ -->
@@ -215,24 +227,37 @@
 				<!-- BiomesTeam.BiomesIslands -->
 				<!-- BIOMES ISLANDS -->
 
-				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_Atoll>
+				<BiomesIslands_Atoll MayRequire="BiomesTeam.BiomesIslands">0</BiomesIslands_Atoll>
 
-				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_BorealIsland>
+				<BiomesIslands_BorealIsland MayRequire="BiomesTeam.BiomesIslands">0.13</BiomesIslands_BorealIsland>
 
-				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_DesertIsland>
+				<BiomesIslands_DesertIsland MayRequire="BiomesTeam.BiomesIslands">0.003</BiomesIslands_DesertIsland>
 
-				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_DesertArchipelago>
+				<BiomesIslands_DesertArchipelago MayRequire="BiomesTeam.BiomesIslands">0.003</BiomesIslands_DesertArchipelago>
 
-				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_TemperateIsland>
+				<BiomesIslands_TemperateIsland MayRequire="BiomesTeam.BiomesIslands">0.03</BiomesIslands_TemperateIsland>
 
-				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.01</BiomesIslands_TemperateArchipelago>
+				<BiomesIslands_TemperateArchipelago MayRequire="BiomesTeam.BiomesIslands">0.03</BiomesIslands_TemperateArchipelago>
 
-				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TropicalIsland>
+				<BiomesIslands_TropicalIsland MayRequire="BiomesTeam.BiomesIslands">0.003</BiomesIslands_TropicalIsland>
 
-				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.001</BiomesIslands_TropicalArchipelago>
+				<BiomesIslands_TropicalArchipelago MayRequire="BiomesTeam.BiomesIslands">0.003</BiomesIslands_TropicalArchipelago>
 
-				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.1</BiomesIslands_TundraIsland>
+				<BiomesIslands_TundraIsland MayRequire="BiomesTeam.BiomesIslands">0.23</BiomesIslands_TundraIsland>
+				
+				
+				
+				<!-- _________________ -->
 
+				<!-- BiomesTeam.BiomesCaverns -->
+				<!-- BIOMES CAVERNS -->
+				
+				<BMT_CrystalCaverns MayRequire="BiomesTeam.BiomesCaverns">0.001</BMT_CrystalCaverns>
+				
+				<BMT_EarthenDepths MayRequire="BiomesTeam.BiomesCaverns">0</BMT_EarthenDepths>
+				
+				<BMT_FungalForest MayRequire="BiomesTeam.BiomesCaverns">0.01</BMT_FungalForest>
+				
 
 
 				<!-- ___________________ -->
@@ -240,8 +265,7 @@
 				<!-- reel.FrozenForest -->
 				<!-- WINTER TAIGA -->
 
-				<WinterTaiga MayRequire="reel.FrozenForest">0.25</WinterTaiga>
-
+				<WinterTaiga MayRequire="reel.FrozenForest">0.1</WinterTaiga>
 
 
 				<!-- __________________ -->
@@ -251,12 +275,29 @@
 
 				<MorrowRim_Ashlands MayRequire="SirMashedPotato.MorrowRim">0.001</MorrowRim_Ashlands>
 
-				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.005</MorrowRim_BlightedAshlands>
+				<MorrowRim_BlightedAshlands MayRequire="SirMashedPotato.MorrowRim">0.001</MorrowRim_BlightedAshlands>
 
-				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.01</MorrowRim_AshSwamp>
+				<MorrowRim_AshSwamp MayRequire="SirMashedPotato.MorrowRim.ashswamp">0.002</MorrowRim_AshSwamp>
 
 				<MorrowRim_VolcanicAshlands MayRequire="SirMashedPotato.MorrowRim.volcanicashlands">0.001</MorrowRim_VolcanicAshlands>
-
+				
+				<Mashed_Ashlands_BlightedBogAshlands MayRequire="sirmashedpotato.ashlands">0</Mashed_Ashlands_BlightedBogAshlands>
+				
+				<Mashed_Ashlands_BlightedAshlands MayRequire="sirmashedpotato.ashlands">0</Mashed_Ashlands_BlightedAshlands>
+				
+				<Mashed_Ashlands_Ashlands MayRequire="sirmashedpotato.ashlands">0.001</Mashed_Ashlands_Ashlands>
+				
+				<Mashed_Ashlands_DustplainAshlands MayRequire="sirmashedpotato.ashlands">0.0001</Mashed_Ashlands_DustplainAshlands>
+				
+				<Mashed_Ashlands_GrazelandAshlands MayRequire="sirmashedpotato.ashlands">0.001</Mashed_Ashlands_GrazelandAshlands>
+				
+				<Mashed_Ashlands_SwampAshlands MayRequire="sirmashedpotato.ashlands">0.002</Mashed_Ashlands_SwampAshlands>
+				
+				<Mashed_Ashlands_ForestAshlands MayRequire="sirmashedpotato.ashlands">0.001</Mashed_Ashlands_ForestAshlands>
+				
+				<Mashed_Ashlands_MarshAshlands MayRequire="sirmashedpotato.ashlands">0.002</Mashed_Ashlands_MarshAshlands>
+				
+				<Mashed_Ashlands_MeadowAshlands MayRequire="sirmashedpotato.ashlands">0.001</Mashed_Ashlands_MeadowAshlands>
 
 
 				<!-- ___________________ -->
@@ -277,14 +318,12 @@
 				<SCR_SCP610Biome MayRequire="deemainiac.securecontainrimworld">0.001</SCR_SCP610Biome>
 
 
-
 				<!-- _________________ -->
 
 				<!-- regrowth.botr.volcanicicesheet -->
 				<!-- VOLCANIC ICE SHEET -->
 
-				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.12</RG-VIS_VulcanicIceSheet> <!-- Make me, Helixian. MAKE ME. -->
-				
+				<RG-VIS_VulcanicIceSheet MayRequire="regrowth.botr.volcanicicesheet">0.1</RG-VIS_VulcanicIceSheet>
 				
 				
 				<!-- _________________ -->
@@ -292,7 +331,87 @@
 				<!-- ironscruff.primordialgeysers -->
 				<!-- PRIMORDIAL GEYSERS -->
 				
-				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.02</IronScruff_PrimordialGeysers>
+				<IronScruff_PrimordialGeysers MayRequire="ironscruff.primordialgeysers">0.051</IronScruff_PrimordialGeysers>
+
+
+				<!-- _________________ -->
+				
+				<!-- mlie.rfpermafrost -->
+				<!-- PERMAFROST ZONE -->
+
+				<Permafrost MayRequire="mlie.rfpermafrost">0.1</Permafrost>
+				
+				
+				<!-- _________________ -->
+				
+				<!-- comigogames.biomes.greaterswamps -->
+				<!-- GREATER SWAMPS -->
+				
+				<COMIGO_GreaterSwamp_Temperate MayRequire="comigogames.biomes.greaterswamps">0.03</COMIGO_GreaterSwamp_Temperate>
+
+				<COMIGO_GreaterSwamp_Cold MayRequire="comigogames.biomes.greaterswamps">0.33</COMIGO_GreaterSwamp_Cold>
+
+				<COMIGO_GreaterSwamp_Tropical MayRequire="comigogames.biomes.greaterswamps">0.03</COMIGO_GreaterSwamp_Tropical>
+				
+				
+				<!-- _________________ -->
+				
+				<!-- needler98.dune -->
+				<!-- SPICE ZONE (DUNE) -->
+				
+				<SpiceDesert MayRequire="comigogames.biomes.greaterswamps">0.001</SpiceDesert>
+				
+				
+				<!-- _________________ -->
+				
+				<!-- dankpyon.medieval.overhaul -->
+				<!-- MEDIEVAL OVERHAUL -->
+				
+				<!-- <DankPyon_AncientForest MayRequire="dankpyon.medieval.overhaul">0</DankPyon_AncientForest> -->
+				
+				<DankPyon_DarkForest MayRequire="dankpyon.medieval.overhaul">0.01</DankPyon_DarkForest>
+				
+				
+				<!-- _________________ -->
+				
+				<!-- tw.tangsbiome.rainbowforest -->
+				<!-- RAINBOW LAND -->
+				
+				<TWRL_Biome_RainbowLand MayRequire="tw.tangsbiome.rainbowforest">0.33</TWRL_Biome_RainbowLand>
+				
+				
+				
+				<!-- _________________ -->
+				
+				<!-- grimterra.biomesmod -->
+				<!-- GRIM TERRA -->
+				
+				<BiomeGRimberlands MayRequire="grimterra.biomesmod">0.002</BiomeGRimberlands> <!-- GR-Tropical -->
+				
+				<BiomeGRimerald MayRequire="grimterra.biomesmod">0.001</BiomeGRimerald> <!-- Overgrown Ruins -->
+				
+				<BiomeGRimethyst MayRequire="grimterra.biomesmod">0.04</BiomeGRimethyst> <!-- Never Glades Bog -->
+				
+				<BiomeGRimonade MayRequire="grimterra.biomesmod">0.1</BiomeGRimonade> <!-- Frozen Ruins -->
+				
+				<BiomeGRimond MayRequire="grimterra.biomesmod">0.001</BiomeGRimond> <!-- Blue Desert -->
+				
+				<BiomeGRimphire MayRequire="grimterra.biomesmod">0.01</BiomeGRimphire> <!-- Blue Fire Mountains -->
+				
+				<BiomeGRimworld MayRequire="grimterra.biomesmod">0</BiomeGRimworld> <!-- Bleached Desert No-Man's Land -->
+				
+				<BiomeGRuby MayRequire="grimterra.biomesmod">0.005</BiomeGRuby> <!-- Forever Forest -->
+				
+				<BiomeGRuquoise MayRequire="grimterra.biomesmod">0.01</BiomeGRuquoise> <!-- Graze Lands -->
+				
+				
+				
+				<!-- _________________ -->
+				
+				<!-- thrawnbar.animaforest -->
+				<!-- ANIMA FOREST -->
+				
+				<AnimaForest MayRequire="thrawnbar.animaforest">0.01</AnimaForest>
 		  </wildBiomes>
 		  <body>ST_FrogLike</body>
 		  <nameGenerator>FrogNamerMale</nameGenerator>
