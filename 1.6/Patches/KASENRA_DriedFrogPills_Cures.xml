@@ -7,7 +7,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
+		<xpath>Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs</xpath>
@@ -54,7 +54,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="WarriorHoney"]</xpath>
+		<xpath>Defs/ThingDef[defName="WarriorHoney"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs</xpath>
@@ -106,7 +106,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/HediffDef[defName="Abasia"]</xpath>
+		<xpath>Defs/HediffDef[defName="Abasia"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs</xpath>
@@ -158,11 +158,11 @@
 	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist/ -->
-		<xpath>/Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
+		<xpath>Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Human"]/recipes</xpath>
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Human"]/recipes</xpath>
 			<value>
 				<li>TSP_KASENRA_CureInsanity</li>
 			</value>
@@ -174,10 +174,10 @@
 	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
 	<Operation Class="PatchOperationConditional">
 	 <!--  Does this exist? -->
-		<xpath>/Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
+		<xpath>Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Human"]/recipes</xpath>
+			<xpath>Defs/ThingDef[defName="Human"]/recipes</xpath>
 			<value>
 				<li>TSP_KASENRA_CureInsanity</li>
 			</value>
@@ -188,11 +188,11 @@
 	<!-- This allows insane animals to be cured, too. -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist/ -->
-		<xpath>/Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
+		<xpath>Defs/HediffDef[defName="ROM_SanityLoss"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
+			<xpath>Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
 			<value>
 				<li>TSP_KASENRA_CureInsanity</li>
 			</value>
@@ -203,11 +203,11 @@
 	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist/ -->
-		<xpath>/Defs/RecipeDef[defName="TSP_KASENRA_CureCatatonia"]</xpath>
+		<xpath>Defs/RecipeDef[defName="TSP_KASENRA_CureCatatonia"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Human"]/recipes</xpath>
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Human"]/recipes</xpath>
 			<value>
 				<li>TSP_KASENRA_CureCatatonia</li>
 				<li>TSP_KASENRA_CureDementiaCorruption</li>
@@ -223,10 +223,10 @@
 	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
 	<Operation Class="PatchOperationConditional">
 	 <!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Human"]/recipes</xpath>
+		<xpath>Defs/ThingDef[defName="Human"]/recipes</xpath>
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Human"]/recipes</xpath>
+			<xpath>Defs/ThingDef[defName="Human"]/recipes</xpath>
 			<value>
 				<li>TSP_KASENRA_CureCatatonia</li>
 				<li>TSP_KASENRA_CureDementiaCorruption</li>
@@ -242,11 +242,11 @@
 	<!-- This allows insane animals to be cured, too. -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
+		<xpath>Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
+			<xpath>Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
 			<value>
 				<li>TSP_KASENRA_CureCatatonia</li>
 				<li>TSP_KASENRA_CureDementiaCorruption</li>
@@ -262,11 +262,11 @@
 	<!-- Allows Catatonia to be cured by Dried Frog Pills -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist/ -->
-		<xpath>/Defs/HediffDef[defName="CatatonicBreakdown"]</xpath>
+		<xpath>Defs/HediffDef[defName="CatatonicBreakdown"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/HediffDef[defName="CatatonicBreakdown"]</xpath>
+			<xpath>Defs/HediffDef[defName="CatatonicBreakdown"]</xpath>
 			<value>
 				<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
 				<everCurableByItem>true</everCurableByItem>
@@ -281,11 +281,11 @@
 	<!-- Allows Catatonia to be cured by Dried Frog Pills -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist/ -->
-		<xpath>/Defs/HediffDef[defName="Abasia"]</xpath>
+		<xpath>Defs/HediffDef[defName="Abasia"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/HediffDef[defName="Abasia"]</xpath>
+			<xpath>Defs/HediffDef[defName="Abasia"]</xpath>
 			<value>
 				<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
 				<everCurableByItem>true</everCurableByItem>

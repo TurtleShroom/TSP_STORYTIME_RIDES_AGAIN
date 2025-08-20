@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mech_Logistic"]/race/packAnimal</xpath>
+		<xpath>Defs/ThingDef[defName="Mech_Logistic"]/race/packAnimal</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Mech_Logistic"]/race/packAnimal</xpath>
+			<xpath>Defs/ThingDef[defName="Mech_Logistic"]/race/packAnimal</xpath>
 			<value>
 				<packAnimal>true</packAnimal>
 			</value>
@@ -15,7 +15,7 @@
 		<!-- If it DOES NOT, add this. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Mech_Logistic"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="Mech_Logistic"]/race</xpath>
 			<value>
 				<packAnimal>true</packAnimal>
 			</value>

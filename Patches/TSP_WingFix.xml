@@ -4,10 +4,10 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="WW_Sloodge"]</xpath>
+		<xpath>Defs/ThingDef[defName="WW_Sloodge"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingSetMakerDef[defName="PirateRaidLootMaker"]/root/fixedParams/thingDefs</xpath>
+			<xpath>Defs/ThingSetMakerDef[defName="PirateRaidLootMaker"]/root/fixedParams/thingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>Highwing</li>
@@ -22,10 +22,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Sloodge"]/ingestible/foodType</xpath>
+		<xpath>Defs/ThingDef[defName="Sloodge"]/ingestible/foodType</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Sloodge"]/ingestible/foodType</xpath>
+			<xpath>Defs/ThingDef[defName="Sloodge"]/ingestible/foodType</xpath>
 			<success>Always</success>
 			<value>
 				<foodType>Processed, CarnivoreAnimalStrict, CarnivoreAnimal, VegetarianRoughAnimal, OmnivoreAnimal, OmnivoreRoughAnimal, OmnivoreHuman, DendrovoreAnimal, Corpse, Meat, VegetableOrFruit, AnimalProduct, Seed, Plant, Tree, Fluid, Liquor, Kibble</foodType>
@@ -36,10 +36,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Sloodge"]/ingestible/preferability</xpath>
+		<xpath>Defs/ThingDef[defName="Sloodge"]/ingestible/preferability</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Sloodge"]/ingestible/preferability</xpath>
+			<xpath>Defs/ThingDef[defName="Sloodge"]/ingestible/preferability</xpath>
 			<success>Always</success>
 			<value>
 				<preferability>RawTasty</preferability>
@@ -51,10 +51,10 @@
 	<!-- The Oni Mod has more than one version, so a Patch is needed instead of a direct call -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="OniFeather"]</xpath>
+		<xpath>Defs/ThingDef[defName="OniFeather"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/ingredients/li[1]/filter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/ingredients/li[1]/filter/thingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>OniFeather</li>
@@ -66,10 +66,10 @@
 	<!-- The Oni Mod has more than one version, so a Patch is needed instead of a direct call -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="OotR_OniFeathers"]</xpath>
+		<xpath>Defs/ThingDef[defName="OotR_OniFeathers"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/ingredients/li[1]/filter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/ingredients/li[1]/filter/thingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>OotR_OniFeathers</li>
@@ -80,10 +80,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="OotR_OniFeathers"]</xpath>
+		<xpath>Defs/ThingDef[defName="OotR_OniFeathers"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/fixedIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/fixedIngredientFilter/thingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>OotR_OniFeathers</li>
@@ -94,10 +94,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="OniFeather"]</xpath>
+		<xpath>Defs/ThingDef[defName="OniFeather"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/fixedIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/fixedIngredientFilter/thingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>OniFeather</li>
@@ -108,10 +108,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="OniFeather"]</xpath>
+		<xpath>Defs/ThingDef[defName="OniFeather"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/defaultIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/defaultIngredientFilter/thingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>OniFeather</li>
@@ -123,10 +123,10 @@
 	<!-- The Oni Mod has more than one version, so a Patch is needed instead of a direct call -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Leather_Oni"]</xpath>
+		<xpath>Defs/ThingDef[defName="Leather_Oni"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/ingredients/li[1]/filter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/ingredients/li[1]/filter/thingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>Leather_Oni</li>
@@ -137,10 +137,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Leather_Oni"]</xpath>
+		<xpath>Defs/ThingDef[defName="Leather_Oni"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/fixedIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/fixedIngredientFilter/thingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>Leather_Oni</li>
@@ -152,10 +152,10 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	Does this exist?
-		<xpath>/Defs/ThingDef[defName="Leather_Oni"]</xpath>
+		<xpath>Defs/ThingDef[defName="Leather_Oni"]</xpath>
 		If it does, add this.
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/defaultIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_WW_MakeHighwing"]/defaultIngredientFilter/thingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>Leather_Oni</li>
@@ -168,10 +168,10 @@
 	<!-- EVERYONE can eat Sloodge! -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="WW_Sloodge"]</xpath>
+		<xpath>Defs/ThingDef[defName="WW_Sloodge"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef/comps/li/customThingToEat</xpath>
+			<xpath>Defs/ThingDef/comps/li/customThingToEat</xpath>
 			<success>Always</success>
 			<value>
 				<li>WW_Sloodge</li>

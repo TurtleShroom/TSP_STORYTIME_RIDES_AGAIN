@@ -3,7 +3,7 @@
 <Patch>
 	<Operation Class="PatchOperationReplace">
 		<success>Always</success>
-		<xpath>/Defs/FactionDef[defName="Pirate"]/permanentEnemy</xpath>
+		<xpath>Defs/FactionDef[defName="Pirate"]/permanentEnemy</xpath>
 		<value>
 			<permanentEnemyToEveryoneExcept>
 				<li>NicePirates</li>
@@ -14,11 +14,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/FactionDef[defName="VFEP_Junkers"]</xpath>
+	<xpath>Defs/FactionDef[defName="VFEP_Junkers"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="VFEP_Junkers"]/permanentEnemy</xpath>
+			<xpath>Defs/FactionDef[defName="VFEP_Junkers"]/permanentEnemy</xpath>
 			<value>
 				<permanentEnemyToEveryoneExcept>
 					<li>NicePirates</li>
@@ -31,11 +31,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/FactionDef[defName="VFEP_Junkers"]</xpath>
+	<xpath>Defs/FactionDef[defName="VFEP_Junkers"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="NicePirates"]/requiredMemes/li[1]</xpath>
+			<xpath>Defs/FactionDef[defName="NicePirates"]/requiredMemes/li[1]</xpath>
 			<value>
 				<li>VFEP_PirateMeme</li>
 			</value>
@@ -45,11 +45,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/FactionDef[defName="VFEP_Junkers"]</xpath>
+	<xpath>Defs/FactionDef[defName="VFEP_Junkers"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="MeanPirates"]/requiredMemes/li[1]</xpath>
+			<xpath>Defs/FactionDef[defName="MeanPirates"]/requiredMemes/li[1]</xpath>
 			<value>
 				<li>VFEP_PirateMeme</li>
 			</value>

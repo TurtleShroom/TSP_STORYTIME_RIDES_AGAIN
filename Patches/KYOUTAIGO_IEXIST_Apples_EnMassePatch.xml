@@ -5,13 +5,13 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="DankPyon_RawApples"]</xpath>
+		<xpath>Defs/ThingDef[defName="DankPyon_RawApples"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawApples"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawApples"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
@@ -20,7 +20,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawApples"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawApples"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
@@ -29,7 +29,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawApples"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawApples"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
@@ -42,13 +42,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="ST_CookingApple"]</xpath>
+		<xpath>Defs/ThingDef[defName="ST_CookingApple"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ST_CookingApple"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ST_CookingApple"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawApples</li>
@@ -57,7 +57,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="ST_CookingApple"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="ST_CookingApple"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawApples</li>
@@ -66,7 +66,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawApples"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawApples"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawApples</li>
@@ -79,13 +79,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VCE_RawApple"]</xpath>
+		<xpath>Defs/ThingDef[defName="VCE_RawApple"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCE_RawApple"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VCE_RawApple"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawApples</li>
@@ -94,7 +94,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_RawApple"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_RawApple"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawApples</li>
@@ -103,7 +103,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_RawApple"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_RawApple"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Wine</li>
@@ -116,9 +116,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="DankPyon_JuiceAppleUnfermented"]/thingCategories</xpath>
+		<xpath>Defs/ThingDef[defName="DankPyon_JuiceAppleUnfermented"]/thingCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="DankPyon_JuiceAppleUnfermented"]</xpath>
+			<xpath>Defs/ThingDef[defName="DankPyon_JuiceAppleUnfermented"]</xpath>
 			<success>Always</success>
 			<value>
 				<thingCategories Inherit="False"></thingCategories>
@@ -128,10 +128,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="DankPyon_JuiceAppleUnfermented"]/thingCategories</xpath>
+		<xpath>Defs/ThingDef[defName="DankPyon_JuiceAppleUnfermented"]/thingCategories</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="DankPyon_JuiceAppleUnfermented"]/thingCategories</xpath>
+			<xpath>Defs/ThingDef[defName="DankPyon_JuiceAppleUnfermented"]/thingCategories</xpath>
 			<success>Always</success>
 			<value>
 				<thingCategories Inherit="False">

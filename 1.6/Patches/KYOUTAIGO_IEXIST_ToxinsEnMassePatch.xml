@@ -5,13 +5,13 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
+	<xpath>Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Romy_Toxin"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Romy_Toxin"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
@@ -21,7 +21,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
@@ -31,7 +31,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Romy_Toxin"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
@@ -45,13 +45,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="EMWH_ToxicWater"]</xpath>
+	<xpath>Defs/ThingDef[defName="EMWH_ToxicWater"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="EMWH_ToxicWater"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="EMWH_ToxicWater"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
@@ -60,7 +60,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="EMWH_ToxicWater"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="EMWH_ToxicWater"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
@@ -69,7 +69,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="EMWH_ToxicWater"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="EMWH_ToxicWater"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
@@ -77,7 +77,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ST_PoisonExtract"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ST_PoisonExtract"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="ludeon.rimworld.biotech">RawToxipotato</li>
@@ -86,7 +86,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="ST_PoisonExtract"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="ST_PoisonExtract"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="ludeon.rimworld.biotech">RawToxipotato</li>
@@ -95,7 +95,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="ST_PoisonExtract"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="ST_PoisonExtract"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="ludeon.rimworld.biotech">RawToxipotato</li>

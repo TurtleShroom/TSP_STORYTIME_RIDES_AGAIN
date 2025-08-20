@@ -3,10 +3,10 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="KIT_BeanStewLavish"]</xpath>
+		<xpath>Defs/ThingDef[defName="KIT_BeanStewLavish"]</xpath>
 		<!-- If it does, add this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/PawnKindDef[@Name="BasePlayerBeanManPawnKind"]/invFoodDef</xpath>
+			<xpath>Defs/PawnKindDef[@Name="BasePlayerBeanManPawnKind"]/invFoodDef</xpath>
 			<success>Always</success>
 			<value>
 				<invFoodDef>KIT_BeanStewLavish</invFoodDef>

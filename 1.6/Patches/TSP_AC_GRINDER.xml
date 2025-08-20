@@ -3,10 +3,10 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="AC_ArtisanalGrinder"]</xpath>
+		<xpath>Defs/ThingDef[defName="AC_ArtisanalGrinder"]</xpath>
 		<!-- If it does, insert this as a sibling entry in the same bracket. -->
 		<match Class="PatchOperationInsert">
-			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="AC_ArtisanalGrinder"]</xpath>
+			<xpath>Defs/RecipeDef/recipeUsers/li[text()="AC_ArtisanalGrinder"]</xpath>
 			<success>Always</success>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
@@ -22,10 +22,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="QuernLowTech"]</xpath>
+		<xpath>Defs/ThingDef[defName="QuernLowTech"]</xpath>
 		<!-- If it does, insert this as a sibling entry in the same bracket. -->
 		<match Class="PatchOperationInsert">
-			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="QuernLowTech"]</xpath>
+			<xpath>Defs/RecipeDef/recipeUsers/li[text()="QuernLowTech"]</xpath>
 			<success>Always</success>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
@@ -39,10 +39,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="QuernHighTech"]</xpath>
+		<xpath>Defs/ThingDef[defName="QuernHighTech"]</xpath>
 		<!-- If it does, insert this as a sibling entry in the same bracket. -->
 		<match Class="PatchOperationInsert">
-			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="QuernHighTech"]</xpath>
+			<xpath>Defs/RecipeDef/recipeUsers/li[text()="QuernHighTech"]</xpath>
 			<success>Always</success>
 			<value>
 				<!-- <li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li> -->
@@ -56,10 +56,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="COMIGO_ElectricMill"]</xpath>
+		<xpath>Defs/ThingDef[defName="COMIGO_ElectricMill"]</xpath>
 		<!-- If it does, insert this as a sibling entry in the same bracket. -->
 		<match Class="PatchOperationInsert">
-			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="COMIGO_ElectricMill"]</xpath>
+			<xpath>Defs/RecipeDef/recipeUsers/li[text()="COMIGO_ElectricMill"]</xpath>
 			<success>Always</success>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
@@ -71,10 +71,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="COMIGO_PrimitiveCrushingSpot"]</xpath>
+		<xpath>Defs/ThingDef[defName="COMIGO_PrimitiveCrushingSpot"]</xpath>
 		<!-- If it does, insert this as a sibling entry in the same bracket. -->
 		<match Class="PatchOperationInsert">
-			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="COMIGO_PrimitiveCrushingSpot"]</xpath>
+			<xpath>Defs/RecipeDef/recipeUsers/li[text()="COMIGO_PrimitiveCrushingSpot"]</xpath>
 			<success>Always</success>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
@@ -86,10 +86,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="COMIGO_Quernstone"]</xpath>
+		<xpath>Defs/ThingDef[defName="COMIGO_Quernstone"]</xpath>
 		<!-- If it does, insert this as a sibling entry in the same bracket. -->
 		<match Class="PatchOperationInsert">
-			<xpath>/Defs/RecipeDef/recipeUsers/li[text()="COMIGO_Quernstone"]</xpath>
+			<xpath>Defs/RecipeDef/recipeUsers/li[text()="COMIGO_Quernstone"]</xpath>
 			<success>Always</success>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
@@ -104,7 +104,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VinegarCask"]</xpath>
+		<xpath>Defs/ThingDef[defName="VinegarCask"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs</xpath>
@@ -146,9 +146,9 @@
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="VinegarCask"]</xpath>
+		<xpath>Defs/ThingDef[defName="VinegarCask"]</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="AC_VinegarCask"]/comps/li/processes</xpath>
+			<xpath>Defs/ThingDef[defName="AC_VinegarCask"]/comps/li/processes</xpath>
 			<success>Always</success>
 			<value>
 				<li>TSP_InstaNog</li>

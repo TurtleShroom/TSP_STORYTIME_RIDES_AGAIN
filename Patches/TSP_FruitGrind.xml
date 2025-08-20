@@ -4,33 +4,33 @@
 	<!-- Delete the Recipe if it already exists -->
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CC"]</xpath>
+	<xpath>Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CC"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<nomatch Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CC"]</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CC"]</xpath>
 		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CL"]</xpath>
+	<xpath>Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CL"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<nomatch Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CL"]</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CL"]</xpath>
 		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_LCCC"]</xpath>
+	<xpath>Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_LCCC"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<nomatch Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_LCCC"]</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_LCCC"]</xpath>
 		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
@@ -38,7 +38,7 @@
 	<!-- Now we add it back -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]</xpath>
+		<xpath>Defs/ThingDef[defName="FruitBlendRaw"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -191,11 +191,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="FruitBlendFive"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="FruitBlendFive"]/ingredients</xpath>
 			<value>
 				<ingredients>
 					<li>
@@ -217,11 +217,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="FruitBlendTwenty"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="FruitBlendTwenty"]/ingredients</xpath>
 			<value>
 				<ingredients>
 					<li>
@@ -243,11 +243,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="FruitBlendFifty"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="FruitBlendFifty"]/ingredients</xpath>
 			<value>
 				<ingredients>
 					<li>
@@ -269,11 +269,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="FruitBlendSevenFive"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="FruitBlendSevenFive"]/ingredients</xpath>
 			<value>
 				<ingredients>
 					<li>
@@ -295,11 +295,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="FruitBlendHundo"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="FruitBlendHundo"]/ingredients</xpath>
 			<value>
 				<ingredients>
 					<li>
@@ -321,11 +321,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CC"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CC"]/ingredients</xpath>
 			<value>
 				<ingredients>
 					<li>
@@ -347,11 +347,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CL"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_CL"]/ingredients</xpath>
 			<value>
 				<ingredients>
 					<li>
@@ -373,11 +373,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_LCCC"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_ZAL_FruitBlend_LCCC"]/ingredients</xpath>
 			<value>
 				<ingredients>
 					<li>
@@ -399,11 +399,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_Fruit"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]/thingCategories</xpath>
+			<xpath>Defs/ThingDef[defName="FruitBlendRaw"]/thingCategories</xpath>
 			<value>
 				<thingCategories Inherit="False">
 					<li>VCE_Fruit</li>
@@ -416,11 +416,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]/stackLimit</xpath>
+		<xpath>Defs/ThingDef[defName="FruitBlendRaw"]/stackLimit</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]/stackLimit</xpath>
+			<xpath>Defs/ThingDef[defName="FruitBlendRaw"]/stackLimit</xpath>
 			<value>
 				<stackLimit>1000</stackLimit>
 			</value>
@@ -428,7 +428,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]</xpath>
+			<xpath>Defs/ThingDef[defName="FruitBlendRaw"]</xpath>
 			<value>
 				<stackLimit>1000</stackLimit>
 			</value>
@@ -438,11 +438,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]/comps</xpath>
+		<xpath>Defs/ThingDef[defName="FruitBlendRaw"]/comps</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="FruitBlendRaw"]/comps</xpath>
 			<value>
 				<comps Inherit="False">
 					<li Class="CompProperties_Rottable">
@@ -455,7 +455,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="FruitBlendRaw"]</xpath>
+			<xpath>Defs/ThingDef[defName="FruitBlendRaw"]</xpath>
 			<value>
 				<comps Inherit="False">
 					<li Class="CompProperties_Rottable">

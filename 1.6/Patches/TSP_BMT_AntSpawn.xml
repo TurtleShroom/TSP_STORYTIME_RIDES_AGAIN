@@ -17,11 +17,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Hive"]/comps/li/spawnablePawnKinds</xpath>
+		<xpath>Defs/ThingDef[defName="Hive"]/comps/li/spawnablePawnKinds</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Hive"]/comps/li/spawnablePawnKinds</xpath>
+			<xpath>Defs/ThingDef[defName="Hive"]/comps/li/spawnablePawnKinds</xpath>
 			<value>
 				<li>ST_Ant</li>
 				<li>VFEI1_VatGrown_MilkBeetle</li>

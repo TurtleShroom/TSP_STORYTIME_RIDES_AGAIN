@@ -3,10 +3,10 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
+		<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<race>Alien_Jeub</race>
@@ -14,7 +14,7 @@
 		</match>
 		<!-- If it DOES, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]</xpath>
 			<success>Always</success>
 			<value>
 				<race>Alien_Jeub</race>
@@ -26,9 +26,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
-		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet</xpath>
+		<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]</xpath>
 			<success>Always</success>
 			<value>
 				<xenotypeSet MayRequire="ludeon.rimworld.biotech" Inherit="False"></xenotypeSet>
@@ -38,9 +38,9 @@
 
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
-		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet/xenotypeChances</xpath>
+		<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet/xenotypeChances</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet</xpath>
 			<success>Always</success>
 			<value>
 				<xenotypeChances MayRequire="ludeon.rimworld.biotech" Inherit="False"></xenotypeChances>
@@ -50,11 +50,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/XenotypeDef[defName="AV_Slavant"]</xpath>
+		<xpath>Defs/XenotypeDef[defName="AV_Slavant"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet/xenotypeChances</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet/xenotypeChances</xpath>
 			<value>
 				<AV_Slavant MayRequire="ludeon.rimworld.biotech">1</AV_Slavant>
 			</value>
@@ -64,11 +64,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/XenotypeDef[defName="AG_Mycormorph"]</xpath>
+		<xpath>Defs/XenotypeDef[defName="AG_Mycormorph"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet/xenotypeChances</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/xenotypeSet/xenotypeChances</xpath>
 			<value>
 				<AG_Mycormorph MayRequire="ludeon.rimworld.biotech">10</AG_Mycormorph>
 			</value>
@@ -78,11 +78,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/XenotypeDef[defName="AG_Mycormorph"]</xpath>
+		<xpath>Defs/XenotypeDef[defName="AG_Mycormorph"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="VRE_Fungoid"]/xenotypeSet/xenotypeChances</xpath>
+			<xpath>Defs/PawnKindDef[defName="VRE_Fungoid"]/xenotypeSet/xenotypeChances</xpath>
 			<value>
 				<VRE_Fungoid MayRequire="ludeon.rimworld.biotech">3</VRE_Fungoid>
 			</value>
@@ -92,11 +92,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
+		<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/race</xpath>
 			<value>
 				<race>Alien_Jeub</race>
 			</value>
@@ -106,11 +106,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/backstoryFilters</xpath>
+		<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/backstoryFilters</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/backstoryFilters</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/backstoryFilters</xpath>
 			<value>
 				<backstoryFilters>
 					<li>
@@ -129,11 +129,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/label</xpath>
+		<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/label</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/label</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/label</xpath>
 			<value>
 				<label>Jeub wanderer</label>
 			</value>
@@ -143,11 +143,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelPlural</xpath>
+		<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/labelPlural</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelPlural</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/labelPlural</xpath>
 			<value>
 				<labelPlural>Jeub wanderers</labelPlural>
 			</value>
@@ -157,11 +157,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemale</xpath>
+		<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemale</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemale</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemale</xpath>
 			<value>
 				<labelFemale>Jeub wanderer</labelFemale>
 			</value>
@@ -171,11 +171,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemalePlural</xpath>
+		<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemalePlural</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemalePlural</xpath>
+			<xpath>Defs/PawnKindDef[defName="FE_InfectorMan"]/labelFemalePlural</xpath>
 			<value>
 				<labelFemalePlural>Jeub wanderers</labelFemalePlural>
 			</value>

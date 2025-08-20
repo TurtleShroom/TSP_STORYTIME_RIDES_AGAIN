@@ -3,55 +3,55 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/PawnKindDef/baseRecruitDifficulty</xpath>
+		<xpath>Defs/PawnKindDef/baseRecruitDifficulty</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef/baseRecruitDifficulty</xpath>
+			<xpath>Defs/PawnKindDef/baseRecruitDifficulty</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef/statBases/ToxicSensitivity</xpath>
+		<xpath>Defs/ThingDef/statBases/ToxicSensitivity</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/statBases/ToxicSensitivity</xpath>
+			<xpath>Defs/ThingDef/statBases/ToxicSensitivity</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef/equippedStatOffsets/ToxicSensitivity</xpath>
+		<xpath>Defs/ThingDef/equippedStatOffsets/ToxicSensitivity</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/equippedStatOffsets/ToxicSensitivity</xpath>
+			<xpath>Defs/ThingDef/equippedStatOffsets/ToxicSensitivity</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/FactionDef/geneticVariance</xpath>
+		<xpath>Defs/FactionDef/geneticVariance</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef/geneticVariance</xpath>
+			<xpath>Defs/FactionDef/geneticVariance</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/DamageDef/additionalHediffs/li/victimSeverityScaling[text()="ToxicSensitivity"]</xpath>
+		<xpath>Defs/DamageDef/additionalHediffs/li/victimSeverityScaling[text()="ToxicSensitivity"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/DamageDef/additionalHediffs/li/victimSeverityScaling[text()="ToxicSensitivity"]</xpath>
+			<xpath>Defs/DamageDef/additionalHediffs/li/victimSeverityScaling[text()="ToxicSensitivity"]</xpath>
 			<value>
 				<victimSeverityScaling>ToxicResistance</victimSeverityScaling>
 			</value>
@@ -61,40 +61,40 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef/statBases/HungerRateMultiplier</xpath>
+		<xpath>Defs/ThingDef/statBases/HungerRateMultiplier</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/statBases/HungerRateMultiplier</xpath>
+			<xpath>Defs/ThingDef/statBases/HungerRateMultiplier</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef/equippedStatOffsets/HungerRateMultiplier</xpath>
+		<xpath>Defs/ThingDef/equippedStatOffsets/HungerRateMultiplier</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/equippedStatOffsets/HungerRateMultiplier</xpath>
+			<xpath>Defs/ThingDef/equippedStatOffsets/HungerRateMultiplier</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef/stuffProps/canSuggestUseDefaultStuff</xpath>
+		<xpath>Defs/ThingDef/stuffProps/canSuggestUseDefaultStuff</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/stuffProps/canSuggestUseDefaultStuff</xpath>
+			<xpath>Defs/ThingDef/stuffProps/canSuggestUseDefaultStuff</xpath>
 			<value>
 				<canSuggestUseDefaultStuff Inherit="False">true</canSuggestUseDefaultStuff>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/stuffProps</xpath>
+			<xpath>Defs/ThingDef/stuffProps</xpath>
 			<value>
 				<canSuggestUseDefaultStuff Inherit="False">true</canSuggestUseDefaultStuff>
 			</value>
@@ -104,77 +104,77 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Clothes"]</xpath>
+		<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Clothes"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Clothes"]</xpath>
+			<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Clothes"]</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Armor"]</xpath>
+		<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Armor"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Armor"]</xpath>
+			<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Armor"]</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Art"]</xpath>
+		<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Art"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Art"]</xpath>
+			<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_Art"]</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsRanged"]</xpath>
+		<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsRanged"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsRanged"]</xpath>
+			<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsRanged"]</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsMelee"]</xpath>
+		<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsMelee"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsMelee"]</xpath>
+			<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsMelee"]</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsMelee"]</xpath>
+		<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsMelee"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsMelee"]</xpath>
+			<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_WeaponsMelee"]</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef/menuHidden</xpath>
+		<xpath>Defs/ThingDef/menuHidden</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/menuHidden</xpath>
+			<xpath>Defs/ThingDef/menuHidden</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
@@ -182,11 +182,11 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	Does this exist?
-		<xpath>/Defs/MeditationFocusDef/requiredBackstoriesAny</xpath>
+		<xpath>Defs/MeditationFocusDef/requiredBackstoriesAny</xpath>
 		If it DOES NOT, add this.
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MeditationFocusDef</xpath>
+			<xpath>Defs/MeditationFocusDef</xpath>
 			<value>
 				<requiredBackstoriesAny></requiredBackstoriesAny>
 			</value>
@@ -198,11 +198,11 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	Does this exist?
-		<xpath>/Defs/MeditationFocusDef/incompatibleBackstoriesAny</xpath>
+		<xpath>Defs/MeditationFocusDef/incompatibleBackstoriesAny</xpath>
 		If it DOES NOT, add this.
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MeditationFocusDef</xpath>
+			<xpath>Defs/MeditationFocusDef</xpath>
 			<value>
 				<incompatibleBackstoriesAny></incompatibleBackstoriesAny>
 			</value>
@@ -215,9 +215,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="BasePawn"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="BasePawn"]/race</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="BasePawn"]</xpath>
+			<xpath>Defs/ThingDef[defName="BasePawn"]</xpath>
 			<success>Always</success>
 			<value>
 				<race></race>
@@ -227,9 +227,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="BasePawn"]/race/bloodDef</xpath>
+		<xpath>Defs/ThingDef[defName="BasePawn"]/race/bloodDef</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="BasePawn"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="BasePawn"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<bloodDef>Filth_Blood</bloodDef>
@@ -239,9 +239,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/AlienRace.ThingDef_AlienRace/race/bloodDef</xpath>
+		<xpath>Defs/AlienRace.ThingDef_AlienRace/race/bloodDef</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace/race</xpath>
+			<xpath>Defs/AlienRace.ThingDef_AlienRace/race</xpath>
 			<success>Always</success>
 			<value>
 				<bloodDef>Filth_Blood</bloodDef>
@@ -251,22 +251,22 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef/stuffProps/soundImpactStuff</xpath>
+		<xpath>Defs/ThingDef/stuffProps/soundImpactStuff</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/stuffProps/soundImpactStuff</xpath>
+			<xpath>Defs/ThingDef/stuffProps/soundImpactStuff</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef/race/wildness</xpath>
+		<xpath>Defs/ThingDef/race/wildness</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/race/wildness</xpath>
+			<xpath>Defs/ThingDef/race/wildness</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>

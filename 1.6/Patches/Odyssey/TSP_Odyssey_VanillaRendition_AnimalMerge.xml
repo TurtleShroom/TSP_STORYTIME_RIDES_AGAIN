@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Macaw"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="Macaw"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Macaw"]</xpath>
+			<xpath>Defs/ThingDef[defName="Macaw"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -17,10 +17,10 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Macaw"]</xpath>
+		<xpath>Defs/ThingDef[defName="Macaw"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/PawnKindDef[defName="ST_Parrot"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="ST_Parrot"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<race>Macaw</race>
@@ -31,10 +31,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Macaw"]</xpath>
+		<xpath>Defs/ThingDef[defName="Macaw"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Macaw"]/comps/li/eggUnfertilizedDef</xpath>
+			<xpath>Defs/ThingDef[defName="Macaw"]/comps/li/eggUnfertilizedDef</xpath>
 			<success>Always</success>
 			<value>
 				<eggUnfertilizedDef>EggMacawUnfertilized</eggUnfertilizedDef>
@@ -45,10 +45,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Macaw"]</xpath>
+		<xpath>Defs/ThingDef[defName="Macaw"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="ST_ModestParrot"]/comps/li/eggUnfertilizedDef</xpath>
+			<xpath>Defs/ThingDef[defName="ST_ModestParrot"]/comps/li/eggUnfertilizedDef</xpath>
 			<success>Always</success>
 			<value>
 				<eggUnfertilizedDef>EggMacawUnfertilized</eggUnfertilizedDef>
@@ -59,10 +59,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Macaw"]</xpath>
+		<xpath>Defs/ThingDef[defName="Macaw"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="ST_Parrot"]/comps/li/eggUnfertilizedDef</xpath>
+			<xpath>Defs/ThingDef[defName="ST_Parrot"]/comps/li/eggUnfertilizedDef</xpath>
 			<success>Always</success>
 			<value>
 				<eggUnfertilizedDef>EggMacawUnfertilized</eggUnfertilizedDef>
@@ -73,10 +73,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="EggMacawUnfertilized"]/label</xpath>
+		<xpath>Defs/ThingDef[defName="EggMacawUnfertilized"]/label</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="EggMacawUnfertilized"]/label</xpath>
+			<xpath>Defs/ThingDef[defName="EggMacawUnfertilized"]/label</xpath>
 			<success>Always</success>
 			<value>
 				<label>parrot egg (unfert.)</label>
@@ -88,10 +88,10 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	 DO THE GENTILES KNOW?
-		<xpath>/Defs/ThingDef[defName="Macaw"]</xpath>
+		<xpath>Defs/ThingDef[defName="Macaw"]</xpath>
 		If they do, SHUT IT DOWN.
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/ThingDef[defName="ST_Parrot"]</xpath>
+			<xpath>Defs/ThingDef[defName="ST_Parrot"]</xpath>
 			<success>Always</success>
 		</match>
 		If the first XPATH does not exist, the original code stands.
@@ -100,10 +100,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="Macaw"]</xpath>
+		<xpath>Defs/ThingDef[defName="Macaw"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/ThingDef[defName="ST_ParrotEggUnfertilized"]</xpath>
+			<xpath>Defs/ThingDef[defName="ST_ParrotEggUnfertilized"]</xpath>
 			<success>Always</success>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -111,10 +111,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Macaw"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="Macaw"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Macaw"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName="Macaw"]/tradeTags</xpath>
 			<success>Always</success>
 			<value>
 				<li>AnimalCommon</li>
@@ -129,10 +129,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Bullfrog"]/race/leatherDef</xpath>
+		<xpath>Defs/ThingDef[defName="Bullfrog"]/race/leatherDef</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Bullfrog"]/race/leatherDef</xpath>
+			<xpath>Defs/ThingDef[defName="Bullfrog"]/race/leatherDef</xpath>
 			<success>Always</success>
 			<value>
 				<leatherDef>Leather_Frog</leatherDef>
@@ -140,7 +140,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Bullfrog"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="Bullfrog"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<leatherDef>Leather_Frog</leatherDef>
@@ -151,10 +151,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="Bullfrog"]/race/useMeatFrom</xpath>
+		<xpath>Defs/ThingDef[defName="Bullfrog"]/race/useMeatFrom</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/ThingDef[defName="Bullfrog"]/race/useMeatFrom</xpath>
+			<xpath>Defs/ThingDef[defName="Bullfrog"]/race/useMeatFrom</xpath>
 			<success>Always</success>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -162,10 +162,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="Bullfrog"]/race/specificMeatDef</xpath>
+		<xpath>Defs/ThingDef[defName="Bullfrog"]/race/specificMeatDef</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/ThingDef[defName="Bullfrog"]/race/specificMeatDef</xpath>
+			<xpath>Defs/ThingDef[defName="Bullfrog"]/race/specificMeatDef</xpath>
 			<success>Always</success>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -173,9 +173,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Bullfrog"]/race/useMeatFrom</xpath>
+		<xpath>Defs/ThingDef[defName="Bullfrog"]/race/useMeatFrom</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Bullfrog"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="Bullfrog"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<useMeatFrom>ST_BullFrog</useMeatFrom>
@@ -185,10 +185,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="ColossusToad"]/race/useMeatFrom</xpath>
+		<xpath>Defs/ThingDef[defName="ColossusToad"]/race/useMeatFrom</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/ThingDef[defName="ColossusToad"]/race/useMeatFrom</xpath>
+			<xpath>Defs/ThingDef[defName="ColossusToad"]/race/useMeatFrom</xpath>
 			<success>Always</success>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -196,10 +196,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="ColossusToad"]/race/specificMeatDef</xpath>
+		<xpath>Defs/ThingDef[defName="ColossusToad"]/race/specificMeatDef</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/ThingDef[defName="ColossusToad"]/race/specificMeatDef</xpath>
+			<xpath>Defs/ThingDef[defName="ColossusToad"]/race/specificMeatDef</xpath>
 			<success>Always</success>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -207,9 +207,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="ColossusToad"]/race/useMeatFrom</xpath>
+		<xpath>Defs/ThingDef[defName="ColossusToad"]/race/useMeatFrom</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="ColossusToad"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="ColossusToad"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<useMeatFrom>ST_BullFrog</useMeatFrom>
@@ -219,10 +219,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="ColossusToad"]/race/leatherDef</xpath>
+		<xpath>Defs/ThingDef[defName="ColossusToad"]/race/leatherDef</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="ColossusToad"]/race/leatherDef</xpath>
+			<xpath>Defs/ThingDef[defName="ColossusToad"]/race/leatherDef</xpath>
 			<success>Always</success>
 			<value>
 				<leatherDef>Leather_Frog</leatherDef>
@@ -230,7 +230,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="ColossusToad"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="ColossusToad"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<leatherDef>Leather_Frog</leatherDef>

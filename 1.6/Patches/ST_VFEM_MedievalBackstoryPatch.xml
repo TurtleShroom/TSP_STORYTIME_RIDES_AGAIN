@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryCategories</xpath>
+		<xpath>Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]</xpath>
+			<xpath>Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -17,9 +17,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[@Name="VFEM_UnknownKingdomBase"]/backstoryCategories</xpath>
+		<xpath>Defs/FactionDef[@Name="VFEM_UnknownKingdomBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[@Name="VFEM_UnknownKingdomBase"]</xpath>
+			<xpath>Defs/FactionDef[@Name="VFEM_UnknownKingdomBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -29,9 +29,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase"]</xpath>
+			<xpath>Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -41,24 +41,24 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]</xpath>
+		<xpath>Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOO! -->
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryCategories</xpath>
+					<xpath>Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryCategories</xpath>
 					<value>
 						<li>Medieval</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[@Name="VFEM_UnknownKingdomBase"]/backstoryCategories</xpath>
+					<xpath>Defs/FactionDef[@Name="VFEM_UnknownKingdomBase"]/backstoryCategories</xpath>
 					<value>
 						<li>Medieval</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[@Name="VFEM_MedievalPawnKindBase"]/backstoryCategories</xpath>
 					<value>
 						<li>Medieval</li>
 					</value>
@@ -70,9 +70,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[@Name="VFEM2_MedievalFactionBase"]/backstoryCategories</xpath>
+		<xpath>Defs/FactionDef[@Name="VFEM2_MedievalFactionBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[@Name="VFEM2_MedievalFactionBase"]</xpath>
+			<xpath>Defs/FactionDef[@Name="VFEM2_MedievalFactionBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -82,9 +82,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_Peasant"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_Peasant"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM2_Peasant"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM2_Peasant"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -94,9 +94,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_Militia"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM2_Militia"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM2_Militia"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -106,9 +106,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_Archer"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_Archer"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM2_Archer"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM2_Archer"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -118,9 +118,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_Hunter"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_Hunter"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM2_Hunter"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM2_Hunter"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -130,9 +130,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_HeavyArcher"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_HeavyArcher"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM2_HeavyArcher"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM2_HeavyArcher"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -142,9 +142,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_Crossbowman"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_Crossbowman"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM2_Crossbowman"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM2_Crossbowman"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -154,9 +154,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_Halberdier"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_Halberdier"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM2_Halberdier"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM2_Halberdier"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -166,9 +166,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_ManAtArms"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_ManAtArms"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM2_ManAtArms"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM2_ManAtArms"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -178,9 +178,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_Wallbreaker"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_Wallbreaker"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM2_Wallbreaker"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM2_Wallbreaker"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -190,9 +190,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_Bannerman"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_Bannerman"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM2_Bannerman"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM2_Bannerman"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -202,9 +202,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="VFEM_SellSword"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM_SellSword"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEM_SellSword"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEM_SellSword"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -214,44 +214,44 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]</xpath>
+		<xpath>Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOO! -->
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryCategories</xpath>
+					<xpath>Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryCategories</xpath>
 					<value>
 						<li>Medieval</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName = "VFEM2_KingdomBase" or defName = "VFEM_SellSword" or defName = "VFEM2_Bannerman" or defName = "VFEM2_Wallbreaker" or defName = "VFEM2_ManAtArms" or defName = "VFEM2_Halberdier" or defName = "VFEM2_Crossbowman" or defName = "VFEM2_HeavyArcher" or defName = "VFEM2_Hunter" or defName = "VFEM2_Archer" or defName = "VFEM2_HeavyArcher" or defName = "VFEM2_Hunter" or defName = "VFEM2_Archer" or defName = "VFEM2_Militia" or defName = "VFEM2_Peasant"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[defName = "VFEM2_KingdomBase" or defName = "VFEM_SellSword" or defName = "VFEM2_Bannerman" or defName = "VFEM2_Wallbreaker" or defName = "VFEM2_ManAtArms" or defName = "VFEM2_Halberdier" or defName = "VFEM2_Crossbowman" or defName = "VFEM2_HeavyArcher" or defName = "VFEM2_Hunter" or defName = "VFEM2_Archer" or defName = "VFEM2_HeavyArcher" or defName = "VFEM2_Hunter" or defName = "VFEM2_Archer" or defName = "VFEM2_Militia" or defName = "VFEM2_Peasant"]/backstoryCategories</xpath>
 					<value>
 						<li>Medieval</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDefdefName = "VFEM_SellSword" or defName = "VFEM2_Hunter" or defName = "VFEM2_Archer" or defName = "VFEM2_HeavyArcher" or defName = "VFEM2_Hunter" or defName = "VFEM2_Archer" or defName = "VFEM2_Militia"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDefdefName = "VFEM_SellSword" or defName = "VFEM2_Hunter" or defName = "VFEM2_Archer" or defName = "VFEM2_HeavyArcher" or defName = "VFEM2_Hunter" or defName = "VFEM2_Archer" or defName = "VFEM2_Militia"]/backstoryCategories</xpath>
 					<value>
 						<li>TribalHunter</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName = "VFEM2_Bannerman" or defName = "VFEM2_Militia"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[defName = "VFEM2_Bannerman" or defName = "VFEM2_Militia"]/backstoryCategories</xpath>
 					<value>
 						<li>TribalHunter</li>
 						<li>MedievalTownsfolk</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName = "VFEM2_Bannerman" or defName = "VFEM2_Militia"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[defName = "VFEM2_Bannerman" or defName = "VFEM2_Militia"]/backstoryCategories</xpath>
 					<value>
 						<li>TribalHunter</li>
 						<li>MedievalTownsfolk</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName="VFEM2_Peasant"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[defName="VFEM2_Peasant"]/backstoryCategories</xpath>
 					<value>
 						<li>MedievalServant</li>
 						<li>MedievalPeasant</li>
@@ -261,7 +261,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/PawnKindDef/backstoryCategories/li[text()="MedievalWorker"]</xpath>
+					<xpath>Defs/PawnKindDef/backstoryCategories/li[text()="MedievalWorker"]</xpath>
 					<value>
 						<li>Medieval</li>
 						<li>MedievalLow</li>
@@ -272,7 +272,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/PawnKindDef/backstoryCategories/li[text()="MedievalCommon"]</xpath>
+					<xpath>Defs/PawnKindDef/backstoryCategories/li[text()="MedievalCommon"]</xpath>
 					<value>
 						<li>Medieval</li>
 						<li>MedievalLow</li>
@@ -284,7 +284,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/FactionDef/backstoryCategories/li[text()="MedievalWorker"]</xpath>
+					<xpath>Defs/FactionDef/backstoryCategories/li[text()="MedievalWorker"]</xpath>
 					<value>
 						<li>Medieval</li>
 						<li>MedievalLow</li>
@@ -294,7 +294,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/FactionDef/backstoryCategories/li[text()="MedievalCommon"]</xpath>
+					<xpath>Defs/FactionDef/backstoryCategories/li[text()="MedievalCommon"]</xpath>
 					<value>
 						<li>Medieval</li>
 						<li>MedievalLow</li>
@@ -307,7 +307,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/BackstoryDef/spawnCategories/li[text()="MedievalHigh"]</xpath>
+					<xpath>Defs/BackstoryDef/spawnCategories/li[text()="MedievalHigh"]</xpath>
 					<value>
 						<li>MedievalNoble</li>
 						<li>ESCP_GenericBackstory_ChildhoodHighClass</li>
@@ -315,7 +315,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/BackstoryDef/spawnCategories/li[text()="MedievalRoyal"]</xpath>
+					<xpath>Defs/BackstoryDef/spawnCategories/li[text()="MedievalRoyal"]</xpath>
 					<value>
 						<li>MedievalHigh</li>
 						<li>ESCP_GenericBackstory_ChildhoodHighClass</li>
@@ -323,7 +323,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/BackstoryDef/spawnCategories/li[text()="MedievalNoble"]</xpath>
+					<xpath>Defs/BackstoryDef/spawnCategories/li[text()="MedievalNoble"]</xpath>
 					<value>
 						<li>MedievalHigh</li>
 						<li>ESCP_GenericBackstory_ChildhoodMedieval</li>
@@ -333,7 +333,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/PawnKindDef/backstoryFiltersOverride/li[text()="MedievalCommon"]</xpath>
+					<xpath>Defs/PawnKindDef/backstoryFiltersOverride/li[text()="MedievalCommon"]</xpath>
 					<value>
 						<li>Medieval</li>
 						<li>MedievalLow</li>
@@ -343,7 +343,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/PawnKindDef/backstoryFiltersOverride/li[text()="MedievalWorker"]</xpath>
+					<xpath>Defs/PawnKindDef/backstoryFiltersOverride/li[text()="MedievalWorker"]</xpath>
 					<value>
 						<li>Medieval</li>
 						<li>MedievalLow</li>
@@ -353,7 +353,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/PawnKindDef/backstoryFiltersOverride/li[text()="MedievalHigh"]</xpath>
+					<xpath>Defs/PawnKindDef/backstoryFiltersOverride/li[text()="MedievalHigh"]</xpath>
 					<value>
 						<li>MedievalNoble</li>
 						<li>MedievalRoyal</li>
@@ -363,7 +363,7 @@
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryFilters/li/categories</xpath>
+					<xpath>Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryFilters/li/categories</xpath>
 					<success>Always</success>
 					<value>
 						<li>Medieval</li>
@@ -376,10 +376,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_AlleySneak128"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_AlleySneak128"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_AlleySneak128"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_AlleySneak128"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalCriminal</li>
@@ -392,10 +392,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_RuntOfThePack130"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_RuntOfThePack130"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_RuntOfThePack130"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_RuntOfThePack130"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>JeubBackstory</li>
@@ -412,10 +412,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_FieldWorker131"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_FieldWorker131"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName = "VFEM_FieldWorker131" or defName = "VFEM_VillageHelper132" or defName = "VFEM_Herbalist36"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName = "VFEM_FieldWorker131" or defName = "VFEM_VillageHelper132" or defName = "VFEM_Herbalist36"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalServant</li>
@@ -446,10 +446,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_PlayfulExplorer133"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_PlayfulExplorer133"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_PlayfulExplorer133"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_PlayfulExplorer133"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>JeubBackstory</li>
@@ -465,10 +465,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_ShieldBearer137"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_ShieldBearer137"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_ShieldBearer137"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_ShieldBearer137"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalKnight</li>
@@ -479,10 +479,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_LongboatPaddler139"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_LongboatPaddler139"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_LongboatPaddler139"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_LongboatPaddler139"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalKnight</li>
@@ -493,10 +493,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_ClanStoryteller140"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_ClanStoryteller140"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_ClanStoryteller140"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_ClanStoryteller140"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>GnomeBackstory</li>
@@ -515,10 +515,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_VillageUrchin101"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_VillageUrchin101"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_VillageUrchin101"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_VillageUrchin101"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalCriminal</li>
@@ -542,10 +542,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_FarmersChild104"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_FarmersChild104"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName = "VFEM_FarmersChild104" or defName = "VFEM_FishermansChild105"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName = "VFEM_FarmersChild104" or defName = "VFEM_FishermansChild105"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>Farmer</li>
@@ -559,10 +559,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_MillersChild107"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_MillersChild107"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_MillersChild107"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_MillersChild107"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>Farmer</li>
@@ -577,10 +577,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_BakersChild109"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_BakersChild109"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName = "VFEM_BakersChild109" or defName = "VFEM_KitchenServant41"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName = "VFEM_BakersChild109" or defName = "VFEM_KitchenServant41"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>GnomeBackstory</li>
@@ -594,10 +594,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_RiverWader112"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_RiverWader112"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_RiverWader112"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_RiverWader112"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>FrogPersonBackstory</li>
@@ -613,10 +613,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_QuietObserver114"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_QuietObserver114"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_QuietObserver114"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_QuietObserver114"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>JeubBackstory</li>
@@ -635,10 +635,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_EarlyLaborer115"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_EarlyLaborer115"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_EarlyLaborer115"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_EarlyLaborer115"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>JeubBackstory</li>
@@ -651,10 +651,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_Knight"]/backstoryFiltersOverride/li/categories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_Knight"]/backstoryFiltersOverride/li/categories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName = "VFEM2_Knight" or defName = "VFEM2_Greatsword" or defName = "VFEM2_Handgunner"]/backstoryFiltersOverride/li/categories</xpath>
+			<xpath>Defs/PawnKindDef[defName = "VFEM2_Knight" or defName = "VFEM2_Greatsword" or defName = "VFEM2_Handgunner"]/backstoryFiltersOverride/li/categories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalKnight</li>
@@ -666,10 +666,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_VillageHunter01"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_VillageHunter01"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_VillageHunter01"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_VillageHunter01"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>BeetnikhBackstory</li>
@@ -684,10 +684,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_FieldHand02"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_FieldHand02"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName = "VFEM_FieldHand02" or defName = "VFEM_KitchenServant41"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName = "VFEM_FieldHand02" or defName = "VFEM_KitchenServant41"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>JeubBackstory</li>
@@ -704,10 +704,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_StoneHauler05"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_StoneHauler05"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_StoneHauler05"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_StoneHauler05"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>Miner</li>
@@ -728,10 +728,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_Tanner07"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_Tanner07"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName = "VFEM_Tanner07" or defName = "VFEM_CandleMaker08" or defName = "VFEM_VillageCook09" or defName = "VFEM_Brickmaker10" or defName = "VFEM_Weaver11" or defName = "VFEM_Miller12" or defName = "VFEM_Baker14" or defName = "VFEM_Cooper15" or defName = "VFEM_Stablehand16" or defName = "VFEM_Thatcher17" or defName = "VFEM_VillageBrewer18" or defName = "VFEM_Blacksmith37" or defName = "VFEM_Mason38" or defName = "VFEM_Healer39" or defName = "VFEM_Carpenter40" or defName = "VFEM_KitchenServant41" or defName = "VFEM_Counterfeiter50"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName = "VFEM_Tanner07" or defName = "VFEM_CandleMaker08" or defName = "VFEM_VillageCook09" or defName = "VFEM_Brickmaker10" or defName = "VFEM_Weaver11" or defName = "VFEM_Miller12" or defName = "VFEM_Baker14" or defName = "VFEM_Cooper15" or defName = "VFEM_Stablehand16" or defName = "VFEM_Thatcher17" or defName = "VFEM_VillageBrewer18" or defName = "VFEM_Blacksmith37" or defName = "VFEM_Mason38" or defName = "VFEM_Healer39" or defName = "VFEM_Carpenter40" or defName = "VFEM_KitchenServant41" or defName = "VFEM_Counterfeiter50"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalTownsfolk</li>
@@ -743,10 +743,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_MudDigger20"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_MudDigger20"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_MudDigger20"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_MudDigger20"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>Classical</li>
@@ -767,10 +767,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_Squire23"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_Squire23"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_Squire23"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_Squire23"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalKnight</li>
@@ -787,10 +787,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_Squire23"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_Squire23"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName = "VFEM_Squire23" or defName = "VFEM_Footman21" or defName = "VFEM_Archer22" or defName = "VFEM_Spearman25" or defName = "VFEM_Pikeman26" or defName = "VFEM_Shieldbearer27" or defName = "VFEM_SiegeEngineer30"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName = "VFEM_Squire23" or defName = "VFEM_Footman21" or defName = "VFEM_Archer22" or defName = "VFEM_Spearman25" or defName = "VFEM_Pikeman26" or defName = "VFEM_Shieldbearer27" or defName = "VFEM_SiegeEngineer30"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalKnight</li>
@@ -805,10 +805,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_Beggar31"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_Beggar31"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName = "VFEM_Beggar31" or defName = "VFEM_Poacher32" or defName = "VFEM_Outlaw33" or defName = "VFEM_Scavenger34" or defName = "VFEM_Vagabond35" or defName = "VFEM_Pickpocket46" or defName = "VFEM_Bandit48" or defName = "VFEM_Smuggler49" or defName = "VFEM_Counterfeiter50"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName = "VFEM_Beggar31" or defName = "VFEM_Poacher32" or defName = "VFEM_Outlaw33" or defName = "VFEM_Scavenger34" or defName = "VFEM_Vagabond35" or defName = "VFEM_Pickpocket46" or defName = "VFEM_Bandit48" or defName = "VFEM_Smuggler49" or defName = "VFEM_Counterfeiter50"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalCriminal</li>
@@ -820,10 +820,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_Chamberlain42"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_Chamberlain42"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName = "VFEM_Chamberlain42" or defName = "VFEM_StableServant44" or defName = "VFEM_Scullion43" or defName = "VFEM_Butler45"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName = "VFEM_Chamberlain42" or defName = "VFEM_StableServant44" or defName = "VFEM_Scullion43" or defName = "VFEM_Butler45"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalTownsfolk</li>
@@ -836,10 +836,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_Scullion43"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_Scullion43"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="VFEM_Scullion43"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="VFEM_Scullion43"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>GnomeBackstory</li>
@@ -851,10 +851,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BackstoryDef[defName="VFEM_Counterfeiter50"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="VFEM_Counterfeiter50"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName = "VFEM_Counterfeiter50" or defName = "VFEM_Smuggler49" or defName = "VFEM_Bandit48" or defName = "VFEM_Fence47" or defName = "VFEM_Pickpocket46"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName = "VFEM_Counterfeiter50" or defName = "VFEM_Smuggler49" or defName = "VFEM_Bandit48" or defName = "VFEM_Fence47" or defName = "VFEM_Pickpocket46"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>PirateBackstory</li>
@@ -865,10 +865,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="VFEM2_Trader"]/backstoryFiltersOverride/li/categories</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEM2_Trader"]/backstoryFiltersOverride/li/categories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName = "VFEM2_Trader" or defName = "VFEM2_Guildmaster"]/backstoryFiltersOverride/li/categories</xpath>
+			<xpath>Defs/PawnKindDef[defName = "VFEM2_Trader" or defName = "VFEM2_Guildmaster"]/backstoryFiltersOverride/li/categories</xpath>
 			<success>Always</success>
 			<value>
 				<li>MedievalMerchant</li>
@@ -880,9 +880,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/spawnCategories</xpath>
+		<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/spawnCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]</xpath> <!-- Skooma Farmer -->
+			<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]</xpath> <!-- Skooma Farmer -->
 			<success>Always</success>
 			<value>
 				<spawnCategories></spawnCategories>
@@ -892,9 +892,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult3"]/spawnCategories</xpath> <!-- Skooma Addict -->
+		<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult3"]/spawnCategories</xpath> <!-- Skooma Addict -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult3"]</xpath>
+			<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult3"]</xpath>
 			<success>Always</success>
 			<value>
 				<spawnCategories></spawnCategories>
@@ -904,9 +904,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult5"]/spawnCategories</xpath> <!-- Recovering Skooma Addict -->
+		<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult5"]/spawnCategories</xpath> <!-- Recovering Skooma Addict -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult5"]</xpath>
+			<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult5"]</xpath>
 			<success>Always</success>
 			<value>
 				<spawnCategories></spawnCategories>
@@ -917,10 +917,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/spawnCategories</xpath>
+		<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/spawnCategories</xpath>
+			<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>ESCP_GenericBackstory_ChildhoodSkoomaAddict</li>
@@ -938,10 +938,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult3"]/spawnCategories</xpath>
+		<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult3"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult3"]/spawnCategories</xpath>
+			<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult3"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>ESCP_GenericBackstory_ChildhoodSkoomaAddict</li>
@@ -969,10 +969,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult5"]/spawnCategories</xpath>
+		<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult5"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult5"]/spawnCategories</xpath>
+			<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult5"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>Scientist</li>
@@ -984,10 +984,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult4"]/spawnCategories</xpath>
+		<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult4"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult4"]/spawnCategories</xpath>
+			<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityAdult4"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
 				<li>GnomeBackstory</li>
@@ -999,10 +999,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/maleCommonality</xpath>
+		<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/maleCommonality</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/maleCommonality</xpath>
+			<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/maleCommonality</xpath>
 			<success>Always</success>
 			<value>
 				<maleCommonality>1.01</maleCommonality>
@@ -1013,10 +1013,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/femaleCommonality</xpath>
+		<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/femaleCommonality</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/femaleCommonality</xpath>
+			<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/femaleCommonality</xpath>
 			<success>Always</success>
 			<value>
 				<maleCommonality>1.01</maleCommonality>
@@ -1026,10 +1026,10 @@
     </Operation>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/maleCommonality</xpath>
+		<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/maleCommonality</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/maleCommonality</xpath>
+			<xpath>Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/maleCommonality</xpath>
 			<success>Always</success>
 			<value>
 				<maleCommonality>1.01</maleCommonality>
@@ -1040,9 +1040,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/backstoryCategories</xpath>
+		<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]</xpath>
+			<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -1052,9 +1052,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/backstoryCategories</xpath>
+		<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]</xpath>
+			<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -1064,9 +1064,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="DankPyon_ShadowSectBase"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[@Name="DankPyon_ShadowSectBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="DankPyon_ShadowSectBase"]</xpath>
+			<xpath>Defs/PawnKindDef[@Name="DankPyon_ShadowSectBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -1076,9 +1076,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="DankPyon_MedievalPawnKindBase"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[@Name="DankPyon_MedievalPawnKindBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="DankPyon_MedievalPawnKindBase"]</xpath>
+			<xpath>Defs/PawnKindDef[@Name="DankPyon_MedievalPawnKindBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -1088,9 +1088,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="DankPyon_BrigandFactionBase"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[@Name="DankPyon_BrigandFactionBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="DankPyon_BrigandFactionBase"]</xpath>
+			<xpath>Defs/PawnKindDef[@Name="DankPyon_BrigandFactionBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -1100,9 +1100,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="DankPyon_FootmanBase"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[@Name="DankPyon_FootmanBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="DankPyon_FootmanBase"]</xpath>
+			<xpath>Defs/PawnKindDef[@Name="DankPyon_FootmanBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -1112,9 +1112,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="DankPyon_Zweihander"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[@Name="DankPyon_Zweihander"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="DankPyon_Zweihander"]</xpath>
+			<xpath>Defs/PawnKindDef[@Name="DankPyon_Zweihander"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -1124,9 +1124,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="DankPyon_BrigandPawnKindBase"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[@Name="DankPyon_BrigandPawnKindBase"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="DankPyon_BrigandPawnKindBase"]</xpath>
+			<xpath>Defs/PawnKindDef[@Name="DankPyon_BrigandPawnKindBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -1136,9 +1136,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="DankPyon_Medieval_Knight"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[@Name="DankPyon_Medieval_Knight"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="DankPyon_Medieval_Knight"]</xpath>
+			<xpath>Defs/PawnKindDef[@Name="DankPyon_Medieval_Knight"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories></backstoryCategories>
@@ -1148,9 +1148,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Lord"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="DankPyon_Medieval_Lord"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Lord"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="DankPyon_Medieval_Lord"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories Inherit="False"></backstoryCategories>
@@ -1160,9 +1160,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Peasant"]/backstoryCategories</xpath>
+		<xpath>Defs/PawnKindDef[defName="DankPyon_Medieval_Peasant"]/backstoryCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Peasant"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="DankPyon_Medieval_Peasant"]</xpath>
 			<success>Always</success>
 			<value>
 				<backstoryCategories Inherit="False"></backstoryCategories>
@@ -1172,12 +1172,12 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="DankPyon_MeleeWeapon_NobleSword"]</xpath>
+		<xpath>Defs/ThingDef[defName="DankPyon_MeleeWeapon_NobleSword"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOO! -->
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[@Name="DankPyon_BrigandFactionBase"]/backstoryFilters/li/categories</xpath>
+					<xpath>Defs/FactionDef[@Name="DankPyon_BrigandFactionBase"]/backstoryFilters/li/categories</xpath>
 					<success>Always</success>
 					<value>
 						<li>Medieval</li>
@@ -1186,7 +1186,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[@Name="DankPyon_ShadowSectBase"]/backstoryFilters/li/categories</xpath>
+					<xpath>Defs/FactionDef[@Name="DankPyon_ShadowSectBase"]/backstoryFilters/li/categories</xpath>
 					<success>Always</success>
 					<value>
 						<li>MedievalCriminal</li>
@@ -1197,7 +1197,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[@Name="DankPyon_MedievalPawnKindBase"]/backstoryFilters/li/categories</xpath>
+					<xpath>Defs/PawnKindDef[@Name="DankPyon_MedievalPawnKindBase"]/backstoryFilters/li/categories</xpath>
 					<success>Always</success>
 					<value>
 						<li>Medieval</li>
@@ -1205,7 +1205,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/backstoryFilters/li/categories</xpath>
+					<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/backstoryFilters/li/categories</xpath>
 					<success>Always</success>
 					<value>
 						<li>Medieval</li>
@@ -1214,14 +1214,14 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/backstoryFilters/li/categories</xpath>
+					<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/backstoryFilters/li/categories</xpath>
 					<success>Always</success>
 					<value>
 						<li>Medieval</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[@Name="DankPyon_ShadowSectBase"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[@Name="DankPyon_ShadowSectBase"]/backstoryCategories</xpath>
 					<success>Always</success>
 					<value>
 						<li>MedievalCriminal</li>
@@ -1231,7 +1231,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[@Name="DankPyon_Medieval_Knight"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[@Name="DankPyon_Medieval_Knight"]/backstoryCategories</xpath>
 					<success>Always</success>
 					<value>
 						<!-- <li>Medieval</li> -->
@@ -1241,7 +1241,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[@Name="DankPyon_BrigandPawnKindBase"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[@Name="DankPyon_BrigandPawnKindBase"]/backstoryCategories</xpath>
 					<success>Always</success>
 					<value>
 						<!-- <li>Medieval</li> -->
@@ -1252,7 +1252,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[@Name="DankPyon_Zweihander"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[@Name="DankPyon_Zweihander"]/backstoryCategories</xpath>
 					<success>Always</success>
 					<value>
 						<li>MedievalKnight</li>
@@ -1260,7 +1260,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Peasant"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[defName="DankPyon_Medieval_Peasant"]/backstoryCategories</xpath>
 					<success>Always</success>
 					<value>
 						<li>MedievalLow</li>
@@ -1269,7 +1269,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Lord"]/backstoryCategories</xpath>
+					<xpath>Defs/PawnKindDef[defName="DankPyon_Medieval_Lord"]/backstoryCategories</xpath>
 					<success>Always</success>
 					<value>
 						<li>MedievalHigh</li>

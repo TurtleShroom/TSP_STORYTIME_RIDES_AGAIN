@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/allowedCultures</xpath>
+		<xpath>Defs/FactionDef[defName="TribeRoughNeanderthal"]/allowedCultures</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]</xpath>
+			<xpath>Defs/FactionDef[defName="TribeRoughNeanderthal"]</xpath>
 			<success>Always</success>
 			<value>
 				<allowedCultures></allowedCultures>
@@ -17,9 +17,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[defName="PirateYttakin"]/allowedCultures</xpath>
+		<xpath>Defs/FactionDef[defName="PirateYttakin"]/allowedCultures</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="PirateYttakin"]</xpath>
+			<xpath>Defs/FactionDef[defName="PirateYttakin"]</xpath>
 			<success>Always</success>
 			<value>
 				<allowedCultures></allowedCultures>
@@ -29,9 +29,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]/allowedCultures</xpath>
+		<xpath>Defs/FactionDef[defName="OutlanderRoughPig"]/allowedCultures</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]</xpath>
+			<xpath>Defs/FactionDef[defName="OutlanderRoughPig"]</xpath>
 			<success>Always</success>
 			<value>
 				<allowedCultures></allowedCultures>
@@ -41,9 +41,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[defName="TribeSavageImpid"]/allowedCultures</xpath>
+		<xpath>Defs/FactionDef[defName="TribeSavageImpid"]/allowedCultures</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="TribeSavageImpid"]</xpath>
+			<xpath>Defs/FactionDef[defName="TribeSavageImpid"]</xpath>
 			<success>Always</success>
 			<value>
 				<allowedCultures></allowedCultures>
@@ -53,9 +53,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[defName="PirateWaster"]/allowedCultures</xpath>
+		<xpath>Defs/FactionDef[defName="PirateWaster"]/allowedCultures</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="PirateWaster"]</xpath>
+			<xpath>Defs/FactionDef[defName="PirateWaster"]</xpath>
 			<success>Always</success>
 			<value>
 				<allowedCultures></allowedCultures>
@@ -65,9 +65,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]/requiredMemes</xpath>
+		<xpath>Defs/FactionDef[defName="OutlanderRoughPig"]/requiredMemes</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]/requiredMemes</xpath>
+			<xpath>Defs/FactionDef[defName="OutlanderRoughPig"]/requiredMemes</xpath>
 			<success>Always</success>
 			<value>
 				<requiredMemes></requiredMemes>
@@ -77,22 +77,22 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/FactionDef/replacesFaction</xpath>
+		<xpath>Defs/FactionDef/replacesFaction</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef/replacesFaction</xpath>
+			<xpath>Defs/FactionDef/replacesFaction</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/allowedCultures</xpath>
+	<xpath>Defs/FactionDef[defName="TribeRoughNeanderthal"]/allowedCultures</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/allowedCultures</xpath>
+			<xpath>Defs/FactionDef[defName="TribeRoughNeanderthal"]/allowedCultures</xpath>
 			<value>
 				<li>ST_WoodBeetCulture</li>
 				<li>STGoblin</li>
@@ -111,11 +111,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/FactionDef[defName="PirateYttakin"]/allowedCultures</xpath>
+	<xpath>Defs/FactionDef[defName="PirateYttakin"]/allowedCultures</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="PirateYttakin"]/allowedCultures</xpath>
+			<xpath>Defs/FactionDef[defName="PirateYttakin"]/allowedCultures</xpath>
 			<value>
 				<li>ST_GnomeCulture</li>
 			</value>
@@ -125,11 +125,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/FactionDef[defName="PirateWaster"]/allowedCultures</xpath>
+	<xpath>Defs/FactionDef[defName="PirateWaster"]/allowedCultures</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="PirateWaster"]/allowedCultures</xpath>
+			<xpath>Defs/FactionDef[defName="PirateWaster"]/allowedCultures</xpath>
 			<value>
 				<li>ST_WoodBeetCulture</li>
 				<li>STGoblin</li>
@@ -142,11 +142,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]/requiredMemes</xpath>
+	<xpath>Defs/FactionDef[defName="OutlanderRoughPig"]/requiredMemes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]/requiredMemes</xpath>
+			<xpath>Defs/FactionDef[defName="OutlanderRoughPig"]/requiredMemes</xpath>
 			<value>
 				<li MayRequire="Ludeon.RimWorld.Ideology">Rancher</li>
 			</value>
@@ -156,11 +156,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]/allowedCultures</xpath>
+	<xpath>Defs/FactionDef[defName="OutlanderRoughPig"]/allowedCultures</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]/allowedCultures</xpath>
+			<xpath>Defs/FactionDef[defName="OutlanderRoughPig"]/allowedCultures</xpath>
 			<value>
 				<li>ST_PirateCulture</li>
 				<!--

@@ -7,9 +7,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Wormberry"]/statBases</xpath>
+		<xpath>Defs/ThingDef[defName="Wormberry"]/statBases</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Wormberry"]</xpath>
+			<xpath>Defs/ThingDef[defName="Wormberry"]</xpath>
 			<success>Always</success>
 			<value>
 				<statBases></statBases>
@@ -19,9 +19,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Wormberry"]/statBases/Nutrition</xpath>
+		<xpath>Defs/ThingDef[defName="Wormberry"]/statBases/Nutrition</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Wormberry"]/statBases</xpath>
+			<xpath>Defs/ThingDef[defName="Wormberry"]/statBases</xpath>
 			<success>Always</success>
 			<value>
 				<Nutrition>0.14</Nutrition>
@@ -31,9 +31,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Timeberry"]/statBases</xpath>
+		<xpath>Defs/ThingDef[defName="Timeberry"]/statBases</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Timeberry"]</xpath>
+			<xpath>Defs/ThingDef[defName="Timeberry"]</xpath>
 			<success>Always</success>
 			<value>
 				<statBases></statBases>
@@ -43,9 +43,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Timeberry"]/statBases/Nutrition</xpath>
+		<xpath>Defs/ThingDef[defName="Timeberry"]/statBases/Nutrition</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Timeberry"]/statBases</xpath>
+			<xpath>Defs/ThingDef[defName="Timeberry"]/statBases</xpath>
 			<success>Always</success>
 			<value>
 				<Nutrition>0.7</Nutrition>
@@ -55,13 +55,13 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="RawBerries"]</xpath>
+	<xpath>Defs/ThingDef[defName="RawBerries"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="RawBerries"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="RawBerries"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="sierra.milkshakes.digitaldeluxeedition">Sierra_Blueberries</li>
@@ -86,11 +86,12 @@
 						<li MayRequire="druid.fungilite">Wormberry</li>
 						<li MayRequire="mlie.tropickapprainforestmod">CK_RawJitterBerries</li>
 						<li MayRequire="pphhyy.gulden">GuldenRawBerries</li>
+						<li MayRequire="vvenchov.vvnewharvestmedicinalplants">VV_HawthornBerries</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="RawBerries"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="RawBerries"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="sierra.milkshakes.digitaldeluxeedition">Sierra_Blueberries</li>
@@ -115,11 +116,12 @@
 						<li MayRequire="druid.fungilite">Wormberry</li>
 						<li MayRequire="mlie.tropickapprainforestmod">CK_RawJitterBerries</li>
 						<li MayRequire="pphhyy.gulden">GuldenRawBerries</li>
+						<li MayRequire="vvenchov.vvnewharvestmedicinalplants">VV_HawthornBerries</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="RawBerries"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="RawBerries"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="sierra.milkshakes.digitaldeluxeedition">Sierra_Blueberries</li>
@@ -141,6 +143,7 @@
 						<li MayRequire="dismarzero.vgp.vgpmoreveggies">RawKiwi</li>
 						<li MayRequire="regrowth.botr.core">RG_RawRaspberries</li>
 						<li MayRequire="pphhyy.gulden">GuldenRawBerries</li>
+						<li MayRequire="vvenchov.vvnewharvestmedicinalplants">VV_HawthornBerries</li>
 					</value>
 				</li>
 			</operations>

@@ -7,9 +7,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/RecipeDef[@Name="KIT_CookComplexBeanStewMealBase"]/recipeUsers</xpath>
+		<xpath>Defs/RecipeDef[@Name="KIT_CookComplexBeanStewMealBase"]/recipeUsers</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[@Name="KIT_CookComplexBeanStewMealBase"]</xpath>
+			<xpath>Defs/RecipeDef[@Name="KIT_CookComplexBeanStewMealBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<recipeUsers></recipeUsers>
@@ -19,11 +19,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="KIT_Beans"]</xpath>
+		<xpath>Defs/ThingDef[defName="KIT_Beans"]</xpath>
 		<!-- If it does, insert this as an additional entry in the same bracket. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[@Name="KIT_CookComplexBeanStewMealBase"]/recipeUsers</xpath>
+			<xpath>Defs/RecipeDef[@Name="KIT_CookComplexBeanStewMealBase"]/recipeUsers</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">BeanPit</li>
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeTable</li>
@@ -34,9 +34,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/RecipeDef[@Name="KIT_CookGourmetBeanStewMealBase"]/recipeUsers</xpath>
+		<xpath>Defs/RecipeDef[@Name="KIT_CookGourmetBeanStewMealBase"]/recipeUsers</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[@Name="KIT_CookGourmetBeanStewMealBase"]</xpath>
+			<xpath>Defs/RecipeDef[@Name="KIT_CookGourmetBeanStewMealBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<recipeUsers></recipeUsers>
@@ -46,11 +46,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="KIT_Beans"]</xpath>
+		<xpath>Defs/ThingDef[defName="KIT_Beans"]</xpath>
 		<!-- If it does, insert this as an additional entry in the same bracket. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[@Name="KIT_CookGourmetBeanStewMealBase"]/recipeUsers</xpath>
+			<xpath>Defs/RecipeDef[@Name="KIT_CookGourmetBeanStewMealBase"]/recipeUsers</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">BeanPit</li>
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeTable</li>
@@ -61,13 +61,13 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="KIT_Beans"]</xpath>
+		<xpath>Defs/ThingDef[defName="KIT_Beans"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="KIT_Beans"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="KIT_Beans"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
@@ -77,7 +77,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="KIT_Beans"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="KIT_Beans"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
@@ -87,7 +87,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="KIT_Beans"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="KIT_Beans"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
@@ -101,13 +101,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="DankPyon_RawLentils"]</xpath>
+	<xpath>Defs/ThingDef[defName="DankPyon_RawLentils"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawLentils"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawLentils"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="zal.braziliancrops">KIT_Beans</li>
@@ -117,7 +117,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawLentils"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawLentils"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="zal.braziliancrops">KIT_Beans</li>
@@ -127,7 +127,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawLentils"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawLentils"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="zal.braziliancrops">KIT_Beans</li>

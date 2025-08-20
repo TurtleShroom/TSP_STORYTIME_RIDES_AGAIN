@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MemeDef[defName="AM_Structure_Corsair"]</xpath>
+	<xpath>Defs/MemeDef[defName="AM_Structure_Corsair"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName = "NicePirates" or defName = "MeanPirates"]/requiredMemes/li[1]</xpath>
+			<xpath>Defs/FactionDef[defName = "NicePirates" or defName = "MeanPirates"]/requiredMemes/li[1]</xpath>
 			<value>
 				<li MayRequire="Sarg.AlphaMemes">AM_Structure_Corsair</li>
 			</value>
@@ -17,11 +17,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/VFECore.Misc.HireableFactionDef[defName="Pirate"]/pawnKinds</xpath>
+	<xpath>Defs/VFECore.Misc.HireableFactionDef[defName="Pirate"]/pawnKinds</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/VFECore.Misc.HireableFactionDef[defName="Pirate"]/pawnKinds</xpath>
+			<xpath>Defs/VFECore.Misc.HireableFactionDef[defName="Pirate"]/pawnKinds</xpath>
 			<value>
 				<li>PirateJuggernaut</li>
 				<li>PirateCaptain</li>
@@ -34,11 +34,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/FactionDef[defName="VFEP_Junkers"]/allowedCultures</xpath>
+	<xpath>Defs/FactionDef[defName="VFEP_Junkers"]/allowedCultures</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="VFEP_Junkers"]/allowedCultures</xpath>
+			<xpath>Defs/FactionDef[defName="VFEP_Junkers"]/allowedCultures</xpath>
 			<value>
 				<li>ST_PirateCulture</li>
 			</value>
@@ -48,11 +48,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/FactionDef[defName="VFEP_Mercenaries"]/allowedCultures</xpath>
+	<xpath>Defs/FactionDef[defName="VFEP_Mercenaries"]/allowedCultures</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="VFEP_Mercenaries"]/allowedCultures</xpath>
+			<xpath>Defs/FactionDef[defName="VFEP_Mercenaries"]/allowedCultures</xpath>
 			<value>
 				<li>ST_PirateCulture</li>
 				<li>VFEP_Khanate</li>
@@ -63,11 +63,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/CultureDef[defName="VFEP_Khanate"]/label</xpath>
+		<xpath>Defs/CultureDef[defName="VFEP_Khanate"]/label</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/CultureDef[defName="VFEP_Khanate"]/label</xpath>
+			<xpath>Defs/CultureDef[defName="VFEP_Khanate"]/label</xpath>
 			<value>
 				<label>Junkers</label>
 			</value>
@@ -77,11 +77,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/CultureDef[defName="VFEP_Khanate"]/allowedPlaceTags</xpath>
+		<xpath>Defs/CultureDef[defName="VFEP_Khanate"]/allowedPlaceTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/CultureDef[defName="VFEP_Khanate"]/allowedPlaceTags</xpath>
+			<xpath>Defs/CultureDef[defName="VFEP_Khanate"]/allowedPlaceTags</xpath>
 			<value>
 				<li>ST_OriginPirate</li>
 			</value>

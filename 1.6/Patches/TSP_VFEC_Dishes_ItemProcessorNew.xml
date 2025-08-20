@@ -4,7 +4,7 @@
 	<!-- The SYR Universal Processor Mod is better!! -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VCE_Cheese"]</xpath>
+		<xpath>Defs/ThingDef[defName="VCE_Cheese"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOO! -->
 		<match Class="PatchOperationSequence">
 			<success>Always</success>
@@ -80,7 +80,7 @@
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName= "VCE_CheesePress"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
+					<xpath>Defs/ThingDef[defName= "VCE_CheesePress"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
 					<value>
 						<li>TSP_ST_CHEESE_BORPA_CHEESE_PROCESS</li>
 						<li>TSP_ST_VFEC_GeckoGouda_Combination</li>
@@ -124,7 +124,7 @@
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="VCE_ElectricPot"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
+					<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
 					<value>
 						<li>TSP_ST_SOUP_BORPA_SOUP_PROCESS</li>
 					</value>
@@ -137,14 +137,14 @@
 	<!-- The SYR Universal Processor Mod is better!! -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="DankPyon_Presser"]</xpath>
+		<xpath>Defs/ThingDef[defName="DankPyon_Presser"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOO! -->
 		<match Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="DankPyon_Presser"]/comps/li/processes</xpath>
+					<xpath>Defs/ThingDef[defName="DankPyon_Presser"]/comps/li/processes</xpath>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_MO_Borpa_PressCheeseProcess</li>
 						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_MO_DankPyon_Gecko_PressCheeseProcess</li>
@@ -158,7 +158,7 @@
 	<!-- The SYR Universal Processor Mod is better!! -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="MO_SoupPot"]</xpath>
+		<xpath>Defs/ThingDef[defName="MO_SoupPot"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOO! -->
 		<match Class="PatchOperationSequence">
 			<!--<success>Always</success> -->
@@ -183,7 +183,7 @@
 				</li>
 				<li Class="PatchOperationAdd" MayRequire="vanillaexpanded.vcooke,dankpyon.medieval.overhaul,vr.mopatches">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="MO_SoupPot"]/comps/li/processes</xpath>
+					<xpath>Defs/ThingDef[defName="MO_SoupPot"]/comps/li/processes</xpath>
 					<value>
 						<li MayRequire="vanillaexpanded.vcooke,dankpyon.medieval.overhaul,vr.mopatches">TSP_ST_MO_VR_BORPA_SOUP</li>
 					</value>
@@ -196,29 +196,29 @@
 	<!-- The SYR Universal Processor Mod is better!! -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="DankPyon_DriedFood"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="DankPyon_DriedFood"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOO! -->
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationRemove" MayRequire="vr.mopatches">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef/recipes/li[text()="DankPyon_ExtractHoney"]</xpath>
+					<xpath>Defs/ThingDef/recipes/li[text()="DankPyon_ExtractHoney"]</xpath>
 				</li>
 				<li Class="PatchOperationRemove" MayRequire="vr.mopatches">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef/recipes/li[text()="DankPyon_ExtractHoneyBulk"]</xpath>
+					<xpath>Defs/ThingDef/recipes/li[text()="DankPyon_ExtractHoneyBulk"]</xpath>
 				</li>
 				<li Class="PatchOperationRemove" MayRequire="vr.mopatches">
 					<success>Always</success>
-					<xpath>/Defs/RecipeDef/recipeUsers/li[text()="DankPyon_TailorsBench"]</xpath>
+					<xpath>Defs/RecipeDef/recipeUsers/li[text()="DankPyon_TailorsBench"]</xpath>
 				</li>
 				<li Class="PatchOperationRemove">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef/comps/li/processes/li[text()="VCE_BeeCheese"]</xpath>
+					<xpath>Defs/ThingDef/comps/li/processes/li[text()="VCE_BeeCheese"]</xpath>
 				</li>
 				<li Class="PatchOperationRemove" MayRequire="vr.mopatches">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="VCE_BeeCheese"]</xpath>
+					<xpath>Defs/ThingDef[defName="VCE_BeeCheese"]</xpath>
 				</li>
 			</operations>
 		</match>
@@ -227,10 +227,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VCE_ElectricPot"]/designationCategory</xpath>
+		<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/designationCategory</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="VCE_ElectricPot"]/designationCategory</xpath>
+			<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/designationCategory</xpath>
 			<success>Always</success>
 			<value>
 				<designationCategory>Production</designationCategory>
@@ -238,7 +238,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="VCE_ElectricPot"]</xpath>
+			<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]</xpath>
 			<success>Always</success>
 			<value>
 				<designationCategory>Production</designationCategory>

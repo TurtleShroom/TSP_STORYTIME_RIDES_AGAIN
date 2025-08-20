@@ -7,7 +7,7 @@
 	<!-- He sold out years ago and he's a coward -->
 	<Operation Class="PatchOperationAdd">
 		<success>Always</success>
-		<xpath>/Defs/BiomeDef/allowedPackAnimals</xpath>
+		<xpath>Defs/BiomeDef/allowedPackAnimals</xpath>
 		<value>
 			<li>Jeub</li>
 			<li>LeviathanFrog</li>
@@ -25,7 +25,7 @@
 	<!-- The pioneers used to ride these babies for miles -->
 	<Operation Class="PatchOperationAdd">
 		<success>Always</success>
-		<xpath>/Defs/BiomeDef/wildAnimals</xpath>
+		<xpath>Defs/BiomeDef/wildAnimals</xpath>
 		<value>
 			<EvilRock>0.05</EvilRock>
 		</value>
@@ -34,10 +34,10 @@
 	<!-- If you have the Mod, the Gnomes now sell a feast at their base -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/TraderKindDef[defName="Caravan_GTGCivilianIndustrial_Foods"]</xpath>
+		<xpath>Defs/TraderKindDef[defName="Caravan_GTGCivilianIndustrial_Foods"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/FactionDef[defName="TreeGnomeEmpire"]/baseTraderKinds</xpath>
+			<xpath>Defs/FactionDef[defName="TreeGnomeEmpire"]/baseTraderKinds</xpath>
 			<success>Always</success>
 			<value>
 				<baseTraderKinds>
@@ -65,10 +65,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/TraderKindDef[defName="Base_Outlander_Standard"]</xpath>
+		<xpath>Defs/TraderKindDef[defName="Base_Outlander_Standard"]</xpath>
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName = * and not(defName = "Empire_Caravan_TributeCollector")]/stockGenerators</xpath>
+			<xpath>Defs/TraderKindDef[defName = * and not(defName = "Empire_Caravan_TributeCollector")]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_BuyTradeTag">
 					<tag>TSP_ST_Asbestos</tag>

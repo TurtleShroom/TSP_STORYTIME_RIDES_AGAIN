@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/JoyGiverDef[defName="RH2JoyGiver_Soda_ZZTCola"]</xpath>
+	<xpath>Defs/JoyGiverDef[defName="RH2JoyGiver_Soda_ZZTCola"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/JoyGiverDef[defName="RH2JoyGiver_Soda_ZZTCola"]/thingDefs</xpath>
+			<xpath>Defs/JoyGiverDef[defName="RH2JoyGiver_Soda_ZZTCola"]/thingDefs</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_Pepsi</li>
 			</value>

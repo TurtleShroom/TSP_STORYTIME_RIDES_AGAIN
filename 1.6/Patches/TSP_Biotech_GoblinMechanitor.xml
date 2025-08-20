@@ -3,10 +3,10 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/removeOnRedressIfNotOfKind</xpath>
+		<xpath>Defs/HediffDef[defName="MechlinkImplant"]/removeOnRedressIfNotOfKind</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/HediffDef[defName="MechlinkImplant"]/removeOnRedressIfNotOfKind</xpath>
+			<xpath>Defs/HediffDef[defName="MechlinkImplant"]/removeOnRedressIfNotOfKind</xpath>
 			<success>Always</success>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
@@ -14,7 +14,7 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
 	<!-- Does this exist? -->
-		<xpath>/Defs/HediffDef[defName="MechlinkImplant"]</xpath>
+		<xpath>Defs/HediffDef[defName="MechlinkImplant"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs</xpath>

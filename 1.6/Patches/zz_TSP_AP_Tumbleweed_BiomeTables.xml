@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="AP_TumbleWeed_Race"]/race/wildBiomes</xpath>
+	<xpath>Defs/ThingDef[defName="AP_TumbleWeed_Race"]/race/wildBiomes</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="AP_TumbleWeed_Race"]/race/wildBiomes</xpath>
+			<xpath>Defs/ThingDef[defName="AP_TumbleWeed_Race"]/race/wildBiomes</xpath>
 			<value>
 				<wildBiomes Inherit="False">
 					<IceSheet>0.00</IceSheet>
@@ -222,11 +222,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="AP_TumbleRoot_Race"]</xpath>
+	<xpath>Defs/ThingDef[defName="AP_TumbleRoot_Race"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="AP_TumbleRoot_Race"]/race/wildBiomes</xpath>
+			<xpath>Defs/ThingDef[defName="AP_TumbleRoot_Race"]/race/wildBiomes</xpath>
 			<value>
 				<wildBiomes>
 					<IceSheet>0.00</IceSheet>
@@ -439,11 +439,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="AP_TumbleWeed_Pawnkind"]/ecoSystemWeight</xpath>
+		<xpath>Defs/PawnKindDef[defName="AP_TumbleWeed_Pawnkind"]/ecoSystemWeight</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="AP_TumbleWeed_Pawnkind"]/ecoSystemWeight</xpath>
+			<xpath>Defs/PawnKindDef[defName="AP_TumbleWeed_Pawnkind"]/ecoSystemWeight</xpath>
 			<value>
 				<ecoSystemWeight>0</ecoSystemWeight>
 			</value>
@@ -453,11 +453,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="AP_TumbleRoot_Pawnkind"]/ecoSystemWeight</xpath>
+		<xpath>Defs/PawnKindDef[defName="AP_TumbleRoot_Pawnkind"]/ecoSystemWeight</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="AP_TumbleRoot_Pawnkind"]/ecoSystemWeight</xpath>
+			<xpath>Defs/PawnKindDef[defName="AP_TumbleRoot_Pawnkind"]/ecoSystemWeight</xpath>
 			<value>
 				<ecoSystemWeight>0</ecoSystemWeight>
 			</value>

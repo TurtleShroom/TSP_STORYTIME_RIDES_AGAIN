@@ -5,13 +5,13 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="ST_Green_Milk"]</xpath>
+	<xpath>Defs/ThingDef[defName="ST_Green_Milk"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
@@ -21,7 +21,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
@@ -31,7 +31,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
@@ -45,13 +45,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="BORPA_Milk"]</xpath>
+	<xpath>Defs/ThingDef[defName="BORPA_Milk"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li>BORPA_Milk</li>
@@ -59,7 +59,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li>BORPA_Milk</li>
@@ -67,7 +67,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li>BORPA_Milk</li>
@@ -79,13 +79,13 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Milk"]</xpath>
+	<xpath>Defs/ThingDef[defName="Milk"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
@@ -111,7 +111,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
@@ -137,7 +137,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
@@ -162,7 +162,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/ThingDef/comps/li/fuelFilter/thingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/ThingDef/comps/li/fuelFilter/thingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
@@ -190,7 +190,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/disallowedThingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/disallowedThingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
@@ -216,7 +216,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/disallowedThingDefs/li[text()="Milk"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/disallowedThingDefs/li[text()="Milk"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>

@@ -3,9 +3,9 @@
 <Patch>
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="HoraxianBase"]/weaponTags</xpath>
+		<xpath>Defs/PawnKindDef[@Name="HoraxianBase"]/weaponTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="HoraxianBase"]</xpath>
+			<xpath>Defs/PawnKindDef[@Name="HoraxianBase"]</xpath>
 			<success>Always</success>
 			<value>
 				<weaponTags></weaponTags>
@@ -15,9 +15,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[@Name="HoraxianBase"]/weaponTags</xpath>
+		<xpath>Defs/PawnKindDef[@Name="HoraxianBase"]/weaponTags</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[@Name="HoraxianBase"]/weaponTags</xpath>
+			<xpath>Defs/PawnKindDef[@Name="HoraxianBase"]/weaponTags</xpath>
 			<success>Always</success>
 			<value>
 				<li>Horax</li>
@@ -27,9 +27,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="Horaxian_Highthrall"]/weaponTags</xpath>
+		<xpath>Defs/PawnKindDef[defName="Horaxian_Highthrall"]/weaponTags</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="Horaxian_Highthrall"]/weaponTags</xpath>
+			<xpath>Defs/PawnKindDef[defName="Horaxian_Highthrall"]/weaponTags</xpath>
 			<success>Always</success>
 			<value>
 				<li>Highthrall</li>
@@ -39,9 +39,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="Horaxian_Highthrall"]/weaponTags</xpath>
+		<xpath>Defs/PawnKindDef[defName="Horaxian_Highthrall"]/weaponTags</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="Horaxian_Highthrall"]/weaponTags</xpath>
+			<xpath>Defs/PawnKindDef[defName="Horaxian_Highthrall"]/weaponTags</xpath>
 			<success>Always</success>
 			<value>
 				<li>Highthrall</li>
@@ -51,9 +51,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="Horaxian_Underthrall"]/weaponTags</xpath>
+		<xpath>Defs/PawnKindDef[defName="Horaxian_Underthrall"]/weaponTags</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="Horaxian_Underthrall"]/weaponTags</xpath>
+			<xpath>Defs/PawnKindDef[defName="Horaxian_Underthrall"]/weaponTags</xpath>
 			<success>Always</success>
 			<value>
 				<li>Horax</li>
@@ -65,9 +65,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Gun_SpineKiller"]/weaponTags</xpath>
+		<xpath>Defs/ThingDef[defName="Gun_SpineKiller"]/weaponTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Gun_SpineKiller"]</xpath>
+			<xpath>Defs/ThingDef[defName="Gun_SpineKiller"]</xpath>
 			<success>Always</success>
 			<value>
 				<weaponTags></weaponTags>
@@ -77,10 +77,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Gun_SpineKiller"]/weaponTags</xpath>
+		<xpath>Defs/ThingDef[defName="Gun_SpineKiller"]/weaponTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Gun_SpineKiller"]/weaponTags</xpath>
+			<xpath>Defs/ThingDef[defName="Gun_SpineKiller"]/weaponTags</xpath>
 			<success>Always</success>
 			<value>
 				<li>PeeledRanged</li>

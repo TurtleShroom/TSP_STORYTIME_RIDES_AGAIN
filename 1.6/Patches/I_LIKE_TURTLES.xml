@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/shuffleable</xpath>
+		<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/shuffleable</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
 			<success>Always</success>
 			<value>
 				<shuffleable>true</shuffleable>
@@ -17,9 +17,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/requiredWorkTags</xpath>
+		<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/requiredWorkTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
 			<success>Always</success>
 			<value>
 				<requiredWorkTags></requiredWorkTags>
@@ -29,9 +29,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/titleShort</xpath>
+		<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/titleShort</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
 			<success>Always</success>
 			<value>
 				<titleShort>turtle herdsman</titleShort>
@@ -41,9 +41,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/spawnCategories</xpath>
+		<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/spawnCategories</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
 			<success>Always</success>
 			<value>
 				<spawnCategories></spawnCategories>
@@ -53,9 +53,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/possessions</xpath>
+		<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/possessions</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]</xpath>
 			<success>Always</success>
 			<value>
 				<possessions></possessions>
@@ -65,11 +65,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/shuffleable</xpath>
+	<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/shuffleable</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/shuffleable</xpath>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/shuffleable</xpath>
 			<value>
 				<shuffleable>true</shuffleable>
 			</value>
@@ -79,11 +79,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/requiredWorkTags</xpath>
+	<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/requiredWorkTags</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/requiredWorkTags</xpath>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/requiredWorkTags</xpath>
 			<value>
 				<requiredWorkTags>
 					<li>Animals</li>
@@ -95,11 +95,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/titleShort</xpath>
+	<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/titleShort</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/titleShort</xpath>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/titleShort</xpath>
 			<value>
 				<titleShort>turtle herdsman</titleShort>
 			</value>
@@ -109,11 +109,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/spawnCategories</xpath>
+	<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/spawnCategories</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/spawnCategories</xpath>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/spawnCategories</xpath>
 			<value>
 				<li>Outlander</li>
 				<li>Offworld</li>
@@ -170,11 +170,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/possessions</xpath>
+	<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/possessions</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/BackstoryDef[defName="TurtleHerder41"]/possessions</xpath>
+			<xpath>Defs/BackstoryDef[defName="TurtleHerder41"]/possessions</xpath>
 			<value>
 				<EggTortoiseFertilized>12</EggTortoiseFertilized>
 			</value>

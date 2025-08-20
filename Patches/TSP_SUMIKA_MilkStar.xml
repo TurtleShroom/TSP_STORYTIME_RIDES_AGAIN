@@ -19,28 +19,28 @@
 				</li>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk"]/ingredients/li[1]/filter/thingDefs</xpath>
 					<value>
 						<li>sumi_MilkyBeads</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/fixedIngredientFilter/thingDefs</xpath>
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk"]/fixedIngredientFilter/thingDefs</xpath>
 					<value>
 						<li>sumi_MilkyBeads</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk_more"]/ingredients/li[1]/filter/thingDefs</xpath>
 					<value>
 						<li>sumi_MilkyBeads</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/fixedIngredientFilter/thingDefs</xpath>
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk_more"]/fixedIngredientFilter/thingDefs</xpath>
 					<value>
 						<li>sumi_MilkyBeads</li>
 					</value>
@@ -51,10 +51,10 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/recipeUsers</xpath>
+		<xpath>Defs/RecipeDef[defName="Homogenize_milk"]/recipeUsers</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/recipeUsers</xpath>
+			<xpath>Defs/RecipeDef[defName="Homogenize_milk"]/recipeUsers</xpath>
 			<success>Always</success>
 			<value>
 				<recipeUsers>
@@ -78,10 +78,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/recipeUsers</xpath>
+		<xpath>Defs/RecipeDef[defName="Homogenize_milk_more"]/recipeUsers</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/recipeUsers</xpath>
+			<xpath>Defs/RecipeDef[defName="Homogenize_milk_more"]/recipeUsers</xpath>
 			<success>Always</success>
 			<value>
 				<recipeUsers>
@@ -121,7 +121,7 @@
 				</li>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk"]/ingredients/li[1]/filter/thingDefs</xpath>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
 						<li MayRequire="TSP.Isengriff.Storytime">BORPA_Milk</li>
@@ -145,7 +145,7 @@
 				</li>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Homogenize_milk"]/fixedIngredientFilter/thingDefs</xpath>
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk"]/fixedIngredientFilter/thingDefs</xpath>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
 						<li MayRequire="TSP.Isengriff.Storytime">BORPA_Milk</li>
@@ -168,7 +168,7 @@
 				</li>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk_more"]/ingredients/li[1]/filter/thingDefs</xpath>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
 						<li MayRequire="TSP.Isengriff.Storytime">BORPA_Milk</li>
@@ -191,7 +191,7 @@
 				</li>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/RecipeDef[defName="Homogenize_milk_more"]/fixedIngredientFilter/thingDefs</xpath>
+					<xpath>Defs/RecipeDef[defName="Homogenize_milk_more"]/fixedIngredientFilter/thingDefs</xpath>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Green_Milk</li>
 						<li MayRequire="TSP.Isengriff.Storytime">BORPA_Milk</li>

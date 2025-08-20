@@ -3,7 +3,7 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="BMT_CrystalCrab_Sandstone"]</xpath>
+		<xpath>Defs/ThingDef[defName="BMT_CrystalCrab_Sandstone"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -40,7 +40,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="BMT_CrystalCrab_Sandstone"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="BMT_CrystalCrab_Sandstone"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -153,11 +153,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="BMT_CrystalCrab_Sandstone"]</xpath>
+		<xpath>Defs/ThingDef[defName="BMT_CrystalCrab_Sandstone"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/BiomeDef[defName = "BMT_CrystalCaverns" or defName = "BMT_EarthenDepths" or defName = "BMT_FungalForest"]/wildAnimals</xpath>
+			<xpath>Defs/BiomeDef[defName = "BMT_CrystalCaverns" or defName = "BMT_EarthenDepths" or defName = "BMT_FungalForest"]/wildAnimals</xpath>
 			<value>
 				<TSP_BMT_Butterscotch_Crab>0.1</TSP_BMT_Butterscotch_Crab>
 			</value>
@@ -167,11 +167,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="BiomesIslands_RimCrab"]</xpath>
+		<xpath>Defs/ThingDef[defName="BiomesIslands_RimCrab"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="TSP_BMT_Butterscotch_Crab"]/race/specificMeatDef</xpath>
+			<xpath>Defs/ThingDef[defName="TSP_BMT_Butterscotch_Crab"]/race/specificMeatDef</xpath>
 			<value>
 				<useMeatFrom>BiomesIslands_RimCrab</useMeatFrom>
 			</value>

@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/caravanTraderKinds</xpath>
+		<xpath>Defs/FactionDef[defName="VRE_Archons"]/caravanTraderKinds</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+			<xpath>Defs/FactionDef[defName="VRE_Archons"]</xpath>
 			<success>Always</success>
 			<value>
 				<caravanTraderKinds></caravanTraderKinds>
@@ -17,9 +17,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/visitorTraderKinds</xpath>
+		<xpath>Defs/FactionDef[defName="VRE_Archons"]/visitorTraderKinds</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+			<xpath>Defs/FactionDef[defName="VRE_Archons"]</xpath>
 			<success>Always</success>
 			<value>
 				<visitorTraderKinds></visitorTraderKinds>
@@ -29,9 +29,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/baseTraderKinds</xpath>
+		<xpath>Defs/FactionDef[defName="VRE_Archons"]/baseTraderKinds</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+			<xpath>Defs/FactionDef[defName="VRE_Archons"]</xpath>
 			<success>Always</success>
 			<value>
 				<baseTraderKinds></baseTraderKinds>
@@ -41,10 +41,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/caravanTraderKinds</xpath>
+		<xpath>Defs/FactionDef[defName="VRE_Archons"]/caravanTraderKinds</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/caravanTraderKinds</xpath>
+			<xpath>Defs/FactionDef[defName="VRE_Archons"]/caravanTraderKinds</xpath>
 			<value>
 				<li>Caravan_Outlander_Exotic</li>
 				<li>TSP_ST_MMT_Caravan_LivingVehicle</li>
@@ -57,10 +57,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/visitorTraderKinds</xpath>
+		<xpath>Defs/FactionDef[defName="VRE_Archons"]/visitorTraderKinds</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/visitorTraderKinds</xpath>
+			<xpath>Defs/FactionDef[defName="VRE_Archons"]/visitorTraderKinds</xpath>
 			<value>
 				<li>Caravan_Outlander_Exotic</li>
 				<li>WW_Caravan_Outlander_Drugdealer</li>
@@ -72,10 +72,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/baseTraderKinds</xpath>
+		<xpath>Defs/FactionDef[defName="VRE_Archons"]/baseTraderKinds</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/baseTraderKinds</xpath>
+			<xpath>Defs/FactionDef[defName="VRE_Archons"]/baseTraderKinds</xpath>
 			<value>
 				<li>Caravan_Outlander_Exotic</li>
 				<li>WW_Caravan_Outlander_Drugdealer</li>
@@ -87,10 +87,10 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+		<xpath>Defs/FactionDef[defName="VRE_Archons"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers/li/options</xpath>
+			<xpath>Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers/li/options</xpath>
 			<value>
 				<FlyingFrog>1</FlyingFrog>
 				<BMT_GiantSnail MayRequire="biomesteam.biomescaverns">1</BMT_GiantSnail>
@@ -101,10 +101,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+		<xpath>Defs/FactionDef[defName="VRE_Archons"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers</xpath>
+			<xpath>Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers</xpath>
 			<value>
 				<li Inherit="False">
 					<kindDef>Combat</kindDef>
@@ -180,10 +180,10 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	Does this exist?
-		<xpath>/Defs/FactionDef[defName="VRE_Archons"]</xpath>
+		<xpath>Defs/FactionDef[defName="VRE_Archons"]</xpath>
 		If it does, add this.
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers/li[1]/options</xpath>
+			<xpath>Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers/li[1]/options</xpath>
 			<value>
 				<TSP_VFERA_ARCHON_BULBORB>6.78</TSP_VFERA_ARCHON_BULBORB>
 				<FlyingFrog>3</FlyingFrog>
@@ -195,10 +195,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/FactionDef[defName="VRE_Archons"]/permanentEnemy</xpath>
+		<xpath>Defs/FactionDef[defName="VRE_Archons"]/permanentEnemy</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/FactionDef[defName="VRE_Archons"]/permanentEnemy</xpath>
+			<xpath>Defs/FactionDef[defName="VRE_Archons"]/permanentEnemy</xpath>
 			<value>
 				<permanentEnemyToEveryoneExcept>
 					<li>BeanManFaction</li>

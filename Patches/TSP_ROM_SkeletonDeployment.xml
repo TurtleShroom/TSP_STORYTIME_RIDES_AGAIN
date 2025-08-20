@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<xpath>Defs/ThingDef[defName="BoneItem"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/ingredints/li/filter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/ingredints/li/filter/thingDefs</xpath>
 			<value>
 				<li>TSP_ST_SkeletalMarrow</li>
 			</value>
@@ -17,11 +17,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<xpath>Defs/ThingDef[defName="BoneItem"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/fixedIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/fixedIngredientFilter/thingDefs</xpath>
 			<value>
 				<li>TSP_ST_SkeletalMarrow</li>
 			</value>
@@ -31,11 +31,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<xpath>Defs/ThingDef[defName="BoneItem"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/defaultIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/defaultIngredientFilter/thingDefs</xpath>
 			<value>
 				<li>TSP_ST_SkeletalMarrow</li>
 			</value>
@@ -45,11 +45,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="BoneItem"]</xpath>
+		<xpath>Defs/ThingDef[defName="BoneItem"]</xpath>
 		<!-- If it does, replace an entry with this. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/products</xpath>
+			<xpath>Defs/RecipeDef[defName="MakeGelatinFromMarrow"]/products</xpath>
 			<value>
 				<products>
 					<ROMB_Gelatin>10</ROMB_Gelatin>
@@ -61,11 +61,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race/useMeatFrom</xpath>
+		<xpath>Defs/ThingDef[defName="SpookySkeleton"]/race/useMeatFrom</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race/useMeatFrom</xpath>
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]/race/useMeatFrom</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
@@ -73,11 +73,11 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	Does this exist?
-		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		If it does, add this as an Abstract Parent Name to call a Base elsewhere.
 		<match Class="PatchOperationAttributeSet">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 
 			<attribute>ParentName</attribute>
 			<value>TSP_ST_RetardSkeleton_Base</value>
@@ -90,9 +90,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
+		<xpath>Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 			<success>Always</success>
 			<value>
 				<comps></comps>
@@ -102,11 +102,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
+		<xpath>Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
 			<value>
 				<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 					<hediffname>HedSTUndead</hediffname>
@@ -122,11 +122,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationAddModExtension">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 			<value>
 				<li Class="MorrowRim.ExtendedRaceProperties" MayRequire="SirMashedPotato.MorrowRim">
 					<ashResistant MayRequire="SirMashedPotato.MorrowRim">Resistant</ashResistant>
@@ -138,11 +138,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationAddModExtension">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 			<value>
 				<li Class="NocturnalAnimals.ExtendedRaceProperties" MayRequire="Mlie.XNDNocturnalAnimals">
 					<bodyClock MayRequire="Mlie.XNDNocturnalAnimals">Nocturnal</bodyClock>
@@ -154,11 +154,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/statBases</xpath>
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]/statBases</xpath>
 			<value>
 				<statBases>
 					<PsychicSensitivity>10</PsychicSensitivity>
@@ -180,11 +180,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]/race</xpath>
 			<value>
 				<race>
 					<thinkTreeMain Inherit="False">Animal</thinkTreeMain>
@@ -219,11 +219,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race/body</xpath>
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]/race/body</xpath>
 			<value>
 				<body>TSP_ST_SkeletalMan</body>
 			</value>
@@ -233,11 +233,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+		<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race/lifeStageAges</xpath>
+			<xpath>Defs/ThingDef[defName="SpookySkeleton"]/race/lifeStageAges</xpath>
 			<value>
 				<lifeStageAges Inherit="False">
 					<li>
@@ -252,19 +252,19 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+	<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationRemove">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/tradeTags</xpath>
+					<xpath>Defs/ThingDef[defName="SpookySkeleton"]/tradeTags</xpath>
 				</li>
 				<!-- Now we add it back. -->
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+					<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 					<value>
 						<tradeTags>
 							<li>AnimalUncommon</li>
@@ -281,11 +281,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]/lifeStages</xpath>
+			<xpath>Defs/PawnKindDef[defName="SpookySkeleton"]/lifeStages</xpath>
 			<value>
 				<lifeStages>
 					<li>
@@ -310,11 +310,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]/ecoSystemWeight</xpath>
+			<xpath>Defs/PawnKindDef[defName="SpookySkeleton"]/ecoSystemWeight</xpath>
 			<value>
 				<ecoSystemWeight>0</ecoSystemWeight>
 			</value>
@@ -324,11 +324,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="SpookySkeleton"]/wildGroupSize</xpath>
+			<xpath>Defs/PawnKindDef[defName="SpookySkeleton"]/wildGroupSize</xpath>
 			<value>
 				<wildGroupSize>
 					<min>1</min>
@@ -341,11 +341,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Reaper"]</xpath>
+		<xpath>Defs/ThingDef[defName="Reaper"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Reaper"]/race/body</xpath>
+			<xpath>Defs/ThingDef[defName="Reaper"]/race/body</xpath>
 			<value>
 				<body>TSP_ST_SkeletalMan</body>
 			</value>
@@ -355,23 +355,23 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Reaper"]</xpath>
+	<xpath>Defs/ThingDef[defName="Reaper"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationRemove">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="Reaper"]/race/useMeatFrom</xpath>
+					<xpath>Defs/ThingDef[defName="Reaper"]/race/useMeatFrom</xpath>
 				</li>
 				<li Class="PatchOperationRemove">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="Reaper"]/race/specificMeatDef</xpath>
+					<xpath>Defs/ThingDef[defName="Reaper"]/race/specificMeatDef</xpath>
 				</li>
 				<!-- Now we add it back -->
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="Reaper"]/race</xpath>
+					<xpath>Defs/ThingDef[defName="Reaper"]/race</xpath>
 					<value>
 						<specificMeatDef>TSP_ST_SkeletalMarrow</specificMeatDef>
 					</value>
@@ -383,23 +383,23 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="SpookySkeleton"]</xpath>
+	<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationRemove">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race/useMeatFrom</xpath>
+					<xpath>Defs/ThingDef[defName="SpookySkeleton"]/race/useMeatFrom</xpath>
 				</li>
 				<li Class="PatchOperationRemove">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race/specificMeatDef</xpath>
+					<xpath>Defs/ThingDef[defName="SpookySkeleton"]/race/specificMeatDef</xpath>
 				</li>
 				<!-- Now we add it back -->
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="SpookySkeleton"]/race</xpath>
+					<xpath>Defs/ThingDef[defName="SpookySkeleton"]/race</xpath>
 					<value>
 						<specificMeatDef>TSP_ST_SkeletalMarrow</specificMeatDef>
 					</value>
@@ -411,11 +411,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="TSP_ST_SkeletalMarrow"]</xpath>
+		<xpath>Defs/ThingDef[defName="TSP_ST_SkeletalMarrow"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Reaper"]/race/body</xpath>
+			<xpath>Defs/ThingDef[defName="Reaper"]/race/body</xpath>
 			<value>
 				<body>TSP_ST_SkeletalMan</body>
 			</value>

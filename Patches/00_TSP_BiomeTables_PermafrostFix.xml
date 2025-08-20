@@ -5,18 +5,18 @@
 	<!--
 	<Operation Class="PatchOperationAdd">
 		<success>Always</success>
-		<xpath>/Defs/BiomeDef/wildAnimals/ANIMALNAME</xpath>
+		<xpath>Defs/BiomeDef/wildAnimals/ANIMALNAME</xpath>
 		<value></value>
 	</Operation>
 	-->
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/BiomeDef[defName="Permafrost"]</xpath>
+		<xpath>Defs/BiomeDef[defName="Permafrost"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<success>Always</success>
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/ThingDef/race/wildBiomes/Permafrost</xpath>
+			<xpath>Defs/ThingDef/race/wildBiomes/Permafrost</xpath>
 		</match>
 	</Operation>
 </Patch>

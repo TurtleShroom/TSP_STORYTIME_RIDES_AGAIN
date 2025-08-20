@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
-		<xpath>/Defs/ThingDef[defName="ToxifierGenerator"]/costList/ST_PoisonExtract</xpath>
+		<xpath>Defs/ThingDef[defName="ToxifierGenerator"]/costList/ST_PoisonExtract</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="ToxifierGenerator"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="ToxifierGenerator"]/costList</xpath>
 			<success>Always</success>
 			<value>
 				<ST_PoisonExtract>75</ST_PoisonExtract>
@@ -17,9 +17,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.biotech">
-		<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]/costList/ST_PoisonExtract</xpath>
+		<xpath>Defs/ThingDef[defName="WastepackAtomizer"]/costList/ST_PoisonExtract</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="WastepackAtomizer"]/costList</xpath>
 			<success>Always</success>
 			<value>
 				<ST_PoisonExtract>500</ST_PoisonExtract>
@@ -29,10 +29,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]/costList/NanostructuringChip</xpath>
+		<xpath>Defs/ThingDef[defName="WastepackAtomizer"]/costList/NanostructuringChip</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/ThingDef[defName="WastepackAtomizer"]/costList/NanostructuringChip</xpath>
+			<xpath>Defs/ThingDef[defName="WastepackAtomizer"]/costList/NanostructuringChip</xpath>
 			<success>Always</success>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
@@ -42,11 +42,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Romy_Make_Antidote"]</xpath>
+	<xpath>Defs/RecipeDef[defName="Romy_Make_Antidote"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Romy_Make_Antidote"]/researchPrerequisite</xpath>
+			<xpath>Defs/RecipeDef[defName="Romy_Make_Antidote"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites>
 					<li>DrugProduction</li>
@@ -59,11 +59,11 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="romyashi.toxins">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Romy_ToxinProductionToxipod"]/researchPrerequisite</xpath>
+			<xpath>Defs/RecipeDef[defName="Romy_ToxinProductionToxipod"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
@@ -75,11 +75,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]</xpath>
+	<xpath>Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]/researchPrerequisite</xpath>
+			<xpath>Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites>
 					<!--
@@ -95,7 +95,7 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="romyashi.toxins">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace" MayRequire="romyashi.toxins">
 			<success MayRequire="romyashi.toxins">Always</success>
@@ -114,9 +114,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Romy_Toxipod"]/plant/sowResearchPrerequisites</xpath>
+		<xpath>Defs/ThingDef[defName="Romy_Toxipod"]/plant/sowResearchPrerequisites</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Romy_Toxipod"]/plant</xpath>
+			<xpath>Defs/ThingDef[defName="Romy_Toxipod"]/plant</xpath>
 			<success>Always</success>
 			<value>
 				<sowResearchPrerequisites></sowResearchPrerequisites>
@@ -126,7 +126,7 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="romyashi.toxins">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace" MayRequire="romyashi.toxins">
 			<success MayRequire="romyashi.toxins">Always</success>
@@ -176,9 +176,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Toxalope"]/comps</xpath>
+		<xpath>Defs/ThingDef[defName="Toxalope"]/comps</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Toxalope"]</xpath>
+			<xpath>Defs/ThingDef[defName="Toxalope"]</xpath>
 			<success>Always</success>
 			<value>
 				<comps></comps>
@@ -188,11 +188,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Toxalope"]/comps</xpath>
+	<xpath>Defs/ThingDef[defName="Toxalope"]/comps</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Toxalope"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="Toxalope"]/comps</xpath>
 			<value>
 				<comps>
 					<li Class="VEF.AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="TSP.Isengriff.Storytime,oskarpotocki.vanillafactionsexpanded.core">
@@ -209,10 +209,10 @@
 		
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/recipeMaker</xpath>
+	<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/recipeMaker</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/recipeMaker</xpath>
+			<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/recipeMaker</xpath>
 			<value>
 				<recipeMaker>
 					<researchPrerequisites>
@@ -226,10 +226,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/smeltable</xpath>
+	<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/smeltable</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/smeltable</xpath>
+			<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/smeltable</xpath>
 			<value>
 				<smeltable>false</smeltable>
 			</value>
@@ -239,11 +239,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="ST_PoisonExtract"]</xpath>
+	<xpath>Defs/ThingDef[defName="ST_PoisonExtract"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/comps/li/ammoDef</xpath>
+			<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/comps/li/ammoDef</xpath>
 			<value>
 				<ammoDef>ST_PoisonExtract</ammoDef>
 			</value>
@@ -253,21 +253,21 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
+	<xpath>Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Shell_Toxic"]/costListForDifficulty</xpath>
+			<xpath>Defs/ThingDef[defName="Shell_Toxic"]/costListForDifficulty</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/ThingDef[defName="Shell_Toxic"]/recipeMaker</xpath>
+	<xpath>Defs/ThingDef[defName="Shell_Toxic"]/recipeMaker</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Shell_Toxic"]/recipeMaker</xpath>
+			<xpath>Defs/ThingDef[defName="Shell_Toxic"]/recipeMaker</xpath>
 			<value>
 				<recipeMaker>
 					<researchPrerequisites>
@@ -281,10 +281,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exiet? -->
-	<xpath>/Defs/ThingDef[defName="Shell_Toxic"]/smeltable</xpath>
+	<xpath>Defs/ThingDef[defName="Shell_Toxic"]/smeltable</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Shell_Toxic"]/smeltable</xpath>
+			<xpath>Defs/ThingDef[defName="Shell_Toxic"]/smeltable</xpath>
 			<value>
 				<smeltable>false</smeltable>
 			</value>
@@ -294,10 +294,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/ThingDef[defName="Gun_ToxbombLauncher"]/recipeMaker</xpath>
+	<xpath>Defs/ThingDef[defName="Gun_ToxbombLauncher"]/recipeMaker</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_ToxbombLauncher"]/recipeMaker</xpath>
+			<xpath>Defs/ThingDef[defName="Gun_ToxbombLauncher"]/recipeMaker</xpath>
 			<value>
 				<recipeMaker>
 					<researchPrerequisites>
@@ -311,10 +311,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exiet? -->
-	<xpath>/Defs/ThingDef[defName="Gun_ToxbombLauncher"]/smeltable</xpath>
+	<xpath>Defs/ThingDef[defName="Gun_ToxbombLauncher"]/smeltable</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Gun_ToxbombLauncher"]/smeltable</xpath>
+			<xpath>Defs/ThingDef[defName="Gun_ToxbombLauncher"]/smeltable</xpath>
 			<value>
 				<smeltable>false</smeltable>
 			</value>
@@ -324,11 +324,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Weapon_GrenadeTox"]</xpath>
+	<xpath>Defs/ThingDef[defName="Weapon_GrenadeTox"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Weapon_GrenadeTox"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="Weapon_GrenadeTox"]/costList</xpath>
 			<value>
 				<costList>
 					<ST_PoisonExtract MayRequire="TSP.Isengriff.Storytime">25</ST_PoisonExtract>
@@ -341,10 +341,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="pphhyy_ToxPumpShotgun"]/smeltable</xpath>
+		<xpath>Defs/ThingDef[defName="pphhyy_ToxPumpShotgun"]/smeltable</xpath>
 		<!-- If it DOES NOT, add this. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName ="pphhyy_ToxPumpShotgun" or defName = "pphhyy_Tox_BoltActionRifle" or defName = "pphhyy_Tox_Revolver" or defName = "pphhyy_Weapon_ToxLongSword" or defName = "pphhyy_Weapon_Toxhammer" or defName = "pphhyy_Weapon_ToxSpear" or defName = "pphhyy_Tox_AdvancedRevolver" or defName = "pphhyy_Tox_AdvancedBoltActionRifle" or defName = "pphhyy_AdvancedToxPumpShotgun"]</xpath>
+			<xpath>Defs/ThingDef[defName ="pphhyy_ToxPumpShotgun" or defName = "pphhyy_Tox_BoltActionRifle" or defName = "pphhyy_Tox_Revolver" or defName = "pphhyy_Weapon_ToxLongSword" or defName = "pphhyy_Weapon_Toxhammer" or defName = "pphhyy_Weapon_ToxSpear" or defName = "pphhyy_Tox_AdvancedRevolver" or defName = "pphhyy_Tox_AdvancedBoltActionRifle" or defName = "pphhyy_AdvancedToxPumpShotgun"]</xpath>
 			<success>Always</success>
 			<value>
 				<smeltable>false</smeltable>
@@ -354,10 +354,10 @@
 				
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/recipeMaker</xpath>
+	<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/recipeMaker</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/recipeMaker</xpath>
+			<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/recipeMaker</xpath>
 			<value>
 				<recipeMaker>
 					<researchPrerequisites>
@@ -371,10 +371,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exiet? -->
-	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/smeltable</xpath>
+	<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/smeltable</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/smeltable</xpath>
+			<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/smeltable</xpath>
 			<success>Always</success>
 			<value>
 				<smeltable>false</smeltable>
@@ -382,7 +382,7 @@
 		</match>
 		<!-- If it DOES NOT, add this. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]</xpath>
+			<xpath>Defs/ThingDef[defName="Apparel_PackTox"]</xpath>
 			<success>Always</success>
 			<value>
 				<smeltable>false</smeltable>
@@ -393,10 +393,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]/recipeMaker</xpath>
+	<xpath>Defs/ThingDef[defName="Mosi_ToxPopper"]/recipeMaker</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]/recipeMaker</xpath>
+			<xpath>Defs/ThingDef[defName="Mosi_ToxPopper"]/recipeMaker</xpath>
 			<value>
 				<recipeMaker>
 					<researchPrerequisites>
@@ -410,17 +410,17 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exiet? -->
-	<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]/smeltable</xpath>
+	<xpath>Defs/ThingDef[defName="Mosi_ToxPopper"]/smeltable</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]/smeltable</xpath>
+			<xpath>Defs/ThingDef[defName="Mosi_ToxPopper"]/smeltable</xpath>
 			<value>
 				<smeltable>false</smeltable>
 			</value>
 		</match>
 		<!-- If it DOES NOT, add this. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]</xpath>
+			<xpath>Defs/ThingDef[defName="Mosi_ToxPopper"]</xpath>
 			<success>Always</success>
 			<value>
 				<smeltable>false</smeltable>
@@ -431,11 +431,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]</xpath>
+	<xpath>Defs/ThingDef[defName="Apparel_PackTox"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Apparel_PackTox"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/apparel/tags</xpath>
 			<value>
 				<li>GoblinPoison_Backpack</li>
 				<li>BeltDefenseTox</li>
@@ -446,11 +446,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]</xpath>
+	<xpath>Defs/ThingDef[defName="Mosi_ToxPopper"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Mosi_ToxPopper"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="Mosi_ToxPopper"]/apparel/tags</xpath>
 			<value>
 				<li>GoblinPoison_Backpack</li>
 				<li>BeltDefenseTox</li>
@@ -461,14 +461,14 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="pphhyy_ToxPumpShotgun"]</xpath>
+	<xpath>Defs/ThingDef[defName="pphhyy_ToxPumpShotgun"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName = "pphhyy_ToxPumpShotgun" or defName = "pphhyy_Tox_BoltActionRifle" or defName = "pphhyy_Tox_Revolver" or defName = "pphhyy_Weapon_ToxLongSword" or defName = "pphhyy_Weapon_Toxhammer" or defName = "pphhyy_Weapon_ToxSpear" or defName = "pphhyy_Tox_AdvancedRevolver" or defName = "pphhyy_Tox_AdvancedBoltActionRifle" or defName = "pphhyy_AdvancedToxPumpShotgun"]/weaponTags</xpath>
+					<xpath>Defs/ThingDef[defName = "pphhyy_ToxPumpShotgun" or defName = "pphhyy_Tox_BoltActionRifle" or defName = "pphhyy_Tox_Revolver" or defName = "pphhyy_Weapon_ToxLongSword" or defName = "pphhyy_Weapon_Toxhammer" or defName = "pphhyy_Weapon_ToxSpear" or defName = "pphhyy_Tox_AdvancedRevolver" or defName = "pphhyy_Tox_AdvancedBoltActionRifle" or defName = "pphhyy_AdvancedToxPumpShotgun"]/weaponTags</xpath>
 					<value>
 						<li>GoblinPoison_Backpack</li>
 					</value>
@@ -479,14 +479,14 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="pphhyy_ToxPumpShotgun"]</xpath>
+	<xpath>Defs/ThingDef[defName="pphhyy_ToxPumpShotgun"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName = "pphhyy_Weapon_Toxhammer" or defName = "pphhyy_Weapon_ToxSpear"]/weaponTags</xpath>
+					<xpath>Defs/ThingDef[defName = "pphhyy_Weapon_Toxhammer" or defName = "pphhyy_Weapon_ToxSpear"]/weaponTags</xpath>
 					<value>
 						<li>GoblinBasic</li>
 					</value>
@@ -494,7 +494,7 @@
 				
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName="pphhyy_Tox_Revolver" or defName = "pphhyy_Weapon_ToxLongSword" or defName = "pphhyy_Tox_AdvancedRevolver"]/weaponTags</xpath>
+					<xpath>Defs/ThingDef[defName="pphhyy_Tox_Revolver" or defName = "pphhyy_Weapon_ToxLongSword" or defName = "pphhyy_Tox_AdvancedRevolver"]/weaponTags</xpath>
 					<value>
 						<li>GoblinDecent</li>
 					</value>
@@ -502,7 +502,7 @@
 				
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName = "pphhyy_Tox_AdvancedBoltActionRifle" or defName = "pphhyy_AdvancedToxPumpShotgun"]/weaponTags</xpath>
+					<xpath>Defs/ThingDef[defName = "pphhyy_Tox_AdvancedBoltActionRifle" or defName = "pphhyy_AdvancedToxPumpShotgun"]/weaponTags</xpath>
 					<value>
 						<li>GoblinAdvanced</li>
 					</value>
@@ -510,7 +510,7 @@
 				
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/ThingDef[defName = "pphhyy_Tox_Minigun" or defName = "pphhyy_Tox_ChargeLance" or defName = "pphhyy_Tox_AdvancedMinigun"]/weaponTags</xpath>
+					<xpath>Defs/ThingDef[defName = "pphhyy_Tox_Minigun" or defName = "pphhyy_Tox_ChargeLance" or defName = "pphhyy_Tox_AdvancedMinigun"]/weaponTags</xpath>
 					<value>
 						<li>GoblinDoomsday</li>
 					</value>
@@ -521,11 +521,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Gun_ToxicNeedle"]</xpath>
+	<xpath>Defs/ThingDef[defName="Gun_ToxicNeedle"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Gun_ToxicNeedle"]/weaponTags</xpath>
+			<xpath>Defs/ThingDef[defName="Gun_ToxicNeedle"]/weaponTags</xpath>
 			<value>
 				<li>GoblinDoomsday</li>
 				<li>Gun_ToxicNeedle</li>
@@ -536,11 +536,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName = "Gun_ToxicNeedle" or defName = "pphhyy_Tox_Revolver" or defName = "pphhyy_Tox_Revolver" or defName = "pphhyy_Tox_Minigun"]</xpath>
+	<xpath>Defs/ThingDef[defName = "Gun_ToxicNeedle" or defName = "pphhyy_Tox_Revolver" or defName = "pphhyy_Tox_Revolver" or defName = "pphhyy_Tox_Minigun"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="PPHHYY_DoomsDay_Goblin"]/weaponTags</xpath>
+			<xpath>Defs/PawnKindDef[defName="PPHHYY_DoomsDay_Goblin"]/weaponTags</xpath>
 			<value>
 				<weaponTags>
 					<li>GoblinDoomsday</li>
@@ -553,11 +553,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="WasteCanister"]</xpath>
+	<xpath>Defs/ThingDef[defName="WasteCanister"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="WasteCanister"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="WasteCanister"]/comps</xpath>
 			<value>
 				<comps Inherit="False">
 					<li Class="CompProperties_GasOnDamage">
@@ -594,11 +594,11 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	 Does this exist?
-		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
+		<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
 		If it does, do this replacement.
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/ingredients</xpath>
 			<value>
 				<ingredients>
 					<li>
@@ -645,9 +645,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/defaultIngredientFilter</xpath>
+		<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/defaultIngredientFilter</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
+			<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
 			<success>Always</success>
 			<value>
 				<defaultIngredientFilter></defaultIngredientFilter>
@@ -657,9 +657,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/researchPrerequisites</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
+			<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
 			<success>Always</success>
 			<value>
 				<researchPrerequisites></researchPrerequisites>
@@ -670,11 +670,11 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	 Does this exist?
-		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/fixedIngredientFilter</xpath>
+		<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/fixedIngredientFilter</xpath>
 		If it does, do this replacement.
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/fixedIngredientFilter</xpath>
+			<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/fixedIngredientFilter</xpath>
 			<value>
 				<fixedIngredientFilter Inherit="False">
 					<categories>
@@ -703,11 +703,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/defaultIngredientFilter</xpath>
+	<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/defaultIngredientFilter</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/defaultIngredientFilter</xpath>
+			<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/defaultIngredientFilter</xpath>
 			<value>
 				<defaultIngredientFilter>
 					<thingDefs>
@@ -731,11 +731,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/products</xpath>
+	<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/products</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/products</xpath>
+			<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/products</xpath>
 			<value>
 				<products>
 					<WasteCanister>5</WasteCanister>
@@ -748,11 +748,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/researchPrerequisites</xpath>
+	<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites Inherit="False">
 					<li>WasteContainment</li>
@@ -764,11 +764,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/skillRequirements</xpath>
+	<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/skillRequirements</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/skillRequirements</xpath>
+			<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/skillRequirements</xpath>
 			<value>
 				<skillRequirements></skillRequirements>
 			</value>
@@ -778,9 +778,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="WasteCanister"]/stackLimit</xpath>
+		<xpath>Defs/ThingDef[defName="WasteCanister"]/stackLimit</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="WasteCanister"]</xpath>
+			<xpath>Defs/ThingDef[defName="WasteCanister"]</xpath>
 			<success>Always</success>
 			<value>
 				<stackLimit>725</stackLimit>
@@ -790,11 +790,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="WasteCanister"]/stackLimit</xpath>
+		<xpath>Defs/ThingDef[defName="WasteCanister"]/stackLimit</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="WasteCanister"]/stackLimit</xpath>
+			<xpath>Defs/ThingDef[defName="WasteCanister"]/stackLimit</xpath>
 			<value>
 				<stackLimit>725</stackLimit>
 			</value>
@@ -804,11 +804,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="WasteCanister"]</xpath>
+	<xpath>Defs/ThingDef[defName="WasteCanister"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="WasteCanister"]/statBases/Flammability</xpath>
+			<xpath>Defs/ThingDef[defName="WasteCanister"]/statBases/Flammability</xpath>
 			<value>
 				<Flammability>5</Flammability>
 			</value>
@@ -818,11 +818,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="L24_Mutagen_ToxicJaw"]</xpath>
+	<xpath>Defs/ThingDef[defName="L24_Mutagen_ToxicJaw"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="L24_Mutagen_ToxicJaw"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="L24_Mutagen_ToxicJaw"]/costList</xpath>
 			<value>
 				<costList>
 					<L24_Manto_Mutate>40</L24_Manto_Mutate>
@@ -836,11 +836,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Gun_ToxicNeedle"]</xpath>
+	<xpath>Defs/ThingDef[defName="Gun_ToxicNeedle"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="PPHHYY_Doomsday_Goblin"]/weaponTags</xpath>
+			<xpath>Defs/PawnKindDef[defName="PPHHYY_Doomsday_Goblin"]/weaponTags</xpath>
 			<value>
 				<weaponTags>
 					<li>GoblinDoomsday</li>
@@ -854,11 +854,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Gun_ToxCannon"]</xpath>
+	<xpath>Defs/ThingDef[defName="Gun_ToxCannon"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="PPHHYY_Doomsday_Goblin"]/weaponTags</xpath>
+			<xpath>Defs/PawnKindDef[defName="PPHHYY_Doomsday_Goblin"]/weaponTags</xpath>
 			<value>
 				<weaponTags>
 					<li>GoblinDoomsday</li>
@@ -872,11 +872,11 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="TSP.Isengriff.Storytime">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]</xpath>
+	<xpath>Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/ingredients</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">
 					<filter MayRequire="TSP.Isengriff.Storytime">
@@ -893,11 +893,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/fixedIngredientFilter</xpath>
+	<xpath>Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/fixedIngredientFilter</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/fixedIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/fixedIngredientFilter/thingDefs</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 			</value>
@@ -907,11 +907,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/researchPrerequisite</xpath>
+	<xpath>Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/researchPrerequisite</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/researchPrerequisite</xpath>
+			<xpath>Defs/RecipeDef[defName="Mech_Toxic_Pikeman"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites>
 					<li>StandardMechtech</li>
@@ -924,11 +924,11 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="TSP.Isengriff.Storytime">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Mech_ToxCentipede"]</xpath>
+	<xpath>Defs/RecipeDef[defName="Mech_ToxCentipede"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Mech_ToxCentipede"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="Mech_ToxCentipede"]/ingredients</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">
 					<filter MayRequire="TSP.Isengriff.Storytime">
@@ -945,11 +945,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Mech_ToxCentipede"]/fixedIngredientFilter</xpath>
+	<xpath>Defs/RecipeDef[defName="Mech_ToxCentipede"]/fixedIngredientFilter</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Mech_ToxCentipede"]/fixedIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="Mech_ToxCentipede"]/fixedIngredientFilter/thingDefs</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 			</value>
@@ -959,11 +959,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Mech_ToxCentipede"]/researchPrerequisite</xpath>
+	<xpath>Defs/RecipeDef[defName="Mech_ToxCentipede"]/researchPrerequisite</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Mech_ToxCentipede"]/researchPrerequisite</xpath>
+			<xpath>Defs/RecipeDef[defName="Mech_ToxCentipede"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites>
 					<li>HighMechtech</li>
@@ -976,11 +976,11 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="TSP.Isengriff.Storytime">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Mech_Infector"]</xpath>
+	<xpath>Defs/RecipeDef[defName="Mech_Infector"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Mech_Infector"]/ingredients</xpath>
+			<xpath>Defs/RecipeDef[defName="Mech_Infector"]/ingredients</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">
 					<filter MayRequire="TSP.Isengriff.Storytime">
@@ -997,11 +997,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Mech_Infector"]/fixedIngredientFilter</xpath>
+	<xpath>Defs/RecipeDef[defName="Mech_Infector"]/fixedIngredientFilter</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Mech_Infector"]/fixedIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="Mech_Infector"]/fixedIngredientFilter/thingDefs</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 			</value>
@@ -1011,11 +1011,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="Mech_Infector"]/researchPrerequisite</xpath>
+	<xpath>Defs/RecipeDef[defName="Mech_Infector"]/researchPrerequisite</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Mech_Infector"]/researchPrerequisite</xpath>
+			<xpath>Defs/RecipeDef[defName="Mech_Infector"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites>
 					<li>StandardMechtech</li>
@@ -1028,11 +1028,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="VenomFangs"]</xpath>
+	<xpath>Defs/ThingDef[defName="VenomFangs"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VenomFangs"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="VenomFangs"]/costList</xpath>
 			<value>
 				<costList>
 					<Steel>20</Steel>
@@ -1046,11 +1046,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="VenomTalon"]</xpath>
+	<xpath>Defs/ThingDef[defName="VenomTalon"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VenomTalon"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="VenomTalon"]/costList</xpath>
 			<value>
 				<costList>
 					<Steel>9</Steel>
@@ -1064,11 +1064,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="WasteCanister"]</xpath>
+	<xpath>Defs/ThingDef[defName="WasteCanister"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="WasteCanister"]/thingCategories</xpath>
+			<xpath>Defs/ThingDef[defName="WasteCanister"]/thingCategories</xpath>
 			<value>
 				<thingCategories>
 					<li>ItemsMisc</li>
@@ -1082,11 +1082,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="PolutionPoweredGenerator"]</xpath>
+	<xpath>Defs/ThingDef[defName="PolutionPoweredGenerator"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName = "PolutionPoweredGenerator" or defName = "PortablePolutionPoweredGenerator" or defName = "IndustrialPolutionPoweredGenerator"]/comps/li/fuelFilter/thingDefs</xpath>
+			<xpath>Defs/ThingDef[defName = "PolutionPoweredGenerator" or defName = "PortablePolutionPoweredGenerator" or defName = "IndustrialPolutionPoweredGenerator"]/comps/li/fuelFilter/thingDefs</xpath>
 			<value>
 				<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
@@ -1102,11 +1102,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="EW_WastePipe"]</xpath>
+	<xpath>Defs/ThingDef[defName="EW_WastePipe"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName = "EW_WasteTap" or defName = "EW_WasteBin"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+			<xpath>Defs/ThingDef[defName = "EW_WasteTap" or defName = "EW_WasteBin"]/building/fixedStorageSettings/filter/thingDefs</xpath>
 			<value>
 				<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
@@ -1123,11 +1123,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="EW_WastePipe"]</xpath>
+	<xpath>Defs/ThingDef[defName="EW_WastePipe"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName = "EW_WasteTap" or defName = "EW_WasteBin"]/building/defaultStorageSettings/filter/thingDefs</xpath>
+			<xpath>Defs/ThingDef[defName = "EW_WasteTap" or defName = "EW_WasteBin"]/building/defaultStorageSettings/filter/thingDefs</xpath>
 			<value>
 				<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_GoblinPoison</li>
@@ -1145,11 +1145,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="WC_CargoContainerWaste"]</xpath>
+	<xpath>Defs/ThingDef[defName="WC_CargoContainerWaste"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="WC_CargoContainerWaste"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="WC_CargoContainerWaste"]/comps</xpath>
 			<value>
 				<comps Inherit="False">
 					<li Class="CompProperties_GasOnDamage">
@@ -1228,55 +1228,55 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
+	<xpath>Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="Romy_ToxinProduction"]</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="Romy_ToxinProduction"]</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan.-->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
+	<xpath>Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="Romy_WastepackRecycling"]</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="Romy_WastepackRecycling"]</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan.-->
 	</Operation>
 	
   <Operation Class="PatchOperationConditional">
     <!-- DO THE GENTILES KNOW? -->
-    <xpath>/Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
+    <xpath>Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
     <!-- If they do, SHUT IT DOWN. -->
     <match Class="PatchOperationRemove">
       <success>Always</success>
-      <xpath>/Defs/ResearchProjectDef/prerequisites/li[text()="Romy_ToxinProduction"]</xpath>
+      <xpath>Defs/ResearchProjectDef/prerequisites/li[text()="Romy_ToxinProduction"]</xpath>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
   
   <Operation Class="PatchOperationConditional">
     <!-- DO THE GENTILES KNOW? -->
-    <xpath>/Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
+    <xpath>Defs/ThingDef[defName="Romy_RawToxipods"]</xpath>
     <!-- If they do, SHUT IT DOWN. -->
     <match Class="PatchOperationRemove">
       <success>Always</success>
-      <xpath>/Defs/ResearchProjectDef/prerequisites/li[text()="Romy_WastepackRecycling"]</xpath>
+      <xpath>Defs/ResearchProjectDef/prerequisites/li[text()="Romy_WastepackRecycling"]</xpath>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
   
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]/prerequisites</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]/prerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]/prerequisites</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]/prerequisites</xpath>
 			<value>
 				<prerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -1289,20 +1289,20 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Wastepack"]</xpath>
+	<xpath>Defs/ThingDef[defName="Wastepack"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Wastepack"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="Wastepack"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
 					</value>
 				</li>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Wastepack"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="Wastepack"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.BathroomHumor">WasteCanister</li>
@@ -1314,9 +1314,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ResearchProjectDef[defName="WasteUtility"]/prerequisites</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="WasteUtility"]/prerequisites</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ResearchProjectDef[defName="WasteUtility"]</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="WasteUtility"]</xpath>
 			<success>Always</success>
 			<value>
 				<prerequisites></prerequisites>
@@ -1326,11 +1326,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="WasteUtility"]</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="WasteUtility"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="WasteUtility"]/prerequisites</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="WasteUtility"]/prerequisites</xpath>
 			<value>
 				<prerequisites>
 					<li MayRequire="ludeon.rimworld.biotech">ToxifierGenerator</li>
@@ -1343,9 +1343,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ResearchProjectDef[defName="ToxifierGenerator"]/prerequisites</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="ToxifierGenerator"]/prerequisites</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ResearchProjectDef[defName="ToxifierGenerator"]</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="ToxifierGenerator"]</xpath>
 			<success>Always</success>
 			<value>
 				<prerequisites></prerequisites>
@@ -1355,11 +1355,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="ToxifierGenerator"]</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="ToxifierGenerator"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="ToxifierGenerator"]/prerequisites</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="ToxifierGenerator"]/prerequisites</xpath>
 			<value>
 				<prerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -1373,11 +1373,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
 			<value>
 				<prerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -1390,11 +1390,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ComplexRecycling"]</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_ComplexRecycling"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ComplexRecycling"]/prerequisites</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_ComplexRecycling"]/prerequisites</xpath>
 			<value>
 				<prerequisites>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
@@ -1410,9 +1410,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Plant_ToxiStrand"]/plant</xpath>
+		<xpath>Defs/ThingDef[defName="Plant_ToxiStrand"]/plant</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Plant_ToxiStrand"]</xpath>
+			<xpath>Defs/ThingDef[defName="Plant_ToxiStrand"]</xpath>
 			<success>Always</success>
 			<value>
 				<plant></plant>
@@ -1422,9 +1422,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Plant_ToxiStrand"]/plant/sowResearchPrerequisites</xpath>
+		<xpath>Defs/ThingDef[defName="Plant_ToxiStrand"]/plant/sowResearchPrerequisites</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Plant_ToxiStrand"]/plant</xpath>
+			<xpath>Defs/ThingDef[defName="Plant_ToxiStrand"]/plant</xpath>
 			<success>Always</success>
 			<value>
 				<sowResearchPrerequisites></sowResearchPrerequisites>
@@ -1434,9 +1434,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Plant_ToxiRoot"]/plant</xpath>
+		<xpath>Defs/ThingDef[defName="Plant_ToxiRoot"]/plant</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Plant_ToxiRoot"]</xpath>
+			<xpath>Defs/ThingDef[defName="Plant_ToxiRoot"]</xpath>
 			<success>Always</success>
 			<value>
 				<plant></plant>
@@ -1446,9 +1446,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Plant_ToxiRoot"]/plant/sowResearchPrerequisites</xpath>
+		<xpath>Defs/ThingDef[defName="Plant_ToxiRoot"]/plant/sowResearchPrerequisites</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Plant_ToxiRoot"]/plant</xpath>
+			<xpath>Defs/ThingDef[defName="Plant_ToxiRoot"]/plant</xpath>
 			<success>Always</success>
 			<value>
 				<sowResearchPrerequisites></sowResearchPrerequisites>
@@ -1458,9 +1458,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Plant_BloodRose"]/plant</xpath>
+		<xpath>Defs/ThingDef[defName="Plant_BloodRose"]/plant</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Plant_BloodRose"]</xpath>
+			<xpath>Defs/ThingDef[defName="Plant_BloodRose"]</xpath>
 			<success>Always</success>
 			<value>
 				<plant></plant>
@@ -1470,9 +1470,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Plant_BloodRose"]/plant/sowResearchPrerequisites</xpath>
+		<xpath>Defs/ThingDef[defName="Plant_BloodRose"]/plant/sowResearchPrerequisites</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Plant_BloodRose"]/plant</xpath>
+			<xpath>Defs/ThingDef[defName="Plant_BloodRose"]/plant</xpath>
 			<success>Always</success>
 			<value>
 				<sowResearchPrerequisites></sowResearchPrerequisites>
@@ -1482,7 +1482,7 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="romyashi.toxins">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace" MayRequire="inertialmage.toxicplants">
 			<success MayRequire="inertialmage.toxicplants">Always</success>
@@ -1498,7 +1498,7 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="romyashi.toxins">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace" MayRequire="inertialmage.toxicplants">
 			<success MayRequire="inertialmage.toxicplants">Always</success>
@@ -1515,7 +1515,7 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="romyashi.toxins">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="ToxGas"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace" MayRequire="inertialmage.toxicplants">
 			<success MayRequire="inertialmage.toxicplants">Always</success>
@@ -1532,9 +1532,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Wastepack"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="Wastepack"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Wastepack"]</xpath>
+			<xpath>Defs/ThingDef[defName="Wastepack"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -1544,9 +1544,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="VRecyclingE_Trash"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="VRecyclingE_Trash"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="VRecyclingE_Trash"]</xpath>
+			<xpath>Defs/ThingDef[defName="VRecyclingE_Trash"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -1556,9 +1556,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="VRecyclingE_RadioactiveIsotopack"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="VRecyclingE_RadioactiveIsotopack"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="VRecyclingE_RadioactiveIsotopack"]</xpath>
+			<xpath>Defs/ThingDef[defName="VRecyclingE_RadioactiveIsotopack"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -1568,9 +1568,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="VRecyclingE_VolatileToxpack"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="VRecyclingE_VolatileToxpack"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="VRecyclingE_VolatileToxpack"]</xpath>
+			<xpath>Defs/ThingDef[defName="VRecyclingE_VolatileToxpack"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -1580,9 +1580,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="VRecyclingE_StabilizedAlloypack"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="VRecyclingE_StabilizedAlloypack"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="VRecyclingE_StabilizedAlloypack"]</xpath>
+			<xpath>Defs/ThingDef[defName="VRecyclingE_StabilizedAlloypack"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -1592,9 +1592,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="VRecyclingE_ReactiveChempack"]</xpath>
+			<xpath>Defs/ThingDef[defName="VRecyclingE_ReactiveChempack"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -1604,9 +1604,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="VRecyclingE_ReclaimedBiopack"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="VRecyclingE_ReclaimedBiopack"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="VRecyclingE_ReclaimedBiopack"]</xpath>
+			<xpath>Defs/ThingDef[defName="VRecyclingE_ReclaimedBiopack"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -1616,11 +1616,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_StabilizedAlloypack"]/tradeTags</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_StabilizedAlloypack"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_StabilizedAlloypack"]/tradeTags</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_StabilizedAlloypack"]/tradeTags</xpath>
 			<value>
 				<li>VFERC_Orbital_Factory</li>
 				<li>VFERC_All</li>
@@ -1631,11 +1631,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_RadioactiveIsotopack"]/tradeTags</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_RadioactiveIsotopack"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_RadioactiveIsotopack"]/tradeTags</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_RadioactiveIsotopack"]/tradeTags</xpath>
 			<value>
 				<li>VFERC_NuclearWaste</li>
 				<li>VFERC_All</li>
@@ -1646,11 +1646,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReclaimedBiopack"]/tradeTags</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_ReclaimedBiopack"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReclaimedBiopack"]/tradeTags</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_ReclaimedBiopack"]/tradeTags</xpath>
 			<value>
 				<li>VFERC_Agriculture</li>
 				<li>VFERC_All</li>
@@ -1661,11 +1661,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
 			<value>
 				<li>VFERC_Agriculture</li>
 				<li>VFERC_All</li>
@@ -1676,11 +1676,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_ReactiveChempack"]/tradeTags</xpath>
 			<value>
 				<li>VFERC_Orbital_Factory</li>
 				<li>VFERC_All</li>
@@ -1691,11 +1691,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_VolatileToxpack"]/tradeTags</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_VolatileToxpack"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_VolatileToxpack"]/tradeTags</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="VRecyclingE_VolatileToxpack"]/tradeTags</xpath>
 			<value>
 				<li>VFERC_All</li>
 				<li>VFERC_NuclearWaste</li>
@@ -1706,11 +1706,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
+	<xpath>Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
+			<xpath>Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_BuyTradeTag">
 					<tag>VFERC_Orbital_Factory</tag>
@@ -1722,11 +1722,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
+	<xpath>Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
+			<xpath>Defs/TraderKindDef[defName="Orbital_Factory"]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_BuyTradeTag">
 					<tag>VFERC_Orbital_Factory</tag>
@@ -1738,11 +1738,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/TraderKindDef[defName="Orbital_Rimatomics"]/stockGenerators</xpath>
+	<xpath>Defs/TraderKindDef[defName="Orbital_Rimatomics"]/stockGenerators</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName="Orbital_Rimatomics"]/stockGenerators</xpath>
+			<xpath>Defs/TraderKindDef[defName="Orbital_Rimatomics"]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_SingleDef" MayRequire="vanillaexpanded.recycling">
 					<thingDef MayRequire="vanillaexpanded.recycling">VRecyclingE_RadioactiveIsotopack</thingDef>
@@ -1766,11 +1766,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/TraderKindDef[defName="Orbital_Farming"]/stockGenerators</xpath>
+	<xpath>Defs/TraderKindDef[defName="Orbital_Farming"]/stockGenerators</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName="Orbital_Farming"]/stockGenerators</xpath>
+			<xpath>Defs/TraderKindDef[defName="Orbital_Farming"]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_BuyTradeTag">
 					<tag>VFERC_Agriculture</tag>
@@ -1782,11 +1782,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/TraderKindDef[defName="Orbital_Scrap"]/stockGenerators</xpath>
+	<xpath>Defs/TraderKindDef[defName="Orbital_Scrap"]/stockGenerators</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName="Orbital_Scrap"]/stockGenerators</xpath>
+			<xpath>Defs/TraderKindDef[defName="Orbital_Scrap"]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_BuyTradeTag">
 					<tag>VFERC_All</tag>
@@ -1798,11 +1798,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="BreadMo_NutrientDispenser"]</xpath>
+		<xpath>Defs/ThingDef[defName="BreadMo_NutrientDispenser"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="BreadMo_NutrientDispenser"]/comps/li/fuelFilter/thingDefs</xpath>
+			<xpath>Defs/ThingDef[defName="BreadMo_NutrientDispenser"]/comps/li/fuelFilter/thingDefs</xpath>
 			<value>
 				<li MayRequire="vanillaexpanded.recycling">VRecyclingE_Trash</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
@@ -1819,7 +1819,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="EMWH_ToxicWater"]</xpath>
+		<xpath>Defs/ThingDef[defName="EMWH_ToxicWater"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -1997,11 +1997,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="BIN-I"]</xpath>
+	<xpath>Defs/RecipeDef[defName="BIN-I"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="BIN-I"]/researchPrerequisite</xpath>
+			<xpath>Defs/RecipeDef[defName="BIN-I"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2014,11 +2014,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Make_reactivewastebarrel"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="Make_reactivewastebarrel"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_reactivewastebarrel"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_reactivewastebarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2029,7 +2029,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_reactivewastebarrel"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_reactivewastebarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2042,11 +2042,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Recycle_ChembarrelIntoChemfuel"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="Recycle_ChembarrelIntoChemfuel"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Recycle_ChembarrelIntoChemfuel"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="Recycle_ChembarrelIntoChemfuel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2057,7 +2057,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Recycle_ChembarrelIntoChemfuel"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Recycle_ChembarrelIntoChemfuel"]</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2070,11 +2070,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Make_unreactivewastebarrel"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="Make_unreactivewastebarrel"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_unreactivewastebarrel"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_unreactivewastebarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2085,7 +2085,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_unreactivewastebarrel"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_unreactivewastebarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2098,11 +2098,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Make_isoto_barrel"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="Make_isoto_barrel"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_isoto_barrel"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_isoto_barrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2113,7 +2113,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_isoto_barrel"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_isoto_barrel"]</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2126,11 +2126,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Make_unisoto_barrel"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="Make_unisoto_barrel"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_unisoto_barrel"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_unisoto_barrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2141,7 +2141,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_unisoto_barrel"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_unisoto_barrel"]</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2154,11 +2154,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Make_untoxicwastebarrel"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="Make_untoxicwastebarrel"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_untoxicwastebarrel"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_untoxicwastebarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2169,7 +2169,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_untoxicwastebarrel"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_untoxicwastebarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2182,11 +2182,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Recycle_WastebarrelIntotoxbarrel"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="Recycle_WastebarrelIntotoxbarrel"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Recycle_WastebarrelIntotoxbarrel"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="Recycle_WastebarrelIntotoxbarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2197,7 +2197,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Recycle_WastebarrelIntotoxbarrel"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Recycle_WastebarrelIntotoxbarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2210,11 +2210,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Make_toxicwastebarrel"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="Make_toxicwastebarrel"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_toxicwastebarrel"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_toxicwastebarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2225,7 +2225,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_toxicwastebarrel"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_toxicwastebarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2238,11 +2238,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Make_toxbarrel"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="Make_toxbarrel"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_toxbarrel"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_toxbarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2253,7 +2253,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_toxbarrel"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_toxbarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2266,11 +2266,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Make_untoxbarrel"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="Make_untoxbarrel"]/researchPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_untoxbarrel"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_untoxbarrel"]/researchPrerequisites</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2281,7 +2281,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="Make_untoxbarrel"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Make_untoxbarrel"]</xpath>
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
@@ -2294,11 +2294,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Make_untoxbarrel"]/recipeUsers</xpath>
+		<xpath>Defs/RecipeDef[defName="Make_untoxbarrel"]/recipeUsers</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName = "Make_untoxbarrel" or defName = "Make_untoxbarrel" or defName = "Make_toxbarrel" or defName = "Make_toxicwastebarrel" or defName = "Make_untoxicwastebarrel" or defName = "Make_isoto_barrel" or defName = "Make_unisoto_barrel" or defName = "Make_reactivewastebarrel" or defName = "Make_unreactivewastebarrel"]/recipeUsers</xpath>
+			<xpath>Defs/RecipeDef[defName = "Make_untoxbarrel" or defName = "Make_untoxbarrel" or defName = "Make_toxbarrel" or defName = "Make_toxicwastebarrel" or defName = "Make_untoxicwastebarrel" or defName = "Make_isoto_barrel" or defName = "Make_unisoto_barrel" or defName = "Make_reactivewastebarrel" or defName = "Make_unreactivewastebarrel"]/recipeUsers</xpath>
 			<value>
 				<recipeUsers>
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
@@ -2311,9 +2311,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/RecipeDef[defName="Trash_bale"]/recipeUsers</xpath>
+		<xpath>Defs/RecipeDef[defName="Trash_bale"]/recipeUsers</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="Trash_bale"]</xpath>
+			<xpath>Defs/RecipeDef[defName="Trash_bale"]</xpath>
 			<success>Always</success>
 			<value>
 				<recipeUsers></recipeUsers>
@@ -2323,11 +2323,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/RecipeDef[defName="Trash_bale"]/recipeUsers</xpath>
+		<xpath>Defs/RecipeDef[defName="Trash_bale"]/recipeUsers</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName = "Make_trashbale" or defName = "Unmake_trashbale"]/recipeUsers</xpath>
+			<xpath>Defs/RecipeDef[defName = "Make_trashbale" or defName = "Unmake_trashbale"]/recipeUsers</xpath>
 			<value>
 				<recipeUsers>
 					<li>CraftingSpot</li>
@@ -2341,10 +2341,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/workAmount</xpath>
+	<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/workAmount</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/workAmount</xpath>
+			<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/workAmount</xpath>
 			<value>
 				<workAmount>19</workAmount>
 			</value>
@@ -2354,10 +2354,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/description</xpath>
+	<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/description</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/description</xpath>
+			<xpath>Defs/RecipeDef[defName="ContainToxicWaste"]/description</xpath>
 			<value>
 				<description>Easily contain toxic wastepacks in a sealed canister, preventing leaking. Waste Canisters cannot and will not decay, rot, or pollute unless they are directly struck or damaged. The process is extremely quick, but very inefficient, producing multiple containers for one Waste Pack.</description>
 			</value>
@@ -2367,10 +2367,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="WasteCanister"]/description</xpath>
+	<xpath>Defs/ThingDef[defName="WasteCanister"]/description</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="WasteCanister"]/description</xpath>
+			<xpath>Defs/ThingDef[defName="WasteCanister"]/description</xpath>
 			<value>
 				<description>The pollution and posion of a Waste Pack, sealed in a canister that will never decay, leak, or pollute unless the integrity of the canister is compromised. The main advantage of containing waste this way is that it can be easily and safely stored almost anywhere, without the fear of having to keep it frozen or protected. Do not allow it to catch fire or be damaged.</description>
 			</value>
@@ -2380,11 +2380,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="WasteContainment"]/baseCost</xpath>
+	<xpath>Defs/ResearchProjectDef[defName="WasteContainment"]/baseCost</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="WasteContainment"]/baseCost</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="WasteContainment"]/baseCost</xpath>
 			<value>
 				<baseCost>100</baseCost>
 			</value>

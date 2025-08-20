@@ -3,10 +3,10 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
 		<!-- If it does, add this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName = "HarralanderLeaves" or defName = "LantadymeLeaves" or defName = "RannarLeaves" or defName = "TorstolLeaves" or defName = "ST_MixedHerbs"]/thingCategories</xpath>
+			<xpath>Defs/ThingDef[defName = "HarralanderLeaves" or defName = "LantadymeLeaves" or defName = "RannarLeaves" or defName = "TorstolLeaves" or defName = "ST_MixedHerbs"]/thingCategories</xpath>
 			<success>Always</success>
 			<value>
 				<thingCategories Inherit="False">
@@ -21,10 +21,10 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="HarralanderLeaves"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="HarralanderLeaves"]/comps</xpath>
 			<success>Always</success>
 			<value>
 				<li Class="RimSeasoning.CompProperties_Seasoning" MayRequire="tikubonn.RimSeasoning">
@@ -38,10 +38,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="LantadymeLeaves"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="LantadymeLeaves"]/comps</xpath>
 			<success>Always</success>
 			<value>
 				<li Class="RimSeasoning.CompProperties_Seasoning" MayRequire="tikubonn.RimSeasoning">
@@ -55,10 +55,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="RannarLeaves"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="RannarLeaves"]/comps</xpath>
 			<success>Always</success>
 			<value>
 				<li Class="RimSeasoning.CompProperties_Seasoning" MayRequire="tikubonn.RimSeasoning">
@@ -72,10 +72,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="TorstolLeaves"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="TorstolLeaves"]/comps</xpath>
 			<success>Always</success>
 			<value>
 				<li Class="RimSeasoning.CompProperties_Seasoning" MayRequire="tikubonn.RimSeasoning">
@@ -89,10 +89,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="ST_MixedHerbs"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="ST_MixedHerbs"]/comps</xpath>
 			<success>Always</success>
 			<value>
 				<li Class="RimSeasoning.CompProperties_Seasoning" MayRequire="tikubonn.RimSeasoning">
@@ -107,10 +107,10 @@
 	<!-- Keeps Pawns from seeking this out when it's a seasoning -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
 		<!-- If it does, add this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName = "HarralanderLeaves" or defName = "LantadymeLeaves" or defName = "RannarLeaves" or defName = "TorstolLeaves" or defName = "ST_MixedHerbs"]/ingestible/preferability</xpath>
+			<xpath>Defs/ThingDef[defName = "HarralanderLeaves" or defName = "LantadymeLeaves" or defName = "RannarLeaves" or defName = "TorstolLeaves" or defName = "ST_MixedHerbs"]/ingestible/preferability</xpath>
 			<success>Always</success>
 			<value>
 				<preferability>DesperateOnlyForHumanlikes</preferability>
@@ -122,10 +122,10 @@
 	<!-- Keeps Pawns from seeking this out when it's a seasoning -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName = "HarralanderLeaves" or defName = "LantadymeLeaves" or defName = "RannarLeaves" or defName = "TorstolLeaves" or defName = "ST_MixedHerbs"]/ingestible</xpath>
+			<xpath>Defs/ThingDef[defName = "HarralanderLeaves" or defName = "LantadymeLeaves" or defName = "RannarLeaves" or defName = "TorstolLeaves" or defName = "ST_MixedHerbs"]/ingestible</xpath>
 			<success>Always</success>
 			<value>
 				<optimalityOffsetHumanlikes>-15</optimalityOffsetHumanlikes>
@@ -138,10 +138,10 @@
 	<!-- Keeps Pawns from seeking this out when it's a seasoning -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="RimSeasoning_Seasoning"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[@Name="CookMealBase"]/defaultIngredientFilter/disallowedThingDefs</xpath>
+			<xpath>Defs/RecipeDef[@Name="CookMealBase"]/defaultIngredientFilter/disallowedThingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>HarralanderLeaves</li>

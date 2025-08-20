@@ -3,10 +3,10 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VAEAF_CarFamily"]</xpath>
+		<xpath>Defs/ThingDef[defName="VAEAF_CarFamily"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName = "MMTank_Buggy" or defName = "MMTank_Mosquito" or defName = "MMTank_NOBASU" or defName = "MMTank_RWolf" or defName = "MMTank_SUNAMAMIREN"]/race/specificMeatDef</xpath>
+			<xpath>Defs/ThingDef[defName = "MMTank_Buggy" or defName = "MMTank_Mosquito" or defName = "MMTank_NOBASU" or defName = "MMTank_RWolf" or defName = "MMTank_SUNAMAMIREN"]/race/specificMeatDef</xpath>
 			<success>Always</success>
 			<value>
 				<useMeatFrom>VAEAF_CarFamily</useMeatFrom>
@@ -16,10 +16,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VAEAF_CarFamily"]</xpath>
+		<xpath>Defs/ThingDef[defName="VAEAF_CarFamily"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName = "MMTank_Buggy" or defName = "MMTank_Mosquito" or defName = "MMTank_NOBASU" or defName = "MMTank_RWolf" or defName = "MMTank_SUNAMAMIREN"]/race/leatherDef</xpath>
+			<xpath>Defs/ThingDef[defName = "MMTank_Buggy" or defName = "MMTank_Mosquito" or defName = "MMTank_NOBASU" or defName = "MMTank_RWolf" or defName = "MMTank_SUNAMAMIREN"]/race/leatherDef</xpath>
 			<success>Always</success>
 			<value>
 				<useLeatherFrom>VAEAF_CarFamily</useLeatherFrom>
@@ -29,10 +29,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VAEAF_CarFamily"]</xpath>
+		<xpath>Defs/ThingDef[defName="VAEAF_CarFamily"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName = "MMTank_Buggy" or defName = "MMTank_Mosquito" or defName = "MMTank_NOBASU" or defName = "MMTank_RWolf" or defName = "MMTank_SUNAMAMIREN"]/race/body</xpath>
+			<xpath>Defs/ThingDef[defName = "MMTank_Buggy" or defName = "MMTank_Mosquito" or defName = "MMTank_NOBASU" or defName = "MMTank_RWolf" or defName = "MMTank_SUNAMAMIREN"]/race/body</xpath>
 			<success>Always</success>
 			<value>
 				<body>VAEAF_CarBody</body>
@@ -42,11 +42,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/BodyDef[defName="VAEAF_CarBody"]</xpath>
+		<xpath>Defs/BodyDef[defName="VAEAF_CarBody"]</xpath>
 		<!-- If it does, insert this in the same qualifier as the target. -->
 		<match Class="PatchOperationInsert">
 			<success>Always</success>
-			<xpath>/Defs/BodyDef/corePart/parts/li/groups/li[text()="VAEAF_FrontGrilleGroup"]</xpath>
+			<xpath>Defs/BodyDef/corePart/parts/li/groups/li[text()="VAEAF_FrontGrilleGroup"]</xpath>
 			<value>
 				<li>HeadAttackTool</li>
 			</value>
@@ -57,9 +57,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/race</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]</xpath>
 			<success>Always</success>
 			<value>
 				<race></race>
@@ -69,9 +69,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -81,9 +81,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/comps</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/comps</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]</xpath>
 			<success>Always</success>
 			<value>
 				<comps></comps>
@@ -94,10 +94,10 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 		Does this exist?
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]</xpath>
 		If so, alter the inheritance of this.
 		<match Class="PatchOperationAttributeSet">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]</xpath>
 			<attribute>ParentName</attribute>
 			<value>TSP_VFEAAF_CarMaster</value>
 		</match>
@@ -107,10 +107,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 		<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/tradeTags</xpath>
 		<!-- If so, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]/tradeTags</xpath>
 			<value>
 				<tradeTags Inherit="False">
 					<li>AnimalFighter</li>
@@ -123,10 +123,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 		<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/body</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/race/body</xpath>
 		<!-- If so, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/body</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]/race/body</xpath>
 			<value>
 				<body>VAEAF_CarBody</body>
 			</value>
@@ -136,9 +136,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/useMeatFrom</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/race/useMeatFrom</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<useMeatFrom>VAEAF_CarFamily</useMeatFrom>
@@ -148,10 +148,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 		<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/useMeatFrom</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/race/useMeatFrom</xpath>
 		<!-- If so, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/useMeatFrom</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]/race/useMeatFrom</xpath>
 			<value>
 				<useMeatFrom>VAEAF_CarFamily</useMeatFrom>
 			</value>
@@ -161,9 +161,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/leatherDef</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/race/leatherDef</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<leatherDef>VAEAP_Leather_Car</leatherDef>
@@ -173,10 +173,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 		<!-- Does this exist>? -->
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/leatherDef</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/race/leatherDef</xpath>
 		<!-- If so, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/leatherDef</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]/race/leatherDef</xpath>
 			<value>
 				<useLeatherFrom>VAEAF_CarFamily</useLeatherFrom>
 			</value>
@@ -186,9 +186,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/statBases</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/statBases</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]</xpath>
 			<success>Always</success>
 			<value>
 				<statBases></statBases>
@@ -198,17 +198,17 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/statBases/MeatAmount</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/statBases/MeatAmount</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]/statBases/MeatAmount</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]/statBases/MeatAmount</xpath>
 			<value>
 				<MeatAmount>200</MeatAmount>
 			</value>
 		</match>
 		<!-- If it DOES NOT, add this. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]/statBases</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]/statBases</xpath>
 			<success>Always</success>
 			<value>
 				<MeatAmount>200</MeatAmount>
@@ -219,9 +219,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/fleshType</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/race/fleshType</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<fleshType Inherit="False">VAEAF_CarFlesh</fleshType>
@@ -231,10 +231,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 		<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/fleshType</xpath>
+		<xpath>Defs/ThingDef[defName="QiChe_First"]/race/fleshType</xpath>
 		<!-- If so, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="QiChe_First"]/race/fleshType</xpath>
+			<xpath>Defs/ThingDef[defName="QiChe_First"]/race/fleshType</xpath>
 			<value>
 				<fleshType Inherit="False">VAEAF_CarFlesh</fleshType>
 			</value>

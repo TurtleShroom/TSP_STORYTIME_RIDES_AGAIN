@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="Survivalist_Group"]/factionNameMaker</xpath>
+			<xpath>Defs/FactionDef[defName="Survivalist_Group"]/factionNameMaker</xpath>
 			<value>
 				<factionNameMaker>K4G_NamerFactionVagrants</factionNameMaker>
 			</value>
@@ -17,11 +17,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/FactionDef[defName="Survivalist_Group"]/settlementNameMaker</xpath>
+			<xpath>Defs/FactionDef[defName="Survivalist_Group"]/settlementNameMaker</xpath>
 			<value>
 				<settlementNameMaker>K4G_NamerSettlementVagrants</settlementNameMaker>
 			</value>
@@ -31,11 +31,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defaultFactionType="K4G_Vagrants"]/defaultFactionType</xpath>
+			<xpath>Defs/PawnKindDef[defaultFactionType="K4G_Vagrants"]/defaultFactionType</xpath>
 			<value>
 				<defaultFactionType>Survivalist_Group</defaultFactionType>
 			</value>
@@ -45,11 +45,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]/defaultFactionType</xpath>
+		<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]/defaultFactionType</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]/defaultFactionType</xpath>
+			<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]/defaultFactionType</xpath>
 			<value>
 				<defaultFactionType>Survivalist_Group</defaultFactionType>
 			</value>
@@ -59,11 +59,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_Trader"]/defaultFactionType</xpath>
+		<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_Trader"]/defaultFactionType</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_Trader"]/defaultFactionType</xpath>
+			<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_Trader"]/defaultFactionType</xpath>
 			<value>
 				<defaultFactionType>Survivalist_Group</defaultFactionType>
 			</value>
@@ -73,22 +73,22 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_StarvingVagrant"]/defaultFactionType</xpath>
+		<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_StarvingVagrant"]/defaultFactionType</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_StarvingVagrant"]/defaultFactionType</xpath>
+			<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_StarvingVagrant"]/defaultFactionType</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]/defaultFactionType</xpath>
+		<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]/defaultFactionType</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]/defaultFactionType</xpath>
+			<xpath>Defs/PawnKindDef[defName="K4G_Vagrants_Leader"]/defaultFactionType</xpath>
 			<value>
 				<defaultFactionType>Survivalist_Group</defaultFactionType>
 			</value>
@@ -98,21 +98,21 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/PawnKindDef[defaultFactionType="K4G_Vagrants"]/defaultFactionType</xpath>
+		<xpath>Defs/PawnKindDef[defaultFactionType="K4G_Vagrants"]/defaultFactionType</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defaultFactionType="K4G_Vagrants"]/defaultFactionType</xpath>
+			<xpath>Defs/PawnKindDef[defaultFactionType="K4G_Vagrants"]/defaultFactionType</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/FactionDef[defName="K4G_Vagrants"]</xpath>
+		<xpath>Defs/FactionDef[defName="K4G_Vagrants"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/FactionDef[defName="K4G_Vagrants"]</xpath>
+			<xpath>Defs/FactionDef[defName="K4G_Vagrants"]</xpath>
 			<success>Always</success>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->

@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WeatherDef[defName="Sandstorm"]</xpath>
+		<xpath>Defs/WeatherDef[defName="Sandstorm"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="BORPA_JohnBorpa"]/comps/li/weatherDef</xpath>
+			<xpath>Defs/ThingDef[defName="BORPA_JohnBorpa"]/comps/li/weatherDef</xpath>
 			<value>
 				<weatherDef>Sandstorm</weatherDef>
 			</value>
@@ -17,11 +17,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WeatherDef[defName="RG_SandStormHard"]</xpath>
+		<xpath>Defs/WeatherDef[defName="RG_SandStormHard"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="BORPA_JohnBorpa"]/comps/li/weatherDef</xpath>
+			<xpath>Defs/ThingDef[defName="BORPA_JohnBorpa"]/comps/li/weatherDef</xpath>
 			<value>
 				<weatherDef>RG_SandStormHard</weatherDef>
 			</value>

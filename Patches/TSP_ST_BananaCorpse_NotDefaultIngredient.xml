@@ -4,10 +4,10 @@
 	<!-- Keeps Pawns from seeking this out when it's a seasoning -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="ST_BananaScytheCorpse"]</xpath>
+		<xpath>Defs/ThingDef[defName="ST_BananaScytheCorpse"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
+			<xpath>Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>ST_BananaScytheCorpse</li>
@@ -19,10 +19,10 @@
 	<!-- Keeps Pawns from seeking this out. -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Sloodge"]</xpath>
+		<xpath>Defs/ThingDef[defName="Sloodge"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
+			<xpath>Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li>WW_Sloodge</li>
@@ -34,10 +34,10 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	Does this exist?
-		<xpath>/Defs/ThingDef[defName="ST_BananaScytheCorpse"]</xpath>
+		<xpath>Defs/ThingDef[defName="ST_BananaScytheCorpse"]</xpath>
 		If it does, add this.
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Grave"]/defaultStorageSettings/filter</xpath>
+			<xpath>Defs/ThingDef[defName="Grave"]/defaultStorageSettings/filter</xpath>
 			<success>Always</success>
 			<value>
 				<disallowedThingDefs>

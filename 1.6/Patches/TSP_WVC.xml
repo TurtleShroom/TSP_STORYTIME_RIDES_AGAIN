@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="WVC_Ultra_GarbageRecyclerBench"]</xpath>
+		<xpath>Defs/ThingDef[defName="WVC_Ultra_GarbageRecyclerBench"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="WVC_Ultra_GarbageRecyclerBench"]/modExtensions/li/inheritRecipesFrom</xpath>
+			<xpath>Defs/ThingDef[defName="WVC_Ultra_GarbageRecyclerBench"]/modExtensions/li/inheritRecipesFrom</xpath>
 			<value>
 				<inheritRecipesFrom>
 					<li>FabricationBench</li>
@@ -28,11 +28,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ResearchProjectDef[defName="WVC_Ultra_GauranlenTree"]/prerequisites</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="WVC_Ultra_GauranlenTree"]/prerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="WVC_Ultra_GauranlenTree"]/prerequisites</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="WVC_Ultra_GauranlenTree"]/prerequisites</xpath>
 			<value>
 				<prerequisites Inherit="False">
 					<!-- <li>WVC_Ultra_Mechtech</li> -->
@@ -47,11 +47,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ResearchProjectDef[defName="WVC_Ultra_GauranlenTree"]/hiddenPrerequisites</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="WVC_Ultra_GauranlenTree"]/hiddenPrerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ResearchProjectDef[defName="WVC_Ultra_GauranlenTree"]/hiddenPrerequisites</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="WVC_Ultra_GauranlenTree"]/hiddenPrerequisites</xpath>
 			<value>
 				<hiddenPrerequisites Inherit="False"></hiddenPrerequisites>
 			</value>

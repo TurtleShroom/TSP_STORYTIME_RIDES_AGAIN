@@ -3,7 +3,7 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="RS_LogisticsBox"]</xpath>
+		<xpath>Defs/ThingDef[defName="RS_LogisticsBox"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs</xpath>
@@ -93,10 +93,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="RS_LogisticsBox"]</xpath>
+		<xpath>Defs/ThingDef[defName="RS_LogisticsBox"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/JoyGiverDef[defName="UseVendingMachine"]/thingDefs</xpath>
+			<xpath>Defs/JoyGiverDef[defName="UseVendingMachine"]/thingDefs</xpath>
 			<success>Always</success>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">TSP_RS_ST_VendingMachineTypeGnome_Drink</li>

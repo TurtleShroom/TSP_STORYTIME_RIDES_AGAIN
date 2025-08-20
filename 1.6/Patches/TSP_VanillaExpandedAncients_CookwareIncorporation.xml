@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="DMS_Furnace"]</xpath>
+		<xpath>Defs/ThingDef[defName="DMS_Furnace"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationInsert">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/recipeUsers/li[text()="DMS_Furnace"]</xpath>
+			<xpath>Defs/ThingDef/recipeUsers/li[text()="DMS_Furnace"]</xpath>
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">BlastFurnaceHeater</li>
 			</value>

@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThoughtDef[defName="AteInsectMeatDirect"]/nullifyingTraits</xpath>
+		<xpath>Defs/ThoughtDef[defName="AteInsectMeatDirect"]/nullifyingTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThoughtDef[defName="AteInsectMeatDirect"]</xpath>
+			<xpath>Defs/ThoughtDef[defName="AteInsectMeatDirect"]</xpath>
 			<success>Always</success>
 			<value>
 				<nullifyingTraits></nullifyingTraits>
@@ -18,11 +18,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThoughtDef[defName="AteInsectMeatDirect"]/nullifyingTraits</xpath>
+	<xpath>Defs/ThoughtDef[defName="AteInsectMeatDirect"]/nullifyingTraits</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="AteInsectMeatDirect"]/nullifyingTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="AteInsectMeatDirect"]/nullifyingTraits</xpath>
 			<value>
 				<li>Buglover</li>
 				<li MayRequire="higgs.cozarkian.entomophagy">Entomophagous</li>
@@ -34,9 +34,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]/nullifyingTraits</xpath>
+		<xpath>Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]/nullifyingTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]</xpath>
+			<xpath>Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]</xpath>
 			<success>Always</success>
 			<value>
 				<nullifyingTraits></nullifyingTraits>
@@ -46,11 +46,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]/nullifyingTraits</xpath>
+	<xpath>Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]/nullifyingTraits</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]/nullifyingTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]/nullifyingTraits</xpath>
 			<value>
 				<li>Buglover</li>
 				<li MayRequire="higgs.cozarkian.entomophagy">Entomophagous</li>
@@ -62,9 +62,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/MemeDef[defName="VME_Structure_Serkist"]/disagreeableTraits</xpath>
+		<xpath>Defs/MemeDef[defName="VME_Structure_Serkist"]/disagreeableTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/MemeDef[defName="VME_Structure_Serkist"]</xpath>
+			<xpath>Defs/MemeDef[defName="VME_Structure_Serkist"]</xpath>
 			<success>Always</success>
 			<value>
 				<disagreeableTraits></disagreeableTraits>
@@ -74,9 +74,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/disagreeableTraits</xpath>
+		<xpath>Defs/MemeDef[defName="VME_InsectoidSupremacy"]/disagreeableTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]</xpath>
+			<xpath>Defs/MemeDef[defName="VME_InsectoidSupremacy"]</xpath>
 			<success>Always</success>
 			<value>
 				<disagreeableTraits></disagreeableTraits>
@@ -86,9 +86,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/MemeDef[defName="InsectoidPrimacy"]/disagreeableTraits</xpath>
+		<xpath>Defs/MemeDef[defName="InsectoidPrimacy"]/disagreeableTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/MemeDef[defName="InsectoidPrimacy"]</xpath>
+			<xpath>Defs/MemeDef[defName="InsectoidPrimacy"]</xpath>
 			<success>Always</success>
 			<value>
 				<disagreeableTraits></disagreeableTraits>
@@ -98,11 +98,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MemeDef[defName="VME_Structure_Serketist"]/disagreeableTraits</xpath>
+	<xpath>Defs/MemeDef[defName="VME_Structure_Serketist"]/disagreeableTraits</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MemeDef[defName="VME_Structure_Serketist"]/disagreeableTraits</xpath>
+			<xpath>Defs/MemeDef[defName="VME_Structure_Serketist"]/disagreeableTraits</xpath>
 			<value>
 				<li>Buglover</li>
 				<li MayRequire="higgs.cozarkian.entomophagy">Entomophagous</li>
@@ -113,11 +113,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/disagreeableTraits</xpath>
+	<xpath>Defs/MemeDef[defName="VME_InsectoidSupremacy"]/disagreeableTraits</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/disagreeableTraits</xpath>
+			<xpath>Defs/MemeDef[defName="VME_InsectoidSupremacy"]/disagreeableTraits</xpath>
 			<value>
 				<li>Buglover</li>
 				<li MayRequire="higgs.cozarkian.entomophagy">Entomophagous</li>
@@ -128,11 +128,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MemeDef[defName="InsectoidPrimacy"]/disagreeableTraits</xpath>
+	<xpath>Defs/MemeDef[defName="InsectoidPrimacy"]/disagreeableTraits</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MemeDef[defName="InsectoidPrimacy"]/disagreeableTraits</xpath>
+			<xpath>Defs/MemeDef[defName="InsectoidPrimacy"]/disagreeableTraits</xpath>
 			<value>
 				<li>Buglover</li>
 				<li MayRequire="higgs.cozarkian.entomophagy">Entomophagous</li>
@@ -143,9 +143,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThoughtDef[defName="VME_EntrancingInsectoidHymn"]/nullifyingTraits</xpath>
+		<xpath>Defs/ThoughtDef[defName="VME_EntrancingInsectoidHymn"]/nullifyingTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThoughtDef[defName="VME_EntrancingInsectoidHymn"]</xpath>
+			<xpath>Defs/ThoughtDef[defName="VME_EntrancingInsectoidHymn"]</xpath>
 			<success>Always</success>
 			<value>
 				<nullifyingTraits></nullifyingTraits>
@@ -155,9 +155,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThoughtDef[defName="VME_RousingInsectoidHymn"]/nullifyingTraits</xpath>
+		<xpath>Defs/ThoughtDef[defName="VME_RousingInsectoidHymn"]/nullifyingTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThoughtDef[defName="VME_RousingInsectoidHymn"]</xpath>
+			<xpath>Defs/ThoughtDef[defName="VME_RousingInsectoidHymn"]</xpath>
 			<success>Always</success>
 			<value>
 				<nullifyingTraits></nullifyingTraits>
@@ -167,9 +167,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThoughtDef[defName="VME_InsectMeatEating_Sacrilegious"]/nullifyingTraits</xpath>
+		<xpath>Defs/ThoughtDef[defName="VME_InsectMeatEating_Sacrilegious"]/nullifyingTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThoughtDef[defName="VME_InsectMeatEating_Sacrilegious"]</xpath>
+			<xpath>Defs/ThoughtDef[defName="VME_InsectMeatEating_Sacrilegious"]</xpath>
 			<success>Always</success>
 			<value>
 				<nullifyingTraits></nullifyingTraits>
@@ -179,9 +179,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThoughtDef[defName="VME_AteInsectMeatAsIngredient_Sacrilegious"]/nullifyingTraits</xpath>
+		<xpath>Defs/ThoughtDef[defName="VME_AteInsectMeatAsIngredient_Sacrilegious"]/nullifyingTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThoughtDef[defName="VME_AteInsectMeatAsIngredient_Sacrilegious"]</xpath>
+			<xpath>Defs/ThoughtDef[defName="VME_AteInsectMeatAsIngredient_Sacrilegious"]</xpath>
 			<success>Always</success>
 			<value>
 				<nullifyingTraits></nullifyingTraits>
@@ -191,9 +191,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThoughtDef[defName="VME_Insectoids_Exalted"]/nullifyingTraits</xpath>
+		<xpath>Defs/ThoughtDef[defName="VME_Insectoids_Exalted"]/nullifyingTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThoughtDef[defName="VME_Insectoids_Exalted"]</xpath>
+			<xpath>Defs/ThoughtDef[defName="VME_Insectoids_Exalted"]</xpath>
 			<success>Always</success>
 			<value>
 				<nullifyingTraits></nullifyingTraits>
@@ -203,11 +203,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThoughtDef[defName="VME_EntrancingInsectoidHymn"]/nullifyingTraits</xpath>
+	<xpath>Defs/ThoughtDef[defName="VME_EntrancingInsectoidHymn"]/nullifyingTraits</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="VME_EntrancingInsectoidHymn"]/nullifyingTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="VME_EntrancingInsectoidHymn"]/nullifyingTraits</xpath>
 			<value>
 				<li>Buglover</li>
 				<li MayRequire="higgs.cozarkian.entomophagy">Entomophagous</li>
@@ -218,11 +218,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThoughtDef[defName="VME_RousingInsectoidHymn"]/nullifyingTraits</xpath>
+	<xpath>Defs/ThoughtDef[defName="VME_RousingInsectoidHymn"]/nullifyingTraits</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="VME_RousingInsectoidHymn"]/nullifyingTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="VME_RousingInsectoidHymn"]/nullifyingTraits</xpath>
 			<value>
 				<li>Buglover</li>
 				<li MayRequire="higgs.cozarkian.entomophagy">Entomophagous</li>
@@ -233,11 +233,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThoughtDef[defName="VME_InsectMeatEating_Sacrilegious"]/nullifyingTraits</xpath>
+	<xpath>Defs/ThoughtDef[defName="VME_InsectMeatEating_Sacrilegious"]/nullifyingTraits</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="VME_InsectMeatEating_Sacrilegious"]/nullifyingTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="VME_InsectMeatEating_Sacrilegious"]/nullifyingTraits</xpath>
 			<value>
 				<li>Buglover</li>
 				<li MayRequire="higgs.cozarkian.entomophagy">Entomophagous</li>
@@ -248,11 +248,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThoughtDef[defName="VME_AteInsectMeatAsIngredient_Sacrilegious"]/nullifyingTraits</xpath>
+	<xpath>Defs/ThoughtDef[defName="VME_AteInsectMeatAsIngredient_Sacrilegious"]/nullifyingTraits</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="VME_AteInsectMeatAsIngredient_Sacrilegious"]/nullifyingTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="VME_AteInsectMeatAsIngredient_Sacrilegious"]/nullifyingTraits</xpath>
 			<value>
 				<li>Buglover</li>
 				<li MayRequire="higgs.cozarkian.entomophagy">Entomophagous</li>
@@ -263,11 +263,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThoughtDef[defName="VME_Insectoids_Exalted"]/nullifyingTraits</xpath>
+	<xpath>Defs/ThoughtDef[defName="VME_Insectoids_Exalted"]/nullifyingTraits</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="VME_Insectoids_Exalted"]/nullifyingTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="VME_Insectoids_Exalted"]/nullifyingTraits</xpath>
 			<value>
 				<li>Buglover</li>
 				<li MayRequire="higgs.cozarkian.entomophagy">Entomophagous</li>
@@ -280,9 +280,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
+		<xpath>Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]</xpath>
+			<xpath>Defs/PreceptDef[defName="InsectMeatEating_Loved"]</xpath>
 			<success>Always</success>
 			<value>
 				<associatedMemes></associatedMemes>
@@ -292,11 +292,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
+	<xpath>Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
+			<xpath>Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
 			<value>
 				<li>STFrogPersonOrigin</li>
 			</value>
@@ -305,9 +305,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
+		<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
+			<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
 			<success>Always</success>
 			<value>
 				<requiredTraits></requiredTraits>
@@ -318,11 +318,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
+	<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
 			<value>
 				<requiredTraits>
 					<li>Buglover</li>
@@ -337,22 +337,22 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/MentalStateDef[defName="BugForaging"]</xpath>
+	<xpath>Defs/MentalStateDef[defName="BugForaging"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MentalStateDef[defName="BugForaging"]</xpath>
+	<xpath>Defs/MentalStateDef[defName="BugForaging"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/MentalStateDef[defName="BugForaging"]/category</xpath>
+			<xpath>Defs/MentalStateDef[defName="BugForaging"]/category</xpath>
 			<value>
 				<category>Misc</category>
 			</value>
@@ -362,7 +362,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MentalBreakDef[defName="BugForaging"]</xpath>
+	<xpath>Defs/MentalBreakDef[defName="BugForaging"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -398,11 +398,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/MentalStateDef[defName="BugForaging"]</xpath>
+	<xpath>Defs/MentalStateDef[defName="BugForaging"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
@@ -410,11 +410,11 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	Does this exist?
-	<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
+	<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
 		If it does, do this replacement.
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/stages</xpath>
+			<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]/stages</xpath>
 			<value>
 				<stages>
 					<li>
@@ -431,11 +431,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
+	<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/durationDays</xpath>
+			<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]/durationDays</xpath>
 			<value>
 				<durationDays>4</durationDays> <!-- Longer than normal Catharsis -->
 			</value>
@@ -445,20 +445,20 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-	<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
+	<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="ForagedForBugs"]/requiredTraits</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/MentalStateDef[defName="BugForaging"]/prisonersCanDo</xpath>
+		<xpath>Defs/MentalStateDef[defName="BugForaging"]/prisonersCanDo</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/MentalStateDef[defName="BugForaging"]</xpath>
+			<xpath>Defs/MentalStateDef[defName="BugForaging"]</xpath>
 			<success>Always</success>
 			<value>
 				<prisonersCanDo>true</prisonersCanDo>
@@ -469,11 +469,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MentalStateDef[defName="BugForaging"]</xpath>
+	<xpath>Defs/MentalStateDef[defName="BugForaging"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/MentalStateDef[defName="BugForaging"]/prisonersCanDo</xpath>
+			<xpath>Defs/MentalStateDef[defName="BugForaging"]/prisonersCanDo</xpath>
 			<value>
 				<prisonersCanDo>true</prisonersCanDo>
 			</value>
@@ -483,11 +483,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MentalStateDef[defName="BugForaging"]</xpath>
+	<xpath>Defs/MentalStateDef[defName="BugForaging"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/MentalStateDef[defName="BugForaging"]/prisonersCanDo</xpath>
+			<xpath>Defs/MentalStateDef[defName="BugForaging"]/prisonersCanDo</xpath>
 			<value>
 				<prisonersCanDo>true</prisonersCanDo>
 			</value>
@@ -497,9 +497,9 @@
 
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThoughtDef[defName="ObservedForaging"]/nullifyingTraits</xpath>
+		<xpath>Defs/ThoughtDef[defName="ObservedForaging"]/nullifyingTraits</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThoughtDef[defName="ObservedForaging"]</xpath>
+			<xpath>Defs/ThoughtDef[defName="ObservedForaging"]</xpath>
 			<success>Always</success>
 			<value>
 				<nullifyingTraits></nullifyingTraits>
@@ -510,11 +510,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThoughtDef[defName="ObservedForaging"]</xpath>
+	<xpath>Defs/ThoughtDef[defName="ObservedForaging"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThoughtDef[defName="ObservedForaging"]/nullifyingTraits</xpath>
+			<xpath>Defs/ThoughtDef[defName="ObservedForaging"]/nullifyingTraits</xpath>
 			<value>
 				<nullifyingTraits>
 					<li>Buglover</li>

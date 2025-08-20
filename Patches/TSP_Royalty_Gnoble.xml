@@ -3,10 +3,10 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/FactionDef[defName="Empire"]</xpath>
+		<xpath>Defs/FactionDef[defName="Empire"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li/options</xpath>
+			<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li/options</xpath>
 			<value>
 				<TSP_ST_RoyaltyGnoble>0.87</TSP_ST_RoyaltyGnoble>
 			</value>
@@ -16,10 +16,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
 			<value>
 				<race Inherit="False">Alien_ST_Gnome</race>
 			</value>
@@ -29,10 +29,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/specificApparelRequirements</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/specificApparelRequirements</xpath>
 			<value>
 				<specificApparelRequirements>
 					<li>
@@ -84,10 +84,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/xenotypeSet</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/xenotypeSet</xpath>
 			<value>
 				<xenotypeSet Inherit="False">
 				</xenotypeSet>
@@ -98,10 +98,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/xenotypeSet/xenotypeChances</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/xenotypeSet/xenotypeChances</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/xenotypeSet/xenotypeChances</xpath>
+			<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/xenotypeSet/xenotypeChances</xpath>
 			<value>
 				<Weezey>0.08</Weezey>
 			</value>

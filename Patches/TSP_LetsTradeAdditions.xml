@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]</xpath>
+		<xpath>Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]/stockGenerators</xpath>
+			<xpath>Defs/TraderKindDef[defName="Caravan_Neolithic_Mining"]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_Animals">
 					<tradeTagsSell>
@@ -26,11 +26,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Mining"]</xpath>
+		<xpath>Defs/TraderKindDef[defName="Caravan_Outlander_Mining"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Mining"]/stockGenerators</xpath>
+			<xpath>Defs/TraderKindDef[defName="Caravan_Outlander_Mining"]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_Animals">
 					<tradeTagsSell>
@@ -49,11 +49,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist/ -->
-		<xpath>/Defs/TraderKindDef[defName="RessourceTrader"]</xpath>
+		<xpath>Defs/TraderKindDef[defName="RessourceTrader"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName="RessourceTrader"]/stockGenerators</xpath>
+			<xpath>Defs/TraderKindDef[defName="RessourceTrader"]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_Animals">
 					<tradeTagsSell>

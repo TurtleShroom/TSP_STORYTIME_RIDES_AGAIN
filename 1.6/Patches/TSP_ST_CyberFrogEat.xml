@@ -7,9 +7,9 @@
 	<!-- Mechanoids that have a Food Need should now be able to eat, e.g. the cybernetic Cyber Frogs that joined the Mechanoids -->
 	<!--
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThinkTreeDef[defName="Mechanoid"]</xpath>
+		<xpath>Defs/ThinkTreeDef[defName="Mechanoid"]</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThinkTreeDef[defName="Mechanoid"]/thinkRoot/subNodes</xpath>
+			<xpath>Defs/ThinkTreeDef[defName="Mechanoid"]/thinkRoot/subNodes</xpath>
 			<success>Always</success>
 			<value>
 				<li Class="ThinkNode_ChancePerHour_Constant">
@@ -57,7 +57,7 @@
 	-->
 	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/BodyPartDef[defName="ArtificialBrain"]/tags</xpath>
+		<xpath>Defs/BodyPartDef[defName="ArtificialBrain"]/tags</xpath>
 		<value>
 			<li>TalkingSource</li>
 		</value>
@@ -65,10 +65,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="Milk"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="Milk"]/canBeDoneByMechs</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="Milk"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="Milk"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -76,7 +76,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="Milk"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="Milk"]</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -86,10 +86,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -97,7 +97,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="Shear"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="Shear"]</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -107,10 +107,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -118,7 +118,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="Shear"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="Shear"]</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -128,10 +128,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="Shear"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -139,7 +139,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="Shear"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="Shear"]</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -149,10 +149,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="HandlingFeedPatientAnimals"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="HandlingFeedPatientAnimals"]/canBeDoneByMechs</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="HandlingFeedPatientAnimals"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="HandlingFeedPatientAnimals"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -160,7 +160,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="HandlingFeedPatientAnimals"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="HandlingFeedPatientAnimals"]</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -170,10 +170,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="Slaughter"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="Slaughter"]/canBeDoneByMechs</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="Slaughter"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="Slaughter"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -181,7 +181,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="Slaughter"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="Slaughter"]</xpath>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
 			</value>
@@ -190,10 +190,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="TakeRoamingAnimalsToPen"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="TakeRoamingAnimalsToPen"]/canBeDoneByMechs</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="TakeRoamingAnimalsToPen"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="TakeRoamingAnimalsToPen"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -201,7 +201,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="TakeRoamingAnimalsToPen"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="TakeRoamingAnimalsToPen"]</xpath>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
 			</value>
@@ -210,10 +210,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="TakeToPen"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="TakeToPen"]/canBeDoneByMechs</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="TakeToPen"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="TakeToPen"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -221,7 +221,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="TakeToPen"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="TakeToPen"]</xpath>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
 			</value>
@@ -230,10 +230,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="VEF_AnimalResource"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="VEF_AnimalResource"]/canBeDoneByMechs</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="VEF_AnimalResource"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="VEF_AnimalResource"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -241,28 +241,7 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="VEF_AnimalResource"]</xpath>
-			<success>Always</success>
-			<value>
-				<canBeDoneByMechs>true</canBeDoneByMechs>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]/canBeDoneByMechs</xpath>
-		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]/canBeDoneByMechs</xpath>
-			<success>Always</success>
-			<value>
-				<canBeDoneByMechs>true</canBeDoneByMechs>
-			</value>
-		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="VEF_AnimalResource"]</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -272,10 +251,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="VEF_DestroyItems"]/canBeDoneByMechs</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="VEF_DestroyItems"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -283,7 +262,28 @@
 		</match>
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="VEF_DestroyItems"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="VEF_DestroyItems"]</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/WorkGiverDef[defName="VEF_DestroyItems"]/canBeDoneByMechs</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/WorkGiverDef[defName="VEF_DestroyItems"]/canBeDoneByMechs</xpath>
+			<success>Always</success>
+			<value>
+				<canBeDoneByMechs>true</canBeDoneByMechs>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/WorkGiverDef[defName="VEF_DestroyItems"]</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -294,10 +294,10 @@
 	<!--
 	<Operation Class="PatchOperationConditional">
 	Does this exist?
-		<xpath>/Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]/canBeDoneByMechs</xpath>
+		<xpath>Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]/canBeDoneByMechs</xpath>
 		If it does, do this replacement.
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]/canBeDoneByMechs</xpath>
+			<xpath>Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]/canBeDoneByMechs</xpath>
 			<success>Always</success>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
@@ -305,7 +305,7 @@
 		</match>
 		If it DOES NOT, add this instead.
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]</xpath>
+			<xpath>Defs/WorkGiverDef[defName="GatherAnimalBodyResources"]</xpath>
 			<value>
 				<canBeDoneByMechs>true</canBeDoneByMechs>
 			</value>
@@ -318,19 +318,19 @@
 	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=2975659336 -->
 	<Operation Class="PatchOperationConditional">
 		<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="InstallationKit"]</xpath>
+		<xpath>Defs/ThingDef[defName="InstallationKit"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOO!! -->
 		<match Class="PatchOperationSequence">
 		  <operations>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/RecipeDef[@Name="InstallModificationBaseAll"]/recipeUsers</xpath>
+				<xpath>Defs/RecipeDef[@Name="InstallModificationBaseAll"]/recipeUsers</xpath>
 				<value>
 					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogHostile</li>
 					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogDocile</li>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/RecipeDef[@Name="RemoveModificationBase"]/recipeUsers</xpath>
+				<xpath>Defs/RecipeDef[@Name="RemoveModificationBase"]/recipeUsers</xpath>
 				<value>
 					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogHostile</li>
 					<li MayRequire="TSP.Isengriff.Storytime">CyberFrogDocile</li>

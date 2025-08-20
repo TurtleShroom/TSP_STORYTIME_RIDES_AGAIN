@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
     <Operation Class="PatchOperationConditional">
-        <xpath>/Defs/ThingDef[@Name="DMS_MechHoundBase"]/modExtensions</xpath>
+        <xpath>Defs/ThingDef[@Name="DMS_MechHoundBase"]/modExtensions</xpath>
         <nomatch Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[@Name="DMS_MechHoundBase"]</xpath>
+            <xpath>Defs/ThingDef[@Name="DMS_MechHoundBase"]</xpath>
 			<success>Always</success>
             <value>
 				<modExtensions></modExtensions>
@@ -17,10 +17,10 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Melee_MetalPipe"]</xpath>
+		<xpath>Defs/ThingDef[defName="Melee_MetalPipe"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Melee_MetalPipe"]/weaponTags</xpath>
+			<xpath>Defs/ThingDef[defName="Melee_MetalPipe"]/weaponTags</xpath>
 			<value>
 				<li>HarrierMelee</li>
 				<li>SurvivalistMelee</li>
@@ -33,10 +33,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Melee_MetalPipeValved"]</xpath>
+		<xpath>Defs/ThingDef[defName="Melee_MetalPipeValved"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Melee_MetalPipeValved"]/weaponTags</xpath>
+			<xpath>Defs/ThingDef[defName="Melee_MetalPipeValved"]/weaponTags</xpath>
 			<value>
 				<li>HarrierMelee</li>
 				<li>SurvivalistMelee</li>
@@ -49,10 +49,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Melee_MetalPipeLong"]</xpath>
+		<xpath>Defs/ThingDef[defName="Melee_MetalPipeLong"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Melee_MetalPipeLong"]/weaponTags</xpath>
+			<xpath>Defs/ThingDef[defName="Melee_MetalPipeLong"]/weaponTags</xpath>
 			<value>
 				<li>TSP_DMS_Ranged</li>
 				<li>HarrierRanged</li>
@@ -67,10 +67,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VWE_Gun_DartGun"]</xpath>
+		<xpath>Defs/ThingDef[defName="VWE_Gun_DartGun"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="VWE_Gun_DartGun"]/weaponTags</xpath>
+			<xpath>Defs/ThingDef[defName="VWE_Gun_DartGun"]/weaponTags</xpath>
 			<value>
 				<li>TSP_DMS_Ranged</li>
 				<li>TSP_DMS_HoundWeapon</li>
@@ -82,11 +82,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	  <xpath>/Defs/ThingDef[defName="TSF_Hand_Mortar"]</xpath>
+	  <xpath>Defs/ThingDef[defName="TSF_Hand_Mortar"]</xpath>
 	  <!-- If it does, add this. -->
 	  <match Class="PatchOperationAdd">
 		<success>Always</success>
-		<xpath>/Defs/ThingDef[defName="TSF_Hand_Mortar"]/weaponTags</xpath>
+		<xpath>Defs/ThingDef[defName="TSF_Hand_Mortar"]/weaponTags</xpath>
 		<value>
 			<li>OrientalHandCannon</li>
 			<li>TSP_DMS_Ranged</li>
@@ -98,9 +98,9 @@
 	
     <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
     <Operation Class="PatchOperationConditional">
-        <xpath>/Defs/ThingDef[defName="AP_BonkStick"]/weaponTags</xpath>
+        <xpath>Defs/ThingDef[defName="AP_BonkStick"]/weaponTags</xpath>
         <nomatch Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="AP_BonkStick"]</xpath>
+            <xpath>Defs/ThingDef[defName="AP_BonkStick"]</xpath>
 			<success>Always</success>
             <value>
 				<weaponTags></weaponTags>
@@ -110,9 +110,9 @@
 
     <!-- Now that the Comps object exists, add the code -->
     <Operation Class="PatchOperationConditional">
-        <xpath>/Defs/ThingDef[defName="AP_BonkStick"]/weaponTags</xpath>
+        <xpath>Defs/ThingDef[defName="AP_BonkStick"]/weaponTags</xpath>
         <match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="AP_BonkStick"]/weaponTags</xpath>
+			<xpath>Defs/ThingDef[defName="AP_BonkStick"]/weaponTags</xpath>
 			<success>Always</success>
 			<value>
 				<li>TSP_DMS_HoundWeapon</li>
@@ -123,11 +123,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef/modExtensions/li/UsableWeaponTags</xpath>
+		<xpath>Defs/ThingDef/modExtensions/li/UsableWeaponTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef/modExtensions/li/UsableWeaponTags</xpath>
+			<xpath>Defs/ThingDef/modExtensions/li/UsableWeaponTags</xpath>
 			<value>
 				<li>TSP_DMS_Ranged</li>
 				<li>GoblinTech</li>
@@ -157,9 +157,9 @@
 	</Operation>
 
     <Operation Class="PatchOperationConditional">
-        <xpath>/Defs/ThingDef[@Name="DMS_MechHoundBase"]/modExtensions</xpath>
+        <xpath>Defs/ThingDef[@Name="DMS_MechHoundBase"]/modExtensions</xpath>
         <match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[@Name="DMS_MechHoundBase"]/modExtensions</xpath>
+			<xpath>Defs/ThingDef[@Name="DMS_MechHoundBase"]/modExtensions</xpath>
 			<success>Always</success>
 			<value>
 				<modExtensions Inherit="False">

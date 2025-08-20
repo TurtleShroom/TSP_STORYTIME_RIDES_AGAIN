@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+	<xpath>Defs/ThingDef[defName="Frug"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Frug"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="Frug"]/race</xpath>
 			<value>
 				<leatherDef>Leather_Frog</leatherDef>
 			</value>
@@ -17,11 +17,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+	<xpath>Defs/ThingDef[defName="Frug"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Frug"]/race</xpath>
+			<xpath>Defs/ThingDef[defName="Frug"]/race</xpath>
 			<value>
 				<useMeatFrom>ST_BullFrog</useMeatFrom>
 			</value>
@@ -31,11 +31,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+	<xpath>Defs/ThingDef[defName="Frug"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Frug"]/race/lifeStageAges</xpath>
+			<xpath>Defs/ThingDef[defName="Frug"]/race/lifeStageAges</xpath>
 			<value>
 				<lifeStageAges>
 					<li>
@@ -70,11 +70,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+	<xpath>Defs/ThingDef[defName="Frug"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Frug"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName="Frug"]/tradeTags</xpath>
 			<value>
 				<li>AnimalFrog</li>
 				<li>AnimalCommon</li>
@@ -85,11 +85,11 @@
 	
 	<Operation Class="PatchOperationConditional" MayRequire="crazedmonkey231.frug">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Frug"]/comps</xpath>
+	<xpath>Defs/ThingDef[defName="Frug"]/comps</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd" MayRequire="crazedmonkey231.frug">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Frug"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="Frug"]/comps</xpath>
 			<value>
 				<li Class="CompProperties_EggLayer">
 					<eggUnfertilizedDef>TSP_FrugEggUnfertilized</eggUnfertilizedDef>
@@ -103,7 +103,7 @@
 		<!-- If it DOES NOT, add this. -->
 		<nomatch Class="PatchOperationAdd" MayRequire="crazedmonkey231.frug">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+			<xpath>Defs/ThingDef[defName="Frug"]</xpath>
 			<value>
 				<comps>
 					<li Class="CompProperties_EggLayer">
@@ -121,7 +121,7 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+	<xpath>Defs/ThingDef[defName="Frug"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -170,11 +170,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+	<xpath>Defs/ThingDef[defName="Frug"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAddModExtension">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+			<xpath>Defs/ThingDef[defName="Frug"]</xpath>
 			<value>
 				<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 					<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
@@ -196,11 +196,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Frug"]</xpath>
+		<xpath>Defs/ThingDef[defName="Frug"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Frug"]/race/body</xpath>
+			<xpath>Defs/ThingDef[defName="Frug"]/race/body</xpath>
 			<value>
 				<body>ST_FrogLike</body>
 			</value>

@@ -3,7 +3,7 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="EMWH_ChemInjector_GoJuice"]</xpath>
+		<xpath>Defs/ThingDef[defName="EMWH_ChemInjector_GoJuice"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs</xpath>
@@ -135,10 +135,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="EMWH_ChemInjector_GoJuice"]</xpath>
+		<xpath>Defs/ThingDef[defName="EMWH_ChemInjector_GoJuice"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Human"]/recipes</xpath>
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Human"]/recipes</xpath>
 			<success>Always</success>
 			<value>
 				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">TSP_ST_Install_EMWH_ChemInjector_EggNog_InstallImplant</li>
@@ -157,10 +157,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="EMWH_ChemInjector_GoJuice"]</xpath>
+		<xpath>Defs/ThingDef[defName="EMWH_ChemInjector_GoJuice"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[@Name="AnimalBase"]/recipes</xpath>
+			<xpath>Defs/ThingDef[@Name="AnimalBase"]/recipes</xpath>
 			<success>Always</success>
 			<value>
 				<li MayRequire="emitbreaker.mim.wh40k.wng.cybernetics">TSP_ST_Install_EMWH_ChemInjector_EggNog_InstallImplant</li>

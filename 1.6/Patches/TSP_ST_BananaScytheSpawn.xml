@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="BananaScythe"]</xpath>
+		<xpath>Defs/ThingDef[defName="BananaScythe"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingSetMakerDef[defName="MapGen_AncientTempleContents"]/root/options</xpath>
+			<xpath>Defs/ThingSetMakerDef[defName="MapGen_AncientTempleContents"]/root/options</xpath>
 			<value>
 				<li>
 					<chance>0.02</chance>

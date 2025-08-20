@@ -5,13 +5,13 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="RawPotatoes"]</xpath>
+	<xpath>Defs/ThingDef[defName="RawPotatoes"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="RawPotatoes"]</xpath>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="RawPotatoes"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="mlie.tropickapprainforestmod">CK_TaroRoot</li>
@@ -24,7 +24,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="RawPotatoes"]</xpath>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="RawPotatoes"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="mlie.tropickapprainforestmod">CK_TaroRoot</li>
@@ -37,7 +37,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="RawPotatoes"]</xpath>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="RawPotatoes"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="mlie.tropickapprainforestmod">CK_TaroRoot</li>
@@ -50,7 +50,7 @@
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/ThingDef/comps/li/fuelFilter/thingDefs/li[text()="RawPotatoes"]</xpath>
+					<xpath>Defs/ThingDef/comps/li/fuelFilter/thingDefs/li[text()="RawPotatoes"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="mlie.tropickapprainforestmod">CK_TaroRoot</li>

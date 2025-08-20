@@ -8,9 +8,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]/exclusionTags</xpath>
+		<xpath>Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]/exclusionTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]</xpath>
+			<xpath>Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]</xpath>
 			<success>Always</success>
 			<value>
 				<exclusionTags></exclusionTags>
@@ -20,9 +20,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
+		<xpath>Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]</xpath>
+			<xpath>Defs/PreceptDef[defName="InsectMeatEating_Loved"]</xpath>
 			<success>Always</success>
 			<value>
 				<associatedMemes></associatedMemes>
@@ -32,9 +32,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_DontCare"]/exclusionTags</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_InsectMeatEating_DontCare"]/exclusionTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_DontCare"]</xpath>
+			<xpath>Defs/PreceptDef[defName="VME_InsectMeatEating_DontCare"]</xpath>
 			<success>Always</success>
 			<value>
 				<exclusionTags></exclusionTags>
@@ -43,9 +43,9 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]/associatedMemes</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_Insectoids_Despised"]/associatedMemes</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]</xpath>
+			<xpath>Defs/PreceptDef[defName="VME_Insectoids_Despised"]</xpath>
 			<success>Always</success>
 			<value>
 				<associatedMemes></associatedMemes>
@@ -54,7 +54,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="IdeoRole_MiningSpecialist"]/requiredMemes</xpath>
+		<xpath>Defs/PreceptDef[defName="IdeoRole_MiningSpecialist"]/requiredMemes</xpath>
 		<success>Always</success>
 		<value>
 			<li>STJeubOrigin</li> <!-- Isengriff says Botox mines exist -->
@@ -62,7 +62,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="IdeoRole_MeleeSpecialist"]/requiredMemes</xpath>
+		<xpath>Defs/PreceptDef[defName="IdeoRole_MeleeSpecialist"]/requiredMemes</xpath>
 		<success>Always</success>
 		<value>
 			<li>STJeubOrigin</li>
@@ -70,7 +70,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="IdeoRole_ShootingSpecialist"]/requiredMemes</xpath>
+		<xpath>Defs/PreceptDef[defName="IdeoRole_ShootingSpecialist"]/requiredMemes</xpath>
 		<success>Always</success>
 		<value>
 			<li>STFrogPersonOrigin</li> <!-- Tongue marksmanship -->
@@ -78,7 +78,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="IdeoRole_AnimalsSpecialist"]/requiredMemes</xpath>
+		<xpath>Defs/PreceptDef[defName="IdeoRole_AnimalsSpecialist"]/requiredMemes</xpath>
 		<success>Always</success>
 		<value>
 			<li>STJeubOrigin</li> <!-- Obvious -->
@@ -87,7 +87,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="IdeoRole_PlantSpecialist"]/requiredMemes</xpath>
+		<xpath>Defs/PreceptDef[defName="IdeoRole_PlantSpecialist"]/requiredMemes</xpath>
 		<success>Always</success>
 		<value>
 			<li>STJeubOrigin</li>
@@ -96,11 +96,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="SZ_IdeoRole_RuShi"]</xpath>
+	<xpath>Defs/PreceptDef[defName="SZ_IdeoRole_RuShi"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="SZ_IdeoRole_RuShi"]/requiredMemes</xpath>
+			<xpath>Defs/PreceptDef[defName="SZ_IdeoRole_RuShi"]/requiredMemes</xpath>
 			<value>
 				<li>STJeubOrigin</li>
 			</value>
@@ -110,11 +110,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
+	<xpath>Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
+			<xpath>Defs/PreceptDef[defName="InsectMeatEating_Loved"]/associatedMemes</xpath>
 			<value>
 				<li>STFrogPersonOrigin</li>
 			</value>
@@ -124,11 +124,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/requiredMemes</xpath>
+	<xpath>Defs/PreceptDef[defName="InsectMeatEating_Loved"]/requiredMemes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]/requiredMemes</xpath>
+			<xpath>Defs/PreceptDef[defName="InsectMeatEating_Loved"]/requiredMemes</xpath>
 			<value>
 				<li>STFrogPersonOrigin</li>
 			</value>
@@ -138,11 +138,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]</xpath>
+	<xpath>Defs/PreceptDef[defName="VME_Insectoids_Despised"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]/associatedMemes</xpath>
+			<xpath>Defs/PreceptDef[defName="VME_Insectoids_Despised"]/associatedMemes</xpath>
 			<value>
 				<li>STFrogPersonOrigin</li>
 			</value>
@@ -152,11 +152,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]/requiredMemes</xpath>
+	<xpath>Defs/PreceptDef[defName="VME_Insectoids_Despised"]/requiredMemes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Despised"]/requiredMemes</xpath>
+			<xpath>Defs/PreceptDef[defName="VME_Insectoids_Despised"]/requiredMemes</xpath>
 			<value>
 				<li>STFrogPersonOrigin</li>
 			</value>
@@ -166,11 +166,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
+	<xpath>Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
+			<xpath>Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
 			<value>
 				<li>STJeubOrigin</li>
 			</value>
@@ -180,11 +180,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="AM_Madness_Exalted"]/associatedMemes</xpath>
+	<xpath>Defs/PreceptDef[defName="AM_Madness_Exalted"]/associatedMemes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="AM_Madness_Exalted"]/associatedMemes</xpath>
+			<xpath>Defs/PreceptDef[defName="AM_Madness_Exalted"]/associatedMemes</xpath>
 			<value>
 				<li>STJeubOrigin</li>
 			</value>
@@ -194,11 +194,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
+	<xpath>Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
+			<xpath>Defs/PreceptDef[defName="AM_Mood_Volatile"]/requiredMemes</xpath>
 			<value>
 				<li>STJeubOrigin</li>
 			</value>
@@ -208,11 +208,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/associatedMemes</xpath>
+	<xpath>Defs/PreceptDef[defName="AM_Mood_Volatile"]/associatedMemes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="AM_Mood_Volatile"]/associatedMemes</xpath>
+			<xpath>Defs/PreceptDef[defName="AM_Mood_Volatile"]/associatedMemes</xpath>
 			<value>
 				<li>STJeubOrigin</li>
 			</value>
@@ -222,11 +222,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MemeDef[defName="Individualist"]</xpath>
+	<xpath>Defs/MemeDef[defName="Individualist"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MemeDef[defName="Individualist"]/exclusionTags</xpath>
+			<xpath>Defs/MemeDef[defName="Individualist"]/exclusionTags</xpath>
 			<value>
 				<li>JeubsHateIndividualism</li>
 			</value>
@@ -236,11 +236,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MemeDef[defName="Guilty"]</xpath>
+	<xpath>Defs/MemeDef[defName="Guilty"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MemeDef[defName="Guilty"]/exclusionTags</xpath>
+			<xpath>Defs/MemeDef[defName="Guilty"]/exclusionTags</xpath>
 			<value>
 				<li>JeubsNeverForgive</li>
 			</value>
@@ -250,11 +250,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MemeDef[defName="Charia"]</xpath>
+	<xpath>Defs/MemeDef[defName="Charia"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MemeDef[defName="Charia"]/exclusionTags</xpath>
+			<xpath>Defs/MemeDef[defName="Charia"]/exclusionTags</xpath>
 			<value>
 				<li>JeubsHateSaudISIL</li>
 			</value>
@@ -264,11 +264,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MemeDef[defName="Structure_OriginIslamic"]</xpath>
+	<xpath>Defs/MemeDef[defName="Structure_OriginIslamic"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MemeDef[defName="Structure_OriginIslamic"]/exclusionTags</xpath>
+			<xpath>Defs/MemeDef[defName="Structure_OriginIslamic"]/exclusionTags</xpath>
 			<value>
 				<li>JeubsHateKebabs</li> <!-- This was Isengriff's idea, for some (based) reason -->
 			</value>
@@ -278,11 +278,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]</xpath>
+	<xpath>Defs/MemeDef[defName="VME_InsectoidSupremacy"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MemeDef[defName="VME_InsectoidSupremacy"]/exclusionTags</xpath>
+			<xpath>Defs/MemeDef[defName="VME_InsectoidSupremacy"]/exclusionTags</xpath>
 			<value>
 				<li>FrogsHateInsectAdoration</li>
 			</value>
@@ -292,11 +292,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/MemeDef[defName="VME_Structure_Serketist"]</xpath>
+	<xpath>Defs/MemeDef[defName="VME_Structure_Serketist"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/MemeDef[defName="VME_Structure_Serketist"]/exclusionTags</xpath>
+			<xpath>Defs/MemeDef[defName="VME_Structure_Serketist"]/exclusionTags</xpath>
 			<value>
 				<li>FrogsHateInsectWorship</li>
 			</value>
@@ -306,11 +306,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_Sacrilegious"]</xpath>
+	<xpath>Defs/PreceptDef[defName="VME_InsectMeatEating_Sacrilegious"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="VME_InsectMeatEating_Sacrilegious"]/exclusionTags</xpath>
+			<xpath>Defs/PreceptDef[defName="VME_InsectMeatEating_Sacrilegious"]/exclusionTags</xpath>
 			<value>
 				<li>FrogsLoveEatingInsects</li>
 			</value>
@@ -320,11 +320,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]</xpath>
+	<xpath>Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]/exclusionTags</xpath>
+			<xpath>Defs/PreceptDef[defName="InsectMeatEating_Despised_Classic"]/exclusionTags</xpath>
 			<value>
 				<li>FrogsLoveEatingInsects</li>
 			</value>
@@ -333,7 +333,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/PreceptDef[defName="SmallSpaces_Acceptable"]/requiredMemes</xpath>
+		<xpath>Defs/PreceptDef[defName="SmallSpaces_Acceptable"]/requiredMemes</xpath>
 		<success>Always</success>
 		<value>
 			<li>STJeubOrigin</li> <!-- Obvious -->

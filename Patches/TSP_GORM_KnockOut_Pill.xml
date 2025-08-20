@@ -3,10 +3,10 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 		<!-- Does this exist -->
-		<xpath>/Defs/ThingDef[defName="Knockout"]</xpath>
+		<xpath>Defs/ThingDef[defName="Knockout"]</xpath>
 		<!-- If so, alter the inheritance of this. -->
 		<match Class="PatchOperationAttributeSet">
-			<xpath>/Defs/ThingDef[defName="Knockout"]</xpath>
+			<xpath>Defs/ThingDef[defName="Knockout"]</xpath>
 			<attribute>ParentName</attribute>
 			<value>DrugPillBase</value>
 		</match>
@@ -15,29 +15,29 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="Knockout"]/costList</xpath>
+		<xpath>Defs/ThingDef[defName="Knockout"]/costList</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Knockout"]/costList</xpath>
+			<xpath>Defs/ThingDef[defName="Knockout"]/costList</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="Knockout"]/recipeMaker</xpath>
+		<xpath>Defs/ThingDef[defName="Knockout"]/recipeMaker</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Knockout"]/recipeMaker</xpath>
+			<xpath>Defs/ThingDef[defName="Knockout"]/recipeMaker</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Knockout"]</xpath>
+		<xpath>Defs/ThingDef[defName="Knockout"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -157,11 +157,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="AM_CorpseRumBasic"]</xpath>
+		<xpath>Defs/ThingDef[defName="AM_CorpseRumBasic"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="TSP_ST_GORM_Make_KnockOut_Pill_Booze"]/ingredients/li/filter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_ST_GORM_Make_KnockOut_Pill_Booze"]/ingredients/li/filter/thingDefs</xpath>
 			<value>
 				<li>AM_CorpseRumBasic</li>
 				<li>AM_CorpseRumFine</li>
@@ -172,11 +172,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="AM_CorpseRumBasic"]</xpath>
+		<xpath>Defs/ThingDef[defName="AM_CorpseRumBasic"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="TSP_ST_GORM_Make_KnockOut_Pill_Booze"]/fixedIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_ST_GORM_Make_KnockOut_Pill_Booze"]/fixedIngredientFilter/thingDefs</xpath>
 			<value>
 				<li>AM_CorpseRumBasic</li>
 				<li>AM_CorpseRumFine</li>
@@ -187,11 +187,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="AM_CorpseRumBasic"]</xpath>
+		<xpath>Defs/ThingDef[defName="AM_CorpseRumBasic"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/RecipeDef[defName="TSP_ST_GORM_Make_KnockOut_Pill_Booze"]/defaultIngredientFilter/thingDefs</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_ST_GORM_Make_KnockOut_Pill_Booze"]/defaultIngredientFilter/thingDefs</xpath>
 			<value>
 				<li>AM_CorpseRumBasic</li>
 			</value>

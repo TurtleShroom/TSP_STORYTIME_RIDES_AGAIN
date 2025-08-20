@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]/weaponTags</xpath>
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]/weaponTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]</xpath>
 			<success>Always</success>
 			<value>
 				<weaponTags></weaponTags>
@@ -17,11 +17,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Villager_Gob"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="Villager_Gob"]/race</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Gob"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Gob"]/race</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -29,7 +29,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Gob"]</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -39,11 +39,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Villager_Child_Gob"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="Villager_Child_Gob"]/race</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Child_Gob"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Child_Gob"]/race</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -51,7 +51,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Child_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Child_Gob"]</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -61,11 +61,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Town_Guard_Gob"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="Town_Guard_Gob"]/race</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Guard_Gob"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Guard_Gob"]/race</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -73,7 +73,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Guard_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Guard_Gob"]</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -83,11 +83,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Town_Councilman_Gob"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="Town_Councilman_Gob"]/race</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Councilman_Gob"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Councilman_Gob"]/race</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -95,7 +95,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Councilman_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Councilman_Gob"]</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -105,11 +105,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Town_Trader_Gob"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="Town_Trader_Gob"]/race</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Trader_Gob"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Trader_Gob"]/race</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -117,7 +117,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Trader_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Trader_Gob"]</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -127,11 +127,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Gunner_Gob"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Gunner_Gob"]/race</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]/race</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -139,7 +139,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -149,11 +149,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Elite_Gob"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Elite_Gob"]/race</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]/race</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -161,7 +161,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -171,11 +171,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Sniper_Gob"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Sniper_Gob"]/race</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]/race</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -183,7 +183,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -193,11 +193,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Heavy_Gob"]/race</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Heavy_Gob"]/race</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]/race</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]/race</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -205,7 +205,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]</xpath>
 			<value>
 				<race>Alien_ST_Goblin</race>
 			</value>
@@ -215,11 +215,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Villager_Gob"]/xenotypeSet</xpath>
+		<xpath>Defs/ThingDef[defName="Villager_Gob"]/xenotypeSet</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Gob"]/xenotypeSet</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Gob"]/xenotypeSet</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -233,41 +233,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Gob"]</xpath>
-			<value>
-				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
-					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
-						<Z_Goblins MayRequire="ludeon.rimworld.biotech,zoid.goblins">5</Z_Goblins>
-						<Z_Grobokz MayRequire="ludeon.rimworld.biotech,zoid.goblins">1</Z_Grobokz>
-						<Z_Guroc MayRequire="ludeon.rimworld.biotech,zoid.goblins">4</Z_Guroc>
-					</xenotypeChances>
-				</xenotypeSet>
-			</value>
-		</nomatch>
-		<!-- If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Villager_Child_Gob"]/xenotypeSet</xpath>
-		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationReplace">
-			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Child_Gob"]/xenotypeSet</xpath>
-			<value>
-				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
-					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
-						<Z_Goblins MayRequire="ludeon.rimworld.biotech,zoid.goblins">5</Z_Goblins>
-						<Z_Grobokz MayRequire="ludeon.rimworld.biotech,zoid.goblins">1</Z_Grobokz>
-						<Z_Guroc MayRequire="ludeon.rimworld.biotech,zoid.goblins">4</Z_Guroc>
-					</xenotypeChances>
-				</xenotypeSet>
-			</value>
-		</match>
-		<!-- If it DOES NOT, add this instead. -->
-		<nomatch Class="PatchOperationAdd">
-			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Child_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Gob"]</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -283,11 +249,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Town_Guard_Gob"]/xenotypeSet</xpath>
+		<xpath>Defs/ThingDef[defName="Villager_Child_Gob"]/xenotypeSet</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Guard_Gob"]/xenotypeSet</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Child_Gob"]/xenotypeSet</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -301,7 +267,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Guard_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Child_Gob"]</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -317,11 +283,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Town_Councilman_Gob"]/xenotypeSet</xpath>
+		<xpath>Defs/ThingDef[defName="Town_Guard_Gob"]/xenotypeSet</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Councilman_Gob"]/xenotypeSet</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Guard_Gob"]/xenotypeSet</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -335,7 +301,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Councilman_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Guard_Gob"]</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -351,11 +317,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Town_Trader_Gob"]/xenotypeSet</xpath>
+		<xpath>Defs/ThingDef[defName="Town_Councilman_Gob"]/xenotypeSet</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Trader_Gob"]/xenotypeSet</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Councilman_Gob"]/xenotypeSet</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -369,7 +335,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Trader_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Councilman_Gob"]</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -385,11 +351,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Gunner_Gob"]/xenotypeSet</xpath>
+		<xpath>Defs/ThingDef[defName="Town_Trader_Gob"]/xenotypeSet</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]/xenotypeSet</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Trader_Gob"]/xenotypeSet</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -403,7 +369,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Trader_Gob"]</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -419,11 +385,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Elite_Gob"]/xenotypeSet</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Gunner_Gob"]/xenotypeSet</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]/xenotypeSet</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]/xenotypeSet</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -437,7 +403,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -453,11 +419,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Sniper_Gob"]/xenotypeSet</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Elite_Gob"]/xenotypeSet</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]/xenotypeSet</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]/xenotypeSet</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -471,7 +437,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -487,11 +453,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Heavy_Gob"]/xenotypeSet</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Sniper_Gob"]/xenotypeSet</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]/xenotypeSet</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]/xenotypeSet</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -505,7 +471,41 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]</xpath>
+			<value>
+				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
+					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
+						<Z_Goblins MayRequire="ludeon.rimworld.biotech,zoid.goblins">5</Z_Goblins>
+						<Z_Grobokz MayRequire="ludeon.rimworld.biotech,zoid.goblins">1</Z_Grobokz>
+						<Z_Guroc MayRequire="ludeon.rimworld.biotech,zoid.goblins">4</Z_Guroc>
+					</xenotypeChances>
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="Mercenary_Heavy_Gob"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]/xenotypeSet</xpath>
+			<value>
+				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
+					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
+						<Z_Goblins MayRequire="ludeon.rimworld.biotech,zoid.goblins">5</Z_Goblins>
+						<Z_Grobokz MayRequire="ludeon.rimworld.biotech,zoid.goblins">1</Z_Grobokz>
+						<Z_Guroc MayRequire="ludeon.rimworld.biotech,zoid.goblins">4</Z_Guroc>
+					</xenotypeChances>
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]</xpath>
 			<value>
 				<xenotypeSet Inherit="False" MayRequire="ludeon.rimworld.biotech">
 					<xenotypeChances Inherit="False" MayRequire="ludeon.rimworld.biotech">
@@ -521,11 +521,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Villager_Gob"]/useFactionXenotypes</xpath>
+		<xpath>Defs/ThingDef[defName="Villager_Gob"]/useFactionXenotypes</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Gob"]/useFactionXenotypes</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Gob"]/useFactionXenotypes</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -533,7 +533,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Gob"]</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -543,11 +543,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Villager_Child_Gob"]/useFactionXenotypes</xpath>
+		<xpath>Defs/ThingDef[defName="Villager_Child_Gob"]/useFactionXenotypes</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Child_Gob"]/useFactionXenotypes</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Child_Gob"]/useFactionXenotypes</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -555,7 +555,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Villager_Child_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Villager_Child_Gob"]</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -565,11 +565,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Town_Guard_Gob"]/useFactionXenotypes</xpath>
+		<xpath>Defs/ThingDef[defName="Town_Guard_Gob"]/useFactionXenotypes</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Guard_Gob"]/useFactionXenotypes</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Guard_Gob"]/useFactionXenotypes</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -577,7 +577,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Guard_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Guard_Gob"]</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -587,11 +587,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Town_Councilman_Gob"]/useFactionXenotypes</xpath>
+		<xpath>Defs/ThingDef[defName="Town_Councilman_Gob"]/useFactionXenotypes</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Councilman_Gob"]/useFactionXenotypes</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Councilman_Gob"]/useFactionXenotypes</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -599,7 +599,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Councilman_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Councilman_Gob"]</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -609,11 +609,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Town_Trader_Gob"]/useFactionXenotypes</xpath>
+		<xpath>Defs/ThingDef[defName="Town_Trader_Gob"]/useFactionXenotypes</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Trader_Gob"]/useFactionXenotypes</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Trader_Gob"]/useFactionXenotypes</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -621,7 +621,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Town_Trader_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Town_Trader_Gob"]</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -631,11 +631,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Gunner_Gob"]/useFactionXenotypes</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Gunner_Gob"]/useFactionXenotypes</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]/useFactionXenotypes</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]/useFactionXenotypes</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -643,7 +643,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gob"]</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -653,11 +653,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Elite_Gob"]/useFactionXenotypes</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Elite_Gob"]/useFactionXenotypes</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]/useFactionXenotypes</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]/useFactionXenotypes</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -665,7 +665,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Elite_Gob"]</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -675,11 +675,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Sniper_Gob"]/useFactionXenotypes</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Sniper_Gob"]/useFactionXenotypes</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]/useFactionXenotypes</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]/useFactionXenotypes</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -687,7 +687,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gob"]</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -697,11 +697,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Mercenary_Heavy_Gob"]/useFactionXenotypes</xpath>
+		<xpath>Defs/ThingDef[defName="Mercenary_Heavy_Gob"]/useFactionXenotypes</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]/useFactionXenotypes</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]/useFactionXenotypes</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -709,7 +709,7 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]</xpath>
 			<value>
 				<useFactionXenotypes>false</useFactionXenotypes>
 			</value>
@@ -719,11 +719,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]/weaponTags</xpath>
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gob"]/weaponTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/PawnKindDef[defName = "Villager_Gob" or defName = "Town_Guard_Gob" or defName = "Town_Councilman_Gob"]/weaponTags</xpath>
+			<xpath>Defs/PawnKindDef[defName = "Villager_Gob" or defName = "Town_Guard_Gob" or defName = "Town_Councilman_Gob"]/weaponTags</xpath>
 			<value>
 				<li>OrientalHandCannon</li>
 				<li>GoblinMelee</li>

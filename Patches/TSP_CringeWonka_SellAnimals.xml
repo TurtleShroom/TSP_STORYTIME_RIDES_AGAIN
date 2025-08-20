@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Chocolope"]</xpath>
+	<xpath>Defs/ThingDef[defName="Chocolope"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName = "Chocolope" or defName = "blueberry" or defName = "GS_Slime"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName = "Chocolope" or defName = "blueberry" or defName = "GS_Slime"]/tradeTags</xpath>
 			<value>
 				<li>ST_Gnome_Selling_Animal</li>
 			</value>
@@ -17,11 +17,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="CCPChocolateBun"]</xpath>
+	<xpath>Defs/ThingDef[defName="CCPChocolateBun"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="CCPChocolateBun"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName="CCPChocolateBun"]/tradeTags</xpath>
 			<value>
 				<li>ST_Gnome_Selling_Animal</li>
 			</value>
@@ -31,11 +31,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="TRAHS_Elephant_Strawberry_Race"]</xpath>
+	<xpath>Defs/ThingDef[defName="TRAHS_Elephant_Strawberry_Race"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName = "TRAHS_Elephant_Strawberry_Race" or defName = "TRAHS_Muffalo_Strawberry_Race"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName = "TRAHS_Elephant_Strawberry_Race" or defName = "TRAHS_Muffalo_Strawberry_Race"]/tradeTags</xpath>
 			<value>
 				<li>ST_Gnome_Selling_Animal</li>
 			</value>
@@ -45,11 +45,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="Jorry_Jonka"]</xpath>
+	<xpath>Defs/ThingDef[defName="Jorry_Jonka"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName = "Jorry_Jonka" or defName = "Joompa_Loompa"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName = "Jorry_Jonka" or defName = "Joompa_Loompa"]/tradeTags</xpath>
 			<value>
 				<li>ST_Gnome_Selling_AnimalRare</li>
 			</value>
@@ -67,7 +67,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/TraderKindDef[defName="TSP_ST_GnomeTrader"]/stockGenerators</xpath>
+			<xpath>Defs/TraderKindDef[defName="TSP_ST_GnomeTrader"]/stockGenerators</xpath>
 			<value>
 				<li Class="StockGenerator_Animals">
 					<maxWildness>0.90</maxWildness>

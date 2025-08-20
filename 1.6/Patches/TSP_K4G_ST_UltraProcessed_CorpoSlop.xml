@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/RecipeDef[defName="K4G_CookFastFood"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="K4G_CookFastFood"]/researchPrerequisites</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="K4G_CookFastFood"]</xpath>
+			<xpath>Defs/RecipeDef[defName="K4G_CookFastFood"]</xpath>
 			<success>Always</success>
 			<value>
 				<researchPrerequisites Inherit="False"></researchPrerequisites>
@@ -17,9 +17,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/RecipeDef[defName="K4G_CookFastFoodBulk"]/researchPrerequisites</xpath>
+		<xpath>Defs/RecipeDef[defName="K4G_CookFastFoodBulk"]/researchPrerequisites</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/RecipeDef[defName="K4G_CookFastFoodBulk"]</xpath>
+			<xpath>Defs/RecipeDef[defName="K4G_CookFastFoodBulk"]</xpath>
 			<success>Always</success>
 			<value>
 				<researchPrerequisites Inherit="False"></researchPrerequisites>
@@ -29,10 +29,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ResearchProjectDef[defName="VCE_DeepFrying"]</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="VCE_DeepFrying"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName = "K4G_CookFastFood" or defName = "K4G_CookFastFoodBulk"]/researchPrerequisites</xpath>
+			<xpath>Defs/RecipeDef[defName = "K4G_CookFastFood" or defName = "K4G_CookFastFoodBulk"]/researchPrerequisites</xpath>
 			<success>Always</success>
 			<value>
 				<researchPrerequisites Inherit="False">
@@ -45,10 +45,10 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_DeepFrier"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_DeepFrier"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName = "K4G_CookFastFood" or defName = "K4G_CookFastFoodBulk"]/recipeUsers</xpath>
+			<xpath>Defs/RecipeDef[defName = "K4G_CookFastFood" or defName = "K4G_CookFastFoodBulk"]/recipeUsers</xpath>
 			<success>Always</success>
 			<value>
 				<recipeUsers Inherit="False">
@@ -65,7 +65,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="K4G_FastFood"]</xpath>
+		<xpath>Defs/ThingDef[defName="K4G_FastFood"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs</xpath>
@@ -195,10 +195,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingCategoryDef[defName="VCE_DeepFrier"]</xpath>
+		<xpath>Defs/ThingCategoryDef[defName="VCE_DeepFrier"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName="TSP_ST_K4G_CorpoSlop"]/recipeUsers</xpath>
+			<xpath>Defs/RecipeDef[defName="TSP_ST_K4G_CorpoSlop"]/recipeUsers</xpath>
 			<success>Always</success>
 			<value>
 				<recipeUsers Inherit="False">

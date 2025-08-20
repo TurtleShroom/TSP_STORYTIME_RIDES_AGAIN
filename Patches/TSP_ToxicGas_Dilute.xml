@@ -17,10 +17,10 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ResearchProjectDef[defName="DrugProduction"]/techLevel</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="DrugProduction"]/techLevel</xpath>
 		<!-- If it does, add this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ResearchProjectDef[defName="DrugProduction"]/techLevel</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="DrugProduction"]/techLevel</xpath>
 			<success>Always</success>
 			<value>
 				<techLevel>Medieval</techLevel>
@@ -31,10 +31,10 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="ToxGas"]/prerequisites</xpath>
 			<success>Always</success>
 			<value>
 				<prerequisites Inherit="False">
@@ -53,10 +53,10 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
+		<xpath>Defs/ResearchProjectDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ResearchProjectDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
+			<xpath>Defs/ResearchProjectDef[defName="ToxGas"]/hiddenPrerequisites</xpath>
 			<success>Always</success>
 			<value>
 				<li>Brewing</li>

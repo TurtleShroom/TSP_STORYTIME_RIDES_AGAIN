@@ -5,9 +5,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Nothing"]/thingClass</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="Nothing"]/thingClass</xpath> <!-- Not actually nothing, Ark spawn -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Nothing"]</xpath>
+			<xpath>Defs/ThingDef[defName="Nothing"]</xpath>
 			<success>Always</success>
 			<value>
 				<thingClass>ThingWithComps</thingClass>
@@ -17,9 +17,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Nothing"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="Nothing"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Nothing"]</xpath>
+			<xpath>Defs/ThingDef[defName="Nothing"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -29,9 +29,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Nothing"]/thingSetMakerTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="Nothing"]/thingSetMakerTags</xpath> <!-- Not actually nothing, Ark spawn -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Nothing"]</xpath>
+			<xpath>Defs/ThingDef[defName="Nothing"]</xpath>
 			<success>Always</success>
 			<value>
 				<thingSetMakerTags></thingSetMakerTags>
@@ -41,9 +41,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="Nothing"]/ingestible</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="Nothing"]/ingestible</xpath> <!-- Not actually nothing, Ark spawn -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Nothing"]</xpath>
+			<xpath>Defs/ThingDef[defName="Nothing"]</xpath>
 			<success>Always</success>
 			<value>
 				<ingestible></ingestible>
@@ -53,11 +53,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Nothing"]/ingestible</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="Nothing"]/ingestible</xpath> <!-- Not actually nothing, Ark spawn -->
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Nothing"]/ingestible</xpath>
+			<xpath>Defs/ThingDef[defName="Nothing"]/ingestible</xpath>
 			<value>
 				<ingestible>
 					<foodType>Corpse</foodType>
@@ -74,11 +74,11 @@
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Nothing"]</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="Nothing"]</xpath> <!-- Not actually nothing, Ark spawn -->
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Nothing"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="Nothing"]/comps</xpath>
 			<value>
 				<comps Inherit="False">
 					<li Class="CompProperties_Usable">
@@ -111,9 +111,9 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="humanT"]/thingClass</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="humanT"]/thingClass</xpath> <!-- Not actually nothing, Ark spawn -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="humanT"]</xpath>
+			<xpath>Defs/ThingDef[defName="humanT"]</xpath>
 			<success>Always</success>
 			<value>
 				<thingClass>ThingWithComps</thingClass>
@@ -123,9 +123,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="humanT"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="humanT"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="humanT"]</xpath>
+			<xpath>Defs/ThingDef[defName="humanT"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
@@ -135,9 +135,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="humanT"]/thingSetMakerTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="humanT"]/thingSetMakerTags</xpath> <!-- Not actually nothing, Ark spawn -->
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="humanT"]</xpath>
+			<xpath>Defs/ThingDef[defName="humanT"]</xpath>
 			<success>Always</success>
 			<value>
 				<thingSetMakerTags></thingSetMakerTags>
@@ -147,11 +147,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="humanT"]</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="humanT"]</xpath> <!-- Not actually nothing, Ark spawn -->
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="humanT"]/comps</xpath>
+			<xpath>Defs/ThingDef[defName="humanT"]/comps</xpath>
 			<value>
 				<comps Inherit="False">
 					<li Class="CompProperties_Usable">
@@ -186,11 +186,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Nothing"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="Nothing"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Nothing"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName="Nothing"]/tradeTags</xpath>
 			<value>
 				<li>RewardSpecial</li>
 				<li>Artifact</li>
@@ -200,41 +200,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Nothing"]/thingSetMakerTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="Nothing"]/thingSetMakerTags</xpath> <!-- Not actually nothing, Ark spawn -->
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Nothing"]/thingSetMakerTags</xpath>
-			<value>
-				<li>AnimalPart</li>
-				<li>RewardSpecial</li>
-				<li>Artifact</li>
-				<li>RewardStandardQualitySuper</li>
-			</value>
-		</match>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="humanT"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="humanT"]/tradeTags</xpath>
-			<value>
-				<li>RewardSpecial</li>
-				<li>Artifact</li>
-			</value>
-		</match>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="humanT"]/thingSetMakerTags</xpath> <!-- Not actually nothing, Ark spawn -->
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="humanT"]/thingSetMakerTags</xpath>
+			<xpath>Defs/ThingDef[defName="Nothing"]/thingSetMakerTags</xpath>
 			<value>
 				<li>AnimalPart</li>
 				<li>RewardSpecial</li>
@@ -246,11 +216,41 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="Nothing"]/statBases</xpath> <!-- Not actually nothing, Ark spawn -->
+		<xpath>Defs/ThingDef[defName="humanT"]/tradeTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="humanT"]/tradeTags</xpath>
+			<value>
+				<li>RewardSpecial</li>
+				<li>Artifact</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="humanT"]/thingSetMakerTags</xpath> <!-- Not actually nothing, Ark spawn -->
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="humanT"]/thingSetMakerTags</xpath>
+			<value>
+				<li>AnimalPart</li>
+				<li>RewardSpecial</li>
+				<li>Artifact</li>
+				<li>RewardStandardQualitySuper</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="Nothing"]/statBases</xpath> <!-- Not actually nothing, Ark spawn -->
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="Nothing"]/statBases</xpath>
+			<xpath>Defs/ThingDef[defName="Nothing"]/statBases</xpath>
 			<value>
 				<statBases>
 					<Mass>20</Mass>
@@ -264,9 +264,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="2Ark"]/minGenerationAge</xpath>
+		<xpath>Defs/PawnKindDef[defName="2Ark"]/minGenerationAge</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="2Ark"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="2Ark"]</xpath>
 			<success>Always</success>
 			<value>
 				<minGenerationAge>7</minGenerationAge>
@@ -276,9 +276,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="PlayerArk"]/minGenerationAge</xpath>
+		<xpath>Defs/PawnKindDef[defName="PlayerArk"]/minGenerationAge</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="PlayerArk"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="PlayerArk"]</xpath>
 			<success>Always</success>
 			<value>
 				<minGenerationAge>7</minGenerationAge>
@@ -288,9 +288,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="2Ark"]/pawnGroupDevelopmentStage</xpath>
+		<xpath>Defs/PawnKindDef[defName="2Ark"]/pawnGroupDevelopmentStage</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="2Ark"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="2Ark"]</xpath>
 			<success>Always</success>
 			<value>
 				<pawnGroupDevelopmentStage>Adult</pawnGroupDevelopmentStage>
@@ -300,9 +300,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/PawnKindDef[defName="PlayerArk"]/pawnGroupDevelopmentStage</xpath>
+		<xpath>Defs/PawnKindDef[defName="PlayerArk"]/pawnGroupDevelopmentStage</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/PawnKindDef[defName="PlayerArk"]</xpath>
+			<xpath>Defs/PawnKindDef[defName="PlayerArk"]</xpath>
 			<success>Always</success>
 			<value>
 				<pawnGroupDevelopmentStage>Adult</pawnGroupDevelopmentStage>
@@ -313,11 +313,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[@Name="ArkRace"]/race/lifeStageAges</xpath>
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/race/lifeStageAges</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[@Name="ArkRace"]/race/lifeStageAges</xpath>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/race/lifeStageAges</xpath>
 			<value>
 				<lifeStageAges>
 					<li>

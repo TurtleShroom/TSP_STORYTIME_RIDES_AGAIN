@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]/apparel/tags</xpath>
 			<value>
 				<li>Jester</li>
 				<li>JeubWear</li>
@@ -17,11 +17,11 @@
 	</Operation>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]/apparel/tags</xpath>
 			<value>
 				<li>Jester</li>
 				<li>JeubWear</li>
@@ -31,11 +31,11 @@
 	</Operation>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/apparel/tags</xpath>
 			<value>
 				<li>King</li>
 				<li>Royal</li>
@@ -53,11 +53,11 @@
 	</Operation>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
 			<value>
 				<modExtensions>
 					<li Class="VanillaApparelExpanded.ApparelExtension">
@@ -73,11 +73,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM_Apparel_DameHat"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM_Apparel_DameHat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM_Apparel_DameHat"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM_Apparel_DameHat"]/apparel/tags</xpath>
 			<value>
 				<li>Dame</li>
 				<li>Gnoble</li>
@@ -97,22 +97,22 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]/modExtensions</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]/modExtensions</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]/modExtensions</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterOutfit"]/modExtensions</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
 			<value>
 				<modExtensions>
 					<li Class="VanillaApparelExpanded.ApparelExtension">
@@ -128,55 +128,55 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]/modExtensions</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]/modExtensions</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]/modExtensions</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]/modExtensions</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsCrown"]/modExtensions</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_KingsCrown"]/modExtensions</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM2_Apparel_KingsCrown"]/modExtensions</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_KingsCrown"]/modExtensions</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM2_Apparel_KingsCrown"]/modExtensions</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_JesterOutfit"]/modExtensions</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM2_Apparel_JesterOutfit"]/modExtensions</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_JesterOutfit"]/modExtensions</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM2_Apparel_JesterOutfit"]/modExtensions</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM_Apparel_JesterHat"]/apparel/tags</xpath>
 			<value>
 				<li>Jester</li>
 				<li>JeubWear</li>
@@ -186,11 +186,11 @@
 	</Operation>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_JesterHat"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM2_Apparel_JesterHat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_JesterHat"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM2_Apparel_JesterHat"]/apparel/tags</xpath>
 			<value>
 				<li>Jester</li>
 				<li>JeubWear</li>
@@ -200,11 +200,11 @@
 	</Operation>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_KingsCrown"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM2_Apparel_KingsCrown"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_KingsCrown"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM2_Apparel_KingsCrown"]/apparel/tags</xpath>
 			<value>
 				<li>King</li>
 				<li>Royal</li>
@@ -223,11 +223,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]/apparel/tags</xpath>
 			<value>
 				<li>King</li>
 				<li>Royal</li>
@@ -246,11 +246,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM2_Apparel_DameHat"]/apparel/tags</xpath>
 			<value>
 				<li>King</li>
 				<li>Royal</li>
@@ -269,11 +269,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_KingsRobes"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM2_Apparel_KingsRobes"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_KingsRobes"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM2_Apparel_KingsRobes"]/apparel/tags</xpath>
 			<value>
 				<li>King</li>
 				<li>Royal</li>
@@ -292,11 +292,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]</xpath>
+		<xpath>Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>/Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]/apparel/tags</xpath>
+			<xpath>Defs/ThingDef[defName="VFEM2_Apparel_DameDress"]/apparel/tags</xpath>
 			<value>
 				<li>King</li>
 				<li>Royal</li>
