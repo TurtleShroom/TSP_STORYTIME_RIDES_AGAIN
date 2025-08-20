@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
+	<!-- Aelanna's Model No-li Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_CannedFood"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_CannedFood"]</xpath>
+			<success>Always</success>
+			<value>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_CannedFood"]/fixedIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_CannedFood"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_NutPowder"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_NutPowder"]</xpath>
+			<success>Always</success>
+			<value>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_NutPowder"]/fixedIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_NutPowder"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_FoodBars"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_FoodBars"]</xpath>
+			<success>Always</success>
+			<value>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_FoodBars"]/fixedIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_FoodBars"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_FoodBars"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_FoodBars"]</xpath>
+			<success>Always</success>
+			<value>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_FoodBars"]/fixedIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_FoodBars"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/RecipeDef[defName="VCE_CanMeats"]/ingredients/li/filter/thingDefs</xpath>
 		<match Class="PatchOperationAdd">
@@ -112,7 +210,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/RecipeDef[defName="Make_CannedFood"]/ingredients/li/filter/thingDefs</xpath>
+		<xpath>/Defs/RecipeDef[defName="Make_CannedFood"]</xpath>
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/RecipeDef[defName="Make_CannedFood"]/ingredients/li[3]/filter/thingDefs</xpath>
 			<success>Always</success>
@@ -132,7 +230,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/RecipeDef[defName="Make_CannedFood"]/fixedIngredientFilter/thingDefs</xpath>
+		<xpath>/Defs/RecipeDef[defName="Make_CannedFood"]</xpath>
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs/RecipeDef[defName="Make_CannedFood"]/fixedIngredientFilter/thingDefs</xpath>
 			<success>Always</success>
@@ -162,6 +260,28 @@
 				<li MayRequire="TSP.Isengriff.BronzeCopperTin.Split">ST_Copper</li>
 				<li MayRequire="TSP.Isengriff.BronzeCopperTin.Split">ST_Tin</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ST_MudstoneBricks</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_NutPowder"]/fixedIngredientFilter/thingDefs</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_NutPowder"]/fixedIngredientFilter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>Neutroamine</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_FoodBars"]/fixedIngredientFilter/thingDefs</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_FoodBars"]/fixedIngredientFilter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li>Chocolate</li>
 			</value>
 		</match>
 	</Operation>

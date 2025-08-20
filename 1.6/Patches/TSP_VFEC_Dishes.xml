@@ -37,56 +37,6 @@
 				</li>
 				-->
 				
-				<li Class="PatchOperationAdd"> 
-					<success>Always</success>
-					<xpath>/Defs</xpath>
-					<value>
-						<ThingDef ParentName="MealBase">
-							<defName>TSP_ST_VFEC_BORPA_CHEESE</defName>
-							<label>Borpa cheese</label>
-							<description>Cheese formulated from the natural secretions of the skin of the Borpa. Borpa cheese matures faster than most cheeses, at the cost of it taking more Borpa milk to make less cheese. It tastes divine.</description>
-							<graphicData>
-								<texPath>Things/Items/Resources/Cheese/TSP_BorpaCheese</texPath>
-								<graphicClass>Graphic_StackCount</graphicClass>
-							</graphicData>
-							<tradeability>All</tradeability>
-							<stackLimit>250</stackLimit>
-							<statBases>
-								<MarketValue>8</MarketValue>
-								<Nutrition>0.2</Nutrition>
-							</statBases>
-							<thingCategories Inherit="False">
-								<li>VCE_Cheese</li>
-							</thingCategories>
-							<ingestible>
-								<preferability>MealLavish</preferability>
-								<ingestEffect>EatMeat</ingestEffect>
-								<ingestSound>Meal_Eat</ingestSound>
-								<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
-							</ingestible>
-							<comps>
-								<li Class="CompProperties_Rottable">
-									<daysToRotStart>110</daysToRotStart>
-									<rotDestroys>true</rotDestroys>
-								</li>
-								<li>
-									<compClass>CompQuality</compClass>
-								</li>
-								<li Class="VEF.Cooking.CompProperties_StackByQuality"></li>
-								<li Class="VEF.Cooking.CompProperties_IngestedThoughtFromQuality">
-									<ingestedThought>VCE_AteCheese</ingestedThought>
-								</li>
-								<!--
-								<li Class="VanillaCookingExpanded.CompProperties_StackByQuality"></li>
-								<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
-									<ingestedThought>VCE_AteCheese</ingestedThought>
-								</li>
-								-->
-							</comps>
-						</ThingDef>
-					</value>
-				</li>
-				
 				<!--
 				<li Class="PatchOperationAdd"> 
 					<success>Always</success>
@@ -125,56 +75,6 @@
 					</value>
 				</li>
 				-->
-				
-				<li Class="PatchOperationAdd"> 
-					<success>Always</success>
-					<xpath>/Defs</xpath>
-					<value>
-						<ThingDef ParentName="MealBase">
-							<defName>TSP_ST_VFEC_GreenCheese</defName>
-							<label>Gecko gouda cheese</label>
-							<description>Cheese formulated from the milky pus extracted from the tail of an Engorged Leopard Gecko. Gecko gouda cheese matures faster than most cheeses, at the cost of it taking more Green Milk to make less cheese. It tastes very, very similar to gouda cheese made from milk, hence its name.</description>
-							<graphicData>
-								<texPath>Things/Items/Resources/Cheese/GoatGouda</texPath>
-								<graphicClass>Graphic_StackCount</graphicClass>
-							</graphicData>
-							<tradeability>All</tradeability>
-							<stackLimit>250</stackLimit>
-							<statBases>
-								<MarketValue>8</MarketValue>
-								<Nutrition>0.2</Nutrition>
-							</statBases>
-							<thingCategories Inherit="False">
-								<li>VCE_Cheese</li>
-							</thingCategories>
-							<ingestible>
-								<preferability>MealLavish</preferability>
-								<ingestEffect>EatMeat</ingestEffect>
-								<ingestSound>Meal_Eat</ingestSound>
-								<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
-							</ingestible>
-							<comps>
-								<li Class="CompProperties_Rottable">
-									<daysToRotStart>110</daysToRotStart>
-									<rotDestroys>true</rotDestroys>
-								</li>
-								<li>
-									<compClass>CompQuality</compClass>
-								</li>
-								<li Class="VEF.Cooking.CompProperties_StackByQuality"></li>
-								<li Class="VEF.Cooking.CompProperties_IngestedThoughtFromQuality">
-									<ingestedThought>VCE_AteCheese</ingestedThought>
-								</li>
-								<!-- <li Class="VanillaCookingExpanded.CompProperties_StackByQuality" -->
-								<!--
-								<li Class="VFECore.CompProperties_IngestedThoughtFromQuality">
-									<ingestedThought>VCE_AteCheese</ingestedThought>
-								</li>
-								-->
-							</comps>
-						</ThingDef>
-					</value>
-				</li>
 				
 				<!--
 				<li Class="PatchOperationAdd"> 

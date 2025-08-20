@@ -71,6 +71,8 @@
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawLentils</li>
+						<li MayRequire="vvenchov.vvnewharvestgardencrops">VV_BlackBeans</li>
 					</value>
 				</li>
 				
@@ -79,6 +81,8 @@
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawLentils</li>
+						<li MayRequire="vvenchov.vvnewharvestgardencrops">VV_BlackBeans</li>
 					</value>
 				</li>
 				
@@ -87,6 +91,8 @@
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawLentils</li>
+						<li MayRequire="vvenchov.vvnewharvestgardencrops">VV_BlackBeans</li>
 					</value>
 				</li>
 			</operations>
@@ -95,32 +101,38 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ThingDef[defName="ST_Bean"]</xpath>
+	<xpath>/Defs/ThingDef[defName="DankPyon_RawLentils"]</xpath>
 		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
 		<match Class="PatchOperationSequence">
 			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ST_Bean"]</xpath>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawLentils"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="zal.braziliancrops">KIT_Beans</li>
+						<li MayRequire="vvenchov.vvnewharvestgardencrops">VV_BlackBeans</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="ST_Bean"]</xpath>
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawLentils"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="zal.braziliancrops">KIT_Beans</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+						<li MayRequire="vvenchov.vvnewharvestgardencrops">VV_BlackBeans</li>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationInsert">
-					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="ST_Bean"]</xpath>
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawLentils"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="zal.braziliancrops">KIT_Beans</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+						<li MayRequire="vvenchov.vvnewharvestgardencrops">VV_BlackBeans</li>
 					</value>
 				</li>
 			</operations>

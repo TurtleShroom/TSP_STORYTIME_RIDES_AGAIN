@@ -143,8 +143,8 @@
         <li>(100000, 10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
-	<xenotypeSet MayRequire="ludeon.rimworld.biotech" Inheri="False">
-		<xenotypeChances MayRequire="ludeon.rimworld.biotech" Inherit="False">
+	<xenotypeSet MayRequire="ludeon.rimworld.biotech">
+		<xenotypeChances MayRequire="ludeon.rimworld.biotech">
 			<Weezey MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech">0.03</Weezey>
 			<Tallhuman MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech">0.03</Tallhuman>
 			<OE_Tortle MayRequire="obsidiaexpansion.xenos.tortle,ludeon.rimworld.biotech">0.02</OE_Tortle>
@@ -179,7 +179,7 @@
 			<Farmer MayRequire="ludeon.rimworld.ideology">1</Farmer>
 			<MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">9</MF_CorporatePunk>
 			<ROM_TownsfolkTeacher MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkTeacher>
-			<OotR_Oni_Hunter  MayRequire="tarojun.morishep.onioftherim">3</OotR_Oni_Hunter >
+			<OotR_Oni_Hunter MayRequire="tarojun.morishep.onioftherim">3</OotR_Oni_Hunter >
 			<OotR_Oni_Archer MayRequire="tarojun.morishep.onioftherim">4</OotR_Oni_Archer>
 			<OotR_Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">7</OotR_Oni_HeavyArcher>
 			<RWP_Bandit_Recruit MayRequire="mlie.rimworldwesternizationproject">1</RWP_Bandit_Recruit>
@@ -187,6 +187,9 @@
 			<ESCP_Khajiit_Kingdom_Warrior MayRequire="theo.escp.khajiit">1</ESCP_Khajiit_Kingdom_Warrior>
 			<ESCP_OhmesRaht_Kingdom_Warrior MayRequire="theo.escp.khajiit">1</ESCP_OhmesRaht_Kingdom_Warrior>
 			<ESCP_Senche_Kingdom_Warrior MayRequire="theo.escp.khajiit">1</ESCP_Senche_Kingdom_Warrior>
+			<HPSurvivalist_Trader MayRequire="kobo.honeypotants">2</HPSurvivalist_Trader>
+			<HPWarrior_Scav MayRequire="kobo.honeypotants">21</HPWarrior_Scav>
+			<HPNormal_Merc MayRequire="kobo.honeypotants">25</HPNormal_Merc>
         </options>
       </li>
       <li>
@@ -194,16 +197,19 @@
         <kindDef>Combat</kindDef>
 		<commonality>100</commonality>
         <options>
-          <Survivalist>9</Survivalist>
-          <Local_Spy>9</Local_Spy>
-          <Grenadier_Destructive>3</Grenadier_Destructive>
-          <Footman>9</Footman>
-		  <HeavyFootman>9</HeavyFootman>
-          <Ambusher>9</Ambusher>
-          <Striker>9</Striker>
-          <Survivalist_Leader>1</Survivalist_Leader>
-		  <Guerrilla>8</Guerrilla>
-		  <Drifter>4</Drifter>
+			<Survivalist>9</Survivalist>
+			<Local_Spy>9</Local_Spy>
+			<Grenadier_Destructive>3</Grenadier_Destructive>
+			<Footman>9</Footman>
+			<HeavyFootman>9</HeavyFootman>
+			<Ambusher>9</Ambusher>
+			<Striker>9</Striker>
+			<Survivalist_Leader>1</Survivalist_Leader>
+			<Guerrilla>8</Guerrilla>
+			<Drifter>4</Drifter>
+			<HPSurvivalist_Trader MayRequire="kobo.honeypotants">0.20</HPSurvivalist_Trader>
+			<HPWarrior_Scav MayRequire="kobo.honeypotants">0.15</HPWarrior_Scav>
+			<HPNormal_Merc MayRequire="kobo.honeypotants">0.25</HPNormal_Merc>
         </options>
       </li>
 	  <li>
@@ -215,7 +221,7 @@
 			<Guerrilla>25</Guerrilla>
 			<MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">6</MF_CorporatePunk>
 			<Hunter MayRequire="ludeon.rimworld.ideology">1</Hunter>
-			<OotR_Oni_Hunter  MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_Hunter >
+			<OotR_Oni_Hunter MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_Hunter>
 			<OotR_Oni_Archer MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_Archer>
 			<OotR_Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_HeavyArcher>
 			<ESCP_Khajiit_Kingdom_Trader MayRequire="theo.escp.khajiit">1</ESCP_Khajiit_Kingdom_Trader>
@@ -224,6 +230,9 @@
 			<ESCP_Khajiit_Kingdom_Warrior MayRequire="theo.escp.khajiit">1</ESCP_Khajiit_Kingdom_Warrior>
 			<ESCP_OhmesRaht_Kingdom_Warrior MayRequire="theo.escp.khajiit">1</ESCP_OhmesRaht_Kingdom_Warrior>
 			<ESCP_Senche_Kingdom_Warrior MayRequire="theo.escp.khajiit">1</ESCP_Senche_Kingdom_Warrior>
+			<HPSurvivalist_Trader MayRequire="kobo.honeypotants">0.20</HPSurvivalist_Trader>
+			<HPWarrior_Scav MayRequire="kobo.honeypotants">1.5</HPWarrior_Scav>
+			<HPNormal_Merc MayRequire="kobo.honeypotants">2.5</HPNormal_Merc>
         </options>
       </li>
 	  <li>
@@ -268,13 +277,16 @@
         <options>
 			<Local_Spy>1</Local_Spy>
 			<Hunter MayRequire="ludeon.rimworld.ideology">1</Hunter>
-			<OotR_Oni_Hunter  MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_Hunter >
+			<OotR_Oni_Hunter MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_Hunter>
 			<OotR_Oni_Archer MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_Archer>
 			<OotR_Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">2</OotR_Oni_HeavyArcher>
 			<ESCP_Alfiq_Kingdom_Penitent MayRequire="theo.escp.khajiit">1</ESCP_Alfiq_Kingdom_Penitent>
 			<ESCP_Khajiit_Kingdom_Warrior MayRequire="theo.escp.khajiit">1</ESCP_Khajiit_Kingdom_Warrior>
 			<ESCP_OhmesRaht_Kingdom_Warrior MayRequire="theo.escp.khajiit">1</ESCP_OhmesRaht_Kingdom_Warrior>
 			<ESCP_Senche_Kingdom_Warrior MayRequire="theo.escp.khajiit">1</ESCP_Senche_Kingdom_Warrior>
+			<HPSurvivalist_Trader MayRequire="kobo.honeypotants">2</HPSurvivalist_Trader>
+			<HPWarrior_Scav MayRequire="kobo.honeypotants">1</HPWarrior_Scav>
+			<HPNormal_Merc MayRequire="kobo.honeypotants">1</HPNormal_Merc>
         </options>
       </li>
       <li>
@@ -295,7 +307,7 @@
 			<Villager_Child MayRequire="Ludeon.RimWorld.Biotech">7</Villager_Child>
 			<MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">9</MF_CorporatePunk>
 			<ROM_TownsfolkTeacher MayRequire="rimofmadness.callofcthulhu.factions">3</ROM_TownsfolkTeacher>
-			<OotR_Oni_Hunter  MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_Hunter >
+			<OotR_Oni_Hunter MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_Hunter>
 			<OotR_Oni_Archer MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_Archer>
 			<OotR_Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">1</OotR_Oni_HeavyArcher>
 			<RWP_Bandit_Recruit MayRequire="mlie.rimworldwesternizationproject">2</RWP_Bandit_Recruit>
@@ -309,6 +321,9 @@
 			<MagicArk MayRequire="owen.ark">1</MagicArk>
 			<ImplantArk MayRequire="owen.ark">1</ImplantArk>
 			<ALLARK MayRequire="owen.ark">1</ALLARK>
+			<HPSurvivalist_Trader MayRequire="kobo.honeypotants">1</HPSurvivalist_Trader>
+			<HPWarrior_Scav MayRequire="kobo.honeypotants">0.5</HPWarrior_Scav>
+			<HPNormal_Merc MayRequire="kobo.honeypotants">0.5</HPNormal_Merc>
         </options>
       </li>
       <li>
@@ -351,16 +366,22 @@
 			<ALLARK MayRequire="owen.ark">11</ALLARK>
 			<K4G_Vagrants_StarvingVagrant MayRequire="k4g.vagrants">30</K4G_Vagrants_StarvingVagrant>
 			<K4G_Vagrants_Leader MayRequire="k4g.vagrants">1</K4G_Vagrants_Leader>
+			<HPSurvivalist_Trader MayRequire="kobo.honeypotants">12</HPSurvivalist_Trader>
+			<HPWarrior_Scav MayRequire="kobo.honeypotants">15</HPWarrior_Scav>
+			<HPNormal_Merc MayRequire="kobo.honeypotants">12.5</HPNormal_Merc>
         </options>
       </li>
 	  <li>
 		<kindDef>Peaceful</kindDef>
-		<commonality>60</commonality>
+		<commonality>90</commonality>
 		<options>
 			<K4G_Vagrants_StarvingVagrant MayRequire="k4g.vagrants">999</K4G_Vagrants_StarvingVagrant>
 			<K4G_Vagrants_Leader MayRequire="k4g.vagrants">1</K4G_Vagrants_Leader>
 			<Drifter>1</Drifter>
 			<Survivalist>2</Survivalist>
+			<HPSurvivalist_Trader MayRequire="kobo.honeypotants">3</HPSurvivalist_Trader>
+			<HPWarrior_Scav MayRequire="kobo.honeypotants">1.5</HPWarrior_Scav>
+			<HPNormal_Merc MayRequire="kobo.honeypotants">2.5</HPNormal_Merc>
 		</options>
 	  </li>
       <li>
@@ -370,6 +391,7 @@
 			<K4G_Vagrants_Trader MayRequire="k4g.vagrants">17</K4G_Vagrants_Trader>
 			<ESCP_Khajiit_Kingdom_Trader MayRequire="theo.escp.khajiit">6</ESCP_Khajiit_Kingdom_Trader>
 			<ESCP_Alfiq_Kingdom_Trader MayRequire="theo.escp.khajiit">1</ESCP_Alfiq_Kingdom_Trader>
+			<HPSurvivalist_Trader MayRequire="kobo.honeypotants">12</HPSurvivalist_Trader>
         </traders>
         <carriers>
           <Muffalo>7</Muffalo>
@@ -404,6 +426,9 @@
 			<ALLARK MayRequire="owen.ark">1</ALLARK>
 			<K4G_Vagrants_StarvingVagrant MayRequire="k4g.vagrants">7</K4G_Vagrants_StarvingVagrant>
 			<K4G_Vagrants_Leader MayRequire="k4g.vagrants">11</K4G_Vagrants_Leader>
+			<HPSurvivalist_Trader MayRequire="kobo.honeypotants">4</HPSurvivalist_Trader>
+			<HPWarrior_Scav MayRequire="kobo.honeypotants">4</HPWarrior_Scav>
+			<HPNormal_Merc MayRequire="kobo.honeypotants">4</HPNormal_Merc>
         </guards>
       </li>
 		<li>
@@ -421,7 +446,7 @@
 				<Guerrilla>2</Guerrilla>
 				<Drifter>2</Drifter>
 				<MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">2</MF_CorporatePunk>
-				<ROM_TownsfolkTeacher MayRequire="rimofmadness.callofcthulhu.factions">0.5</ROM_TownsfolkTeacher>
+				<ROM_TownsfolkTeacher MayRequire="rimofmadness.callofcthulhu.factions">1</ROM_TownsfolkTeacher>
 				<OotR_Oni_Hunter MayRequire="tarojun.morishep.onioftherim">0.5</OotR_Oni_Hunter>
 				<OotR_Oni_Archer MayRequire="tarojun.morishep.onioftherim">0.5</OotR_Oni_Archer>
 				<OotR_Oni_HeavyArcher MayRequire="tarojun.morishep.onioftherim">0.5</OotR_Oni_HeavyArcher>
@@ -438,7 +463,10 @@
 				<ImplantArk MayRequire="owen.ark">0.12</ImplantArk>
 				<ALLARK MayRequire="owen.ark">0.11</ALLARK>
 				<K4G_Vagrants_StarvingVagrant MayRequire="k4g.vagrants">25</K4G_Vagrants_StarvingVagrant>
-				<K4G_Vagrants_Leader MayRequire="k4g.vagrants">1</K4G_Vagrants_Leader>
+				<K4G_Vagrants_Leader MayRequire="k4g.vagrants">5</K4G_Vagrants_Leader>
+				<HPSurvivalist_Trader MayRequire="kobo.honeypotants">1</HPSurvivalist_Trader>
+				<HPWarrior_Scav MayRequire="kobo.honeypotants">1</HPWarrior_Scav>
+				<HPNormal_Merc MayRequire="kobo.honeypotants">1</HPNormal_Merc>
 			</options>
 		</li>
 		<li>
@@ -446,8 +474,8 @@
 			<commonality>60</commonality>
 			<options>
 				<K4G_Vagrants_StarvingVagrant MayRequire="k4g.vagrants">43</K4G_Vagrants_StarvingVagrant>
-				<K4G_Vagrants_Leader MayRequire="k4g.vagrants">1</K4G_Vagrants_Leader>
-				<Survivalist>16</Survivalist>
+				<K4G_Vagrants_Leader MayRequire="k4g.vagrants">5</K4G_Vagrants_Leader>
+				<Survivalist>1</Survivalist>
 			</options>
 		</li>
 		<li MayRequire="Ludeon.RimWorld.Ideology">
@@ -464,6 +492,9 @@
 					<MagicArk MayRequire="owen.ark">0.12</MagicArk>
 					<ImplantArk MayRequire="owen.ark">0.12</ImplantArk>
 					<ALLARK MayRequire="owen.ark">1</ALLARK>
+					<HPSurvivalist_Trader MayRequire="kobo.honeypotants">0.20</HPSurvivalist_Trader>
+					<HPWarrior_Scav MayRequire="kobo.honeypotants">1.5</HPWarrior_Scav>
+					<HPNormal_Merc MayRequire="kobo.honeypotants">2.5</HPNormal_Merc>
 				</options>
 			</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">
@@ -473,6 +504,9 @@
 					<Survivalist>16</Survivalist>
 					<ESCP_Senche_Kingdom_Warrior MayRequire="theo.escp.khajiit">3</ESCP_Senche_Kingdom_Warrior>
 					<MF_CorporatePunk MayRequire="mortstrudel.corporationfaction">0.5</MF_CorporatePunk>
+					<HPSurvivalist_Trader MayRequire="kobo.honeypotants">0.20</HPSurvivalist_Trader>
+					<HPWarrior_Scav MayRequire="kobo.honeypotants">1.5</HPWarrior_Scav>
+					<HPNormal_Merc MayRequire="kobo.honeypotants">2.5</HPNormal_Merc>
 				</options>
 			</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">
@@ -486,6 +520,9 @@
 					<ALLARK MayRequire="owen.ark">11</ALLARK>
 					<K4G_Vagrants_StarvingVagrant MayRequire="k4g.vagrants">19</K4G_Vagrants_StarvingVagrant>
 					<K4G_Vagrants_Leader MayRequire="k4g.vagrants">10</K4G_Vagrants_Leader>
+					<HPSurvivalist_Trader MayRequire="kobo.honeypotants">0.20</HPSurvivalist_Trader>
+					<HPWarrior_Scav MayRequire="kobo.honeypotants">1.5</HPWarrior_Scav>
+					<HPNormal_Merc MayRequire="kobo.honeypotants">2.5</HPNormal_Merc>
 				</options>
 			</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">
@@ -495,6 +532,9 @@
 					<Survivalist>1</Survivalist>
 					<K4G_Vagrants_StarvingVagrant MayRequire="k4g.vagrants">19</K4G_Vagrants_StarvingVagrant>
 					<K4G_Vagrants_Leader MayRequire="k4g.vagrants">10</K4G_Vagrants_Leader>
+					<HPSurvivalist_Trader MayRequire="kobo.honeypotants">0.20</HPSurvivalist_Trader>
+					<HPWarrior_Scav MayRequire="kobo.honeypotants">1.5</HPWarrior_Scav>
+					<HPNormal_Merc MayRequire="kobo.honeypotants">2.5</HPNormal_Merc>
 				</options>
 			</li>
     </pawnGroupMakers>

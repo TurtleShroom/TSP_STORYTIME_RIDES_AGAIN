@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<!-- Cheese -->
+	<ProcessorFramework.ProcessDef>
+		<defName>TSP_ST_MO_Borpa_PressCheeseProcess</defName>
+		<thingDef>TSP_ST_VFEC_BORPA_CHEESE</thingDef>
+		<ingredientFilter>
+			<categories></categories>
+			<thingDefs>
+				<li>BORPA_Milk</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>Milk</li>
+				<li>ST_Green_Milk</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_GoatMilk</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_SheepMilk</li>
+			</disallowedThingDefs>
+		</ingredientFilter>
+		<processDays>1</processDays><!-- in days, a day is 60,000 ticks -->
+		<capacityFactor>1.0</capacityFactor>
+		<efficiency>0.5</efficiency>
+		<usesTemperature>false</usesTemperature>
+		<temperatureSafe>-1.0~32.0</temperatureSafe>
+		<temperatureIdeal>7.0~32.0</temperatureIdeal>
+		<ruinedPerDegreePerHour>0.00025</ruinedPerDegreePerHour><!-- percent per degree per hour -->
+		<speedBelowSafe>1.0</speedBelowSafe>
+		<speedAboveSafe>1.0</speedAboveSafe>
+		<sunFactor>1.0~1.0</sunFactor>
+		<rainFactor>1.0~1.0</rainFactor>
+		<snowFactor>1.0~1.0</snowFactor>
+		<windFactor>1.0~1.0</windFactor>
+		<unpoweredFactor>0.0</unpoweredFactor>
+		<unfueledFactor>0.0</unfueledFactor>
+		<powerUseFactor>1.0</powerUseFactor>
+		<fuelUseFactor>0.0</fuelUseFactor>
+		<filledGraphicSuffix>Filled</filledGraphicSuffix>
+		<usesQuality>false</usesQuality>
+		<qualityDays>(1, 2, 3, 4, 5, 6, 7)</qualityDays>
+		<color>(255, 255, 255)</color><!-- 0-255 or 0.0-1.0 -->
+		<customLabel></customLabel>
+		<destroyChance>0.0</destroyChance>
+	</ProcessorFramework.ProcessDef>
+
+	<!-- Cheese -->
+	<ProcessorFramework.ProcessDef>
+		<defName>TSP_ST_MO_DankPyon_Gecko_PressCheeseProcess</defName>
+		<thingDef>TSP_ST_VFEC_GreenCheese</thingDef>
+		<ingredientFilter>
+			<categories></categories>
+			<thingDefs>
+				<li>ST_Green_Milk</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li>Milk</li>
+				<li>BORPA_Milk</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_GoatMilk</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_SheepMilk</li>
+			</disallowedThingDefs>
+		</ingredientFilter>
+		<processDays>1</processDays><!-- in days, a day is 60,000 ticks -->
+		<capacityFactor>1.0</capacityFactor>
+		<efficiency>0.5</efficiency>
+		<usesTemperature>false</usesTemperature>
+		<temperatureSafe>-1.0~32.0</temperatureSafe>
+		<temperatureIdeal>7.0~32.0</temperatureIdeal>
+		<ruinedPerDegreePerHour>0.00025</ruinedPerDegreePerHour><!-- percent per degree per hour -->
+		<speedBelowSafe>1.0</speedBelowSafe>
+		<speedAboveSafe>1.0</speedAboveSafe>
+		<sunFactor>1.0~1.0</sunFactor>
+		<rainFactor>1.0~1.0</rainFactor>
+		<snowFactor>1.0~1.0</snowFactor>
+		<windFactor>1.0~1.0</windFactor>
+		<unpoweredFactor>0.0</unpoweredFactor>
+		<unfueledFactor>0.0</unfueledFactor>
+		<powerUseFactor>1.0</powerUseFactor>
+		<fuelUseFactor>0.0</fuelUseFactor>
+		<filledGraphicSuffix>Filled</filledGraphicSuffix>
+		<usesQuality>false</usesQuality>
+		<qualityDays>(1, 2, 3, 4, 5, 6, 7)</qualityDays>
+		<color>(255, 255, 255)</color><!-- 0-255 or 0.0-1.0 -->
+		<customLabel></customLabel>
+		<destroyChance>0.0</destroyChance>
+	</ProcessorFramework.ProcessDef>
+</Defs>

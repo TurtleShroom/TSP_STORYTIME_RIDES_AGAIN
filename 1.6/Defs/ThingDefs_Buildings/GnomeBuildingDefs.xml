@@ -84,6 +84,9 @@
 		<li MayRequire="higgs.cozarkian.entomophagy,vanillaexpanded.vcooke">Insect_CookSoupFine</li>
 		<li MayRequire="higgs.cozarkian.entomophagy,vanillaexpanded.vcooke">Insect_CookSoupLavish</li>
 		<li MayRequire="higgs.cozarkian.entomophagy,vanillaexpanded.vcooke">Insect_CookSoupGourmet</li>
+		<li MayRequire="vanillaexpanded.vcookestews">VCE_CookStewSimple</li>
+		<li MayRequire="vanillaexpanded.vcookestews">VCE_CookStewFine</li>
+		<li MayRequire="vanillaexpanded.vcookestews">VCE_CookStewLavish</li>
 		<!--
 		<li MayRequire="Mlie.AncientRimCore">AR_MakeSalad</li>
 		<li MayRequire="Mlie.AncientRimCore">TSP_AR_MakeSaladBulk</li>
@@ -123,6 +126,39 @@
 		<li MayRequire="lat.rimstro">Cook_RS_mushroom_soup</li>
 		<li MayRequire="lat.rimstro">Cook_RS_eggjuk_bulk</li>
 		<li MayRequire="lat.rimstro">Cook_RS_mushroom_soup_bluk</li>
+		<li MayRequire="vanillaexpanded.vcookehaute">VCE_CookMealHaute</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealSteakWithWine</li>
+		<li MayRequire="dankpyon.medieval.overhaul,vr.mopatches,vanillaexpanded.vcooke">MO_CookBoneSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul,vr.mopatches,vanillaexpanded.vcooke">MO_CookLentilSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul,vr.mopatches,vanillaexpanded.vcooke">MO_CookMushroomSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul,vr.mopatches,vanillaexpanded.vcooke">MO_CookBreadSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul,vr.mopatches,vanillaexpanded.vcooke">MO_CookPumpkinSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul,vr.mopatches,vanillaexpanded.vcooke">MO_CookCheeseSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_BakeBread</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_BakeBreadBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_BakeBreadMegaBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealBoneSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealBoneSoupBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealMashedPotatoes</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealMashedPotatoesBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealWinterLentilSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealWinterLentilSoupBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealCheeseSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealCheeseSoupBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealPumpkinSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealPumpkinSoupBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealBreadSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealBreadSoupBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealBoiledBeansAndOnion</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealBoiledBeanAndOnionBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealLemonCake</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealLemonCakeBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealHuntersStew</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealHuntersStewBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealVegetablePot</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealVegetablePotBulk</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealMushroomSoup</li>
+		<li MayRequire="dankpyon.medieval.overhaul">DankPyon_CookMealMushroomSoupBulk</li>
 	</recipes>
     <comps>
       <li Class="CompProperties_Power">
@@ -185,6 +221,7 @@
 				<li MayRequire="lat.rimstro,oskarpotocki.vanillafactionsexpanded.core">RS_Blender</li>
 				<li MayRequire="mlie.vanillalikewheat">QuernLowTech</li>
 				<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
+				<li MayRequire="vanillaexpanded.vcookehaute">VCE_ElectricHauteSection</li>
 			</inheritRecipesFrom>
 		</li>
 		-->
@@ -238,6 +275,7 @@
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
 			<li>ToolCabinet</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_MiningTools</li>
 			<li MayRequire="taranchuk.morearchotechgarbagecontinued">ArchoCookingAssistant</li>
 			<li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkableToolBox</li>
 			<li MayRequire="Dajian.ChiTeaditional.Expanded">SZ_LinkChuJu</li>

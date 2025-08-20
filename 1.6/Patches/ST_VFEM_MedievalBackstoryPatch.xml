@@ -237,21 +237,21 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDefdef[Name = "VFEM2_Bannerman" or defName = "VFEM2_Militia"]/backstoryCategories</xpath>
+					<xpath>/Defs/PawnKindDef[defName = "VFEM2_Bannerman" or defName = "VFEM2_Militia"]/backstoryCategories</xpath>
 					<value>
 						<li>TribalHunter</li>
 						<li>MedievalTownsfolk</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDefdef[Name = "VFEM2_Bannerman" or defName = "VFEM2_Militia"]/backstoryCategories</xpath>
+					<xpath>/Defs/PawnKindDef[defName = "VFEM2_Bannerman" or defName = "VFEM2_Militia"]/backstoryCategories</xpath>
 					<value>
 						<li>TribalHunter</li>
 						<li>MedievalTownsfolk</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDefdef[Name="VFEM2_Peasant"]/backstoryCategories</xpath>
+					<xpath>/Defs/PawnKindDef[defName="VFEM2_Peasant"]/backstoryCategories</xpath>
 					<value>
 						<li>MedievalServant</li>
 						<li>MedievalPeasant</li>
@@ -359,6 +359,14 @@
 						<li>MedievalRoyal</li>
 						<li>ESCP_GenericBackstory_ChildhoodHighClass</li>
 						<li>ESCP_GenericBackstory_AdulthoodHighClass</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/backstoryFilters/li/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li>Medieval</li>
 					</value>
 				</li>
 			</operations>
@@ -597,6 +605,7 @@
 				<li>MedievalLow</li>
 				<li>Classical</li>
 				<li>MedievalServant</li>
+				<li>Medieval</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -649,6 +658,7 @@
 			<success>Always</success>
 			<value>
 				<li>MedievalKnight</li>
+				<li>TribalHunter</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -707,6 +717,10 @@
 				<li>WoodBeetBackstory</li>
 				<li>Pirate</li>
 				<li>Slave</li>
+				<li>Classical</li>
+				<li>ESCP_DunmerSlaveBackstory</li>
+				<li>ESCP_DunmerSlaveBackstory_Childhood</li>
+				<li>ESCP_DunmerSlaveBackstory_Adulthood</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -812,6 +826,7 @@
 			<xpath>/Defs/BackstoryDef[defName = "VFEM_Chamberlain42" or defName = "VFEM_StableServant44" or defName = "VFEM_Scullion43" or defName = "VFEM_Butler45"]/spawnCategories</xpath>
 			<success>Always</success>
 			<value>
+				<li>MedievalTownsfolk</li>
 				<li>MedievalServant</li>
 				<li>BeetnikhBackstory</li>
 			</value>
@@ -1011,10 +1026,10 @@
     </Operation>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/workDisables</xpath>
+		<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/maleCommonality</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/workDisables</xpath>
+			<xpath>/Defs/AlienRace.AlienBackstoryDef[defName="ESCP_Khajiit_CityChild1"]/maleCommonality</xpath>
 			<success>Always</success>
 			<value>
 				<maleCommonality>1.01</maleCommonality>
@@ -1022,4 +1037,248 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
     </Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[@Name="DankPyon_ShadowSectBase"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[@Name="DankPyon_ShadowSectBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[@Name="DankPyon_MedievalPawnKindBase"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[@Name="DankPyon_MedievalPawnKindBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[@Name="DankPyon_BrigandFactionBase"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[@Name="DankPyon_BrigandFactionBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[@Name="DankPyon_FootmanBase"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[@Name="DankPyon_FootmanBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[@Name="DankPyon_Zweihander"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[@Name="DankPyon_Zweihander"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[@Name="DankPyon_BrigandPawnKindBase"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[@Name="DankPyon_BrigandPawnKindBase"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[@Name="DankPyon_Medieval_Knight"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[@Name="DankPyon_Medieval_Knight"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Lord"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Lord"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories Inherit="False"></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Peasant"]/backstoryCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Peasant"]</xpath>
+			<success>Always</success>
+			<value>
+				<backstoryCategories Inherit="False"></backstoryCategories>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DankPyon_MeleeWeapon_NobleSword"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOO! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="DankPyon_BrigandFactionBase"]/backstoryFilters/li/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li>Medieval</li>
+						<li>MedievalCriminal</li>
+						<li>Raider</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="DankPyon_ShadowSectBase"]/backstoryFilters/li/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li>MedievalCriminal</li>
+						<li>Madman</li>
+						<!-- <li>ESCP_AyleidBackstory_Childhood</li> -->
+						<li>ESCP_AyleidBackstory_Adulthood</li>
+						<li>ESCP_DunmerTelvanniBackstory_Adulthood</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="DankPyon_MedievalPawnKindBase"]/backstoryFilters/li/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li>Medieval</li>
+						<li>MedievalTownsfolk</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/backstoryFilters/li/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li>Medieval</li>
+						<li>Hunter</li>
+						<li>HunterTribal</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/backstoryFilters/li/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li>Medieval</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="DankPyon_ShadowSectBase"]/backstoryCategories</xpath>
+					<success>Always</success>
+					<value>
+						<li>MedievalCriminal</li>
+						<li>Madman</li>
+						<li>ESCP_AyleidBackstory_Childhood</li>
+						<li>ESCP_AyleidBackstory_Adulthood</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="DankPyon_Medieval_Knight"]/backstoryCategories</xpath>
+					<success>Always</success>
+					<value>
+						<!-- <li>Medieval</li> -->
+						<li>MedievalKnight</li>
+						<li>Hunter</li>
+						<li>TribalHunter</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="DankPyon_BrigandPawnKindBase"]/backstoryCategories</xpath>
+					<success>Always</success>
+					<value>
+						<!-- <li>Medieval</li> -->
+						<li>MedievalCriminal</li>
+						<li>Raider</li>
+						<li>TribalHunter</li>
+						<li>Hunter</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="DankPyon_Zweihander"]/backstoryCategories</xpath>
+					<success>Always</success>
+					<value>
+						<li>MedievalKnight</li>
+						<li>ImperialFighter</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Peasant"]/backstoryCategories</xpath>
+					<success>Always</success>
+					<value>
+						<li>MedievalLow</li>
+						<li>MedievalPeasant</li>
+						<li>TribalFarmer</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="DankPyon_Medieval_Lord"]/backstoryCategories</xpath>
+					<success>Always</success>
+					<value>
+						<li>MedievalHigh</li>
+						<li>MedievalNoble</li>
+						<li>MedievalRoyal</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If it does not exist, the original code stands. -->
+	</Operation>
 </Patch>

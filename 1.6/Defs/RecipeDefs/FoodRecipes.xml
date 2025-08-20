@@ -184,7 +184,7 @@
 					<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 				</categories>
 				<thingDefs>
-					<li>ST_ProcessedCheese</li>
+					<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
 				</thingDefs>
 			</filter>
 			<count>5</count>
@@ -207,7 +207,7 @@
 			<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 		  </categories>
 		  <thingDefs>
-			<li>ST_ProcessedCheese</li>
+			<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
 		  </thingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
@@ -215,8 +215,11 @@
 			<li>MeatRaw</li>
 		  </categories>
 		  <thingDefs>
-			<li>ST_Bean</li>
-			<li>ST_ProcessedCheese</li>
+			<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+			<li MayRequire="vvenchov.vvnewharvestgardencrops">VV_BlackBeans</li>
+			<li MayRequire="zal.braziliancrops">KIT_Beans</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawLentils</li>
+			<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
 			<li>Gnome_Cloth</li>
 		  </thingDefs>
 		</defaultIngredientFilter>
@@ -249,7 +252,10 @@
 			<filter>
 						<customSummary>beans</customSummary>
 						<thingDefs>
-							<li>ST_Bean</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+							<li MayRequire="vvenchov.vvnewharvestgardencrops">VV_BlackBeans</li>
+							<li MayRequire="zal.braziliancrops">KIT_Beans</li>
+							<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawLentils</li>
 						</thingDefs>
 			</filter>
 			<count>25</count>
@@ -259,9 +265,10 @@
 						<customSummary>cheeses</customSummary>
 						<categories>
 							<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+							<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Cheese</li>
 						</categories>
 						<thingDefs>
-							<li>ST_ProcessedCheese</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
 						</thingDefs>
 			</filter>
 			<count>5</count>
@@ -285,14 +292,20 @@
 			  <thingDefs>
 				<li MayRequire="aratocat.wonderland">Chocofuel</li> <!-- Don't ask -->
 			  </thingDefs>
+			  <disallowedThingDefs>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+				<li MayRequire="vvenchov.vvnewharvestgardencrops">VV_BlackBeans</li>
+				<li MayRequire="zal.braziliancrops">KIT_Beans</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawLentils</li>
+			  </disallowedThingDefs>
 			</filter>
 			<count>10</count>
 		  </li>
 		</ingredients>
 		<fixedIngredientFilter>
 						<thingDefs>
-							<li>ST_Bean</li>
-							<li>ST_ProcessedCheese</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
 							<li MayRequire="aratocat.wonderland">Chocofuel</li>
 						</thingDefs>
 						<categories>
@@ -310,8 +323,8 @@
 							<!-- <li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li> -->
 						</categories>
 						<thingDefs>
-							<li>ST_Bean</li>
-							<li>ST_ProcessedCheese</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
 						</thingDefs>
 		</defaultIngredientFilter>
 		<recipeUsers>

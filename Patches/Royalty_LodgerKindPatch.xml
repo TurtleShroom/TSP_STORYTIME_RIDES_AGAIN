@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/QuestScriptDef[defName="Util_ChooseRandomQuestLodgerKind"]/root/nodes/li/node/choices</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/QuestScriptDef[defName="Util_ChooseRandomQuestLodgerKind"]/root/nodes/li/node/choices</xpath>
+			<success>Always</success>
+			<value>
+				<li>
+					<factionDef>Jeubscalon</factionDef>
+					<pawnKinds>
+						<li>PlayerJeub</li>
+					</pawnKinds>
+				</li>
+				<li>
+					<factionDef>GoblinTown</factionDef>
+					<pawnKinds>
+						<li>GoblinTinkerer</li>
+						<li>GoblinRunner</li>
+					</pawnKinds>
+				</li>
+				<li>
+					<factionDef>BeanManFaction</factionDef>
+					<pawnKinds>
+						<li>BeanManGuard</li>
+						<li>BeanManLeader</li>
+					</pawnKinds>
+				</li>
+				<li>
+					<factionDef>Beetnikh</factionDef>
+					<pawnKinds>
+						<li>BeetLeader</li>
+						<li>TSP_BeetMaster</li>
+						<li>BeetArcher</li>
+					</pawnKinds>
+				</li>
+				<li>
+					<factionDef>WoodBeetTribe</factionDef>
+					<pawnKinds>
+						<li>WoodBeetWarrior</li>
+						<li>TSP_ST_WoodBeetCabbageinator</li>
+						<li>WoodBeetWarrior</li>
+						<li>WoodBeetArcher</li>
+						<li>TSP_BeetMaster</li>
+					</pawnKinds>
+				</li>
+				<li>
+					<factionDef>FrogTribes</factionDef>
+					<pawnKinds>
+						<li>FrogPersonHunter</li>
+						<li>FrogPersonWarrior</li>
+						<li>FrogPersonChief</li>
+					</pawnKinds>
+				</li>
+				<li>
+					<factionDef>TreeGnomeEmpire</factionDef>
+					<pawnKinds>
+						<li>TSP_ST_GnomePeasant</li>
+						<li>TSP_ST_RoyaltyGnoble</li>
+					</pawnKinds>
+				</li>
+				<li>
+					<factionDef>PatreonCivil</factionDef>
+					<pawnKinds>
+						<li>TSP_ST_Patreonling_Raider</li>
+						<li>TSP_ST_Patreonling_Caravaneer</li>
+						<li>TSP_ST_Patreonling_Survivalist</li>
+						<li>TSP_ST_Patreonling_Frogman</li>
+						<li>TSP_ST_Patreonling_BeanBulborb</li>
+						<li>TSP_ST_Patreonling_Beet</li>
+						<li>TSP_ST_Patreonling_Goblin</li>
+						<li>TSP_ST_Patreonling_Jeub</li>
+						<li>TSP_ST_Patreonling_Gnome</li>
+						<li>TSP_ST_Patreonling_Marksman</li>
+						<li MayRequire="k4g.core">TSP_ST_K4G_PatreonPresidium</li>
+						<li MayRequire="owen.ark">TSP_ST_ARK_Ark1_Patreonling_Pacifist</li>
+						<li MayRequire="owen.ark">TSP_ST_ARK_Ark2_Patreonling</li>
+					</pawnKinds>
+				</li>
+				<li>
+					<factionDef>CaravanCoop</factionDef>
+					<pawnKinds>
+						<li>Caravan_Patrol</li>
+						<li>TSP_SlaveRat_ForgGrenadier</li>
+						<li>TSP_SlaveRat_ForgGunner</li>
+						<li>Caravan_CoopLeader</li>
+						<li>TSP_SlaveRat_Forg_MercenaryElite</li>
+						<li>TSP_TwoForgsInTrenchcoat_Merchant</li>
+						<li>TSP_ForgMerchant</li>
+						<li>Caravan_Trader</li>
+					</pawnKinds>
+				</li>
+				<li>
+					<factionDef>Harriers</factionDef>
+					<pawnKinds>
+						<li>CombatSlave</li>
+						<li>Raider</li>
+						<li>Robber</li>
+						<li>Armed_Robber</li>
+						<li>Raider_Boss</li>
+						<li MayRequire="mortstrudel.corporationfaction">MF_CorporatePunk</li>
+						<li MayRequire="OskarPotocki.VFE.Pirates">VFEP_Footsoldier</li>
+					</pawnKinds>
+				</li>
+				<li>
+					<factionDef>Survivalist_Group</factionDef>
+					<pawnKinds>
+						<li>Survivalist</li>
+						<li>Local_Spy</li>
+						<li>Footman</li>
+						<li>HeavyFootman</li>
+						<li>Ambusher</li>
+						<li>Striker</li>
+						<li>Survivalist_Leader</li>
+						<li>Guerrilla</li>
+						<li>Drifter</li>
+						<li MayRequire="k4g.vagrants">K4G_Vagrants_StarvingVagrant</li>
+						<li MayRequire="k4g.vagrants">K4G_Vagrants_Leader</li>
+						<li MayRequire="tarojun.morishep.onioftherim">OotR_Oni_Hunter</li>
+						<li MayRequire="tarojun.morishep.onioftherim">OotR_Oni_Archer</li>
+						<li MayRequire="tarojun.morishep.onioftherim">OotR_Oni_HeavyArcher</li>
+						<li MayRequire="theo.escp.khajiit">ESCP_Alfiq_Kingdom_Penitent</li>
+						<li MayRequire="theo.escp.khajiit">ESCP_Khajiit_Kingdom_Warrior</li>
+						<li MayRequire="theo.escp.khajiit">ESCP_OhmesRaht_Kingdom_Warrior</li>
+						<li MayRequire="theo.escp.khajiit">ESCP_Senche_Kingdom_Warrior</li>
+						<li MayRequire="theo.escp.khajiit">ESCP_Khajiit_Kingdom_Trader</li>
+						<li MayRequire="owen.ark">MagicArk</li>
+						<li MayRequire="owen.ark">MercenariesArk</li>
+						<li MayRequire="owen.ark">ImplantArk</li>
+						<li MayRequire="owen.ark">ALLARK</li>
+					</pawnKinds>
+				</li>
+				<li MayRequire="k4g.vagrants">
+					<factionDef MayRequire="k4g.vagrants">Survivalist_Group</factionDef>
+					<pawnKinds MayRequire="k4g.vagrants">
+						<li MayRequire="k4g.vagrants">K4G_Vagrants_StarvingVagrant</li>
+					</pawnKinds>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<!-- Code courtesy of the Elder Scrolls Mod by Sirmashedpotato -->
+	<!--
+	<Operation Class="PatchOperationInsert">
+		<xpath>/Defs/QuestScriptDef[defName="Util_ChooseRandomQuestLodgerKind"]/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_IsSet"]/node[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices/li[factionDef="Empire"]</xpath>
+		<value>
+			<li>
+				<factionDef>Jeubscalon</factionDef>
+				<pawnKinds>
+					<li>PlayerJeub</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>GoblinTown</factionDef>
+				<pawnKinds>
+					<li>GoblinTinkerer</li>
+					<li>GoblinRunner</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>BeanManFaction</factionDef>
+				<pawnKinds>
+					<li>BeanManGuard</li>
+					<li>BeanManLeader</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>Beetnikh</factionDef>
+				<pawnKinds>
+					<li>BeetLeader</li>
+					<li>TSP_BeetMaster</li>
+					<li>BeetArcher</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>WoodBeetTribe</factionDef>
+				<pawnKinds>
+					<li>WoodBeetWarrior</li>
+					<li>TSP_ST_WoodBeetCabbageinator</li>
+					<li>WoodBeetWarrior</li>
+					<li>WoodBeetArcher</li>
+					<li>TSP_BeetMaster</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>FrogTribes</factionDef>
+				<pawnKinds>
+					<li>FrogPersonHunter</li>
+					<li>FrogPersonWarrior</li>
+					<li>FrogPersonChief</li>
+				</pawnKinds>
+			</li>
+			<li>
+				<factionDef>TreeGnomeEmpire</factionDef>
+				<pawnKinds>
+					<li>TSP_ST_GnomePeasant</li>
+					<li>TSP_ST_RoyaltyGnoble</li>
+				</pawnKinds>
+			</li>
+		</value>
+	</Operation>
+	-->
+</Patch>

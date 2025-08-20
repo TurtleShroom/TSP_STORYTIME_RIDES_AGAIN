@@ -45,7 +45,7 @@
 					<li>Cult</li>
 					<li>Brainrot</li>
 				</categories>
-				<commonality>1.1</commonality>
+				<commonality>2</commonality>
 			</li>
 			<li>
 				<categories>
@@ -112,6 +112,84 @@
 				<Tallhuman MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech" Inherit="False">0.08</Tallhuman>
 			</xenotypeChances>
 		</xenotypeSet>
+		<settlementTexturePath>World/WorldObjects/PatreonSettlement</settlementTexturePath>
+	</FactionDef>
+
+	<FactionDef ParentName="PatreonFactionBase">
+		<defName>PatreonCivil</defName>
+		<label>Patronus Traders</label>
+		<description>These people have lived their lives for money and nothing but for decades or centuries, and have lost most of the technology and wealth that brought them to this world. They usually work with simple machinery and defend themselves with advanced gunpowder weapons.\n\nThey are concerned with the high potential of MAD DOSH, trust, and CONTENT. Every. Single. Day.\n\n This particular group holds "civil" behavior in high regard.</description>
+		<colorSpectrum>
+			<li>(1.0, 0.31, 0.27)</li>
+			<li>(0.9, 0.27, 0.31)</li>
+		</colorSpectrum>
+		<classicIdeo>false</classicIdeo>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>10</configurationListOrderPriority>
+		<fixedIdeo>true</fixedIdeo>
+		<ideoName>Samuel Streamer Rites</ideoName>
+		<ideoDescription>We are dedicated, now and forever, to the MAD DOSH, TRUST, AND DAILY CONTENT of our hero and god, Samuel Streamer. In finance, in love, and in life, we swear allegiance and fidelity to the truths of trade, enlightenment and unconditional loyalty.</ideoDescription>
+		<hiddenIdeo>false</hiddenIdeo>
+		<styles>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">Horaxian</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Morbid</li>
+		</styles>
+		<deityPresets>
+			<li>
+				<nameType>
+					<name>Samuel Streamer</name>
+					<type>Invincible Producer</type>
+				</nameType>
+				<gender>Male</gender>
+				<iconPath>World/WorldObjects/Expanding/PatreonTown</iconPath>
+			</li>
+		</deityPresets>
+		<requiredMemes>
+			<!-- Also inherits from the Base -->
+			<li MayRequire="vanillaexpanded.vmemese">VME_Nationalist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</requiredMemes>
+		<disallowedMemes>
+			<li MayRequire="vanillaexpanded.vmemese">VME_Emancipation</li>
+		</disallowedMemes>
+		<disallowedPrecepts>
+			<li MayRequire="VanillaExpanded.VMemesE">VME_Slavery_Forbidden</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+			<li MayRequire="erdelf.HumanoidAlienRaces,Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Abhorrent</li>
+			<li MayRequire="erdelf.HumanoidAlienRaces,Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Horrible</li>
+		</disallowedPrecepts>
+		<structureMemeWeights>
+			<VME_Structure_Corporate MayRequire="VanillaExpanded.VMemesE,Ludeon.RimWorld.Ideology">10</VME_Structure_Corporate>
+			<AM_Structure_Jewish MayRequire="sarg.alphamemes,Ludeon.RimWorld.Ideology">11</AM_Structure_Jewish>
+			<AM_Structure_Corsair MayRequire="sarg.alphamemes,Ludeon.RimWorld.Ideology">2</AM_Structure_Corsair>
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">0.001</Structure_Ideological>
+		</structureMemeWeights>
+		<xenotypeSet MayRequire="ludeon.rimworld.biotech">
+			<xenotypeChances MayRequire="ludeon.rimworld.biotech">
+				<BEWH_TzeentchMarine MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.02</BEWH_TzeentchMarine>
+				<BEWH_NurgleMarine MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.02</BEWH_NurgleMarine>
+				<BEWH_SlaaneshMarine MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.02</BEWH_SlaaneshMarine>
+				<BEWH_KhorneMarine MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.02</BEWH_KhorneMarine>
+				<BEWH_ChaosMarine MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.012</BEWH_ChaosMarine>
+				<BEWH_DPKhorne MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.01</BEWH_DPKhorne>
+				<BEWH_DPNurgle MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.01</BEWH_DPNurgle>
+				<BEWH_DPTzeentch MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.01</BEWH_DPTzeentch>
+				<BEWH_DPSlaanesh MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.001</BEWH_DPSlaanesh>
+				<BEWH_TzeentchCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.051</BEWH_TzeentchCultist>
+				<BEWH_NurgleCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.051</BEWH_NurgleCultist>
+				<BEWH_SlaaneshCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.051</BEWH_SlaaneshCultist>
+				<BEWH_KhorneCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.051</BEWH_KhorneCultist>
+				<BEWH_ChaosCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.2</BEWH_ChaosCultist>
+				<OE_Tortle MayRequire="obsidiaexpansion.xenos.tortle,ludeon.rimworld.biotech" Inherit="False">0.1</OE_Tortle>
+				<DV_Bogleg MayRequire="det.boglegs,ludeon.rimworld.biotech">0.12</DV_Bogleg>
+				<MorrowRim_AshlanderXenotype MayRequire="sirmashedpotato.morrowrim.ashlanderxenotype,ludeon.rimworld.biotech">0.021</MorrowRim_AshlanderXenotype>
+				<Weezey MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech" Inherit="False">0.1</Weezey>
+				<Tallhuman MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech" Inherit="False">0.08</Tallhuman>
+				<Neco MayRequire="neco.genes,ludeon.rimworld.biotech">0.04</Neco>
+			</xenotypeChances>
+		</xenotypeSet>
 		<pawnGroupMakers>
 			<li>
 			<!-- Normal fights, standard mix -->
@@ -153,8 +231,17 @@
 					<Town_Guard>10</Town_Guard>
 					<Grenadier_Destructive>25</Grenadier_Destructive>
 					<Mercenary_Elite>1</Mercenary_Elite>
+					<TSP_ST_Patreonling_Raider>1</TSP_ST_Patreonling_Raider>
+					<TSP_ST_Patreonling_Caravaneer>1</TSP_ST_Patreonling_Caravaneer>
+					<TSP_ST_Patreonling_Survivalist>1</TSP_ST_Patreonling_Survivalist>
+					<TSP_ST_Patreonling_Frogman>1</TSP_ST_Patreonling_Frogman>
+					<TSP_ST_Patreonling_BeanBulborb>1</TSP_ST_Patreonling_BeanBulborb>
+					<TSP_ST_Patreonling_Beet>1</TSP_ST_Patreonling_Beet>
+					<TSP_ST_Patreonling_Goblin>1</TSP_ST_Patreonling_Goblin>
+					<TSP_ST_Patreonling_Jeub>1</TSP_ST_Patreonling_Jeub>
+					<TSP_ST_Patreonling_Gnome>1</TSP_ST_Patreonling_Gnome>
 					<Bear_Polar>425</Bear_Polar>
-					<JE_PerfectlyNormalJoris MayRequire="sarg.jorisexperience">300</JE_PerfectlyNormalJoris>
+					<JE_PerfectlyNormalJoris MayRequire="sarg.jorisexperience">425</JE_PerfectlyNormalJoris>
 					<VFEM2_Trader MayRequire="oskarpotocki.vfe.medieval2">10</VFEM2_Trader>
 					<VFEM2_Merchant MayRequire="oskarpotocki.vfe.medieval2">10</VFEM2_Merchant>
 				</options>
@@ -172,6 +259,15 @@
 					<Mercenary_Elite>15</Mercenary_Elite>
 					<Town_Councilman>1</Town_Councilman>
 					<TSP_ST_Patreonling_Marksman>4</TSP_ST_Patreonling_Marksman>
+					<TSP_ST_Patreonling_Raider>1</TSP_ST_Patreonling_Raider>
+					<TSP_ST_Patreonling_Caravaneer>1</TSP_ST_Patreonling_Caravaneer>
+					<TSP_ST_Patreonling_Survivalist>1</TSP_ST_Patreonling_Survivalist>
+					<TSP_ST_Patreonling_Frogman>1</TSP_ST_Patreonling_Frogman>
+					<TSP_ST_Patreonling_BeanBulborb>1</TSP_ST_Patreonling_BeanBulborb>
+					<TSP_ST_Patreonling_Beet>1</TSP_ST_Patreonling_Beet>
+					<TSP_ST_Patreonling_Goblin>1</TSP_ST_Patreonling_Goblin>
+					<TSP_ST_Patreonling_Jeub>1</TSP_ST_Patreonling_Jeub>
+					<TSP_ST_Patreonling_Gnome>1</TSP_ST_Patreonling_Gnome>
 					<!-- <TSP_ST_ARK_Ark1_Patreonling_Pacifist MayRequire="owen.ark">1</TSP_ST_ARK_Ark1_Patreonling_Pacifist> -->
 					<TSP_ST_ARK_Ark2_Patreonling MayRequire="owen.ark">15</TSP_ST_ARK_Ark2_Patreonling>
 					<TSP_ST_Ghoul_Patreonling MayRequire="baskerville.hellsingarmsultimate">10</TSP_ST_Ghoul_Patreonling>
@@ -216,7 +312,7 @@
 					<Mercenary_Slasher>3</Mercenary_Slasher>
 					<Mercenary_Gunner>3</Mercenary_Gunner>
 					<Mercenary_Elite>3</Mercenary_Elite>
-					<TSP_ST_Patreonling_Raider>25</TSP_ST_Patreonling_Raider>
+					<TSP_ST_Patreonling_Raider>10</TSP_ST_Patreonling_Raider>
 					<TSP_ST_Patreonling_Caravaneer>25</TSP_ST_Patreonling_Caravaneer>
 					<TSP_ST_Patreonling_Survivalist>25</TSP_ST_Patreonling_Survivalist>
 					<TSP_ST_Patreonling_Frogman>25</TSP_ST_Patreonling_Frogman>
@@ -244,7 +340,7 @@
 			</li>
 			<li>
 				<kindDef>Trader</kindDef>
-				<commonality>100</commonality>
+				<commonality>90</commonality>
 				<traders>
 					<Town_Trader>1</Town_Trader>
 					<VFEM2_Trader MayRequire="oskarpotocki.vfe.medieval2">100</VFEM2_Trader>
@@ -260,10 +356,24 @@
 					<Mercenary_Slasher>7</Mercenary_Slasher>
 					<Mercenary_Gunner>10</Mercenary_Gunner>
 					<Mercenary_Elite>10</Mercenary_Elite>
-					<TSP_ST_K4G_PatreonPresidium MayRequire="k4g.core">20</TSP_ST_K4G_PatreonPresidium>
-					<TSP_ST_Patreonling_Caravaneer>25</TSP_ST_Patreonling_Caravaneer>
 					<Bear_Polar>75</Bear_Polar>
 					<TSP_ST_Patreonling_Marksman>5</TSP_ST_Patreonling_Marksman>
+					<TSP_ST_Patreonling_Caravaneer>25</TSP_ST_Patreonling_Caravaneer>
+					<TSP_ST_Patreonling_Raider>25</TSP_ST_Patreonling_Raider>
+					<TSP_ST_Patreonling_Caravaneer>25</TSP_ST_Patreonling_Caravaneer>
+					<TSP_ST_Patreonling_Survivalist>25</TSP_ST_Patreonling_Survivalist>
+					<TSP_ST_Patreonling_Frogman>25</TSP_ST_Patreonling_Frogman>
+					<TSP_ST_Patreonling_BeanBulborb>25</TSP_ST_Patreonling_BeanBulborb>
+					<TSP_ST_Patreonling_Beet>25</TSP_ST_Patreonling_Beet>
+					<TSP_ST_Patreonling_Goblin>25</TSP_ST_Patreonling_Goblin>
+					<TSP_ST_Patreonling_Jeub>25</TSP_ST_Patreonling_Jeub>
+					<TSP_ST_Patreonling_Gnome>25</TSP_ST_Patreonling_Gnome>
+					<TSP_ST_ARK_Ark1_Patreonling_Pacifist MayRequire="owen.ark">25</TSP_ST_ARK_Ark1_Patreonling_Pacifist>
+					<TSP_ST_ARK_Ark2_Patreonling MayRequire="owen.ark">25</TSP_ST_ARK_Ark2_Patreonling>
+					<TSP_ST_Ghoul_Patreonling MayRequire="baskerville.hellsingarmsultimate">5</TSP_ST_Ghoul_Patreonling>
+					<TSP_ST_HSAU_Patroenling_HeckDiver MayRequire="baskerville.hellsingarmsultimate">15</TSP_ST_HSAU_Patroenling_HeckDiver>
+					<TSP_ST_K4G_PatreonPresidium MayRequire="k4g.core">20</TSP_ST_K4G_PatreonPresidium>
+					<TSP_ST_K4G_PatreonPresidium MayRequire="k4g.core">20</TSP_ST_K4G_PatreonPresidium>
 					<JE_PerfectlyNormalJoris MayRequire="sarg.jorisexperience">50</JE_PerfectlyNormalJoris>
 					<VFEM2_Trader MayRequire="oskarpotocki.vfe.medieval2">18</VFEM2_Trader>
 					<VFEM2_Merchant MayRequire="oskarpotocki.vfe.medieval2">18</VFEM2_Merchant>
@@ -376,83 +486,6 @@
 				</options>
 			</li>
 		</pawnGroupMakers>
-		<settlementTexturePath>World/WorldObjects/PatreonSettlement</settlementTexturePath>
-	</FactionDef>
-
-	<FactionDef ParentName="PatreonFactionBase">
-		<defName>PatreonCivil</defName>
-		<label>Patronus Traders</label>
-		<description>These people have lived their lives for money and nothing but for decades or centuries, and have lost most of the technology and wealth that brought them to this world. They usually work with simple machinery and defend themselves with advanced gunpowder weapons.\n\nThey are concerned with the high potential of MAD DOSH, trust, and CONTENT. Every. Single. Day.\n\n This particular group holds "civil" behavior in high regard.</description>
-		<colorSpectrum>
-			<li>(1.0, 0.31, 0.27)</li>
-			<li>(0.9, 0.27, 0.31)</li>
-		</colorSpectrum>
-		<classicIdeo>false</classicIdeo>
-		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority>10</configurationListOrderPriority>
-		<fixedIdeo>true</fixedIdeo>
-		<ideoName>Samuel Streamer Rites</ideoName>
-		<ideoDescription>We are dedicated, now and forever, to the MAD DOSH, TRUST, AND DAILY CONTENT of our hero and god, Samuel Streamer. In finance, in love, and in life, we swear allegiance and fidelity to the truths of trade, enlightenment and unconditional loyalty.</ideoDescription>
-		<hiddenIdeo>false</hiddenIdeo>
-		<styles>
-			<li MayRequire="Ludeon.RimWorld.Anomaly">Horaxian</li>
-			<li MayRequire="Ludeon.RimWorld.Ideology">Morbid</li>
-		</styles>
-		<deityPresets>
-			<li>
-				<nameType>
-					<name>Samuel Streamer</name>
-					<type>Invincible Producer</type>
-				</nameType>
-				<gender>Male</gender>
-				<iconPath>World/WorldObjects/Expanding/PatreonTown</iconPath>
-			</li>
-		</deityPresets>
-		<requiredMemes>
-			<li MayRequire="vanillaexpanded.vmemese">VME_Nationalist</li>
-			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
-		</requiredMemes>
-		<disallowedMemes>
-			<li MayRequire="vanillaexpanded.vmemese">VME_Emancipation</li>
-		</disallowedMemes>
-		<disallowedPrecepts>
-			<li MayRequire="VanillaExpanded.VMemesE">VME_Slavery_Forbidden</li>
-			<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
-			<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
-			<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
-			<li MayRequire="erdelf.HumanoidAlienRaces,Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Abhorrent</li>
-			<li MayRequire="erdelf.HumanoidAlienRaces,Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Horrible</li>
-		</disallowedPrecepts>
-		<structureMemeWeights>
-			<VME_Structure_Corporate MayRequire="VanillaExpanded.VMemesE,Ludeon.RimWorld.Ideology">10</VME_Structure_Corporate>
-			<AM_Structure_Jewish MayRequire="sarg.alphamemes,Ludeon.RimWorld.Ideology">11</AM_Structure_Jewish>
-			<AM_Structure_Corsair MayRequire="sarg.alphamemes,Ludeon.RimWorld.Ideology">2</AM_Structure_Corsair>
-			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">0.001</Structure_Ideological>
-		</structureMemeWeights>
-		<xenotypeSet MayRequire="ludeon.rimworld.biotech">
-			<xenotypeChances MayRequire="ludeon.rimworld.biotech">
-				<BEWH_TzeentchMarine MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.02</BEWH_TzeentchMarine>
-				<BEWH_NurgleMarine MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.02</BEWH_NurgleMarine>
-				<BEWH_SlaaneshMarine MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.02</BEWH_SlaaneshMarine>
-				<BEWH_KhorneMarine MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.02</BEWH_KhorneMarine>
-				<BEWH_ChaosMarine MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.012</BEWH_ChaosMarine>
-				<BEWH_DPKhorne MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.01</BEWH_DPKhorne>
-				<BEWH_DPNurgle MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.01</BEWH_DPNurgle>
-				<BEWH_DPTzeentch MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.01</BEWH_DPTzeentch>
-				<BEWH_DPSlaanesh MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.001</BEWH_DPSlaanesh>
-				<BEWH_TzeentchCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.051</BEWH_TzeentchCultist>
-				<BEWH_NurgleCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.051</BEWH_NurgleCultist>
-				<BEWH_SlaaneshCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.051</BEWH_SlaaneshCultist>
-				<BEWH_KhorneCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.051</BEWH_KhorneCultist>
-				<BEWH_ChaosCultist MayRequire="phonicmas.40kgenes,ludeon.rimworld.biotech">0.2</BEWH_ChaosCultist>
-				<OE_Tortle MayRequire="obsidiaexpansion.xenos.tortle,ludeon.rimworld.biotech" Inherit="False">0.1</OE_Tortle>
-				<DV_Bogleg MayRequire="det.boglegs,ludeon.rimworld.biotech">0.12</DV_Bogleg>
-				<MorrowRim_AshlanderXenotype MayRequire="sirmashedpotato.morrowrim.ashlanderxenotype,ludeon.rimworld.biotech">0.021</MorrowRim_AshlanderXenotype>
-				<Weezey MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech" Inherit="False">0.1</Weezey>
-				<Tallhuman MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.biotech" Inherit="False">0.08</Tallhuman>
-				<Neco MayRequire="neco.genes,ludeon.rimworld.biotech">0.04</Neco>
-			</xenotypeChances>
-		</xenotypeSet>
 	</FactionDef>
 	
 	<ThingSetMakerDef>

@@ -16,7 +16,7 @@
 						<PipeSystem.ProcessDef>
 							<defName>TSP_ST_CHEESE_BORPA_CHEESE_PROCESS</defName>
 							<label>CHEESE BORPA CHEESE</label>
-							<description>Turns Borpa Milk into Borpa Cheese! Borpa cheese matures faster than most cheeses, at the cost of it taking more Borpa milk to make less cheese. It tastes divine.</description>
+							<description>Turns Borpa Milk into Borpa Cheese! Borpa cheese matures faster than most cheeses, at the cost of it taking more Borpa Milk to make less cheese. It tastes divine.</description>
 							<labelOverride>Fifty Borpa Milk to fifteen BORPA CHEESE</labelOverride>
 							<!-- <priorityInBillList>0</priorityInBillList> -->
 							<spawnOnInteractionCell>true</spawnOnInteractionCell>
@@ -27,23 +27,17 @@
 									<countNeeded>50</countNeeded>
 								</li>
 							</ingredients>
-							<ticksQuality>
-								<li>60000</li> <!-- AWFUL = One day -->
-								<li>180000</li> <!-- POOR = Three days -->
-								<li>300000</li> <!-- NORMAL = Five days -->
-								<li>960000</li> <!-- GOOD = Sixteen days -->
-								<li>1800000</li> <!-- EXCELLENT = Thirty days -->
-								<li>2220000</li> <!-- MASTERPIECE = Thirty-seven days -->
-								<li>2580000</li> <!-- LEGENDARY = Forty-seven days -->
-							</ticksQuality>
+							<ticks>300000</ticks> <!-- Should be five days -->
 							<results>
 								<li>
-									<thing>VCE_Cheese</thing>
+									<thing>TSP_ST_VFEC_BORPA_CHEESE</thing>
 									<count>15</count>
 								</li>
 							</results>
+							<!--
 							<stopAtQuality>false</stopAtQuality>
 							<allowExtractAtCurrentQuality>true</allowExtractAtCurrentQuality>
+							-->
 							<autoExtract>false</autoExtract>
 							<temperatureRuinable>false</temperatureRuinable>
 						</PipeSystem.ProcessDef>
@@ -68,23 +62,17 @@
 									<countNeeded>50</countNeeded>
 								</li>
 							</ingredients>
-							<ticksQuality>
-								<li>60000</li> <!-- AWFUL = One day -->
-								<li>180000</li> <!-- POOR = Three days -->
-								<li>300000</li> <!-- NORMAL = Five days -->
-								<li>960000</li> <!-- GOOD = Sixteen days -->
-								<li>1800000</li> <!-- EXCELLENT = Thirty days -->
-								<li>2220000</li> <!-- MASTERPIECE = Thirty-seven days -->
-								<li>2580000</li> <!-- LEGENDARY = Forty-seven days -->
-							</ticksQuality>
+							<ticks>300000</ticks> <!-- Should be five days -->
 							<results>
 								<li>
 									<thing>TSP_ST_VFEC_GreenCheese</thing>
 									<count>15</count>
 								</li>
 							</results>
+							<!--
 							<stopAtQuality>false</stopAtQuality>
 							<allowExtractAtCurrentQuality>true</allowExtractAtCurrentQuality>
+							-->
 							<autoExtract>false</autoExtract>
 							<temperatureRuinable>false</temperatureRuinable>
 						</PipeSystem.ProcessDef>
@@ -143,6 +131,119 @@
 				</li>
 			</operations>
 		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- The SYR Universal Processor Mod is better!! -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DankPyon_Presser"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOO! -->
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="DankPyon_Presser"]/comps/li/processes</xpath>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_MO_Borpa_PressCheeseProcess</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_MO_DankPyon_Gecko_PressCheeseProcess</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- The SYR Universal Processor Mod is better!! -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="MO_SoupPot"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOO! -->
+		<match Class="PatchOperationSequence">
+			<!--<success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationAdd" MayRequire="vanillaexpanded.vcooke,dankpyon.medieval.overhaul,vr.mopatches">
+					<xpath>/Defs</xpath>
+					<success>Always</success>
+					<value>
+						<ProcessorFramework.ProcessDef>
+							<defName>TSP_ST_MO_VR_BORPA_SOUP</defName>
+							<thingDef>TSP_ST_SOUP_BORPA_EYE_SOUP</thingDef>
+							<ingredientFilter>
+								<thingDefs>
+									<li>TSP_ST_VFEC_Soup_BorpaEye_Soup_Raw</li>
+								</thingDefs>
+							</ingredientFilter>
+							<capacityFactor>2</capacityFactor>
+							<efficiency>10.0</efficiency>
+							<processDays>1</processDays>
+						</ProcessorFramework.ProcessDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd" MayRequire="vanillaexpanded.vcooke,dankpyon.medieval.overhaul,vr.mopatches">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="MO_SoupPot"]/comps/li/processes</xpath>
+					<value>
+						<li MayRequire="vanillaexpanded.vcooke,dankpyon.medieval.overhaul,vr.mopatches">TSP_ST_MO_VR_BORPA_SOUP</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- The SYR Universal Processor Mod is better!! -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingCategoryDef[defName="DankPyon_DriedFood"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOO! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove" MayRequire="vr.mopatches">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipes/li[text()="DankPyon_ExtractHoney"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove" MayRequire="vr.mopatches">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/recipes/li[text()="DankPyon_ExtractHoneyBulk"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove" MayRequire="vr.mopatches">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/recipeUsers/li[text()="DankPyon_TailorsBench"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/comps/li/processes/li[text()="VCE_BeeCheese"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove" MayRequire="vr.mopatches">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="VCE_BeeCheese"]</xpath>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VCE_ElectricPot"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="VCE_ElectricPot"]/designationCategory</xpath>
+			<success>Always</success>
+			<value>
+				<designationCategory>Production</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VCE_ElectricPot"]</xpath>
+			<success>Always</success>
+			<value>
+				<designationCategory>Production</designationCategory>
+			</value>
+		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 </Patch>

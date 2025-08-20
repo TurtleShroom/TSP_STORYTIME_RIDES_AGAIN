@@ -82,8 +82,10 @@
 			<xpath>/Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites>
+					<!--
 					<li>Machining</li>
 					<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
+					-->
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ComplexRecycling</li>
 				</researchPrerequisites>
 			</value>
@@ -163,7 +165,7 @@
 			<xpath MayRequire="romyashi.toxins">/Defs/RecipeDef[defName="Romy_ToxinProductionWastepack"]/researchPrerequisite</xpath>
 			<value>
 				<researchPrerequisites Inherit="False">
-					<li>ToxGas</li>
+					<!-- <li>ToxGas</li> -->
 					<!-- <li MayRequire="TSP.BathroomHumor">WasteContainment</li> -->
 					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ComplexRecycling</li>
 				</researchPrerequisites>
@@ -192,11 +194,11 @@
 			<success>Always</success>
 			<xpath>/Defs/ThingDef[defName="Toxalope"]/comps</xpath>
 			<value>
-				<comps Inherit="False">
+				<comps>
 					<li Class="VEF.AnimalBehaviours.CompProperties_AnimalProduct" MayRequire="TSP.Isengriff.Storytime,oskarpotocki.vanillafactionsexpanded.core">
 						<resourceDef MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</resourceDef>
 						<gatheringIntervalDays MayRequire="TSP.Isengriff.Storytime">1</gatheringIntervalDays>
-						<resourceAmount MayRequire="TSP.Isengriff.Storytime">7</resourceAmount>
+						<resourceAmount MayRequire="TSP.Isengriff.Storytime">10</resourceAmount>
 						<customResourceString MayRequire="TSP.Isengriff.Storytime">PoisonGather</customResourceString>
 					</li>
 				</comps>
@@ -578,19 +580,22 @@
 					<li>
 						<compClass>CompDissolutionEffect_Goodwill</compClass>
 					</li>
+					<!--
 					<li Class="CompProperties_Ingredients">
 						<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
 					</li>
+					-->
 				</comps>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
-		<!-- If it does, do this replacement. -->
+	 Does this exist?
+		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]</xpath>
+		If it does, do this replacement.
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/ingredients</xpath>
@@ -632,8 +637,9 @@
 				</ingredients>
 			</value>
 		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
+		If the first XPATH does not exist, the original code stands.
 	</Operation>
+	-->
 	
 	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
@@ -661,10 +667,11 @@
 		</nomatch>
 	</Operation>
 	
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-	<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/fixedIngredientFilter</xpath>
-		<!-- If it does, do this replacement. -->
+	 Does this exist?
+		<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/fixedIngredientFilter</xpath>
+		If it does, do this replacement.
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
 			<xpath>/Defs/RecipeDef[defName="ContainToxicWaste"]/fixedIngredientFilter</xpath>
@@ -690,8 +697,9 @@
 				</fixedIngredientFilter>
 			</value>
 		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
+		If the first XPATH does not exist, the original code stands.
 	</Operation>
+	-->
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
@@ -713,6 +721,7 @@
 					</thingDefs>
 					<disallowedThingDefs>
 						<li>WasteCanister</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 					</disallowedThingDefs>
 				</defaultIngredientFilter>
 			</value>
@@ -1064,7 +1073,7 @@
 				<thingCategories>
 					<li>ItemsMisc</li>
 					<li MayRequire="dubwise.dubsbadhygiene">Waste</li>
-					<li MayRequire="dubwise.rimatomics">NuclearWaste</li>
+					<!-- <li MayRequire="dubwise.rimatomics">NuclearWaste</li> -->
 				</thingCategories>
 			</value>
 		</match>
@@ -1263,14 +1272,16 @@
   
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
+		<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]/prerequisites</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
 			<success>Always</success>
 			<xpath>/Defs/ResearchProjectDef[defName="VRecyclingE_BasicRecycling"]/prerequisites</xpath>
 			<value>
-				<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
-				<!-- <li MayRequire="ludeon.rimworld.biotech">ToxGas</li> -->
+				<prerequisites>
+					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
+					<!-- <li MayRequire="ludeon.rimworld.biotech">ToxGas</li> -->
+				</prerequisites>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -1829,7 +1840,7 @@
 					  <li>
 						<filter>
 						  <thingDefs>
-							<li>ST_PoisonExtract</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 							<li MayRequire="romyashi.toxins,ludeon.rimworld.biotech">Romy_Toxipod_Juice</li>
 							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
 						  </thingDefs>
@@ -1842,7 +1853,7 @@
 					</ingredients>
 					<fixedIngredientFilter>
 						<thingDefs>
-							<li>ST_PoisonExtract</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 							<li MayRequire="romyashi.toxins,ludeon.rimworld.biotech">Romy_Toxipod_Juice</li>
 							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
 						</thingDefs>
@@ -1852,7 +1863,7 @@
 					</fixedIngredientFilter>
 					<defaultIngredientFilter>
 						<thingDefs>
-							<li>ST_PoisonExtract</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
 						</thingDefs>
 						<disallowedThingDefs>
@@ -1886,7 +1897,7 @@
 					  <li>
 						<filter>
 						  <thingDefs>
-							<li>ST_PoisonExtract</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 							<li MayRequire="romyashi.toxins,ludeon.rimworld.biotech">Romy_Toxipod_Juice</li>
 							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
 						  </thingDefs>
@@ -1899,7 +1910,7 @@
 					</ingredients>
 					<fixedIngredientFilter>
 						<thingDefs>
-							<li>ST_PoisonExtract</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 							<li MayRequire="romyashi.toxins,ludeon.rimworld.biotech">Romy_Toxipod_Juice</li>
 							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
 						</thingDefs>
@@ -1943,7 +1954,7 @@
 					  <li>
 						<filter>
 						  <thingDefs>
-							<li>ST_PoisonExtract</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 							<li MayRequire="romyashi.toxins,ludeon.rimworld.biotech">Romy_Toxipod_Juice</li>
 							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
 						  </thingDefs>
@@ -1956,7 +1967,7 @@
 					</ingredients>
 					<fixedIngredientFilter>
 						<thingDefs>
-							<li>ST_PoisonExtract</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 							<li MayRequire="romyashi.toxins,ludeon.rimworld.biotech">Romy_Toxipod_Juice</li>
 							<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_RafflesiaLeaves</li>
 						</thingDefs>
@@ -1966,7 +1977,7 @@
 					</fixedIngredientFilter>
 					<defaultIngredientFilter>
 						<thingDefs>
-							<li>ST_PoisonExtract</li>
+							<li MayRequire="TSP.Isengriff.Storytime">ST_PoisonExtract</li>
 						</thingDefs>
 					</defaultIngredientFilter>
 					<researchPrerequisites></researchPrerequisites>
@@ -2095,7 +2106,7 @@
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
-					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ComplexRecycling</li>
 				</researchPrerequisites>
 			</value>
 		</match>
@@ -2106,7 +2117,7 @@
 			<value>
 				<researchPrerequisites>
 					<li MayRequire="TSP.BathroomHumor">WasteContainment</li>
-					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
+					<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ComplexRecycling</li>
 				</researchPrerequisites>
 			</value>
 		</nomatch>

@@ -1613,4 +1613,522 @@
       </operations>
     </match>
   </Operation>
+  
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>/Defs/ThingDef[defName="O_RawTomatoes"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
+					<success>Always</success>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef/products/O_RawTomatoes</xpath>
+					<success>Always</success>
+					<value>
+						<TomatoCyst>25</TomatoCyst>
+						<VCE_RawTomatoes MayRequire="vanillaexpanded.vplantse">25</VCE_RawTomatoes>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/costList/O_RawTomatoes</xpath>
+					<success>Always</success>
+					<value>
+						<TomatoCyst>5</TomatoCyst>
+					</value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="O_RawTomatoes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="O_TomatoPlant"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/BiomeDef/wildPlants/O_TomatoPlant</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+						<defName>O_RawTomatoes</defName>
+							<label>tomat-ohs (ERROR)</label>
+							<description>TurtleShroom's version of the Storytime Mod removes the Oh Ingredients Mod's duplicate Tomato. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData Inherit="False">
+								<texPath>Things/Item/PlantFoodRaw/Tomato</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<color>(132,80,52)</color>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+						<defName>O_TomatoPlant</defName>
+							<label>tomat-ohs (ERROR)</label>
+							<description>TurtleShroom's version of the Storytime Mod removes the Oh Ingredients Mod's duplicate Tomato. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData Inherit="False">
+								<texPath>Things/Item/PlantFoodRaw/Tomato</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<color>(132,80,52)</color>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+  
+  
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DankPyon_RawMulberry"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
+						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/costList/DankPyon_RawTomatoes</xpath>
+					<value>
+						<TomatoCyst>5</TomatoCyst>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="DankPyon_RawTomatoes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="DankPyon_Plant_Tomatoes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/BiomeDef/wildPlants/DankPyon_Plant_Tomatoes</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+							<defName>DankPyon_RawTomatoes</defName>
+							<label>Medieval Overhaul Tomato (ERROR)</label>
+							<description>The TurtleShroom Storytime Mod removes the Medieval Overhaul Mod's tomatoes. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData>
+								<texPath>Things/Item/Resource/PlantFoodRaw/RawTomatoes</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+							<defName>DankPyon_Plant_Tomatoes</defName>
+							<label>Medieval Overhaul Tomato Plant (ERROR)</label>
+							<description>The TurtleShroom Storytime Mod removes the Medieval Overhaul Mod's tomatoes. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData>
+								<texPath>Things/Plants/FullGrown/TomatoPlant</texPath>
+								<graphicClass>Graphic_Random</graphicClass>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="DankPyon_Post"]/building/defaultPlantToGrow</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_Post"]/building/defaultPlantToGrow</xpath>
+			<success>Always</success>
+			<value>
+				<defaultPlantToGrow>Plant_MysteriousFruit</defaultPlantToGrow>
+			</value>
+		</match>
+		<!--If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VV_MapleSyrup"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VV_Limes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Lime</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VV_Limes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Lime</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VV_Limes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Lime</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="VV_Limes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Lime</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VV_Limes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Lime</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VV_Limes"]</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">ST_Lime</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="VV_Limes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="VV_Limes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VV_Limes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VV_Limes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef/costList/VV_Limes</xpath>
+					<value>
+						<ST_Lime MayRequire="TSP.Isengriff.Storytime">5</ST_Lime>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="VV_Limes"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/ThingDef[defName="VV_LimeTree"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>/Defs/BiomeDef/wildPlants/VV_LimeTree</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+							<defName>VV_Limes</defName>
+							<label>Vvenchov Limes (ERROR)</label>
+							<description>The TurtleShroom Storytime Mod removes the Vvenchov Tree Mod's limes. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData>
+								<texPath>Things/Items/Raw/VV_Limes</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+							<defName>VV_LimeTree</defName>
+							<label>Vvenchov Lime Plant (ERROR)</label>
+							<description>The TurtleShroom Storytime Mod removes the Vvenchov Tree Mod's limes. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData>
+								<texPath>Things/Plants/Trees/VV_LimeTree</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
 </Patch>

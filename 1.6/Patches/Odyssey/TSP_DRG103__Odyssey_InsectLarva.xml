@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="EggSacPlayer"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<success>Always</success>
+					<value>
+						<AbilityDef ParentName="LarvaMetamorphBase">
+							<defName>TSP_ST_DRG103_LarvaToAnt</defName>
+							<label>larva metamorphosis into Macro-Ant</label>
+							<description>Command this Insect Larva to begin the process of transitioning to a Macro-Ant!</description>
+							<descriptionHyperlinks>
+								<ThingDef>ST_Ant</ThingDef>
+							</descriptionHyperlinks>
+							<iconPath>Things/Pawn/Animal/Bug_Types/Ant/Ant_east</iconPath>
+							<comps>
+								<li Class="LARVA.CompProperties_LarvaMetamorph">
+									<buildingspawnDef>TSP_ST_DRG103_MacroAntCocoon_Player</buildingspawnDef>
+								</li>
+							</comps>
+						</AbilityDef>
+						
+						<ThingDef ParentName="CocoonBasePlayer">
+							<defName>TSP_ST_DRG103_MacroAntCocoon_Player</defName>
+							<label>spelopede cocoon</label>
+							<description>A morph cocoon containing a Macro-Ant.\n\nThis Cocoon has been formed by a larval insect, changing its form into the requested kind</description>
+							<descriptionHyperlinks>
+								<ThingDef>ST_Ant</ThingDef>
+							</descriptionHyperlinks>
+							<graphicData>
+								<texPath>Things/Building/EggSac</texPath>
+							</graphicData>
+							<building>
+								<combatPower>5</combatPower>
+							</building>
+							<comps>
+								<li Class="CompProperties_Glower">
+									<glowRadius>3</glowRadius>
+									<glowColor>(113,141,117,0)</glowColor>
+								</li>
+								<li Class="LARVA.CompProperties_LarvaHatcher">
+									<hatcherDaystoHatch>0.5</hatcherDaystoHatch>
+									<hatcherPawn>ST_Ant</hatcherPawn>
+								</li>
+							</comps>
+						</ThingDef>
+					</value>
+				</li>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<success>Always</success>
+					<value>
+						<AbilityDef ParentName="LarvaMetamorphBase">
+							<defName>TSP_ST_DRG103_LarvaToMilkBeetle</defName>
+							<label>larva metamorphosis into Milk Beetle</label>
+							<description>Command this Insect Larva to begin the process of transitioning to a Milk Beetle!</description>
+							<descriptionHyperlinks>
+								<ThingDef>VFEI1_VatGrown_MilkBeetle</ThingDef>
+							</descriptionHyperlinks>
+							<iconPath>Things/Pawn/Animal/VatGrown/VFEI_VatGrownMilkbeetle/VFEI_VatGrownMilkbeetle_east</iconPath>
+							<comps>
+								<li Class="LARVA.CompProperties_LarvaMetamorph">
+									<buildingspawnDef>TSP_ST_DRG103_MilkBeetleCocoon_Player</buildingspawnDef>
+								</li>
+							</comps>
+						</AbilityDef>
+						
+						<ThingDef ParentName="CocoonBasePlayer">
+							<defName>TSP_ST_DRG103_MilkBeetleCocoon_Player</defName>
+							<label>spelopede cocoon</label>
+							<description>A morph cocoon containing a Milk Beetle.\n\nThis Cocoon has been formed by a larval insect, changing its form into the requested kind</description>
+							<descriptionHyperlinks>
+								<ThingDef>VFEI1_VatGrown_MilkBeetle</ThingDef>
+							</descriptionHyperlinks>
+							<graphicData>
+								<texPath>Things/Building/EggSac</texPath>
+							</graphicData>
+							<building>
+								<combatPower>10</combatPower>
+							</building>
+							<comps>
+								<li Class="CompProperties_Glower">
+									<glowRadius>6</glowRadius>
+									<glowColor>(113,141,117,0)</glowColor>
+								</li>
+								<li Class="LARVA.CompProperties_LarvaHatcher">
+									<hatcherDaystoHatch>0.5</hatcherDaystoHatch>
+									<hatcherPawn>VFEI1_VatGrown_MilkBeetle</hatcherPawn>
+								</li>
+							</comps>
+						</ThingDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<success>Always</success>
+					<value>
+						<AbilityDef ParentName="LarvaMetamorphBase">
+							<defName>TSP_ST_DRG103_LarvaToJudasFrog</defName>
+							<label>larva metamorphosis into Judas' "Frog"</label>
+							<description>Command this Insect Larva to begin the process of transitioning to a Judas' frog, which is not actually a frog!</description>
+							<descriptionHyperlinks>
+								<ThingDef>JudasFrog</ThingDef>
+							</descriptionHyperlinks>
+							<iconPath>Things/Pawn/Animal/Frog_Types/Judas_Frog/JudasFrog_east</iconPath>
+							<comps>
+								<li Class="LARVA.CompProperties_LarvaMetamorph">
+									<buildingspawnDef>TSP_ST_DRG103_JudasFrogCocoon_Player</buildingspawnDef>
+								</li>
+							</comps>
+						</AbilityDef>
+						
+						<ThingDef ParentName="CocoonBasePlayer">
+							<defName>TSP_ST_DRG103_JudasFrogCocoon_Player</defName>
+							<label>Judas' "frog" cocoon</label>
+							<description>A morph cocoon containing a Judas' frog, which is not actually a frog, but rather, an insect.\n\nThis Cocoon has been formed by a larval insect, changing its form into the requested kind.</description>
+							<descriptionHyperlinks>
+								<ThingDef>JudasFrog</ThingDef>
+							</descriptionHyperlinks>
+							<graphicData>
+								<texPath>Things/Building/EggSac</texPath>
+							</graphicData>
+							<building>
+								<combatPower>10</combatPower>
+							</building>
+							<comps>
+								<li Class="CompProperties_Glower">
+									<glowRadius>6</glowRadius>
+									<glowColor>(113,141,117,0)</glowColor>
+								</li>
+								<li Class="LARVA.CompProperties_LarvaHatcher">
+									<hatcherDaystoHatch>0.5</hatcherDaystoHatch>
+									<hatcherPawn>JudasFrog</hatcherPawn>
+								</li>
+							</comps>
+						</ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
+</Patch>
