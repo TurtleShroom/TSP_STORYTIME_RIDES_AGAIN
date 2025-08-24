@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ZTT_WiggleneckTurtle"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ZTT_WiggleneckTurtle"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ZTT_Toughback"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ZTT_Toughback"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ZTT_Steelshell"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ZTT_Steelshell"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ZTT_SandshellTurtle"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ZTT_SandshellTurtle"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ZTT_Plasturtle"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ZTT_Plasturtle"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ZTT_MudTurtle"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ZTT_MudTurtle"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ZTT_PaintedSnapvine"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ZTT_PaintedSnapvine"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="ZTT_GiantStarTortoise"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="ZTT_GiantStarTortoise"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="ZZT_GiantStarTortoise"]/race/canCrossBreedWith</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "ZZT_GiantStarTortoise" or defName = "ZTT_PaintedSnapvine" or defName = "ZTT_MudTurtle" or defName = "ZTT_Plasturtle" or defName = "ZTT_SandshellTurtle" or defName = "ZTT_Steelshell" or defName = "ZTT_Toughback" or defName = "ZTT_WiggleneckTurtle"]/race/canCrossBreedWith</xpath>
+			<success>Always</success>
+			<value>
+				<li>Tortoise</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Exanth_Komodon</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Master_Oog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">VQ_Oogway</li>
+				<li MayRequire="TSP.Isengriff.Storytime">C_turtle</li>
+				<li MayRequire="zylle.turtles">ZTT_GiantStarTortoise</li>
+				<li MayRequire="zylle.turtles">ZTT_PaintedSnapvine</li>
+				<li MayRequire="zylle.turtles">ZTT_MudTurtle</li>
+				<li MayRequire="zylle.turtles">ZTT_Plasturtle</li>
+				<li MayRequire="zylle.turtles">ZTT_SandshellTurtle</li>
+				<li MayRequire="zylle.turtles">ZTT_Steelshell</li>
+				<li MayRequire="zylle.turtles">ZTT_Toughback</li>
+				<li MayRequire="zylle.turtles">ZTT_WiggleneckTurtle</li>
+				<li MayRequire="hc.animal.continued">HC_Galapagostortoise</li>
+				<li MayRequire="hc.animal.continued">HC_Alligatorturtle</li>
+				<li MayRequire="abrolo.swampmonsters">Abrolo_Sarcho</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="HC_Alligatorturtle"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="HC_Alligatorturtle"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="HC_Galapagostortoise"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="HC_Galapagostortoise"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="HC_Alligatorturtle"]/race/canCrossBreedWith</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "HC_Alligatorturtle" or defName = "HC_Galapagostortoise"]/race/canCrossBreedWith</xpath>
+			<success>Always</success>
+			<value>
+				<li>Tortoise</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Exanth_Komodon</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Master_Oog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">VQ_Oogway</li>
+				<li MayRequire="TSP.Isengriff.Storytime">C_turtle</li>
+				<li MayRequire="zylle.turtles">ZTT_GiantStarTortoise</li>
+				<li MayRequire="zylle.turtles">ZTT_PaintedSnapvine</li>
+				<li MayRequire="zylle.turtles">ZTT_MudTurtle</li>
+				<li MayRequire="zylle.turtles">ZTT_Plasturtle</li>
+				<li MayRequire="zylle.turtles">ZTT_SandshellTurtle</li>
+				<li MayRequire="zylle.turtles">ZTT_Steelshell</li>
+				<li MayRequire="zylle.turtles">ZTT_Toughback</li>
+				<li MayRequire="zylle.turtles">ZTT_WiggleneckTurtle</li>
+				<li MayRequire="hc.animal.continued">HC_Galapagostortoise</li>
+				<li MayRequire="hc.animal.continued">HC_Alligatorturtle</li>
+				<li MayRequire="abrolo.swampmonsters">Abrolo_Sarcho</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Abrolo_Sarcho"]/race/canCrossBreedWith</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Abrolo_Sarcho"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<canCrossBreedWith></canCrossBreedWith>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="Abrolo_Sarcho"]/race/canCrossBreedWith</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Abrolo_Sarcho"]/race/canCrossBreedWith</xpath>
+			<success>Always</success>
+			<value>
+				<li>Tortoise</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Exanth_Komodon</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Master_Oog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">VQ_Oogway</li>
+				<li MayRequire="TSP.Isengriff.Storytime">C_turtle</li>
+				<li MayRequire="zylle.turtles">ZTT_GiantStarTortoise</li>
+				<li MayRequire="zylle.turtles">ZTT_PaintedSnapvine</li>
+				<li MayRequire="zylle.turtles">ZTT_MudTurtle</li>
+				<li MayRequire="zylle.turtles">ZTT_Plasturtle</li>
+				<li MayRequire="zylle.turtles">ZTT_SandshellTurtle</li>
+				<li MayRequire="zylle.turtles">ZTT_Steelshell</li>
+				<li MayRequire="zylle.turtles">ZTT_Toughback</li>
+				<li MayRequire="zylle.turtles">ZTT_WiggleneckTurtle</li>
+				<li MayRequire="hc.animal.continued">HC_Galapagostortoise</li>
+				<li MayRequire="hc.animal.continued">HC_Alligatorturtle</li>
+				<li MayRequire="abrolo.swampmonsters">Abrolo_Sarcho</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>

@@ -4,10 +4,14 @@
 	<ThingDef ParentName="WoolBase">
 		<defName>WoolMeffalo</defName>
 		<label>meffalo wool</label>
-		<description>Very soft, medium weight, and provides incredibly good insulation. Meffalo wool clothes rarely fail to keep the wearer warm.</description>
+		<description>Very soft, medium weight wool that provides incredibly good insulation and protection from heat. It is also somewhat flame-retardant. Meffalo wool clothes rarely fail to keep the wearer warm.</description>
+		<graphicData>
+			<color>(33,33,32)</color>
+		</graphicData>
 		<statBases>
 			<MarketValue>4.5</MarketValue>
 			<Mass>0.004</Mass>
+			<Flammability>0.4</Flammability>
 			<DeteriorationRate>2</DeteriorationRate>
 			<StuffPower_Armor_Sharp>0.55</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.05</StuffPower_Armor_Blunt>
@@ -15,11 +19,13 @@
 			<StuffPower_Insulation_Cold>40</StuffPower_Insulation_Cold>
 			<StuffPower_Insulation_Heat>3</StuffPower_Insulation_Heat>
 		</statBases>
-		<graphicData>
-			<color>(33,33,32)</color>
-		</graphicData>
+		<stackLimit>750</stackLimit>
 		<stuffProps>
 			<color>(33,33,32)</color>
+			<commonality>0.07</commonality>
+			<statFactors>
+				<Flammability>0.4</Flammability>
+			</statFactors>
 		</stuffProps>
 	</ThingDef>
 </Defs> 

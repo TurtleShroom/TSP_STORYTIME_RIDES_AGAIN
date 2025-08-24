@@ -92,13 +92,6 @@
 				<canSuggestUseDefaultStuff Inherit="False">true</canSuggestUseDefaultStuff>
 			</value>
 		</match>
-		<nomatch Class="PatchOperationAdd">
-			<success>Always</success>
-			<xpath>Defs/ThingDef/stuffProps</xpath>
-			<value>
-				<canSuggestUseDefaultStuff Inherit="False">true</canSuggestUseDefaultStuff>
-			</value>
-		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
@@ -215,9 +208,9 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="BasePawn"]/race</xpath>
+		<xpath>Defs/ThingDef[@Name="BasePawn"]/race</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="BasePawn"]</xpath>
+			<xpath>Defs/ThingDef[@Name="BasePawn"]</xpath>
 			<success>Always</success>
 			<value>
 				<race></race>
@@ -227,9 +220,9 @@
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="BasePawn"]/race/bloodDef</xpath>
+		<xpath>Defs/ThingDef[@Name="BasePawn"]/race/bloodDef</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="BasePawn"]/race</xpath>
+			<xpath>Defs/ThingDef[@Name="BasePawn"]/race</xpath>
 			<success>Always</success>
 			<value>
 				<bloodDef>Filth_Blood</bloodDef>
@@ -238,6 +231,7 @@
 	</Operation>
 	
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<!--
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/AlienRace.ThingDef_AlienRace/race/bloodDef</xpath>
 		<nomatch Class="PatchOperationAdd">
@@ -248,6 +242,7 @@
 			</value>
 		</nomatch>
 	</Operation>
+	-->
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->

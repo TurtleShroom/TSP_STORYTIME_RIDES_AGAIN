@@ -12,6 +12,7 @@
 		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
 		<statBases>
 		  <Mass>180</Mass>
+		  <Flammability>0</Flammability>
 		</statBases>
 		<inspectorTabs>
 		  <li>ITab_Pawn_Health</li>
@@ -25,11 +26,20 @@
 		  <li>ITab_Pawn_Log</li>
 		</inspectorTabs>
 		<race>
+			<thinkTreeMain>Animal</thinkTreeMain>
+			<thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+			<renderTree>Misc</renderTree>
+			<hasGenders>true</hasGenders>
+			<nameGenerator>NamerAnimalGenericMale</nameGenerator>
+			<nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
 			<bloodDef>Filth_Blood</bloodDef>
 			<renderTree>Misc</renderTree>
+			<!-- <nameOnNuzzleChance>0.9</nameOnNuzzleChance>  -->
+			<nuzzleMtbHours>12</nuzzleMtbHours>
+			<trainability>Advanced</trainability>
 		</race>
 		<thingCategories>
-		  <li>Animals</li>
+			<li>Animals</li>
 		</thingCategories>
 		<comps>
 		  <li>
@@ -44,18 +54,33 @@
       <Flammability>0</Flammability>
     </statBases>
     <race>
-      <thinkTreeMain>Animal</thinkTreeMain>
-      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
-	  <renderTree>Misc</renderTree>
-      <hasGenders>true</hasGenders>
-      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
-      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
       <manhunterOnDamageChance>0.02</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.013</manhunterOnTameFailChance>
-      <!-- <nameOnNuzzleChance>0.9</nameOnNuzzleChance>  -->
-	  <nuzzleMtbHours>12</nuzzleMtbHours>
-      <trainability>Advanced</trainability>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+	  <baseBodySize>5</baseBodySize>
+	  <baseHungerRate>2</baseHungerRate>
+	  <baseHealthScale>6</baseHealthScale>
+	  <foodType>OmnivoreRoughAnimal, Fluid, Kibble</foodType>
 	  <useMeatFrom>Tortoise</useMeatFrom>
+	  <leatherDef>Leather_Lizard</leatherDef>
+	  <soundEating>Reptile_Eat</soundEating>
+	  <canCrossBreedWith>
+		<li>Tortoise</li>
+		<li MayRequire="TSP.Isengriff.Storytime">ST_Exanth_Komodon</li>
+		<li MayRequire="TSP.Isengriff.Storytime">Master_Oog</li>
+		<li MayRequire="TSP.Isengriff.Storytime">VQ_Oogway</li>
+		<li MayRequire="TSP.Isengriff.Storytime">C_turtle</li>
+		<li MayRequire="zylle.turtles">ZTT_GiantStarTortoise</li>
+		<li MayRequire="zylle.turtles">ZTT_PaintedSnapvine</li>
+		<li MayRequire="zylle.turtles">ZTT_MudTurtle</li>
+		<li MayRequire="zylle.turtles">ZTT_Plasturtle</li>
+		<li MayRequire="zylle.turtles">ZTT_SandshellTurtle</li>
+		<li MayRequire="zylle.turtles">ZTT_Steelshell</li>
+		<li MayRequire="zylle.turtles">ZTT_Toughback</li>
+		<li MayRequire="zylle.turtles">ZTT_WiggleneckTurtle</li>
+		<li MayRequire="hc.animal.continued">HC_Galapagostortoise</li>
+		<li MayRequire="hc.animal.continued">HC_Alligatorturtle</li>
+		<li MayRequire="abrolo.swampmonsters">Abrolo_Sarcho</li>
+	  </canCrossBreedWith>
       <hediffGiverSets>
         <li>OrganicStandard</li>
       </hediffGiverSets>
@@ -78,22 +103,22 @@
 			<li Class="VEF.AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
 			</li>
-		  <li Class="CompProperties_EggLayer" Inherit="False">
-			<eggUnfertilizedDef>EggTortoiseUnfertilized</eggUnfertilizedDef>
-			<eggFertilizedDef>EggKomodonFertilized</eggFertilizedDef>
-			<eggFertilizationCountMax>1</eggFertilizationCountMax>
-			<eggLayIntervalDays>20</eggLayIntervalDays>
-			<eggProgressUnfertilizedMax>0.95</eggProgressUnfertilizedMax>
-			<eggCountRange>
-			  <min>1</min>
-			  <max>3</max>
-			</eggCountRange>
-		  </li>
 		</comps>
   </ThingDef>
 
-	<!--
-		<PawnKindDef Name="KomodonAnimalKindBase" Abstract="True">
-		</PawnKindDef>
-	-->
+	<PawnKindDef Name="KomodonAnimalKindBase" Abstract="True">
+		<!-- 人狩として出現するかどうか。記述無しでtrue。出現する。 -->
+		<canArriveManhunter>false</canArriveManhunter>
+		<!-- 肉食動物の狩りの対象としての指標になる他、人狩として出現する時の数が変化します -->
+		<combatPower>50</combatPower>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<!-- 野生で出現する時の群れの数を指定できます。 -->
+		<wildGroupSize Inherit="False">
+			<min>3</min>
+			<max>7</max>
+		</wildGroupSize>
+		<!--生成されるときの最低年齢と最高年齢 -->
+		<minGenerationAge>3</minGenerationAge>
+		<maxGenerationAge>90</maxGenerationAge>
+	</PawnKindDef>
 </Defs>
