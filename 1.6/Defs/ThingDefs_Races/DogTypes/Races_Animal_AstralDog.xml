@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>AstralDog</defName>
+		<!--
+		<label>星界从犬</label>	<description>星界从犬是一种以完美伙伴为目标，经过星界神秘势力改造的狗狗。它们十分温顺，会经常亲昵主人。而经过特殊改造的皮毛，不仅能让它们忍受各种极端温度，还能在一定程度上抵抗各种伤害。较大的体型还能让它们承担起搬运和驮运的任务。另外，特殊的星界合成能力让星界从犬们在花费比较漫长的时间后合成出少量的奶和珍贵的超织物。（狗狗是人类完美的伙伴</description>
+		-->
+		<label>Astral hound</label>
+		<!-- Description is direct (machine-generated) translation of the original -->
+		<description>Astral hounds are gargantuan dogs transformed by the mystical forces of the Astral Realm to become extremely powerful companions. They are incredibly docile and often affectionate with their owners. Their specially engineered fur not only allows them to withstand extreme temperatures but also offers a degree of resistance to injury. Their larger size also allows them to handle loads and carry goods. Furthermore, their unique astral synthesis ability allows them to synthesize small amounts of precious meta-fabric over a long period of time. As their name suggests, astral hounds can breathe in space.</description>
+		<statBases>
+			<MoveSpeed>7</MoveSpeed>
+			<MarketValue>4100</MarketValue>
+			<MeatAmount Inherit="False">125</MeatAmount>
+			<LeatherAmount Inherit="False">90</LeatherAmount>
+			<ComfyTemperatureMin>-99</ComfyTemperatureMin>
+			<ComfyTemperatureMax>101</ComfyTemperatureMax>
+			<ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.70</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.70</ArmorRating_Heat>
+			<Wildness>0</Wildness>
+			<PsychicSensitivity Inherit="False">4</PsychicSensitivity>
+			<Mashed_Ashlands_AshResistance MayRequire="sirmashedpotato.ashlands">1</Mashed_Ashlands_AshResistance>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">1</VacuumResistance>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.Rimworld.Biotech">1</ToxicEnvironmentResistance>
+		</statBases>
+		<uiIconScale>1.5</uiIconScale>
+		<tools>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>15</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>左爪</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>15</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>右爪</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>15</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Demolish</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>QuadrupedAnimalWithPawsAndTail</body>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
+			<baseBodySize>3</baseBodySize>
+			<baseHungerRate>1</baseHungerRate>
+			<baseHealthScale>8.0</baseHealthScale>
+			<foodType>VegetarianRoughAnimal, OvivoreAnimal, OmnivoreRoughAnimal, Meal, Processed, Fluid, Corpse, Kibble</foodType>
+			<leatherDef>Leather_Dog</leatherDef>
+			<trainability>Advanced</trainability>
+			<packAnimal>true</packAnimal>
+			<gestationPeriodDays>40</gestationPeriodDays>
+			<manhunterOnDamageChance>2</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+			<lifeExpectancy>1860</lifeExpectancy>
+			<petness>1</petness>
+			<!-- <nameOnTameChance>1</nameOnTameChance> -->
+			<nuzzleMtbHours>8</nuzzleMtbHours>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+					<soundCall>Pawn_Dog_Call</soundCall>
+					<soundAngry>Pawn_Dog_Angry</soundAngry>
+					<soundWounded>Pawn_Dog_Injured</soundWounded>
+					<soundDeath>Pawn_Dog_Death</soundDeath>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.05</minAge>
+					<soundCall>Pawn_Dog_Call</soundCall>
+					<soundAngry>Pawn_Dog_Angry</soundAngry>
+					<soundWounded>Pawn_Dog_Injured</soundWounded>
+					<soundDeath>Pawn_Dog_Death</soundDeath>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.15</minAge>
+					<soundCall>Pawn_Dog_Call</soundCall>
+					<soundAngry>Pawn_Dog_Angry</soundAngry>
+					<soundWounded>Pawn_Dog_Injured</soundWounded>
+					<soundDeath>Pawn_Dog_Death</soundDeath>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<comps>
+			<!--
+			<li Class="CompProperties_Milkable">
+				<milkDef>Milk</milkDef>
+				<milkIntervalDays>30</milkIntervalDays>
+				<milkAmount>100</milkAmount>
+				<milkFemaleOnly>false</milkFemaleOnly>
+			</li>
+			-->
+			<li Class="CompProperties_Shearable">
+				<woolDef>Hyperweave</woolDef>
+				<shearIntervalDays>30</shearIntervalDays>
+				<woolAmount>75</woolAmount>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+			<li>AnimalFighter</li>
+			<li>StorytimeAnimal</li>
+			<li>AnimalInsectSpace</li>
+			<li>EVA</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>AstralDog</defName>
+		<!-- <label>星界从犬</label> -->
+		<label>Astral hound</label>
+		<race>AstralDog</race>
+		<combatPower>445</combatPower>
+		<canArriveManhunter>true</canArriveManhunter>
+		<ecoSystemWeight>0</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<!--
+					<label>星界幼犬</label>
+					<labelPlural>星界幼犬</labelPlural>
+				-->
+				<label>Astral puppy</label>
+				<labelPlural>Astral puppies</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/AstralDog/AstralDog</texPath>
+					<drawSize>1.0</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Other/Corpses/AstralDog_Dessicated_east</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>Astral dog</label>
+				<labelPlural>Astral dogs</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/AstralDog/AstralDog</texPath>
+					<drawSize>2.0</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Other/Corpses/AstralDog_Dessicated_east</texPath>
+					<drawSize>2.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>Astral hound</label>
+				<labelPlural>Astral hounds</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/AstralDog/AstralDog</texPath>
+					<drawSize>4.0</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Other/Corpses/AstralDog_Dessicated_east</texPath>
+					<drawSize>4.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

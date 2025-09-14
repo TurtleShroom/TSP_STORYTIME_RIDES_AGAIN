@@ -192,6 +192,7 @@
 			<xpath>Defs/ThingDef[defName="RCA_cockedhatwhite"]/apparel/tags</xpath>
 			<value>
 				<li>MedievalApparelNoble</li>
+				<li>Medieval</li>
 				<li>RichPirate</li>
 				<li>Royal</li>
 				<li>RoyalTier1</li>
@@ -880,5 +881,163 @@
 			<li>PoorPirate</li>
 			<li>NormalPirate</li>
 		</value>
+	</Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Chiaeyepatch"]/apparel</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Chiaeyepatch"]</xpath>
+			<success>Always</success>
+            <value>
+                <apparel></apparel>
+            </value>
+        </nomatch>
+	</Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Chiaeyepatch"]/apparel/tags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Chiaeyepatch"]/apparel</xpath>
+			<success>Always</success>
+            <value>
+                <tags></tags>
+            </value>
+        </nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="Chiaeyepatch"]/apparel/tags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="Chiaeyepatch"]/apparel/tags</xpath>
+			<value>
+				<li>PoorPirate</li>
+				<li>NormalPirate</li>
+				<li>RichPirate</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Chiahat"]/apparel</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Chiahat"]</xpath>
+			<success>Always</success>
+            <value>
+                <apparel></apparel>
+            </value>
+        </nomatch>
+	</Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Chiahat"]/apparel/tags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Chiahat"]/apparel</xpath>
+			<success>Always</success>
+            <value>
+                <tags></tags>
+            </value>
+        </nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="Chiahat"]/apparel/tags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="Chiahat"]/apparel/tags</xpath>
+			<value>
+				<li>NormalPirate</li>
+				<li>RichPirate</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Chiacoat"]/apparel</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Chiacoat"]</xpath>
+			<success>Always</success>
+            <value>
+                <apparel></apparel>
+            </value>
+        </nomatch>
+	</Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Chiacoat"]/apparel/tags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Chiacoat"]/apparel</xpath>
+			<success>Always</success>
+            <value>
+                <tags></tags>
+            </value>
+        </nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="Chiacoat"]/apparel/tags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="Chiacoat"]/apparel/tags</xpath>
+			<value>
+				<li>RichPirate</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Crewbandana"]/apparel</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Crewbandana"]</xpath>
+			<success>Always</success>
+            <value>
+                <apparel></apparel>
+            </value>
+        </nomatch>
+	</Operation>
+	
+    <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Crewbandana"]/apparel/tags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Crewbandana"]/apparel</xpath>
+			<success>Always</success>
+            <value>
+                <tags></tags>
+            </value>
+        </nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="Crewbandana"]/apparel/tags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="Crewbandana"]/apparel/tags</xpath>
+			<value>
+				<li>PoorPirate</li>
+				<li>NormalPirate</li>
+				<li>HarrierWear</li>
+				<li>PirateBandana</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 </Patch>

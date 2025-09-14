@@ -136,6 +136,8 @@
 				<building Inherit="False">
 					<isResourceRock>false</isResourceRock>
 					<isNaturalRock>false</isNaturalRock>
+					<mineableScatterCommonality>0</mineableScatterCommonality>
+					<mineableScatterLumpSizeRange>0~0</mineableScatterLumpSizeRange>
 					<mineableThing>DankPyon_ChunkClay</mineableThing>
 					<mineableYield>2</mineableYield>
 					<mineableDropChance>1</mineableDropChance>
@@ -1016,6 +1018,17 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/structureMemeWeights</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/structureMemeWeights</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>Defs/ThingDef[defName="DankPyon_Citrine"]</xpath>
 		<!-- If it does, insert this in the same bracket. -->
@@ -1030,12 +1043,254 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-	<!-- DO THE GENTILES KNOW? -->
-		<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/structureMemeWeights</xpath>
-		<!-- If they do, SHUT IT DOWN. -->
-		<match Class="PatchOperationRemove">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Citrine"]</xpath>
+		<!-- If it does, insert this in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<xpath>Defs/ThingDef/stuffProps/categories/li[text()="DankPyon_Gems"]</xpath>
 			<success>Always</success>
-			<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/structureMemeWeights</xpath>
+			<value>
+				<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_Crystalline</li>
+				<li MayRequire="kikohi.jewelry">Gemstones</li>
+				<li>Stony</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="Mashed_Ashlands_VolcanicEbony"]</xpath>
+		<!-- If it does, insert this in the same bracket. -->
+		<match Class="PatchOperationInsert">
+			<xpath>Defs/ThingDef/stuffProps/categories/li[text()="Mashed_Ashlands_Crystalline"]</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Gems</li>
+				<li MayRequire="kikohi.jewelry">Gemstones</li>
+				<li>Stony</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_SackApple"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_SackApple"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="vanillaexpanded.vplantse">VCE_RawApple</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_SackApple"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_SackApple"]/building/defaultStorageSettings/filter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="vanillaexpanded.vplantse">VCE_RawApple</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_HideoutSackApple"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_HideoutSackApple"]/modExtensions/li/randomItems</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="vanillaexpanded.vplantse">VCE_RawApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="vanillaexpanded.vplantse">VCE_RawApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="vanillaexpanded.vplantse">VCE_RawApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_CookingApple</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_HideOutBuildingBase_Cart_Textiles"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_HideOutBuildingBase_Cart_Textiles"]/modExtensions/li/randomItems</xpath>
+			<success>Always</success>
+			<value>
+				<li>Leather_Plain</li>
+				<li>Leather_Plain</li>
+				<li>Leather_Plain</li>
+				<li>Leather_Plain</li>
+				<li>Leather_Plain</li>
+				<li>Leather_Plain</li>
+				<li>Leather_Plain</li>
+				<li>Leather_Plain</li>
+				<li>Leather_Plain</li>
+				<li>Leather_Plain</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Jeub</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Jeub</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Jeub</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Gibbon</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Gibbon</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Gibbon</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Frog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Frog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Frog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Puffle</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Puffle</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Puffle</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Puffle</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Puffle</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Puffle</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Gnome_Cloth</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Gnome_Cloth</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Gnome_Cloth</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Cartographer</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Beet</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Goblin</li>
+				<li MayRequire="TSP.Isengriff.Storytime">VAEAP_Leather_Car</li>
+				<li MayRequire="TSP.Isengriff.Storytime">VAEAP_Leather_Car</li>
+				<li MayRequire="TSP.Isengriff.Storytime">WoolMeffalo</li>
+				<li MayRequire="TSP.Isengriff.Storytime">WoolMeffalo</li>
+				<li MayRequire="TSP.Isengriff.Storytime">WoolMeffalo</li>
+				<!-- <li MayRequire="TSP.Isengriff.Storytime">Leather_Darkfur</li> -->
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinenBulk"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinenBulk"]</xpath>
+			<success>Always</success>
+			<value>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinenBulk"]/fixedIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinenBulk"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinenBulk"]/fixedIngredientFilter/thingDefs</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinenBulk"]/fixedIngredientFilter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawFlax</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ToadflaxLeaves</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinen"]/fixedIngredientFilter</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinen"]</xpath>
+			<success>Always</success>
+			<value>
+				<fixedIngredientFilter></fixedIngredientFilter>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinen"]/fixedIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinen"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinen"]/fixedIngredientFilter/thingDefs</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_MakeLinen"]/fixedIngredientFilter/thingDefs</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawFlax</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ToadflaxLeaves</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_HideoutTableMarket_Herb"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_HideoutTableMarket_Herb"]/modExtensions/li/randomItems</xpath>
+			<success>Always</success>
+			<value>
+				<li>MedicineHerbal</li>
+				<li>MedicineHerbal</li>
+				<li>MedicineHerbal</li>
+				<li>MedicineHerbal</li>
+				<li>MedicineHerbal</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GuamLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">HarralanderLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">DwarfWeedLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">RannarLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TorstolLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+				<li MayRequire="TSP.Isengriff.Storytime">GuamLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">HarralanderLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">DwarfWeedLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">RannarLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TorstolLeaves</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>

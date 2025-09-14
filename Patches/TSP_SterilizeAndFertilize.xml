@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/RecipeDef[defName="Sterilize"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="Sterilize"]</xpath>
+			<success>Always</success>
+			<value>
+				<workSkillLearnFactor>6</workSkillLearnFactor>
+				<surgerySuccessChanceFactor>999</surgerySuccessChanceFactor>
+				<anesthetize>false</anesthetize>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="Sterilize"]/workAmount</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="Sterilize"]/workAmount</xpath>
+			<success>Always</success>
+			<value>
+				<workAmount>10</workAmount>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="Sterilize"]/skillRequirements</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="Sterilize"]/skillRequirements</xpath>
+			<success>Always</success>
+			<value>
+				<skillRequirements IsNull="True" Inherit="False"></skillRequirements>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!--
+	<Operation Class="PatchOperationConditional">
+	Does this exist?
+		<xpath>Defs/RecipeDef[defName="Sterilize"]/workSkill</xpath>
+		If it does, do this replacement.
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="Sterilize"]/workSkill</xpath>
+			<success>Always</success>
+			<value>
+				<workSkill>Animals</workSkill>
+			</value>
+		</match>
+		If the first XPATH does not exist, the original code stands.
+	</Operation>
+	-->
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="Sterilize"]/soundWorking</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="Sterilize"]/soundWorking</xpath>
+			<success>Always</success>
+			<value>
+				<soundWorking>Recipe_Tailor</soundWorking>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="ExtractOvum"]/isViolation</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]/isViolation</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="ExtractOvum"]/isViolation</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]/isViolation</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="ExtractOvum"]/isViolation</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]/isViolation</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="ExtractOvum"]/allowedForQuestLodgers</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]/allowedForQuestLodgers</xpath>
+			<success>Always</success>
+			<value>
+				<allowedForQuestLodgers>true</allowedForQuestLodgers>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]</xpath>
+			<success>Always</success>
+			<value>
+				<allowedForQuestLodgers>true</allowedForQuestLodgers>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="ExtractOvum"]/isViolation</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]/isViolation</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_ExtractSample"]/isViolation</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_ExtractSample"]/isViolation</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_ExtractSample"]</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_ExtractSample"]/allowedForQuestLodgers</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_ExtractSample"]/allowedForQuestLodgers</xpath>
+			<success>Always</success>
+			<value>
+				<allowedForQuestLodgers>true</allowedForQuestLodgers>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_ExtractSample"]</xpath>
+			<success>Always</success>
+			<value>
+				<allowedForQuestLodgers>true</allowedForQuestLodgers>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]/isViolation</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]/isViolation</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]/allowedForQuestLodgers</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]/allowedForQuestLodgers</xpath>
+			<success>Always</success>
+			<value>
+				<allowedForQuestLodgers>true</allowedForQuestLodgers>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]</xpath>
+			<success>Always</success>
+			<value>
+				<allowedForQuestLodgers>true</allowedForQuestLodgers>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]/isViolation</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]/isViolation</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]/allowedForQuestLodgers</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]/allowedForQuestLodgers</xpath>
+			<success>Always</success>
+			<value>
+				<allowedForQuestLodgers>true</allowedForQuestLodgers>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_Insemination"]</xpath>
+			<success>Always</success>
+			<value>
+				<allowedForQuestLodgers>true</allowedForQuestLodgers>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="ExtractOvum"]/isViolation</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]/isViolation</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="ExtractOvum"]</xpath>
+			<success>Always</success>
+			<value>
+				<isViolation>false</isViolation>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_ExtractSample"]/anesthetize</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_ExtractSample"]/anesthetize</xpath>
+			<success>Always</success>
+			<value>
+				<anesthetize>false</anesthetize>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="kathanon_IVFEquality_ExtractSample"]</xpath>
+			<success>Always</success>
+			<value>
+				<anesthetize>false</anesthetize>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

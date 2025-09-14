@@ -37,4 +37,27 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/HediffDef[defName="VBE_CaffeineTolerance"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="DriedFrogPills"]/comps</xpath>
+			<value>
+				<li Class="CompProperties_Drug" MayRequire="vanillaexpanded.vbrewe" Inherit="False">
+					<chemical MayRequire="vanillaexpanded.vbrewe">VBE_Caffeine</chemical>
+					<addictiveness MayRequire="vanillaexpanded.vbrewe">0.91</addictiveness>
+					<minToleranceToAddict MayRequire="vanillaexpanded.vbrewe">0.423</minToleranceToAddict>
+					<existingAddictionSeverityOffset MayRequire="vanillaexpanded.vbrewe">2</existingAddictionSeverityOffset>
+					<needLevelOffset MayRequire="vanillaexpanded.vbrewe">2</needLevelOffset>
+					<listOrder MayRequire="vanillaexpanded.vbrewe">111</listOrder>
+					<overdoseSeverityOffset MayRequire="vanillaexpanded.vbrewe">0</overdoseSeverityOffset>
+					<largeOverdoseChance MayRequire="vanillaexpanded.vbrewe">0</largeOverdoseChance>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

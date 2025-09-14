@@ -108,32 +108,6 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAddModExtension">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
-			<value>
-				<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-					<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-						<li>ST_FrogRole</li>
-						<li>ST_FrogRarity</li>
-					</statToAdd>
-					<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-						<li>TSP_ST_FrogNormal</li>
-						<li>ST_FrogCommon</li>
-					</statValues>
-					<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-						<li>TSP_ST_FrogNormalDesc</li>
-						<li>ST_FrogCommonDesc</li>
-					</statDescriptions>
-				</li>
-			</value>
-		</match>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
 		<xpath>Defs/ThingDef[defName="EggBullfrog"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">

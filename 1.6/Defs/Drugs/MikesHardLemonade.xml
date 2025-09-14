@@ -65,6 +65,7 @@
         </li>
       </outcomeDoers>
     </ingestible>
+    <allowedArchonexusCount>5000</allowedArchonexusCount>
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Alcohol</chemical>
@@ -75,7 +76,13 @@
         <listOrder>10</listOrder>
       </li>
     </comps>
-    <allowedArchonexusCount>5000</allowedArchonexusCount>
+	<modExtensions>
+		<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+			<water>1</water>
+			<UseForWashing>false</UseForWashing>
+			<SeekForThirst>true</SeekForThirst>
+		</li>
+	</modExtensions>
 	<tradeTags>
 		<li>StorytimeDrugs</li>
 		<li>StorytimeBooze</li>
@@ -99,8 +106,7 @@
 			<stages>
 				<li>
 					<becomeVisible>false</becomeVisible>
-					<statOffsets>
-					</statOffsets>
+					<statOffsets></statOffsets>
 				</li>
 			</stages>
 	  </HediffDef>

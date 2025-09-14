@@ -434,17 +434,15 @@
 		
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>/Defs/ThingDef[defName="RS_chocomilk"]</xpath>
-		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationReplace">
-			<xpath>/Defs/RecipeDef[defName = "Cook_RS_chocomilk" or defName = "Cook_RS_Berrymilk"]/ingredients/li/filter/disallowedThingDefs</xpath>
+		<xpath>Defs/ThingDef[defName="RS_chocomilk"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName = "Cook_RS_chocomilk" or defName = "Cook_RS_Berrymilk"]/ingredients/li/filter/disallowedThingDefs</xpath>
 			<success>Always</success>
 			<value>
-				<disallowedThingDefs>
-					<li>RS_LogisticsBox</li>
-					<li>RS_Berrymilk</li>
-					<li>RS_chocomilk</li>
-				</disallowedThingDefs>
+				<li>RS_LogisticsBox</li>
+				<li>RS_Berrymilk</li>
+				<li>RS_chocomilk</li>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

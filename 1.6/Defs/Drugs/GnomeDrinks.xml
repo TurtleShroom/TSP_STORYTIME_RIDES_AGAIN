@@ -333,14 +333,21 @@
 			<chemical>Alcohol</chemical>
 			<addictiveness>0.01</addictiveness>
 			<minToleranceToAddict>0.33</minToleranceToAddict>
-			<existingAddictionSeverityOffset>0.4</existingAddictionSeverityOffset>
-			<needLevelOffset>0.9</needLevelOffset>
+			<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+			<needLevelOffset>0.7</needLevelOffset>
 			<listOrder>10</listOrder>
 			<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
 			<largeOverdoseChance>0</largeOverdoseChance>
 		</li>
 		<!-- <li Class="CompProperties_Ingredients"></li> -->
     </comps>
+	<modExtensions>
+		<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+			<water>1</water>
+			<UseForWashing>false</UseForWashing>
+			<SeekForThirst>true</SeekForThirst>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="DrugBase">
@@ -417,6 +424,13 @@
 	<tradeTags>
 		<li>ST_GnomeBooze</li>
 	</tradeTags>
+	<modExtensions>
+		<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+			<water>1</water>
+			<UseForWashing>false</UseForWashing>
+			<SeekForThirst>true</SeekForThirst>
+		</li>
+	</modExtensions>
   </ThingDef>
   
     <ThingDef ParentName="DrugBase">
@@ -493,6 +507,13 @@
 		<tradeTags>
 			<li>ST_GnomeBooze</li>
 		</tradeTags>
+		<modExtensions>
+			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+				<water>1</water>
+				<UseForWashing>false</UseForWashing>
+				<SeekForThirst>true</SeekForThirst>
+			</li>
+		</modExtensions>
 	</ThingDef>
   
 	<ThingDef ParentName="DrugBase">
@@ -569,6 +590,13 @@
 		<tradeTags>
 			<li>ST_GnomeBooze</li>
 		</tradeTags>
+		<modExtensions>
+			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+				<water>1</water>
+				<UseForWashing>false</UseForWashing>
+				<SeekForThirst>true</SeekForThirst>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	
 	<!-- Shamelessly taken from the VFE Medieval Mod -->
@@ -631,14 +659,22 @@
 				<overdoseSeverityOffset>0</overdoseSeverityOffset> <!-- Gnome beer is for tiny people, it cannot be overdosed -->
 				<largeOverdoseChance>0</largeOverdoseChance>
 			</li>
+			<!--
 			<li Class="VFEMedieval.CompProperties_IngestedThoughtFromQuality" MayRequire="oskarpotocki.vanillafactionsexpanded.medievalmodule,oskarpotocki.vanillafactionsexpanded.core">
 				<ingestedThought MayRequire="oskarpotocki.vanillafactionsexpanded.medievalmodule,oskarpotocki.vanillafactionsexpanded.core">VFEM_DrankWine</ingestedThought>
 			</li>
 			<li MayRequire="oskarpotocki.vanillafactionsexpanded.medievalmodule,oskarpotocki.vanillafactionsexpanded.core">
 				<compClass MayRequire="oskarpotocki.vanillafactionsexpanded.medievalmodule,oskarpotocki.vanillafactionsexpanded.core">CompQuality</compClass>
 			</li>
+			-->
 		</comps>
-		<modExtensions></modExtensions>
+		<modExtensions>
+			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+				<water>1</water>
+				<UseForWashing>false</UseForWashing>
+				<SeekForThirst>true</SeekForThirst>
+			</li>
+		</modExtensions>
 		<thingCategories>
 			<li>TSP_ST_GnomeBooze</li>
 		</thingCategories>
@@ -679,7 +715,7 @@
 		</products>
 		<recipeUsers>
 			<li>GnomeTable</li>
-			<li>Brewery</li>
+			<!-- <li>Brewery</li> -->
 			<li MayRequire="vanillaexpanded.vbrewe">VBE_Bar</li>
 		</recipeUsers>
 		<researchPrerequisites Inherit="False">

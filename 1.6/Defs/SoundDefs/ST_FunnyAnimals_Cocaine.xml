@@ -19,8 +19,8 @@
 		<defName>Pawn_Meffalo_Call</defName>
 		<context>MapOnly</context>
 		<eventNames></eventNames>
-		<maxVoices>1</maxVoices>
-		<maxSimultaneous>1</maxSimultaneous> 
+		<maxVoices>2</maxVoices>
+		<!-- <maxSimultaneous>1</maxSimultaneous> -->
 		<subSounds>
 			<li>
 				<grains>
@@ -44,7 +44,7 @@
 					<max>75</max>
 				</distRange>      
 				<repeatMode>NeverTwice</repeatMode>
-				<sustainLoop>True</sustainLoop>
+				<sustainLoop>False</sustainLoop>
 			</li>
 		</subSounds>
 	</SoundDef>
@@ -54,7 +54,7 @@
 		<context>MapOnly</context>
 		<eventNames></eventNames>
 		<maxVoices>4</maxVoices>
-		<maxSimultaneous>1</maxSimultaneous> 
+		<!-- <maxSimultaneous>1</maxSimultaneous> -->
 		<subSounds>
 			<li>
 				<grains>
@@ -81,7 +81,7 @@
 					<max>50</max>
 				</distRange>      
 				<repeatMode>NeverTwice</repeatMode>
-				<sustainLoop>True</sustainLoop>
+				<sustainLoop>False</sustainLoop>
 			</li>
 		</subSounds>
 	</SoundDef>
@@ -91,7 +91,7 @@
 		<context>MapOnly</context>
 		<eventNames></eventNames>
 		<maxVoices>4</maxVoices>
-		<maxSimultaneous>1</maxSimultaneous> 
+		<!-- <maxSimultaneous>1</maxSimultaneous> -->
 		<subSounds>
 			<li>
 				<grains>
@@ -151,7 +151,10 @@
 						<clipPath>FunnyAnimals/TSP_Dorkly_CocaineNegative_4</clipPath>
 					</li>
 				</grains>
-				<volumeRange>10~60</volumeRange>      
+				<volumeRange>
+					<min>10</min>
+					<max>50</max>
+				</volumeRange>      
 				<pitchRange>0.5~1.5</pitchRange>      
 				<distRange>0~20</distRange>      
 				<sustainLoop>False</sustainLoop>

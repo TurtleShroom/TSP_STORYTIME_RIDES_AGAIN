@@ -125,36 +125,6 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="BMT_Goeto"]</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAddModExtension">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName = "BMT_Goeto" or defName = "BMT_SandyToad"]</xpath>
-			<value>
-				<li Class="AnimalBehaviours.AnimalStatExtension">
-					<statToAdd>
-						<li>ST_FrogRole</li>
-						<li>ST_FrogRoleSecondary</li>
-						<li>ST_FrogRarity</li>
-					</statToAdd>
-					<statValues>
-						<li>ST_FrogFoodProduction</li>
-						<li>ST_FrogFriendly</li>
-						<li>ST_FrogCommon</li>					
-					</statValues>
-					<statDescriptions>
-						<li>ST_FrogFoodProductionDesc</li>
-						<li>ST_FrogFriendlyDesc</li>
-						<li>ST_FrogCommonDesc</li>
-					</statDescriptions>
-					<showImageInInfoCard>true</showImageInInfoCard>
-				</li>
-			</value>
-		</match>
-	</Operation>
-	
 	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->

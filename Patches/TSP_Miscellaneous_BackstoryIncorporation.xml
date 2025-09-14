@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/BackstoryDef[defName="Ship_Captain"]/spawnCategories</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/BackstoryDef[defName="Ship_Captain"]/spawnCategories</xpath>
+			<success>Always</success>
+			<value>
+				<spawnCategories Inherit="False">
+					<li>PirateBackstory</li>
+					<li>Chia</li>
+				</spawnCategories>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/BackstoryDef[defName="Ship_Captain"]/slot</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/BackstoryDef[defName="Ship_Captain"]/slot</xpath>
+			<success>Always</success>
+			<value>
+				<slot>Adulthood</slot>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

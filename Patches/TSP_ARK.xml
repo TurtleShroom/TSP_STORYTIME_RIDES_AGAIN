@@ -326,11 +326,11 @@
 					</li>
 					<li MayRequire="Ludeon.RimWorld.Biotech">
 						<def>HumanlikePreTeenager</def>
-						<minAge>0.1</minAge>
+						<minAge>0.01</minAge>
 					</li>
 					<li>
 						<def>HumanlikeTeenager</def>
-						<minAge>1</minAge>
+						<minAge>0.1</minAge>
 					</li>
 					<li>
 						<def>HumanlikeAdult</def>
@@ -339,5 +339,273 @@
 				</lifeStageAges>
 			</value>
 		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/race/lifeStageWorkSettings</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/race/lifeStageWorkSettings</xpath>
+			<value>
+				<lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+					<Firefighter>2</Firefighter>
+					<Patient>0</Patient>
+					<Doctor>1</Doctor>
+					<PatientBedRest>0</PatientBedRest>
+					<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+					<BasicWorker>0</BasicWorker>
+					<Warden>3</Warden>
+					<Handling>0</Handling>
+					<Cooking>0</Cooking>
+					<Hunting>2</Hunting>
+					<Construction>0</Construction>
+					<Growing>0</Growing>
+					<Mining>0</Mining>
+					<PlantCutting>0</PlantCutting>
+					<Smithing>3</Smithing>
+					<Tailoring>0</Tailoring>
+					<Art>3</Art>
+					<Crafting>0</Crafting>
+					<Hauling>0</Hauling>
+					<Cleaning>0</Cleaning>
+					<Research>1</Research>
+					<DarkStudy MayRequire="Ludeon.RimWorld.Anomaly">3</DarkStudy>
+				</lifeStageWorkSettings>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/race/ageGenerationCurve</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/race/ageGenerationCurve</xpath>
+			<value>
+				<ageGenerationCurve Inherit="False">
+					<points Inherit="False">
+						<li>(0,0)</li>
+						<li>(1,0.01)</li>
+						<li>(2,20)</li>
+						<li>(3,200)</li>  
+						<li>(5,230)</li>  
+						<li>(14,218)</li>
+						<li>(16,10)</li>
+						<li>(21,100)</li>
+						<li>(50,10)</li>
+						<li>(60,30)</li>
+						<li>(70,108)</li>
+						<li>(80,100)</li>
+						<li>(90,30)</li>
+						<li>(100,10)</li>
+						<li>(120,10)</li>
+						<li>(180,10)</li>
+						<li>(210,10)</li>
+						<li>(288,10)</li>
+						<li>(300,0)</li>
+						<li>(500,0)</li>
+					</points>
+				</ageGenerationCurve>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="ArkRace"]/alienRace/generalSettings/growthAges</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="ArkRace"]/alienRace/generalSettings/growthAges</xpath>
+			<value>
+				<growthAges>
+					<li>1.1</li>
+					<li>1.55</li>
+					<li>2</li>
+					<li>2.5</li>
+					<li>2.75</li>
+					<li>3</li>
+				</growthAges>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/LearningRateFactor</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/LearningRateFactor</xpath>
+			<value>
+				<LearningRateFactor MayRequire="ludeon.rimworld.biotech">7</LearningRateFactor>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/LearningRateFactor</xpath>
+			<value>
+				<LearningRateFactor MayRequire="ludeon.rimworld.biotech">7</LearningRateFactor>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/WorkSpeedGlobalOffsetMech</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/WorkSpeedGlobalOffsetMech</xpath>
+			<value>
+				<WorkSpeedGlobalOffsetMech MayRequire="ludeon.rimworld.biotech">0.15</WorkSpeedGlobalOffsetMech>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/WorkSpeedGlobalOffsetMech</xpath>
+			<value>
+				<WorkSpeedGlobalOffsetMech MayRequire="ludeon.rimworld.biotech">0.15</WorkSpeedGlobalOffsetMech>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/GrowthVatOccupantSpeed</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/GrowthVatOccupantSpeed</xpath>
+			<value>
+				<GrowthVatOccupantSpeed MayRequire="ludeon.rimworld.biotech">5</GrowthVatOccupantSpeed>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/GrowthVatOccupantSpeed</xpath>
+			<value>
+				<GrowthVatOccupantSpeed MayRequire="ludeon.rimworld.biotech">5</GrowthVatOccupantSpeed>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/RawNutritionFactor</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/RawNutritionFactor</xpath>
+			<value>
+				<RawNutritionFactor MayRequire="ludeon.rimworld.biotech">0.15</RawNutritionFactor>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/RawNutritionFactor</xpath>
+			<value>
+				<RawNutritionFactor MayRequire="ludeon.rimworld.biotech">0.15</RawNutritionFactor>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/SubcoreEncodingSpeed</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/SubcoreEncodingSpeed</xpath>
+			<value>
+				<SubcoreEncodingSpeed MayRequire="ludeon.rimworld.biotech">3</SubcoreEncodingSpeed>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/SubcoreEncodingSpeed</xpath>
+			<value>
+				<SubcoreEncodingSpeed MayRequire="ludeon.rimworld.biotech">3</SubcoreEncodingSpeed>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/MechRepairSpeed</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/MechRepairSpeed</xpath>
+			<value>MechRepairSpeed
+				<MechRepairSpeed MayRequire="ludeon.rimworld.biotech">3</MechRepairSpeed>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/MechRepairSpeed</xpath>
+			<value>
+				<MechRepairSpeed MayRequire="ludeon.rimworld.biotech">3</MechRepairSpeed>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/MechFormingSpeed</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/MechFormingSpeed</xpath>
+			<value>
+				<MechFormingSpeed MayRequire="ludeon.rimworld.biotech">2</MechFormingSpeed>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/MechFormingSpeed</xpath>
+			<value>
+				<MechFormingSpeed MayRequire="ludeon.rimworld.biotech">2</MechFormingSpeed>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/MechBandwidth</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/MechBandwidth</xpath>
+			<value>
+				<MechBandwidth MayRequire="ludeon.rimworld.biotech">2</MechBandwidth>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[@Name="ArkRace"]/statBases/MechBandwidth</xpath>
+			<value>
+				<MechBandwidth MayRequire="ludeon.rimworld.biotech">2</MechBandwidth>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 </Patch>

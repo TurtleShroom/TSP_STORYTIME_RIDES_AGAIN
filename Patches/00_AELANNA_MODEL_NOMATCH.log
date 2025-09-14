@@ -7,7 +7,7 @@
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="Settlement"]/comps</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="Settlement"]</xpath>
+			<xpath>Defs/ThingDef[defName="Settlement"]</xpath>
 			<success>Always</success>
 			<value>
 				<comps></comps>
@@ -17,9 +17,9 @@
 
 	<!-- Now that the Comps object exists, add the code -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/WorldObjectDef[defName="Settlement"]/comps</xpath>
+		<xpath>Defs/WorldObjectDef[defName="Settlement"]/comps</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/WorldObjectDef[defName="Settlement"]/comps</xpath>
+			<xpath>Defs/WorldObjectDef[defName="Settlement"]/comps</xpath>
 			<value>
 				<li></li>
 			</value>

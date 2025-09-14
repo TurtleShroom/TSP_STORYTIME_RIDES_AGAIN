@@ -46,6 +46,13 @@
 		<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
     </ingestible>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+	<modExtensions>
+		<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+			<water>1</water>
+			<UseForWashing>true</UseForWashing>
+			<SeekForThirst>false</SeekForThirst>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="EggBase">
@@ -198,6 +205,13 @@
 	  <li Class="CompProperties_Ingredients"></li>
 	  <li Class="CompProperties_Forbiddable"></li>
     </comps>
+	<modExtensions>
+		<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+			<water>1</water>
+			<UseForWashing>false</UseForWashing>
+			<SeekForThirst>true</SeekForThirst>
+		</li>
+	</modExtensions>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
     <orderedTakeGroup>Drug</orderedTakeGroup>
   </ThingDef>
@@ -284,6 +298,13 @@
 		<li>EggNog</li>
 		<!-- <li>StorytimeDrugs</li> -->
 	</tradeTags>
+	<modExtensions>
+		<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+			<water>1</water>
+			<UseForWashing>false</UseForWashing>
+			<SeekForThirst>true</SeekForThirst>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="EggBase">
@@ -367,7 +388,7 @@
       <li Class="CompProperties_Drug">
         <chemical>Alcohol</chemical>
         <addictiveness>0.01</addictiveness>
-        <minToleranceToAddict>0.01</minToleranceToAddict>
+        <minToleranceToAddict>0.001</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.50</existingAddictionSeverityOffset>
         <needLevelOffset>1.5</needLevelOffset>
         <listOrder>10</listOrder>
@@ -393,6 +414,13 @@
 		<li>StorytimeDrugs</li>
 		<li>StorytimeBooze</li>
 	</tradeTags>
+	<modExtensions>
+		<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+			<water>1</water>
+			<UseForWashing>false</UseForWashing>
+			<SeekForThirst>true</SeekForThirst>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="EggBase">
@@ -497,6 +525,13 @@
 		<li>EggNog</li>
 		<li>StorytimeDrugs</li>
 	</tradeTags>
+	<modExtensions>
+		<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+			<water>1</water>
+			<UseForWashing>false</UseForWashing>
+			<SeekForThirst>false</SeekForThirst>
+		</li>
+	</modExtensions>
   </ThingDef>
   
 	<ThingDef Name="FireNog" Abstract="True">
@@ -560,6 +595,13 @@
 			<li>EggNog</li>
 			<li>ExoticMisc</li>
 		</tradeTags>
+		<modExtensions>
+			<li Class="DubsBadHygiene.WaterExt" MayRequire="dubwise.dubsbadhygiene">
+				<water>1</water>
+				<UseForWashing>false</UseForWashing>
+				<SeekForThirst>true</SeekForThirst>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
   

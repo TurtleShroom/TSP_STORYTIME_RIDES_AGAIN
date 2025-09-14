@@ -16,6 +16,9 @@
 				</categories>
 			</li>
 		</backstoryFilters>
+		<apparelTags>
+			<li>K4GEyepatch</li>
+		</apparelTags>
 	</PawnKindDef>
   
 	<PawnKindDef ParentName="BasePlayerStorytimePiratePawnKind" Name="StorytimePirateBackstoryDefault" Abstract="True">
@@ -94,6 +97,7 @@
 	<apparelTags>
         <li>PoorPirate</li>
 		<li>NormalPirate</li>
+		<li>PirateBandana</li>
     </apparelTags>
 	<weaponMoney>
          <min>150</min>
@@ -135,6 +139,7 @@
     </apparelMoney>
 	<apparelTags>
         <li>PoorPirate</li>
+		<li>NormalPirate</li>
     </apparelTags>
 	<weaponMoney>
          <min>250</min>
@@ -168,7 +173,7 @@
     <defName>PirateCaptain</defName>
     <label>captain</label>
     <factionLeader>true</factionLeader>
-	<defaultFactionType>MeanPirates</defaultFactionType>
+	<!-- <defaultFactionType>MeanPirates</defaultFactionType> -->
 	<combatPower>100</combatPower>
     <chemicalAddictionChance>0.01</chemicalAddictionChance>
     <apparelMoney>
@@ -177,6 +182,7 @@
     </apparelMoney>
 	<apparelRequired>
 		<li>ST_PirateHat</li>
+		<li MayRequire="grawne.captainchia">Chiacoat</li>
 	</apparelRequired>
 	<apparelTags>
         <li>RichPirate</li>
@@ -229,6 +235,9 @@
       <li>RichPirate</li>
 	  <li>NW_Apparel_BritishBicorn</li>
     </apparelTags>
+	<apparelRequired>
+		<!-- <li MayRequire="grawne.captainchia">Chiahat</li> -->
+	</apparelRequired>
     <apparelMoney>
       <min>200</min>
       <max>2000</max>
@@ -246,7 +255,7 @@
       <li>Poor</li>
     </techHediffsTags>
     <techHediffsChance>0.25</techHediffsChance>
-	<weaponTags>
+	<weaponTags Inherit="False">
         <li>JuggernautPirate</li>
 		<li>SamuraiRangedHeavy</li> <!-- Hand Mortar -->
     </weaponTags>
@@ -273,6 +282,10 @@
     <apparelTags>
       <li>RichPirate</li>
     </apparelTags>
+	<apparelRequired>
+		<li MayRequire="grawne.captainchia">Chiahat</li>
+		<li MayRequire="grawne.captainchia">Chiacoat</li>
+	</apparelRequired>
     <apparelMoney>
       <min>200</min>
       <max>2000</max>

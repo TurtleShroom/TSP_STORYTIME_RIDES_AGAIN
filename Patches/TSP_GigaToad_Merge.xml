@@ -101,32 +101,6 @@
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 	<xpath>Defs/ThingDef[defName="GiantToad"]</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAddModExtension">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="GiantToad"]</xpath>
-			<value>
-				<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-					<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-						<li>ST_FrogRole</li>
-						<li>ST_FrogRarity</li>
-					</statToAdd>
-					<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-						<li>ST_MeleeTank</li>
-						<li>ST_FrogUncommon</li>
-					</statValues>
-					<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-						<li>ST_MeleeTankDesc</li>
-						<li>ST_FrogUncommonDesc</li>
-					</statDescriptions>
-				</li>
-			</value>
-		</match>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="GiantToad"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
@@ -191,6 +165,35 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
+	<xpath>Defs/PawnKindDef[defName="KingToad"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/PawnKindDef[defName="KingToad"]/lifeStages</xpath>
+			<value>
+				<lifeStages>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/Animal/KingToad/vore</texPath> <!-- Don't look at me, I didn't name it this! -->
+							<drawSize>5</drawSize>
+							<shadowData>
+								<volume>(0.8, 0.6, 0.6)</volume>
+								<offset>(0,0,-0.3)</offset>
+							</shadowData>
+						</bodyGraphicData>
+						<dessicatedBodyGraphicData>
+							<texPath>Things/Pawn/Animal/KingToad/Dessicated_GiantToad</texPath>
+							<drawSize>5</drawSize>
+						</dessicatedBodyGraphicData>
+					</li>
+				</lifeStages>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 	<xpath>Defs/ThingDef[defName="KingToad"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
@@ -202,32 +205,6 @@
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="KingToad"]</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAddModExtension">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="KingToad"]</xpath>
-			<value>
-				<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-					<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-						<li>ST_FrogRole</li>
-						<li>ST_FrogRarity</li>
-					</statToAdd>
-					<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-						<li>ST_MeleeTank</li>
-						<li>ST_FrogLegendary</li>
-					</statValues>
-					<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-						<li>ST_MeleeTankDesc</li>
-						<li>ST_FrogLegendaryDesc</li>
-					</statDescriptions>
-				</li>
-			</value>
-		</match>
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">

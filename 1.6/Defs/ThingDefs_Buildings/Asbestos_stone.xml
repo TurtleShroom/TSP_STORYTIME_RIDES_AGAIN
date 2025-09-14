@@ -46,9 +46,11 @@
         <building>
 			<isResourceRock>false</isResourceRock>
             <isNaturalRock>false</isNaturalRock>
+			<mineableScatterCommonality>0</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>0~0</mineableScatterLumpSizeRange>
             <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
             <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
-            <smoothedThing Inherit="False" IsNull="True"></smoothedThing> <!-- <smoothedThing>Asbestos_Rock</smoothedThing> -->
+            <smoothedThing /> <!-- <smoothedThing>Asbestos_Rock</smoothedThing> -->
             <paintable>true</paintable>
 			<claimable>true</claimable>
         </building>
@@ -73,6 +75,7 @@
         </statBases>
 		<stackLimit>100</stackLimit>
 		<stuffProps>
+			<stuffAdjective>asbestos</stuffAdjective>
 			<statFactors>
 				<Mass>0.75</Mass>
 				<MaxHitPoints>5</MaxHitPoints>
@@ -87,15 +90,20 @@
 			<color>(145,157,118)</color>
 		</stuffProps>
 		<tradeability>Buyable</tradeability>
-		<!--
-		<thingCategories Inherit="False">
-			<li>Chunks</li>
-		</thingCategories>
-		-->
+		<thingCategories></thingCategories>
         <soundDrop>ChunkSlag_Drop</soundDrop>
         <butcherProducts>
             <Asbestos_Fiber>50</Asbestos_Fiber>
         </butcherProducts>
+		<modExtensions>
+			<li Class="MinesAutomatedExtension.MineableSettings" MayRequire="Cain.Mineshaft">
+				<researchPrerequisites>
+					<li>MinesAutomated_ResearchProjectDef_minecraft</li>
+				</researchPrerequisites>
+				<workOffset>200</workOffset>
+				<mineableYield>1</mineableYield>
+			</li>
+		</modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="WoolBase">
@@ -453,7 +461,7 @@
             </li>
             <li>
                 <filter>
-					<customSummary>stone blocks, steel, iron</customSummary>
+					<customSummary>stone blocks, steel, iron, bronze</customSummary>
 					<categories>
 						<li>StoneBlocks</li>
 						<li>ST_AlloyMetals</li>

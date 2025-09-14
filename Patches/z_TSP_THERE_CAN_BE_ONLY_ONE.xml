@@ -1399,7 +1399,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef/plant/sowTags</xpath>
+		<xpath>Defs/ThingDef[defName="TallGrass"]</xpath>
 		<!-- If it does, insert this in the same bracket as the XPATH. -->
 		<match Class="PatchOperationInsert">
 			<xpath>Defs/ThingDef/plant/sowTags/li[text()="DankPyon_VinePost"]</xpath>
@@ -1647,33 +1647,6 @@
 						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
 					</value>
 				</li>
-
-				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
-						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
-						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
-						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
-					</value>
-				</li>
 				
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="O_RawTomatoes"]</xpath>
@@ -1826,24 +1799,6 @@
 				
 				<li Class="PatchOperationInsert">
 					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
-						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>
-						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_RawTomatoes"]</xpath>
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">TomatoCyst</li>

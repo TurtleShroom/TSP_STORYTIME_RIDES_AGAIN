@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!--
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="WindTurbine"]/building</xpath>
+		<value>
+			<soundAmbient>Trump_WindTurbine_Ambience</soundAmbient>
+		</value>
+	</Operation>
+	-->
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="WindTurbine"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_AmbientSound">
+				<sound>Trump_WindTurbine_Ambience</sound>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="WindTurbine"]/description</xpath>
+		<value>
+			<description>A wind-powered electrical generator. Requires a large clear space in front and behind for optimal air flow. If you have a windmill anywhere near your house, congratulations: your house just went down seventy-five percent in value! They say the noise causes cancer.</description>
+		</value>
+	</Operation>
+</Patch>

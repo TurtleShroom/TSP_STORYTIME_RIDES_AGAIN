@@ -17,10 +17,12 @@
 			<li>Skirt</li>
 			<li>Robe</li>
 			<li>VFEM2_Trader</li>
+			<li>K4GEyepatch</li>
 		</apparelTags>
 		<weaponTags>
 			<li>WithTheSteelChair</li>
 			<li>OrientalHandCannon</li>
+			<li>SamuraiRangedHeavy</li> <!-- Hand Mortar -->
 		</weaponTags>
 		<techHediffsTags>
 			<li>ImplantEmpireCommon</li>
@@ -29,7 +31,7 @@
 			<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_Apparel_Chaperon</li>
 		</apparelRequired>
 		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
-		<techHediffsChance>0.02</techHediffsChance>
+		<techHediffsChance>0.1</techHediffsChance>
 		<initialWillRange>1~2</initialWillRange>
 		<initialResistanceRange>2~13</initialResistanceRange>
 		<inventoryOptions Inherit="False">
@@ -230,6 +232,8 @@
 		<gearHealthRange>1.0~1.0</gearHealthRange>
 		<apparelMoney>550~950</apparelMoney>
 		<weaponMoney>500~900</weaponMoney>
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
+		<combatEnhancingDrugsChance>0.1</combatEnhancingDrugsChance>
 		<apparelTags>
 			<li>Glasses</li>
 			<li>Skirt</li>
@@ -265,6 +269,8 @@
 		<gearHealthRange>1.0~1.0</gearHealthRange>
 		<apparelMoney>550~950</apparelMoney>
 		<weaponMoney>500~900</weaponMoney>
+		<chemicalAddictionChance>0.5</chemicalAddictionChance>
+		<combatEnhancingDrugsChance>1</combatEnhancingDrugsChance>
 		<apparelTags>
 			<li>Glasses</li>
 			<li>Skirt</li>
@@ -417,7 +423,7 @@
 		<race>Alien_Beet</race>
 		<label>Patreonling Beet</label>
 		<labelPlural>Patreonlings</labelPlural>
-		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
 	</PawnKindDef>
 	
 	<PawnKindDef Name="Patreonling_Goblin_Base" ParentName="Patreonling_Goblin_Master">
@@ -425,7 +431,7 @@
 		<race>Alien_ST_Goblin</race>
 		<label>Patreonling goblin</label>
 		<labelPlural>Patreonlings</labelPlural>
-		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
 	</PawnKindDef>
 	
 	<PawnKindDef Name="Patreonling_Jeub_Base" ParentName="Patreonling_Jeub_Master">
@@ -433,7 +439,7 @@
 		<race>Alien_Jeub</race>
 		<label>Patreonling goblin</label>
 		<labelPlural>Patreonlings</labelPlural>
-		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
 		<apparelTags>
 			<li>HSAU_HLS_CountHeadgearWig</li>
 			<li>HSAU_HLS_CountTrappings</li>
@@ -455,7 +461,7 @@
 		<labelPlural>patron pacifists</labelPlural>
 		<combatPower>5</combatPower>
 		<chemicalAddictionChance>0.01</chemicalAddictionChance>
-		<isFighter>true</isFighter>
+		<isFighter>false</isFighter>
 		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
 		<requiredWorkTags Inherit="False" IsNull="True"></requiredWorkTags>
 		<apparelTags>
@@ -481,7 +487,7 @@
 		<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
 		<combatPower>35</combatPower>
 		<chemicalAddictionChance>0.1</chemicalAddictionChance>
-		<combatEnhancingDrugsChance>0.11</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsChance>0.2</combatEnhancingDrugsChance>
 		<combatEnhancingDrugsCount Inherit="False">
 			<min>1</min>
 			<max>2</max>
@@ -540,9 +546,7 @@
 		<weaponTags Inherit="False">
 			<li>SniperRifle</li>
 		</weaponTags>
-		<apparelRequired Inherit="False">
-			<!-- <li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_Apparel_Chaperon</li> -->
-		</apparelRequired>
+		<apparelRequired Inherit="False"></apparelRequired>
 		<skills Inherit="False">
 			<li>
 				<skill>Shooting</skill>
