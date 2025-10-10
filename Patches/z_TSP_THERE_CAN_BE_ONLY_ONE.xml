@@ -517,6 +517,7 @@
 				<ingredients>
 					<li>
 						<filter>
+							<customSummary>avacadoes</customSummary>
 							<thingDefs>
 								<li>RawAvocado</li>
 							</thingDefs>
@@ -525,9 +526,12 @@
 					</li>
 					<li>
 						<filter>
+							<customSummary>tomatoes, spices</customSummary>
 							<thingDefs>
 								<li>TomatoCyst</li>
 								<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+								<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
+								<li MayRequire="nottingham.barbecue">NK_RawSpice</li>
 							</thingDefs>
 						</filter>
 						<count>5</count>
@@ -549,6 +553,7 @@
 				<ingredients>
 					<li>
 						<filter>
+							<customSummary>cabbage</customSummary>
 							<thingDefs>
 								<li>ST_Cabbage</li>
 							</thingDefs>
@@ -557,13 +562,16 @@
 					</li>
 					<li>
 						<filter>
+							<customSummmary>spices</customSummmary>
 							<thingDefs>
-								<li>VCE_RawSpices</li>
+								<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
 								<li>HarralanderLeaves</li>
 								<li>LantadymeLeaves</li>
 								<li>RannarLeaves</li>
 								<li>TorstolLeaves</li>
 								<li>ST_MixedHerbs</li>
+								<li MayRequire="nottingham.barbecue">NK_RawSpice</li>
+								<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
 							</thingDefs>
 						</filter>
 						<count>5</count>
@@ -585,12 +593,13 @@
 				<fixedIngredientFilter>
 					<thingDefs>
 						<li>ST_Cabbage</li>
-						<li>VCE_RawSpices</li>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
 						<li>HarralanderLeaves</li>
 						<li>LantadymeLeaves</li>
 						<li>RannarLeaves</li>
 						<li>TorstolLeaves</li>
 						<li>ST_MixedHerbs</li>
+						<li MayRequire="nottingham.barbecue">NK_RawSpice</li>
 					</thingDefs>
 				</fixedIngredientFilter>
 			</value>
@@ -611,6 +620,7 @@
 						<li>RawAvocado</li>
 						<li>TomatoCyst</li>
 						<li MayRequire="vanillaexpanded.vplantse">VCE_RawTomatoes</li>
+						<li MayRequire="nottingham.barbecue">NK_RawSpice</li>
 					</thingDefs>
 				</fixedIngredientFilter>
 			</value>
@@ -2081,6 +2091,428 @@
 								<cleaningSound>Vomit</cleaningSound>
 							</filth>
 						</ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="LGC_BigCabbage"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="LGC_RawCabbage"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="LGC_RawCabbage"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="LGC_RawCabbage"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="LGC_RawCabbage"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="LGC_RawCabbage"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="LGC_RawCabbage"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_Cabbage</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="LGC_RawCabbage"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="LGC_RawCabbage"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="LGC_RawCabbage"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="LGC_RawCabbage"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>Defs/ThingDef/costList/LGC_RawCabbage</xpath>
+					<value>
+						<ST_Cabbage>10</ST_Cabbage>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[defName="LGC_RawCabbage"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[defName="LGC_Plant_Cabbage"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/BiomeDef/wildPlants/LGC_Plant_Cabbage</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+							<defName>LGC_RawCabbage</defName>
+							<label>Giant Crop Cabbages (ERROR)</label>
+							<description>The TurtleShroom Storytime Mod removes the Giant Crop Mod's pineapples. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData>
+								<texPath>Things/Item/Resource/PlantFoodRaw/LGC_RawCabbage</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+							<defName>LGC_Plant_Cabbage</defName>
+							<label>Giant Cabbage Plant (ERROR)</label>
+							<description>The TurtleShroom Storytime Mod removes the Giant Crop Mod's pineapples. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData>
+								<texPath>Things/Plant/LGC_Plant_Cabbage</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="ST_CabbagePlant"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="ST_CabbagePlant"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="ST_Cabbage"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[defName="LGC_BigCabbage"]/costList</xpath>
+					<value>
+						<costList>
+							<ST_Cabbage>500</ST_Cabbage>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[defName="LGC_BigCabbage"]/killedLeavings</xpath>
+					<value>
+						<killedLeavings>
+							<ST_Cabbage>400</ST_Cabbage>
+						</killedLeavings>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[defName="ST_CabbagePlant"]/comps</xpath>
+					<value>
+						<li Class="LingGiantCrop.CompProperties_GiantCrop" MayRequire="lingluo.giantcrop">
+							<size>(3,3)</size>
+							<BigPlaht>LGC_BigCabbage</BigPlaht>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="LGC_BigCabbage"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<!-- <success>Always</success> -->
+			<operations>
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="LGC_RawApple"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_CookingApple</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="LGC_RawApple"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_CookingApple</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="LGC_RawApple"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_CookingApple</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="LGC_RawApple"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_CookingApple</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="LGC_RawApple"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_CookingApple</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="LGC_RawApple"]</xpath>
+					<success>Always</success>
+					<value>
+						<li>ST_CookingApple</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="LGC_RawApple"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/RecipeDef/ingredients/li/filter/li/thingDefs/li[text()="LGC_RawApple"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="LGC_RawApple"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="LGC_RawApple"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>Defs/ThingDef/costList/LGC_RawApple</xpath>
+					<value>
+						<ST_CookingApple>5</ST_CookingApple>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[defName="LGC_RawApple"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[defName="LGC_Plant_Apple"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<success>Always</success>
+					<xpath>Defs/BiomeDef/wildPlants/LGC_Plant_Apple</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+							<defName>LGC_RawApple</defName>
+							<label>Giant Crop Apples (ERROR)</label>
+							<description>The TurtleShroom Storytime Mod removes the Giant Crop Mod's apples. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData>
+								<texPath>Things/Item/Resource/PlantFoodRaw/LGC_RawApple</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs</xpath>
+					<value>
+						<!-- Now we add it back -->
+						<ThingDef ParentName="BaseFilth">
+							<defName>LGC_Plant_Apple</defName>
+							<label>Giant Apple Plant (ERROR)</label>
+							<description>The TurtleShroom Storytime Mod removes the Giant Crop Mod's apples. If you are seeing this, you are witnessing an error. Please report it to TurtleShroom.</description>
+							<selectable>true</selectable>
+							<statBases>
+								<MarketValue>0</MarketValue>
+								<Beauty>0</Beauty>
+								<Cleanliness>1</Cleanliness>
+							</statBases>
+							<graphicData>
+								<texPath>Things/Plant/LGC_Plant_Apple</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+							</graphicData>
+							<filth>
+								<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+								<disappearsInDays>0.001~0.05</disappearsInDays>
+								<rainWashes>true</rainWashes>
+								<cleaningWorkToReduceThickness>1</cleaningWorkToReduceThickness>
+								<canFilthAttach>false</canFilthAttach>
+								<cleaningSound>Vomit</cleaningSound>
+							</filth>
+						</ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="ST_CookingAppleTree"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="ST_CookingAppleTree"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="LGC_BigCabbage"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[defName="LGC_BigApple"]/costList</xpath>
+					<value>
+						<costList>
+							<ST_CookingApple>396</ST_CookingApple>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[defName="LGC_BigApple"]/killedLeavings</xpath>
+					<value>
+						<killedLeavings>
+							<ST_CookingApple>198</ST_CookingApple>
+						</killedLeavings>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>Defs/ThingDef[defName="ST_CookingAppleTree"]/comps</xpath>
+					<value>
+						<li Class="LingGiantCrop.CompProperties_GiantCrop" MayRequire="lingluo.giantcrop">
+							<size>(3,3)</size>
+							<BigPlaht>LGC_BigApple</BigPlaht>
+						</li>
 					</value>
 				</li>
 			</operations>

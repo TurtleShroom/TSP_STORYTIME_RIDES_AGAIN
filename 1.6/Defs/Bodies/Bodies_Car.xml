@@ -5,237 +5,245 @@
 		<defName>VAEAF_CarBody</defName>
 		<label>automobile</label>
 		<corePart>
-			<def>TSP_VAEAF_ChassisCore</def>
+			<def>TSP_VAEAF_ChassisFrame</def>
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<!-- <coverage>0</coverage> -->
-			<groups>
-				<li>Neck</li>
-			</groups>
 			<parts>
 				<li>
-					<def>VAEAF_ChassisFrontal</def>
+					<def>TSP_VAEAF_ChassisCore</def>
 					<height>Middle</height>
 					<depth>Outside</depth>
-					<coverage>0.22</coverage>
+					<coverage>0</coverage>
 					<groups>
 						<li>Neck</li>
 					</groups>
 					<parts>
 						<li>
-							<def>VAEAF_FrontGrille</def>
-							<coverage>0.21</coverage>
-							<height>Top</height>
+							<def>VAEAF_ChassisFrontal</def>
+							<height>Middle</height>
+							<depth>Outside</depth>
+							<coverage>0.22</coverage>
 							<groups>
-								<li>VAEAF_FrontGrilleGroup</li>
-								<li>TurtleBeakAttackTool</li>
-								<li>HeadAttackTool</li>
-								<li>HeadClaw</li>
-								<li>UpperHead</li>
-								<li>FullHead</li>
-								<li>Teeth</li>
+								<li>Neck</li>
 							</groups>
 							<parts>
 								<li>
-									<def>VAEAF_OnBoardComputer</def>
-									<coverage>0.02</coverage>
-									<depth>Inside</depth>
+									<def>VAEAF_FrontGrille</def>
+									<coverage>0.21</coverage>
+									<height>Top</height>
 									<groups>
-										<li>FullHead</li>
-									</groups>
-								</li>
-								<li>
-									<def>TSP_VAEAF_Transmission</def>
-									<coverage>0.02</coverage>
-									<depth>Inside</depth>
-									<groups>
-										<li>FullHead</li>
-									</groups>
-								</li>
-								<li>
-									<def>VAEAF_FrontLights</def>
-									<customLabel>left headlight</customLabel>
-									<coverage>0.08</coverage>
-									<groups>
+										<li>VAEAF_FrontGrilleGroup</li>
+										<li>TurtleBeakAttackTool</li>
+										<li>HeadAttackTool</li>
+										<li>HeadClaw</li>
 										<li>UpperHead</li>
-										<li>Eyes</li>
-									</groups>
-								</li>
-								<li>
-									<def>VAEAF_FrontLights</def>
-									<customLabel>right headlight</customLabel>
-									<coverage>0.08</coverage>
-									<groups>
-										<li>UpperHead</li>
-										<li>Eyes</li>
-									</groups>
-								</li>
-								<li>
-									<def>VAEAF_Radio</def>
-									<depth>Inside</depth>
-									<coverage>0.06</coverage>
-									<groups>
 										<li>FullHead</li>
+										<li>Teeth</li>
 									</groups>
+									<parts>
+										<li>
+											<def>VAEAF_OnBoardComputer</def>
+											<coverage>0.02</coverage>
+											<depth>Inside</depth>
+											<groups>
+												<li>FullHead</li>
+											</groups>
+										</li>
+										<li>
+											<def>TSP_VAEAF_Transmission</def>
+											<coverage>0.02</coverage>
+											<depth>Inside</depth>
+											<groups>
+												<li>FullHead</li>
+											</groups>
+										</li>
+										<li>
+											<def>VAEAF_FrontLights</def>
+											<customLabel>left headlight</customLabel>
+											<coverage>0.08</coverage>
+											<groups>
+												<li>UpperHead</li>
+												<li>Eyes</li>
+											</groups>
+										</li>
+										<li>
+											<def>VAEAF_FrontLights</def>
+											<customLabel>right headlight</customLabel>
+											<coverage>0.08</coverage>
+											<groups>
+												<li>UpperHead</li>
+												<li>Eyes</li>
+											</groups>
+										</li>
+										<li>
+											<def>VAEAF_Radio</def>
+											<depth>Inside</depth>
+											<coverage>0.06</coverage>
+											<groups>
+												<li>FullHead</li>
+											</groups>
+										</li>
+										<li>
+											<def>VAEAF_Alarm</def>
+											<depth>Inside</depth>
+											<coverage>0.008</coverage>
+											<groups>
+												<li>FullHead</li>
+											</groups>
+										</li>
+										<li>
+											<def>VAEAF_Motor</def>
+											<coverage>0.13</coverage>
+											<depth>Inside</depth>
+											<groups>
+												<li>FullHead</li>
+												<li>Torso</li>
+											</groups>
+										</li>
+										<li>
+											<def>TSP_VAEAF_Carburetor</def>
+											<coverage>0.13</coverage>
+											<depth>Inside</depth>
+											<groups>
+												<li>FullHead</li>
+											</groups>
+										</li>
+										<li>
+											<def>TSP_VAEAF_Transmission</def>
+											<coverage>0.013</coverage>
+											<depth>Inside</depth>
+											<groups>
+												<li>FullHead</li>
+												<li>Torso</li>
+											</groups>
+										</li>
+										<li>
+											<def>TSP_VAEAF_Battery</def>
+											<coverage>0.013</coverage>
+											<depth>Inside</depth>
+											<groups>
+												<li>FullHead</li>
+												<li>Torso</li>
+											</groups>
+										</li>
+									</parts>
 								</li>
+							</parts>
+						</li>
+						<li>
+							<def>VAEAF_ChassisCentral</def>
+							<coverage>0.24</coverage>
+							<groups>
+								<li>Neck</li>
+								<li>Torso</li>
+							</groups>
+						</li>
+						<li>
+							<def>VAEAF_ChassisRear</def>
+							<coverage>0.24</coverage>
+							<height>Bottom</height>
+							<groups>
+								<li>Neck</li>
+								<li>Torso</li>
+							</groups>
+							<parts>
 								<li>
-									<def>VAEAF_Alarm</def>
-									<depth>Inside</depth>
-									<coverage>0.008</coverage>
-									<groups>
-										<li>FullHead</li>
-									</groups>
-								</li>
-								<li>
-									<def>VAEAF_Motor</def>
-									<coverage>0.13</coverage>
+									<def>VAEAF_FuelTank</def>
+									<coverage>0.15</coverage>
 									<depth>Inside</depth>
 									<groups>
-										<li>FullHead</li>
+										<li>Mouth</li>
 										<li>Torso</li>
+										<li>FullHead</li> <!-- Connects to engine -->
+										<!-- <li>Neck</li> -->
 									</groups>
 								</li>
 								<li>
-									<def>TSP_VAEAF_Carburetor</def>
-									<coverage>0.13</coverage>
+									<def>TSP_VAEAF_Exhaust</def>
+									<coverage>0.03</coverage>
 									<depth>Inside</depth>
 									<groups>
-										<li>FullHead</li>
-									</groups>
-								</li>
-								<li>
-									<def>TSP_VAEAF_Transmission</def>
-									<coverage>0.013</coverage>
-									<depth>Inside</depth>
-									<groups>
-										<li>FullHead</li>
+										<li>Mouth</li>
 										<li>Torso</li>
-									</groups>
-								</li>
-								<li>
-									<def>TSP_VAEAF_Battery</def>
-									<coverage>0.013</coverage>
-									<depth>Inside</depth>
-									<groups>
-										<li>FullHead</li>
-										<li>Torso</li>
+										<!-- <li>Neck</li> -->
 									</groups>
 								</li>
 							</parts>
 						</li>
-					</parts>
-				</li>
-				<li>
-					<def>VAEAF_ChassisCentral</def>
-					<coverage>0.24</coverage>
-					<groups>
-						<li>Neck</li>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>VAEAF_ChassisRear</def>
-					<coverage>0.24</coverage>
-					<height>Bottom</height>
-					<groups>
-						<li>Neck</li>
-						<li>Torso</li>
-					</groups>
-					<parts>
 						<li>
-							<def>VAEAF_FuelTank</def>
-							<coverage>0.15</coverage>
-							<depth>Inside</depth>
-							<groups>
-								<li>Mouth</li>
-								<li>Torso</li>
-								<li>FullHead</li> <!-- Connects to engine -->
-								<!-- <li>Neck</li> -->
-							</groups>
-						</li>
-						<li>
-							<def>TSP_VAEAF_Exhaust</def>
-							<coverage>0.03</coverage>
-							<depth>Inside</depth>
-							<groups>
-								<li>Mouth</li>
-								<li>Torso</li>
-								<!-- <li>Neck</li> -->
-							</groups>
-						</li>
-					</parts>
-				</li>
-				<li>
-					<def>TSP_VAEAF_Suspension</def>
-					<customLabel>front suspension</customLabel>
-					<coverage>0.1</coverage>
-					<height>Middle</height>
-					<groups>
-						<li>Legs</li>
-						<li>Feet</li>
-					</groups>
-					<parts>
-						<li>
-							<def>VAEAF_Wheel</def>
-							<customLabel>right front wheel</customLabel>
-							<coverage>0.25</coverage>
-							<height>Bottom</height>
+							<def>TSP_VAEAF_Suspension</def>
+							<customLabel>front suspension</customLabel>
+							<coverage>0.1</coverage>
+							<height>Middle</height>
 							<groups>
 								<li>Legs</li>
 								<li>Feet</li>
-								<li>RightHand</li>
-								<li MayRequire="oblivion.borpa">BORPA_KachorpaWheelAttackTool</li>
-								<li MayRequire="TSP.Isengriff.Storytime">BORPA_KachorpaWheelAttackTool</li> <!-- These two Mods use the same Def key because they are incompatible with one-another -->
 							</groups>
+							<parts>
+								<li>
+									<def>VAEAF_Wheel</def>
+									<customLabel>right front wheel</customLabel>
+									<coverage>0.25</coverage>
+									<height>Bottom</height>
+									<groups>
+										<li>Legs</li>
+										<li>Feet</li>
+										<li>RightHand</li>
+										<li MayRequire="oblivion.borpa">BORPA_KachorpaWheelAttackTool</li>
+										<li MayRequire="TSP.Isengriff.Storytime">BORPA_KachorpaWheelAttackTool</li> <!-- These two Mods use the same Def key because they are incompatible with one-another -->
+									</groups>
+								</li>
+								<li>
+									<def>VAEAF_Wheel</def>
+									<customLabel>left front wheel</customLabel>
+									<coverage>0.25</coverage>
+									<height>Bottom</height>
+									<groups>
+										<li>Legs</li>
+										<li>Feet</li>
+										<li>LeftHand</li>
+										<li MayRequire="oblivion.borpa">BORPA_KachorpaWheelAttackTool</li>
+										<li MayRequire="TSP.Isengriff.Storytime">BORPA_KachorpaWheelAttackTool</li> <!-- These two Mods use the same Def key because they are incompatible with one-another -->
+									</groups>
+								</li>
+							</parts>
 						</li>
 						<li>
-							<def>VAEAF_Wheel</def>
-							<customLabel>left front wheel</customLabel>
-							<coverage>0.25</coverage>
-							<height>Bottom</height>
+							<def>TSP_VAEAF_Suspension</def>
+							<customLabel>rear suspension</customLabel>
+							<coverage>0.1</coverage>
+							<height>Middle</height>
 							<groups>
 								<li>Legs</li>
 								<li>Feet</li>
-								<li>LeftHand</li>
-								<li MayRequire="oblivion.borpa">BORPA_KachorpaWheelAttackTool</li>
-								<li MayRequire="TSP.Isengriff.Storytime">BORPA_KachorpaWheelAttackTool</li> <!-- These two Mods use the same Def key because they are incompatible with one-another -->
 							</groups>
-						</li>
-					</parts>
-				</li>
-				<li>
-					<def>TSP_VAEAF_Suspension</def>
-					<customLabel>rear suspension</customLabel>
-					<coverage>0.1</coverage>
-					<height>Middle</height>
-					<groups>
-						<li>Legs</li>
-						<li>Feet</li>
-					</groups>
-					<parts>
-						<li>
-							<def>VAEAF_Wheel</def>
-							<customLabel>right rear wheel</customLabel>
-							<coverage>0.25</coverage>
-							<height>Bottom</height>
-							<groups>
-								<li>Legs</li>
-								<li>Feet</li>
-								<li MayRequire="oblivion.borpa">BORPA_KachorpaWheelAttackTool</li>
-								<li MayRequire="TSP.Isengriff.Storytime">BORPA_KachorpaWheelAttackTool</li> <!-- These two Mods use the same Def key because they are incompatible with one-another -->
-							</groups>
-						</li>
-						<li>
-							<def>VAEAF_Wheel</def>
-							<customLabel>left rear wheel</customLabel>
-							<coverage>0.25</coverage>
-							<height>Bottom</height>
-							<groups>
-								<li>Legs</li>
-								<li>Feet</li>
-								<li MayRequire="oblivion.borpa">BORPA_KachorpaWheelAttackTool</li>
-								<li MayRequire="TSP.Isengriff.Storytime">BORPA_KachorpaWheelAttackTool</li> <!-- These two Mods use the same Def key because they are incompatible with one-another -->
-							</groups>
+							<parts>
+								<li>
+									<def>VAEAF_Wheel</def>
+									<customLabel>right rear wheel</customLabel>
+									<coverage>0.25</coverage>
+									<height>Bottom</height>
+									<groups>
+										<li>Legs</li>
+										<li>Feet</li>
+										<li MayRequire="oblivion.borpa">BORPA_KachorpaWheelAttackTool</li>
+										<li MayRequire="TSP.Isengriff.Storytime">BORPA_KachorpaWheelAttackTool</li> <!-- These two Mods use the same Def key because they are incompatible with one-another -->
+									</groups>
+								</li>
+								<li>
+									<def>VAEAF_Wheel</def>
+									<customLabel>left rear wheel</customLabel>
+									<coverage>0.25</coverage>
+									<height>Bottom</height>
+									<groups>
+										<li>Legs</li>
+										<li>Feet</li>
+										<li MayRequire="oblivion.borpa">BORPA_KachorpaWheelAttackTool</li>
+										<li MayRequire="TSP.Isengriff.Storytime">BORPA_KachorpaWheelAttackTool</li> <!-- These two Mods use the same Def key because they are incompatible with one-another -->
+									</groups>
+								</li>
+							</parts>
 						</li>
 					</parts>
 				</li>

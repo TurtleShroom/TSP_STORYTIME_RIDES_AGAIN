@@ -397,7 +397,7 @@
 		</tradeTags>
   </ThingDef>
   
-  <ThingDef ParentName="BasePsychicWeaponMelee">
+  <ThingDef ParentName="BasePsychicWeaponMelee" MayRequire="ludeon.rimworld.royalty">
     <defName>HauntedHatchet</defName>
     <label>haunted hatchet</label>
     <description>A spooky hatchet.</description>
@@ -469,8 +469,8 @@
     </thingCategories>
     <equippedStatOffsets>
 		<PlantWorkSpeed>0.35</PlantWorkSpeed>
-		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
-		<PsychicEntropyRecoveryRate>0.03</PsychicEntropyRecoveryRate>
+		<PsychicSensitivityOffset>0.33</PsychicSensitivityOffset>
+		<PsychicEntropyRecoveryRate MayRequire="ludeon.rimworld.royalty">0.03</PsychicEntropyRecoveryRate>
     </equippedStatOffsets>
   </ThingDef>
 </Defs>

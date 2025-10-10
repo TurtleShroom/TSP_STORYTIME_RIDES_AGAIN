@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+	<!-- Do any of the following Mods exist? -->
+		<mods>
+			<li>BiomesKit</li>
+			<li>Biomes Kit</li>
+			<li>BiomesKit (Continued)</li>
+			<!-- <li>ReGrowth 2</li> -->
+		</mods>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<BiomeDef>
+					<defName>froggySwamp</defName>
+					<label>great frog swamp</label>
+					<description>Millinea of genetic engineering has created frogs capable of serving the niches of most livestock roles, as well as extending their life and abilities. Other frogs, by accident or design, are vicious and threatening. In some parts of the galactic Rim, the overpopulation of these frogs has caused pockets of swamp lands to be completely overrun by almost nothing but frogs and other amphibians.</description>
+					<workerClass MayRequire="zal.biomeskit">BiomesKit.UniversalBiomeWorker</workerClass>
+					<modExtensions>
+						<!--
+						<li Class="VFECore.BiomeExtension">
+							<uniqueRockTypes>
+								<li>ST_MudStone</li>
+							</uniqueRockTypes> These types of rock will be removed from every other biome
+							<forceRockTypes>
+								<li MayRequire="sarg.alphabiomes">AB_Mudstone</li>
+							</forceRockTypes> These types of rock will always spawn in this biome
+							<disallowRockTypes>
+								<li MayRequire="tsp.isengriff.storytime.runezone">SmoothedEssence</li>
+							</disallowRockTypes> These types of rock will never spawn in this biome
+							<onlyAllowForcedRockTypes>false</onlyAllowForcedRockTypes> If true (the default), only the forced rocks will ever spawn in this biome
+							<forceUniqueRockTypes>true</forceUniqueRockTypes> If true (the default), then the unique rocks will also be forced
+						</li>
+						-->
+						<li Class="BiomesKit.BiomesKitControls" MayRequire="zal.biomeskit">
+							<spawnOnBiomes>
+								<li>ColdBog</li>
+								<li>TropicalSwamp</li>
+								<li>TemperateSwamp</li>
+								<li MayRequire="ludeon.rimworld.odyssey">Glowforest</li>
+								<li MayRequire="sarg.alphabiomes">AB_MiasmicMangrove</li>
+								<li MayRequire="zylle.morevanillabiomes">ZBiome_Marsh</li>
+								<li MayRequire="zylle.morevanillabiomes">ZBiome_CoastalDunes</li>
+								<li MayRequire="zylle.morevanillabiomes">ZBiome_Sandbar_NoBeach</li> <!-- Estuary -->
+								<li MayRequire="mlie.advancedbiomes">Wetland</li>
+								<li MayRequire="grimterra.biomesmod">BiomeGRuby</li> <!-- Forever Forest -->
+								<li MayRequire="grimterra.biomesmod">BiomeGRimethyst</li> <!-- Never Glades -->
+								<li MayRequire="grimterra.biomesmod">BiomeGRimerald</li> <!-- Over-Grown Ruins -->
+								<li MayRequire="grimterra.biomesmod">BiomeGRimberlands</li> <!-- Tropical Despalago -->
+								<li MayRequire="grimterra.biomesmod">BiomeCypreJungle</li> <!-- Cypress Jungle -->
+							</spawnOnBiomes>
+							<frequency>50</frequency>
+							<usePerlin>true</usePerlin>
+							<perlinCulling>0.25</perlinCulling>
+							<maxHilliness>SmallHills</maxHilliness>
+						</li>
+						<li Class="RegrowthCore.BiomesKitControl" MayRequire="regrowth.botr.core">
+							<spawnOnBiomes>
+								<li>ColdBog</li>
+								<li>TropicalSwamp</li>
+								<li>TemperateSwamp</li>
+								<li MayRequire="ludeon.rimworld.odyssey">Glowforest</li>
+								<li MayRequire="sarg.alphabiomes">AB_MiasmicMangrove</li>
+								<li MayRequire="zylle.morevanillabiomes">ZBiome_Marsh</li>
+								<li MayRequire="zylle.morevanillabiomes">ZBiome_CoastalDunes</li>
+								<li MayRequire="zylle.morevanillabiomes">ZBiome_Sandbar_NoBeach</li> <!-- Estuary -->
+								<li MayRequire="mlie.advancedbiomes">Wetland</li>
+								<li MayRequire="grimterra.biomesmod">BiomeGRuby</li> <!-- Forever Forest -->
+								<li MayRequire="grimterra.biomesmod">BiomeGRimethyst</li> <!-- Never Glades -->
+								<li MayRequire="grimterra.biomesmod">BiomeGRimerald</li> <!-- Over-Grown Ruins -->
+								<li MayRequire="grimterra.biomesmod">BiomeGRimberlands</li> <!-- Tropical Despalago -->
+								<li MayRequire="grimterra.biomesmod">BiomeCypreJungle</li> <!-- Cypress Jungle -->
+							</spawnOnBiomes>
+							<materialPath>World/Biomes/FroggySwamp</materialPath>
+							<frequency>50</frequency>
+							<usePerlin>true</usePerlin>
+							<perlinCulling>0.25</perlinCulling>
+							<maxHilliness>SmallHills</maxHilliness>
+						</li>
+						<li Class="RockSettings.DefModExtension_BiomeSettings">
+							<rockCount>1~2</rockCount>
+							<allowedRockDefs Inherit="False">
+								<li>ST_MudStone</li>
+								<li MayRequire="sarg.alphabiomes">AB_Mudstone</li>
+							</allowedRockDefs>
+						</li>
+						<li Class="GeologicalLandforms.BiomeProperties" MayRequire="m00nl1ght.geologicallandforms">
+							<applyToCaves MayRequire="m00nl1ght.geologicallandforms">false</applyToCaves>
+							<allowLandforms MayRequire="m00nl1ght.geologicallandforms">true</allowLandforms>
+							<allowBiomeTransitions MayRequire="m00nl1ght.geologicallandforms">false</allowBiomeTransitions>
+						</li>
+					</modExtensions>
+					<animalDensity>7</animalDensity>
+					<plantDensity>5</plantDensity>
+					<settlementSelectionWeight>0.9</settlementSelectionWeight>
+					<movementDifficulty>4</movementDifficulty>
+					<forageability>2</forageability>
+					<foragedFood>ToadLegs</foragedFood>
+					<wildPlantRegrowDays>3</wildPlantRegrowDays>
+					<maxFishPopulation>50780</maxFishPopulation>
+					<fishTypes MayRequire="Ludeon.RimWorld.Odyssey">
+						<freshwater_Common>
+							<Fish_Bass MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Bass>
+							<Fish_Tilapia MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Tilapia>
+						</freshwater_Common>
+						<freshwater_Uncommon>
+							<Fish_Catfish MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Catfish>
+							<Fish_Piranha MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Piranha>
+							<Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">0.1</Fish_Salmon>
+						</freshwater_Uncommon>
+						<saltwater_Common>
+							<Fish_Bluefish MayRequire="Ludeon.RimWorld.Odyssey">0.5</Fish_Bluefish>
+							<Fish_Cod MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Cod>
+						</saltwater_Common>
+						<saltwater_Uncommon>
+							<Fish_Salmon MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Salmon>
+							<Fish_Flounder MayRequire="Ludeon.RimWorld.Odyssey">1</Fish_Flounder>
+						</saltwater_Uncommon>
+						<rareCatchesSetMaker MayRequire="Ludeon.RimWorld.Odyssey">RareFishingCatches_Tropical</rareCatchesSetMaker>
+					</fishTypes>
+					<texture>World/Biomes/FroggySwamp</texture>
+					<soundsAmbient>
+					  <li>Ambient_NightInsects_Jungle</li>
+					  <li>Ambient_DayInsects_Jungle</li>
+					</soundsAmbient>
+					<diseaseMtbDays>20</diseaseMtbDays>
+					<diseases>
+					  <li>
+						<diseaseInc>Disease_Malaria</diseaseInc>
+						<commonality>180</commonality>
+					  </li>
+					  <li>
+						<diseaseInc>Disease_SleepingSickness</diseaseInc>
+						<commonality>200</commonality>
+					  </li>
+					  <li>
+						<diseaseInc>Disease_Flu</diseaseInc>
+						<commonality>100</commonality>
+					  </li>
+					  <li>
+						<diseaseInc>Disease_Plague</diseaseInc>
+						<commonality>100</commonality>
+					  </li>
+					  <li>
+						<diseaseInc>Disease_GutWorms</diseaseInc>
+						<commonality>80</commonality>
+					  </li>
+					  <li>
+						<diseaseInc>Disease_MuscleParasites</diseaseInc>
+						<commonality>80</commonality>
+					  </li>
+					  <li>
+						<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+						<commonality>30</commonality>
+					  </li>
+					  <li>
+						<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+						<commonality>30</commonality>
+					  </li>
+					  <li>
+						<diseaseInc>Disease_AnimalFlu</diseaseInc>
+						<commonality>100</commonality>
+					  </li>
+					  <li>
+						<diseaseInc>Disease_AnimalPlague</diseaseInc>
+						<commonality>100</commonality>
+					  </li>
+					  <li>
+						<diseaseInc>ST_Disease_Coronavirus</diseaseInc>
+						<commonality>100</commonality>
+					  </li>
+					</diseases>
+					<terrainsByFertility>
+					  <li>
+						<terrain>Soil</terrain>
+						<min>-999</min>
+						<max>0.6</max>
+					  </li>
+					  <li>
+						<terrain>SoilRich</terrain>
+						<min>0.6</min>
+						<max>999</max>
+					  </li>
+					</terrainsByFertility>
+					<terrainPatchMakers>
+					  <li>
+						<perlinFrequency>0.024</perlinFrequency>
+						<thresholds>
+						  <li>
+							<terrain>Mud</terrain>
+							<min>0.35</min>
+							<max>100</max>
+						  </li>
+						  <li>
+							<terrain>WaterShallow</terrain>
+							<min>101</min>
+							<max>300</max>
+						  </li>
+						</thresholds>
+					  </li>
+					  <li>
+						<perlinFrequency>0.027</perlinFrequency>
+						<thresholds>
+							<li>
+								<terrain>MossyTerrain</terrain>
+								<min>-3</min>
+								<max>0.29</max>
+							</li>
+						  <li>
+							<terrain>SoilRich</terrain>
+							<min>0.33</min>
+							<max>0.9</max>
+						  </li>
+						  <li>
+							<terrain>WaterShallow</terrain>
+							<min>0.6</min>
+							<max>999</max>
+						  </li>
+						</thresholds>
+					  </li>
+					  <li>
+						<perlinFrequency>0.035</perlinFrequency>
+						<thresholds>
+						  <li>
+							<terrain>MarshyTerrain</terrain>
+							<min>0.24</min>
+							<max>0.48</max>
+						  </li>
+						  <li>
+							<terrain>Marsh</terrain>
+							<min>0.48</min>
+							<max>999</max>
+						  </li>
+						</thresholds>
+					  </li>
+					</terrainPatchMakers>
+					<baseWeatherCommonalities>
+					  <Clear>5</Clear>
+					  <Fog>40</Fog>
+					  <Rain>35</Rain>
+					  <RainyThunderstorm>15</RainyThunderstorm>
+					  <FoggyRain>15</FoggyRain>
+					  <!-- <RG_Monsoon MayRequire="regrowth.botr.core">10</RG_Monsoon> -->
+					  <TorrentialRain MayRequire="ludeon.rimworld.odyssey">10</TorrentialRain>
+					</baseWeatherCommonalities>
+					<wildPlants>
+						<Plant_TallGrass>2</Plant_TallGrass>
+						<Plant_ShrubLow>2</Plant_ShrubLow>
+						<Plant_TreeOak>0.051</Plant_TreeOak>
+						<Plant_TreePoplar>0.08</Plant_TreePoplar>
+						<Plant_TreeWillow>2</Plant_TreeWillow>
+						<Plant_TreeCypress>1.72</Plant_TreeCypress>
+						<Plant_TreeMaple>1.2</Plant_TreeMaple>
+						<Plant_Chokevine>1</Plant_Chokevine>
+						<Plant_Alocasia>0.8</Plant_Alocasia>
+						<Plant_Bush>0.18</Plant_Bush>
+						<Plant_Clivia>0.07</Plant_Clivia>
+						<Plant_Berry>0.08</Plant_Berry>
+						<Plant_Rafflesia>0.005</Plant_Rafflesia>
+						<Rylex_Tree_CoconutPalm>0.04</Rylex_Tree_CoconutPalm>
+						<ST_LemonTree>0.009</ST_LemonTree>
+						<ST_LimeTree>0.011</ST_LimeTree>
+						<ST_OrangeTree>0.008</ST_OrangeTree>
+						<ST_CookingAppleTree>0.008</ST_CookingAppleTree>
+						<TSP_ST_CitronTree>0.01</TSP_ST_CitronTree>
+						<Herb_Guam>0.005</Herb_Guam>
+						<Plant_Reeds MayRequire="Ludeon.RimWorld.Odyssey">1</Plant_Reeds>
+						<Plant_LilyPad MayRequire="Ludeon.RimWorld.Odyssey">1</Plant_LilyPad>
+						<Plant_Bulrush MayRequire="Ludeon.RimWorld.Odyssey">0.2</Plant_Bulrush>
+						<TSP_ST_RB_Gnome_Plant_Hive_Swamp MayRequire="sarg.rimbees">0.01</TSP_ST_RB_Gnome_Plant_Hive_Swamp>
+						<AB_MangroveTree MayRequire="sarg.alphabiomes">2</AB_MangroveTree>
+						<AB_GiantGamma MayRequire="sarg.alphabiomes">0.002</AB_GiantGamma>
+						<PoisonMushroom MayRequire="mlie.advancedbiomes">0.01</PoisonMushroom>
+						<BMT_Cattail MayRequire="biomesteam.oasis">1</BMT_Cattail>
+						<BMT_Lilypad MayRequire="biomesteam.oasis">1</BMT_Lilypad>
+						<RN_PlantClover MayRequire="rimnature.velcroboy333">1</RN_PlantClover>
+						<Plant_CandyCaneGreen MayRequire="thatbartguy.candy">0.001</Plant_CandyCaneGreen>
+						<BMT_MayoaPortugallica MayRequire="biomesteam.biomesprehistoric">0.02</BMT_MayoaPortugallica>
+						<BMT_Alethopteris MayRequire="biomesteam.biomesprehistoric">0.02</BMT_Alethopteris>
+						<OotR_Plant_DemonBreath MayRequire="tarojun.morishep.onioftherim">0.001</OotR_Plant_DemonBreath>
+						<MorrowRim_FunnelCap MayRequire="sirmashedpotato.morrowrim">0.001</MorrowRim_FunnelCap>
+						<MorrowRim_WeepingParasol MayRequire="sirmashedpotato.morrowrim.ashswamp">0.05</MorrowRim_WeepingParasol>
+						<RB_Plant_Hive_Swamp MayRequire="sarg.rimbees">0.01</RB_Plant_Hive_Swamp>
+						<CK_PlantFern MayRequire="mlie.tropickapprainforestmod">2</CK_PlantFern>
+						<CK_PlantTreePalm MayRequire="mlie.tropickapprainforestmod">0.21</CK_PlantTreePalm>
+						<CK_PlantBushPalm MayRequire="mlie.tropickapprainforestmod">0.0001</CK_PlantBushPalm>
+						<CK_PlantTreeBamboo MayRequire="mlie.tropickapprainforestmod">0.005</CK_PlantTreeBamboo>
+						<CK_PlantBromeliad MayRequire="mlie.tropickapprainforestmod">0.024</CK_PlantBromeliad>
+						<!-- <CK_PlantTreeWildCoconutPalm MayRequire="mlie.tropickapprainforestmod">0.0025</CK_PlantTreeWildCoconutPalm> -->
+						<CK_PlantTreeMahogany MayRequire="mlie.tropickapprainforestmod">0.0001</CK_PlantTreeMahogany>
+						<CK_PlantTreeStranglerFig MayRequire="mlie.tropickapprainforestmod">0.0013</CK_PlantTreeStranglerFig>
+						<CK_PlantWildRice MayRequire="mlie.tropickapprainforestmod">0.0003</CK_PlantWildRice>
+						<CK_PlantWildTaro MayRequire="mlie.tropickapprainforestmod">0.003</CK_PlantWildTaro>
+						<CK_PlantTreeWildBanana MayRequire="mlie.tropickapprainforestmod">0.001</CK_PlantTreeWildBanana>
+						<CK_PlantWildLemongrass MayRequire="mlie.tropickapprainforestmod">0.002</CK_PlantWildLemongrass>
+						<CK_PlantHeliconia MayRequire="mlie.tropickapprainforestmod">0.15</CK_PlantHeliconia>
+						<CK_PlantWildJitterWeed MayRequire="mlie.tropickapprainforestmod">0.005</CK_PlantWildJitterWeed>
+						<CK_PlantWildSmokeleaf MayRequire="mlie.tropickapprainforestmod">0.03</CK_PlantWildSmokeleaf>
+						<CK_PlantWildPsychoid MayRequire="mlie.tropickapprainforestmod">0.003</CK_PlantWildPsychoid>
+						<CK_PlantWildBushDreamVine MayRequire="mlie.tropickapprainforestmod">0.002</CK_PlantWildBushDreamVine>
+						<CK_PlantWildCotton MayRequire="mlie.tropickapprainforestmod">0.002</CK_PlantWildCotton>
+						<CK_PlantRafflesia MayRequire="mlie.tropickapprainforestmod">0.002</CK_PlantRafflesia>
+						<CK_SpecialTreeHive MayRequire="mlie.tropickapprainforestmod">0.008</CK_SpecialTreeHive>
+						<DankPyon_Plant_MindwortWild MayRequire="dankpyon.medieval.overhaul">0.03</DankPyon_Plant_MindwortWild>
+						<DankPyon_Plant_PoppyWild MayRequire="dankpyon.medieval.overhaul">0.03</DankPyon_Plant_PoppyWild>
+						<DankPyon_Plant_FleawortWild MayRequire="dankpyon.medieval.overhaul">0.038</DankPyon_Plant_FleawortWild>
+						<DankPyon_Plant_FlyAgaricWild MayRequire="dankpyon.medieval.overhaul">0.05</DankPyon_Plant_FlyAgaricWild>
+					</wildPlants>
+					<wildAnimals>
+						<BloodFrog>0.2</BloodFrog>
+						<BudgettFrog>1</BudgettFrog>
+						<ST_BullFrog>1</ST_BullFrog>
+						<CyberFrogDocile>0.1</CyberFrogDocile>
+						<FireBelliedToad>0.3</FireBelliedToad>
+						<JudasFrog>0.2</JudasFrog>
+						<LeviathanFrog>0.08</LeviathanFrog>
+						<ST_LivingCoconut>0.1</ST_LivingCoconut>
+						<MilkFrog>0.14</MilkFrog>
+						<NightFrog>0.01</NightFrog>
+						<PepsiFrog>0.075</PepsiFrog>
+						<PumpkinToadlet>0.1</PumpkinToadlet>
+						<SpringPeeper>1.15</SpringPeeper>
+						<PoisonDartFrog>1</PoisonDartFrog>
+						<ST_Toad>1.1</ST_Toad>
+						<TomatoFrog>1</TomatoFrog>
+						<ST_TreeFrog>1</ST_TreeFrog>
+						<ST_WoodFrog>0.33</ST_WoodFrog>
+						<TSP_ST_ALBARRY_StephenColbert_Frog>0.1</TSP_ST_ALBARRY_StephenColbert_Frog>
+						<Bullfrog MayRequire="ludeon.rimworld.odyssey">3</Bullfrog>
+						<ColossusToad MayRequire="ludeon.rimworld.odyssey">0.82</ColossusToad>
+						<HC_Bullfrog MayRequire="hc.animal.2">1.25</HC_Bullfrog>
+						<Frug MayRequire="crazedmonkey231.frug">0.1</Frug>
+						<GiantToad MayRequire="yamazakioghw.gianttoads">0.12</GiantToad>
+						<KingToad MayRequire="yamazakioghw.gianttoads">0.01</KingToad>
+						<BMT_Goeto MayRequire="biomesteam.biomescaverns">0.045</BMT_Goeto>
+						<BMT_SandyToad MayRequire="biomesteam.biomescaverns">0.045</BMT_SandyToad>
+						<Frog MayRequire="fearl.frogcontinued">1</Frog>
+						<ThrumbaToad MayRequire="grimterra.biomesmod">0.01</ThrumbaToad>
+						<GRimBullfrog MayRequire="grimterra.biomesmod">1</GRimBullfrog>
+						
+						<!-- Non-frogs -->
+						<BMT_GiantSlug MayRequire="biomesteam.biomescaverns">0.01</BMT_GiantSlug>
+						<BMT_GiantSnail MayRequire="biomesteam.biomescaverns">0.03</BMT_GiantSnail>
+						<BMT_GlowSlug MayRequire="biomesteam.biomescaverns">0.01</BMT_GlowSlug>
+						<BMT_GlowSnail MayRequire="biomesteam.biomescaverns">0.01</BMT_GlowSnail>
+						<Onibi MayRequire="x3v21.jmc">0.071</Onibi> <!-- Will-o-wisp -->
+						<Swan MayRequire="Ludeon.RimWorld.Odyssey">0.02</Swan>
+						<Heron MayRequire="Ludeon.RimWorld.Odyssey">0.012</Heron>
+						<Moose MayRequire="Ludeon.RimWorld.Odyssey">0.01</Moose>
+						<DankPyon_LargeCobraForest MayRequire="dankpyon.medieval.overhaul">0.001</DankPyon_LargeCobraForest>
+						<DankPyon_GiantConstrictorForest MayRequire="dankpyon.medieval.overhaul">0.001</DankPyon_GiantConstrictorForest>
+						<Tortoise>0.01</Tortoise>
+					</wildAnimals>
+					<coastalWildAnimals>
+						<Walrus MayRequire="Ludeon.RimWorld.Odyssey">0.5</Walrus>
+						<SeaLion MayRequire="Ludeon.RimWorld.Odyssey">0.04</SeaLion>
+						<Otter MayRequire="Ludeon.RimWorld.Odyssey">0.4</Otter>
+						<Seal MayRequire="Ludeon.RimWorld.Odyssey">0.1</Seal>
+						<HermitCrab MayRequire="Ludeon.RimWorld.Odyssey">0.1</HermitCrab>
+						<StoneCrab MayRequire="Ludeon.RimWorld.Odyssey">0.1</StoneCrab>
+						<SeaTurtle MayRequire="Ludeon.RimWorld.Odyssey">0.8</SeaTurtle>
+					</coastalWildAnimals>
+					<forceRockTypes>
+						<li>ST_MudStone</li>
+						<li MayRequire="sarg.alphabiomes">AB_Mudstone</li>
+					</forceRockTypes>
+					<allowedPackAnimals>
+					  <li>Muffalo</li>
+					  <li>LeviathanFrog</li>
+					</allowedPackAnimals>
+				</BiomeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

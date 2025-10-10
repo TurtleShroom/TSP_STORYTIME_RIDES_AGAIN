@@ -27,6 +27,7 @@
 			<mineableScatterLumpSizeRange>23~64</mineableScatterLumpSizeRange>
 			<claimable>false</claimable>
 			<paintable>true</paintable>
+			<veinMineable>true</veinMineable>
         </building>
 		<saveCompressible>false</saveCompressible>
     </ThingDef>
@@ -85,7 +86,7 @@
 				<Beauty>1.4</Beauty>
 			</statFactors>
 			<statOffsets>
-				<CancerRate>0.2</CancerRate>
+				<CancerRate MayRequire="ludeon.rimworld.biotech">0.2</CancerRate>
 			</statOffsets>
 			<color>(145,157,118)</color>
 		</stuffProps>
@@ -152,7 +153,7 @@
 				<MeleeWeapon_CooldownMultiplier>0.61</MeleeWeapon_CooldownMultiplier>
             </statFactors>
 			<statOffsets>
-				<CancerRate>0.024</CancerRate> <!-- Per item -->
+				<CancerRate MayRequire="ludeon.rimworld.biotech">0.024</CancerRate> <!-- Per item -->
 			</statOffsets>
         </stuffProps>
         <thingCategories>
@@ -219,7 +220,7 @@
                 <Mass>0.8</Mass>
             </statFactors>
 			<statOffsets>
-				<CancerRate>0.01</CancerRate> <!-- Per item -->
+				<CancerRate MayRequire="ludeon.rimworld.biotech">0.01</CancerRate> <!-- Per item -->
 			</statOffsets>
         </stuffProps>
 		<tradeability>All</tradeability>

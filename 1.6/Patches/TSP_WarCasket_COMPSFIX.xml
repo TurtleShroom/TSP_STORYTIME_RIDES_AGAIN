@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/VFEPirates.WarcasketDef[defName="Warcasket_joris"]/modExtensions</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/VFEPirates.WarcasketDef[defName="Warcasket_joris"]/modExtensions</xpath>
+			<value>
+				<modExtensions>
+					<li Class="VEF.Apparels.ApparelExtension">
+						<traitsOnEquip>
+							<li>VFEP_WarcasketTrait</li>
+						</traitsOnEquip>
+						<traitsOnUnequip>
+							<li>VFEP_Shellcasket</li>
+						</traitsOnUnequip>
+						<pawnCapacityMinLevels>
+							<li>
+								<capacity>Moving</capacity>
+								<minLevel>0.7</minLevel>
+							</li>
+							<li>
+								<capacity>Manipulation</capacity>
+								<minLevel>0.7</minLevel>
+							</li>
+						</pawnCapacityMinLevels>
+					</li>
+				</modExtensions>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/VFEPirates.WarcasketDef[defName="Warcasket_Faz"]/modExtensions</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/VFEPirates.WarcasketDef[defName="Warcasket_Faz"]/modExtensions</xpath>
+			<value>
+				<modExtensions>
+					<li Class="VEF.Apparels.ApparelExtension">
+						<traitsOnEquip>
+							<li>VFEP_WarcasketTrait</li>
+						</traitsOnEquip>
+						<traitsOnUnequip>
+							<li>VFEP_Shellcasket</li>
+						</traitsOnUnequip>
+						<pawnCapacityMinLevels>
+							<li>
+								<capacity>Moving</capacity>
+								<minLevel>0.7</minLevel>
+							</li>
+							<li>
+								<capacity>Manipulation</capacity>
+								<minLevel>0.7</minLevel>
+							</li>
+						</pawnCapacityMinLevels>
+					</li>
+				</modExtensions>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/VFEPirates.WarcasketDef[defName="Warcasket_Faz"]/modExtensions</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/VFEPirates.WarcasketDef[defName="Warcasket_Faz"]/modExtensions</xpath>
+			<value>
+				<modExtensions>
+					<li Class="VEF.Apparels.ApparelExtension">
+						<traitsOnEquip>
+							<li>VFEP_WarcasketTrait</li>
+						</traitsOnEquip>
+						<traitsOnUnequip>
+							<li>VFEP_Shellcasket</li>
+						</traitsOnUnequip>
+						<pawnCapacityMinLevels>
+							<li>
+								<capacity>Moving</capacity>
+								<minLevel>0.7</minLevel>
+							</li>
+							<li>
+								<capacity>Manipulation</capacity>
+								<minLevel>0.7</minLevel>
+							</li>
+						</pawnCapacityMinLevels>
+					</li>
+				</modExtensions>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

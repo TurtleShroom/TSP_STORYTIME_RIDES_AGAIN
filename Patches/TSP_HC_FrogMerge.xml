@@ -5,23 +5,71 @@
 	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="EggBullfrog"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="EggFrogUnfertilized"]/tradeTags</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="EggBullfrog"]</xpath>
+			<xpath>Defs/ThingDef[defName="EggFrogUnfertilized"]</xpath>
 			<success>Always</success>
 			<value>
 				<tradeTags></tradeTags>
 			</value>
 		</nomatch>
 	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="EggFrogFertilized"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="EggFrogFertilized"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Frog"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Frog"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Frog"]/race</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Frog"]</xpath>
+			<success>Always</success>
+			<value>
+				<race></race>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Frog"]/race/useMeatFrom</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Frog"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<useMeatFrom Inherit="False" IsNull="True"></useMeatFrom>
+			</value>
+		</nomatch>
+	</Operation>
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+		<xpath>Defs/ThingDef[defName="Frog"]/race/leatherDef</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="HC_Bullfrog"]/race/leatherDef</xpath>
+			<xpath>Defs/ThingDef[defName="Frog"]/race/leatherDef</xpath>
 			<value>
 				<leatherDef>Leather_Frog</leatherDef>
 			</value>
@@ -31,11 +79,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+	<xpath>Defs/ThingDef[defName="Frog"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="HC_Bullfrog"]/race/useMeatFrom</xpath>
+			<xpath>Defs/ThingDef[defName="Frog"]/race/useMeatFrom</xpath>
 			<value>
 				<useMeatFrom>ST_BullFrog</useMeatFrom>
 			</value>
@@ -45,11 +93,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+	<xpath>Defs/ThingDef[defName="Frog"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="HC_Bullfrog"]/race/lifeStageAges</xpath>
+			<xpath>Defs/ThingDef[defName="Frog"]/race/lifeStageAges</xpath>
 			<value>
 				<lifeStageAges>
 					<li>
@@ -78,11 +126,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+	<xpath>Defs/ThingDef[defName="Frog"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="HC_Bullfrog"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName="Frog"]/tradeTags</xpath>
 			<value>
 				<li>AnimalFrog</li>
 				<li>AnimalCommon</li>
@@ -93,11 +141,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+	<xpath>Defs/ThingDef[defName="Frog"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="HC_Bullfrog"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName="Frog"]/tradeTags</xpath>
 			<value>
 				<li>AnimalFrog</li>
 				<li>AnimalCommon</li>
@@ -108,11 +156,11 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="EggBullfrog"]/tradeTags</xpath>
+		<xpath>Defs/ThingDef[defName="EggFrogFertilized"]/tradeTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="EggBullfrog"]/tradeTags</xpath>
+			<xpath>Defs/ThingDef[defName="EggFrogFertilized"]/tradeTags</xpath>
 			<value>
 				<li>FertilizedFrogEgg</li>
 			</value>
@@ -122,13 +170,27 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="HC_Bullfrog"]</xpath>
+		<xpath>Defs/ThingDef[defName="Frog"]/race/body</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="HC_Bullfrog"]/race/body</xpath>
+			<xpath>Defs/ThingDef[defName="Frog"]/race/body</xpath>
 			<value>
 				<body>ST_FrogLike</body>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Frog"]/ecoSystemWeight</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/PawnKindDef[defName="Frog"]/ecoSystemWeight</xpath>
+			<value>
+				<ecoSystemWeight>0</ecoSystemWeight>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

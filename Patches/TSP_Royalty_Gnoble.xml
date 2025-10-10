@@ -8,7 +8,7 @@
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li/options</xpath>
 			<value>
-				<TSP_ST_RoyaltyGnoble>0.87</TSP_ST_RoyaltyGnoble>
+				<TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">0.95</TSP_ST_RoyaltyGnoble>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -16,20 +16,29 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/race</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/race</xpath>
+			<success>Always</success>
 			<value>
 				<race Inherit="False">Alien_ST_Gnome</race>
 			</value>
 		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+			<success>Always</success>
+			<value>
+				<race Inherit="False">Alien_ST_Gnome</race>
+			</value>
+		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/specificApparelRequirements</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/specificApparelRequirements</xpath>
@@ -89,8 +98,7 @@
 		<match Class="PatchOperationReplace">
 			<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Magister"]/xenotypeSet</xpath>
 			<value>
-				<xenotypeSet Inherit="False">
-				</xenotypeSet>
+				<xenotypeSet></xenotypeSet>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -103,7 +111,7 @@
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/PawnKindDef[defName="VFEE_Empire_Royal_Emperor"]/xenotypeSet/xenotypeChances</xpath>
 			<value>
-				<Weezey>0.08</Weezey>
+				<Weezey>0.1</Weezey>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->

@@ -7,11 +7,11 @@
 		<!-- If it does, add this replacement. -->
 		<match Class="PatchOperationReplace">
 			<success>Always</success>
-			<xpath>Defs/BiomeDef[defName="froggySwamp"]/modExtensions/li[@Class="RockSettings.DefModExtension_BiomeSettings"]/allowedRockDefs</xpath>
+			<xpath>Defs/BiomeDef[defName="froggySwamp"]/forceRockTypes</xpath>
 			<value>
-				<allowedRockDefs>
+				<forceRockTypes>
 					<li>AB_Mudstone</li>
-				</allowedRockDefs>
+				</forceRockTypes>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -29,7 +29,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist/ -->
+	<!-- Does this exist? -->
 		<xpath>Defs/ThingDef[defName="AB_Mudstone"]</xpath>
 		<!-- If it does, add this replacement. -->
 		<match Class="PatchOperationReplace">

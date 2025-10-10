@@ -845,7 +845,7 @@
 	</tradeTags>
   </ThingDef>
   
-  <ThingDef ParentName="BasePsychicWeaponMelee">
+  <ThingDef ParentName="BasePsychicWeaponMelee" MayRequire="ludeon.rimworld.royalty">
     <defName>CursedCutlass</defName>
     <label>Haunted Cutlass</label>
     <description>The hilt of this blade is covered in melted gold coins, and a strange ethereal glow emanates from it. The magic of the Haunted Gold has infused a Persona that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the Haunted Cutlass Persona will refuse to be wielded by anyone else.</description>
@@ -922,14 +922,14 @@
 	</comps>
 	<equippedStatOffsets>
 		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
-		<PsychicEntropyRecoveryRate>0.02</PsychicEntropyRecoveryRate>
+		<PsychicEntropyRecoveryRate MayRequire="ludeon.rimworld.royalty">0.02</PsychicEntropyRecoveryRate>
 	</equippedStatOffsets>
   </ThingDef>
   
-  <ThingDef ParentName="BaseWeapon">
+  <ThingDef ParentName="BaseWeapon" MayRequire="ludeon.rimworld.royalty">
     <defName>CursedGun</defName>
     <label>haunted assault rifle</label>
-    <description>An assault rifle that's been covered in Haunted Gold. It emits a strange, ethereal glow. While it is a fantastic ranged weapon, its most important purpose is to enhance the wielder's psychic sensitivity and neural heat dissipation, allowing more use of psychic powers alongside it. The Haunted Gold coating of this rifle causes it to be more accurate in the hands of any user, regardless of his Shooting Skills.</description>
+    <description>An assault rifle that's been covered in Haunted Gold. It emits a strange, ethereal glow. While it is a fantastic ranged weapon, its most important purpose is to enhance the wielder's psychic sensitivity and neural heat dissipation, allowing more use of psychic powers alongside it. The Haunted Gold coating of this rifle causes it to be more accurate in the hands of any user, regardless of his Shooting Skills. By its infusion of Haunted Gold, a magically infused persona has formed in the gun that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the rod's persona will refuse to be wielded by anyone else.</description>
     <graphicData>
       <texPath>Things/Items/PirateWeapons/CursedGun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1030,12 +1030,12 @@
 		<li Class="CompProperties_Styleable"></li>
 		<li Class="CompProperties_Forbiddable"></li>
 		<li Class="CompProperties_BladelinkWeapon" MayRequire="ludeon.rimworld.royalty">
-			<biocodeOnEquip>false</biocodeOnEquip>
+			<biocodeOnEquip>true</biocodeOnEquip>
 		</li>
 	</comps>
 	<equippedStatOffsets>
 		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
-		<PsychicEntropyRecoveryRate>0.02</PsychicEntropyRecoveryRate>
+		<PsychicEntropyRecoveryRate MayRequire="ludeon.rimworld.royalty">0.02</PsychicEntropyRecoveryRate>
 	</equippedStatOffsets>
   </ThingDef>
   

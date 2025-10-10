@@ -275,7 +275,7 @@
 		</products>
 	</RecipeDef>
 
-	<RecipeDef>
+	<RecipeDef MayRequire="ludeon.rimworld.royalty">
 		<defName>MakeHauntedHatchet</defName>
 		<label>Make Haunted Hatchet</label>
 		<description>Forge a haunted hatchet.</description>    
@@ -285,7 +285,9 @@
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
 		<workSkill>Crafting</workSkill>
-		<researchPrerequisite>magicPirateCrafting</researchPrerequisite>
+		<researchPrerequisites>
+			<li MayRequire="ludeon.rimworld.royalty">magicPirateCrafting</li>
+		</researchPrerequisites>
 		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
 		<recipeUsers>
 			<li>ElectricSmithy</li>

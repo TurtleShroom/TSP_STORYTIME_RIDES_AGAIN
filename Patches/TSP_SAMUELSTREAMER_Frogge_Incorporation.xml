@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]/race</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+			<success>Always</success>
+			<value>
+				<race></race>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]/race/useMeatFrom</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<useMeatFrom Inherit="False" IsNull="True"></useMeatFrom>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+			<success>Always</success>
+			<value>
+				<tradeTags></tradeTags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]/race</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+			<success>Always</success>
+			<value>
+				<race></race>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]/race/useMeatFrom</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]/race</xpath>
+			<success>Always</success>
+			<value>
+				<useMeatFrom Inherit="False" IsNull="True"></useMeatFrom>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName = "MSSFP_Frogge" or defName = "MSSFP_Jrogge" or defName = "MSFP_PumpkinFrogge" or defName = "MSSFP_CoalFroggeAnt" or defName = "MSSFP_CoalFroggeBiter" or defName = "MSSFP_CoalFroggeLigna" or defName = "MSSFP_CoalFroggePete"]/race/leatherDef</xpath>
+			<value>
+				<leatherDef>Leather_Frog</leatherDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName = "MSSFP_Frogge" or defName = "MSSFP_Jrogge" or defName = "MSFP_PumpkinFrogge" or defName = "MSSFP_CoalFroggeAnt" or defName = "MSSFP_CoalFroggeBiter" or defName = "MSSFP_CoalFroggeLigna" or defName = "MSSFP_CoalFroggePete"]/race/useMeatFrom</xpath>
+			<value>
+				<useMeatFrom>ST_BullFrog</useMeatFrom>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName = "MSSFP_Frogge" or defName = "MSSFP_Jrogge" or defName = "MSFP_PumpkinFrogge" or defName = "MSSFP_CoalFroggeAnt" or defName = "MSSFP_CoalFroggeBiter" or defName = "MSSFP_CoalFroggeLigna" or defName = "MSSFP_CoalFroggePete"]/race/body</xpath>
+			<value>
+				<body>ST_FrogLike</body>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName = "MSSFP_Frogge" or defName = "MSSFP_Jrogge" or defName = "MSFP_PumpkinFrogge" or defName = "MSSFP_CoalFroggeAnt" or defName = "MSSFP_CoalFroggeBiter" or defName = "MSSFP_CoalFroggeLigna" or defName = "MSSFP_CoalFroggePete"]/race/lifeStageAges</xpath>
+			<value>
+				<lifeStageAges>
+					<li>
+						<def>AnimalBabyTiny</def>
+						<minAge>0</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>ST_Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalJuvenile</def>
+						<minAge>0.04</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>ST_Frog_Angry</soundAngry>
+					</li>
+					<li>
+						<def>AnimalAdult</def>
+						<minAge>0.12</minAge>
+						<soundWounded>Pawn_Iguana_Wounded</soundWounded>
+						<soundDeath>Pawn_Iguana_Death</soundDeath>
+						<soundCall>Pawn_Iguana_Call</soundCall>
+						<soundAngry>ST_Frog_Angry</soundAngry>
+					</li>
+				</lifeStageAges>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+	<xpath>Defs/ThingDef[defName="MSSFP_Frogge"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName = "MSSFP_Frogge" or defName = "MSSFP_Jrogge" or defName = "MSFP_PumpkinFrogge" or defName = "MSSFP_CoalFroggeAnt" or defName = "MSSFP_CoalFroggeBiter" or defName = "MSSFP_CoalFroggeLigna" or defName = "MSSFP_CoalFroggePete"]/tradeTags</xpath>
+			<value>
+				<li>AnimalFrog</li>
+				<li>SAMUELSTREAMER_Frogge</li>
+				<li>AnimalExoticAnima</li>
+				<li>AnimalExotic</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

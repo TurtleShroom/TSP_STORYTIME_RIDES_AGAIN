@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/BiomeDef[defName="MSSBL_City"]/generatesNaturally</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/BiomeDef[defName="MSSBL_City"]/generatesNaturally</xpath>
+			<success>Always</success>
+			<value>
+				<generatesNaturally>false</generatesNaturally>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/BiomeDef[defName="MSSBL_City"]</xpath>
+			<success>Always</success>
+			<value>
+				<generatesNaturally>false</generatesNaturally>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/VEF.Factions.ContrabandDef[defName="MSSBL_Alcohol"]/factions</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/VEF.Factions.ContrabandDef[defName="MSSBL_Alcohol"]/factions</xpath>
+			<success>Always</success>
+			<value>
+				<factions>
+					<li MayRequire="ludeon.rimworld.royalty">Empire</li>
+				</factions>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/VEF.Factions.ContrabandDef[defName="MSSBL_Alcohol"]/illegalFactions</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/VEF.Factions.ContrabandDef[defName="MSSBL_Alcohol"]/illegalFactions</xpath>
+			<success>Always</success>
+			<value>
+				<illegalFactions>
+					<li MayRequire="ludeon.rimworld.royalty">Empire</li>
+					<li MayRequire="ludeon.rimworld.ideology">TribeCannibal</li>
+					<li>OutlanderRough</li>
+				</illegalFactions>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

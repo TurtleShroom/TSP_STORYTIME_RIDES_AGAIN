@@ -46,7 +46,7 @@
 	</RecipeDef>
 
 	  
-	<RecipeDef>
+	<RecipeDef MayRequire="ludeon.rimworld.royalty">
 		<defName>MakeCursedCutlass</defName>
 		<label>Forge haunted cutlass</label>
 		<description>Forge a cutlass and imbue it with spiritual power by adding cursed coins.</description>    
@@ -100,14 +100,14 @@
 			</thingDefs>
 		 </defaultIngredientFilter>
 		 <products>
-			<CursedCutlass>1</CursedCutlass>
+			<CursedCutlass MayRequire="ludeon.rimworld.royalty">1</CursedCutlass>
 		</products>
 		<researchPrerequisites>
-			<li>magicPirateCrafting</li>
+			<li MayRequire="ludeon.rimworld.royalty">magicPirateCrafting</li>
 		</researchPrerequisites>
 	</RecipeDef>
 
-	<RecipeDef>
+	<RecipeDef MayRequire="ludeon.rimworld.royalty">
 		<defName>MakeCursedGun</defName>
 		<label>coat assault rifle in haunted gold</label>
 		<description>Coat an assault rifle in haunted gold. Why not?</description>    
@@ -136,7 +136,7 @@
 					<li>CursedCoin</li>
 				</thingDefs>
 			</filter>
-			<count>15</count>
+			<count>75</count>
 		  </li>
 		  <li>
 			<filter>
@@ -164,11 +164,11 @@
 			<CursedGun>1</CursedGun>
 		</products>
 		<researchPrerequisites>
-			<li>magicPirateCrafting</li>
+			<li MayRequire="ludeon.rimworld.royalty">magicPirateCrafting</li>
 		</researchPrerequisites>
 	</RecipeDef>
 	
-	<RecipeDef>
+	<RecipeDef MayRequire="ludeon.rimworld.royalty">
 		<defName>TSP_ST_MakeCursedGun_FromScratch</defName>
 		<label>Make haunted assault rifle from scratch</label>
 		<description>Now that the technology to make assault rifles has been fully understood, let us go further and coat that rifle in haunted gold. Why not?</description>
@@ -180,7 +180,7 @@
 		<soundWorking>Recipe_Machining</soundWorking>
 		<unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef>
 		<researchPrerequisites>
-			<li>magicPirateCrafting</li>
+			<li MayRequire="ludeon.rimworld.royalty">magicPirateCrafting</li>
 			<li>PrecisionRifling</li>
 		</researchPrerequisites>
 		<recipeUsers>
@@ -301,7 +301,7 @@
 			<PirateCrown>1</PirateCrown>
 		</products>
 		<researchPrerequisites>
-			<li>magicPirateCrafting</li>
+			<li MayRequire="ludeon.rimworld.royalty">magicPirateCrafting</li>
 		</researchPrerequisites>
 	</RecipeDef>
 </Defs>

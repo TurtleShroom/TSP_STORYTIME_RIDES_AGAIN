@@ -3,7 +3,7 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="GRimBullfrog"]</xpath>
+		<xpath>Defs/ThingDef[defName="GRimBullfrog"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAddModExtension">
 			<success>Always</success>
@@ -21,6 +21,32 @@
 					<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
 						<li>TSP_ST_FrogNormalDesc</li>
 						<li>ST_FrogUncommonDesc</li>
+					</statDescriptions>
+				</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="ThrumbaToad"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAddModExtension">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="ThrumbaToad"]</xpath>
+			<value>
+				<li Class="VEF.AnimalBehaviours.AnimalStatExtension" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<statToAdd MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+						<li>ST_FrogRole</li>
+						<li>ST_FrogRarity</li>
+					</statToAdd>
+					<statValues MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+						<li>ST_MeleeTank</li>
+						<li>ST_FrogRare</li>
+					</statValues>
+					<statDescriptions MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+						<li>ST_MeleeTankDesc</li>
+						<li>ST_FrogRareDesc</li>
 					</statDescriptions>
 				</li>
 			</value>
