@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/CultureDef[defName="Benefactor"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/CultureDef[defName="Benefactor"]</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/FactionDef[@Name="PatreonFactionBase"]/allowedCultures</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[@Name="PatreonFactionBase"]/allowedCultures</xpath>
+			<success>Always</success>
+			<value>
+				<allowedCultures Inherit="False">
+					<li>Patronus</li>
+				</allowedCultures>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+</Patch>
