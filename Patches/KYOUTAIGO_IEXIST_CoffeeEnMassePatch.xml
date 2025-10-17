@@ -35,7 +35,6 @@
 					<success>Always</success>
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
-						<li MayRequire="scar.teancookies">scar_RawCoffee</li>
 						<li MayRequire="mlie.tropickapprainforestmod">CK_RawJitterBerries</li>
 					</value>
 				</li>
@@ -83,12 +82,12 @@
 		</match>
 	</Operation>
 	
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-	<xpath>Defs/ThingDef[defName="ST_Bean"]</xpath>
-		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
+	 Does this exist?
+	 <xpath>Defs/ThingDef[defName="ST_Bean"]</xpath>
+		If it does, LET'S FASTING GOOOOOOOOOO!!!
 		<match Class="PatchOperationSequence">
-			<!-- <success>Always</success> -->
 			<operations>
 				<li Class="PatchOperationInsert">
 					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ST_Bean"]</xpath>
@@ -116,4 +115,5 @@
 			</operations>
 		</match>
 	</Operation>
+	-->
 </Patch>

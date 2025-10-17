@@ -228,7 +228,6 @@
 		</nomatch>
 	</Operation>
 	
-	
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
@@ -279,11 +278,6 @@
 					</value>
 				</li>
 				
-				
-				
-				
-				
-				
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName="DankPyon_MakeSpiceBulk"]/ingredients/li/filter/categories</xpath>
 					<success>Always</success>
@@ -329,9 +323,6 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
-	
-
-
 
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
@@ -346,8 +337,6 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
 						<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
-						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
-						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 					</value>
 				</li>
 				
@@ -357,8 +346,6 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
 						<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
-						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
-						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 					</value>
 				</li>
 				
@@ -368,49 +355,6 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
 						<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
-						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
-						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
-					</value>
-				</li>
-			</operations>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="ST_MixedHerbs"]</xpath>
-		<!-- If it does, LET'S FASTING GOOOOOOOOOO!!! -->
-		<match Class="PatchOperationSequence">
-			<!-- <success>Always</success> -->
-			<operations>
-				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="ST_MixedHerbs"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
-						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
-						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="ST_MixedHerbs"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
-						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
-						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
-					</value>
-				</li>
-				
-				<li Class="PatchOperationInsert">
-					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="ST_MixedHerbs"]</xpath>
-					<success>Always</success>
-					<value>
-						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
-						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Spices</li>
-						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 					</value>
 				</li>
 			</operations>
@@ -429,9 +373,8 @@
 					<xpath>Defs/RecipeDef/ingredients/li/filter/thingDefs/li[text()="DankPyon_Spices"]</xpath>
 					<success>Always</success>
 					<value>
-						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
-						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+						<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
 					</value>
 				</li>
 				
@@ -439,9 +382,8 @@
 					<xpath>Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="DankPyon_Spices"]</xpath>
 					<success>Always</success>
 					<value>
-						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
-						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+						<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
 					</value>
 				</li>
 				
@@ -449,9 +391,8 @@
 					<xpath>Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="DankPyon_Spices"]</xpath>
 					<success>Always</success>
 					<value>
-						<li MayRequire="vanillaexpanded.vcooke">VCE_RawSpices</li>
-						<li MayRequire="dajian.chiteaditional.expanded">LaJiao</li> <!-- Oriental spices -->
 						<li MayRequire="TSP.Isengriff.Storytime">ST_MixedHerbs</li>
+						<li MayRequire="TSP.Isengriff.Storytime">LantadymeLeaves</li>
 					</value>
 				</li>
 			</operations>
