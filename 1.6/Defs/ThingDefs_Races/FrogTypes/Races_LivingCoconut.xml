@@ -508,13 +508,23 @@
 			<li Class="StoryTime.CompProperties_Tomato">
 				<tomatoDef>Rylex_Coconut</tomatoDef>
 				<tomatoIntervalDays>1</tomatoIntervalDays>
-				<tomatoAmount>15</tomatoAmount>
+				<tomatoAmount>30</tomatoAmount>
 			</li>
-			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-				<hediffname>Hediff_CoconutFrog</hediffname>
+			<li Class="CompProperties_Shearable" MayRequire="febvre.thebrianrotanimals.core">
+				<woolDef>Leather_BR_CoCoCapybara</woolDef>
+				<shearIntervalDays>1.1</shearIntervalDays>
+				<woolAmount>10</woolAmount>
 			</li>
-			<li Class="VEF.AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-				<needsDiggableTerrain>true</needsDiggableTerrain>
+			<li Class="CompProperties_Milkable" MayRequire="tsp.isengriff.storytime">
+				<milkDef>Rylex_CoconutMilk</milkDef>
+				<milkIntervalDays>1</milkIntervalDays>
+				<milkAmount>25</milkAmount>
+			</li>
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core,tsp.isengriff.storytime">
+				<hediffname MayRequire="tsp.isengriff.storytime">Hediff_CoconutFrog</hediffname>
+			</li>
+			<li Class="VEF.AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef" MayRequire="oskarpotocki.vanillafactionsexpanded.core,tsp.isengriff.storytime">
+				<needsDiggableTerrain>false</needsDiggableTerrain>
 				<gizmoImage>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</gizmoImage>
 				<gizmoLabel>ST_WoodFrog_CommandLabel</gizmoLabel>
 				<gizmoDesc>ST_WoodFrog_CommandDesc</gizmoDesc>

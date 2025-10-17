@@ -55,4 +55,94 @@
 			</value>
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingDef[defName="BR_CoCoCapybara"]/race/specificMeatDef</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="BR_CoCoCapybara"]/race/specificMeatDef</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingDef[defName="BR_CoCoCapybara"]/race/useMeatFrom</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="BR_CoCoCapybara"]/race/useMeatFrom</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="BR_CoCoCapybara"]/race/useMeatFrom</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="BR_CoCoCapybara"]/race</xpath>
+			<value>
+				<useMeatFrom IsNull="True" Inherit="False"></useMeatFrom>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="BR_CoCoCapybara"]/race/useMeatFrom</xpath>
+		<!-- If it DOES NOT, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="BR_CoCoCapybara"]/race/useMeatFrom</xpath>
+			<value>
+				<useMeatFrom Inherit="False">Capybara</useMeatFrom>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="BR_CoCoCapybara"]/comps</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="BR_CoCoCapybara"]/comps</xpath>
+			<value>
+				<comps>
+					<li Class="StoryTime.CompProperties_Tomato" MayRequire="tsp.isengriff.storytime">
+						<tomatoDef>Rylex_Coconut</tomatoDef>
+						<tomatoIntervalDays>1</tomatoIntervalDays>
+						<tomatoAmount>25</tomatoAmount>
+					</li>
+					<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff" MayRequire="oskarpotocki.vanillafactionsexpanded.core,tsp.isengriff.storytime">
+						<hediffname MayRequire="tsp.isengriff.storytime">Hediff_CoconutFrog</hediffname>
+					</li>
+					<li Class="VEF.AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef" MayRequire="oskarpotocki.vanillafactionsexpanded.core,tsp.isengriff.storytime">
+						<needsDiggableTerrain>false</needsDiggableTerrain>
+						<gizmoImage>Things/Pawn/Animal/SphereTypes/LivingCoconut/LivingCoconut_east</gizmoImage>
+						<gizmoLabel>ST_WoodFrog_CommandLabel</gizmoLabel>
+						<gizmoDesc>ST_WoodFrog_CommandDesc</gizmoDesc>
+						<defToChangeTo>Rylex_Tree_CoconutPalm</defToChangeTo>
+					</li>
+					<li Class="CompProperties_Milkable" MayRequire="tsp.isengriff.storytime">
+						<milkDef>Rylex_CoconutMilk</milkDef>
+						<milkIntervalDays>1</milkIntervalDays>
+						<milkAmount>15</milkAmount>
+					</li>
+					<li Class="CompProperties_Shearable" MayRequire="febvre.thebrianrotanimals.core">
+						<woolDef>Leather_BR_CoCoCapybara</woolDef>
+						<shearIntervalDays>3</shearIntervalDays>
+						<woolAmount>25</woolAmount>
+					</li>
+				</comps>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

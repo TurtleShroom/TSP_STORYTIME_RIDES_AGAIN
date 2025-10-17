@@ -365,5 +365,72 @@
 			</operations>	
 		</match>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="RAW_WATERMELON_RESOURCE_DEF"]</xpath>
+		<!-- If it DOES NOT, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="BR_WatermelonZebra"]/comps</xpath>
+			<value>
+				<comps>
+					<li Class="CompProperties_Milkable" MayRequire="garbagedayisheretostay.watermelons.gdihtswm">
+						<milkDef>RAW_WATERMELON_RESOURCE_DEF</milkDef>
+						<milkIntervalDays>1</milkIntervalDays>
+						<milkAmount>23</milkAmount>
+						<milkFemaleOnly>false</milkFemaleOnly>
+					</li>
+				</comps>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="BR_WoodLogMan"]/comps</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="BR_WoodLogMan"]</xpath>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="BR_WoodLogMan"]</xpath>
+		<!-- If it DOES NOT, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="BR_WoodLogMan"]/comps</xpath>
+			<value>
+				<comps>
+					<li Class="CompProperties_Milkable" MayRequire="soul.maelstromsmunchies">
+						<milkDef>MaelM_Durian</milkDef>
+						<milkIntervalDays>1</milkIntervalDays>
+						<milkAmount>15</milkAmount>
+						<milkFemaleOnly>false</milkFemaleOnly>
+					</li>
+					<li Class="CompProperties_Shearable">
+						<woolDef>WoodLog</woolDef>
+						<shearIntervalDays>1</shearIntervalDays>
+						<woolAmount>2</woolAmount>
+					</li>
+					<li Class="StoryTime.CompProperties_Wood" MayRequire="TSP.Isengriff.Storytime">
+						<woodDef>WoodLog</woodDef>
+						<woodHarvestIntervalDays>2</woodHarvestIntervalDays>
+						<woodAmount>20</woodAmount>
+					</li>
+					<li Class="VEF.AnimalBehaviours.CompProperties_LightSustenance" MayRequire="sarg.alphaanimals,oskarpotocki.vanillafactionsexpanded.core"></li>
+				</comps>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>
 
