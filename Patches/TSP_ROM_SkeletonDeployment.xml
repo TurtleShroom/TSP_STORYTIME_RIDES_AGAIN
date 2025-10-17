@@ -102,26 +102,6 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
-		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationAdd">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="SpookySkeleton"]/comps</xpath>
-			<value>
-				<li Class="AnimalBehaviours.CompProperties_InitialHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
-					<hediffname>HedSTUndead</hediffname>
-					<hediffseverity>1</hediffseverity>
-				</li>
-				<li Class="AnimalBehaviours.CompProperties_Draftable" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
-					<makeNonFleeingToo>true</makeNonFleeingToo>
-				</li>
-			</value>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
 		<xpath>Defs/ThingDef[defName="SpookySkeleton"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationAddModExtension">
