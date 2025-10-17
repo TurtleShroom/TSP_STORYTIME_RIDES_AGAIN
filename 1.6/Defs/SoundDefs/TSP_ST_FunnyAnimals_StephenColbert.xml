@@ -6,9 +6,15 @@
 	NORMAL 1 = "I sold out years ago and I'm a coward."
 	NORMAL 2 = "Wow, I sold out years ago and I'm a coward!"
 	NORMAL 3 = "By the way, I sold out years ago and I'm a huge coward."
+	NORMAL 4 = "I sold out years ago and I'm a coward." (Lower pitch)
+	NORMAL 5 = "So you see, I sold out years ago and I'm a coward."
 	
 	ANGRY 1 = "I SOLD OUT YEARS AGO AND I'M A COWARD!"
+	ANGRY 2 = "SERIOUSLY? I SOLD OUT YEARS AGO AND I'M A COWARD, DOES THAT MEAN NOTHING TO YOU?
+	
 	STRUCK 1 = "WOW, DONALD TRUMP JUST SLAPPED ME TOO!"
+	
+	MISS 1 = "OOOHH, I SOLD OUT YEARS AGO AND I'M A COWARD!"
 -->
 
 <Defs>
@@ -37,6 +43,12 @@
 					-->
 					<li Class="AudioGrain_Clip">
 						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal3</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal4</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal5</clipPath>
 					</li>
 				</grains>
 				<volumeRange>
@@ -70,7 +82,7 @@
 						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_struck1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal2</clipPath>
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_angry2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>
@@ -102,6 +114,9 @@
 				<grains>
 					<li Class="AudioGrain_Clip">
 						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_angry1</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_angry2</clipPath>
 					</li>
 				</grains>
 				<volumeRange>
@@ -135,6 +150,9 @@
 						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_angry1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_angry2</clipPath>
+					</li>
+					<li Class="AudioGrain_Clip">
 						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal2</clipPath>
 					</li>
 				</grains>
@@ -160,13 +178,32 @@
 						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_struck1</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal2</clipPath>
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_angry2</clipPath>
 					</li>
 					<li Class="AudioGrain_Clip">
-						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_normal3</clipPath>
+						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_miss1</clipPath>
 					</li>
+				</grains>
+				<volumeRange>5~15</volumeRange>      
+				<pitchRange>0.25~1.5</pitchRange>      
+				<distRange>0~20</distRange>
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+		<defName>TSP_ALBARRY_Balls</defName>
+		<context>MapOnly</context>
+		<eventNames></eventNames>
+		<maxVoices>1</maxVoices>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
 					<li Class="AudioGrain_Clip">
-						<clipPath>FunnyAnimals/TSP_ALBARRY_colbert_angry1</clipPath>
+						<clipPath>FunnyAnimals/TSP_ALBARRY_balls</clipPath>
 					</li>
 				</grains>
 				<volumeRange>5~15</volumeRange>      
