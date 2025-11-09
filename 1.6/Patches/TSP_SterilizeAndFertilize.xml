@@ -360,4 +360,123 @@
 		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ResearchProjectDef[defName="FertilityProcedures"]/prerequisites</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="FertilityProcedures"]/prerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<prerequisites Inherit="False">
+					<li>DrugProduction</li>
+					<li MayRequire="konstantynopolitaneczka.pregnancypack">PPFertilityDrugs</li>
+				</prerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ResearchProjectDef[defName="PPFertilityDrugs"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="FertilityProcedures"]/prerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<prerequisites Inherit="False">
+					<li MayRequire="konstantynopolitaneczka.pregnancypack">PPFertilityDrugs</li>
+				</prerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ResearchProjectDef[defName="PPLactationBooster"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="PPLactationBooster"]/prerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<prerequisites Inherit="False">
+					<li MayRequire="konstantynopolitaneczka.pregnancypack">PPFertilityDrugs</li>
+					<li>Electricity</li>
+				</prerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ResearchProjectDef[defName="PPMilkBank"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="PPMilkBank"]/prerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<prerequisites Inherit="False">
+					<li MayRequire="konstantynopolitaneczka.pregnancypack">PPLactationBooster</li>
+					<!-- <li>MicroelectronicsBasics</li> -->
+				</prerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ResearchProjectDef[defName="PPFetusMonitor"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="PPFetusMonitor"]/prerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<prerequisites Inherit="False">
+					<li MayRequire="ludeon.rimworld.biotech">FertilityProcedures</li>
+					<li>VitalsMonitor</li>
+				</prerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ResearchProjectDef[defName="PPMaternalKernel"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="PPMaternalKernel"]/prerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<prerequisites Inherit="False">
+					<li MayRequire="konstantynopolitaneczka.pregnancypack">PPFetusMonitor</li>
+					<li>BrainWiring</li>
+				</prerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ResearchProjectDef[defName="PPMemoryTransfer"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[defName="PPMemoryTransfer"]/prerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<prerequisites Inherit="False">
+					<li MayRequire="konstantynopolitaneczka.pregnancypack">PPMaternalKernel</li>
+					<li>Bionics</li>
+					<li>Fabrication</li>
+				</prerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

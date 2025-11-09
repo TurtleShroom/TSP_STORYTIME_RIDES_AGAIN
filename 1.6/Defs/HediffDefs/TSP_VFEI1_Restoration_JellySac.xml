@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<!-- Jelly Sac -->
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>TSP_VFEI1_JellySac</defName>
+		<label>jelly sac</label>
+		<labelNoun>a jelly sac</labelNoun>
+		<description>A tube-like organ grown within the body that replaces the gall ducts of the liver. It allows Pawns to quickly produce low quantities of insect jelly over time. Of course, this is not without draw backs, as it affects the metabolic efficiency of the liver. While one does not need a gall bladder to live, he does need gall ducts, and the jelly sac slows the secretion of bile and passage through the liver's connection to the small intestine. It is a mutation that brings with it a dull, mild but annoying pain where the gall bladder rests; while the jelly sac's pain is not agonizing or intolerable, it does not go away. Pawns quickly get used to it but, for this reason, more advanced societies will add additional medical enhancement to ease the inconvenience.</description>
+		<descriptionHyperlinks>
+			<ThingDef>TSP_VFEI1_JellySac</ThingDef>
+			<RecipeDef>TSP_VFEI1_InstallJellySac</RecipeDef>
+		</descriptionHyperlinks>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant> <!-- Is not an artificial organ -->
+		<spawnThingOnRemoved>TSP_VFEI_JellySac</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<painOffset>0.0375</painOffset>
+			</li>
+		</stages>
+		<comps>
+			<!-- <li Class="VFEI.Comps.HediffComps.CompProperties.CompProperties_SpawnJelly"></li> -->
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>6</spawnCount>
+				<spawnIntervalRange>35000~49000</spawnIntervalRange>
+				<spawnMaxAdjacent>999</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<showMessageIfOwned>false</showMessageIfOwned>		
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBase">
+		<defName>TSP_VFEI1_JellySac</defName>
+		<label>jelly sac</label>
+		<description>A natural tube-like organ grown within the body that replaces gall ducts of the liver. It converts bile into usable nutrition, allowing any Pawn with it to produce low quantities of insect jelly over time. This, of course, is not without draw backs, as it affects the metabolic efficiency of the liver. While one does not need a gall bladder to live, he does need gall ducts, so the jelly sac slows the secretion of bile and passage through the liver's connection to the small intestine.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>TSP_VFEI1_InstallJellySac</RecipeDef>
+			<HediffDef>TSP_VFEI1_JellySac</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Health/HealthItem</texPath>
+			<color>(155,165,148)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>170</MarketValue>
+			<Mass>0.3</Mass>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<tradeability>All</tradeability>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>TSP_VFEI1_InstallJellySac</defName>
+		<label>install jelly sac</label>
+		<description>Install jelly sac.</description>
+		<descriptionHyperlinks>
+			<ThingDef>TSP_VFEI1_JellySac</ThingDef>
+			<HediffDef>TSP_VFEI1_JellySac</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing jelly sac.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>TSP_VFEI1_JellySac</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>TSP_VFEI1_JellySac</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Liver</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>TSP_VFEI1_JellySac</addsHediff>
+	</RecipeDef>
+</Defs>

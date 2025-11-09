@@ -487,4 +487,29 @@
 			</value>
 		</nomatch>
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/PawnKindDef[defName="MSSFP_TrekCrasher"]/disallowedTraits</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/PawnKindDef[defName="MSSFP_TrekCrasher"]</xpath>
+			<value>
+				<disallowedTraits></disallowedTraits>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="MSSFP_TrekCrasher"]/disallowedTraits</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="MSSFP_TrekCrasher"]/disallowedTraits</xpath>
+			<success>Always</success>
+			<value>
+				<li>Gay</li>
+				<li>Bisexual</li>
+			</value>
+		</match>
+	</Operation>
 </Patch>

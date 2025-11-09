@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/FactionDef[defName="CommieEmusGoose"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/FactionDef[defName="CommieEmusGoose"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/XenotypeDef[defName="CommieEmu"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/FactionDef[defName="K4G_Revolution"]/xenotypeSet</xpath>
+			<value>
+				<xenotypeSet MayRequire="ludeon.rimworld.biotech">
+					<xenotypeChances MayRequire="ludeon.rimworld.biotech">
+						<CommieEmu MayRequire="ludeon.rimworld.biotech">0.5</CommieEmu>
+						<Dirtmole MayRequire="ludeon.rimworld.biotech">0.33</Dirtmole>
+						<Neco MayRequire="Neco.genes,ludeon.rimworld.biotech">0.20</Neco>
+						<Yttakin MayRequire="ludeon.rimworld.biotech">0.001</Yttakin>
+						<Baseliner MayRequire="ludeon.rimworld.biotech">0.25</Baseliner>
+					</xenotypeChances>
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/MemeDef[defName="Vanguardism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/FactionDef[defName="K4G_Revolution"]/requiredMemes</xpath>
+			<value>
+				<li>Vanguardism</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/MemeDef[defName="Vanguardism"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/FactionDef[defName="K4G_Revolution"]/structureMemeWeights</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
