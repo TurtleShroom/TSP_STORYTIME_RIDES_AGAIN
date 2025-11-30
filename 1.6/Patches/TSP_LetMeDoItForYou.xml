@@ -265,4 +265,26 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/TerrainDef/holdSnow</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/TerrainDef/holdSnow</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingDef/hideAtSnowDepth</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/ThingDef/hideAtSnowDepth</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
 </Patch>
