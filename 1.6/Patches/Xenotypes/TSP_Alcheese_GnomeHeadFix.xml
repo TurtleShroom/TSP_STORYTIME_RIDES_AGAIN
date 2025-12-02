@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/GeneDef[defName="AlcheestGene"]/exclusionTags</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/GeneDef[defName="AlcheestGene"]/exclusionTags</xpath>
+			<success>Always</success>
+			<value>
+				<li>Head</li>
+				<li>Heads</li>
+				<li>AG_Heads</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

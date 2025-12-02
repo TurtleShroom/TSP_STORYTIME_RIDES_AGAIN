@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="Thistle_Rennet"]/recipeMaker/recipeUsers</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Thistle_Rennet"]/recipeMaker/recipeUsers</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

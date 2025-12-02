@@ -150,6 +150,18 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
   
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DeepDrill"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DeepDrill"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+  
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="DeepDrill"]/comps</xpath>
     <value>
@@ -160,6 +172,33 @@
 		  </li>
     </value>
   </Operation>
+  
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_MineShaft"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_MineShaft"]</xpath>
+			<success>Always</success>
+			<value>
+				<comps></comps>
+			</value>
+		</nomatch>
+	</Operation>
+  
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_MineShaft"]/comps</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_MineShaft"]/comps</xpath>
+			<success>Always</success>
+			<value>
+				<li Class="StoryTime.CompProperties_GemDropper">
+					<commonGemDropRate>0.05</commonGemDropRate>
+					<uncommonGemDropRate>0.009</uncommonGemDropRate>
+					<rareGemDropRate>0.003</rareGemDropRate>
+				</li>
+			</value>
+		</match>
+	</Operation>
   
 	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
 	<Operation Class="PatchOperationConditional">
@@ -796,8 +835,9 @@
 			<success>Always</success>
 			<value>
 				<categories>
-					<li>Mashed_Ashlands_Crystalline</li>
+					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_Crystalline</li>
 					<li MayRequire="kikohi.jewelry">Gemstones</li>
+					<li MayRequire="dankpyon.medieval.overhaul">DankPyon_GemStones</li>
 					<li>Stony</li>
 				</categories>
 			</value>
@@ -1098,6 +1138,35 @@
 			<value>
 				<li>ST_GemsUncut_Uncommon</li>
 				<li>ST_GemsCut_Uncommon</li>
+			</value>
+		</match>
+	</Operation>
+	
+	
+	<!-- VANILLA FACTIONS EXPANDED INSECTOIDS II MOD -->
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="VFEI2_PherocoreSorne"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VFEI2_PherocoreSorne"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+  	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="VFEI2_PherocoreSorne"]/thingCategories</xpath>
+		<!-- If it does, add this. -->
+		<match  Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VFEI2_PherocoreSorne"]/thingCategories</xpath>
+			<success>Always</success>
+			<value>
+				<li>ST_GemsUncut_Rare</li>
+				<li>ST_GemsCut_Rare</li>
 			</value>
 		</match>
 	</Operation>

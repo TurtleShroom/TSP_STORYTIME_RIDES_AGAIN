@@ -135,7 +135,7 @@
 		
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Gold</thingDef>
-				<countRange>17~30</countRange>
+				<countRange>40~130</countRange>
 			</li>
 			
 			<li Class="StockGenerator_SingleDef">
@@ -146,7 +146,7 @@
 			<!-- Gene Pack -->
 			<li MayRequire="Ludeon.RimWorld.Biotech" Class="StockGenerator_SingleDef">
 				<thingDef>Genepack</thingDef>
-				<countRange>7~17</countRange>
+				<countRange>7~21</countRange>
 			</li>
 			
 			<!-- Archite capsules -->
@@ -158,14 +158,14 @@
 			<!-- Psytrainers -->
 			<li Class="StockGenerator_Category" MayRequire="ludeon.rimworld.royalty">
 				<categoryDef>NeurotrainersPsycast</categoryDef>
-				<thingDefCountRange>0~1</thingDefCountRange>
+				<thingDefCountRange>0~2</thingDefCountRange>
 				<countRange>0~1</countRange>
 			</li>
 			
 			<li Class="StockGenerator_Tag" MayRequire="ludeon.rimworld.royalty">
 				<tradeTag>ImplantEmpireRoyal</tradeTag>
-				<thingDefCountRange>-2~1</thingDefCountRange>
-				<countRange>-1~1</countRange>
+				<thingDefCountRange>1~1</thingDefCountRange>
+				<countRange>0~1</countRange>
 			</li>
 			
 			<li Class="StockGenerator_Tag">
@@ -193,7 +193,7 @@
 			<li Class="StockGenerator_MarketValue">
 				<tradeTag>WeaponRanged</tradeTag>
 				<weaponTag>SpacerGun</weaponTag>
-				<countRange>-6~1</countRange>
+				<countRange>-6~2</countRange>
 			</li>
 			
 			<li Class="StockGenerator_ReinforcedBarrels">
@@ -215,7 +215,20 @@
 			<li Class="StockGenerator_SingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
 				<thingDef>RevenantSpine</thingDef>
 				<price>Expensive</price>
-				<countRange>-10~1</countRange>
+				<countRange>-1~1</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="dankpyon.medieval.overhaul">
+				<categoryDef>DankPyon_BuildingsLoot</categoryDef>
+				<price>Expensive</price>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>200~1200</countRange>
+				<!--
+				<countRange>
+					<min>0</min>
+					<max>1</max>
+				</countRange>
+				-->
 			</li>
 
 			<!-- Buying -->

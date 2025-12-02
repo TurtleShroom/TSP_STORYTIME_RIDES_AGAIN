@@ -18,19 +18,36 @@
 		  <Nutrition>0.06</Nutrition>
 		</statBases>
 		<comps>
-		  <li Class="CompProperties_Rottable">
-			<daysToRotStart>60</daysToRotStart>
-			<rotDestroys>true</rotDestroys>
-		  </li>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Drug" MayRequire="alcheest.lopain">
+				<chemical>Casomorphin</chemical>
+				<addictiveness>0.01</addictiveness>
+				<minToleranceToAddict>0</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.05</existingAddictionSeverityOffset>
+				<needLevelOffset>0.5</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
 		</comps>
 		<ingestible>
-			<preferability>RawTasty</preferability>
+			<preferability>RawBad</preferability>
 			<foodType>AnimalProduct</foodType>
 			<tableDesired>false</tableDesired>
 			<maxNumToIngestAtOnce>7</maxNumToIngestAtOnce>
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>Meal_Eat</ingestSound>
 			<babiesCanIngest MayRequire="ludeon.rimworld.biotech">true</babiesCanIngest>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="alcheest.lopain">
+					<hediffDef>CasomorphinTolerance</hediffDef>
+					<toleranceChemical>Casomorphin</toleranceChemical>
+					<severity>0.13</severity>
+					<divideByBodySize>false</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+			</outcomeDoers>
 		</ingestible>
 		<thingCategories Inherit="False">
 			<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
@@ -60,18 +77,42 @@
 		<thingCategories Inherit="False">
 			<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Cheese</li>
-			<li>AnimalProductRaw</li>
+			<!-- <li>AnimalProductRaw</li> -->
 		</thingCategories>
 		<ingestible>
 			<preferability>MealFine</preferability>
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>Meal_Eat</ingestSound>
 			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<outcomeDoers>
+				<!--
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="alcheest.lopain">
+					<hediffDef>High_RipenedCheese</hediffDef>
+					<severity>0.5</severity>
+					<toleranceChemical>Casomorphin</toleranceChemical>
+				</li>
+				-->
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="alcheest.lopain">
+					<hediffDef>CasomorphinTolerance</hediffDef>
+					<toleranceChemical>Casomorphin</toleranceChemical>
+					<severity>0.03</severity>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+			</outcomeDoers>
 		</ingestible>
 		<comps>
 			<li Class="CompProperties_Rottable">
 				<daysToRotStart>110</daysToRotStart>
 				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Drug" MayRequire="alcheest.lopain">
+				<chemical>Casomorphin</chemical>
+				<addictiveness>0.01</addictiveness>
+				<minToleranceToAddict>1.00</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.05</existingAddictionSeverityOffset>
+				<needLevelOffset>2</needLevelOffset>
+				<listOrder>10</listOrder>
 			</li>
 			<!--
 			<li Class="VEF.Cooking.CompProperties_StackByQuality"></li>
@@ -105,18 +146,42 @@
 		<thingCategories Inherit="False">
 			<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Cheese</li>
-			<li>AnimalProductRaw</li>
+			<!-- <li>AnimalProductRaw</li> -->
 		</thingCategories>
 		<ingestible>
 			<preferability>MealFine</preferability>
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>Meal_Eat</ingestSound>
 			<maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+			<outcomeDoers>
+				<!--
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="alcheest.lopain">
+					<hediffDef>High_RipenedCheese</hediffDef>
+					<severity>0.5</severity>
+					<toleranceChemical>Casomorphin</toleranceChemical>
+				</li>
+				-->
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="alcheest.lopain">
+					<hediffDef>CasomorphinTolerance</hediffDef>
+					<toleranceChemical>Casomorphin</toleranceChemical>
+					<severity>0.01</severity>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+			</outcomeDoers>
 		</ingestible>
 		<comps>
 			<li Class="CompProperties_Rottable">
 				<daysToRotStart>110</daysToRotStart>
 				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Drug" MayRequire="alcheest.lopain">
+				<chemical>Casomorphin</chemical>
+				<addictiveness>0.01</addictiveness>
+				<minToleranceToAddict>1.00</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.05</existingAddictionSeverityOffset>
+				<needLevelOffset>2</needLevelOffset>
+				<listOrder>10</listOrder>
 			</li>
 			<!-- <li Class="VanillaCookingExpanded.CompProperties_StackByQuality" -->
 			<!--

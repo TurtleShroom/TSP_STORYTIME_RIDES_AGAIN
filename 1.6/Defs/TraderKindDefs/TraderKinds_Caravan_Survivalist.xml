@@ -119,6 +119,11 @@
 			<price>Cheap</price>
 			<countRange>500~1800</countRange>
 		  </li>
+		  <li Class="StockGenerator_SingleDef" MayRequire="sumika.nanohana">
+			<thingDef>Sm_oil_barrel</thingDef>
+			<price>Expensive</price>
+			<countRange>1~3</countRange>
+		  </li>
 		  <li Class="StockGenerator_SingleDef">
 			<thingDef>Hay</thingDef>
 			<countRange>500~1800</countRange>
@@ -130,12 +135,42 @@
 		  </li>
 		  <li Class="StockGenerator_SingleDef">
 			<thingDef>ComponentIndustrial</thingDef>
-			<countRange>50~180</countRange>
+			<!-- <countRange>5~180</countRange> -->
+			<totalPriceRange>300~1000</totalPriceRange>
 		  </li>
+		  
 			<li Class="StockGenerator_Category" MayRequire="mlie.takisrandomstuff">
 				<categoryDef>Cereal</categoryDef>
+				<thingDefCountRange>1~6</thingDefCountRange>
 				<countRange>
-					<min>100</min>
+					<min>75</min>
+					<max>225</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="dankpyon.medieval.overhaul">
+				<categoryDef>DankPyon_Flour</categoryDef>
+				<thingDefCountRange>1~6</thingDefCountRange>
+				<countRange>
+					<min>75</min>
+					<max>300</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="dankpyon.medieval.overhaul">
+				<categoryDef>DankPyon_Milk</categoryDef>
+				<thingDefCountRange>1~6</thingDefCountRange>
+				<countRange>
+					<min>75</min>
+					<max>300</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="dankpyon.medieval.overhaul">
+				<categoryDef>DankPyon_Cereal</categoryDef>
+				<thingDefCountRange>1~6</thingDefCountRange>
+				<countRange>
+					<min>75</min>
 					<max>300</max>
 				</countRange>
 			</li>
@@ -165,7 +200,11 @@
 			<apparelTag>K4GVagrantsBasic</apparelTag>
 			<countRange>1~6</countRange>
 		  </li>
-
+		  
+            <li Class="StockGenerator_Tag" MayRequire="ferny.progressionagriculture">
+                <tradeTag>Seeds</tradeTag>
+                <totalPriceRange>700~2000</totalPriceRange>
+            </li>
 		  
 		   <li Class="StockGenerator_Animals">
 			<maxWildness>0.99</maxWildness>
@@ -331,7 +370,7 @@
 				<li MayRequire="tsp.baskerville.hellsingexpansion">GentleGhoul</li>
 			</tradeTagsBuy>
 			<kindCountRange>8~24</kindCountRange>
-			<countRange>0~1</countRange>
+			<countRange>1~2</countRange>
 		  </li>
 		  
 		  

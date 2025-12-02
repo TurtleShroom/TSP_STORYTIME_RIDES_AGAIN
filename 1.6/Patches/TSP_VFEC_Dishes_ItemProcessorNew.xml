@@ -188,6 +188,14 @@
 						<li MayRequire="vanillaexpanded.vcooke,dankpyon.medieval.overhaul,vr.mopatches">TSP_ST_MO_VR_BORPA_SOUP</li>
 					</value>
 				</li>
+				
+				<li Class="PatchOperationAdd" MayRequire="vanillaexpanded.vcooke,dankpyon.medieval.overhaul,vr.mopatches">
+					<xpath>/Defs/ThingDef[defName="DankPyon_StewPot"]/comps/li/processes</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="vanillaexpanded.vcooke,dankpyon.medieval.overhaul,vr.mopatches">TSP_ST_MO_VR_BORPA_SOUP</li>
+					</value>
+				</li>
 			</operations>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -239,6 +247,28 @@
 		<!-- If it DOES NOT, add this instead. -->
 		<nomatch Class="PatchOperationAdd">
 			<xpath>Defs/ThingDef[defName="VCE_ElectricPot"]</xpath>
+			<success>Always</success>
+			<value>
+				<designationCategory>Production</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="VCE_CheesePress"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="VCE_CheesePress"]/designationCategory</xpath>
+			<success>Always</success>
+			<value>
+				<designationCategory>Production</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VCE_CheesePress"]</xpath>
 			<success>Always</success>
 			<value>
 				<designationCategory>Production</designationCategory>

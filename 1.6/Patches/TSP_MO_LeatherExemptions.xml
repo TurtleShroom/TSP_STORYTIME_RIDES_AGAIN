@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/MedievalOverhaul.SeperateHideList[defName="WhiteList"]/blackListRaces</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/MedievalOverhaul.SeperateHideList[defName="WhiteList"]/blackListRaces</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">BloodFrog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">CyberFrogHostile</li>
+				<li MayRequire="TSP.Isengriff.Storytime">CyberFrogDocile</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Werefrog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_NuclearFrog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_ALBARRY_StephenColbert_Frog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_WoodFrog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">JudasFrog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_LivingCoconut</li>
+				<li MayRequire="TSP.Isengriff.Storytime">FlyingFrog</li>
+				<li MayRequire="TSP.Isengriff.Storytime">PeeledBeast</li>
+				<li MayRequire="TSP.Isengriff.Storytime">PeeledClown</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_SkeletonCaptain</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_AshSkeleton</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_GoldSkeleton</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_GunpowderSkeleton</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_GunSkeleton</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_PlantSkeleton</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Skeleton</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_RetardSkeleton</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Chungus</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Cartographer</li>
+				<li MayRequire="TSP.Isengriff.Storytime">EvilRock</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Alien_BeanMan</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Alien_Beet</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/MedievalOverhaul.SeperateHideList[defName="WhiteList"]/blackListLeathers</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/MedievalOverhaul.SeperateHideList[defName="WhiteList"]/blackListLeathers</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Cartographer</li>
+				<li MayRequire="TSP.Isengriff.Storytime">VAEAP_Leather_Car</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Beet</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Bug</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Leather_Puffle</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Bean</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_RouletteBean</li>
+				<li MayRequire="TSP.Isengriff.Storytime">Rylex_Coconut</li> <!-- Dropped by Coconut Frogs -->
+				<li MayRequire="TSP.Isengriff.Storytime">BORPA_ChunkKachorpaSlag</li>
+				<li MayRequire="TSP.Isengriff.Storytime">BORPA_KachorpaSteel</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_SkeletalMarrow</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_BananaScytheCorpse</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

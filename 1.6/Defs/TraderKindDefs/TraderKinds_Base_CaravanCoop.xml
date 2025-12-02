@@ -7,7 +7,7 @@
       <!-- 자원 -->
       <li Class="StockGenerator_SingleDef">
         <thingDef>Silver</thingDef>
-        <countRange>20000~180000</countRange>
+        <countRange>20000~1800000</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>ComponentIndustrial</thingDef>
@@ -166,7 +166,7 @@
 	  -->
       <li Class="StockGenerator_Tag">
         <tradeTag>Television</tradeTag>
-        <thingDefCountRange>2</thingDefCountRange>
+        <thingDefCountRange>1~2</thingDefCountRange>
         <countRange>2</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
@@ -177,13 +177,13 @@
       <!-- 희귀품 -->
       <li Class="StockGenerator_Tag">
         <tradeTag>Artifact</tradeTag>
-        <thingDefCountRange>2~5</thingDefCountRange>
+        <thingDefCountRange>2~9</thingDefCountRange>
         <countRange>1~1</countRange>
       </li>
       <li Class="StockGenerator_Tag">
         <tradeTag>ExoticMisc</tradeTag>
-        <thingDefCountRange>2~4</thingDefCountRange>
-        <countRange>1~3</countRange>
+        <thingDefCountRange>2~9</thingDefCountRange>
+        <countRange>0~3</countRange>
         <customCountRanges>
           <MedicineUltratech>8~25</MedicineUltratech>
           <Hyperweave>180~250</Hyperweave>
@@ -228,8 +228,35 @@
 			<li Class="StockGenerator_Category" MayRequire="mlie.takisrandomstuff">
 				<categoryDef>Cereal</categoryDef>
 				<countRange>
-					<min>100</min>
-					<max>300</max>
+					<min>500</min>
+					<max>3000</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="dankpyon.medieval.overhaul">
+				<categoryDef>DankPyon_Flour</categoryDef>
+				<thingDefCountRange>1~6</thingDefCountRange>
+				<countRange>
+					<min>375</min>
+					<max>3000</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="dankpyon.medieval.overhaul">
+				<categoryDef>DankPyon_Milk</categoryDef>
+				<thingDefCountRange>1~6</thingDefCountRange>
+				<countRange>
+					<min>375</min>
+					<max>3000</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="dankpyon.medieval.overhaul">
+				<categoryDef>DankPyon_Cereal</categoryDef>
+				<thingDefCountRange>1~6</thingDefCountRange>
+				<countRange>
+					<min>375</min>
+					<max>3000</max>
 				</countRange>
 			</li>
 
