@@ -262,7 +262,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>Defs/PawnKindDef[defName="K4G_Murica_President"]</xpath>
+		<xpath>Defs/ThingDef[defName="K4G_MeleeWeapon_ShockProd"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs</xpath>
@@ -276,6 +276,7 @@
 					<nameMakerFemale>TSP_ST_NamerPatreons_Girl</nameMakerFemale>
 					<factionLeader>true</factionLeader>
 					<fixedGender>Male</fixedGender>
+					<race>Human</race>
 					<apparelRequired>
 						<li>Apparel_Pants</li>
 						<li>Apparel_CollarShirt</li>
@@ -295,7 +296,7 @@
 					<modExtensions>
 						<li Class="PawnKindExtension.PawnKindExtension" MayRequire="k4g.pawnkindextension,k4g.core">
 							<forcedTattoos>
-								<li>
+								<li MayRequire="k4g.murica">
 									<styleTags>K4GSprayTan</styleTags>
 									<spawnWeight>0.25</spawnWeight>
 									<!--When true, male tattoos only spawn on male pawns, female tattoos on female pawns, any on all pawns, etc.-->
@@ -304,7 +305,7 @@
 								</li>
 							</forcedTattoos>
 							<forcedHairs>
-								<li>
+								<li MayRequire="k4g.murica">
 									<styleTags>K4GSwoop</styleTags>
 									<spawnWeight>999</spawnWeight>
 									<respectGenders>true</respectGenders>

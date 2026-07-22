@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- xd.gnomenames -->
+	<!-- https://www.steamcommunity.com/sharedfiles/filedetails/?id=3565654933 -->
+
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/CultureDef[defName="Gnomish"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/CultureDef[defName="Gnomish"]</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/RulePackDef[defName="XDGnomish_NamerPersonUtility"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/FactionDef/allowedCultures/li[text()="Gnomish"]</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	
+	<!-- zoid.gnomes -->
+	<!-- https://steamcommunity.com/sharedfiles/filedetails/?id=3683272676 -->
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/RulePackDef[defName="XDGnomish_NamerPersonUtility"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/FactionDef[defName="Z_Gnomes_Civil"]</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/RulePackDef[defName="XDGnomish_NamerPersonUtility"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/FactionDef[defName="BanditGnomes"]</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Villager_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Villager_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Villager_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Villager_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Villager_Child_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Villager_Child_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Town_Guard_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Town_Guard_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Town_Councilman_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Town_Councilman_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Town_Councilman_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Town_Councilman_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Town_Trader_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Town_Trader_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Town_Trader_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Town_Trader_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Elite_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Elite_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Elite_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Elite_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Sniper_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Mercenary_Heavy_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Scavenger_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Scavenger_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Scavenger_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Scavenger_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Thrasher_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Thrasher_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Thrasher_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Thrasher_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Pirate_Gnome"]/xenotypeSet</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Pirate_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<xenotypeSet MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+					<xenotypeChances MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">
+						<Z_Gnomes MayRequire="zoid.gnomes,ludeon.rimworld.biotech">999</Z_Gnomes>
+					</xenotypeChances>
+					<!-- <warnIfTotalAbove1 MayRequire="ludeon.rimworld.biotech">false</warnIfTotalAbove1> -->
+				</xenotypeSet>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/PawnKindDef[defName="Pirate_Gnome"]/defaultFactionType</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Pirate_Gnome"]</xpath>
+			<success>Always</success>
+			<value>
+				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

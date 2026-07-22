@@ -236,7 +236,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/MemeDef[defName="Guilty"]</xpath>
+	<xpath>Defs/MemeDef[defName="Guilty"]/exclusionTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>
@@ -250,7 +250,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-	<xpath>Defs/MemeDef[defName="Charia"]</xpath>
+	<xpath>Defs/MemeDef[defName="Charia"]/exclusionTags</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<success>Always</success>

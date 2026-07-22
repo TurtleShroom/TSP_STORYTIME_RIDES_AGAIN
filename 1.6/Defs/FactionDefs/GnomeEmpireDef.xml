@@ -32,10 +32,10 @@
     </disallowedMemes>
     <requiredMemes>
 		<li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>
-		<li MayRequire="sarg.alphamemes">AM_Epicurean</li>
 		
 		<!-- If you have the Mod -->
 		<li MayRequire="VanillaExpanded.VMemesE">VME_Aristocratic</li>
+		<li MayRequire="sarg.alphamemes">AM_Epicurean</li>
     </requiredMemes>
 	<disallowedPrecepts>
 		<li MayRequire="Ludeon.RimWorld.Ideology">FungusEating_Despised</li>
@@ -109,10 +109,11 @@
 	<humanlikeFaction Inherit="False">true</humanlikeFaction>
 	<xenotypeSet MayRequire="ludeon.rimworld.biotech">
 		<xenotypeChances MayRequire="ludeon.rimworld.biotech">
-			<BS_Gnome MayRequire="redmattis.bigsmall,ludeon.rimworld.biotech">0.2</BS_Gnome>
+			<BS_Gnome MayRequire="redmattis.bigsmall,ludeon.rimworld.biotech">0.12</BS_Gnome>
 			<Turn_XenoType_Regalid MayRequire="turnovus.biotech.integratedxenotypes,ludeon.rimworld.biotech">0.01</Turn_XenoType_Regalid>
 			<HBX_Highborn MayRequire="elsov.highborn,ludeon.rimworld.biotech">0.012</HBX_Highborn>
-			<Alcheest MayRequire="alcheest.lopain">0.1</Alcheest>
+			<Alcheest MayRequire="alcheest.lopain,ludeon.rimworld.biotech">0.08</Alcheest>
+			<Z_Gnomes MayRequire="ludeon.rimworld.biotech,zoid.gnomes">0.1</Z_Gnomes>
 		</xenotypeChances>
 	</xenotypeSet>
     <pawnGroupMakers>
@@ -123,23 +124,48 @@
 			<GnomeWarrior>75</GnomeWarrior>
 			<GnomeArcher>75</GnomeArcher>
 			<TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">10</TSP_ST_RoyaltyGnoble>
-			<ForgPawnKindDef>0.01</ForgPawnKindDef>
-			<DuoPawnKindDef>0.01</DuoPawnKindDef>
+			<ForgPawnKindDef>0.001</ForgPawnKindDef>
+			<DuoPawnKindDef>0.001</DuoPawnKindDef>
+			<Villager_Child_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">13</Villager_Child_Gnome>
         </options>
       </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">
+        <kindDef MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">Peaceful</kindDef>
+        <options MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">
+			<TSP_ST_GnomePeasant>0.5</TSP_ST_GnomePeasant>
+			<GnomeWarrior>0.5</GnomeWarrior>
+			<GnomeArcher>0.5</GnomeArcher>
+			<TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">10</TSP_ST_RoyaltyGnoble>
+			<Villager_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Villager_Gnome>
+			<Town_Guard_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Guard_Gnome>
+			<Mercenary_Heavy_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Heavy_Gnome>
+			<Mercenary_Gunner_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Gunner_Gnome>
+			<Mercenary_Elite_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Elite_Gnome>
+			<Mercenary_Sniper_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Mercenary_Sniper_Gnome>
+			<Thrasher_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Thrasher_Gnome>
+			<Scavenger_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Scavenger_Gnome>
+			<Pirate_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Pirate_Gnome>
+			<Town_Councilman_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Councilman_Gnome>
+			<Villager_Child_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">2</Villager_Child_Gnome>
+        </options>
+      </li>  
       <li>
         <kindDef>Combat</kindDef>
         <options>
-          <GnomeArcher>400</GnomeArcher>
-          <GnomeWarrior>225</GnomeWarrior>
-          <ST_Toad>10</ST_Toad>
-		  <GnomeKing>1</GnomeKing>
-		  <TSP_ST_GnomeCabbageinator>20</TSP_ST_GnomeCabbageinator>
-		  <TSP_ST_GnomePeasant>50</TSP_ST_GnomePeasant>
-		  <TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">30</TSP_ST_RoyaltyGnoble>
-		  <PumpkinSad MayRequire="tsp.halloweenie.integrationmore">1</PumpkinSad>
-		  <PumpkinSmile MayRequire="tsp.halloweenie.integrationmore">1</PumpkinSmile>
-		  <PumpkinAnger MayRequire="tsp.halloweenie.integrationmore">1</PumpkinAnger>
+			<GnomeArcher>400</GnomeArcher>
+			<GnomeWarrior>225</GnomeWarrior>
+			<ST_Toad>10</ST_Toad>
+			<GnomeKing>1</GnomeKing>
+			<TSP_ST_GnomeCabbageinator>20</TSP_ST_GnomeCabbageinator>
+			<TSP_ST_GnomePeasant>50</TSP_ST_GnomePeasant>
+			<TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">30</TSP_ST_RoyaltyGnoble>
+			<Mercenary_Heavy_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Heavy_Gnome>
+			<Mercenary_Gunner_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Gunner_Gnome>
+			<Mercenary_Elite_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Elite_Gnome>
+			<Mercenary_Sniper_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Mercenary_Sniper_Gnome>
+			<PumpkinSad MayRequire="tsp.halloweenie.integrationmore">1</PumpkinSad>
+			<PumpkinSmile MayRequire="tsp.halloweenie.integrationmore">1</PumpkinSmile>
+			<PumpkinAnger MayRequire="tsp.halloweenie.integrationmore">1</PumpkinAnger>
         </options>
       </li>
       <li>
@@ -156,19 +182,30 @@
 		  <LeviathanFrog>999</LeviathanFrog>
         </carriers>
         <guards>
-          <GnomeArcher>200</GnomeArcher>
-		  <GnomeWarrior>100</GnomeWarrior>
-          <ST_Toad>25</ST_Toad>
-		  <TSP_ST_GnomeCabbageinator>10</TSP_ST_GnomeCabbageinator>
-		  <ForgPawnKindDef>0.002</ForgPawnKindDef>
-		  <DuoPawnKindDef>0.002</DuoPawnKindDef>
-		  <TSP_ST_GnomePeasant>200</TSP_ST_GnomePeasant>
-		  <TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">3</TSP_ST_RoyaltyGnoble>
-		  <Scarecrow MayRequire="tsp.halloweenie.integrationmore">1</Scarecrow>
-		  <FunnyFungus MayRequire="tsp.halloweenie.integrationmore">1</FunnyFungus>
-		  <PumpkinSad MayRequire="tsp.halloweenie.integrationmore">1</PumpkinSad>
-		  <PumpkinSmile MayRequire="tsp.halloweenie.integrationmore">1</PumpkinSmile>
-		  <PumpkinAnger MayRequire="tsp.halloweenie.integrationmore">1</PumpkinAnger>
+			<GnomeArcher>200</GnomeArcher>
+			<GnomeWarrior>100</GnomeWarrior>
+			<ST_Toad>25</ST_Toad>
+			<TSP_ST_GnomeCabbageinator>10</TSP_ST_GnomeCabbageinator>
+			<ForgPawnKindDef>0.002</ForgPawnKindDef>
+			<DuoPawnKindDef>0.002</DuoPawnKindDef>
+			<TSP_ST_GnomePeasant>200</TSP_ST_GnomePeasant>
+			<Villager_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Villager_Gnome>
+			<Town_Guard_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Guard_Gnome>
+			<Mercenary_Heavy_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Heavy_Gnome>
+			<Mercenary_Gunner_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Gunner_Gnome>
+			<Mercenary_Elite_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Elite_Gnome>
+			<Mercenary_Sniper_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Mercenary_Sniper_Gnome>
+			<Thrasher_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Thrasher_Gnome>
+			<Scavenger_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Scavenger_Gnome>
+			<Pirate_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Pirate_Gnome>
+			<Town_Councilman_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Councilman_Gnome>
+			<Villager_Child_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">2</Villager_Child_Gnome>
+			<TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">3</TSP_ST_RoyaltyGnoble>
+			<Scarecrow MayRequire="tsp.halloweenie.integrationmore">1</Scarecrow>
+			<FunnyFungus MayRequire="tsp.halloweenie.integrationmore">1</FunnyFungus>
+			<PumpkinSad MayRequire="tsp.halloweenie.integrationmore">1</PumpkinSad>
+			<PumpkinSmile MayRequire="tsp.halloweenie.integrationmore">1</PumpkinSmile>
+			<PumpkinAnger MayRequire="tsp.halloweenie.integrationmore">1</PumpkinAnger>
         </guards>
       </li>
       <li>
@@ -213,6 +250,83 @@
 		  <PumpkinAnger MayRequire="tsp.halloweenie.integrationmore">5</PumpkinAnger>
         </options>
       </li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Miners</kindDef>
+			<commonality>1</commonality>
+			<options>
+				<GnomeArcher>20</GnomeArcher>
+				<GnomeWarrior>20</GnomeWarrior>
+				<Villager_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Villager_Gnome>
+				<Town_Guard_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Guard_Gnome>
+				<Mercenary_Heavy_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Heavy_Gnome>
+				<Mercenary_Gunner_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Gunner_Gnome>
+				<Mercenary_Elite_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Elite_Gnome>
+				<Mercenary_Sniper_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Mercenary_Sniper_Gnome>
+				<Town_Councilman_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Councilman_Gnome>
+				<Villager_Child_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Villager_Child_Gnome>
+				<Thrasher_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Thrasher_Gnome>
+				<Scavenger_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Scavenger_Gnome>
+				<Pirate_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Pirate_Gnome>
+			</options>
+		</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Hunters</kindDef>
+			<commonality>1</commonality>
+			<options>
+				<GnomeArcher>20</GnomeArcher>
+				<GnomeWarrior>20</GnomeWarrior>
+				<Villager_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Villager_Gnome>
+				<Town_Guard_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Guard_Gnome>
+				<Mercenary_Heavy_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Heavy_Gnome>
+				<Mercenary_Gunner_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Gunner_Gnome>
+				<Mercenary_Elite_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Elite_Gnome>
+				<Mercenary_Sniper_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Mercenary_Sniper_Gnome>
+				<Town_Councilman_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Councilman_Gnome>
+				<Villager_Child_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Villager_Child_Gnome>
+				<Thrasher_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Thrasher_Gnome>
+				<Scavenger_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Scavenger_Gnome>
+				<Pirate_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Pirate_Gnome>
+			</options>
+		</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Loggers</kindDef>
+			<commonality>1</commonality>
+			<options>
+				<GnomeArcher>20</GnomeArcher>
+				<GnomeWarrior>20</GnomeWarrior>
+				<Villager_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Villager_Gnome>
+				<Town_Guard_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Guard_Gnome>
+				<Mercenary_Heavy_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Heavy_Gnome>
+				<Mercenary_Gunner_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Gunner_Gnome>
+				<Mercenary_Elite_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Elite_Gnome>
+				<Mercenary_Sniper_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Mercenary_Sniper_Gnome>
+				<Town_Councilman_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Councilman_Gnome>
+				<Villager_Child_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Villager_Child_Gnome>
+				<Thrasher_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Thrasher_Gnome>
+				<Scavenger_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Scavenger_Gnome>
+				<Pirate_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Pirate_Gnome>
+			</options>
+		</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Farmers</kindDef>
+			<commonality>1</commonality>
+			<options>
+				<GnomeArcher>20</GnomeArcher>
+				<GnomeWarrior>20</GnomeWarrior>
+				<Villager_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Villager_Gnome>
+				<Town_Guard_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Guard_Gnome>
+				<Mercenary_Heavy_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Heavy_Gnome>
+				<Mercenary_Gunner_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Gunner_Gnome>
+				<Mercenary_Elite_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Mercenary_Elite_Gnome>
+				<Mercenary_Sniper_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Mercenary_Sniper_Gnome>
+				<Town_Councilman_Gnome MayRequire="zoid.gnomes,Ludeon.RimWorld.Biotech">1</Town_Councilman_Gnome>
+				<Villager_Child_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Villager_Child_Gnome>
+				<Thrasher_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Thrasher_Gnome>
+				<Scavenger_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Scavenger_Gnome>
+				<Pirate_Gnome MayRequire="Ludeon.RimWorld.Biotech,zoid.gnomes">1</Pirate_Gnome>
+				<FunnyFungus MayRequire="tsp.halloweenie.integrationmore">5</FunnyFungus>
+			</options>
+		</li>
     </pawnGroupMakers>
     <settlementTexturePath>World/TreeGnomeEmpire/GnomeLogo</settlementTexturePath>
 	<apparelStuffFilter>

@@ -3,11 +3,11 @@
 <Patch>
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="BMT_Goeto"]</xpath>
+		<xpath>Defs/ThingDef[defName="BMT_GoetoToad"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAddModExtension">
 			<success>Always</success>
-			<xpath>Defs/ThingDef[defName = "BMT_Goeto" or defName = "BMT_SandyToad"]</xpath>
+			<xpath>Defs/ThingDef[defName = "BMT_GoetoToad" or defName = "BMT_SandyToad"]</xpath>
 			<value>
 				<li Class="AnimalBehaviours.AnimalStatExtension">
 					<statToAdd>

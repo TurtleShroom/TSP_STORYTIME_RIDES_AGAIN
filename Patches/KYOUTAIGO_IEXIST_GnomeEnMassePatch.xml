@@ -47,6 +47,7 @@
 				<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
 				<li MayRequire="sahari.minjunbulsang">Sahari_AllomoDough</li>
+				<li MayRequire="Roo.rfe">RFE_Flour</li>
 			</value>
 		</nomatch>
 	<!-- If the first XPATH does not exist, the original code stands. -->
@@ -94,6 +95,7 @@
 				<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
 				<li MayRequire="sahari.minjunbulsang">Sahari_AllomoDough</li>
+				<li MayRequire="Roo.rfe">RFE_Flour</li>
 			</value>
 		</nomatch>
 	<!-- If the first XPATH does not exist, the original code stands. -->
@@ -141,6 +143,7 @@
 				<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
 				<li MayRequire="sahari.minjunbulsang">Sahari_AllomoDough</li>
+				<li MayRequire="Roo.rfe">RFE_Flour</li>
 			</value>
 		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -775,5 +778,49 @@
 				</categories>
 			</value>
 		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingCategoryDef[defName="DankPyon_Flour"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="RFE_Flour"]/thingCategories/li[text()="DankPyon_Flour"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="RFE_Flour"]/thingCategories</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="RFE_Flour"]/thingCategories</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
+			</value>
+		</match>
+		<!--If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="RFE_Flour"]/thingCategories</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="RFE_Flour"]/thingCategories</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories Inherit="False">
+					<li MayRequire="mlie.vanillalikewheat">VLW_CategoryProcessed</li>
+					<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
+					<li MayRequire="Mlie.TakisRandomStuff">Cereal</li>
+					<li>PlantMatter</li>
+				</thingCategories>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 </Patch>

@@ -828,14 +828,14 @@
 	
   	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="Mashed_Ashlands_PurpleCrystalShard"]/thingCategories</xpath>
+		<xpath>Defs/ThingDef[defName="Mashed_Ashlands_PurpleCrystalShard"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match  Class="PatchOperationReplace">
 			<xpath>Defs/ThingDef[@Name="Mashed_Ashlands_CrystalShardBase"]/stuffProps/categories</xpath>
 			<success>Always</success>
 			<value>
 				<categories>
-					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_Crystalline</li>
+					<!-- <li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_Crystalline</li> -->
 					<li MayRequire="kikohi.jewelry">Gemstones</li>
 					<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Gems</li>
 					<li>Stony</li>

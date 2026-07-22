@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="VFEFactory_Conveyor"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<PipeSystem.ProcessDef>
+					<defName>TSP_VFEF_BotoxGrind_Automatic</defName>
+					<label>process botulinium toxins</label>
+					<labelOverride>process botulinium toxins</labelOverride>
+					<description>Refine Botox Fruits into recreational Botox.</description>
+					<priorityInBillList>6</priorityInBillList>
+					<spawnOnInteractionCell>true</spawnOnInteractionCell>
+					<autoGrabFromHoppers>true</autoGrabFromHoppers>
+					<autoInputSlots>			
+						<li>(-1,0,2)</li>
+						<li>(0,0,2)</li>
+						<li>(1,0,2)</li>
+					</autoInputSlots>
+					<ticks>44</ticks>
+					<ingredients>
+						<li>
+							<thing>BotoxFruit</thing>
+							<countNeeded>2</countNeeded>
+						</li>
+					</ingredients>
+					<results>
+						<li>
+							<thing>BotoxPowder</thing>
+							<count>4</count>
+						</li>
+					</results>		
+					<researchPrerequisites>
+						<li>VFE_BasicFactories</li>
+					</researchPrerequisites>
+					<isFactoryProcess>true</isFactoryProcess>
+					<autoExtract>true</autoExtract>
+					<onlyGrabAndOutputToFactoryHoppers>true</onlyGrabAndOutputToFactoryHoppers>
+					<sustainerWhenWorking>true</sustainerWhenWorking>
+					<sustainerDef>VFEFactory_AutomatedDrugsSustainer</sustainerDef>
+					<effecterWhenWorking>true</effecterWhenWorking>
+					<effecterDef>VFEFactory_Cook</effecterDef>
+					<maxOutputCount>750</maxOutputCount>
+				</PipeSystem.ProcessDef>
+				
+				<PipeSystem.ProcessDef>
+					<defName>TSP_BillyClub_Subway_Automatic</defName>
+					<label>Make Billy Club sandwich</label>
+					<description>Automatically assemble a Billy Club Sandwich.</description>
+					<priorityInBillList>6</priorityInBillList>
+					<spawnOnInteractionCell>true</spawnOnInteractionCell>
+					<autoGrabFromHoppers>true</autoGrabFromHoppers>
+					<autoInputSlots>
+						<li>(-2,0,2)</li>
+						<li>(2,0,2)</li>
+					</autoInputSlots>
+					<ticks>36</ticks>
+					<ingredients>
+						<li>
+							<thingCategory>MeatRaw</thingCategory>
+							<countNeeded>40</countNeeded>
+							<disallowedThingDefs></disallowedThingDefs>
+						</li>
+						<li>
+							<thingCategory>PlantFoodRaw</thingCategory>
+							<countNeeded>50</countNeeded>
+						</li>
+						<li MayRequire="vanillaexpanded.vcooke">
+							<thingCategory MayRequire="vanillaexpanded.vcooke">VCE_Cheese</thingCategory>
+							<countNeeded MayRequire="vanillaexpanded.vcooke">3</countNeeded>
+						</li>
+					</ingredients>
+					<results>
+						<li>
+							<thing>BillyClub</thing>
+							<count>3</count>				
+						</li>
+					</results>
+					<researchPrerequisites>
+						<li>VFE_BasicFactories</li>
+					</researchPrerequisites>
+					<isFactoryProcess>true</isFactoryProcess>
+					<autoExtract>true</autoExtract>
+					<onlyGrabAndOutputToFactoryHoppers>true</onlyGrabAndOutputToFactoryHoppers>
+					<sustainerWhenWorking>true</sustainerWhenWorking>
+					<sustainerDef>VFEFactory_AutomatedCookingSustainer</sustainerDef>
+					<effecterWhenWorking>true</effecterWhenWorking>
+					<effecterDef>VFEFactory_Tailor</effecterDef>
+					<maxOutputCount>999</maxOutputCount>
+				</PipeSystem.ProcessDef>
+				
+				<PipeSystem.ProcessDef>
+					<defName>TSP_VFEF_ST_Alloy_BlackSteel_Automatic</defName>
+					<label>smelt Black Steel</label>
+					<labelOverride>smelt Black Steel</labelOverride>
+					<description>Use high heat and pressure to melt Black Steel ingredients into Black Steel.</description>
+					<priorityInBillList>6</priorityInBillList>
+					<spawnOnInteractionCell>true</spawnOnInteractionCell>
+					<autoGrabFromHoppers>true</autoGrabFromHoppers>
+					<autoInputSlots>
+						<li>(-2,0,3)</li>
+						<li>(0,0,3)</li>
+						<li>(2,0,3)</li>
+					</autoInputSlots>
+					<ticks>1600</ticks>
+					<ingredients>
+						<li>
+							<thing>ST_BlackMixture</thing>
+							<countNeeded>10</countNeeded>
+						</li>
+					</ingredients>
+					<results>
+						<li>
+							<thing>ST_BlackSteel</thing>
+							<count>15</count>
+						</li>
+					</results>
+					<researchPrerequisites>
+						<li>VFE_BasicFactories</li>
+					</researchPrerequisites>
+					<isFactoryProcess>true</isFactoryProcess>
+					<autoExtract>true</autoExtract>
+					<onlyGrabAndOutputToFactoryHoppers>true</onlyGrabAndOutputToFactoryHoppers>
+					<effecterWhenWorking>true</effecterWhenWorking>
+					<effecterDef>VFEFactory_Smelt</effecterDef>
+					<sustainerWhenWorking>true</sustainerWhenWorking>
+					<sustainerDef>VFEFactory_AutomatedSmeltingSustainer</sustainerDef>
+					<maxOutputCount>75</maxOutputCount>
+				</PipeSystem.ProcessDef>
+				
+				<PipeSystem.ProcessDef>
+					<defName>TSP_VFEF_ST_Alloy_Mithrilite_Automatic</defName>
+					<label>smelt Mithrilite</label>
+					<labelOverride>smelt Mithrilite</labelOverride>
+					<description>Use high heat and pressure to melt Mithrilite ingredients into Mithrilite.</description>
+					<priorityInBillList>6</priorityInBillList>
+					<spawnOnInteractionCell>true</spawnOnInteractionCell>
+					<autoGrabFromHoppers>true</autoGrabFromHoppers>
+					<autoInputSlots>
+						<li>(-2,0,3)</li>
+						<li>(0,0,3)</li>
+						<li>(2,0,3)</li>
+					</autoInputSlots>
+					<ticks>1500</ticks>
+					<ingredients>
+						<li>
+							<thing>ST_MithrilMixture</thing>
+							<countNeeded>10</countNeeded>
+						</li>
+					</ingredients>
+					<results>
+						<li>
+							<thing>ST_Mithril</thing>
+							<count>15</count>
+						</li>
+					</results>
+					<researchPrerequisites>
+						<li>VFE_BasicFactories</li>
+					</researchPrerequisites>
+					<isFactoryProcess>true</isFactoryProcess>
+					<autoExtract>true</autoExtract>
+					<onlyGrabAndOutputToFactoryHoppers>true</onlyGrabAndOutputToFactoryHoppers>
+					<effecterWhenWorking>true</effecterWhenWorking>
+					<effecterDef>VFEFactory_Smelt</effecterDef>
+					<sustainerWhenWorking>true</sustainerWhenWorking>
+					<sustainerDef>VFEFactory_AutomatedSmeltingSustainer</sustainerDef>
+					<maxOutputCount>999</maxOutputCount>
+				</PipeSystem.ProcessDef>
+				
+				<PipeSystem.ProcessDef>
+					<defName>TSP_VFEF_ST_Alloy_Adamantium_Automatic</defName>
+					<label>smelt Mordorite</label>
+					<labelOverride>smelt Mordorite</labelOverride>
+					<description>Use high heat and pressure to melt Mordorite ingredients into Mordorite.</description>
+					<priorityInBillList>6</priorityInBillList>
+					<spawnOnInteractionCell>true</spawnOnInteractionCell>
+					<autoGrabFromHoppers>true</autoGrabFromHoppers>
+					<autoInputSlots>
+						<li>(-2,0,3)</li>
+						<li>(0,0,3)</li>
+						<li>(2,0,3)</li>
+					</autoInputSlots>
+					<ticks>1800</ticks>
+					<ingredients>
+						<li>
+							<thing>ST_AdamantiumMixture</thing>
+							<countNeeded>10</countNeeded>
+						</li>
+					</ingredients>
+					<results>
+						<li>
+							<thing>ST_Adamantium</thing>
+							<count>15</count>
+						</li>
+					</results>
+					<researchPrerequisites>
+						<li>VFE_BasicFactories</li>
+					</researchPrerequisites>
+					<isFactoryProcess>true</isFactoryProcess>
+					<autoExtract>true</autoExtract>
+					<onlyGrabAndOutputToFactoryHoppers>true</onlyGrabAndOutputToFactoryHoppers>
+					<effecterWhenWorking>true</effecterWhenWorking>
+					<effecterDef>VFEFactory_Smelt</effecterDef>
+					<sustainerWhenWorking>true</sustainerWhenWorking>
+					<sustainerDef>VFEFactory_AutomatedSmeltingSustainer</sustainerDef>
+					<maxOutputCount>999</maxOutputCount>
+				</PipeSystem.ProcessDef>
+				
+				<PipeSystem.ProcessDef>
+					<defName>TSP_VFEF_ST_Alloy_Runite_Automatic</defName>
+					<label>smelt Runite</label>
+					<labelOverride>smelt Runite</labelOverride>
+					<description>Use high heat and pressure to melt Runite ingredients into Runite.</description>
+					<priorityInBillList>6</priorityInBillList>
+					<spawnOnInteractionCell>true</spawnOnInteractionCell>
+					<autoGrabFromHoppers>true</autoGrabFromHoppers>
+					<autoInputSlots>
+						<li>(-2,0,3)</li>
+						<li>(0,0,3)</li>
+						<li>(2,0,3)</li>
+					</autoInputSlots>
+					<ticks>1100</ticks>
+					<ingredients>
+						<li>
+							<thing>ST_RuniteMixture</thing>
+							<countNeeded>10</countNeeded>
+						</li>
+					</ingredients>
+					<results>
+						<li>
+							<thing>ST_Runite</thing>
+							<count>15</count>
+						</li>
+					</results>
+					<researchPrerequisites>
+						<li>VFE_BasicFactories</li>
+					</researchPrerequisites>
+					<isFactoryProcess>true</isFactoryProcess>
+					<autoExtract>true</autoExtract>
+					<onlyGrabAndOutputToFactoryHoppers>true</onlyGrabAndOutputToFactoryHoppers>
+					<effecterWhenWorking>true</effecterWhenWorking>
+					<effecterDef>VFEFactory_Smelt</effecterDef>
+					<sustainerWhenWorking>true</sustainerWhenWorking>
+					<sustainerDef>VFEFactory_AutomatedSmeltingSustainer</sustainerDef>
+					<maxOutputCount>999</maxOutputCount>
+				</PipeSystem.ProcessDef>
+				
+				<PipeSystem.ProcessDef>
+					<defName>TSP_VFEF_ST_Alloy_Dragonite_Automatic</defName>
+					<label>smelt Hhhite</label>
+					<labelOverride>smelt Hhhite</labelOverride>
+					<description>Use high heat and pressure to melt Peeled One ingredients into Hhhite.</description>
+					<priorityInBillList>6</priorityInBillList>
+					<spawnOnInteractionCell>true</spawnOnInteractionCell>
+					<autoGrabFromHoppers>true</autoGrabFromHoppers>
+					<autoInputSlots>
+						<li>(-2,0,3)</li>
+						<li>(0,0,3)</li>
+						<li>(2,0,3)</li>
+					</autoInputSlots>
+					<ticks>600</ticks>
+					<ingredients>
+						<li>
+							<thing>ST_DragoniteMixture</thing>
+							<countNeeded>10</countNeeded>
+						</li>
+					</ingredients>
+					<results>
+						<li>
+							<thing>ST_Dragonite</thing>
+							<count>20</count>
+						</li>
+					</results>
+					<researchPrerequisites>
+						<li>VFE_BasicFactories</li>
+					</researchPrerequisites>
+					<isFactoryProcess>true</isFactoryProcess>
+					<autoExtract>true</autoExtract>
+					<onlyGrabAndOutputToFactoryHoppers>true</onlyGrabAndOutputToFactoryHoppers>
+					<effecterWhenWorking>true</effecterWhenWorking>
+					<effecterDef>VFEFactory_Smelt</effecterDef>
+					<sustainerWhenWorking>true</sustainerWhenWorking>
+					<sustainerDef>VFEFactory_AutomatedSmeltingSustainer</sustainerDef>
+					<maxOutputCount>999</maxOutputCount>
+				</PipeSystem.ProcessDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="VFEFactory_ConveyorOven"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VFEFactory_ConveyorOven"]/comps/li/processes</xpath>
+			<success>Always</success>
+			<value>
+				<li>TSP_BillyClub_Subway_Automatic</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="VFEFactory_MedicineGranulator"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VFEFactory_MedicineGranulator"]/comps/li/processes</xpath>
+			<success>Always</success>
+			<value>
+				<li>TSP_VFEF_BotoxGrind_Automatic</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="VFEFactory_AutomatedAlloyForge"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VFEFactory_AutomatedAlloyForge"]/comps/li/processes</xpath>
+			<success>Always</success>
+			<value>
+				<li>TSP_VFEF_ST_Alloy_BlackSteel_Automatic</li>
+				<li>TSP_VFEF_ST_Alloy_Mithrilite_Automatic</li>
+				<li>TSP_VFEF_ST_Alloy_Adamantium_Automatic</li>
+				<li>TSP_VFEF_ST_Alloy_Runite_Automatic</li>
+				<li>TSP_VFEF_ST_Alloy_Dragonite_Automatic</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

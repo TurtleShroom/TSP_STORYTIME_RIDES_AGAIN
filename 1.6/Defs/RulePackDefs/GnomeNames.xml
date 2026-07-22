@@ -6,18 +6,21 @@
 		<include>
 			<li>PuffleNamer</li>
 			<li>ST_NamerElfoidMale</li>
+			<li MayRequire="xd.gnomenames">XDGnomish_NamerPersonUtility</li>
 		</include>
 		<rulePack>
 			<rulesStrings>
-				<li>name(p=5)->[GnomeMaleList] [GnomeFamilyList]</li>
-				<li>name(p=4)->[GnomeMaleList] '[ST_ElfMaleList]' [GnomeFamilyList]</li>
+				<li>name(p=3)->[GnomeMaleList] [GnomeFamilyList]</li>
+				<li>name(p=2)->[GnomeMaleList] '[ST_ElfMaleList]' [GnomeFamilyList]</li>
 				<li>name(p=2)->[GnomeMaleList] [ST_ElfFamilyList]</li>
 				<li>name(p=1)->[ST_ElfMaleList] [ST_ElfFamilyList]</li>
-				<li>name(p=2)->[ST_ElfMaleList] [GnomeFamilyList]</li>
+				<li>name(p=1.1)->[ST_ElfMaleList] [GnomeFamilyList]</li>
 				<li>name(p=1)->[GnomeMaleList] [Puffle] [GnomeFamilyList]</li>
 				<li>name(p=0.85)->Schmebuloc 'Schmebuloc' [GnomeFamilyList]</li>
 				<li>name(p=0.85)->Schmebuloc 'Schmebuloc' [ST_ElfFamilyList]</li>
 				<li>name(p=0.5)->Schmebuloc [Puffle] [ST_ElfFamilyList]</li>
+				<!-- <li>name(p=1.75)->[Gnomish_First_Male] [Gnomish_Last]</li> -->
+				<li MayRequire="xd.gnomenames">r_name(p=1.75)->[Gnomish_First_Male] [Gnomish_Last]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
@@ -37,6 +40,7 @@
 		<include>
 			<li>PuffleNamer</li>
 			<li>ST_NamerElfoidFemale</li>
+			<li MayRequire="xd.gnomenames">XDGnomish_NamerPersonUtility</li>
 		</include>
 		<rulePack>
 			<rulesStrings>
@@ -48,6 +52,7 @@
 				<li>name(p=1)->[GnomeFemaleList] [Puffle] [GnomeFamilyList]</li>
 				<li>name(p=0.5)->[Puffle] [Puffle] [GnomeFamilyList]</li>
 				<li>name(p=0.25)->[Puffle] '[GnomeFemaleList]' [GnomeFamilyList]</li>
+				<li MayRequire="xd.gnomenames">r_name(p=2)->[Gnomish_First_Female] [Gnomish_Last]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
@@ -66,6 +71,7 @@
 		<defName>GnomeSettlementName</defName>
 		<include>
 			<li>PuffleNamer</li>
+			<li MayRequire="xd.gnomenames">XDGnomish_NamerPersonUtility</li>
 		</include>
 		<rulePack>
 			<rulesStrings>
@@ -88,13 +94,16 @@
 			<li>PuffleNamer</li>
 			<li>ST_NamerElfoidMale</li>
 			<li>ST_NamerElfoidFemale</li>
+			<li MayRequire="xd.gnomenames">XDGnomish_NamerPersonUtility</li>
 		</include>
 		<rulePack>
 			<rulesStrings>
 				<li>name(p=10)->[GnomeFamilyList]</li>
 				<li>name(p=1)->[Puffle]-[GnomeFamilyList]</li>
 				<li>name(p=1)->[ST_ElfFamilyList]-[GnomeFamilyList]</li>
-				<li>name(p=0.4)->[ST_ElfFamilyList]</li>
+				<li>name(p=0.75)->[ST_ElfFamilyList]</li>
+				<li MayRequire="xd.gnomenames">r_name(p=0.75)->[Gnomish_Last]</li>
+				<li MayRequire="xd.gnomenames">name(p=1)->[Gnomish_Last]-[GnomeFamilyList]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">

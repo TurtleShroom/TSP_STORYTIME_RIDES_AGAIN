@@ -106,34 +106,34 @@
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers</xpath>
 			<value>
-				<li Inherit="False">
+				<li Inherit="False" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 					<kindDef>Combat</kindDef>
 					<options>
 						<TSP_VFERA_ARCHON_BULBORB_Goon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">999</TSP_VFERA_ARCHON_BULBORB_Goon>
 					</options>
 				</li>
-				<li Inherit="False">
+				<li Inherit="False" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 					<kindDef>Combat</kindDef>
 					<options>
-						<FlyingFrog>999</FlyingFrog>
-						<ArchonWarrior>1</ArchonWarrior>
+						<FlyingFrog MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">999</FlyingFrog>
+						<ArchonWarrior MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</ArchonWarrior>
 					</options>
 				</li>
-				<li Inherit="False">
+				<li Inherit="False" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 					<kindDef>Peaceful</kindDef>
 					<options>
-						<TSP_VFERA_ARCHON_BULBORB>7</TSP_VFERA_ARCHON_BULBORB>
+						<TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">7</TSP_VFERA_ARCHON_BULBORB>
 						<TSP_VFERA_ARCHON_BULBORB_Goon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">11</TSP_VFERA_ARCHON_BULBORB_Goon>
-						<ArchonWarrior>2</ArchonWarrior>
+						<ArchonWarrior MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">2</ArchonWarrior>
 					</options>
 				</li>
-				<li Inherit="False">
+				<li Inherit="False" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 					<kindDef>Peaceful</kindDef>
 					<options>
-						<ArchonWarrior>999</ArchonWarrior>
+						<ArchonWarrior MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">999</ArchonWarrior>
 					</options>
 				</li>
-				<li Inherit="False">
+				<li Inherit="False" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 					<kindDef>Trader</kindDef>
 					<commonality>100</commonality>
 					<traders>
@@ -155,14 +155,14 @@
 						<BMT_GiantSnail MayRequire="biomesteam.biomescaverns">7</BMT_GiantSnail>
 					</guards>
 				</li>
-				<li Inherit="False">
+				<li Inherit="False" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 					<kindDef>Settlement</kindDef>
 					<commonality>100</commonality>
 					<options>
 						<TSP_VFERA_ARCHON_BULBORB MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">24</TSP_VFERA_ARCHON_BULBORB>
 						<TSP_VFERA_ARCHON_BULBORB_Goon MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">19</TSP_VFERA_ARCHON_BULBORB_Goon>
 						<TSP_VFERA_ARCHON_BULBORB_Merchant MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">1</TSP_VFERA_ARCHON_BULBORB_Merchant>
-						<ArchonWarrior>22</ArchonWarrior>
+						<ArchonWarrior MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">22</ArchonWarrior>
 						<FlyingFrog>18</FlyingFrog>
 						<Muffalo>1</Muffalo>
 						<Alpaca>1</Alpaca>
@@ -228,8 +228,21 @@
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>Defs/IncidentDef[defName="VREA_ArchonRaid"]/baseChance</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/IncidentDef[defName="VREA_ArchonRaid"]</xpath>
+			<value>
+				<baseChance>1</baseChance>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/IncidentDef[defName="VREA_ArchonRaid"]/baseChance</xpath>
 		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationAdd">
+		<match Class="PatchOperationReplace">
 			<xpath>Defs/IncidentDef[defName="VREA_ArchonRaid"]/baseChance</xpath>
 			<value>
 				<baseChance>0.8</baseChance>
@@ -242,7 +255,7 @@
 	<!-- Does this exist? -->
 		<xpath>Defs/IncidentDef[defName="VREA_ArchonRaid"]/minRefireDays</xpath>
 		<!-- If it does, do this replacement. -->
-		<match Class="PatchOperationAdd">
+		<match Class="PatchOperationReplace">
 			<xpath>Defs/IncidentDef[defName="VREA_ArchonRaid"]/minRefireDays</xpath>
 			<value>
 				<minRefireDays>3</minRefireDays>

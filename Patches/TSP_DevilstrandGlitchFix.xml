@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ResearchProjectDef[defName="Devilstrand"]</xpath>
+		<!-- If it DOES NOT, add this. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+				<ResearchProjectDef>
+					<defName>Devilstrand</defName>
+					<label>devilstrand</label>
+					<description>Plant devilstrand, a slow-growing mushroom that yields an exceptionally tough, heat-resistant plant fiber.</description>
+					<baseCost>800</baseCost>
+					<techLevel>Neolithic</techLevel>
+					<researchViewX>0.00</researchViewX>
+					<researchViewY>2.80</researchViewY>
+					<generalRules>
+						<rulesStrings>
+							<li>subject->devilstrand cultivation</li>
+
+							<li>subject_story->used devilstrand as a natural firebreak</li>
+							<li>subject_story->established the techniques for cultivating devilstrand easily</li>
+							<li>subject_story->became obsessed with mushrooms and became the self-declared Princess of [ANYPAWN_possessive] kingdom</li>
+
+							<li>subject_gerund->cultivating devilstrand</li>
+						</rulesStrings>
+					</generalRules>
+				</ResearchProjectDef>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
