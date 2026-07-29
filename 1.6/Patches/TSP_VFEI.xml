@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/HediffDef[defName="VFEI_JellySac"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef ParentName="SurgeryFlesh">
+					<defName>TSP_VFEI_RemoveBodyPart_Jelly</defName>
+					<label>remove jelly sac</label>
+					<description>Removes a body part. The jelly sac organ is deep in the body, requiring deep surgery and a lot of time to get out. Thankfully, it is fairly easy to reach once the body is opened, but getting there takes more skill than some surgeries.</description>
+					<workerClass>Recipe_RemoveHediff</workerClass>
+					<jobString>Removing jelly sac</jobString>
+					<removesHediff>VFEI_JellySac</removesHediff>
+					<workAmount>4000</workAmount>
+					<surgerySuccessChanceFactor>3.2</surgerySuccessChanceFactor>
+					<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+					<isViolation>false</isViolation> <!-- As the jelly sac organ is really painful -->
+					<skillRequirements>
+						<Medicine>7</Medicine>
+					</skillRequirements>
+					<ingredients>
+						<li>
+							<filter>
+								<categories>
+									<li>Medicine</li>
+								</categories>
+							</filter>
+							<count>2</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</fixedIngredientFilter>
+					<products>
+						<VFEI_JellySac>1</VFEI_JellySac>
+					</products>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
+	<Operation Class="PatchOperationConditional">
+	 <!--  Does this exist? -->
+		<xpath>/Defs/HediffDef[defName="VFEI_JellySac"]</xpath>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Human"]/recipes</xpath>
+			<value>
+				<li MayRequire="oskarpotocki.vfe.insectoid">TSP_VFEI_RemoveBodyPart_Jelly</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- This allows insane animals to be cured, too. -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist/ -->
+		<xpath>/Defs/HediffDef[defName="VFEI_JellySac"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
+			<value>
+				<li MayRequire="oskarpotocki.vfe.insectoid">TSP_VFEI_RemoveBodyPart_Jelly</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Guaranteeing that the HUMANRECIPEIMPORT feature found in the Humanoid Alien Races Mod inherits these Recipes -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist/ -->
+		<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Human"]/recipes</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Human"]/recipes</xpath>
+			<value>
+				<li MayRequire="oskarpotocki.vfe.insectoid">TSP_VFEI_RemoveBodyPart_Jelly</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

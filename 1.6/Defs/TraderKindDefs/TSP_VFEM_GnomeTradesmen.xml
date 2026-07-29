@@ -268,7 +268,7 @@
 			
             <li Class="StockGenerator_Tag" MayRequire="ferny.progressionagriculture">
                 <tradeTag>Seeds</tradeTag>
-                <thingDefCountRange>10~25</thingDefCountRange>
+                <thingDefCountRange>15~35</thingDefCountRange>
                 <countRange>1~1</countRange>
             </li>
 			
@@ -595,6 +595,25 @@
                 <countRange>1~1</countRange>
             </li>
 			
+            <li Class="StockGenerator_Tag" MayRequire="alcheest.lopain">
+                <tradeTag>Cheese_Food</tradeTag>
+                <thingDefCountRange>10~25</thingDefCountRange>
+                <countRange>1~10</countRange>
+            </li>
+			
+            <li Class="StockGenerator_Tag" MayRequire="alcheest.lopain">
+                <tradeTag>Cheese_Sale</tradeTag>
+                <thingDefCountRange>1~2</thingDefCountRange>
+                <countRange>3~7</countRange>
+            </li>
+			
+            <li Class="StockGenerator_Tag" MayRequire="alcheest.lopain">
+                <tradeTag>Cheese_Transmuted</tradeTag>
+                <thingDefCountRange>1~2</thingDefCountRange>
+				<price>Expensive</price>
+                <countRange>2~12</countRange>
+            </li>
+			
 			<!-- Buying -->
 			<li Class="StockGenerator_BuySingleDef" MayRequire="Ludeon.RimWorld.Anomaly">
 				<thingDef>Meat_Twisted</thingDef>
@@ -655,6 +674,15 @@
 			</li>
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>EggNog</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Cheese_Food</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Cheese_Sale</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Cheese_Transmuted</tag>
 			</li>
 		</stockGenerators>
 	</TraderKindDef>
