@@ -202,7 +202,7 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_GnomeSugar</li>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Pepsi</li>
-						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Sugar</li>
+						<!-- <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Sugar</li> -->
 					</value>
 				</li>
 				
@@ -212,7 +212,7 @@
 					<value>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_GnomeSugar</li>
 						<li MayRequire="TSP.Isengriff.Storytime">ST_Pepsi</li>
-						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Sugar</li>
+						<!-- <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Sugar</li> -->
 					</value>
 				</li>
 			</operations>
@@ -250,17 +250,17 @@
 					</value>
 				</li>
 				
-				<li Class="PatchOperationReplace" MayRequire="vanillaexpanded.vcooke">
-					<xpath MayRequire="vanillaexpanded.vcooke">Defs/ThingDef[defName="O_GrainFlour"]/thingCategories</xpath>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="O_GrainFlour"]/thingCategories</xpath>
 					<success>Always</success>
-					<value MayRequire="vanillaexpanded.vcooke">
+					<value>
 						<thingCategories>
 							<li MayRequire="mlie.vanillalikewheat">VLW_CategoryProcessed</li>
 							<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
 							<li MayRequire="Mlie.TakisRandomStuff">Cereal</li>
 							<li>PlantMatter</li>
 							<!-- <li>PlantFoodRaw</li> -->
-							<li MayRequire="sahari.minjunbulsang">Sahari_AllomoDough</li>
+							<!-- <li MayRequire="sahari.minjunbulsang">Sahari_AllomoDough</li> -->
 						</thingCategories>
 					</value>
 				</li>
@@ -269,7 +269,6 @@
 					<xpath>Defs/RecipeDef[@Name="MealBase"]/defaultIngredientFilter/disallowedThingDefs</xpath>
 					<success>Always</success>
 					<value>
-						<!-- <li>O_GrainFlour</li> -->
 						<li MayRequire="zal.braziliancrops">KIT_ManiocFlour</li>
 						<li MayRequire="sarg.alphacrafts">AC_Flour</li>
 					</value>
@@ -438,265 +437,6 @@
 				</li>
 			</operations>
 		</match>
-	</Operation>
-	
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="WorkedRawRice"]/thingCategories</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="WorkedRawRice"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories Inherit="False"></thingCategories>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- DO THE GENTILES KNOW? -->
-		<xpath>Defs/ThingCategoryDef[defName="DankPyon_Flour"]</xpath>
-		<!-- If they do, SHUT IT DOWN. -->
-		<match Class="PatchOperationRemove">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="WorkedRawRice"]/thingCategories/li[text()="DankPyon_Flour"]</xpath>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="WorkedRawRice"]/thingCategories</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="WorkedRawRice"]/thingCategories</xpath>
-			<success>Always</success>
-			<value>
-				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
-			</value>
-		</match>
-		<!--If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="LotRE_Lembasflour"]/thingCategories</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="LotRE_Lembasflour"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories Inherit="False"></thingCategories>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- DO THE GENTILES KNOW? -->
-		<xpath>Defs/ThingCategoryDef[defName="DankPyon_Flour"]</xpath>
-		<!-- If they do, SHUT IT DOWN. -->
-		<match Class="PatchOperationRemove">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="LotRE_Lembasflour"]/thingCategories/li[text()="DankPyon_Flour"]</xpath>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="LotRE_Lembasflour"]/thingCategories</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="LotRE_Lembasflour"]/thingCategories</xpath>
-			<success>Always</success>
-			<value>
-				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
-			</value>
-		</match>
-		<!--If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="O_GrainFlour"]/thingCategories</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="O_GrainFlour"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories Inherit="False"></thingCategories>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- DO THE GENTILES KNOW? -->
-		<xpath>Defs/ThingCategoryDef[defName="DankPyon_Flour"]</xpath>
-		<!-- If they do, SHUT IT DOWN. -->
-		<match Class="PatchOperationRemove">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="O_GrainFlour"]/thingCategories/li[text()="DankPyon_Flour"]</xpath>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="O_GrainFlour"]/thingCategories</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="O_GrainFlour"]/thingCategories</xpath>
-			<success>Always</success>
-			<value>
-				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
-			</value>
-		</match>
-		<!--If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="KIT_ManiocFlour"]/thingCategories</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="KIT_ManiocFlour"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories Inherit="False"></thingCategories>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- DO THE GENTILES KNOW? -->
-		<xpath>Defs/ThingCategoryDef[defName="DankPyon_Flour"]</xpath>
-		<!-- If they do, SHUT IT DOWN. -->
-		<match Class="PatchOperationRemove">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="KIT_ManiocFlour"]/thingCategories/li[text()="DankPyon_Flour"]</xpath>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="KIT_ManiocFlour"]/thingCategories</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="KIT_ManiocFlour"]/thingCategories</xpath>
-			<success>Always</success>
-			<value>
-				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
-			</value>
-		</match>
-		<!--If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="VCE_Flour"]/thingCategories</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="VCE_Flour"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories Inherit="False"></thingCategories>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- DO THE GENTILES KNOW? -->
-		<xpath>Defs/ThingCategoryDef[defName="DankPyon_Flour"]</xpath>
-		<!-- If they do, SHUT IT DOWN. -->
-		<match Class="PatchOperationRemove">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="VCE_Flour"]/thingCategories/li[text()="DankPyon_Flour"]</xpath>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="VCE_Flour"]/thingCategories</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="VCE_Flour"]/thingCategories</xpath>
-			<success>Always</success>
-			<value>
-				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
-			</value>
-		</match>
-		<!--If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="AC_Flour"]/thingCategories</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="AC_Flour"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories Inherit="False"></thingCategories>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- DO THE GENTILES KNOW? -->
-		<xpath>Defs/ThingCategoryDef[defName="DankPyon_Flour"]</xpath>
-		<!-- If they do, SHUT IT DOWN. -->
-		<match Class="PatchOperationRemove">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="AC_Flour"]/thingCategories/li[text()="DankPyon_Flour"]</xpath>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="AC_Flour"]/thingCategories</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="AC_Flour"]/thingCategories</xpath>
-			<success>Always</success>
-			<value>
-				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
-			</value>
-		</match>
-		<!--If the first XPATH does not exist, the original code stands. -->
-	</Operation>
-	
-	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="Flour"]/thingCategories</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="Flour"]</xpath>
-			<success>Always</success>
-			<value>
-				<thingCategories Inherit="False"></thingCategories>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- DO THE GENTILES KNOW? -->
-		<xpath>Defs/ThingCategoryDef[defName="DankPyon_Flour"]</xpath>
-		<!-- If they do, SHUT IT DOWN. -->
-		<match Class="PatchOperationRemove">
-			<success>Always</success>
-			<xpath>Defs/ThingDef[defName="Flour"]/thingCategories/li[text()="DankPyon_Flour"]</xpath>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="Flour"]/thingCategories</xpath>
-		<!-- If it does, add this. -->
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="Flour"]/thingCategories</xpath>
-			<success>Always</success>
-			<value>
-				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
-			</value>
-		</match>
-		<!--If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
 	<Operation Class="PatchOperationConditional">
