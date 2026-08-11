@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="NobleTomato"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "Plant_ImperialCabbage" or defName = "Plant_MuffaloPeas" or defName = "Plant_NobleTomato"]/sowResearchPrerequisites</xpath>
+			<success>Always</success>
+			<value>
+				<sowResearchPrerequisites Inherit="False">
+					<li MayRequire="TSP.Isengriff.Storytime">ST_GnomeCulture</li>
+				</sowResearchPrerequisites>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingDef[defName="NobleTomato"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ResearchProjectDef[defName="ExoticPlantsResearch"]</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingDef[defName="NobleTomato"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef/recipeMaker/researchPrerequisites/li[text()="ExoticPlantsResearch"]</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingDef[defName="NobleTomato"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef/researchPrerequisites/li[text()="ExoticPlantsResearch"]</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingDef[defName="NobleTomato"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/RecipeDef/researchPrerequisites/li[text()="ExoticPlantsResearch"]</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingDef[defName="NobleTomato"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ResearchProjectDef/prerequisites/li[text()="ExoticPlantsResearch"]</xpath>
+			<success>Always</success>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="NobleTomato"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ResearchProjectDef[tab="RyuVanillaPlus"]/tab</xpath>
+			<success>Always</success>
+			<value>
+				<tab>Main</tab>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

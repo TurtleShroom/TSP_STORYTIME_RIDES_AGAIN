@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/requiredMemes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]</xpath>
+			<success>Always</success>
+			<value>
+				<requiredMemes></requiredMemes>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/allowedMemes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]</xpath>
+			<success>Always</success>
+			<value>
+				<allowedMemes></allowedMemes>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/allowedCultures</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]</xpath>
+			<success>Always</success>
+			<value>
+				<allowedCultures></allowedCultures>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/pawnGroupMakers</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]</xpath>
+			<success>Always</success>
+			<value>
+				<pawnGroupMakers></pawnGroupMakers>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/raidsForbidden</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]</xpath>
+			<success>Always</success>
+			<value>
+				<raidsForbidden>true</raidsForbidden>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/hostileToFactionlessHumanlikes</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]</xpath>
+			<success>Always</success>
+			<value>
+				<hostileToFactionlessHumanlikes>false</hostileToFactionlessHumanlikes>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/canStageAttacks</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]</xpath>
+			<success>Always</success>
+			<value>
+				<canStageAttacks>false</canStageAttacks>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/basicMemberKind</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/basicMemberKind</xpath>
+			<success>Always</success>
+			<value>
+				<basicMemberKind>TSP_ST_GnomePeasant</basicMemberKind>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/pawnGroupMakers</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/pawnGroupMakers</xpath>
+			<success>Always</success>
+			<value>
+				<li>
+					<kindDef>Peaceful</kindDef>
+					<options>
+						<TSP_ST_GnomePeasant>1</TSP_ST_GnomePeasant>
+						<GnomeChef>2</GnomeChef>
+						<TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">1</TSP_ST_RoyaltyGnoble>
+						<DankPyon_Medieval_Peasant>1</DankPyon_Medieval_Peasant>
+					</options>
+				</li>
+				<li>
+					<kindDef>Peaceful</kindDef>
+					<options>
+						<TSP_ST_GnomePeasant>1</TSP_ST_GnomePeasant>
+						<GnomeChef>999</GnomeChef>
+						<TSP_ST_RoyaltyGnoble MayRequire="ludeon.rimworld.royalty">1</TSP_ST_RoyaltyGnoble>
+					</options>
+				</li>
+				<li MayRequire="dankpyon.medieval.overhaul">
+					<kindDef MayRequire="dankpyon.medieval.overhaul">Peaceful</kindDef>
+					<options MayRequire="dankpyon.medieval.overhaul">
+						<DankPyon_Medieval_Peasant MayRequire="dankpyon.medieval.overhaul">999</DankPyon_Medieval_Peasant>
+					</options>
+				</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/factionIconPath</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/factionIconPath</xpath>
+			<success>Always</success>
+			<value>
+				<factionIconPath>UI/Commands/RimFeast_Invite</factionIconPath>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/allowedCultures</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/allowedCultures</xpath>
+			<success>Always</success>
+			<value>
+				<allowedCultures>
+					<li MayRequire="TSP.Isengriff.Storytime">ST_GnomeCulture</li>
+					<li MayRequire="dankpyon.medieval.overhaul">DankPyon_OldWorlder</li>
+					<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_FeudalGuild</li>
+					<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_Feudal</li>
+				</allowedCultures>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/requiredMemes</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/requiredMemes</xpath>
+			<success>Always</success>
+			<value>
+				<requiredMemes Inherit="False">
+					<li MayRequire="VanillaExpanded.VMemesE">VME_Aristocratic</li>
+					<li MayRequire="sarg.alphamemes">AM_Epicurean</li>
+				</requiredMemes>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/allowedMemes</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName="RimFeast_Guests"]/allowedMemes</xpath>
+			<success>Always</success>
+			<value>
+				<allowedMemes Inherit="False">
+					<li MayRequire="VanillaExpanded.VMemesE">VME_Aristocratic</li>
+					<li MayRequire="sarg.alphamemes">AM_Epicurean</li>
+					<li MayRequire="VanillaExpanded.VMemesE">VME_PartyLife</li>
+					<li MayRequire="Zezz.Altrumeme">Altruism</li>
+					<li MayRequire="VanillaExpanded.VMemesE">VME_Pacifist</li>
+					<li MayRequire="Sarg.AlphaMemes">AM_NonViolence</li>
+					<li MayRequire="erdelf.HumanoidAlienRaces,Ludeon.RimWorld.Ideology">HAR_Xenophilia</li>
+					<li MayRequire="llunak.MorePrecepts">Pacifism</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginChristian</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology,vanillaexpanded.vmemese">VME_Structure_SecularSpirituality</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology,vanillaexpanded.vmemese">VME_Structure_Bacchanalianism</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology,vanillaexpanded.vmemese">VME_Structure_Bacchanalianism</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistEmbodied</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistAbstract</li>
+				</allowedMemes>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

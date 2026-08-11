@@ -14,6 +14,51 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="Genepack"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<XenotypeDef MayRequire="ludeon.rimworld.biotech">
+					<defName>CommieEmu</defName>
+					<label>Commie Emu</label>
+					<description>Not actual emus or birds, but rather, descendants of prison gangs from Old Earth's Australian continent, with their hatred bred and enhanced in the image of the emu, the worst and most evil flightless bird to ever exist. Despite the name, while not all of them are actual Marxists, they strangely appear among leftist groups quite often.</description>
+					<descriptionShort>Not actual emus or birds, but rather, descendants of prison gangs from Old Earth's Australian continent, with their hatred bred and enhanced in the image of the emu, the worst and most evil flightless bird to ever exist. Despite the name, while not all of them are actual Marxists, they strangely appear among leftist groups quite often.</descriptionShort>
+					<!-- <descriptionShort>The Emus were once a Cruel Race of Flightless birds until they were Brought to Near Extinction and then enslaved them turning them into Rage filled Communists. Brainwashed Commie Emus are Faster but have Volatile mood swings</descriptionShort> -->
+					<iconPath>emuicon</iconPath>
+					<inheritable>true</inheritable>
+					<combatPowerFactor>0.8</combatPowerFactor>
+					<genes>
+						<li MayRequire="ludeon.rimworld.biotech">Beard_NoBeardOnly</li>
+						<!-- <li>Hair_BaldOnly</li> -->
+						<li MayRequire="ludeon.rimworld.biotech">Furskin</li>
+						<li MayRequire="ludeon.rimworld.biotech">Eyes_Red</li>
+						<li MayRequire="ludeon.rimworld.biotech">Body_Thin</li>
+						<li MayRequire="ludeon.rimworld.biotech">AptitudeTerrible_Intellectual</li>
+						<li MayRequire="ludeon.rimworld.biotech">AptitudeRemarkable_Melee</li>
+						<li MayRequire="ludeon.rimworld.biotech">ChemicalDependency_Alcohol</li>
+						<li MayRequire="ludeon.rimworld.biotech">MoveSpeed_VeryQuick</li>
+						<li MayRequire="ludeon.rimworld.biotech">Pain_Reduced</li>
+						<li MayRequire="ludeon.rimworld.biotech">Aggression_HyperAggressive</li>
+						<li MayRequire="ludeon.rimworld.biotech">LowSleep</li>
+						<li MayRequire="ludeon.rimworld.biotech">MeleeDamage_Strong</li>
+						<li MayRequire="ludeon.rimworld.biotech">KillThirst</li>
+						<li MayRequire="ludeon.rimworld.biotech">Hair_DarkBrown</li>
+						<li MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">AG_ArmourMinor</li>
+						<li MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">AG_VolatileMood</li>
+						<li MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">AG_GrowlingVoice</li>
+						<li MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">AG_Digitigrade</li>
+						<li MayRequire="sarg.alphagenes,ludeon.rimworld.biotech">AG_ToxResist_Vulnerability</li>
+					</genes>
+				</XenotypeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
 		<xpath>Defs/XenotypeDef[defName="CommieEmu"]</xpath>
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">

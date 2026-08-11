@@ -19,7 +19,7 @@
 	   </li>
 		   <li Class="StockGenerator_SingleDef">
 			<thingDef>MedicineIndustrial</thingDef>
-			<countRange>1~31</countRange>
+			<countRange>21~31</countRange>
 	   </li>
 	   
 			<!-- Buying -->
@@ -48,6 +48,11 @@
 			<li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Meals</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Apparel</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Buildings</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Furniture</tag></li>
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>GnomeFlour</tag>
 			</li>
@@ -201,9 +206,33 @@
 			<countRange>1~6</countRange>
 		  </li>
 		  
+			<li Class="StockGenerator_SingleDef" MayRequire="ferny.progressionagriculture">
+				<thingDef>Plant_Potato_SeedBundle</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="ferny.progressionagriculture">
+				<thingDef>Plant_Rice_SeedBundle</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="ferny.progressionagriculture">
+				<thingDef>Plant_Cotton_SeedBundle</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+		  
             <li Class="StockGenerator_Tag" MayRequire="ferny.progressionagriculture">
                 <tradeTag>Seeds</tradeTag>
-                <totalPriceRange>700~2000</totalPriceRange>
+                <totalPriceRange>1700~4000</totalPriceRange>
             </li>
 		  
 		   <li Class="StockGenerator_Animals">
@@ -266,6 +295,11 @@
 			<li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Meals</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Apparel</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Buildings</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Furniture</tag></li>
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>GnomeFlour</tag>
 			</li>
@@ -335,7 +369,7 @@
 			</li>
 		  <li Class="StockGenerator_MultiDef">
 			<thingDefs>
-			  <li>Chocolate</li>
+			  <li>WW_Sloodge</li>
 			  <li>Kibble</li>
 			</thingDefs>
 		  </li>
@@ -350,6 +384,7 @@
 				<li>AnimalRare</li>
 				<li>AnimalFighter</li>
 				<li>AnimalInsect</li>
+				<li>AnimalFrog</li>
 			</tradeTagsSell>
 			<tradeTagsBuy>
 				<li>AnimalExotic</li>
@@ -370,7 +405,7 @@
 				<li MayRequire="tsp.baskerville.hellsingexpansion">GentleGhoul</li>
 			</tradeTagsBuy>
 			<kindCountRange>8~24</kindCountRange>
-			<countRange>1~2</countRange>
+			<countRange>2~3</countRange>
 		  </li>
 		  
 		  
@@ -387,6 +422,11 @@
 			<li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
 			<li Class="StockGenerator_BuyTradeTag"><tag>PsylinkNeuroformer</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Meals</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Apparel</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Buildings</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Furniture</tag></li>
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>GnomeFlour</tag>
 			</li>

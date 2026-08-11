@@ -45,6 +45,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[defName="VRE_Archons"]/caravanTraderKinds</xpath>
+			<success>Always</success>
 			<value>
 				<li>Caravan_Outlander_Exotic</li>
 				<li>TSP_ST_MMT_Caravan_LivingVehicle</li>
@@ -61,6 +62,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[defName="VRE_Archons"]/visitorTraderKinds</xpath>
+			<success>Always</success>
 			<value>
 				<li>Caravan_Outlander_Exotic</li>
 				<li>WW_Caravan_Outlander_Drugdealer</li>
@@ -76,6 +78,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[defName="VRE_Archons"]/baseTraderKinds</xpath>
+			<success>Always</success>
 			<value>
 				<li>Caravan_Outlander_Exotic</li>
 				<li>WW_Caravan_Outlander_Drugdealer</li>
@@ -91,6 +94,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers/li/options</xpath>
+			<success>Always</success>
 			<value>
 				<FlyingFrog>1</FlyingFrog>
 				<BMT_GiantSnail MayRequire="biomesteam.biomescaverns">1</BMT_GiantSnail>
@@ -105,6 +109,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers</xpath>
+			<success>Always</success>
 			<value>
 				<li Inherit="False" MayRequire="ludeon.rimworld.biotech,vanillaracesexpanded.archon">
 					<kindDef>Combat</kindDef>
@@ -183,6 +188,7 @@
 		<xpath>Defs/FactionDef[defName="VRE_Archons"]</xpath>
 		If it does, add this.
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>Defs/FactionDef[defName="VRE_Archons"]/pawnGroupMakers/li[1]/options</xpath>
 			<value>
 				<TSP_VFERA_ARCHON_BULBORB>6.78</TSP_VFERA_ARCHON_BULBORB>
@@ -199,6 +205,7 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<xpath>Defs/FactionDef[defName="VRE_Archons"]/permanentEnemy</xpath>
+			<success>Always</success>
 			<value>
 				<permanentEnemyToEveryoneExcept>
 					<li>BeanManFaction</li>
@@ -215,6 +222,7 @@
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/RaidStrategyDef[defName="VREA_ArchonRaidStrategy"]/arriveModes</xpath>
+			<success>Always</success>
 			<value>
 				<li>CenterDrop</li>
 				<li>EmergeFromWater</li>
@@ -231,8 +239,9 @@
 		<!-- If it DOES NOT, add this. -->
 		<nomatch Class="PatchOperationAdd">
 			<xpath>Defs/IncidentDef[defName="VREA_ArchonRaid"]</xpath>
+			<success>Always</success>
 			<value>
-				<baseChance>1</baseChance>
+				<baseChance>5</baseChance>
 			</value>
 		</nomatch>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -244,8 +253,9 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<xpath>Defs/IncidentDef[defName="VREA_ArchonRaid"]/baseChance</xpath>
+			<success>Always</success>
 			<value>
-				<baseChance>0.8</baseChance>
+				<baseChance>5</baseChance>
 			</value>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
@@ -257,6 +267,7 @@
 		<!-- If it does, do this replacement. -->
 		<match Class="PatchOperationReplace">
 			<xpath>Defs/IncidentDef[defName="VREA_ArchonRaid"]/minRefireDays</xpath>
+			<success>Always</success>
 			<value>
 				<minRefireDays>3</minRefireDays>
 			</value>

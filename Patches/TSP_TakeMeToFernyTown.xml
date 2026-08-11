@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="SeedPackingBench"]</xpath>
+		<!-- If so, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef MayRequire="ferny.progressionagriculture">
+					<defName>TSP_Ferny_ST_SeedGeneration_Gnome</defName>
+					<label>acquire specialist Gnome seed pods</label>
+					<description>We have the Research, now it's time for the seeds! LET'S FREAKING GOOOOOO!!!</description>
+					<jobString>generating specialist seed pods</jobString>
+					<workAmount>175</workAmount>
+					<workSpeedStat>CookSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_CookMeal</soundWorking>
+					<!-- <unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef> -->
+					<recipeUsers Inherit="False">
+						<li MayRequire="ferny.progressionagriculture">SeedPackingCraftingSpot</li>
+						<li MayRequire="ferny.progressionagriculture">SeedPackingBench</li>
+						<!-- <li MayRequire="vanillaexpanded.vcooke">VCE_CondimentPrepTable</li> -->
+					</recipeUsers>
+					<ingredients Inherit="False"></ingredients> <!-- None! -->
+					<fixedIngredientFilter Inherit="False">
+						<categories></categories>
+						<thingDefs></thingDefs>
+						<disallowedThingDefs></disallowedThingDefs>
+						<disallowedCategories></disallowedCategories>
+					</fixedIngredientFilter>
+					<researchPrerequisites Inherit="False">
+						<li>ST_GnomeCulture</li>
+						<li MayRequire="ferny.progressionagriculture">Ferny_SeedPackingBench</li>
+					</researchPrerequisites>
+					<products>
+						<Plant_Gnome_SeedBundle>1</Plant_Gnome_SeedBundle>
+						<ST_Plant_Sugar_SeedBundle>1</ST_Plant_Sugar_SeedBundle>
+						<Plant_MuffaloPeas_SeedBundle MayRequire="ryu.vanillaplants">1</Plant_MuffaloPeas_SeedBundle>
+						<Plant_NobleTomato_SeedBundle MayRequire="ryu.vanillaplants">1</Plant_NobleTomato_SeedBundle>
+					</products>
+				</RecipeDef>
+				
+				<RecipeDef MayRequire="ferny.progressionagriculture">
+					<defName>TSP_Ferny_ST_SeedGeneration_Bulborb</defName>
+					<label>acquire specialist Bulborb seed pods</label>
+					<description>We have the Research, now it's time for the seeds! LET'S FREAKING GOOOOOO!!!</description>
+					<jobString>generating specialist seed pods</jobString>
+					<workAmount>175</workAmount>
+					<workSpeedStat>CookSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_CookMeal</soundWorking>
+					<!-- <unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef> -->
+					<recipeUsers Inherit="False">
+						<li MayRequire="ferny.progressionagriculture">SeedPackingCraftingSpot</li>
+						<li MayRequire="ferny.progressionagriculture">SeedPackingBench</li>
+						<!-- <li MayRequire="vanillaexpanded.vcooke">VCE_CondimentPrepTable</li> -->
+					</recipeUsers>
+					<ingredients Inherit="False"></ingredients> <!-- None! -->
+					<fixedIngredientFilter Inherit="False">
+						<categories></categories>
+						<thingDefs></thingDefs>
+						<disallowedThingDefs></disallowedThingDefs>
+						<disallowedCategories></disallowedCategories>
+					</fixedIngredientFilter>
+					<researchPrerequisites Inherit="False">
+						<li>beanManCrafting</li>
+						<li MayRequire="ferny.progressionagriculture">Ferny_SeedPackingBench</li>
+					</researchPrerequisites>
+					<products>
+						<Plant_Bean_SeedBundle>1</Plant_Bean_SeedBundle>
+						<VCE_Beans_SeedBundle MayRequire="vanillaexpanded.vplantsemore">1</VCE_Beans_SeedBundle>
+						<KIT_Bean_SeedBundle MayRequire="vanillaexpanded.vplantsemore">1</KIT_Bean_SeedBundle>
+						<HSPlant_Adzuki_SeedBundle MayRequire="heis.edo.themed.expansion">1</HSPlant_Adzuki_SeedBundle>
+						<DankPyon_Plant_Lentils_SeedBundle MayRequire="dankpyon.medieval.overhaul">1</DankPyon_Plant_Lentils_SeedBundle>
+						<VV_BlackBeans_SeedBundle MayRequire="vvenchov.vvnewharvestgardencrops">1</VV_BlackBeans_SeedBundle>
+					</products>
+				</RecipeDef>
+				
+				<RecipeDef MayRequire="ferny.progressionagriculture">
+					<defName>TSP_Ferny_ST_SeedGeneration_Cabbage</defName>
+					<label>acquire specialist Cabbage seed pods</label>
+					<description>We have the Research, now it's time for the seeds! LET'S FREAKING GOOOOOO!!!</description>
+					<jobString>generating specialist seed pods</jobString>
+					<workAmount>175</workAmount>
+					<workSpeedStat>CookSpeed</workSpeedStat>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_CookMeal</soundWorking>
+					<!-- <unfinishedThingDef>TSP_ST_Unfinished</unfinishedThingDef> -->
+					<recipeUsers Inherit="False">
+						<li MayRequire="ferny.progressionagriculture">SeedPackingCraftingSpot</li>
+						<li MayRequire="ferny.progressionagriculture">SeedPackingBench</li>
+						<!-- <li MayRequire="vanillaexpanded.vcooke">VCE_CondimentPrepTable</li> -->
+					</recipeUsers>
+					<ingredients Inherit="False"></ingredients> <!-- None! -->
+					<fixedIngredientFilter Inherit="False">
+						<categories></categories>
+						<thingDefs></thingDefs>
+						<disallowedThingDefs></disallowedThingDefs>
+						<disallowedCategories></disallowedCategories>
+					</fixedIngredientFilter>
+					<researchPrerequisites Inherit="False">
+						<li>cabbageCrafting</li>
+						<li MayRequire="ferny.progressionagriculture">Ferny_SeedPackingBench</li>
+					</researchPrerequisites>
+					<products>
+						<ST_CabbagePlant_SeedBundle>1</ST_CabbagePlant_SeedBundle>
+						<Plant_ImperialCabbage_SeedBundle MayRequire="ryu.vanillaplants">1</Plant_ImperialCabbage_SeedBundle>
+					</products>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

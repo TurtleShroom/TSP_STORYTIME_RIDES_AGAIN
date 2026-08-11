@@ -158,7 +158,7 @@
         </stuffProps>
         <thingCategories>
             <li>Textiles</li>
-			<li>Wools</li>
+			<!-- <li>Wools</li> --> <!-- Inherits from the Base -->
         </thingCategories>
         <thingSetMakerTags>
             <li>RewardStandardCore</li>
@@ -222,7 +222,7 @@
                 <Mass>0.8</Mass>
             </statFactors>
 			<statOffsets>
-				<CancerRate MayRequire="ludeon.rimworld.biotech">0.01</CancerRate> <!-- Per item -->
+				<CancerRate MayRequire="ludeon.rimworld.biotech">0.02</CancerRate> <!-- Per item -->
 			</statOffsets>
         </stuffProps>
 		<tradeability>All</tradeability>
@@ -308,6 +308,9 @@
         <description>Processes asbestos chunks into usable fibers.</description>
         <jobString>Processing asbestos.</jobString>
         <workAmount>600</workAmount>
+		<recipeUsers>
+			<li MayRequire="salvador143.mthings.geysers">MThingsGeysersCharforge</li>
+		</recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -342,6 +345,9 @@
         <description>Processes asbestos chunks into usable fibers.</description>
         <jobString>Processing asbestos.</jobString>
         <workAmount>900</workAmount>
+		<recipeUsers>
+			<li MayRequire="salvador143.mthings.geysers">MThingsGeysersCharforge</li>
+		</recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -376,6 +382,9 @@
         <description>Processes asbestos chunks into usable fibers.</description>
         <jobString>Processing asbestos.</jobString>
         <workAmount>1300</workAmount>
+		<recipeUsers>
+			<li MayRequire="salvador143.mthings.geysers">MThingsGeysersCharforge</li>
+		</recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -410,6 +419,9 @@
         <description>Processes asbestos chunks into usable fibers.</description>
         <jobString>Processing asbestos.</jobString>
         <workAmount>2000</workAmount>
+		<recipeUsers>
+			<li MayRequire="salvador143.mthings.geysers">MThingsGeysersCharforge</li>
+		</recipeUsers>
         <ingredients>
             <li>
                 <filter>
@@ -463,7 +475,7 @@
 						<li>Asbestos_Tile</li>
 					</disallowedThingDefs>
                 </filter>
-                <count>75</count>
+                <count>50</count>
             </li>
             <li>
                 <filter>
@@ -485,6 +497,7 @@
 					<disallowedThingDefs>
 						<li>Asbestos_Tile</li>
 						<li>Asbestos_Chunk</li>
+						<li>Asbestos_Fiber</li>
 					</disallowedThingDefs>
                 </filter>
                 <count>10</count>
@@ -567,7 +580,7 @@
 						<li>Asbestos_Tile</li>
 					</disallowedThingDefs>
                 </filter>
-                <count>115</count>
+                <count>200</count>
             </li>
             <li>
                 <filter>
@@ -671,7 +684,7 @@
 						<li>Asbestos_Tile</li>
 					</disallowedThingDefs>
                 </filter>
-                <count>225</count>
+                <count>400</count>
             </li>
             <li>
                 <filter>
@@ -695,7 +708,7 @@
 						<li>Asbestos_Chunk</li>
 					</disallowedThingDefs>
                 </filter>
-                <count>30</count>
+                <count>45</count>
             </li>
         </ingredients>
         <fixedIngredientFilter>
@@ -775,7 +788,7 @@
 						<li>Asbestos_Tile</li>
 					</disallowedThingDefs>
                 </filter>
-                <count>425</count>
+                <count>800</count>
             </li>
             <li>
                 <filter>
@@ -799,7 +812,7 @@
 						<li>Asbestos_Chunk</li>
 					</disallowedThingDefs>
                 </filter>
-                <count>40</count>
+                <count>65</count>
             </li>
         </ingredients>
         <fixedIngredientFilter>
@@ -879,7 +892,7 @@
 						<li>Asbestos_Tile</li>
 					</disallowedThingDefs>
                 </filter>
-                <count>825</count>
+                <count>1600</count>
             </li>
             <li>
                 <filter>
@@ -903,7 +916,7 @@
 						<li>Asbestos_Chunk</li>
 					</disallowedThingDefs>
                 </filter>
-                <count>60</count>
+                <count>85</count>
             </li>
         </ingredients>
         <fixedIngredientFilter>
@@ -983,7 +996,7 @@
 						<li>Asbestos_Tile</li>
 					</disallowedThingDefs>
                 </filter>
-                <count>1625</count>
+                <count>3000</count>
             </li>
             <li>
                 <filter>
@@ -1007,7 +1020,7 @@
 						<li>Asbestos_Chunk</li>
 					</disallowedThingDefs>
                 </filter>
-                <count>75</count>
+                <count>100</count>
             </li>
         </ingredients>
         <fixedIngredientFilter>

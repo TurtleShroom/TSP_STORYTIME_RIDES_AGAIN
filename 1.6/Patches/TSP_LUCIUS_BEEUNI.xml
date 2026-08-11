@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
-	<!-- Biomes Bees apiaries only count Beauty-purpose plants by default; whitelist MO crops and alchemy plants explicitly. -->
+	<!-- Biomes Bees apiaries only count Beauty-purpose plants by default; white list MO crops and alchemy plants explicitly. -->
 	<!-- Derived from an enemy Patch: https://www.steamcommunity.com/sharedfiles/filedetails/?id=3746323752 -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="BMT_WildBeehive" or defName="BMT_MedievalApiary" or defName="BMT_IndustrialApiary" or defName="BMT_UltratechApiary"]/comps/li[@Class="BiomesBees.CompProperties_BeesHive"]/whitelist/li[.="ST_CookingAppleTree"]</xpath>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>Defs/ThingDef[defName="BMT_WildBeehive" or defName="BMT_MedievalApiary" or defName="BMT_IndustrialApiary" or defName="BMT_UltratechApiary"]/comps/li[@Class="BiomesBees.CompProperties_BeesHive"]/whitelist</xpath>
+			<success>Always</success>
 			<value>
 				<li MayRequire="TSP.Isgengriff.Storytime">Plant_Bean</li>
 				<li MayRequire="TSP.Isgengriff.Storytime">Plant_Botox</li>
