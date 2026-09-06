@@ -11,7 +11,7 @@
 			<value>
 				<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
 				<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
-				<li MayRequire="lat.rimstro,oskarpotocki.vanillafactionsexpanded.core">RS_Blender</li>
+				<!-- <li MayRequire="lat.rimstro,oskarpotocki.vanillafactionsexpanded.core">RS_Blender</li> -->
 				<!-- <li MayRequire="mlie.vanillalikewheat">QuernLowTech</li> -->
 				<li MayRequire="mlie.vanillalikewheat">QuernHighTech</li>
 				<!-- <li MayRequire="sarg.alphacrafts">AC_ArtisanalGrinder</li> -->
@@ -104,7 +104,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
-		<xpath>Defs/ThingDef[defName="VinegarCask"]</xpath>
+		<xpath>Defs/ThingDef[defName="AC_VinegarCask"]/comps/li/processes</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
 			<xpath>/Defs</xpath>
@@ -146,7 +146,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="VinegarCask"]</xpath>
+		<xpath>Defs/ThingDef[defName="AC_VinegarCask"]/comps/li/processes</xpath>
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/ThingDef[defName="AC_VinegarCask"]/comps/li/processes</xpath>
 			<success>Always</success>

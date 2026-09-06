@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="YR_yedoensisBerries_Big"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<RecipeDef>
+					<defName>TSP_ST_Yuran_HauntedGold_Inefficient</defName>
+					<label>melt haunted gold into Yuran Coins (inefficient)</label>
+					<description>The strange, cursed powers of haunted gold can be easily transmuted into the strange powers of Yuran Coins.</description>
+					<effectWorking>Make_YR_ManekiUsagi_Effecter</effectWorking>
+					<soundWorking>Make_YR_ManekiUsagi</soundWorking>
+					<unfinishedThingDef>YR_Unfinished_Koji</unfinishedThingDef>
+					<recipeUsers>
+						<li>ElectricSmelter</li>
+						<li>YR_P_Smithy</li>
+						<li MayRequire="tsp.halloweenie.integrationmore">Cauldron</li>
+					</recipeUsers>
+					<ingredients>
+						<li>
+							<filter>
+								<customSummary>haunted gold</customSummary>
+								<thingDefs>
+									<li>CursedCoin</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li>Gold</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>15</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<categories></categories>
+						<thingDefs>
+							<li>CursedCoin</li>
+						</thingDefs>
+						<disallowedThingDefs>
+							<li>Gold</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<YR_Coin>3</YR_Coin>
+					</products>
+					<researchPrerequisites>
+						<li>Yuran_BaseTech</li>
+					</researchPrerequisites>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_ST_Yuran_HauntedGold_SuperEfficient</defName>
+					<label>melt haunted gold and Hanasake into Yuran Coins</label>
+					<description>The strange, cursed powers of haunted gold can be easily transmuted into the strange powers of Yuran Coins. By further refining it with Yuran Hanasake, the coins can be mass produced at absurd levels.</description>
+					<effectWorking>Make_YR_ManekiUsagi_Effecter</effectWorking>
+					<soundWorking>Make_YR_ManekiUsagi</soundWorking>
+					<unfinishedThingDef>YR_Unfinished_Koji</unfinishedThingDef>
+					<recipeUsers>
+						<li>ElectricSmelter</li>
+						<li>YR_P_Smithy</li>
+						<li MayRequire="tsp.halloweenie.integrationmore">Cauldron</li>
+					</recipeUsers>
+					<ingredients>
+						<li>
+							<filter>
+								<customSummary>Yuran Hanasake</customSummary>
+								<thingDefs>
+									<li>YR_Hanasake</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+						<li>
+							<filter>
+								<customSummary>haunted gold</customSummary>
+								<thingDefs>
+									<li>CursedCoin</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li>Gold</li>
+								</disallowedThingDefs>
+							</filter>
+							<count>15</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<categories></categories>
+						<thingDefs>
+							<li>YR_Hanasake</li>
+							<li>CursedCoin</li>
+						</thingDefs>
+						<disallowedCategories></disallowedCategories>
+						<disallowedThingDefs>
+							<li>Gold</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<YR_Coin>43</YR_Coin>
+					</products>
+					<researchPrerequisites>
+						<li>Yuran_BaseTech</li>
+					</researchPrerequisites>
+				</RecipeDef>
+				
+				<RecipeDef>
+					<defName>TSP_ST_Yuran_HauntedGold_Efficient</defName>
+					<label>fuse haunted gold and cherries into Yuran Coins</label>
+					<description>The strange, cursed powers of haunted gold can be easily transmuted into the strange powers of Yuran Coins. By further refining it with Yuran Cherries, the coins can be mass produced efficiently.</description>
+					<effectWorking>Make_YR_ManekiUsagi_Effecter</effectWorking>
+					<soundWorking>Make_YR_ManekiUsagi</soundWorking>
+					<unfinishedThingDef>YR_Unfinished_Koji</unfinishedThingDef>
+					<recipeUsers>
+						<li>ElectricSmelter</li>
+						<li>YR_P_Smithy</li>
+						<li MayRequire="tsp.halloweenie.integrationmore">Cauldron</li>
+					</recipeUsers>
+					<ingredients>
+						<li>
+							<filter>
+								<customSummary>Yuran cherries</customSummary>
+								<thingDefs>
+									<li MayRequire="vanillaexpanded.vplantse">VCE_RawCherry</li>
+									<li>YR_yedoensisBerries</li>
+								</thingDefs>
+							</filter>
+							<count>75</count>
+						</li>
+						<li>
+							<filter>
+								<customSummary>haunted gold</customSummary>
+								<thingDefs>
+									<li>CursedCoin</li>
+								</thingDefs>
+							</filter>
+							<count>15</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter>
+						<categories></categories>
+						<thingDefs>
+							<li MayRequire="vanillaexpanded.vplantse">VCE_RawCherry</li>
+							<li>YR_yedoensisBerries</li>
+							<li>CursedCoin</li>
+						</thingDefs>
+						<disallowedCategories></disallowedCategories>
+						<disallowedThingDefs>
+							<li>Gold</li>
+						</disallowedThingDefs>
+					</fixedIngredientFilter>
+					<products>
+						<YR_Coin>13</YR_Coin>
+					</products>
+					<researchPrerequisites>
+						<li>Yuran_BaseTech</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

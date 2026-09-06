@@ -221,12 +221,15 @@
 			<li Class="StockGenerator_Category">
 				<categoryDef>PlantMatter</categoryDef>
 			</li>
+			
 			<li Class="StockGenerator_Category">
 				<categoryDef>Textiles</categoryDef>
 			</li>
+			
 			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vcooke">
 				<categoryDef>VCE_Condiments</categoryDef>
 			</li>
+			
 			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vcooke">
 				<categoryDef>VCE_Cheese</categoryDef>
 			</li>
@@ -394,6 +397,22 @@
 			
 			<li Class="StockGenerator_SingleDef" MayRequire="ferny.progressionagriculture,zal.lotrelves">
 				<thingDef>LotRE_PlantLembas_SeedBundle</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="ferny.progressionagriculture,quamtumfox.squaredandelionfoodstuff">
+				<thingDef>ADH_SquareDandelion_SeedBundle</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="ferny.progressionagriculture,vanillaexpanded.vplantsemore">
+				<thingDef>VCE_Vanilla_SeedBundle</thingDef>
 				<countRange>
 					<min>1</min>
 					<max>1</max>
@@ -571,6 +590,13 @@
 				<countRange>5~25</countRange>
 			</li>
 			
+			<li Class="StockGenerator_Category" MayRequire="rh2.randy.burger.fast.food">
+				<categoryDef>RH2_SoftDrinks</categoryDef>
+				<thingDefCountRange>4~13</thingDefCountRange>
+				<countRange>30~50</countRange>
+				<price>Cheap</price>
+			</li>
+			
 			<li Class="StockGenerator_Category" MayRequire="vanillaexpanded.vbrewe">
 				<categoryDef>VBE_Drinks</categoryDef>
 				<thingDefCountRange>8~50</thingDefCountRange>
@@ -719,10 +745,26 @@
 				<price>Cheap</price>
 			</li>
 			
+			<li Class="StockGenerator_Category" MayRequire="dankpyon.medieval.overhaul">
+				<categoryDef>DankPyon_Cheese</categoryDef>
+				<price>Cheap</price>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="alcheest.lopain">
+				<categoryDef>Drug_Cheese</categoryDef>
+				<price>Cheap</price>
+			</li>
+			
+			<li Class="StockGenerator_Category" MayRequire="alcheest.lopain">
+				<categoryDef>Foods_Cheese</categoryDef>
+				<price>Cheap</price>
+			</li>
+			
             <li Class="StockGenerator_Tag" MayRequire="ferny.progressionagriculture">
                 <tradeTag>Seeds</tradeTag>
                 <thingDefCountRange>10~25</thingDefCountRange>
                 <countRange>1~1</countRange>
+				<price>Cheap</price>
             </li>
 			
             <li Class="StockGenerator_Tag" MayRequire="alcheest.lopain">
@@ -811,6 +853,9 @@
 			</li>
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>Cheese_Sale</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Cheese_Drug</tag>
 			</li>
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>Cheese_Transmuted</tag>
