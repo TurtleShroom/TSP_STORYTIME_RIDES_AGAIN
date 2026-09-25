@@ -90,4 +90,42 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="VFEI2_Swarmling"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<success>Always</success>
+			<value>
+				<ThingDef ParentName="EggFertBase">
+					<defName>TSP_ST_VEFI_SwarmEgg</defName>
+					<label>swarmling egg (fert.)</label>
+					<description>A fertilized swarmling egg. Swarmlings are the youngest larval stage of most giant Sorne insects, who then become Insectoid Larvae and finally, emerge from coccoons in their adult forms. This is the first step. If all goes well, this egg should hatch into a Swarmling. It can be eaten raw, but it's much, much better cooked.</description>
+					<descriptionHyperlinks>
+						<ThingDef>VFEI2_Swarmling</ThingDef>
+					</descriptionHyperlinks>
+					<graphicData>
+						<texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+						<color>(183,185,153)</color>
+						<!-- <graphicClass>Graphic_Single</graphicClass> -->
+					</graphicData>
+					<statBases>
+						<MarketValue>4</MarketValue>
+					</statBases>
+					<comps>
+						<li Class="CompProperties_Hatcher">
+							<hatcherDaystoHatch>1</hatcherDaystoHatch>
+							<hatcherPawn>VFEI2_Swarmling</hatcherPawn>
+						</li>
+					</comps>
+					<tradeTags>
+						<li>ST_Eggs</li>
+					</tradeTags>
+				</ThingDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+    </Operation>
 </Patch>

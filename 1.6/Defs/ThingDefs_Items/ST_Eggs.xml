@@ -11,6 +11,9 @@
 		<statBases>
 			<MarketValue>6.0</MarketValue>
 		</statBases>
+		<tradeTags>
+			<li>ST_Eggs</li>
+		</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="EggFertBase">
@@ -29,6 +32,9 @@
 				<hatcherPawn>ST_Parrot</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>ST_Eggs</li>
+		</tradeTags>
 	</ThingDef>
 	
 	<ThingDef ParentName="EggUnfertBase">
@@ -41,6 +47,9 @@
 		<statBases>
 			<MarketValue>4.0</MarketValue>
 		</statBases>
+		<tradeTags>
+			<li>ST_Eggs</li>
+		</tradeTags>
 	</ThingDef>
   
 	<ThingDef ParentName="EggFertBase">
@@ -59,5 +68,31 @@
 				<hatcherPawn>Engorged_Gecko</hatcherPawn>
 			</li>
 		</comps>
+		<tradeTags>
+			<li>ST_Eggs</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="EggFertBase">
+		<defName>TSP_VFEI1_MilkBeetle_EggFertilized</defName>
+		<label>milk beetle egg (fert.)</label>
+		<description>A fertilized milk beetle egg. If all goes well, it should hatch into a milk beetle. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+			<color>(183,185,153)</color>
+			<!-- <graphicClass>Graphic_Single</graphicClass> -->
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>4</hatcherDaystoHatch>
+				<hatcherPawn>VFEI1_VatGrown_MilkBeetle</hatcherPawn>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>ST_Eggs</li>
+		</tradeTags>
 	</ThingDef>
 </Defs>
