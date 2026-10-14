@@ -7,8 +7,8 @@
 			<Nutrition>1</Nutrition>
 		</statBases>
 		<ingestible>
-			<foodType>Processed</foodType>
-			<preferability>DesperateOnly</preferability>
+			<foodType>Processed, Liquor</foodType>
+			<preferability>NeverForNutrition</preferability>
 			<joy>0.5</joy>
 			<joyKind>TSP_WW_EatDrugs_Classification</joyKind>
 			<baseIngestTicks>720</baseIngestTicks>
@@ -304,6 +304,7 @@
 			  <categories>
 				<li>MeatRaw</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Cheese</li>
 				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
 			  </categories>
 			  <thingDefs>
@@ -318,11 +319,14 @@
 				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
 			  </disallowedThingDefs>
 			</filter>
-			<count>15</count>
+			<count>40</count>
 		  </li>
 		  <li>
 			<filter>
 				<customSummary>corn, rice, flour</customSummary>
+				<categories>
+					<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
+				</categories>
 			  <thingDefs>
 				<li>RawCorn</li>
 				<li>RawRice</li>
@@ -334,7 +338,7 @@
 				<li MayRequire="TSP.Isengriff.Storytime">ST_Worm</li>
 			  </disallowedThingDefs>
 			</filter>
-			<count>20</count>
+			<count>30</count>
 		  </li>
 		  <li>
 			<filter>
@@ -364,13 +368,16 @@
 				<li>MeatRaw</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Cheese</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Flour</li>
 			</categories>
 			<thingDefs>
-				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
-				<li MayRequire="TSP.Isengriff.Storytime">ST_Worm</li>
 				<li>Chemfuel</li>
 				<li>RawCorn</li>
 				<li>RawRice</li>
+				<li>WakeUp</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Worm</li>
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
 				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
@@ -382,11 +389,12 @@
 				<li>MeatRaw</li>
 			</categories>
 			<thingDefs>
-				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
-				<li MayRequire="TSP.Isengriff.Storytime">ST_Worm</li>
 				<li>Chemfuel</li>
 				<li>RawCorn</li>
 				<li>RawRice</li>
+				<li>WakeUp</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
+				<li MayRequire="TSP.Isengriff.Storytime">ST_Worm</li>
 				<li MayRequire="TSP.Isengriff.Storytime">GnomeFlour</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Flour</li>
 				<li MayRequire="Dajian.ChiTeaditional.Expanded">WorkedRawRice</li> <!-- Oriental rice flour -->
@@ -420,6 +428,7 @@
 			  <categories>
 				<li>MeatRaw</li>
 				<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Cheese</li>
 				<li MayRequire="rimofmadness.callofcthulhucosmichorrors">ROM_StrangeMeatRaw</li>
 			  </categories>
 			  <thingDefs>
