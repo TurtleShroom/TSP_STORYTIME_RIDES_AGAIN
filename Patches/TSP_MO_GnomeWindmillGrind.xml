@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_WindMill"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOO!!!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<success>Always</success>
+					<value>
+						<ProcessorFramework.ProcessDef>
+							<defName>TSP_MO_GnomeFlour_Sortition_Windmill</defName>
+							<thingDef>GnomeFlour</thingDef>
+							<ingredientFilter>
+								<categories></categories>
+								<thingDefs>
+									<li>GnomeRoot</li>
+								</thingDefs>
+							</ingredientFilter>
+							<bonusOutputs>
+								<Hay>(1,20)</Hay>
+								<Gnome_Cloth>(1,25)</Gnome_Cloth>
+							</bonusOutputs>
+							<processDays>0.33</processDays> <!-- In days, a day is 60,000 ticks -->
+							<capacityFactor>0.07</capacityFactor>
+							<efficiency>1.2</efficiency>
+							<usesTemperature>false</usesTemperature>
+							<temperatureSafe>-99~99</temperatureSafe>
+							<temperatureIdeal>-99~99</temperatureIdeal>
+							<ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour> <!-- Percent per degree per hour -->
+							<speedBelowSafe>0.1</speedBelowSafe>
+							<speedAboveSafe>1.0</speedAboveSafe>
+							<sunFactor>1.0~1.0</sunFactor>
+							<rainFactor>1.0~1.0</rainFactor>
+							<snowFactor>1.0~1.0</snowFactor>
+							<windFactor>0.0~3.0</windFactor>
+							<unpoweredFactor>0.0</unpoweredFactor>
+							<unfueledFactor>0.0</unfueledFactor>
+							<powerUseFactor>0</powerUseFactor>
+							<fuelUseFactor>0</fuelUseFactor>
+							<filledGraphicSuffix></filledGraphicSuffix>
+							<usesQuality>false</usesQuality>
+							<qualityDays>(1, 2, 3, 4, 5, 6, 7)</qualityDays>
+							<color>(69,193,69)</color> <!-- 0-255 or 0.0-1.0 -->
+							<customLabel>Gnome poppy products to Gnome flour</customLabel>
+							<destroyChance>0</destroyChance>
+						</ProcessorFramework.ProcessDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<success>Always</success>
+					<value>
+						<ProcessorFramework.ProcessDef>
+							<defName>TSP_MO_GnomeFiber_Sortition_Windmill</defName>
+							<thingDef>Gnome_Cloth</thingDef>
+							<ingredientFilter>
+								<categories></categories>
+								<thingDefs>
+									<li>GnomeRoot</li>
+								</thingDefs>
+							</ingredientFilter>
+							<bonusOutputs>
+								<Hay>(1,20)</Hay>
+								<GnomeFlour>(1,30)</GnomeFlour>
+							</bonusOutputs>
+							<processDays>0.33</processDays> <!-- In days, a day is 60,000 ticks -->
+							<capacityFactor>0.07</capacityFactor>
+							<efficiency>1.1</efficiency>
+							<usesTemperature>false</usesTemperature>
+							<temperatureSafe>-99~99</temperatureSafe>
+							<temperatureIdeal>-99~99</temperatureIdeal>
+							<ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour> <!-- Percent per degree per hour -->
+							<speedBelowSafe>0.1</speedBelowSafe>
+							<speedAboveSafe>1.0</speedAboveSafe>
+							<sunFactor>1.0~1.0</sunFactor>
+							<rainFactor>1.0~1.0</rainFactor>
+							<snowFactor>1.0~1.0</snowFactor>
+							<windFactor>0.0~3.0</windFactor>
+							<unpoweredFactor>0.0</unpoweredFactor>
+							<unfueledFactor>0.0</unfueledFactor>
+							<powerUseFactor>0</powerUseFactor>
+							<fuelUseFactor>0</fuelUseFactor>
+							<filledGraphicSuffix></filledGraphicSuffix>
+							<usesQuality>false</usesQuality>
+							<qualityDays>(1, 2, 3, 4, 5, 6, 7)</qualityDays>
+							<color>(69,193,69)</color> <!-- 0-255 or 0.0-1.0 -->
+							<customLabel>Gnome poppy products to Gnome fiber</customLabel>
+							<destroyChance>0</destroyChance>
+						</ProcessorFramework.ProcessDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName= "DankPyon_WindMill"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
+					<success>Always</success>
+					<value>
+						<li>TSP_MO_GnomeFlour_Sortition_Windmill</li>
+						<li>TSP_MO_GnomeFiber_Sortition_Windmill</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
