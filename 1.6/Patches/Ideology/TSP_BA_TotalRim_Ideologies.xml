@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/PreceptDef[defName="BA_IdeoRole_Shaman"]/requiredMemes</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/PreceptDef[defName="BA_IdeoRole_Shaman"]/requiredMemes</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.ideology">STFrogPersonOrigin</li>
+				<li MayRequire="TSP.Isengriff.Storytime,ludeon.rimworld.ideology">STJeubOrigin</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>
