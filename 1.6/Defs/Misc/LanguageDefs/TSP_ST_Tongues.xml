@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<FactionLanguages.RaceLanguageDef>
+		<defName>TSP_ST_Tongues</defName>
+		<label>Storytime Tongues</label>
+		<description>A diverse and widely divergent series of unrelated tongues encompassing many species across the galaxy, with countless variations in lexicon, vocabulary, expression, and expression. They are categorized as "Story Languages" due to their original documentation after mankind set out from Old Earth, and are so grouped chronologically.</description>
+		<nameMaker>ST_NamerElfoid_Clan</nameMaker>
+		<!-- <learningDifficulty>1</learningDifficulty> -->
+	</FactionLanguages.RaceLanguageDef>
+	
+	<FactionLanguages.RaceLanguageDef>
+		<defName>TSP_ST_Tongues_SapientAnimal</defName>
+		<label>Uplifted Animal Tongues</label>
+		<description>A diverse and widely divergent series of unrelated tongues encompassing many species across the galaxy, with countless variations in lexicon, vocabulary, expression, and expression. All of them have in common the fact that they arose orgaonically from an animal species that was not always sapient, that also has non-sapient versions of that species still existing, and thus, retain most of the features of their non-sapient counterparts.</description>
+		<nameMaker>ST_NamerElfoid_Clan</nameMaker>
+		<!-- <learningDifficulty>1</learningDifficulty> -->
+	</FactionLanguages.RaceLanguageDef>
+
+	<FactionLanguages.DialectDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Beetnikh_Tongue</defName>
+		<label>Beetnikh</label>
+		<description>An advanced language of the Beet race, branched from the crude tongue of the Wood Beets generations ago. Structurally and gramatically the same as the Old Beet tongue of the Wood Beets when written or spoken, it has a vastly larger vocabulary and a capability of explaining more complex terms that Wood Beets do not have in their society. For this reason, one who knows how to speak Beetnikh can almost certainly learn Wood Beet with ease. Like Old Beet, it retains its use of gutteral sounds and hissing fricatives. Examples of hissing fricatives include the "s" in "sip."</description>
+		<nameMaker>HumanDialect_Empire</nameMaker>
+		<!-- <learningDifficulty>1</learningDifficulty> -->
+	</FactionLanguages.DialectDef>
+
+	<FactionLanguages.DialectDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_WoodBeet_Tongue</defName>
+		<label>Old Beet</label>
+		<description>The tongue of the Wood Beets and the original language from which Beetnikh split off of as Beetnikh developed high culture. It is gutteral, with strong use of hissing fricatives (high-pitched consonant sounds produced by forcing air through a narrow channel formed by the gum line behind the upper front teeth). Examples of hissing fricatives include the "s" in "sip." The language, which has largely preserved its crudeness over the centuries and has far less words to understand, is easy to learn if one commits to it.</description>
+		<nameMaker>AlienLanguage</nameMaker>
+		<learningDifficulty>0.79</learningDifficulty>
+	</FactionLanguages.DialectDef>
+
+	<FactionLanguages.LanguageFamilyDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Language_BeetTongue</defName>
+		<forcedLanguage>TSP_ST_Tongues</forcedLanguage>
+		<linkedRace>Alien_Beet</linkedRace>
+		<factionDialects>
+			<li>
+				<dialectDef>TSP_ST_Beetnikh_Tongue</dialectDef>
+				<factions>
+					<li>Beetnikh</li>
+				</factions>
+			</li>
+			<li>
+				<dialectDef>TSP_ST_WoodBeet_Tongue</dialectDef>
+				<factions>
+					<li>WoodBeetTribe</li>
+				</factions>
+			</li>
+		</factionDialects>
+	</FactionLanguages.LanguageFamilyDef>
+	
+	<FactionLanguages.DialectDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Jeub_Tongue</defName>
+		<label>Snaffish</label>
+		<description>The tongue of the Jeub, used by sapient High Jeubs, dating back to Rata Jeub. Like non-sapient Jeubs' animal noises, Snaffish relies extensively on clicking and and skittering noises made with the mouth. It employs head posture and eye usage as well: a sound made with one eye closed can mean something entirely different than the sound made with both eyes open. Snaffish is seen as a very hard language to learn due to its institutional incorporation of facial expressions alongside its vocabulary and sounds. For those who are blind, it is even worse.</description>
+		<nameMaker>TSP_ST_JeubTongueName</nameMaker>
+		<learningDifficulty>1.25</learningDifficulty>
+	</FactionLanguages.DialectDef>
+
+	<FactionLanguages.LanguageFamilyDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Language_JeubTongue</defName>
+		<forcedLanguage>TSP_ST_Tongues_SapientAnimal</forcedLanguage>
+		<linkedRace>Alien_Jeub</linkedRace>
+		<factionDialects>
+			<li>
+				<dialectDef>TSP_ST_Jeub_Tongue</dialectDef>
+				<factions>
+					<li>Jeubscalon</li>
+				</factions>
+			</li>
+		</factionDialects>
+	</FactionLanguages.LanguageFamilyDef>
+	
+	<FactionLanguages.DialectDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Bulborb_Tongue</defName>
+		<label>Bulborb</label>
+		<description>The language of Bulborbs, including both sapient Bean Men and non-sapient Bulborbs. Limited to grunts, growls, howls, and yowls, it sounds much more than the noises of non-sapient mammals than any human tongue. As it is inherently tied to the biology of the Bulborb itself, it is difficult for non-Bean Men to learn.</description>
+		<nameMaker>NamerFactionBeanMan</nameMaker>
+		<learningDifficulty>1.25</learningDifficulty>
+	</FactionLanguages.DialectDef>
+	
+	<FactionLanguages.LanguageFamilyDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Language_BulborbTongue</defName>
+		<forcedLanguage>TSP_ST_Tongues_SapientAnimal</forcedLanguage>
+		<linkedRace>Alien_BeanMan</linkedRace>
+		<factionDialects>
+			<li>
+				<dialectDef>TSP_ST_Bulborb_Tongue</dialectDef>
+				<factions>
+					<li>BeanManFaction</li>
+					<li>GARBAGEDAY_FACTION_PlayerBulborb</li>
+				</factions>
+			</li>
+		</factionDialects>
+	</FactionLanguages.LanguageFamilyDef>
+	
+	<FactionLanguages.DialectDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Frogman_Tongue</defName>
+		<label>Frogman language</label>
+		<description>The language of pure Frogmen and Forgs, evolved from amphibians. The language is a tonal language. The frogman tongue is loud, with held notes and vibrato mechanisms requiring a strong throat and diaphragm. This makes it hard for smaller races, and those with weaker lung capacities, to learn. The language is richly expressive in song and high culture, and is considered beautiful when accompanied by instrumentation.</description>
+		<nameMaker>FrogPersonSettlementName</nameMaker>
+		<learningDifficulty>1.1</learningDifficulty>
+	</FactionLanguages.DialectDef>
+	
+	<FactionLanguages.DialectDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Antedilvian_Tongue</defName>
+		<label>Antedilivian Frog language</label>
+		<description>The language of Xeno-Humans with frog features. The language is a tonal language. Like with the Frogman tongue, this language is loud, with held notes and vibrato mechanisms requiring a strong throat and diaphragm. This makes it hard for smaller races, and those with weaker lung capacities, to learn. The language is richly expressive in song and high culture, and is considered beautiful when accompanied by instrumentation.</description>
+		<nameMaker>FrogPersonSettlementName</nameMaker>
+		<learningDifficulty>1.08</learningDifficulty>
+	</FactionLanguages.DialectDef>
+	
+	<FactionLanguages.LanguageFamilyDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Language_FrogTongue</defName>
+		<forcedLanguage>TSP_ST_Tongues</forcedLanguage>
+		<linkedRace>Alien_FrogPerson</linkedRace>
+		<factionDialects>
+			<li>
+				<dialectDef>TSP_ST_Frogman_Tongue</dialectDef>
+				<factions>
+					<li>FrogTribes</li>
+					<li>Werefrogs</li>
+					<li>CaravanCoop</li>
+				</factions>
+			</li>
+			<li>
+				<dialectDef>TSP_ST_Antedilvian_Tongue</dialectDef>
+				<factions>
+					<li MayRequire="george.napoleonicrim">France</li>
+					<li MayRequire="antedilivian.toadfolk.xeno">TF_ToadFolkTribe</li>
+				</factions>
+			</li>
+		</factionDialects>
+	</FactionLanguages.LanguageFamilyDef>
+	
+	<FactionLanguages.DialectDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_SlaveRat_Tongue</defName>
+		<label>Slave Rats</label>
+		<description>The isolated dialect of rough and tumble human survivalists, long scattered from mankind at large. These rough, scrappy peoples share a language family developed due to inter-factional survival and trade, for the sake of protecting one-another and engaging in easier commerce. After all, everyone else was against them.</description>
+		<nameMaker>TSP_SlaveRat</nameMaker>
+		<learningDifficulty>0.9</learningDifficulty>
+	</FactionLanguages.DialectDef>
+	
+	<FactionLanguages.DialectDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Pirate_Tongue</defName>
+		<label>Pirate Accent</label>
+		<description>The distinct, slang-rich, raspy accent used by human pirates. Its origins date to the culturally diverse peoples of Old Earth pirate ships in the Golden Age of Pirates, and captures many early-modern era slang terms on Old Earth's Golden Age of Piracy. Many terms considered archaic, like "me" for "my" and spellings such as "pyrate" or Unusual Capitalizations from eighteenth century prose, remain in active use. Despite its comical and iconic phrasing and voicing, the language is fully capable of being used in any academic, trade, or normal setting. One who already knows a human language will learn this tongue extremely easily.</description>
+		<nameMaker>TSP_Booty_Language</nameMaker>
+		<learningDifficulty>0.33</learningDifficulty>
+	</FactionLanguages.DialectDef>
+	
+	<!--
+	<FactionLanguages.LanguageFamilyDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_SlaveRat_Tongue</defName>
+		<forcedLanguage>TSP_ST_Tongues</forcedLanguage>
+		<factionDialects>
+			<li>
+				<dialectDef>TSP_ST_SlaveRat_Tongue</dialectDef>
+				<factions>
+					<li>Harriers</li>
+					<li>Survivalist_Group</li>
+					<li>STBosses</li>
+				</factions>
+			</li>
+		</factionDialects>
+	</FactionLanguages.LanguageFamilyDef>
+	-->
+	
+	<FactionLanguages.DialectDef MayRequire="dimonsever000.factionlanguages">
+		<defName>TSP_ST_Gnome_Tongue</defName>
+		<label>Mini-Manese</label>
+		<description>The language of the Gnome, a sub-species of man. It is a tonal language with a high culture focused around song and alternative rock and roll, like that of the Weezer band thousands of years ago.</description>
+		<nameMaker>GnomeFamilyList</nameMaker>
+		<!-- <learningDifficulty>1</learningDifficulty> -->
+	</FactionLanguages.DialectDef>
+</Defs>

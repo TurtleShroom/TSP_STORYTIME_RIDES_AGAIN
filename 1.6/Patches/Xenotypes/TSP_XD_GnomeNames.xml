@@ -32,7 +32,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>Defs/RulePackDef[defName="XDGnomish_NamerPersonUtility"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gnome"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<xpath>Defs/FactionDef[defName="Z_Gnomes_Civil"]</xpath>
@@ -43,7 +43,7 @@
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- DO THE GENTILES KNOW? -->
-		<xpath>Defs/RulePackDef[defName="XDGnomish_NamerPersonUtility"]</xpath>
+		<xpath>Defs/PawnKindDef[defName="Mercenary_Gunner_Gnome"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
 			<xpath>Defs/FactionDef[defName="BanditGnomes"]</xpath>
@@ -599,6 +599,25 @@
 				<defaultFactionType MayRequire="zoid.gnomes,ludeon.rimworld.biotech">TreeGnomeEmpire</defaultFactionType>
 			</value>
 		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/FactionDef[defName="TreeGnomeEmpire"]</xpath>
+		<!-- If it does, LET'S FREAKING GOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove" MayRequire="rince.vreafaction.coolmodru">
+					<xpath>Defs/FactionLanguages.LanguageFamilyDef/factionDialects/li/factions/li[text()="Z_Gnomes_Civil"]</xpath>
+					<success>Always</success>
+				</li>
+				<li Class="PatchOperationRemove" MayRequire="rince.vreafaction.coolmodru">
+					<xpath>Defs/FactionLanguages.LanguageFamilyDef/factionDialects/li/factions/li[text()="BanditGnomes"]</xpath>
+					<success>Always</success>
+				</li>
+			</operations>
+		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 </Patch>

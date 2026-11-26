@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionLanguages.LanguageFamilyDef/factionDialects/li[dialectDef="Human_Horax"]/factions</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/FactionLanguages.LanguageFamilyDef/factionDialects</xpath>
+			<success>Always</success>
+			<value>
+				<li>
+					<dialectDef>Human_Horax</dialectDef>
+					<factions>
+						<li MayRequire="ludeon.rimworld.anomaly">HoraxCult</li>
+						<!-- <li>TSP_LanguageGlitchFix_Cult</li> -->
+					</factions>
+				</li>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/FactionLanguages.LanguageFamilyDef[defName="Human"]</xpath>
+		<!-- If it does, LET'S FREAKING GOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionLanguages.LanguageFamilyDef[defName="Human"]/factionDialects</xpath>
+					<success>Always</success>
+					<value>
+						<li>
+							<dialectDef>TSP_ST_SlaveRat_Tongue</dialectDef>
+							<factions>
+								<li MayRequire="ludeon.rimworld.ideology">Beggars</li>
+								<li MayRequire="TSP.Isengriff.Storytime">Harriers</li>
+								<li MayRequire="TSP.Isengriff.Storytime">Survivalist_Group</li>
+								<li MayRequire="stocksounds.factions.scavenger">ScavFac_ScavCivil</li>
+								<li MayRequire="stocksounds.factions.scavenger">ScavFac_ScavSavage</li>
+								<li MayRequire="cubbeman.minerfaction">World_Miners</li>
+								<li MayRequire="killerbot.gtekv2dryads">HID_WesternArmadeanExploits</li>
+								<li MayRequire="killerbot.gtekv2dryads">HID_NymphTribe</li>
+								<li MayRequire="killerbot.gtekv2dryads">HID_NymphTribe_OPFOR</li>
+								<li MayRequire="oskarpotocki.vfe.pirates">VFEP_Junkers</li>
+								<li MayRequire="oskarpotocki.vfe.pirates">VFEP_Mercenaries</li>
+								<li MayRequire="k4g.revolution">K4G_Revolution</li>
+								<li MayRequire="oskarpotocki.vfe.pirates">VFEP_Mercenaries</li>
+								<li MayRequire="altushka.boscompendium">DRK_Slavers</li>
+								<li MayRequire="ludeon.rimworld.ideology">TribeCannibal</li>
+								<li MayRequire="ludeon.rimworld.odyssey">Salvagers</li>
+								<li MayRequire="TSP.Isengriff.Storytime">STBosses</li>
+							</factions>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionLanguages.LanguageFamilyDef[defName="Human"]/factionDialects</xpath>
+					<success>Always</success>
+					<value>
+						<li>
+							<dialectDef>TSP_ST_Pirate_Tongue</dialectDef>
+							<factions>
+								<li>NicePirates</li>
+								<li>MeanPirates</li>
+								<li>Skeleton_Pirates</li>
+								<li MayRequire="oskarpotocki.vfe.pirates">VFEP_Junkers</li>
+							</factions>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionLanguages.LanguageFamilyDef/factionDialects/li[dialectDef="Human_Horax"]/factions</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="TSP.Isengriff.Storytime">Owenfaction</li>
+						<li MayRequire="TSP.Isengriff.Storytime">PatreonCivil</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionLanguages.LanguageFamilyDef[defName="Human"]/factionDialects</xpath>
+					<success>Always</success>
+					<value>
+						<li>
+							<dialectDef>TSP_ST_Gnome_Tongue</dialectDef>
+							<factions>
+								<li MayRequire="TSP.Isengriff.Storytime">TreeGnomeEmpire</li>
+								<li MayRequire="zoid.gnomes">Z_Gnomes_Civil</li>
+								<li MayRequire="zoid.gnomes">BanditGnomes</li>
+							</factions>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
