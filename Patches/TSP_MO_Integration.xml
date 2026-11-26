@@ -635,6 +635,8 @@
 							<categories>
 								<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 								<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Cheese</li>
+								<li MayRequire="alcheest.lopain">Foods_Cheese</li>
+								<li MayRequire="alcheest.lopain">Drug_Cheese</li>
 							</categories>
 							<thingDefs>
 								<li MayRequire="TSP.Isengriff.Storytime">ST_ProcessedCheese</li>
@@ -667,6 +669,8 @@
 							<disallowedCategories>
 								<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 								<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Cheese</li>
+								<li MayRequire="alcheest.lopain">Foods_Cheese</li>
+								<li MayRequire="alcheest.lopain">Drug_Cheese</li>
 							</disallowedCategories>
 							<disallowedThingDefs>
 								<li>Milk</li>
@@ -721,6 +725,8 @@
 					<categories>
 						<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
 						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Cheese</li>
+						<li MayRequire="alcheest.lopain">Foods_Cheese</li>
+						<li MayRequire="alcheest.lopain">Drug_Cheese</li>
 						<li MayRequire="vanillaexpanded.vbrewe">VBE_Musts</li>
 						<li MayRequire="zal.patchhoney">Honey</li>
 						<li MayRequire="sarg.rimbees">RB_Honeys</li>
@@ -814,10 +820,11 @@
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
 	
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
+	 Does this exist?
 		<xpath>Defs/ThingDef[defName="DankPyon_Citrine"]</xpath>
-		<!-- If it does, insert this in the same bracket. -->
+		If it does, insert this in the same bracket.
 		<match Class="PatchOperationInsert">
 			<xpath>Defs/ThingDef/stuffProps/categories/li[text()="DankPyon_Gems"]</xpath>
 			<success>Always</success>
@@ -825,29 +832,32 @@
 				<li>Stony</li>
 			</value>
 		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
+		If the first XPATH does not exist, the original code stands.
 	</Operation>
+	-->
 	
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
+	 Does this exist?
 		<xpath>Defs/ThingDef[defName="DankPyon_Citrine"]</xpath>
-		<!-- If it does, insert this in the same bracket. -->
+		If it does, insert this in the same bracket.
 		<match Class="PatchOperationInsert">
 			<xpath>Defs/ThingDef/stuffProps/categories/li[text()="DankPyon_Gems"]</xpath>
 			<success>Always</success>
 			<value>
-				<!-- <li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_Crystalline</li> -->
 				<li MayRequire="kikohi.jewelry">Gemstones</li>
 				<li>Stony</li>
 			</value>
 		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
+		If the first XPATH does not exist, the original code stands.
 	</Operation>
+	-->
 	
+	<!--
 	<Operation Class="PatchOperationConditional">
-	<!-- Does this exist? -->
+	 Does this exist?
 		<xpath>Defs/ThingDef[defName="Mashed_Ashlands_VolcanicEbony"]</xpath>
-		<!-- If it does, insert this in the same bracket. -->
+		If it does, insert this in the same bracket.
 		<match Class="PatchOperationInsert">
 			<xpath>Defs/ThingDef/stuffProps/categories/li[text()="Mashed_Ashlands_Crystalline"]</xpath>
 			<success>Always</success>
@@ -857,8 +867,9 @@
 				<li>Stony</li>
 			</value>
 		</match>
-		<!-- If the first XPATH does not exist, the original code stands. -->
+		If the first XPATH does not exist, the original code stands.
 	</Operation>
+	-->
 	
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
